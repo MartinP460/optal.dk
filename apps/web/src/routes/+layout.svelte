@@ -1,0 +1,81 @@
+<script lang="ts">
+  import '../app.css'
+  import * as Select from '$lib/components/ui/select'
+  import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
+  import { page } from '$app/stores'
+  import clsx from 'clsx'
+  import { locales, locale, LOCAL_STORAGE_LANGUAGE } from '$lib/i18n'
+  import type { Locales } from '$lib/i18n'
+  import Button from '$lib/components/ui/button/button.svelte'
+  import DotSeperator from '$lib/components/DotSeperator.svelte'
+  import { t } from '$lib/i18n'
+
+  const selectLocale = { value: $locale }
+
+  $: isHomePath = $page.url.pathname === '/'
+
+  const handleLocaleChange = (item: any) => {
+    const newLanguage = item.value as Locales
+
+    locale.set(newLanguage)
+    localStorage.setItem(LOCAL_STORAGE_LANGUAGE, newLanguage)
+  }
+</script>
+
+<div class="container mx-auto max-w-5xl px-4 flex flex-col min-h-screen">
+  <header class={clsx('py-4 flex justify-between', isHomePath && 'flex-row-reverse')}>
+    {#if !isHomePath}
+      <a href="/" class="font-medium"><span class="text-red-400">uni</span>optag.dk</a>
+    {/if}
+    <Select.Root selected={selectLocale} onSelectedChange={handleLocaleChange}>
+      <Select.Trigger class="w-32">
+        <Select.Value placeholder={convertLocaleToDisplayString(selectLocale.value ?? '')} />
+      </Select.Trigger>
+      <Select.Content>
+        {#each locales as locale}
+          <Select.Item value={locale}>{convertLocaleToDisplayString(locale)}</Select.Item>
+        {/each}
+      </Select.Content>
+    </Select.Root>
+  </header>
+  <slot />
+  <footer class="w-full flex justify-center mt-auto">
+    <nav class="flex flex-col my-12 items-center">
+      <ul class="flex gap-x-4 flex-wrap justify-center gap-y-2 w-72 sm:w-fit">
+        <li>
+          <Button
+            href="/about"
+            variant="ghost"
+            class="text-gray-600 pb-3 w-24"
+            data-sveltekit-preload-data="tap"
+          >
+            {$t('aboutUs')}
+          </Button>
+        </li>
+        <DotSeperator />
+        <li>
+          <Button variant="ghost" class="text-gray-600 pb-3 w-24">Data</Button>
+        </li>
+        <DotSeperator class="hidden sm:block" />
+        <li>
+          <Button variant="ghost" class="text-gray-600 pb-3">Another link</Button>
+        </li>
+        <DotSeperator />
+        <li>
+          <Button variant="ghost" class="text-gray-600 pb-3">Another link</Button>
+        </li>
+      </ul>
+      <div class="mt-6 text-sm text-gray-500">
+        Created by
+        <a
+          href="https://www.martpol.dev/"
+          class="underline-offset-4 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Martin Polley
+        </a>
+      </div>
+    </nav>
+  </footer>
+</div>

@@ -1,3 +1,5 @@
 module.exports = {
-	extends: ['custom']
-};
+  extends: [
+    'custom'
+  ],
+}
