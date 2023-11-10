@@ -1,10 +1,6 @@
-import fs from 'fs'
 import { KOTInstitution } from '../types'
+import { json } from './json'
 
-export async function generateFiles(data: KOTInstitution[]) {
-  fs.writeFile('./generated/data.json', JSON.stringify(data, null, 2), (err) => {
-    if (err) {
-      throw err
-    }
-  })
+export async function generateFiles(data: Required<KOTInstitution>[]) {
+  json(data)
 }
