@@ -1,1 +1,1 @@
-export { getCoreKOTData as getKOTData } from './core'
+export { getAugmentedKOTInstitutions as getKOTData } from './augmented'

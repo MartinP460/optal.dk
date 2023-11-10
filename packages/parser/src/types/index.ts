@@ -8,7 +8,7 @@ export type KOTDataset = {
   category: KOTCategory
   data: (string | number)[]
   max?: number
-  unit?: Unit
+  unit?: Unit | null
 }
 
 export type KOTCourse = {
