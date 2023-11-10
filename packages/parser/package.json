@@ -4,8 +4,10 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "dependencies": {
-    "ui": "*",
-    "typescript": "^5.0.0"
+    "lodash": "^4.17.21",
+    "papaparse": "^5.4.1",
+    "typescript": "^5.0.0",
+    "ui": "*"
   },
   "scripts": {
     "gen": "npx tsx ./src/generate.ts"
