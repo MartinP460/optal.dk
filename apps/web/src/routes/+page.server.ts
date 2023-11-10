@@ -1,8 +1,8 @@
-import { getAugmentedKOTInstitutions, getSearchIndex } from '$lib/server/augmented'
+import { institutions, courseSearchIndexes } from '$lib/server/data'
 
 export const load = () => {
   return {
-    institutions: getAugmentedKOTInstitutions(),
-    searchIndex: getSearchIndex()
+    institutions,
+    searchIndexes: courseSearchIndexes
   }
 }

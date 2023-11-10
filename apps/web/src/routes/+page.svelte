@@ -14,7 +14,7 @@
 
   export let data: PageData
 
-  const { institutions, searchIndex } = data
+  const { institutions, searchIndexes } = data
 
   const coursesWithInstitutions = institutions.flatMap((institution) =>
     institution.courses.map((course) => ({
@@ -26,8 +26,10 @@
     }))
   )
 
-  const institutionIndex = Fuse.parseIndex<Required<KOTInstitution>>(searchIndex.institutionIndex)
-  const courseIndex = Fuse.parseIndex<(typeof coursesWithInstitutions)[0]>(searchIndex.courseIndex)
+  const institutionIndex = Fuse.parseIndex<Required<KOTInstitution>>(searchIndexes.institutionIndex)
+  const courseIndex = Fuse.parseIndex<(typeof coursesWithInstitutions)[0]>(
+    searchIndexes.courseIndex
+  )
 
   const fuseOptions = {
     threshold: 0.2
