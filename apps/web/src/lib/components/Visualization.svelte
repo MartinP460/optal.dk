@@ -7,7 +7,7 @@
   import Linechart from '$lib/components/Linechart.svelte'
   import Table from '$lib/components/Table.svelte'
   import VisualizationSidebar from '$lib/components/VisualizationSidebar.svelte'
-  import type { KOTDataset } from '$lib/types/KOT'
+  import type { KOTDataset } from 'parser'
   import type { TooltipItem } from 'chart.js'
   import { t } from '$lib/i18n'
 
@@ -60,7 +60,7 @@
 
     return ` ${$t(category)} - ${
       dataPoint !== '' ? dataPoint.toLocaleString() : $t('unapplicale')
-    } ${unit ? $t(unit): ''}`
+    } ${unit ? $t(unit) : ''}`
   }
 
   $: maxY = data.datasets.find((dataset) => selected.includes(dataset.id))?.max
@@ -68,14 +68,14 @@
 
 <div class="mt-8 sm:mt-12">
   {#if has5OrMoreYearsOfData}
-  <VisualizationSidebar
-    {labelGroups}
-    {selected}
-    {selectedLabel}
-    displayType={displayType.value}
-    on:filterChange={(e) => handleSelect(e.detail)}
-    on:displayTypeChange={(e) => handleDisplayTypeSelect(e.detail)}
-  />
+    <VisualizationSidebar
+      {labelGroups}
+      {selected}
+      {selectedLabel}
+      displayType={displayType.value}
+      on:filterChange={(e) => handleSelect(e.detail)}
+      on:displayTypeChange={(e) => handleDisplayTypeSelect(e.detail)}
+    />
   {/if}
   <div
     class={`hidden sm:flex ${displayType.value === 'chart' ? 'justify-between' : 'justify-end'}`}

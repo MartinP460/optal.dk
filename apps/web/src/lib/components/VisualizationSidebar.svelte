@@ -9,7 +9,7 @@
   import { Label } from '$lib/components/ui/label'
   import { IconAdjustmentsHorizontal, IconEye } from '@tabler/icons-svelte'
   import { t } from '$lib/i18n'
-  import type { KOTDataset, KOTLabel } from '$lib/types/KOT'
+  import type { KOTDataset, KOTLabel } from 'parser'
   import { getLabelColorFromLabel } from '$lib/utils/getLineColorFromName'
 
   export let labelGroups: Omit<KOTDataset, 'data'>[][]

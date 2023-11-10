@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Badge } from '$lib/components/ui/badge'
-  import type { KOTCourse } from '$lib/types/KOT'
+  import type { KOTCourse } from 'parser'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
   import { t } from '$lib/i18n'
 

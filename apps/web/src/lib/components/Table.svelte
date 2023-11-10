@@ -1,6 +1,6 @@
 <script lang="ts">
   import * as Table from '$lib/components/ui/table'
-  import type { KOTDataset } from '$lib/types/KOT'
+  import type { KOTDataset } from 'parser'
   import { t } from '$lib/i18n'
 
   export let data: {

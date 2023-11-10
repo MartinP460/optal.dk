@@ -11,7 +11,7 @@
     CategoryScale,
     type TooltipItem
   } from 'chart.js'
-  import type { KOTDataset } from '$lib/types/KOT'
+  import type { KOTDataset } from 'parser'
   import { getLineColorFromDataset } from '$lib/utils/getLineColorFromName'
   import { t } from '$lib/i18n'
 
@@ -51,7 +51,7 @@
     height={320}
     data={{
       ...data,
-      datasets: datasetsWithProperties.filter((dataset) => selected.includes(dataset.id)),
+      datasets: datasetsWithProperties.filter((dataset) => selected.includes(dataset.id))
     }}
     options={{
       maintainAspectRatio: false,

@@ -1,11 +1,9 @@
-import { getAugmentedKOTInstitutions } from '$lib/server/augmented'
+import { institutions } from '$lib/server/data'
 import { error } from '@sveltejs/kit'
 import _ from 'lodash'
 
 export async function load({ params }) {
-  const data = await getAugmentedKOTInstitutions()
-
-  const institution = data.find((institution) => institution.slug === params.institution)
+  const institution = institutions.find((institution) => institution.slug === params.institution)
 
   if (!institution) {
     throw error(404, 'Institution not found.')
@@ -26,9 +24,7 @@ export async function load({ params }) {
 }
 
 export async function entries() {
-  const data = await getAugmentedKOTInstitutions()
-
-  return data.map((institution) => ({
+  return institutions.map((institution) => ({
     institution: institution.slug
   }))
 }

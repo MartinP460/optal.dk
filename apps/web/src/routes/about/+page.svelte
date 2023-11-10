@@ -14,9 +14,11 @@
   <article class="leading-7 text-gray-700 mt-8">
     <h4 class="scroll-m-20 text-2xl font-semibold tracking-tight my-10">
       {$t('aboutByline')}
-    </h4>    
+    </h4>
     <p>{$t('aboutDescription')}</p>
-    <h4 class="scroll-m-20 text-xl font-semibold text-black tracking-tight mt-6 mb-2">{$t('disclaimer')}</h4>
+    <h4 class="scroll-m-20 text-xl font-semibold text-black tracking-tight mt-6 mb-2">
+      {$t('disclaimer')}
+    </h4>
     <p>{$t('aboutDisclaimer')}</p>
   </article>
 </main>

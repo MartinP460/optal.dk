@@ -6,7 +6,7 @@
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
   import type { PageData } from './$types'
   import Fuse from 'fuse.js'
-  import type { KOTInstitution } from '$lib/types/KOT'
+  import type { KOTInstitution } from 'parser'
   import clsx from 'clsx'
   import { t } from '$lib/i18n'
   import Button from '$lib/components/ui/button/button.svelte'

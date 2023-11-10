@@ -1,4 +1,4 @@
-import type { KOTDataset, KOTLabel } from '$lib/types/KOT'
+import type { KOTDataset, KOTLabel } from 'parser'
 
 /** Gets the color of the line in the line chart from the dataset. */
 export function getLineColorFromDataset(dataset: KOTDataset) {
