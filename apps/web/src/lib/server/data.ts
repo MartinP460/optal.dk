@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js'
-import data from 'parser/generated/data.json'
+import data from './data.json'
 import type { KOTInstitution } from 'parser'
 
 export const institutions = data as Required<KOTInstitution>[]
