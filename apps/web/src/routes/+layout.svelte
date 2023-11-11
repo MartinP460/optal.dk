@@ -54,7 +54,12 @@
         </li>
         <DotSeperator />
         <li>
-          <Button variant="ghost" class="text-gray-600 pb-3 w-24">Data</Button>
+          <Button
+            href="/data"
+            variant="ghost"
+            class="text-gray-600 pb-3 w-24"
+            data-sveltekit-preload-data="tap">Data</Button
+          >
         </li>
         <DotSeperator class="hidden sm:block" />
         <li>

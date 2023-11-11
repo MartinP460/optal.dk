@@ -13,11 +13,14 @@ export const translations = {
     category: 'Category',
     chart: 'Chart',
     courses: 'Courses',
+    data: 'Data',
     disclaimer: 'Disclaimer',
     display: 'Display',
     displaySettings: 'Display settings',
     displaySettingsDescription:
       'Choose what figures to display and how you want to display those figures.',
+    downloadDataOnThisPage:
+      'Download admission figures in different file formats on this page. Start by selecting the format you want to download.',
     eLearning: 'E-learning',
     firstPriority: 'First priority',
     home: 'Home',
@@ -52,11 +55,14 @@ export const translations = {
     category: 'Kategori',
     chart: 'Graf',
     courses: 'Kurser',
+    data: 'Data',
     disclaimer: 'Advarsel',
     display: 'Visning',
     displaySettings: 'Indstillinger',
     displaySettingsDescription:
       'Vælg hvilken kategori af optagelsestal der skal vises og hvordan disse skal vises.',
+    downloadDataOnThisPage:
+      'På denne side kan du downloade optagelsestallene i forskellige filformatter. Start med at vælge et filformat.',
     eLearning: 'E-læring',
     firstPriority: 'Førsteprioritet',
     home: 'Hjem',
