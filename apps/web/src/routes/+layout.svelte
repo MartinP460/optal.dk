@@ -1,14 +1,13 @@
 <script lang="ts">
   import '../app.css'
-  import * as Select from '$lib/components/ui/select'
-  import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
-  import { page } from '$app/stores'
   import clsx from 'clsx'
-  import { locales, locale, LOCAL_STORAGE_LANGUAGE } from '$lib/i18n'
-  import type { Locales } from '$lib/i18n'
-  import Button from '$lib/components/ui/button/button.svelte'
+  import { page } from '$app/stores'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
-  import { t } from '$lib/i18n'
+  import Button from '$lib/components/ui/button/button.svelte'
+  import * as Select from '$lib/components/ui/select'
+  import { locales, locale, LOCAL_STORAGE_LANGUAGE , t } from '$lib/i18n'
+  import type { Locales } from '$lib/i18n'
+    import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
 
   const selectLocale = { value: $locale }
 

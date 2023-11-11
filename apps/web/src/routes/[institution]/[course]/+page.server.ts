@@ -1,7 +1,7 @@
-import { institutions } from '$lib/server/data'
-import type { KOTCourse } from 'parser'
 import { error } from '@sveltejs/kit'
 import _ from 'lodash'
+import type { KOTCourse } from 'parser'
+import { institutions } from '$lib/server/data'
 
 export async function load({ params }) {
   const institution = institutions.find((institution) => institution.slug === params.institution)

@@ -1,6 +1,6 @@
-import { getAugmentedKOTInstitutions, parseCourseName } from './augmented'
-import type { KOTCourse } from '../types'
 import { describe, it, expect, beforeEach } from 'vitest'
+import type { KOTCourse } from '../types'
+import { getAugmentedKOTInstitutions, parseCourseName } from './augmented'
 
 describe('getAugmentedKOTInstitutions', () => {
   it('returns augmented KOT institutions', async () => {

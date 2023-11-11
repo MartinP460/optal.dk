@@ -1,6 +1,5 @@
-import '$lib/i18n'
 import { browser } from '$app/environment'
-import { locale, LOCAL_STORAGE_LANGUAGE } from '$lib/i18n'
+import { LOCAL_STORAGE_LANGUAGE, locale } from '$lib/i18n'
 import type { Locales } from '$lib/i18n'
 
 export const load = async () => {

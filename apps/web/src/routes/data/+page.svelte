@@ -1,10 +1,10 @@
 <script>
+  import { IconDownload, IconJson, IconTable } from '@tabler/icons-svelte'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Card from '$lib/components/ui/card'
   import * as Tabs from '$lib/components/ui/tabs'
   import { t } from '$lib/i18n'
-  import { IconDownload, IconJson, IconTable } from '@tabler/icons-svelte'
 
   $: breadcrumbRoutes = [{ text: $t('data'), url: '/about' }]
 </script>

@@ -1,6 +1,6 @@
 import Fuse from 'fuse.js'
-import data from './data.json'
 import type { KOTInstitution } from 'parser'
+import data from './data.json'
 
 export const institutions = data as Required<KOTInstitution>[]
 export const courses = institutions.flatMap((institution) => institution.courses)

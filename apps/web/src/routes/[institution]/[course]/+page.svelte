@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { PageData } from './$types'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
-  import Visualization from '$lib/components/Visualization.svelte'
   import Meta from '$lib/components/Meta.svelte'
+  import Visualization from '$lib/components/Visualization.svelte'
 
   export let data: PageData
 

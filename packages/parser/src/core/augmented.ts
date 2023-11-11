@@ -1,8 +1,7 @@
 import slugify from 'slugify'
-import Fuse from 'fuse.js'
-import { getCoreKOTData } from './core'
 import type { KOTCourse, KOTDataset, KOTInstitution } from '../types'
 import { cities } from '../utils/cities'
+import { getCoreKOTData } from './core'
 
 /** Creates a "slug" from the name of an institution or course. */
 function createSlug(name: string) {

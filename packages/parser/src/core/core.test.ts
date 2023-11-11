@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import {
   getCoreKOTData,
   parseKOTData,
@@ -8,7 +9,6 @@ import {
   applyStrategy,
   convertToNumber
 } from './core'
-import { describe, it, expect } from 'vitest'
 
 describe('getCoreKOTData', async () => {
   const data = await getCoreKOTData()

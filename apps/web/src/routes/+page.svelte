@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { Input } from '$lib/components/ui/input'
-  import { Separator } from '$lib/components/ui/separator'
-  import * as Card from '$lib/components/ui/card'
-  import * as Accordion from '$lib/components/ui/accordion'
-  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
-  import type { PageData } from './$types'
+  import { IconChevronRight } from '@tabler/icons-svelte'
+  import clsx from 'clsx'
   import Fuse from 'fuse.js'
   import type { KOTInstitution } from 'parser'
-  import clsx from 'clsx'
-  import { t } from '$lib/i18n'
+  import type { PageData } from './$types'
+  import * as Accordion from '$lib/components/ui/accordion'
   import Button from '$lib/components/ui/button/button.svelte'
-  import { IconChevronRight } from '@tabler/icons-svelte'
+  import * as Card from '$lib/components/ui/card'
+  import { Input } from '$lib/components/ui/input'
+  import { Separator } from '$lib/components/ui/separator'
+  import { t } from '$lib/i18n'
+  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
 
   export let data: PageData
 

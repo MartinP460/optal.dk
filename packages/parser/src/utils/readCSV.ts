@@ -1,5 +1,5 @@
-import Papa from 'papaparse'
 import fs from 'fs'
+import Papa from 'papaparse'
 
 export async function readCSV(filePath: string) {
   const csvFile = fs.readFileSync(filePath)

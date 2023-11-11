@@ -1,15 +1,15 @@
 <script lang="ts">
+  import { IconAdjustmentsHorizontal, IconEye } from '@tabler/icons-svelte'
+  import type { KOTDataset, KOTLabel } from 'parser'
   import { createEventDispatcher } from 'svelte'
 
-  import * as Sheet from '$lib/components/ui/sheet'
   import * as Accordion from '$lib/components/ui/accordion'
-  import * as RadioGroup from '$lib/components/ui/radio-group'
   import Button from '$lib/components/ui/button/button.svelte'
   import { Checkbox } from '$lib/components/ui/checkbox'
   import { Label } from '$lib/components/ui/label'
-  import { IconAdjustmentsHorizontal, IconEye } from '@tabler/icons-svelte'
+  import * as RadioGroup from '$lib/components/ui/radio-group'
+  import * as Sheet from '$lib/components/ui/sheet'
   import { t } from '$lib/i18n'
-  import type { KOTDataset, KOTLabel } from 'parser'
   import { getLabelColorFromLabel } from '$lib/utils/getLineColorFromName'
 
   export let labelGroups: Omit<KOTDataset, 'data'>[][]

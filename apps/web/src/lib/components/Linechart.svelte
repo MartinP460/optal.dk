@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Line } from 'svelte-chartjs'
   import {
     Chart as ChartJS,
     Title,
@@ -12,8 +11,9 @@
     type TooltipItem
   } from 'chart.js'
   import type { KOTDataset } from 'parser'
-  import { getLineColorFromDataset } from '$lib/utils/getLineColorFromName'
+  import { Line } from 'svelte-chartjs'
   import { t } from '$lib/i18n'
+  import { getLineColorFromDataset } from '$lib/utils/getLineColorFromName'
 
   export let data: {
     labels: number[]

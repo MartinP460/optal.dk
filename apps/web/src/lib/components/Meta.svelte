@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Badge } from '$lib/components/ui/badge'
   import type { KOTCourse } from 'parser'
-  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
+  import { Badge } from '$lib/components/ui/badge'
   import { t } from '$lib/i18n'
+  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
 
   export let course: Required<KOTCourse>
 </script>

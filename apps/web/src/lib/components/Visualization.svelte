@@ -1,14 +1,14 @@
 <script lang="ts">
+  import type { TooltipItem } from 'chart.js'
+  import type { KOTDataset } from 'parser'
+  import Linechart from '$lib/components/Linechart.svelte'
+  import Table from '$lib/components/Table.svelte'
+  import Button from '$lib/components/ui/button/button.svelte'
   import { Checkbox } from '$lib/components/ui/checkbox'
   import { Label } from '$lib/components/ui/label'
   import * as Popover from '$lib/components/ui/popover'
   import * as Select from '$lib/components/ui/select'
-  import Button from '$lib/components/ui/button/button.svelte'
-  import Linechart from '$lib/components/Linechart.svelte'
-  import Table from '$lib/components/Table.svelte'
   import VisualizationSidebar from '$lib/components/VisualizationSidebar.svelte'
-  import type { KOTDataset } from 'parser'
-  import type { TooltipItem } from 'chart.js'
   import { t } from '$lib/i18n'
 
   export let data: {

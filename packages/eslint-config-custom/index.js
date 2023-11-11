@@ -5,10 +5,12 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:svelte/recommended',
     'prettier',
-    'turbo'
+    'turbo',
+    'plugin:import/errors',
+    'plugin:import/warnings'
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'import'],
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2020,
@@ -27,5 +29,17 @@ module.exports = {
         parser: '@typescript-eslint/parser'
       }
     }
-  ]
+  ],
+  rules: {
+    'import/order': [
+      'warn',
+      {
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true
+        }
+      }
+    ],
+    'import/no-unresolved': ['off']
+  }
 }

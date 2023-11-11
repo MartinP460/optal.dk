@@ -1,4 +1,4 @@
-import { institutions, courseSearchIndexes } from '$lib/server/data'
+import { courseSearchIndexes, institutions } from '$lib/server/data'
 
 export const load = () => {
   return {

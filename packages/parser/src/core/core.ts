@@ -1,7 +1,7 @@
 import path from 'path'
 import _ from 'lodash'
-import { readCSV } from '../utils/readCSV'
 import type { KOTCourse, KOTInstitution } from '../types'
+import { readCSV } from '../utils/readCSV'
 
 enum CSVDataIndexes {
   Id = 1, // (string) id of the course or institution
