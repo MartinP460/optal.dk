@@ -5,19 +5,19 @@
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Select from '$lib/components/ui/select'
-  import { locales, locale, LOCAL_STORAGE_LANGUAGE , t } from '$lib/i18n'
+  import { locales, locale, LOCAL_STORAGE_LANGUAGE, t } from '$lib/i18n'
   import type { Locales } from '$lib/i18n'
-    import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
+  import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
 
   const selectLocale = { value: $locale }
 
   $: isHomePath = $page.url.pathname === '/'
 
-  const handleLocaleChange = (item: any) => {
-    const newLanguage = item.value as Locales
+  const handleLocaleChange = (item: unknown) => {
+    const { value } = item as { value: Locales }
 
-    locale.set(newLanguage)
-    localStorage.setItem(LOCAL_STORAGE_LANGUAGE, newLanguage)
+    locale.set(value)
+    localStorage.setItem(LOCAL_STORAGE_LANGUAGE, value)
   }
 </script>
 
@@ -26,7 +26,7 @@
     {#if !isHomePath}
       <a href="/" class="font-medium"><span class="text-red-400">uni</span>optag.dk</a>
     {/if}
-    <Select.Root selected={selectLocale} onSelectedChange={handleLocaleChange}>
+    <Select.Root selected={selectLocale} onSelectedChange={(value) => handleLocaleChange(value)}>
       <Select.Trigger class="w-32">
         <Select.Value placeholder={convertLocaleToDisplayString(selectLocale.value ?? '')} />
       </Select.Trigger>
