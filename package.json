@@ -3,7 +3,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "test": "turbo run test --filter=parser",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --write .",
     "prepare": "husky install"
   },

@@ -12,7 +12,12 @@
     "vitest": "^0.34.6"
   },
   "scripts": {
-    "test": "vitest",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
     "gen": "npx tsx ./src/generate.ts"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^0.34.6"
   }
 }
