@@ -4,6 +4,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "test": "turbo run test --filter=parser",
+    "gen": "turbo run gen --filter=parser -- /apps/web/static /apps/web/src/lib/server && npm run format",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --write .",
     "prepare": "husky install"
