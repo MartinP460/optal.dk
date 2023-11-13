@@ -8,7 +8,6 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "lib": ["ES2021.String"],
-    "exclude": ["coverage"]
+    "lib": ["ES2021.String"]
   }
 }

@@ -7,7 +7,6 @@
     "lodash": "^4.17.21",
     "papaparse": "^5.4.1",
     "typescript": "^5.0.0",
-    "ui": "*",
     "vite": "^4.5.0",
     "vitest": "^0.34.6"
   },
