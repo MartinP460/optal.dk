@@ -1,8 +1,8 @@
 import path from 'path'
-import { KOTInstitution } from '../types'
-import { writeToFile } from '../utils/writeToFile'
+import { KOTInstitution } from '../../types'
+import { writeToFile } from '../../utils/writeToFile'
 
-export function json(institutions: Required<KOTInstitution>[]): void {
+export function json(institutions: Required<KOTInstitution>[]) {
   const rootPath = path.join(process.cwd(), '../..')
   const relativeJSONOutputDir = process.argv.slice(2)[1]
 
