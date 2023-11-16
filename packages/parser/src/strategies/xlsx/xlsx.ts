@@ -70,7 +70,6 @@ export function xlsx(data: Required<KOTInstitution>[]) {
     XLSX.utils.sheet_add_aoa(worksheet, [[title, ...AVAILABLE_YEARS]], { origin: 'A1' })
   })
 
-  /* create an XLSX file and try to save to default output. */
   XLSX.writeFile(workbook, `${defaultOutputDir}/data.xlsx`, { compression: true })
 }
 
