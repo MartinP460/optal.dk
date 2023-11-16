@@ -29,7 +29,7 @@
           <Card.Description>Download optagelsestal i Excel format.</Card.Description>
         </Card.Header>
         <Card.Content>
-          <Button href="/test.xlsx" download><IconDownload class="h-5 mr-2" /> Download</Button>
+          <Button href="/data.xlsx" download><IconDownload class="h-5 mr-2" /> Download</Button>
         </Card.Content>
       </Card.Root>
     </Tabs.Content>

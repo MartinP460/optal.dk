@@ -52,7 +52,6 @@
     <p class="font-medium mt-3 md:mt-4">
       {$t('byline')}
     </p>
-    <a href="/test.xlsx" download>Download something</a>
   </div>
   <form class="w-full sm:w-[600px] flex items-center space-x-2">
     <Input bind:value={searchQuery} placeholder="Aalborg Universitet, datalogi, medicin..." />
