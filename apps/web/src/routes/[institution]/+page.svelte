@@ -9,7 +9,7 @@
   const breadcrumbRoutes = [{ text: data.institution.latestName, url: data.institution.slug }]
 </script>
 
-<main class="mt-10 sm:mt-16">
+<main class="mt-6 sm:mt-10">
   <Breadcrumb routes={breadcrumbRoutes} />
   <h1 class="text-2xl sm:text-3xl mt-4 mb-2">{data.institution.latestName}</h1>
   <p class="text-sm font-medium leading-none mt-4 text-gray-600">

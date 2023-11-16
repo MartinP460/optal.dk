@@ -5,7 +5,7 @@
   $: breadcrumbRoutes = [{ text: $t('aboutUs'), url: '/about' }]
 </script>
 
-<main class="mt-8 lg:mt-16 mx-auto container px-0 max-w-2xl">
+<main class="mt-6 sm:mt-10 mx-auto container px-0 max-w-2xl">
   <Breadcrumb routes={breadcrumbRoutes} />
   <h1 class="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-4 mb-2">
     {$t('aboutUs')}

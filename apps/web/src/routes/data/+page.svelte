@@ -9,15 +9,15 @@
   $: breadcrumbRoutes = [{ text: $t('data'), url: '/about' }]
 </script>
 
-<main class="mt-8 lg:mt-16 mx-auto container px-0 max-w-2xl">
+<main class="mt-6 sm:mt-10 mx-auto container px-0 max-w-2xl">
   <Breadcrumb routes={breadcrumbRoutes} />
   <h1 class="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-4 mb-2">
     {$t('data')}
   </h1>
 
-  <p class="mt-8">{$t('downloadDataOnThisPage')}</p>
+  <p class="mt-8 text-sm text-muted-foreground">{$t('downloadDataOnThisPage')}</p>
 
-  <Tabs.Root value="xlsx" class="w-full">
+  <Tabs.Root value="xlsx" class="w-full mt-6">
     <Tabs.List class="grid grid-cols-2 w-full">
       <Tabs.Trigger value="xlsx"><IconTable class="h-4 mr-1 text-gray-600" /> Excel</Tabs.Trigger>
       <Tabs.Trigger value="json"><IconJson class="h-5 mr-2 text-gray-600" /> JSON</Tabs.Trigger>
