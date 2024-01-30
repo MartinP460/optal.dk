@@ -1,10 +1,9 @@
+// prettier-ignore
 export const translations = {
   en: {
     aboutByline: 'The goal of unioptag.dk is to make admission figures more visible.',
-    aboutDescription:
-      'unioptag.dk (en. "uni-admission.dk") is a website with the goal of making admission figures in higher education more visible. The idea to build unioptag.dk came from the need to see the development of admission figures over time - these figures were not readily available on most websites containing admission-related figures.',
-    aboutDisclaimer:
-      "All data from unioptag is sourced from the ministry of higher education and science. Parts of the data have been altered for convenience. These alterations include adding and modifying ID's on some institutions and courses. All admission figures remain unchanged, however, but errors may have been made. If you think there is an error in any of the data, please get in touch. Thanks!",
+    aboutDescription: 'unioptag.dk (en. "uni-admission.dk") is a website with the goal of making admission figures in higher education more visible. The idea to build unioptag.dk came from the need to see the development of admission figures over time - these figures were not readily available on most websites containing admission-related figures.',
+    aboutDisclaimer: "All data from unioptag is sourced from the ministry of higher education and science. Parts of the data have been altered for convenience. These alterations include adding and modifying ID's on some institutions and courses. All admission figures remain unchanged, however, but errors may have been made. If you think there is an error in any of the data, please get in touch. Thanks!",
     aboutUs: 'About us',
     accepted: 'Accepted',
     admitted: 'Admitted',
@@ -17,15 +16,15 @@ export const translations = {
     disclaimer: 'Disclaimer',
     display: 'Display',
     displaySettings: 'Display settings',
-    displaySettingsDescription:
-      'Choose what figures to display and how you want to display those figures.',
-    downloadDataOnThisPage:
-      'Download admission figures in different file formats on this page. Start by selecting the format you want to download.',
+    displaySettingsDescription: 'Choose what figures to display and how you want to display those figures.',
+    downloadDataOnThisPage: 'Download admission figures in different file formats on this page. Start by selecting the format you want to download.',
     eLearning: 'E-learning',
     firstPriority: 'First priority',
     home: 'Home',
     institutions: 'Institutions',
     noResults: 'No results...',
+    pageError: 'An unknown error occured. Try refreshing or come back later.',
+    pageNotFound: "We can't seem to find that page.",
     persons: 'persons',
     primary: 'Primary',
     quotient: 'Quotient',
@@ -39,14 +38,12 @@ export const translations = {
     totalNumbersForInstitution: 'Total admission figures for {{institution}}',
     unapplicale: 'Not applicable',
     unknown: 'Unknown',
-    winterstart: 'Winter-start'
+    winterstart: 'Winter-start',
   },
   da: {
     aboutByline: 'Formålet med unioptag.dk er at gøre optagelsestal mere synlige.',
-    aboutDescription:
-      'unioptag.dk er en hjemmeside der har til formål at gøre optagelsestal på videregående uddannelser mere synlige. Idéen om at bygge Unioptag opstod ud fra et behov for at se hvordan optagelsestallene udviklede sig over tid, da disse tal kun var tilgængelige for det pågældende år på de fleste sider der viste disse tal.',
-    aboutDisclaimer:
-      'Al data fra unioptag er hentet fra den koordinerede tilmeldings (KOT) "hovedtal". Enkelte dele af dataen er blevet ændret for at gøre det lettere at arbejde med. Disse ændringer er bl.a. at tilføjelser og ændringer til ID\'er på nogle institutioner og kurser. Selve optagelsestallene er dog uændret, men der kan være opstået fejl. Hvis du tror der er opstået en fejl må du meget gerne give os besked. Tak!',
+    aboutDescription: 'unioptag.dk er en hjemmeside der har til formål at gøre optagelsestal på videregående uddannelser mere synlige. Idéen om at bygge Unioptag opstod ud fra et behov for at se hvordan optagelsestallene udviklede sig over tid, da disse tal kun var tilgængelige for det pågældende år på de fleste sider der viste disse tal.',
+    aboutDisclaimer: 'Al data fra unioptag er hentet fra den koordinerede tilmeldings (KOT) "hovedtal". Enkelte dele af dataen er blevet ændret for at gøre det lettere at arbejde med. Disse ændringer er bl.a. at tilføjelser og ændringer til ID\'er på nogle institutioner og kurser. Selve optagelsestallene er dog uændret, men der kan være opstået fejl. Hvis du tror der er opstået en fejl må du meget gerne give os besked. Tak!',
     aboutUs: 'Om os',
     accepted: 'Optagne',
     admitted: 'Direkte optaget',
@@ -59,15 +56,15 @@ export const translations = {
     disclaimer: 'Advarsel',
     display: 'Visning',
     displaySettings: 'Indstillinger',
-    displaySettingsDescription:
-      'Vælg hvilken kategori af optagelsestal der skal vises og hvordan disse skal vises.',
-    downloadDataOnThisPage:
-      'På denne side kan du downloade optagelsestallene i forskellige filformatter. Start med at vælge et filformat.',
+    displaySettingsDescription: 'Vælg hvilken kategori af optagelsestal der skal vises og hvordan disse skal vises.',
+    downloadDataOnThisPage: 'På denne side kan du downloade optagelsestallene i forskellige filformatter. Start med at vælge et filformat.',
     eLearning: 'E-læring',
     firstPriority: 'Førsteprioritet',
     home: 'Hjem',
     institutions: 'Institutioner',
     noResults: 'Ingen resultater...',
+    pageError: 'Der opstod en ukendt fejl. Prøv at genindlæse siden eller kom tilbage senere.',
+    pageNotFound: 'Vi kan desværre ikke finde den side.',
     persons: 'personer',
     primary: 'Primær',
     quotient: 'Karakterkrav',
@@ -81,6 +78,6 @@ export const translations = {
     totalNumbersForInstitution: 'Samlede optagelsetal for {{institution}}',
     unapplicale: 'Ikke gældende',
     unknown: 'Ukendt',
-    winterstart: 'Vinterstart'
+    winterstart: 'Vinterstart',
   }
 }
