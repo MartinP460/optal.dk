@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { IconChevronRight } from '@tabler/icons-svelte'
+  import { IconChevronDown, IconChevronRight } from '@tabler/icons-svelte'
   import clsx from 'clsx'
   import Fuse from 'fuse.js'
   import type { KOTInstitution } from 'parser'
@@ -13,6 +13,9 @@
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
 
   export let data: PageData
+
+  const COURSE_RESULTS_LIMIT = 25
+  const INSTITUTION_RESULTS_LIMIT = 10
 
   const { institutions, searchIndexes } = data
 
@@ -39,9 +42,10 @@
   const courseFuse = new Fuse(coursesWithInstitutions, fuseOptions, courseIndex)
 
   let searchQuery = ''
+  let coursePage = COURSE_RESULTS_LIMIT
 
-  $: instutionsResult = institutionFuse.search(searchQuery).slice(0, 10)
-  $: coursesResult = courseFuse.search(searchQuery).slice(0, 25)
+  $: instutionsResult = institutionFuse.search(searchQuery)
+  $: coursesResult = courseFuse.search(searchQuery)
 </script>
 
 <main class="flex flex-col justify-center items-center">
@@ -54,7 +58,11 @@
     </p>
   </div>
   <form class="w-full sm:w-[600px] flex items-center space-x-2">
-    <Input bind:value={searchQuery} placeholder="Aalborg Universitet, datalogi, medicin..." />
+    <Input
+      bind:value={searchQuery}
+      on:input={() => (coursePage = COURSE_RESULTS_LIMIT)}
+      placeholder="Aalborg Universitet, datalogi, medicin..."
+    />
   </form>
   <Card.Root class={clsx('w-full sm:w-[600px] px-6 py-2 mt-8', searchQuery && 'py-4')}>
     {#if searchQuery}
@@ -62,7 +70,7 @@
         <div>
           <h3 class="scroll-m-20 text-xl font-semibold tracking-tight">{$t('institutions')}</h3>
           <ul class="mt-2 hover:text-gray-500 transition-colors">
-            {#each instutionsResult as institution (institution.item.id)}
+            {#each instutionsResult.slice(0, INSTITUTION_RESULTS_LIMIT) as institution (institution.item.id)}
               <li class="hover:text-primary">
                 <a href={`/${institution.item.slug}`} class="flex flex-col gap-1 py-1.5">
                   <p class="scroll-m-20">
@@ -81,7 +89,7 @@
         <div>
           <h3 class="scroll-m-20 text-xl font-semibold tracking-tight">{$t('courses')}</h3>
           <ul class="group/container mt-2 hover:text-gray-500 transition-colors">
-            {#each coursesResult as course (course.item.id)}
+            {#each coursesResult.slice(0, coursePage) as course (course.item.id)}
               <li class="group/item hover:text-primary">
                 <a
                   href={`/${course.item.institution.slug}/${course.item.slug}`}
@@ -112,6 +120,18 @@
               </li>
             {/each}
           </ul>
+          {#if coursesResult.length - coursePage > 0}
+            <Button
+              on:click={() => (coursePage += 25)}
+              variant="ghost"
+              class="w-full mt-2 text-gray-600"
+            >
+              <IconChevronDown class="w-5 h-5 mr-2" />
+              {$t('showXMore', {
+                number: Math.min(coursesResult.length - coursePage, COURSE_RESULTS_LIMIT)
+              })}
+            </Button>
+          {/if}
         </div>
       {/if}
       {#if !(instutionsResult.length > 0) && !(coursesResult.length > 0)}
