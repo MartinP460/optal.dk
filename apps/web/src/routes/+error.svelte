@@ -1,8 +1,8 @@
 <script>
-  import { page } from '$app/stores'
   import { IconHome } from '@tabler/icons-svelte'
-  import Button from '$lib/components/ui/button/button.svelte'
+  import { page } from '$app/stores'
   import Container from '$lib/components/Container.svelte'
+  import Button from '$lib/components/ui/button/button.svelte'
   import { t } from '$lib/i18n'
 </script>
 
