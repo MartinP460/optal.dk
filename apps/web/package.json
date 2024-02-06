@@ -1,6 +1,5 @@
 {
-  "name": "unioptag",
-  "version": "0.0.1",
+  "name": "optal",
   "private": true,
   "scripts": {
     "dev": "vite dev",
@@ -49,8 +48,7 @@
     "parser": "*",
     "slugify": "^1.6.6",
     "tailwind-merge": "^1.14.0",
-    "tailwind-variants": "^0.1.14",
-    "ui": "*"
+    "tailwind-variants": "^0.1.14"
   },
   "overrides": {
     "svelte-chartjs": {

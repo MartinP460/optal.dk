@@ -24,7 +24,7 @@
 <div class="container mx-auto max-w-5xl px-4 flex flex-col min-h-screen">
   <header class={clsx('py-4 flex justify-between', isHomePath && 'flex-row-reverse')}>
     {#if !isHomePath}
-      <a href="/" class="font-medium"><span class="text-red-400">uni</span>optag.dk</a>
+      <a href="/" class="font-medium text-lg">op<span class="text-teal-600">tal</span>.dk</a>
     {/if}
     <Select.Root selected={selectLocale} onSelectedChange={(value) => handleLocaleChange(value)}>
       <Select.Trigger class="w-32">

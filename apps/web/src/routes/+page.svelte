@@ -50,8 +50,8 @@
 
 <main class="flex flex-col justify-center items-center">
   <div class="lg:mt-16 mt-12 mb-20 text-center">
-    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-      uni<span class="text-red-500">optag</span>.dk
+    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">
+      op<span class="text-teal-600">tal</span>.dk
     </h1>
     <p class="font-medium mt-3 md:mt-4">
       {$t('byline')}
@@ -144,7 +144,7 @@
             <Accordion.Root>
               <Accordion.Item value={institution.latestName}>
                 <Accordion.Trigger
-                  class="text-left text-sm sm:text-base gap-6 data-[state=open]:text-red-500"
+                  class="text-left text-sm sm:text-base gap-6 data-[state=open]:text-teal-700"
                   >{institution.latestName}</Accordion.Trigger
                 >
                 <Accordion.Content>

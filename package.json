@@ -1,4 +1,5 @@
 {
+  "name": "optal-workspace",
   "private": true,
   "scripts": {
     "build": "turbo run build",
