@@ -14,10 +14,11 @@
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "eslint": "^8.0.0",
     "eslint-config-custom": "*",
+    "husky": "^8.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
-    "turbo": "latest",
-    "husky": "^8.0.0"
+    "supabase": "^1.142.1",
+    "turbo": "latest"
   },
   "packageManager": "npm@10.1.0",
   "workspaces": [
