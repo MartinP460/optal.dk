@@ -1,7 +1,7 @@
 <script>
+  import { enhance } from '$app/forms'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Container from '$lib/components/Container.svelte'
-  import { enhance } from '$app/forms'
   import { t } from '$lib/i18n'
 
   $: breadcrumbRoutes = [{ text: $t('feedback'), url: '/about' }]

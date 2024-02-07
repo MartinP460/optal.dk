@@ -8,6 +8,7 @@
 !.env.example
 **/ui/
 **/coverage
+**/.temp/
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
