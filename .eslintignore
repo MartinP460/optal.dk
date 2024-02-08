@@ -9,6 +9,7 @@
 **/ui/
 **/coverage
 **/.temp/
+**/.vercel/
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
