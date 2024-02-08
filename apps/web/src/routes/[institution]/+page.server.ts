@@ -6,7 +6,7 @@ export async function load({ params }) {
   const institution = institutions.find((institution) => institution.slug === params.institution)
 
   if (!institution) {
-    throw error(404, 'Institution not found.')
+    error(404, 'Institution not found.')
   }
 
   const institutionData = {
