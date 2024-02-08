@@ -6,7 +6,7 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "papaparse": "^5.4.1",
-    "typescript": "^5.0.0",
+    "typescript": "^5.3.3",
     "vite": "^4.5.0",
     "vitest": "^0.34.6",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
