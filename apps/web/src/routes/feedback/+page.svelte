@@ -1,5 +1,4 @@
 <script>
-  import { enhance } from '$app/forms'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Container from '$lib/components/Container.svelte'
   import { t } from '$lib/i18n'
@@ -13,7 +12,7 @@
     {$t('feedback')}
   </h1>
 
-  <form method="POST" use:enhance>
+  <form>
     <button>ASDSDASDAS</button>
   </form>
 </Container>
