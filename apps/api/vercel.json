@@ -1,0 +1,13 @@
+{
+  "regions": ["fra1"],
+  "routes": [
+    {
+      "src": "/feedback",
+      "dest": "api/feedback.ts",
+      "methods": ["POST"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
+}

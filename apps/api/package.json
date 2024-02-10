@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "private": "true",
+  "description": "Backend for optal.dk.",
+  "type": "module",
+  "scripts": {
+    "vercel-dev": "vercel dev",
+    "diff": "supabase db diff",
+    "pull": "supabase db pull",
+    "push": "supabase db push",
+    "start": "supabase start",
+    "status": "supabase status"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.3",
+    "vercel": "^33.4.1",
+    "vercel-cors": "^1.0.0"
+  }
+}

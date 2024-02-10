@@ -1,9 +1,15 @@
 <script>
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Container from '$lib/components/Container.svelte'
+  import Button from '$lib/components/ui/button/button.svelte'
   import { t } from '$lib/i18n'
+  import { sendFeedback } from '$lib/utils/sendFeedback'
 
   $: breadcrumbRoutes = [{ text: $t('feedback'), url: '/about' }]
+
+  const handleClick = async () => {
+    await sendFeedback('This works!', 'bug', '/feedback')
+  }
 </script>
 
 <Container>
@@ -13,6 +19,6 @@
   </h1>
 
   <form>
-    <button>ASDSDASDAS</button>
+    <Button on:click={handleClick}>Click me</Button>
   </form>
 </Container>
