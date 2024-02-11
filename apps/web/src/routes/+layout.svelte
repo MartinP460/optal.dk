@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css'
   import clsx from 'clsx'
+  import { Toaster } from 'svelte-sonner'
   import { page } from '$app/stores'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
@@ -20,6 +21,8 @@
     localStorage.setItem(LOCAL_STORAGE_LANGUAGE, value)
   }
 </script>
+
+<Toaster richColors />
 
 <div class="container mx-auto max-w-5xl px-4 flex flex-col min-h-screen">
   <header class={clsx('py-4 flex justify-between', isHomePath && 'flex-row-reverse')}>
@@ -57,12 +60,17 @@
             href="/data"
             variant="ghost"
             class="text-gray-600 pb-3 w-24"
-            data-sveltekit-preload-data="tap">Data</Button
+            data-sveltekit-preload-data="tap">{$t('data')}</Button
           >
         </li>
         <DotSeperator class="hidden sm:block" />
         <li>
-          <Button variant="ghost" class="text-gray-600 pb-3">Another link</Button>
+          <Button
+            href="/feedback"
+            variant="ghost"
+            class="text-gray-600 pb-3"
+            data-sveltekit-preload-data="tap">{$t('feedback')}</Button
+          >
         </li>
         <DotSeperator />
         <li>
