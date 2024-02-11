@@ -79,8 +79,8 @@
   </h1>
 
   <Alert.Root variant="default" class="mt-0.5">
-    <AlertCircle class="h-4 w-4" />
-    <Alert.Description class="mt-[1px]">
+    <AlertCircle class="h-4 w-4 stroke-gray-700" />
+    <Alert.Description class="mt-[1px] text-gray-700">
       {$t('feedbackInfo')}
     </Alert.Description>
   </Alert.Root>

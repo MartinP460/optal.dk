@@ -1,6 +1,8 @@
 <script>
   import { IconDownload, IconJson, IconTable } from '@tabler/icons-svelte'
+  import { AlertCircle } from 'lucide-svelte'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
+  import * as Alert from '$lib/components/ui/alert'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Card from '$lib/components/ui/card'
   import * as Tabs from '$lib/components/ui/tabs'
@@ -11,11 +13,16 @@
 
 <main class="mt-6 sm:mt-10 mx-auto container px-0 max-w-2xl">
   <Breadcrumb routes={breadcrumbRoutes} />
-  <h1 class="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-4 mb-2">
+  <h1 class="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-4 mb-8">
     {$t('data')}
   </h1>
 
-  <p class="mt-8 text-sm text-muted-foreground">{$t('downloadDataOnThisPage')}</p>
+  <Alert.Root variant="default" class="mt-0.5">
+    <AlertCircle class="h-4 w-4 stroke-gray-700" />
+    <Alert.Description class="mt-[1px] text-gray-700">
+      {$t('downloadDataOnThisPage')}
+    </Alert.Description>
+  </Alert.Root>
 
   <Tabs.Root value="xlsx" class="w-full mt-6">
     <Tabs.List class="grid grid-cols-2 w-full">
