@@ -11,6 +11,7 @@
     "start": "supabase start",
     "status": "supabase status",
     "stop": "supabase stop",
+    "vercel-build": "vercel build",
     "vercel-dev": "vercel dev"
   },
   "dependencies": {
