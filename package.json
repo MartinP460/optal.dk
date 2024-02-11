@@ -7,7 +7,7 @@
     "test": "turbo run test --filter=parser",
     "gen": "turbo run gen --filter=parser -- /apps/web/static /apps/web/src/lib/server && npm run format",
     "lint": "prettier --check . && eslint .",
-    "format": "prettier --write .",
+    "format": "prettier --write . && eslint . --fix",
     "prepare": "husky install"
   },
   "devDependencies": {

@@ -4,14 +4,14 @@
   import { toast } from 'svelte-sonner'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Container from '$lib/components/Container.svelte'
+  import * as Alert from '$lib/components/ui/alert'
   import Button from '$lib/components/ui/button/button.svelte'
   import Label from '$lib/components/ui/label/label.svelte'
-  import Textarea from '$lib/components/ui/textarea/textarea.svelte'
-  import * as Alert from '$lib/components/ui/alert'
-  import type { Feedback } from '$lib/types/feedback'
   import * as Select from '$lib/components/ui/select'
-  import { sendFeedback } from '$lib/utils/sendFeedback'
+  import Textarea from '$lib/components/ui/textarea/textarea.svelte'
   import { t } from '$lib/i18n'
+  import type { Feedback } from '$lib/types/feedback'
+  import { sendFeedback } from '$lib/utils/sendFeedback'
 
   $: breadcrumbRoutes = [{ text: $t('feedback'), url: '/about' }]
 
