@@ -1,1 +1,1 @@
-export type Feedback = 'bug' | 'feature' | 'other'
+export type FeedbackType = 'bug' | 'feature' | 'other'

@@ -1,11 +1,10 @@
 import { env } from '$env/dynamic/public'
-import type { Feedback } from '$lib/types/feedback'
+import type { FeedbackType } from '$lib/types/feedback'
 
-export async function sendFeedback(text: string, type: Feedback) {
+export async function sendFeedback(text: string, type: FeedbackType) {
   const body = {
     text,
-    type,
-    url: 'asdasd'
+    type
   }
 
   const response = await fetch(`${env.PUBLIC_API_URL}/feedback`, {
