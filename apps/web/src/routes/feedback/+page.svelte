@@ -10,12 +10,12 @@
   import * as Select from '$lib/components/ui/select'
   import Textarea from '$lib/components/ui/textarea/textarea.svelte'
   import { t } from '$lib/i18n'
-  import type { Feedback } from '$lib/types/feedback'
+  import type { FeedbackType } from '$lib/types/feedback'
   import { sendFeedback } from '$lib/utils/sendFeedback'
 
   $: breadcrumbRoutes = [{ text: $t('feedback'), url: '/about' }]
 
-  let type: { value: Feedback; label: string } | null
+  let type: { value: FeedbackType; label: string } | null
   let text: string
   let loading = false
   let fieldErrors: string[] = []
@@ -52,7 +52,7 @@
 
   const handleTypeChange = (value: unknown) => {
     // the library has bad typing ):
-    const newValue = value as { value: Feedback; label: string }
+    const newValue = value as { value: FeedbackType; label: string }
     type = newValue
   }
 
@@ -87,7 +87,7 @@
 
   <form on:submit={handleSubmit} class="flex flex-col gap-4 mt-8">
     <div class="flex flex-col gap-1.5">
-      <Label for="type">Type <span class="text-red-500">*</span></Label>
+      <Label for="type">{$t('type')} <span class="text-red-500">*</span></Label>
       <Select.Root selected={type} onSelectedChange={handleTypeChange}>
         <Select.Trigger id="type" class={clsx(fieldErrors.includes('type') && 'border-red-500')}>
           <Select.Value />
@@ -100,7 +100,7 @@
       </Select.Root>
     </div>
     <div class="flex flex-col gap-1.5">
-      <Label for="content">Content <span class="text-red-500">*</span></Label>
+      <Label for="content">{$t('content')} <span class="text-red-500">*</span></Label>
       <Textarea
         bind:value={text}
         id="content"
