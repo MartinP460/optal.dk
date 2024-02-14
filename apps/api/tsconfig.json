@@ -7,6 +7,6 @@
     "rootDir": "./src",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "outDir": "./build"
+    "outDir": "./build/api"
   }
 }
