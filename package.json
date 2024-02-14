@@ -3,8 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "build:api": "turbo run vercel-build",
-    "dev": "turbo run vercel-dev & turbo run dev",
+    "dev": "turbo run dev",
     "test": "turbo run test --filter=parser",
     "gen": "turbo run gen --filter=parser -- /apps/web/static /apps/web/src/lib/server && npm run format",
     "lint": "prettier --check . && eslint .",

@@ -2,20 +2,26 @@
   "name": "api",
   "private": "true",
   "description": "Backend for optal.dk.",
-  "type": "module",
   "scripts": {
-    "diff": "supabase db diff",
-    "migrate-new": "supabase migration new",
-    "pull": "supabase db pull",
-    "push": "supabase db push",
-    "start": "supabase start",
-    "status": "supabase status",
-    "stop": "supabase stop",
-    "vercel-dev": "vercel dev"
+    "start": "ts-node build/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "sb:diff": "supabase db diff",
+    "sb:migrate-new": "supabase migration new",
+    "sb:pull": "supabase db pull",
+    "sb:push": "supabase db push",
+    "sb:start": "supabase start",
+    "sb:status": "supabase status",
+    "sb:stop": "supabase stop"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.3",
-    "vercel": "^33.4.1",
-    "vercel-cors": "^1.0.0"
+    "fastify": "^4.26.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }

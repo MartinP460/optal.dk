@@ -1,3 +1,23 @@
+/* Local configuration for development. */
+import Fastify from 'fastify'
+
+import feedbackRoute from './routes/feedback'
+
+const fastify = Fastify({
+  requestTimeout: 30000
+})
+
+fastify.register(feedbackRoute)
+
+fastify.listen({ port: 8080 }, (err, address) => {
+  if (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
+  console.log(`Server listening at ${address}`)
+})
+
+/*
 import { createClient } from '@supabase/supabase-js'
 
 export const supabase = createClient(
@@ -27,3 +47,4 @@ export async function POST(request: Request) {
     status: 200
   })
 }
+*/
