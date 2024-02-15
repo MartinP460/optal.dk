@@ -1,10 +1,14 @@
 {
   "name": "api-test",
   "private": true,
+  "scripts": {
+    "run-dev": "nodemon api/index.ts"
+  },
   "dependencies": {
     "fastify": "^4.26.1"
   },
   "devDependencies": {
+    "nodemon": "^3.0.3",
     "typescript": "^5.3.3"
   }
 }
