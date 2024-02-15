@@ -1,7 +1,7 @@
 import { FastifyInstance } from 'fastify'
 
 async function routes(fastify: FastifyInstance) {
-  fastify.get('/feedback', async (_, response) => {
+  fastify.get('/', async (_, response) => {
     return response.send('Hello world!')
   })
 }
