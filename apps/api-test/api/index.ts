@@ -1,8 +1,12 @@
 import Fastify from 'fastify'
 
+import feedbackRoute from '../src/routes/feedback'
+
 const app = Fastify({
   logger: true
 })
+
+app.register(feedbackRoute)
 
 app.get('/', async (_, response) => {
   return response.status(200).type('text/html').send(html)
