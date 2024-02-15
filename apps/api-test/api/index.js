@@ -1,18 +1,14 @@
-import Fastify from 'fastify'
-
+import Fastify from 'fastify';
 const app = Fastify({
-  logger: true,
-})
-
+    logger: true
+});
 app.get('/', async (req, reply) => {
-  return reply.status(200).type('text/html').send(html)
-})
-
-export default async function handler(req, reply) {
-  await app.ready()
-  app.server.emit('request', req, reply)
+    return reply.status(200).type('text/html').send(html);
+});
+export default async function handler(request, response) {
+    await app.ready();
+    app.server.emit('request', request, response);
 }
-
 const html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -63,4 +59,4 @@ export default async function handler(req: any, res: any) {
       to get started.
   </body>
 </html>
-`
+`;

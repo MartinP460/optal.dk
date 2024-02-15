@@ -3,6 +3,9 @@
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "run-build": "tsc -p ./tsconfig.json"
+  },
   "dependencies": {
     "fastify": "^4.26.1"
   },
