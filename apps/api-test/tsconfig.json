@@ -4,9 +4,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "rootDir": "./src",
+    "rootDir": "./api",
     "esModuleInterop": true,
-    "moduleResolution": "node",
-    "outDir": "./api"
+    "moduleResolution": "node"
   }
 }
