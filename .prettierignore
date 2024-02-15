@@ -11,6 +11,7 @@
 **/.temp/
 **.html
 **/.vercel/
+**/*.js
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
