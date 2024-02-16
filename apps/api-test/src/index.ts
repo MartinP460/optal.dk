@@ -1,3 +1,4 @@
+import cors from '@fastify/cors'
 import * as dotenv from 'dotenv'
 import Fastify from 'fastify'
 
@@ -7,6 +8,13 @@ dotenv.config()
 
 const app = Fastify({
   logger: true
+})
+
+// eslint-disable-next-line turbo/no-undeclared-env-vars
+const allowedOrigins = process.env.OPTAL_WEB_DOMAIN ? [process.env.OPTAL_WEB_DOMAIN] : []
+
+app.register(cors, {
+  origin: allowedOrigins
 })
 
 app.register(feedbackRoute, {

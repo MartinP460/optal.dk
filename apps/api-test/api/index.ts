@@ -1,4 +1,4 @@
-import app from '../src/index'
+import app from '../src'
 
 export default async function handler(request: Request, response: Response) {
   await app.ready()
