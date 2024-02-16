@@ -29,9 +29,6 @@ async function routes(fastify: FastifyInstance) {
 
     const sbResponse = await supabase.from('feedback').insert(body)
 
-    console.log('Body: ', body)
-    console.log('Supabase response: ', sbResponse)
-
     if (sbResponse.error) {
       return response.status(500)
     }
