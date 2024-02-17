@@ -1,6 +1,5 @@
-/*
-!api
-!src
-!vercel.json
-!package.json
-!turbo.json
+supabase
+README.md
+src
+tsconfig.json
+vercel.json
