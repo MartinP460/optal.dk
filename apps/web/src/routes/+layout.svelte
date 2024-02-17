@@ -24,6 +24,12 @@
 
 <Toaster richColors />
 
+<svelte:head>
+  <title>Optal.dk • Some stuff</title>
+  <meta name="description" content="Random content" />
+  <meta name="”robots”" content="”noindex”" />
+</svelte:head>
+
 <div class="container mx-auto max-w-5xl px-4 flex flex-col min-h-screen">
   <header class={clsx('py-4 flex justify-between', isHomePath && 'flex-row-reverse')}>
     {#if !isHomePath}
@@ -77,7 +83,7 @@
           <Button variant="ghost" class="text-gray-600 pb-3">Another link</Button>
         </li>
       </ul>
-      <div class="mt-6 text-sm text-gray-500">
+      <!-- <div class="mt-6 text-sm text-gray-500">
         Created by
         <a
           href="https://www.martpol.dev/"
@@ -87,7 +93,7 @@
         >
           Martin Polley
         </a>
-      </div>
+      </div> -->
     </nav>
   </footer>
 </div>
