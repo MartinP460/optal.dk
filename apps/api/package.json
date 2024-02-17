@@ -1,11 +1,9 @@
 {
-  "name": "api",
-  "private": "true",
-  "description": "Backend for optal.dk.",
+  "name": "api-test",
+  "private": true,
   "scripts": {
-    "start": "ts-node build/api/index.js",
-    "dev": "nodemon src/index.ts",
-    "build": "tsc -p tsconfig.json",
+    "set-env": "OPTAL_WEB_DOMAIN=http://localhost:5173 NODE_ENV=development SUPABASE_URL=http://127.0.0.1:54321 SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0",
+    "run-dev": "npm run sb:start && npm run set-env nodemon api/index.ts",
     "sb:diff": "supabase db diff",
     "sb:migrate-new": "supabase migration new",
     "sb:pull": "supabase db pull",
@@ -15,13 +13,12 @@
     "sb:stop": "supabase stop"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.39.3",
+    "@fastify/cors": "^9.0.1",
+    "@supabase/supabase-js": "^2.39.6",
     "fastify": "^4.26.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
     "nodemon": "^3.0.3",
-    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
 }

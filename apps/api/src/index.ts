@@ -1,50 +1,40 @@
-/* Local configuration for development. */
+import cors from '@fastify/cors'
+import * as dotenv from 'dotenv'
 import Fastify from 'fastify'
 
 import feedbackRoute from './routes/feedback'
 
-const fastify = Fastify({
-  requestTimeout: 30000
+dotenv.config()
+
+const app = Fastify({
+  // eslint-disable-next-line turbo/no-undeclared-env-vars
+  logger: process.env.NODE_ENV === 'production'
 })
 
-fastify.register(feedbackRoute)
+// eslint-disable-next-line turbo/no-undeclared-env-vars
+const allowedOrigins = process.env.OPTAL_WEB_DOMAIN ? [process.env.OPTAL_WEB_DOMAIN] : []
 
-fastify.listen({ port: 8080 }, (err, address) => {
-  if (err) {
-    fastify.log.error(err)
-    process.exit(1)
-  }
-  console.log(`Server listening at ${address}`)
+app.register(cors, {
+  origin: allowedOrigins
 })
 
-/*
-import { createClient } from '@supabase/supabase-js'
+app.register(feedbackRoute, {
+  prefix: '/feedback'
+})
 
-export const supabase = createClient(
-  process.env.SUPABASE_URL ?? '',
-  process.env.SUPABASE_ANON_KEY ?? ''
-)
+app.get('/', async (_, response) => {
+  return response.status(200).send('Success!')
+})
 
-type FeedbackType = 'bug' | 'feature' | 'other'
-const feedbackTypes: FeedbackType[] = ['bug', 'feature', 'other']
-
-export async function POST(request: Request) {
-  const body = await request.json()
-
-  if (!body.text || !feedbackTypes.includes(body.type)) {
-    return new Response(null, {
-      status: 400
-    })
-  }
-
-  const response = await supabase.from('feedback').insert(body)
-
-  if (response.error) {
-    console.error(response.error)
-  }
-
-  return new Response(null, {
-    status: 200
+// eslint-disable-next-line turbo/no-undeclared-env-vars
+if (process.env.NODE_ENV === 'development') {
+  app.listen({ port: 3000 }, function (err, address) {
+    if (err) {
+      app.log.error(err)
+      process.exit(1)
+    }
+    console.log(`Server is now listening on ${address}`)
   })
 }
-*/
+
+export default app
