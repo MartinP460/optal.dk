@@ -1,21 +1,19 @@
-# Fastify + Vercel
+# API
 
-This example shows how to use Fastify with Vercel Functions.
+Fastify backend for optal.dk.
 
-## Demo
+### Running Locallly
 
-https://fastify-example.vercel.app/
-
-## Running Locallly
+Pull changes to the DB if you are collaborating first.
 
 ```bash
-npm i
-npm i -g vercel@latest
-vercel dev
+npm run run-dev
 ```
 
-## One-Click Deploy
+### Applying migrations on production DB
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+This step should be completed before merging to the main branch.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/starter/fastify&project-name=fastify&repository-name=fastify)
+```bash
+npm run sb:push
+```

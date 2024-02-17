@@ -7,7 +7,8 @@ import feedbackRoute from '../src/routes/feedback'
 dotenv.config()
 
 const app = Fastify({
-  logger: true
+  // eslint-disable-next-line turbo/no-undeclared-env-vars
+  logger: process.env.NODE_ENV === 'production'
 })
 
 // eslint-disable-next-line turbo/no-undeclared-env-vars
