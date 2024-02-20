@@ -83,7 +83,7 @@
     {#if displayType.value === 'chart'}
       <div class="flex gap-4">
         {#each labelGroups as labelGroup}
-          <Popover.Root positioning={{ placement: 'bottom-start' }}>
+          <Popover.Root>
             <Popover.Trigger
               ><Button variant="outline">{$t(labelGroup[0].label)}</Button></Popover.Trigger
             >
