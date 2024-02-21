@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { env } from '$env/dynamic/public'
+  import { PUBLIC_ANALYTICS_URL, PUBLIC_ANALYTICS_WEBSITE_ID } from '$env/static/public'
 
   const isProduction = process.env.NODE_ENV === 'production'
 </script>
@@ -9,10 +9,6 @@
   <meta name="description" content="Random content" />
   <meta name="”robots”" content="”noindex”" />
   {#if isProduction}
-    <script
-      async
-      src={env.PUBLIC_ANALYTICS_URL}
-      data-website-id={env.PUBLIC_ANALYTICS_WEBSITE_ID}
-    ></script>
+    <script async src={PUBLIC_ANALYTICS_URL} data-website-id={PUBLIC_ANALYTICS_WEBSITE_ID}></script>
   {/if}
 </svelte:head>
