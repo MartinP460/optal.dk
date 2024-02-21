@@ -22,5 +22,5 @@
       "persistent": true
     }
   },
-  "globalEnv": ["SUPABASE_URL", "SUPABASE_ANON_KEY"]
+  "globalEnv": ["NODE_ENV", "SUPABASE_URL", "SUPABASE_ANON_KEY"]
 }

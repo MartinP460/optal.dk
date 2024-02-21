@@ -4,6 +4,7 @@
   import { Toaster } from 'svelte-sonner'
   import { page } from '$app/stores'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
+  import Head from '$lib/components/Head.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Select from '$lib/components/ui/select'
   import { locales, locale, LOCAL_STORAGE_LANGUAGE, t } from '$lib/i18n'
@@ -23,12 +24,7 @@
 </script>
 
 <Toaster richColors />
-
-<svelte:head>
-  <title>Optal.dk • Some stuff</title>
-  <meta name="description" content="Random content" />
-  <meta name="”robots”" content="”noindex”" />
-</svelte:head>
+<Head />
 
 <div class="container mx-auto max-w-5xl px-4 flex flex-col min-h-screen">
   <header class={clsx('py-4 flex justify-between', isHomePath && 'flex-row-reverse')}>

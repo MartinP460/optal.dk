@@ -5,9 +5,11 @@
     "set-env": "OPTAL_WEB_DOMAIN=http://localhost:5173 NODE_ENV=development SUPABASE_URL=http://127.0.0.1:54321 SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0",
     "run-dev": "npm run sb:start && npm run set-env nodemon api/index.ts",
     "sb:diff": "supabase db diff",
+    "sb:migrate-latest": "supabase migration up",
     "sb:migrate-new": "supabase migration new",
     "sb:pull": "supabase db pull",
     "sb:push": "supabase db push",
+    "sb:reset": "supabase db reset",
     "sb:start": "supabase start",
     "sb:status": "supabase status",
     "sb:stop": "supabase stop"
