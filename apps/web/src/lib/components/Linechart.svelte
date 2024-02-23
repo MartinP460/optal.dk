@@ -56,10 +56,25 @@
     options={{
       maintainAspectRatio: false,
       scales: {
+        x: {
+          grid: {
+            display: false
+          },
+          ticks: {
+            color: '#000'
+          }
+        },
         y: {
           beginAtZero: true,
-          max: maxY
+          max: maxY,
+          ticks: {
+            color: '#000',
+            maxTicksLimit: 10
+          }
         }
+      },
+      defaults: {
+        color: '#000000'
       },
       plugins: {
         legend: {
