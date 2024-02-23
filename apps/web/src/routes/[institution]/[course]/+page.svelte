@@ -3,8 +3,8 @@
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Meta from '$lib/components/Meta.svelte'
   import Visualization from '$lib/components/Visualization.svelte'
-  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
   import { t } from '$lib/i18n'
+  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
 
   export let data: PageData
 
