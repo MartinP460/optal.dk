@@ -5,8 +5,6 @@
 </script>
 
 <svelte:head>
-  <title>Optal.dk • Some stuff</title>
-  <meta name="description" content="Random content" />
   <meta name="”robots”" content="”noindex”" />
   {#if isProduction}
     <script async src={PUBLIC_ANALYTICS_URL} data-website-id={PUBLIC_ANALYTICS_WEBSITE_ID}></script>

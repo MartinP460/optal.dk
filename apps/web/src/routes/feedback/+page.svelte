@@ -72,6 +72,10 @@
   ]
 </script>
 
+<svelte:head>
+  <title>{`${$t('feedback')} • optal.dk`}</title>
+</svelte:head>
+
 <Container>
   <Breadcrumb routes={breadcrumbRoutes} />
   <h1 class="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-4 mb-8">

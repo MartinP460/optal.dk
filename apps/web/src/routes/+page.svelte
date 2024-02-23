@@ -48,6 +48,11 @@
   $: coursesResult = courseFuse.search(searchQuery)
 </script>
 
+<svelte:head>
+  <title>{$t('metaTitleHome')}</title>
+  <meta name="description" content={$t('metaDescriptionHome')} />
+</svelte:head>
+
 <main class="flex flex-col justify-center items-center">
   <div class="lg:mt-16 mt-12 mb-20 text-center">
     <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">
