@@ -19,9 +19,10 @@
 
   const has5OrMoreYearsOfData = data.labels.length > 4
 
-  let displayType: { value: 'chart' | 'table'; label: 'Chart' | 'Table' } = has5OrMoreYearsOfData
-    ? { value: 'chart', label: 'Chart' }
-    : { value: 'table', label: 'Table' }
+  let displayType: { value: 'chart' | 'table'; label: string }
+  $: displayType = has5OrMoreYearsOfData
+    ? { value: 'chart', label: $t('chart') }
+    : { value: 'table', label: $t('table') }
   let selected: number[] = [labelGroups[0][0].id]
   let selectedLabel = labelGroups[0][0].label
 
@@ -44,7 +45,7 @@
 
   const handleDisplayTypeSelect = (value: unknown) => {
     // the library has bad typing ):
-    const newValue = value as { value: 'chart' | 'table'; label: 'Chart' | 'Table' }
+    const newValue = value as { value: 'chart' | 'table'; label: string }
 
     displayType = newValue
   }
