@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { IconChevronRight } from '@tabler/icons-svelte'
   import type { TooltipItem } from 'chart.js'
   import type { KOTDataset } from 'parser'
-  import { IconChevronRight } from '@tabler/icons-svelte'
   import Linechart from '$lib/components/Linechart.svelte'
   import Table from '$lib/components/Table.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
