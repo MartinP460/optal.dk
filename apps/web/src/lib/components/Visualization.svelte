@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { TooltipItem } from 'chart.js'
   import type { KOTDataset } from 'parser'
+  import { IconChevronRight } from '@tabler/icons-svelte'
   import Linechart from '$lib/components/Linechart.svelte'
   import Table from '$lib/components/Table.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
@@ -85,9 +86,20 @@
       <div class="flex gap-4">
         {#each labelGroups as labelGroup}
           <Popover.Root>
-            <Popover.Trigger
-              ><Button variant="outline">{$t(labelGroup[0].label)}</Button></Popover.Trigger
-            >
+            <Popover.Trigger asChild let:builder>
+              <Button
+                builders={[builder]}
+                variant="outline"
+                class={selectedLabel === labelGroup[0].label ? 'bg-gray-50' : 'bg-transparent'}
+                >{$t(labelGroup[0].label)}
+                <IconChevronRight
+                  size={16}
+                  class="ml-1 transition-transform {builder['data-state'] === 'open'
+                    ? 'rotate-90'
+                    : ''}"
+                />
+              </Button>
+            </Popover.Trigger>
             <Popover.Content class="flex flex-col gap-2 w-fit"
               >{#each labelGroup as group (group.id)}
                 <div class="flex items-center space-x-2">
