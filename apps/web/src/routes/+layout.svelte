@@ -74,10 +74,6 @@
             data-sveltekit-preload-data="tap">{$t('feedback')}</Button
           >
         </li>
-        <DotSeperator />
-        <li>
-          <Button variant="ghost" class="text-gray-600 pb-3">Another link</Button>
-        </li>
       </ul>
       <!-- <div class="mt-6 text-sm text-gray-500">
         Created by
