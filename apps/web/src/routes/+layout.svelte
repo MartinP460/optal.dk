@@ -10,6 +10,7 @@
   import { locales, locale, LOCAL_STORAGE_LANGUAGE, t } from '$lib/i18n'
   import type { Locales } from '$lib/i18n'
   import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
+  import Logo from '$lib/components/Logo.svelte'
 
   const selectLocale = { value: $locale }
 
@@ -29,7 +30,7 @@
 <div class="container mx-auto max-w-5xl px-4 flex flex-col min-h-screen">
   <header class={clsx('py-4 flex justify-between', isHomePath && 'flex-row-reverse')}>
     {#if !isHomePath}
-      <a href="/" class="font-medium text-lg">op<span class="text-teal-600">tal</span>.dk</a>
+      <a href="/" class="font-medium text-lg flex justify-center"><Logo class="w-24" /></a>
     {/if}
     <Select.Root selected={selectLocale} onSelectedChange={(value) => handleLocaleChange(value)}>
       <Select.Trigger class="w-32">

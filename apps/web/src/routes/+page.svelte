@@ -11,6 +11,7 @@
   import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
+  import Logo from '$lib/components/Logo.svelte'
 
   export let data: PageData
 
@@ -54,10 +55,9 @@
 </svelte:head>
 
 <main class="flex flex-col justify-center items-center">
-  <div class="lg:mt-16 mt-12 mb-20 text-center">
-    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-6xl">
-      op<span class="text-teal-600">tal</span>.dk
-    </h1>
+  <div class="lg:mt-16 mt-12 mb-20 text-center flex flex-col items-center">
+    <h1 class="sr-only">optal.dk</h1>
+    <Logo />
     <p class="font-medium mt-3 md:mt-4">
       {$t('byline')}
     </p>
