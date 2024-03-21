@@ -143,58 +143,55 @@
         <p class="text-gray-600 text-center">{$t('noResults')}</p>
       {/if}
     {:else}
-      <ul>
+      <Accordion.Root multiple>
         {#each institutions as institution (institution.id)}
-          <li>
-            <Accordion.Root>
-              <Accordion.Item value={institution.latestName}>
-                <Accordion.Trigger
-                  class="text-left text-sm sm:text-base gap-6 data-[state=open]:text-teal-700"
-                  >{institution.latestName}</Accordion.Trigger
+          <Accordion.Item value={institution.latestName}>
+            <Accordion.Trigger
+              class="text-left text-sm sm:text-base gap-6 data-[state=open]:text-teal-700"
+            >
+              {institution.latestName}
+            </Accordion.Trigger>
+            <Accordion.Content>
+              <div class="sm:ml-4 mt-2">
+                <Button
+                  href={`/${institution.slug}`}
+                  variant="secondary"
+                  class="h-fit w-full"
+                  data-sveltekit-preload-data="tap"
                 >
-                <Accordion.Content>
-                  <div class="sm:ml-4 mt-2">
-                    <Button
-                      href={`/${institution.slug}`}
-                      variant="secondary"
-                      class="h-fit w-full"
-                      data-sveltekit-preload-data="tap"
-                    >
-                      <div class="inline-flex flex-col items-start whitespace-break-spaces flex-1">
-                        <span class="text-xs text-gray-600">{$t('totalNumbersFor')}</span>
-                        <span>{institution.latestName}</span>
-                      </div>
-                      <IconChevronRight class="w-5 h-5 ml-3" />
-                    </Button>
-                    <ul class="mt-4 hover:text-gray-500 transition-colors">
-                      {#each institution.courses as course (course.id)}
-                        <li class="hover:text-primary">
-                          <a
-                            href={`/${institution.slug}/${course.slug}`}
-                            class="flex flex-col gap-1 py-2"
-                          >
-                            <p class="text-sm font-semibold">{course.latestName}</p>
-                            <p class="text-xs">
-                              {[
-                                convertCourseYearsToString(course.years),
-                                course.location,
-                                course.studyStart,
-                                course.eLearning ? 'e-learning' : null
-                              ]
-                                .filter((item) => item)
-                                .join(', ')}
-                            </p>
-                          </a>
-                        </li>
-                      {/each}
-                    </ul>
+                  <div class="inline-flex flex-col items-start whitespace-break-spaces flex-1">
+                    <span class="text-xs text-gray-600">{$t('totalNumbersFor')}</span>
+                    <span>{institution.latestName}</span>
                   </div>
-                </Accordion.Content>
-              </Accordion.Item>
-            </Accordion.Root>
-          </li>
+                  <IconChevronRight class="w-5 h-5 ml-3" />
+                </Button>
+                <ul class="mt-4 hover:text-gray-500 transition-colors">
+                  {#each institution.courses as course (course.id)}
+                    <li class="hover:text-primary">
+                      <a
+                        href={`/${institution.slug}/${course.slug}`}
+                        class="flex flex-col gap-1 py-2"
+                      >
+                        <p class="text-sm font-semibold">{course.latestName}</p>
+                        <p class="text-xs">
+                          {[
+                            convertCourseYearsToString(course.years),
+                            course.location,
+                            course.studyStart,
+                            course.eLearning ? 'e-learning' : null
+                          ]
+                            .filter((item) => item)
+                            .join(', ')}
+                        </p>
+                      </a>
+                    </li>
+                  {/each}
+                </ul>
+              </div>
+            </Accordion.Content>
+          </Accordion.Item>
         {/each}
-      </ul>
+      </Accordion.Root>
     {/if}
   </Card.Root>
 </main>
