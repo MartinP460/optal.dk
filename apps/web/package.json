@@ -1,5 +1,5 @@
 {
-  "name": "optal",
+  "name": "web",
   "private": true,
   "scripts": {
     "dev": "vite dev",
