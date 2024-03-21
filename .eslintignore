@@ -10,6 +10,7 @@
 **/coverage
 **/.temp/
 **/.vercel/
+**/vite.config.js.timestamp-*
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
