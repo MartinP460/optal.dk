@@ -4,6 +4,7 @@
   import Fuse from 'fuse.js'
   import type { KOTInstitution } from 'parser'
   import type { PageData } from './$types'
+  import Logo from '$lib/components/Logo.svelte'
   import * as Accordion from '$lib/components/ui/accordion'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Card from '$lib/components/ui/card'
@@ -11,7 +12,6 @@
   import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
-  import Logo from '$lib/components/Logo.svelte'
 
   export let data: PageData
 

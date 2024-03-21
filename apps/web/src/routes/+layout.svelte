@@ -5,12 +5,12 @@
   import { page } from '$app/stores'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Head from '$lib/components/Head.svelte'
+  import Logo from '$lib/components/Logo.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Select from '$lib/components/ui/select'
   import { locales, locale, LOCAL_STORAGE_LANGUAGE, t } from '$lib/i18n'
   import type { Locales } from '$lib/i18n'
   import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
-  import Logo from '$lib/components/Logo.svelte'
 
   const selectLocale = { value: $locale }
 
