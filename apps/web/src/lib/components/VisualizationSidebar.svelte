@@ -1,7 +1,7 @@
 <script lang="ts">
   import { IconAdjustmentsHorizontal, IconEye } from '@tabler/icons-svelte'
-  import type { KOTDataset, KOTLabel } from 'parser'
   import { createEventDispatcher } from 'svelte'
+  import type { KOTDataset, KOTLabel } from 'parser'
 
   import * as Accordion from '$lib/components/ui/accordion'
   import Button from '$lib/components/ui/button/button.svelte'

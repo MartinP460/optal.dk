@@ -2,6 +2,7 @@
   import clsx from 'clsx'
   import { AlertCircle, Loader2 } from 'lucide-svelte'
   import { toast } from 'svelte-sonner'
+  import type { FeedbackType } from '$lib/types/feedback'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Container from '$lib/components/Container.svelte'
   import * as Alert from '$lib/components/ui/alert'
@@ -10,7 +11,6 @@
   import * as Select from '$lib/components/ui/select'
   import Textarea from '$lib/components/ui/textarea/textarea.svelte'
   import { t } from '$lib/i18n'
-  import type { FeedbackType } from '$lib/types/feedback'
   import { sendFeedback } from '$lib/utils/sendFeedback'
 
   $: breadcrumbRoutes = [{ text: $t('feedback'), url: '/about' }]

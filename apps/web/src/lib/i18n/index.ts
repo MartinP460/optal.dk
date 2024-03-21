@@ -1,4 +1,4 @@
-import { derived, writable, type Writable } from 'svelte/store'
+import { type Writable, derived, writable } from 'svelte/store'
 import { translations } from './translations'
 
 export type Locales = 'en' | 'da'

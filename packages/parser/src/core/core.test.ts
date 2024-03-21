@@ -1,13 +1,13 @@
-import { describe, it, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import {
-  getCoreKOTData,
-  parseKOTData,
-  isRowInstitutionSummary,
-  isRowInstitution,
-  isRowEmpty,
-  populateSingleCourseInstitutions,
   applyStrategy,
-  convertToNumber
+  convertToNumber,
+  getCoreKOTData,
+  isRowEmpty,
+  isRowInstitution,
+  isRowInstitutionSummary,
+  parseKOTData,
+  populateSingleCourseInstitutions
 } from './core'
 
 describe('getCoreKOTData', async () => {

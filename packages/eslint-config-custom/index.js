@@ -31,13 +31,16 @@ module.exports = {
     }
   ],
   rules: {
+    'sort-imports': [
+      'error',
+      {
+        ignoreDeclarationSort: true
+      }
+    ],
     'import/order': [
       'warn',
       {
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true
-        }
+        groups: ['external', 'builtin', 'type', 'internal', 'sibling', 'parent', 'index']
       }
     ],
     'import/no-unresolved': ['off'],

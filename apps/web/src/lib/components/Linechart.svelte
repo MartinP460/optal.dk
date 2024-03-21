@@ -1,17 +1,17 @@
 <script lang="ts">
   import {
+    CategoryScale,
     Chart as ChartJS,
-    Title,
-    Tooltip,
     Legend,
     LineElement,
     LinearScale,
     PointElement,
-    CategoryScale,
+    Title,
+    Tooltip,
     type TooltipItem
   } from 'chart.js'
-  import type { KOTDataset } from 'parser'
   import { Line } from 'svelte-chartjs'
+  import type { KOTDataset } from 'parser'
   import { t } from '$lib/i18n'
   import { getLineColorFromDataset } from '$lib/utils/getLineColorFromName'
 

@@ -1,7 +1,7 @@
+import * as XLSX from 'xlsx'
 import fs from 'fs'
 import path from 'path'
 import { Readable } from 'stream'
-import * as XLSX from 'xlsx'
 import { KOTCategory, KOTCourse, KOTInstitution, KOTLabel } from '../../types'
 
 const LABEL_GROUPS: { label: KOTLabel; category: KOTCategory }[] = [

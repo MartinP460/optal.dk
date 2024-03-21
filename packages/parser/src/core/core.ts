@@ -1,5 +1,5 @@
-import path from 'path'
 import _ from 'lodash'
+import path from 'path'
 import type { KOTCourse, KOTInstitution } from '../types'
 import { readCSV } from '../utils/readCSV'
 

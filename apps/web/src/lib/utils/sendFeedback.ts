@@ -1,5 +1,5 @@
-import { env } from '$env/dynamic/public'
 import type { FeedbackType } from '$lib/types/feedback'
+import { env } from '$env/dynamic/public'
 
 export async function sendFeedback(text: string, type: FeedbackType) {
   const body = {

@@ -1,12 +1,12 @@
-import { describe, it, expect, beforeAll } from 'vitest'
-import { getKOTData } from '../../core'
-import { KOTCourse, KOTInstitution } from '../../types'
+import { beforeAll, describe, expect, it } from 'vitest'
 import {
   AVAILABLE_YEARS,
-  createSheetsFromKOTData,
+  createCourseRow,
   createInstitutionSummaryRow,
-  createCourseRow
+  createSheetsFromKOTData
 } from './xlsx'
+import { getKOTData } from '../../core'
+import { KOTCourse, KOTInstitution } from '../../types'
 
 const numberOfCourses = 3
 const labelGroup = { label: 'accepted', category: 'admitted' } as const
