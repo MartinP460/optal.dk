@@ -51,9 +51,9 @@ export function isRowInstitutionSummary(row: string[]) {
   return false
 }
 
-/** Applies a "strategy" to standardize the data depending on the year. */
-export function applyStrategy(data: string[][], year: number) {
-  const trimmedData = data.map((row) =>
+/** Trims data and replaces all - (dash signs) with 0's. */
+function trimData(data: string[][]) {
+  return data.map((row) =>
     row.map((item) => {
       const trimmedItem = item.trim()
 
@@ -63,29 +63,6 @@ export function applyStrategy(data: string[][], year: number) {
       return trimmedItem
     })
   )
-
-  switch (year) {
-    case 2012:
-    case 2013:
-    case 2014:
-    case 2015: {
-      // these years have empty columns at the following indexes which need to be removed
-      const emptyColumnIndex1 = 5
-      const emptyColumnIndex2 = 7
-
-      const cleanedData = [...trimmedData]
-
-      cleanedData.forEach((_, i) => {
-        cleanedData[i].splice(emptyColumnIndex1, 1)
-        cleanedData[i].splice(emptyColumnIndex2, 1)
-      })
-
-      return cleanedData
-    }
-
-    default:
-      return trimmedData
-  }
 }
 
 /**
@@ -188,7 +165,7 @@ export async function parseKOTData(year: number) {
   const filePath = path.resolve(`data/${year}.csv`)
 
   const csvData = (await readCSV(filePath)) as string[][]
-  const cleanedData = applyStrategy(csvData, year)
+  const cleanedData = trimData(csvData)
   const data = cleanedData.slice(0, -1)
   // const annualData = csvData[csvData.length - 1]
 
@@ -318,11 +295,6 @@ export async function parseKOTData(year: number) {
   return populatedData
 }
 
-/** Checks whether two institutions are the same. */
-function isSameInstitution(institution: KOTInstitution, institutionToCompare: KOTInstitution) {
-  return institution.id === institutionToCompare.id
-}
-
 /** Merges institution names for an array of institutions. */
 function mergeInstitutionNames(institutions: KOTInstitution[]) {
   const names: string[] = []
@@ -424,9 +396,7 @@ export async function getCoreKOTData(): Promise<KOTInstitution[]> {
     const allInstitutionsPerYear = data
       .map(
         (institutions) =>
-          institutions.find((otherInstitution) =>
-            isSameInstitution(institution, otherInstitution)
-          ) ?? null
+          institutions.find((otherInstitution) => institution.id === otherInstitution.id) ?? null
       )
       .filter((institution) => institution !== null) as KOTInstitution[]
 

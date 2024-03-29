@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest'
 import {
-  applyStrategy,
   convertToNumber,
   getCoreKOTData,
   isRowEmpty,
@@ -146,31 +145,6 @@ describe('populateSingleCourseInstitutions', () => {
     // @ts-expect-error The type of label is either of the three specified,
     // but typescript infers it as string
     expect(populateSingleCourseInstitutions(institution)[0].datasets.length).toBe(4)
-  })
-})
-
-describe('applyStrategy', () => {
-  it('applies the strategy for 2012 and 2013', () => {
-    const data = [
-      [
-        '830',
-        '11995',
-        'Københavns Universitet i alt',
-        '7.286',
-        '606',
-        '0',
-        '27.889',
-        '12.212',
-        '',
-        ''
-      ],
-      ['780', '10368', 'Psykologi', '229', '23', '', '1.764', '1.012', '', '10,9', '10,7']
-    ]
-
-    const cleanedData = applyStrategy(data, 2012)
-
-    expect(cleanedData[0]).toHaveLength(8)
-    expect(cleanedData[1]).toHaveLength(9)
   })
 })
 
