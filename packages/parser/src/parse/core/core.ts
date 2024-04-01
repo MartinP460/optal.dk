@@ -77,16 +77,22 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
       const course = institution.courses[0]
 
       const acceptedAdmitted = course.datasets.find(
-        (dataset) => dataset.category === 'accepted' && dataset.subcategory === 'admitted'
+        (dataset) =>
+          dataset.categories.category === 'accepted' &&
+          dataset.categories.subcategory === 'admitted'
       )
       const acceptedStandby = course.datasets.find(
-        (dataset) => dataset.category === 'accepted' && dataset.subcategory === 'standby'
+        (dataset) =>
+          dataset.categories.category === 'accepted' && dataset.categories.subcategory === 'standby'
       )
       const applicantsTotal = course.datasets.find(
-        (dataset) => dataset.category === 'applied' && dataset.subcategory === 'total'
+        (dataset) =>
+          dataset.categories.category === 'applied' && dataset.categories.subcategory === 'total'
       )
       const applicantsFirstPriority = course.datasets.find(
-        (dataset) => dataset.category === 'applied' && dataset.subcategory === 'firstPriority'
+        (dataset) =>
+          dataset.categories.category === 'applied' &&
+          dataset.categories.subcategory === 'firstPriority'
       )
 
       if (!acceptedAdmitted || !acceptedStandby || !applicantsTotal || !applicantsFirstPriority) {
@@ -98,26 +104,34 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
         datasets: [
           {
             id: 1,
-            category: 'accepted',
-            subcategory: 'admitted',
+            categories: {
+              category: 'accepted',
+              subcategory: 'admitted'
+            },
             data: [acceptedAdmitted.data[0]]
           },
           {
             id: 2,
-            category: 'accepted',
-            subcategory: 'standby',
+            categories: {
+              category: 'accepted',
+              subcategory: 'standby'
+            },
             data: [acceptedStandby.data[0]]
           },
           {
             id: 3,
-            category: 'applied',
-            subcategory: 'total',
+            categories: {
+              category: 'applied',
+              subcategory: 'total'
+            },
             data: [applicantsTotal.data[0]]
           },
           {
             id: 4,
-            category: 'applied',
-            subcategory: 'firstPriority',
+            categories: {
+              category: 'applied',
+              subcategory: 'firstPriority'
+            },
             data: [applicantsFirstPriority.data[0]]
           }
         ]
@@ -194,26 +208,34 @@ export async function parseKOTData(year: number) {
               datasets: [
                 {
                   id: 1,
-                  category: 'accepted',
-                  subcategory: 'admitted',
+                  categories: {
+                    category: 'accepted',
+                    subcategory: 'admitted'
+                  },
                   data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])]
                 },
                 {
                   id: 2,
-                  category: 'accepted',
-                  subcategory: 'standby',
+                  categories: {
+                    category: 'accepted',
+                    subcategory: 'standby'
+                  },
                   data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])]
                 },
                 {
                   id: 3,
-                  category: 'applied',
-                  subcategory: 'total',
+                  categories: {
+                    category: 'applied',
+                    subcategory: 'total'
+                  },
                   data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])]
                 },
                 {
                   id: 4,
-                  category: 'applied',
-                  subcategory: 'firstPriority',
+                  categories: {
+                    category: 'applied',
+                    subcategory: 'firstPriority'
+                  },
                   data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])]
                 }
               ]
@@ -240,38 +262,50 @@ export async function parseKOTData(year: number) {
                   datasets: [
                     {
                       id: 1,
-                      category: 'accepted',
-                      subcategory: 'admitted',
+                      categories: {
+                        category: 'accepted',
+                        subcategory: 'admitted'
+                      },
                       data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])]
                     },
                     {
                       id: 2,
-                      category: 'accepted',
-                      subcategory: 'standby',
+                      categories: {
+                        category: 'accepted',
+                        subcategory: 'standby'
+                      },
                       data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])]
                     },
                     {
                       id: 3,
-                      category: 'applied',
-                      subcategory: 'total',
+                      categories: {
+                        category: 'applied',
+                        subcategory: 'total'
+                      },
                       data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])]
                     },
                     {
                       id: 4,
-                      category: 'applied',
-                      subcategory: 'firstPriority',
+                      categories: {
+                        category: 'applied',
+                        subcategory: 'firstPriority'
+                      },
                       data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])]
                     },
                     {
                       id: 5,
-                      category: 'quotient',
-                      subcategory: 'primary',
+                      categories: {
+                        category: 'quotient',
+                        subcategory: 'primary'
+                      },
                       data: [row[CSVDataIndexes.QuotientPrimary]]
                     },
                     {
                       id: 6,
-                      category: 'quotient',
-                      subcategory: 'standby',
+                      categories: {
+                        category: 'quotient',
+                        subcategory: 'standby'
+                      },
                       data: [row[CSVDataIndexes.QuotientStandby]]
                     }
                   ]
@@ -311,8 +345,8 @@ function mergeDatasets(courseOrInstitution: KOTInstitution[] | KOTCourse[]) {
       data: courseOrInstitution.map((institution) => {
         const dataset = institution.datasets.find(
           (dataset) =>
-            initialDataset.category === dataset.category &&
-            initialDataset.subcategory === dataset.subcategory
+            initialDataset.categories.category === dataset.categories.category &&
+            initialDataset.categories.subcategory === dataset.categories.subcategory
         )
 
         if (!dataset) {

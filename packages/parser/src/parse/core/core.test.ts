@@ -129,12 +129,33 @@ describe('populateSingleCourseInstitutions', () => {
             courseNames: ['Kunsthåndværker'],
             years: [2013],
             datasets: [
-              { id: 1, category: 'accepted', subcategory: 'admitted', data: [28] },
-              { id: 2, category: 'accepted', subcategory: 'standby', data: [2] },
-              { id: 3, category: 'applied', subcategory: 'total', data: [72] },
-              { id: 4, category: 'applied', subcategory: 'firstPriority', data: [50] },
-              { id: 5, category: 'quotient', subcategory: 'primary', data: ['ej kvotesyst.'] },
-              { id: 6, category: 'quotient', subcategory: 'standby', data: [''] }
+              { id: 1, categories: { category: 'accepted', subcategory: 'admitted' }, data: [28] },
+              { id: 2, categories: { category: 'accepted', subcategory: 'standby' }, data: [2] },
+              { id: 3, categories: { category: 'applied', subcategory: 'total' }, data: [72] },
+              {
+                id: 4,
+                categories: {
+                  category: 'applied',
+                  subcategory: 'firstPriority'
+                },
+                data: [50]
+              },
+              {
+                id: 5,
+                categories: {
+                  category: 'quotient',
+                  subcategory: 'primary'
+                },
+                data: ['ej kvotesyst.']
+              },
+              {
+                id: 6,
+                categories: {
+                  category: 'quotient',
+                  subcategory: 'standby'
+                },
+                data: ['']
+              }
             ]
           }
         ]

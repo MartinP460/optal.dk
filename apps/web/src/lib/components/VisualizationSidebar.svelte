@@ -118,7 +118,7 @@
           <Accordion.Content>
             {#each labelGroups as labelGroup}
               <p class="text-foreground leading-none font-medium first:mt-2 mt-6 mb-4">
-                {$t(labelGroup[0].category)}
+                {$t(labelGroup[0].categories.subcategory)}
               </p>
               <div class="flex flex-col gap-y-4">
                 {#each labelGroup as group (group.id)}
@@ -127,11 +127,11 @@
                       for={String(group.id)}
                       class="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 w-full font-normal"
                     >
-                      {$t(group.subcategory)}
+                      {$t(group.categories.subcategory)}
                     </Label>
                     <Checkbox
                       id={String(group.id)}
-                      aria-labelledby={group.subcategory}
+                      aria-labelledby={group.categories.subcategory}
                       disabled={selected.length === 1 && selected[0] === group.id}
                       checked={selected.includes(group.id)}
                       class="w-5 h-5"

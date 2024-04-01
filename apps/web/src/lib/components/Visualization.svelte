@@ -25,23 +25,23 @@
     ? { value: 'chart', label: $t('chart') }
     : { value: 'table', label: $t('table') }
   let selected: number[] = [labelGroups[0][0].id]
-  let selectedLabel = labelGroups[0][0].category
+  let selectedLabel = labelGroups[0][0].categories.category
 
   const handleSelect = (group: Omit<KOTDataset, 'data'>) => {
     // if de-selecting
-    if (selectedLabel === group.category && selected.length == 2) {
+    if (selectedLabel === group.categories.category && selected.length == 2) {
       selected = selected.filter((id) => id !== group.id)
       return
     }
 
     // if selecting multiple
-    if (selectedLabel === group.category && !selected.includes(group.id)) {
+    if (selectedLabel === group.categories.category && !selected.includes(group.id)) {
       selected = [...selected, group.id]
       return
     }
 
     selected = [group.id]
-    selectedLabel = group.category
+    selectedLabel = group.categories.category
   }
 
   const handleDisplayTypeSelect = (value: unknown) => {
@@ -56,11 +56,11 @@
 
     if (!dataset) return ''
 
-    const { data: datasetData, subcategory, unit } = dataset
+    const { data: datasetData, categories, unit } = dataset
 
     const dataPoint = datasetData[item.dataIndex] ?? $t('unknown')
 
-    return ` ${$t(subcategory)} - ${
+    return ` ${$t(categories.subcategory)} - ${
       dataPoint !== '' ? dataPoint.toLocaleString() : $t('unapplicale')
     } ${unit ? $t(unit) : ''}`
   }
@@ -90,8 +90,10 @@
               <Button
                 builders={[builder]}
                 variant="outline"
-                class={selectedLabel === labelGroup[0].category ? 'bg-gray-50' : 'bg-transparent'}
-                >{$t(labelGroup[0].category)}
+                class={selectedLabel === labelGroup[0].categories.category
+                  ? 'bg-gray-50'
+                  : 'bg-transparent'}
+                >{$t(labelGroup[0].categories.subcategory)}
                 <IconChevronRight
                   size={16}
                   class="ml-1 transition-transform {builder['data-state'] === 'open'
@@ -105,7 +107,7 @@
                 <div class="flex items-center space-x-2">
                   <Checkbox
                     id={String(group.id)}
-                    aria-labelledby={group.subcategory}
+                    aria-labelledby={group.categories.subcategory}
                     disabled={selected.length === 1 && selected[0] === group.id}
                     checked={selected.includes(group.id)}
                     on:click={() => handleSelect(group)}
@@ -115,7 +117,7 @@
                     for={String(group.id)}
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   >
-                    {$t(group.subcategory)}
+                    {$t(group.categories.subcategory)}
                   </Label>
                 </div>
               {/each}

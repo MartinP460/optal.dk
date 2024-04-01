@@ -2,10 +2,24 @@ export type Unit = 'persons'
 export type KOTCategory = 'accepted' | 'applied' | 'quotient'
 export type KOTSubCategory = 'admitted' | 'standby' | 'total' | 'firstPriority' | 'primary'
 
+type KOTCategoriesAccepted = {
+  category: 'accepted'
+  subcategory: 'admitted' | 'standby'
+}
+
+type KOTCategoriesApplied = {
+  category: 'applied'
+  subcategory: 'total' | 'firstPriority'
+}
+
+type KOTCategoriesQuotient = {
+  category: 'quotient'
+  subcategory: 'primary' | 'standby'
+}
+
 export type KOTDataset = {
   id: number
-  category: KOTCategory
-  subcategory: KOTSubCategory
+  categories: KOTCategoriesAccepted | KOTCategoriesApplied | KOTCategoriesQuotient
   data: (string | number)[]
   max?: number
   unit?: Unit | null

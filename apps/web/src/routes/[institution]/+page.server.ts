@@ -14,7 +14,7 @@ export async function load({ params }) {
     datasets: institution.datasets
   }
 
-  const institutionLabelGroups = _.toArray(_.groupBy(institution.datasets, 'category'))
+  const institutionLabelGroups = _.toArray(_.groupBy(institution.datasets, 'categories.category'))
 
   return {
     institution,

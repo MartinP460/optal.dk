@@ -85,8 +85,10 @@ describe('createInstitutionSummaryRow', () => {
       datasets: [
         {
           id: 1,
-          category: 'accepted',
-          subcategory: 'admitted',
+          categories: {
+            category: 'accepted',
+            subcategory: 'admitted'
+          },
           data: [20, 50, 30, 40, 60]
         }
       ],
@@ -133,8 +135,10 @@ describe('createCourseRow', () => {
       datasets: [
         {
           id: 1,
-          category: 'accepted',
-          subcategory: 'admitted',
+          categories: {
+            category: 'accepted',
+            subcategory: 'admitted'
+          },
           data: [10, 50, 30]
         }
       ],
@@ -158,8 +162,10 @@ describe('createCourseRow', () => {
       datasets: [
         {
           id: 1,
-          category: 'accepted',
-          subcategory: 'admitted',
+          categories: {
+            category: 'accepted',
+            subcategory: 'admitted'
+          },
           data: [20, 50, 30, 40, 60]
         }
       ],

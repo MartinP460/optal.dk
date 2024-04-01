@@ -116,7 +116,8 @@ export function createInstitutionSummaryRow(
 ) {
   const dataset = institution.datasets.find(
     (dataset) =>
-      dataset.subcategory === labelGroup.subcategory && dataset.category === labelGroup.category
+      dataset.categories.subcategory === labelGroup.subcategory &&
+      dataset.categories.category === labelGroup.category
   )
 
   if (!dataset) return null
@@ -143,7 +144,8 @@ export function createCourseRow(
   const courseLatestName = course.latestName
   const dataset = course.datasets.find(
     (dataset) =>
-      dataset.subcategory === labelGroup.subcategory && dataset.category === labelGroup.category
+      dataset.categories.subcategory === labelGroup.subcategory &&
+      dataset.categories.category === labelGroup.category
   )
 
   if (!dataset) {
