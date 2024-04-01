@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { Readable } from 'stream'
 import { KOTCategory, KOTCourse, KOTInstitution, KOTLabel } from '../../types'
+import { AVAILABLE_YEARS } from '../../utils/availableYears'
 
 const LABEL_GROUPS: { label: KOTLabel; category: KOTCategory }[] = [
   {
@@ -29,10 +30,6 @@ const LABEL_GROUPS: { label: KOTLabel; category: KOTCategory }[] = [
     label: 'quotient',
     category: 'standby'
   }
-]
-
-export const AVAILABLE_YEARS = [
-  2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
 ]
 
 export function xlsx(data: Required<KOTInstitution>[]) {

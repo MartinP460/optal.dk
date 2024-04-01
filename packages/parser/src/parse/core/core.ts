@@ -2,6 +2,7 @@ import _ from 'lodash'
 import path from 'path'
 import type { KOTCourse, KOTInstitution } from '../../types'
 import { readCSV } from '../../utils/readCSV'
+import { AVAILABLE_YEARS } from '../../utils/availableYears'
 
 enum CSVDataIndexes {
   Id = 1, // (string) id of the course or institution
@@ -382,12 +383,7 @@ export function getAllUniqueInstitutions(data: KOTInstitution[][]) {
  * Source: https://ufm.dk/uddannelse/statistik-og-analyser/sogning-og-optag-pa-videregaende-uddannelser/grundtal-om-sogning-og-optag/kot-hovedtal
  */
 export async function getCoreKOTData(): Promise<KOTInstitution[]> {
-  const startYear = 2011
-  const endYear = 2023
-
-  const data = await Promise.all(
-    new Array(endYear - startYear + 1).fill(null).map((_, i) => parseKOTData(2011 + i))
-  )
+  const data = await Promise.all(AVAILABLE_YEARS.map((year) => parseKOTData(year)))
 
   const uniqueCourses = getAllUniqueInstitutions(data)
 
