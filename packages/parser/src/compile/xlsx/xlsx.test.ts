@@ -5,7 +5,7 @@ import {
   createInstitutionSummaryRow,
   createSheetsFromKOTData
 } from './xlsx'
-import { getKOTData } from '../../core'
+import { getData } from '../../parse'
 import { KOTCourse, KOTInstitution } from '../../types'
 
 const numberOfCourses = 3
@@ -16,7 +16,7 @@ let institution1: Required<KOTInstitution>
 let course: Required<KOTCourse>
 
 beforeAll(async () => {
-  const allData = await getKOTData()
+  const allData = await getData()
 
   data = allData.slice(0, 2).map((institution) => ({
     ...institution,

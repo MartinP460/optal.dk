@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import path from 'path'
-import type { KOTCourse, KOTInstitution } from '../types'
-import { readCSV } from '../utils/readCSV'
+import type { KOTCourse, KOTInstitution } from '../../types'
+import { readCSV } from '../../utils/readCSV'
 
 enum CSVDataIndexes {
   Id = 1, // (string) id of the course or institution
@@ -162,7 +162,7 @@ export function convertToNumber(str: string) {
 
 /** Parses admission-related data in CSV format from KOT ("Den koordinerede tilmelding"). */
 export async function parseKOTData(year: number) {
-  const filePath = path.resolve(`data/${year}.csv`)
+  const filePath = path.resolve(`data/core/${year}.csv`)
 
   const csvData = (await readCSV(filePath)) as string[][]
   const cleanedData = trimData(csvData)

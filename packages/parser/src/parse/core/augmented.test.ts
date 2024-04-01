@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import type { KOTCourse } from '../types'
+import type { KOTCourse } from '../../types'
 import { getAugmentedKOTInstitutions, parseCourseName } from './augmented'
 
 describe('getAugmentedKOTInstitutions', () => {

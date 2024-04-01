@@ -1,5 +1,5 @@
-import { getKOTData } from './core'
-import { generateFiles } from './strategies'
+import { generateFiles } from './compile'
+import { getData } from './parse'
 
 async function parseAndGenerateKOTData() {
   const args = process.argv.slice(2)
@@ -19,7 +19,7 @@ async function parseAndGenerateKOTData() {
     )
   }
 
-  const data = await getKOTData()
+  const data = await getData()
 
   await generateFiles(data)
 }
