@@ -13,6 +13,7 @@
 
 <svelte:head>
   <title>{`${$t('data')} • optal.dk`}</title>
+  <meta name="description" content={$t('metaDescriptionData')} />
 </svelte:head>
 
 <main class="mt-6 sm:mt-10 mx-auto container px-0 max-w-2xl">
