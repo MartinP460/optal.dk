@@ -2,10 +2,10 @@ import * as XLSX from 'xlsx'
 import fs from 'fs'
 import path from 'path'
 import { Readable } from 'stream'
-import { KOTCategory, KOTCourse, KOTInstitution, KOTLabel } from '../../types'
+import { KOTCategory, KOTCourse, KOTInstitution, KOTSubCategory } from '../../types'
 import { AVAILABLE_YEARS } from '../../utils/availableYears'
 
-const LABEL_GROUPS: { label: KOTLabel; subcategory: KOTCategory }[] = [
+const LABEL_GROUPS: { label: KOTCategory; subcategory: KOTSubCategory }[] = [
   {
     label: 'accepted',
     subcategory: 'admitted'
@@ -112,7 +112,7 @@ export function createSheetsFromKOTData(data: Required<KOTInstitution>[]) {
  * Returns `null` if admission figures does not exist for category. */
 export function createInstitutionSummaryRow(
   institution: Required<KOTInstitution>,
-  labelGroup: { label: KOTLabel; subcategory: KOTCategory }
+  labelGroup: { label: KOTCategory; subcategory: KOTSubCategory }
 ) {
   const dataset = institution.datasets.find(
     (dataset) =>
@@ -138,7 +138,7 @@ export function createInstitutionSummaryRow(
 /** Creates the row of figures of the category. */
 export function createCourseRow(
   course: Required<KOTCourse>,
-  labelGroup: { label: KOTLabel; subcategory: KOTCategory }
+  labelGroup: { label: KOTCategory; subcategory: KOTSubCategory }
 ) {
   const courseLatestName = course.latestName
   const dataset = course.datasets.find(

@@ -1,11 +1,11 @@
 export type Unit = 'persons'
-export type KOTLabel = 'accepted' | 'applied' | 'quotient'
-export type KOTCategory = 'admitted' | 'standby' | 'total' | 'firstPriority' | 'primary'
+export type KOTCategory = 'accepted' | 'applied' | 'quotient'
+export type KOTSubCategory = 'admitted' | 'standby' | 'total' | 'firstPriority' | 'primary'
 
 export type KOTDataset = {
   id: number
-  label: KOTLabel
-  subcategory: KOTCategory
+  label: KOTCategory
+  subcategory: KOTSubCategory
   data: (string | number)[]
   max?: number
   unit?: Unit | null

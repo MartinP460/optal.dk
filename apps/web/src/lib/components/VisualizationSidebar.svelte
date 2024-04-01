@@ -1,7 +1,7 @@
 <script lang="ts">
   import { IconAdjustmentsHorizontal, IconEye } from '@tabler/icons-svelte'
   import { createEventDispatcher } from 'svelte'
-  import type { KOTDataset, KOTLabel } from 'parser'
+  import type { KOTCategory, KOTDataset } from 'parser'
 
   import * as Accordion from '$lib/components/ui/accordion'
   import Button from '$lib/components/ui/button/button.svelte'
@@ -15,7 +15,7 @@
   export let labelGroups: Omit<KOTDataset, 'data'>[][]
   export let displayType: 'chart' | 'table'
   export let selected: number[]
-  export let selectedLabel: KOTLabel
+  export let selectedLabel: KOTCategory
 
   type DisplayType = {
     value: 'chart' | 'table'
