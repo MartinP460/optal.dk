@@ -3,6 +3,7 @@ import path from 'path'
 import type { KOTCourse, KOTInstitution } from '../../types'
 import { readCSV } from '../../utils/readCSV'
 import { AVAILABLE_YEARS } from '../../utils/availableYears'
+import { convertToNumber } from '../../utils/convertToNumber'
 
 enum CSVDataIndexes {
   Id = 1, // (string) id of the course or institution
@@ -152,13 +153,6 @@ function verifyParsedResult(result: KOTInstitution[]) {
       `Parsing error: Course ${faultyInstitution?.institutionNames[0]} included a course with no data`
     )
   }
-}
-
-/** Converts a thousand-seperated integer to a number. */
-export function convertToNumber(str: string) {
-  if (str === '') return 0
-
-  return parseFloat(str.replace('.', ''))
 }
 
 /** Parses admission-related data in CSV format from KOT ("Den koordinerede tilmelding"). */

@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest'
 import {
-  convertToNumber,
   getCoreKOTData,
   isRowEmpty,
   isRowInstitution,
@@ -145,11 +144,5 @@ describe('populateSingleCourseInstitutions', () => {
     // @ts-expect-error The type of label is either of the three specified,
     // but typescript infers it as string
     expect(populateSingleCourseInstitutions(institution)[0].datasets.length).toBe(4)
-  })
-})
-
-describe('convertToNumber', () => {
-  it('converts a comma-seperated floating-point number correctly', () => {
-    expect(convertToNumber('1.200')).toBe(1200)
   })
 })

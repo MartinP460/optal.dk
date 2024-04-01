@@ -9,6 +9,7 @@ export type KOTDataset = {
   data: (string | number)[]
   max?: number
   unit?: Unit | null
+  years?: number[]
 }
 
 export type KOTCourse = {
