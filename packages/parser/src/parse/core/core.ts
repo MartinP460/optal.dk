@@ -164,7 +164,7 @@ export function convertToNumber(str: string) {
 export async function parseKOTData(year: number) {
   const filePath = path.resolve(`data/core/${year}.csv`)
 
-  const csvData = (await readCSV(filePath)) as string[][]
+  const csvData = await readCSV(filePath)
   const cleanedData = trimData(csvData)
   const data = cleanedData.slice(0, -1)
   // const annualData = csvData[csvData.length - 1]
