@@ -13,10 +13,10 @@ export const load = async () => {
 
     const preferredLanguage = window.navigator.language
 
-    if (preferredLanguage.includes('da')) {
-      locale.set('da')
-    } else {
+    if (preferredLanguage.includes('en')) {
       locale.set('en')
+    } else {
+      locale.set('da')
     }
   }
 }
