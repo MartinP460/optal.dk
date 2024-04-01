@@ -26,13 +26,13 @@ describe('appendDataToCourse', () => {
     const newDatasets1: KOTDataset[] = [
       {
         id: 7,
-        label: 'men',
+        category: 'men',
         subcategory: 'applied',
         data: [1]
       },
       {
         id: 8,
-        label: 'women',
+        category: 'women',
         subcategory: 'applied',
         data: [2]
       }
@@ -54,13 +54,13 @@ describe('appendDataToCourse', () => {
     const newDatasets2: KOTDataset[] = [
       {
         id: 7,
-        label: 'men',
+        category: 'men',
         subcategory: 'applied',
         data: [5]
       },
       {
         id: 8,
-        label: 'women',
+        category: 'women',
         subcategory: 'applied',
         data: [8]
       }

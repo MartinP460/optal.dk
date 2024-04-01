@@ -118,7 +118,7 @@
           <Accordion.Content>
             {#each labelGroups as labelGroup}
               <p class="text-foreground leading-none font-medium first:mt-2 mt-6 mb-4">
-                {$t(labelGroup[0].label)}
+                {$t(labelGroup[0].category)}
               </p>
               <div class="flex flex-col gap-y-4">
                 {#each labelGroup as group (group.id)}

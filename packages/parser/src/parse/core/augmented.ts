@@ -91,7 +91,7 @@ export function parseCourseName(course: KOTCourse) {
 /** Adds a ´max´ property (which is the max-y value to render in a chart) and a unit. */
 function augmentDataset(courseOrInstitution: KOTInstitution | KOTCourse): KOTDataset[] {
   return courseOrInstitution.datasets.map((dataset) => {
-    if (dataset.label === 'accepted' || dataset.label === 'applied') {
+    if (dataset.category === 'accepted' || dataset.category === 'applied') {
       const admittedDataset = courseOrInstitution.datasets.find((dataset) => dataset.id === 3)
 
       if (!admittedDataset) return { ...dataset, max: undefined }

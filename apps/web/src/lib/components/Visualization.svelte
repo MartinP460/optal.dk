@@ -25,23 +25,23 @@
     ? { value: 'chart', label: $t('chart') }
     : { value: 'table', label: $t('table') }
   let selected: number[] = [labelGroups[0][0].id]
-  let selectedLabel = labelGroups[0][0].label
+  let selectedLabel = labelGroups[0][0].category
 
   const handleSelect = (group: Omit<KOTDataset, 'data'>) => {
     // if de-selecting
-    if (selectedLabel === group.label && selected.length == 2) {
+    if (selectedLabel === group.category && selected.length == 2) {
       selected = selected.filter((id) => id !== group.id)
       return
     }
 
     // if selecting multiple
-    if (selectedLabel === group.label && !selected.includes(group.id)) {
+    if (selectedLabel === group.category && !selected.includes(group.id)) {
       selected = [...selected, group.id]
       return
     }
 
     selected = [group.id]
-    selectedLabel = group.label
+    selectedLabel = group.category
   }
 
   const handleDisplayTypeSelect = (value: unknown) => {
@@ -90,8 +90,8 @@
               <Button
                 builders={[builder]}
                 variant="outline"
-                class={selectedLabel === labelGroup[0].label ? 'bg-gray-50' : 'bg-transparent'}
-                >{$t(labelGroup[0].label)}
+                class={selectedLabel === labelGroup[0].category ? 'bg-gray-50' : 'bg-transparent'}
+                >{$t(labelGroup[0].category)}
                 <IconChevronRight
                   size={16}
                   class="ml-1 transition-transform {builder['data-state'] === 'open'

@@ -5,29 +5,29 @@ import { Readable } from 'stream'
 import { KOTCategory, KOTCourse, KOTInstitution, KOTSubCategory } from '../../types'
 import { AVAILABLE_YEARS } from '../../utils/availableYears'
 
-const LABEL_GROUPS: { label: KOTCategory; subcategory: KOTSubCategory }[] = [
+const LABEL_GROUPS: { category: KOTCategory; subcategory: KOTSubCategory }[] = [
   {
-    label: 'accepted',
+    category: 'accepted',
     subcategory: 'admitted'
   },
   {
-    label: 'accepted',
+    category: 'accepted',
     subcategory: 'standby'
   },
   {
-    label: 'applied',
+    category: 'applied',
     subcategory: 'total'
   },
   {
-    label: 'applied',
+    category: 'applied',
     subcategory: 'firstPriority'
   },
   {
-    label: 'quotient',
+    category: 'quotient',
     subcategory: 'primary'
   },
   {
-    label: 'quotient',
+    category: 'quotient',
     subcategory: 'standby'
   }
 ]
@@ -46,12 +46,12 @@ export function xlsx(data: Required<KOTInstitution>[]) {
 
   const sheets = createSheetsFromKOTData(data)
   sheets.forEach((rows, i) => {
-    const isQuotient = LABEL_GROUPS[i].label === 'quotient'
+    const isQuotient = LABEL_GROUPS[i].category === 'quotient'
 
     // create worksheet
     const worksheet = XLSX.utils.json_to_sheet(rows)
 
-    const title = `${LABEL_GROUPS[i].label} - ${LABEL_GROUPS[i].subcategory}`
+    const title = `${LABEL_GROUPS[i].category} - ${LABEL_GROUPS[i].subcategory}`
 
     // append worksheet to workbook
     XLSX.utils.book_append_sheet(workbook, worksheet, title)
@@ -112,11 +112,11 @@ export function createSheetsFromKOTData(data: Required<KOTInstitution>[]) {
  * Returns `null` if admission figures does not exist for category. */
 export function createInstitutionSummaryRow(
   institution: Required<KOTInstitution>,
-  labelGroup: { label: KOTCategory; subcategory: KOTSubCategory }
+  labelGroup: { category: KOTCategory; subcategory: KOTSubCategory }
 ) {
   const dataset = institution.datasets.find(
     (dataset) =>
-      dataset.subcategory === labelGroup.subcategory && dataset.label === labelGroup.label
+      dataset.subcategory === labelGroup.subcategory && dataset.category === labelGroup.category
   )
 
   if (!dataset) return null
@@ -138,12 +138,12 @@ export function createInstitutionSummaryRow(
 /** Creates the row of figures of the category. */
 export function createCourseRow(
   course: Required<KOTCourse>,
-  labelGroup: { label: KOTCategory; subcategory: KOTSubCategory }
+  labelGroup: { category: KOTCategory; subcategory: KOTSubCategory }
 ) {
   const courseLatestName = course.latestName
   const dataset = course.datasets.find(
     (dataset) =>
-      dataset.subcategory === labelGroup.subcategory && dataset.label === labelGroup.label
+      dataset.subcategory === labelGroup.subcategory && dataset.category === labelGroup.category
   )
 
   if (!dataset) {
