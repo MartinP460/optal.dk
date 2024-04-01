@@ -56,11 +56,11 @@
 
     if (!dataset) return ''
 
-    const { data: datasetData, category, unit } = dataset
+    const { data: datasetData, subcategory, unit } = dataset
 
     const dataPoint = datasetData[item.dataIndex] ?? $t('unknown')
 
-    return ` ${$t(category)} - ${
+    return ` ${$t(subcategory)} - ${
       dataPoint !== '' ? dataPoint.toLocaleString() : $t('unapplicale')
     } ${unit ? $t(unit) : ''}`
   }
@@ -105,7 +105,7 @@
                 <div class="flex items-center space-x-2">
                   <Checkbox
                     id={String(group.id)}
-                    aria-labelledby={group.category}
+                    aria-labelledby={group.subcategory}
                     disabled={selected.length === 1 && selected[0] === group.id}
                     checked={selected.includes(group.id)}
                     on:click={() => handleSelect(group)}
@@ -115,7 +115,7 @@
                     for={String(group.id)}
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   >
-                    {$t(group.category)}
+                    {$t(group.subcategory)}
                   </Label>
                 </div>
               {/each}

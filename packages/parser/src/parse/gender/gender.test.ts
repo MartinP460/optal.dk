@@ -27,13 +27,13 @@ describe('appendDataToCourse', () => {
       {
         id: 7,
         label: 'men',
-        category: 'applied',
+        subcategory: 'applied',
         data: [1]
       },
       {
         id: 8,
         label: 'women',
-        category: 'applied',
+        subcategory: 'applied',
         data: [2]
       }
     ]
@@ -55,13 +55,13 @@ describe('appendDataToCourse', () => {
       {
         id: 7,
         label: 'men',
-        category: 'applied',
+        subcategory: 'applied',
         data: [5]
       },
       {
         id: 8,
         label: 'women',
-        category: 'applied',
+        subcategory: 'applied',
         data: [8]
       }
     ]

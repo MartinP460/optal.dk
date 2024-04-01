@@ -5,7 +5,7 @@ export type KOTCategory = 'admitted' | 'standby' | 'total' | 'firstPriority' | '
 export type KOTDataset = {
   id: number
   label: KOTLabel
-  category: KOTCategory
+  subcategory: KOTCategory
   data: (string | number)[]
   max?: number
   unit?: Unit | null

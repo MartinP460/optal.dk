@@ -127,11 +127,11 @@
                       for={String(group.id)}
                       class="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 w-full font-normal"
                     >
-                      {$t(group.category)}
+                      {$t(group.subcategory)}
                     </Label>
                     <Checkbox
                       id={String(group.id)}
-                      aria-labelledby={group.category}
+                      aria-labelledby={group.subcategory}
                       disabled={selected.length === 1 && selected[0] === group.id}
                       checked={selected.includes(group.id)}
                       class="w-5 h-5"

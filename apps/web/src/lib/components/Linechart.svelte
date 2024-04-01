@@ -33,7 +33,7 @@
           : parseFloat(datapoint.replace(',', '.'))
         : datapoint
     ),
-    label: $t(dataset.category),
+    label: $t(dataset.subcategory),
     lineTension: 0.3,
     borderColor: getLineColorFromDataset(dataset),
     pointRadius: 5,

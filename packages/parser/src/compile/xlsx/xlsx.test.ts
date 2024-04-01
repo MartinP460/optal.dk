@@ -5,7 +5,7 @@ import { KOTCourse, KOTInstitution } from '../../types'
 import { AVAILABLE_YEARS } from '../../utils/availableYears'
 
 const numberOfCourses = 3
-const labelGroup = { label: 'accepted', category: 'admitted' } as const
+const labelGroup = { label: 'accepted', subcategory: 'admitted' } as const
 let data: Required<KOTInstitution>[]
 let institution0: Required<KOTInstitution>
 let institution1: Required<KOTInstitution>
@@ -70,7 +70,7 @@ describe('createInstitutionSummaryRow', () => {
   it('returns null if no data exists for category', async () => {
     const institutionSummaryRow = createInstitutionSummaryRow(institution0, {
       label: 'quotient',
-      category: 'primary'
+      subcategory: 'primary'
     })
 
     expect(institutionSummaryRow).toBe(null)
@@ -86,7 +86,7 @@ describe('createInstitutionSummaryRow', () => {
         {
           id: 1,
           label: 'accepted',
-          category: 'admitted',
+          subcategory: 'admitted',
           data: [20, 50, 30, 40, 60]
         }
       ],
@@ -134,7 +134,7 @@ describe('createCourseRow', () => {
         {
           id: 1,
           label: 'accepted',
-          category: 'admitted',
+          subcategory: 'admitted',
           data: [10, 50, 30]
         }
       ],
@@ -159,7 +159,7 @@ describe('createCourseRow', () => {
         {
           id: 1,
           label: 'accepted',
-          category: 'admitted',
+          subcategory: 'admitted',
           data: [20, 50, 30, 40, 60]
         }
       ],

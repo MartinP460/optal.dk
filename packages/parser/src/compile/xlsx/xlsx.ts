@@ -5,30 +5,30 @@ import { Readable } from 'stream'
 import { KOTCategory, KOTCourse, KOTInstitution, KOTLabel } from '../../types'
 import { AVAILABLE_YEARS } from '../../utils/availableYears'
 
-const LABEL_GROUPS: { label: KOTLabel; category: KOTCategory }[] = [
+const LABEL_GROUPS: { label: KOTLabel; subcategory: KOTCategory }[] = [
   {
     label: 'accepted',
-    category: 'admitted'
+    subcategory: 'admitted'
   },
   {
     label: 'accepted',
-    category: 'standby'
+    subcategory: 'standby'
   },
   {
     label: 'applied',
-    category: 'total'
+    subcategory: 'total'
   },
   {
     label: 'applied',
-    category: 'firstPriority'
+    subcategory: 'firstPriority'
   },
   {
     label: 'quotient',
-    category: 'primary'
+    subcategory: 'primary'
   },
   {
     label: 'quotient',
-    category: 'standby'
+    subcategory: 'standby'
   }
 ]
 
@@ -51,7 +51,7 @@ export function xlsx(data: Required<KOTInstitution>[]) {
     // create worksheet
     const worksheet = XLSX.utils.json_to_sheet(rows)
 
-    const title = `${LABEL_GROUPS[i].label} - ${LABEL_GROUPS[i].category}`
+    const title = `${LABEL_GROUPS[i].label} - ${LABEL_GROUPS[i].subcategory}`
 
     // append worksheet to workbook
     XLSX.utils.book_append_sheet(workbook, worksheet, title)
@@ -112,10 +112,11 @@ export function createSheetsFromKOTData(data: Required<KOTInstitution>[]) {
  * Returns `null` if admission figures does not exist for category. */
 export function createInstitutionSummaryRow(
   institution: Required<KOTInstitution>,
-  labelGroup: { label: KOTLabel; category: KOTCategory }
+  labelGroup: { label: KOTLabel; subcategory: KOTCategory }
 ) {
   const dataset = institution.datasets.find(
-    (dataset) => dataset.category === labelGroup.category && dataset.label === labelGroup.label
+    (dataset) =>
+      dataset.subcategory === labelGroup.subcategory && dataset.label === labelGroup.label
   )
 
   if (!dataset) return null
@@ -137,11 +138,12 @@ export function createInstitutionSummaryRow(
 /** Creates the row of figures of the category. */
 export function createCourseRow(
   course: Required<KOTCourse>,
-  labelGroup: { label: KOTLabel; category: KOTCategory }
+  labelGroup: { label: KOTLabel; subcategory: KOTCategory }
 ) {
   const courseLatestName = course.latestName
   const dataset = course.datasets.find(
-    (dataset) => dataset.category === labelGroup.category && dataset.label === labelGroup.label
+    (dataset) =>
+      dataset.subcategory === labelGroup.subcategory && dataset.label === labelGroup.label
   )
 
   if (!dataset) {
