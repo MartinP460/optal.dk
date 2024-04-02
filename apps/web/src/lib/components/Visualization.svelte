@@ -93,7 +93,7 @@
                 class={selectedLabel === labelGroup[0].categories.category
                   ? 'bg-gray-50'
                   : 'bg-transparent'}
-                >{$t(labelGroup[0].categories.subcategory)}
+                >{$t(labelGroup[0].categories.category)}
                 <IconChevronRight
                   size={16}
                   class="ml-1 transition-transform {builder['data-state'] === 'open'

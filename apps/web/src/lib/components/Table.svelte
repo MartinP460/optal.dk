@@ -15,8 +15,8 @@
       <Table.Head />
       {#each data.datasets as dataset (dataset.id)}
         <Table.Head class="text-left pr-8 pt-2 lg:pr-4">
-          <p class="text-gray-400">{$t(dataset.category)}</p>
-          <p class="text-sm text-gray-600">{$t(dataset.subcategory)}</p>
+          <p class="text-gray-400">{$t(dataset.categories.category)}</p>
+          <p class="text-sm text-gray-600">{$t(dataset.categories.subcategory)}</p>
         </Table.Head>
       {/each}
     </Table.Row>
