@@ -15,7 +15,7 @@ enum CSVDataIndexes {
 }
 
 /** Parses gender-related admission data in CSV format from KOT ("Den koordinerede tilmelding"). */
-export async function parseGenderData(data: KOTInstitution[]) {
+export async function getGenderData(data: KOTInstitution[]) {
   let newData = [...data]
 
   const genderData = await Promise.all(
@@ -49,8 +49,9 @@ function getCourseGenderDistribution(row: string[], year: number): KOTDataset[] 
     {
       id: 7,
       categories: {
-        category: 'men',
-        subcategory: 'applied'
+        category: 'gender',
+        subcategory: 'applied',
+        subsubcategory: 'men'
       },
       data: [convertToNumber(row[CSVDataIndexes.Men])],
       years: [year]
@@ -58,8 +59,9 @@ function getCourseGenderDistribution(row: string[], year: number): KOTDataset[] 
     {
       id: 8,
       categories: {
-        category: 'women',
-        subcategory: 'applied'
+        category: 'gender',
+        subcategory: 'applied',
+        subsubcategory: 'women'
       },
       data: [convertToNumber(row[CSVDataIndexes.Women])],
       years: [year]

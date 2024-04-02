@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { appendDataToCourse, parseGenderData } from './gender'
+import { appendDataToCourse, getGenderData } from './gender'
 import { getCoreData } from '../core'
 import { KOTDataset, KOTInstitution } from '../../types'
 
@@ -13,30 +13,32 @@ beforeEach(async () => {
 
 describe('parseGenderData', () => {
   it('parses data correctly', async () => {
-    const result = await parseGenderData(coreData)
+    const result = await getGenderData(coreData)
 
     expect(result).toBeDefined()
   })
 })
 
 describe('appendDataToCourse', () => {
-  it('create a deep clone of the array of institutions and appends a single dataset in a course', () => {
+  it('creates a deep clone of the array of institutions and appends a single dataset in a course', () => {
     const courseToUpdate = institution.courses[0]
 
     const newDatasets1: KOTDataset[] = [
       {
         id: 7,
         categories: {
-          category: 'men',
-          subcategory: 'applied'
+          category: 'gender',
+          subcategory: 'applied',
+          subsubcategory: 'men'
         },
         data: [1]
       },
       {
         id: 8,
         categories: {
-          category: 'women',
-          subcategory: 'applied'
+          category: 'gender',
+          subcategory: 'applied',
+          subsubcategory: 'women'
         },
         data: [2]
       }
@@ -59,16 +61,18 @@ describe('appendDataToCourse', () => {
       {
         id: 7,
         categories: {
-          category: 'men',
-          subcategory: 'applied'
+          category: 'gender',
+          subcategory: 'applied',
+          subsubcategory: 'men'
         },
         data: [5]
       },
       {
         id: 8,
         categories: {
-          category: 'women',
-          subcategory: 'applied'
+          category: 'gender',
+          subcategory: 'applied',
+          subsubcategory: 'women'
         },
         data: [8]
       }

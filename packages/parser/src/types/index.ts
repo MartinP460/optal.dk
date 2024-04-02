@@ -17,9 +17,19 @@ type KOTCategoriesQuotient = {
   subcategory: 'primary' | 'standby'
 }
 
+type KOTCategoriesGender = {
+  category: 'gender'
+  subcategory: 'accepted' | 'applied'
+  subsubcategory: 'men' | 'women'
+}
+
 export type KOTDataset = {
   id: number
-  categories: KOTCategoriesAccepted | KOTCategoriesApplied | KOTCategoriesQuotient
+  categories:
+    | KOTCategoriesAccepted
+    | KOTCategoriesApplied
+    | KOTCategoriesQuotient
+    | KOTCategoriesGender
   data: (string | number)[]
   max?: number
   unit?: Unit | null
