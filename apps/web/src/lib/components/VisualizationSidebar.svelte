@@ -1,6 +1,7 @@
 <script lang="ts">
   import { IconAdjustmentsHorizontal, IconEye } from '@tabler/icons-svelte'
   import { createEventDispatcher } from 'svelte'
+  import clsx from 'clsx'
   import type { KOTDataset } from 'parser'
 
   import * as Accordion from '$lib/components/ui/accordion'
@@ -11,7 +12,6 @@
   import * as Sheet from '$lib/components/ui/sheet'
   import { t } from '$lib/i18n'
   import { getLabelColorFromLabel } from '$lib/utils/getLineColorFromName'
-  import clsx from 'clsx'
 
   export let dataGroups: KOTDataset[][]
   export let displayType: 'chart' | 'table'
