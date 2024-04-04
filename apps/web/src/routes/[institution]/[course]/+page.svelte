@@ -8,7 +8,7 @@
 
   export let data: PageData
 
-  const { course, courseData, courseLabelGroups, institution } = data
+  const { course, courseDataGroups, institution } = data
 
   const breadcrumbRoutes = [
     { text: data.institution.latestName, url: data.institution.slug },
@@ -17,12 +17,12 @@
   $: title = $t('metaTitleCourse', {
     courseName: course.latestName,
     institutionName: institution.latestName,
-    courseYears: convertCourseYearsToString(course.years)
+    courseYears: convertCourseYearsToString(course.datasets[0].years)
   })
   $: description = $t('metaDescriptionCourse', {
     courseName: course.latestName,
     institutionName: institution.latestName,
-    courseYears: convertCourseYearsToString(course.years)
+    courseYears: convertCourseYearsToString(course.datasets[0].years)
   })
 </script>
 
@@ -36,5 +36,5 @@
   <h1 class="text-2xl sm:text-3xl mt-4 mb-2">{data.course.latestName}</h1>
   <Meta course={data.course} />
 
-  <Visualization data={courseData} labelGroups={courseLabelGroups} />
+  <Visualization dataGroups={courseDataGroups} />
 </main>

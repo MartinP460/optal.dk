@@ -30,10 +30,10 @@ export type KOTDataset = {
     | KOTCategoriesApplied
     | KOTCategoriesQuotient
     | KOTCategoriesGender
+  years: number[]
   data: (string | number)[]
   max?: number
   unit?: Unit | null
-  years?: number[]
 }
 
 export type KOTCourse = {
@@ -41,8 +41,6 @@ export type KOTCourse = {
   id: string
   /** All unique course names throughout the years. */
   courseNames: string[]
-  /** All years where course data was available. */
-  years: number[]
   /** The datasets of the course. */
   datasets: KOTDataset[]
   /** The most recent name of the course. */
@@ -62,8 +60,6 @@ export type KOTInstitution = {
   id: string
   /** All names that the institution has had since 2011. */
   institutionNames: string[]
-  /** All years where institution data was available. */
-  years: number[]
   /** The datasets of the institution. */
   datasets: KOTDataset[]
   /** The courses the insitution offered since 2011. */

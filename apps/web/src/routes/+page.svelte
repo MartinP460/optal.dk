@@ -104,7 +104,7 @@
                     <p class="text-sm font-semibold">{course.item.latestName}</p>
                     <p class="text-xs">
                       {[
-                        convertCourseYearsToString(course.item.years),
+                        convertCourseYearsToString(course.item.datasets[0].years),
                         course.item.location,
                         course.item.studyStart,
                         course.item.eLearning ? 'e-learning' : null
@@ -175,7 +175,7 @@
                         <p class="text-sm font-semibold">{course.latestName}</p>
                         <p class="text-xs">
                           {[
-                            convertCourseYearsToString(course.years),
+                            convertCourseYearsToString(course.datasets[0].years),
                             course.location,
                             course.studyStart,
                             course.eLearning ? 'e-learning' : null

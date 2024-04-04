@@ -108,7 +108,8 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
               category: 'accepted',
               subcategory: 'admitted'
             },
-            data: [acceptedAdmitted.data[0]]
+            data: [acceptedAdmitted.data[0]],
+            years: [acceptedAdmitted.years[0]]
           },
           {
             id: 2,
@@ -116,7 +117,8 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
               category: 'accepted',
               subcategory: 'standby'
             },
-            data: [acceptedStandby.data[0]]
+            data: [acceptedStandby.data[0]],
+            years: [acceptedAdmitted.years[0]]
           },
           {
             id: 3,
@@ -124,7 +126,8 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
               category: 'applied',
               subcategory: 'total'
             },
-            data: [applicantsTotal.data[0]]
+            data: [applicantsTotal.data[0]],
+            years: [acceptedAdmitted.years[0]]
           },
           {
             id: 4,
@@ -132,7 +135,8 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
               category: 'applied',
               subcategory: 'firstPriority'
             },
-            data: [applicantsFirstPriority.data[0]]
+            data: [applicantsFirstPriority.data[0]],
+            years: [acceptedAdmitted.years[0]]
           }
         ]
       }
@@ -190,7 +194,6 @@ export async function parseKOTData(year: number) {
       result.push({
         id: row[CSVDataIndexes.Id],
         institutionNames: [row[CSVDataIndexes.Name].trim()],
-        years: [year],
         datasets: [],
         courses: []
       })
@@ -212,7 +215,8 @@ export async function parseKOTData(year: number) {
                     category: 'accepted',
                     subcategory: 'admitted'
                   },
-                  data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])]
+                  data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])],
+                  years: [year]
                 },
                 {
                   id: 2,
@@ -220,7 +224,8 @@ export async function parseKOTData(year: number) {
                     category: 'accepted',
                     subcategory: 'standby'
                   },
-                  data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])]
+                  data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])],
+                  years: [year]
                 },
                 {
                   id: 3,
@@ -228,7 +233,8 @@ export async function parseKOTData(year: number) {
                     category: 'applied',
                     subcategory: 'total'
                   },
-                  data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])]
+                  data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])],
+                  years: [year]
                 },
                 {
                   id: 4,
@@ -236,7 +242,8 @@ export async function parseKOTData(year: number) {
                     category: 'applied',
                     subcategory: 'firstPriority'
                   },
-                  data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])]
+                  data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])],
+                  years: [year]
                 }
               ]
             }
@@ -266,7 +273,8 @@ export async function parseKOTData(year: number) {
                         category: 'accepted',
                         subcategory: 'admitted'
                       },
-                      data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])]
+                      data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])],
+                      years: [year]
                     },
                     {
                       id: 2,
@@ -274,7 +282,8 @@ export async function parseKOTData(year: number) {
                         category: 'accepted',
                         subcategory: 'standby'
                       },
-                      data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])]
+                      data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])],
+                      years: [year]
                     },
                     {
                       id: 3,
@@ -282,7 +291,8 @@ export async function parseKOTData(year: number) {
                         category: 'applied',
                         subcategory: 'total'
                       },
-                      data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])]
+                      data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])],
+                      years: [year]
                     },
                     {
                       id: 4,
@@ -290,7 +300,8 @@ export async function parseKOTData(year: number) {
                         category: 'applied',
                         subcategory: 'firstPriority'
                       },
-                      data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])]
+                      data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])],
+                      years: [year]
                     },
                     {
                       id: 5,
@@ -298,7 +309,8 @@ export async function parseKOTData(year: number) {
                         category: 'quotient',
                         subcategory: 'primary'
                       },
-                      data: [row[CSVDataIndexes.QuotientPrimary]]
+                      data: [row[CSVDataIndexes.QuotientPrimary]],
+                      years: [year]
                     },
                     {
                       id: 6,
@@ -306,7 +318,8 @@ export async function parseKOTData(year: number) {
                         category: 'quotient',
                         subcategory: 'standby'
                       },
-                      data: [row[CSVDataIndexes.QuotientStandby]]
+                      data: [row[CSVDataIndexes.QuotientStandby]],
+                      years: [year]
                     }
                   ]
                 }
@@ -353,7 +366,20 @@ function mergeDatasets(courseOrInstitution: KOTInstitution[] | KOTCourse[]) {
           throw new Error('dataset not found while merging')
         }
 
-        return dataset?.data[0]
+        return dataset.data[0]
+      }),
+      years: courseOrInstitution.map((institution) => {
+        const dataset = institution.datasets.find(
+          (dataset) =>
+            initialDataset.categories.category === dataset.categories.category &&
+            initialDataset.categories.subcategory === dataset.categories.subcategory
+        )
+
+        if (!dataset) {
+          throw new Error('dataset not found while merging')
+        }
+
+        return dataset.years[0]
       })
     }
   })
@@ -392,7 +418,6 @@ function mergeCourses(institutions: KOTInstitution[]) {
     return {
       id: initialCourse.id,
       courseNames: mergeCourseNames(allCourses),
-      years: allCourses.map((course) => course.years[0]),
       datasets: mergeDatasets(allCourses)
     }
   })
@@ -428,7 +453,6 @@ export async function getCoreKOTData(): Promise<KOTInstitution[]> {
     return {
       id: allInstitutionsPerYear.find((institution) => institution?.id !== '')?.id ?? '',
       institutionNames: mergeInstitutionNames(allInstitutionsPerYear),
-      years: allInstitutionsPerYear.map((institution) => institution.years[0]),
       datasets: mergeDatasets(allInstitutionsPerYear),
       courses: mergeCourses(allInstitutionsPerYear)
     }

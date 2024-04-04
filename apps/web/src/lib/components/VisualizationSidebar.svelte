@@ -1,7 +1,7 @@
 <script lang="ts">
   import { IconAdjustmentsHorizontal, IconEye } from '@tabler/icons-svelte'
   import { createEventDispatcher } from 'svelte'
-  import type { KOTCategory, KOTDataset } from 'parser'
+  import type { KOTDataset } from 'parser'
 
   import * as Accordion from '$lib/components/ui/accordion'
   import Button from '$lib/components/ui/button/button.svelte'
@@ -11,11 +11,14 @@
   import * as Sheet from '$lib/components/ui/sheet'
   import { t } from '$lib/i18n'
   import { getLabelColorFromLabel } from '$lib/utils/getLineColorFromName'
+  import clsx from 'clsx'
 
-  export let labelGroups: Omit<KOTDataset, 'data'>[][]
+  export let dataGroups: KOTDataset[][]
   export let displayType: 'chart' | 'table'
-  export let selected: number[]
-  export let selectedLabel: KOTCategory
+  export let selected: KOTDataset[]
+  export let hideDisplayTypeButton: boolean = false
+
+  const selectedLabel = selected[0].categories.category
 
   type DisplayType = {
     value: 'chart' | 'table'
@@ -23,7 +26,7 @@
   }
 
   const dispatch = createEventDispatcher<{
-    filterChange: Omit<KOTDataset, 'data'>
+    filterChange: KOTDataset
     displayTypeChange: DisplayType
   }>()
 
@@ -31,7 +34,7 @@
     dispatch('displayTypeChange', displayType)
   }
 
-  const handleFilterChange = (group: Omit<KOTDataset, 'data'>) => {
+  const handleFilterChange = (group: KOTDataset) => {
     dispatch('filterChange', group)
   }
 
@@ -39,17 +42,19 @@
 </script>
 
 <Sheet.Root>
-  {#if displayType === 'chart'}
-    <Sheet.Trigger asChild let:builder>
-      <Button
-        builders={[builder]}
-        variant="outline"
-        class="sm:hidden py-6"
-        on:click={() => (triggerButton = 'category')}
-      >
-        <IconAdjustmentsHorizontal class="text-gray-600 h-5 w-5 mr-2" />
-        <span class="flex flex-col text-left">
-          <p class="text-xs leading-none text-gray-600">{$t('category')}</p>
+  <Sheet.Trigger asChild let:builder>
+    <Button
+      builders={[builder]}
+      variant="outline"
+      class="sm:hidden py-6"
+      on:click={() => (triggerButton = 'category')}
+    >
+      <IconAdjustmentsHorizontal class="text-gray-600 h-5 w-5 mr-2" />
+      <span class="flex flex-col text-left">
+        <p class={clsx('leading-none text-gray-600', displayType === 'chart' && 'text-xs')}>
+          {$t('category')}
+        </p>
+        {#if displayType === 'chart'}
           <span class="flex"
             ><p class="leading-tight">{$t(selectedLabel)}</p>
             <span
@@ -57,21 +62,23 @@
               style={`background-color: ${getLabelColorFromLabel(selectedLabel)};`}
             /></span
           >
-        </span>
+        {/if}
+      </span>
+    </Button>
+  </Sheet.Trigger>
+  {#if !hideDisplayTypeButton}
+    <Sheet.Trigger asChild let:builder>
+      <Button
+        builders={[builder]}
+        variant="outline"
+        class="sm:hidden py-6 ml-2"
+        on:click={() => (triggerButton = 'display')}
+      >
+        <IconEye class="text-gray-600 h-5 w-5 mr-2" />
+        {$t('display')}
       </Button>
     </Sheet.Trigger>
   {/if}
-  <Sheet.Trigger asChild let:builder>
-    <Button
-      builders={[builder]}
-      variant="outline"
-      class="sm:hidden py-6 ml-2"
-      on:click={() => (triggerButton = 'display')}
-    >
-      <IconEye class="text-gray-600 h-5 w-5 mr-2" />
-      {$t('display')}
-    </Button>
-  </Sheet.Trigger>
   <Sheet.Content class="flex flex-col">
     <Sheet.Header>
       <Sheet.Title class="mt-6 text-left">{$t('displaySettings')}</Sheet.Title>
@@ -111,31 +118,30 @@
           </Accordion.Content>
         </Accordion.Item>
         <Accordion.Item value="category">
-          <Accordion.Trigger
-            class="text-left text-sm sm:text-base gap-6 disabled:text-gray-400 disabled:cursor-not-allowed disabled:hover:no-underline"
-            disabled={displayType === 'table'}>{$t('category')}</Accordion.Trigger
-          >
+          <Accordion.Trigger class="text-left text-sm sm:text-base gap-6">
+            {$t('category')}
+          </Accordion.Trigger>
           <Accordion.Content>
-            {#each labelGroups as labelGroup}
+            {#each dataGroups as dataGroup}
               <p class="text-foreground leading-none font-medium first:mt-2 mt-6 mb-4">
-                {$t(labelGroup[0].categories.subcategory)}
+                {$t(dataGroup[0].categories.category)}
               </p>
               <div class="flex flex-col gap-y-4">
-                {#each labelGroup as group (group.id)}
+                {#each dataGroup as dataset (dataset.id)}
                   <div class="flex items-center space-x-2 w-full">
                     <Label
-                      for={String(group.id)}
+                      for={String(dataset.id)}
                       class="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 w-full font-normal"
                     >
-                      {$t(group.categories.subcategory)}
+                      {$t(dataset.categories.subcategory)}
                     </Label>
                     <Checkbox
-                      id={String(group.id)}
-                      aria-labelledby={group.categories.subcategory}
-                      disabled={selected.length === 1 && selected[0] === group.id}
-                      checked={selected.includes(group.id)}
+                      id={String(dataset.id)}
+                      aria-labelledby={dataset.categories.subcategory}
+                      disabled={selected.length === 1 && selected[0].id === dataset.id}
+                      checked={selected.map(({ id }) => id).includes(dataset.id)}
                       class="w-5 h-5"
-                      on:click={() => handleFilterChange(group)}
+                      on:click={() => handleFilterChange(dataset)}
                     />
                   </div>
                 {/each}

@@ -3,6 +3,7 @@ import { readCSV } from '../../utils/readCSV'
 import { KOTDataset, KOTInstitution } from '../../types'
 import { AVAILABLE_YEARS } from '../../utils/availableYears'
 import { convertToNumber } from '../../utils/convertToNumber'
+import { sortInstitutionsAndCourses } from '../../utils/sortInstitutionsAndCourses'
 
 enum CSVDataIndexes {
   InstitutionId = 0, // (string) id of the institution
@@ -15,7 +16,9 @@ enum CSVDataIndexes {
 }
 
 /** Parses gender-related admission data in CSV format from KOT ("Den koordinerede tilmelding"). */
-export async function getGenderData(data: KOTInstitution[]) {
+export async function getGenderData(
+  data: Required<KOTInstitution>[]
+): Promise<Required<KOTInstitution>[]> {
   let newData = [...data]
 
   const genderData = await Promise.all(
@@ -40,7 +43,7 @@ export async function getGenderData(data: KOTInstitution[]) {
     })
   })
 
-  return newData
+  return sortInstitutionsAndCourses(newData)
 }
 
 /** Gets the gender distribution of a course from a row of data. */
@@ -76,11 +79,11 @@ export function appendDataToCourse({
   courseId,
   newDatasets
 }: {
-  coreData: KOTInstitution[]
+  coreData: Required<KOTInstitution>[]
   institutionId: string
   courseId: string
   newDatasets: KOTDataset[]
-}): KOTInstitution[] {
+}): Required<KOTInstitution>[] {
   const institution = coreData.find((institution) => institution.id === institutionId)
   const restInstitutions = coreData.filter((institution) => institution.id !== institutionId)
 

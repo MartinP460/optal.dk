@@ -124,7 +124,7 @@ export function createInstitutionSummaryRow(
 
   let index = 0
   const data = AVAILABLE_YEARS.map((year) => {
-    if (!institution.years.includes(year)) {
+    if (!institution.datasets[0].years.includes(year)) {
       return ''
     }
 
@@ -154,7 +154,7 @@ export function createCourseRow(
 
   let index = 0
   const data = AVAILABLE_YEARS.map((year) => {
-    if (!course.years.includes(year)) {
+    if (!course.datasets[0].years.includes(year)) {
       return ''
     }
 

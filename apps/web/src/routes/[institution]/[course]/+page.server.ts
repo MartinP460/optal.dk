@@ -18,12 +18,7 @@ export async function load({ params }) {
     error(404, 'Course not found.')
   }
 
-  const courseData = {
-    labels: course.years,
-    datasets: course.datasets
-  }
-
-  const courseLabelGroups = _.toArray(_.groupBy(course.datasets, 'categories.category'))
+  const courseDataGroups = _.toArray(_.groupBy(course.datasets, 'categories.category'))
 
   return {
     institution: {
@@ -31,8 +26,7 @@ export async function load({ params }) {
       latestName: institution.latestName
     },
     course,
-    courseData,
-    courseLabelGroups
+    courseDataGroups
   }
 }
 

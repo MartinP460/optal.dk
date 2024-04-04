@@ -15,16 +15,10 @@
   import { t } from '$lib/i18n'
   import { getLineColorFromDataset } from '$lib/utils/getLineColorFromName'
 
-  export let data: {
-    labels: number[]
-    datasets: KOTDataset[]
-  }
-  export let selected: number[]
-  export let maxY: number | undefined
-  export let tooltip: (item: TooltipItem<'line'> & { dataset: KOTDataset }) => string
+  export let selected: KOTDataset[]
 
   const hasLetters = /[a-zA-Z]/
-  $: datasetsWithProperties = data.datasets.map((dataset) => ({
+  $: datasetsWithProperties = selected.map((dataset) => ({
     ...dataset,
     data: dataset.data.map((datapoint) =>
       typeof datapoint === 'string'
@@ -43,6 +37,22 @@
     pointBackgroundColor: getLineColorFromDataset(dataset)
   }))
 
+  const tooltip = (item: TooltipItem<'line'> & { dataset: KOTDataset }) => {
+    const dataset = selected.find((dataset) => dataset.id === item.dataset.id)
+
+    if (!dataset) return ''
+
+    const { data, categories, unit } = dataset
+
+    const dataPoint = data[item.dataIndex] ?? $t('unknown')
+
+    return ` ${$t(categories.subcategory)} - ${
+      dataPoint !== '' ? dataPoint.toLocaleString() : $t('unapplicale')
+    } ${unit ? $t(unit) : ''}`
+  }
+
+  $: maxY = selected.find((dataset) => selected.map(({ id }) => id).includes(dataset.id))?.max
+
   ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale)
 </script>
 
@@ -50,8 +60,10 @@
   <Line
     height={320}
     data={{
-      ...data,
-      datasets: datasetsWithProperties.filter((dataset) => selected.includes(dataset.id))
+      labels: selected[0].years,
+      datasets: datasetsWithProperties.filter((dataset) =>
+        selected.map(({ id }) => id).includes(dataset.id)
+      )
     }}
     options={{
       maintainAspectRatio: false,

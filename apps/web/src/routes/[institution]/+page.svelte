@@ -7,16 +7,16 @@
 
   export let data: PageData
 
-  const { institution, institutionData, institutionLabelGroups } = data
+  const { institution, institutionDataGroups } = data
 
   const breadcrumbRoutes = [{ text: institution.latestName, url: institution.slug }]
   $: title = $t('metaTitleInstitution', {
     institutionName: institution.latestName,
-    institutionYears: convertCourseYearsToString(institution.years)
+    institutionYears: convertCourseYearsToString(institution.datasets[0].years)
   })
   $: description = $t('metaDescriptionInstitution', {
     institutionName: institution.latestName,
-    institutionYears: convertCourseYearsToString(institution.years)
+    institutionYears: convertCourseYearsToString(institution.datasets[0].years)
   })
 </script>
 
@@ -32,5 +32,5 @@
     {$t('totalNumbersForInstitution', { institution: institution.latestName })}.
   </p>
 
-  <Visualization data={institutionData} labelGroups={institutionLabelGroups} />
+  <Visualization dataGroups={institutionDataGroups} />
 </main>

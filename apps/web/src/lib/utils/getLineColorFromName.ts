@@ -1,4 +1,4 @@
-import type { KOTCategory, KOTDataset } from 'parser'
+import type { KOTDataset } from 'parser'
 
 /** Gets the color of the line in the line chart from the dataset. */
 export function getLineColorFromDataset({ categories: { category, subcategory } }: KOTDataset) {
@@ -20,7 +20,7 @@ export function getLineColorFromDataset({ categories: { category, subcategory } 
   return '#ecfccb'
 }
 
-export function getLabelColorFromLabel(label: KOTCategory) {
+export function getLabelColorFromLabel(label: KOTDataset['categories']['category']) {
   switch (label) {
     case 'accepted':
       return '#4d7c0f'

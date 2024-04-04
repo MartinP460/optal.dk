@@ -13,14 +13,14 @@ describe('getCoreKOTData', async () => {
 
   it('returns the correct number of years for institution data', () => {
     data.forEach((institution) => {
-      expect(institution.years.length).toBe(institution.datasets[0].data.length)
+      expect(institution.datasets[0].years.length).toBe(institution.datasets[0].data.length)
     })
   })
 
   it('returns the correct number of years for course data', () => {
     data.forEach((institution) => {
       institution.courses.forEach((course) => {
-        expect(course.years.length).toBeDefined()
+        expect(course.datasets[0].years.length).toBe(course.datasets[0].data.length)
       })
     })
   })
@@ -121,24 +121,38 @@ describe('populateSingleCourseInstitutions', () => {
       {
         id: '',
         institutionNames: ['Kunstakademiets Designskole, Bornholm'],
-        years: [2013],
         datasets: [],
         courses: [
           {
             id: '32610',
             courseNames: ['Kunsthåndværker'],
-            years: [2013],
             datasets: [
-              { id: 1, categories: { category: 'accepted', subcategory: 'admitted' }, data: [28] },
-              { id: 2, categories: { category: 'accepted', subcategory: 'standby' }, data: [2] },
-              { id: 3, categories: { category: 'applied', subcategory: 'total' }, data: [72] },
+              {
+                id: 1,
+                categories: { category: 'accepted', subcategory: 'admitted' },
+                data: [28],
+                years: [2013]
+              },
+              {
+                id: 2,
+                categories: { category: 'accepted', subcategory: 'standby' },
+                data: [2],
+                years: [2013]
+              },
+              {
+                id: 3,
+                categories: { category: 'applied', subcategory: 'total' },
+                data: [72],
+                years: [2013]
+              },
               {
                 id: 4,
                 categories: {
                   category: 'applied',
                   subcategory: 'firstPriority'
                 },
-                data: [50]
+                data: [50],
+                years: [2013]
               },
               {
                 id: 5,
@@ -146,7 +160,8 @@ describe('populateSingleCourseInstitutions', () => {
                   category: 'quotient',
                   subcategory: 'primary'
                 },
-                data: ['ej kvotesyst.']
+                data: ['ej kvotesyst.'],
+                years: [2013]
               },
               {
                 id: 6,
@@ -154,7 +169,8 @@ describe('populateSingleCourseInstitutions', () => {
                   category: 'quotient',
                   subcategory: 'standby'
                 },
-                data: ['']
+                data: [''],
+                years: [2013]
               }
             ]
           }

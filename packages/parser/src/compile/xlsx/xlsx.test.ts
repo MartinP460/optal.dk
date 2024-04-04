@@ -81,7 +81,6 @@ describe('createInstitutionSummaryRow', () => {
       id: '1',
       latestName: 'aalborg',
       institutionNames: ['aalborg'],
-      years: [2011, 2016, 2017, 2020, 2023],
       datasets: [
         {
           id: 1,
@@ -89,7 +88,8 @@ describe('createInstitutionSummaryRow', () => {
             category: 'accepted',
             subcategory: 'admitted'
           },
-          data: [20, 50, 30, 40, 60]
+          data: [20, 50, 30, 40, 60],
+          years: [2011, 2016, 2017, 2020, 2023]
         }
       ],
       courses: [],
@@ -131,7 +131,6 @@ describe('createCourseRow', () => {
       id: '1',
       latestName: 'physics',
       courseNames: ['physics'],
-      years: [2015, 2016, 2017],
       datasets: [
         {
           id: 1,
@@ -139,7 +138,8 @@ describe('createCourseRow', () => {
             category: 'accepted',
             subcategory: 'admitted'
           },
-          data: [10, 50, 30]
+          data: [10, 50, 30],
+          years: [2015, 2016, 2017]
         }
       ],
       studyStart: 'summerstart',
@@ -158,7 +158,6 @@ describe('createCourseRow', () => {
       id: '1',
       latestName: 'physics',
       courseNames: ['physics'],
-      years: [2011, 2016, 2017, 2020, 2023],
       datasets: [
         {
           id: 1,
@@ -166,7 +165,8 @@ describe('createCourseRow', () => {
             category: 'accepted',
             subcategory: 'admitted'
           },
-          data: [20, 50, 30, 40, 60]
+          data: [20, 50, 30, 40, 60],
+          years: [2011, 2016, 2017, 2020, 2023]
         }
       ],
       studyStart: 'summerstart',

@@ -9,17 +9,11 @@ export async function load({ params }) {
     error(404, 'Institution not found.')
   }
 
-  const institutionData = {
-    labels: institution.years,
-    datasets: institution.datasets
-  }
-
-  const institutionLabelGroups = _.toArray(_.groupBy(institution.datasets, 'categories.category'))
+  const institutionDataGroups = _.toArray(_.groupBy(institution.datasets, 'categories.category'))
 
   return {
     institution,
-    institutionData,
-    institutionLabelGroups
+    institutionDataGroups
   }
 }
 
