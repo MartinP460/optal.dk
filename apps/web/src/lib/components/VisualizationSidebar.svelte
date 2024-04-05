@@ -11,7 +11,7 @@
   import * as RadioGroup from '$lib/components/ui/radio-group'
   import * as Sheet from '$lib/components/ui/sheet'
   import { t } from '$lib/i18n'
-  import { getLabelColorFromLabel } from '$lib/utils/getLineColorFromName'
+  import { getLabelColorFromLabel } from '$lib/utils/getColorFromDataset'
 
   export let dataGroups: KOTDataset[][]
   export let displayType: 'chart' | 'table'

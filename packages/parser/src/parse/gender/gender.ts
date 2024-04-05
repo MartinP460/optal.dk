@@ -52,9 +52,8 @@ function getCourseGenderDistribution(row: string[], year: number): KOTDataset[] 
     {
       id: 7,
       categories: {
-        category: 'gender',
-        subcategory: 'applied',
-        subsubcategory: 'men'
+        category: 'genderApplied',
+        subcategory: 'men'
       },
       data: [convertToNumber(row[CSVDataIndexes.Men])],
       years: [year]
@@ -62,9 +61,8 @@ function getCourseGenderDistribution(row: string[], year: number): KOTDataset[] 
     {
       id: 8,
       categories: {
-        category: 'gender',
-        subcategory: 'applied',
-        subsubcategory: 'women'
+        category: 'genderApplied',
+        subcategory: 'women'
       },
       data: [convertToNumber(row[CSVDataIndexes.Women])],
       years: [year]

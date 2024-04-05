@@ -13,7 +13,7 @@ beforeEach(async () => {
 
 describe('parseGenderData', () => {
   it('parses data correctly', async () => {
-    const result = await getGenderData(coreData)
+    const result = await getGenderData(coreData as Required<KOTInstitution>[])
 
     expect(result).toBeDefined()
   })
@@ -27,25 +27,25 @@ describe('appendDataToCourse', () => {
       {
         id: 7,
         categories: {
-          category: 'gender',
-          subcategory: 'applied',
-          subsubcategory: 'men'
+          category: 'genderApplied',
+          subcategory: 'men'
         },
-        data: [1]
+        data: [1],
+        years: [2020]
       },
       {
         id: 8,
         categories: {
-          category: 'gender',
-          subcategory: 'applied',
-          subsubcategory: 'women'
+          category: 'genderApplied',
+          subcategory: 'women'
         },
-        data: [2]
+        data: [2],
+        years: [2020]
       }
     ]
 
     const newData1 = appendDataToCourse({
-      coreData,
+      coreData: coreData as Required<KOTInstitution>[],
       institutionId: institution.id,
       courseId: courseToUpdate.id,
       newDatasets: newDatasets1
@@ -61,20 +61,20 @@ describe('appendDataToCourse', () => {
       {
         id: 7,
         categories: {
-          category: 'gender',
-          subcategory: 'applied',
-          subsubcategory: 'men'
+          category: 'genderApplied',
+          subcategory: 'men'
         },
-        data: [5]
+        data: [5],
+        years: [2020]
       },
       {
         id: 8,
         categories: {
-          category: 'gender',
-          subcategory: 'applied',
-          subsubcategory: 'women'
+          category: 'genderApplied',
+          subcategory: 'women'
         },
-        data: [8]
+        data: [8],
+        years: [2020]
       }
     ]
 

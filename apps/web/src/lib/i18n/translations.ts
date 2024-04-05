@@ -29,7 +29,7 @@ export const translations = {
     feedbackPlaceholder: 'It\'s difficult finding related courses...',
     feedbackSuccess: 'Feedback received - thank you!',
     firstPriority: 'First priority',
-    gender: 'Gender',
+    genderApplied: 'Gender - applied',
     home: 'Home',
     institutions: 'Institutions',
     metaDescriptionAbout: 'optal.dk is a website with the goal of making admission figures in higher education more visible.',
@@ -65,6 +65,8 @@ export const translations = {
     unapplicale: 'Not applicable',
     unknown: 'Unknown',
     winterstart: 'Winter-start',
+    men: 'Men',
+    women: 'Women',
   },
   da: {
     aboutByline: 'Formålet med optal.dk er at gøre optagelsestal mere synlige.',
@@ -95,7 +97,7 @@ export const translations = {
     feedbackPlaceholder: 'Det er svært at finde relaterede kurser...',
     feedbackSuccess: 'Feedback modtaget - tak!',
     firstPriority: 'Førsteprioritet',
-    gender: 'Køn',
+    genderApplied: 'Køn - ansøgere',
     home: 'Hjem',
     institutions: 'Institutioner',
     metaDescriptionAbout: 'optal.dk er en hjemmeside der har til formål at gøre optagelsestal på videregående uddannelser mere synlige. Læs mere her.',
@@ -131,5 +133,7 @@ export const translations = {
     unapplicale: 'Ikke gældende',
     unknown: 'Ukendt',
     winterstart: 'Vinterstart',
+    men: 'Mænd',
+    women: 'Kvinder',
   }
 }

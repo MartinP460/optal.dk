@@ -18,9 +18,8 @@ type KOTCategoriesQuotient = {
 }
 
 type KOTCategoriesGender = {
-  category: 'gender'
-  subcategory: 'accepted' | 'applied'
-  subsubcategory: 'men' | 'women'
+  category: 'genderApplied'
+  subcategory: 'men' | 'women'
 }
 
 export type KOTDataset = {

@@ -9,8 +9,8 @@
   import * as Popover from '$lib/components/ui/popover'
   import * as Select from '$lib/components/ui/select'
   import VisualizationSidebar from '$lib/components/VisualizationSidebar.svelte'
+  import Barchart from '$lib/components/Barchart.svelte'
   import { t } from '$lib/i18n'
-  // import Barchart from '$lib/components/Barchart.svelte'
 
   export let dataGroups: KOTDataset[][]
 
@@ -130,13 +130,17 @@
       </Select.Root>
     {/if}
   </div>
-  {#if false}
-    <!-- <Barchart {data} /> -->
-  {:else if displayType.value === 'chart' && has5OrMoreYearsOfData}
-    <Linechart {selected} />
-  {:else}
-    <Table datasets={selected} />
-  {/if}
+  <div class="mt-6">
+    {#if displayType.value === 'chart'}
+      {#if selected[0].categories.category === 'genderApplied'}
+        <Barchart datasets={selected} />
+      {:else if has5OrMoreYearsOfData}
+        <Linechart {selected} />
+      {/if}
+    {:else}
+      <Table datasets={selected} />
+    {/if}
+  </div>
   <div class="flex justify-end mt-2">
     <p class="text-sm text-gray-500">
       {$t('source')}:
