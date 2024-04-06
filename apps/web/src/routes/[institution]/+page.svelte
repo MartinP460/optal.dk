@@ -1,10 +1,10 @@
 <script lang="ts">
+  import { LATEST_YEAR } from 'parser'
   import type { PageData } from './$types'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Visualization from '$lib/components/Visualization.svelte'
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
-  import { LATEST_YEAR } from 'parser'
 
   export let data: PageData
 
