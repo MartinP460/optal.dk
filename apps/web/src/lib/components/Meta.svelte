@@ -7,7 +7,7 @@
   export let course: Required<KOTCourse>
 </script>
 
-<div class="flex items-center gap-2 mt-4">
+<div class="flex items-center gap-2 mt-4 flex-wrap">
   {#if course.location}
     <Badge class="text-xs">{convertCourseYearsToString(course.datasets[0].years)}</Badge>
   {/if}
