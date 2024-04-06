@@ -3,7 +3,7 @@ import { get } from 'svelte/store'
 import type { TooltipItem } from 'chart.js'
 import type { KOTDataset } from 'parser'
 import type { ChartBaseProps } from 'svelte-chartjs'
-import { t as i18n } from '$lib/i18n'
+import { t as i18n, locale } from '$lib/i18n'
 
 export const getChartOptions = (config: {
   xOffset?: boolean
@@ -24,15 +24,19 @@ export const getChartOptions = (config: {
     }
   })
 
-const tooltip = (item: TooltipItem<'line'> & { dataset: KOTDataset }) => {
+const tooltip = (
+  item: TooltipItem<'line'> & { dataset: KOTDataset & { dataLabels?: (string | number)[] } }
+) => {
   const t = get(i18n)
+  const currentLocale = get(locale)
 
-  const { data, categories, unit } = item.dataset
-  const dataPoint = data[item.dataIndex] ?? t('unknown')
+  const { data, categories, unit, dataLabels } = item.dataset
+  const dataPoint = data[item.dataIndex]
+  const dataLabel =
+    dataLabels && dataLabels[item.dataIndex] !== '' ? dataLabels[item.dataIndex] : t('unapplicale')
+  const label = dataPoint ? dataPoint : dataLabel
 
-  return ` ${t(categories.subcategory)} - ${
-    dataPoint !== '' ? dataPoint.toLocaleString() : t('unapplicale')
-  } ${unit ? t(unit) : ''}`
+  return ` ${t(categories.subcategory)} - ${label.toLocaleString(currentLocale)} ${unit ? t(unit) : ''}`
 }
 
 const chartOptions: ChartBaseProps['options'] = {
@@ -45,7 +49,8 @@ const chartOptions: ChartBaseProps['options'] = {
       pointBorderWidth: 0
     },
     bar: {
-      borderRadius: 2
+      borderRadius: 2,
+      pointStyle: 'rectRounded'
     }
   },
   scales: {

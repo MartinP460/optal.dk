@@ -29,6 +29,7 @@
         : datapoint
     ),
     label: $t(dataset.categories.subcategory),
+    dataLabels: dataset.data,
     borderColor: getColorFromDataset(dataset),
     pointBackgroundColor: getColorFromDataset(dataset),
     hitRadius: 12,

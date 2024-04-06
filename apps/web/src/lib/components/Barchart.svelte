@@ -11,19 +11,21 @@
 
   const hasLetters = /[a-zA-Z]/
   $: labels = datasets[0].years
-  $: datasetsWithProperties = datasets.map((dataset) => ({
-    ...dataset,
-    label: $t(dataset.categories.subcategory),
-    data: dataset.data.map((datapoint) =>
-      typeof datapoint === 'string'
-        ? hasLetters.test(datapoint) || datapoint === ''
-          ? 0
-          : parseFloat(datapoint.replace(',', '.'))
-        : datapoint
-    ),
-    hitRadius: 12,
-    backgroundColor: getColorFromDataset(dataset)
-  }))
+  $: datasetsWithProperties = datasets
+    .map((dataset) => ({
+      ...dataset,
+      label: $t(dataset.categories.subcategory),
+      data: dataset.data.map((datapoint) =>
+        typeof datapoint === 'string'
+          ? hasLetters.test(datapoint) || datapoint === ''
+            ? 0
+            : parseFloat(datapoint.replace(',', '.'))
+          : datapoint
+      ),
+      hitRadius: 12,
+      backgroundColor: getColorFromDataset(dataset)
+    }))
+    .sort((a, b) => (a.id < b.id ? -1 : 1))
 
   $: options = getChartOptions({
     xOffset: true,
