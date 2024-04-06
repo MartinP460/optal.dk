@@ -177,7 +177,7 @@
                           {[
                             convertCourseYearsToString(course.datasets[0].years),
                             course.location,
-                            course.studyStart,
+                            course.studyStart ? $t(course.studyStart) : '',
                             course.eLearning ? 'e-learning' : null
                           ]
                             .filter((item) => item)

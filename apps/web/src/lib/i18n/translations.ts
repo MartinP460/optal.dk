@@ -58,7 +58,7 @@ export const translations = {
     submitted: 'Submitted!',
     submitting: 'Submitting...',
     suggestionForImprovement: 'Suggestion for improvement',
-    summerstart: 'Summer-start',
+    summerstart: 'summer-start',
     table: 'Table',
     total: 'Total',
     totalNumbersFor: 'Total admission figures for',
@@ -66,7 +66,7 @@ export const translations = {
     type: 'Type',
     unapplicale: 'Not applicable',
     unknown: 'Unknown',
-    winterstart: 'Winter-start',
+    winterstart: 'winter-start',
     women: 'Women',
   },
   da: {
@@ -127,7 +127,7 @@ export const translations = {
     submitted: 'Indsendt!',
     submitting: 'Indsender...',
     suggestionForImprovement: 'Forslag til forbedring',
-    summerstart: 'Sommerstart',
+    summerstart: 'sommerstart',
     table: 'Tabel',
     total: 'Total',
     totalNumbersFor: 'Samlede optagelsetal for',
@@ -135,7 +135,7 @@ export const translations = {
     type: 'Type',
     unapplicale: 'Ikke gældende',
     unknown: 'Ukendt',
-    winterstart: 'Vinterstart',
+    winterstart: 'vinterstart',
     women: 'Kvinder',
   }
 }

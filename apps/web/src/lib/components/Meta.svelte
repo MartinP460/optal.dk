@@ -15,7 +15,7 @@
     <Badge class="text-xs">{course.location}</Badge>
   {/if}
   {#if course.studyStart}
-    <Badge>{$t(course.studyStart)}</Badge>
+    <Badge class="capitalize">{$t(course.studyStart)}</Badge>
   {/if}
   {#if course.eLearning}
     <Badge>{$t('eLearning')}</Badge>
