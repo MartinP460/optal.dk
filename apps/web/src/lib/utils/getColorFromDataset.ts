@@ -17,7 +17,7 @@ export function getColorFromDataset({ categories: { category, subcategory } }: K
     if (subcategory === 'standby') return '#f43f5e'
   }
 
-  if (category === 'genderApplied') {
+  if (category === 'genderApplied' || category === 'genderAccepted') {
     if (subcategory === 'men') return '#38bdf8'
     if (subcategory === 'women') return '#e879f9'
   }

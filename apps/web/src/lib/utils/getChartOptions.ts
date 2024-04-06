@@ -45,7 +45,7 @@ const chartOptions: ChartBaseProps['options'] = {
       pointBorderWidth: 0
     },
     bar: {
-      borderRadius: 5
+      borderRadius: 2
     }
   },
   scales: {

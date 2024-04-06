@@ -19,18 +19,29 @@ enum CSVDataIndexes {
 export async function getGenderData(
   data: Required<KOTInstitution>[]
 ): Promise<Required<KOTInstitution>[]> {
+  const genderDataAccepted = await getAcceptedOrAppliedGenderData(data, 'accepted')
+  const genderDataApplied = await getAcceptedOrAppliedGenderData(genderDataAccepted, 'applied')
+
+  return sortInstitutionsAndCourses(genderDataApplied)
+}
+
+/** Parses gender-related data from either the accepted or applied files. */
+async function getAcceptedOrAppliedGenderData(
+  data: Required<KOTInstitution>[],
+  type: 'applied' | 'accepted'
+) {
   let newData = [...data]
 
   const genderData = await Promise.all(
     AVAILABLE_YEARS.map((year) => {
-      const filePath = path.resolve(`data/gender/${year}.csv`)
+      const filePath = path.resolve(`data/gender/${type}/${year}.csv`)
       return readCSV(filePath)
     })
   )
 
   genderData.forEach((rows, i) => {
     rows.forEach((row) => {
-      const newDatasets = getCourseGenderDistribution(row, AVAILABLE_YEARS[i])
+      const newDatasets = getCourseGenderDistribution(row, AVAILABLE_YEARS[i], type)
       const courseId = row[CSVDataIndexes.CourseId]
       const institutionId = row[CSVDataIndexes.InstitutionId] + '0'
 
@@ -43,25 +54,29 @@ export async function getGenderData(
     })
   })
 
-  return sortInstitutionsAndCourses(newData)
+  return newData
 }
 
 /** Gets the gender distribution of a course from a row of data. */
-function getCourseGenderDistribution(row: string[], year: number): KOTDataset[] {
+function getCourseGenderDistribution(
+  row: string[],
+  year: number,
+  type: 'applied' | 'accepted'
+): KOTDataset[] {
   return [
     {
-      id: 7,
+      id: type === 'accepted' ? 7 : 9,
       categories: {
-        category: 'genderApplied',
+        category: type === 'accepted' ? 'genderAccepted' : 'genderApplied',
         subcategory: 'men'
       },
       data: [convertToNumber(row[CSVDataIndexes.Men])],
       years: [year]
     },
     {
-      id: 8,
+      id: type === 'accepted' ? 8 : 10,
       categories: {
-        category: 'genderApplied',
+        category: type === 'accepted' ? 'genderAccepted' : 'genderApplied',
         subcategory: 'women'
       },
       data: [convertToNumber(row[CSVDataIndexes.Women])],

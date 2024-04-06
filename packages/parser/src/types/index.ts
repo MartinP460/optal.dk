@@ -17,7 +17,12 @@ type KOTCategoriesQuotient = {
   subcategory: 'primary' | 'standby'
 }
 
-type KOTCategoriesGender = {
+type KOTCategoriesGenderAccepted = {
+  category: 'genderAccepted'
+  subcategory: 'men' | 'women'
+}
+
+type KOTCategoriesGenderApplied = {
   category: 'genderApplied'
   subcategory: 'men' | 'women'
 }
@@ -28,7 +33,8 @@ export type KOTDataset = {
     | KOTCategoriesAccepted
     | KOTCategoriesApplied
     | KOTCategoriesQuotient
-    | KOTCategoriesGender
+    | KOTCategoriesGenderAccepted
+    | KOTCategoriesGenderApplied
   years: number[]
   data: (string | number)[]
   max?: number

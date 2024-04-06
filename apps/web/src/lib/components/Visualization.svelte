@@ -132,7 +132,7 @@
   </div>
   <div class="mt-6">
     {#if displayType.value === 'chart'}
-      {#if selected[0].categories.category === 'genderApplied'}
+      {#if selected[0].categories.category.includes('gender')}
         <Barchart datasets={selected} />
       {:else if has5OrMoreYearsOfData}
         <Linechart {selected} />

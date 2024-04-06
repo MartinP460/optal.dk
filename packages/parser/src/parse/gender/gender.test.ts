@@ -17,10 +17,23 @@ describe('parseGenderData', () => {
 
     expect(result).toBeDefined()
   })
+
+  it('appends accepted and applied gender data', async () => {
+    const result = await getGenderData(coreData as Required<KOTInstitution>[])
+    const course = result[0].courses[0]
+
+    expect(course.datasets).length.greaterThanOrEqual(7)
+    expect(
+      course.datasets.find((dataset) => dataset.categories.category === 'genderAccepted')
+    ).toBeDefined()
+    expect(
+      course.datasets.find((dataset) => dataset.categories.category === 'genderApplied')
+    ).toBeDefined()
+  })
 })
 
 describe('appendDataToCourse', () => {
-  it('creates a deep clone of the array of institutions and appends a single dataset in a course', () => {
+  it('creates a deep clone of the array of institutions and appends datasets to a course', () => {
     const courseToUpdate = institution.courses[0]
 
     const newDatasets1: KOTDataset[] = [
