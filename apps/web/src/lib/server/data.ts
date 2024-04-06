@@ -7,21 +7,15 @@ export const courses = institutions.flatMap((institution) => institution.courses
 export const courseSearchIndexes = getSearchIndex()
 
 function getSearchIndex() {
-  const allInstitutions = institutions.map(({ id, latestName, years, slug }) => ({
+  const allInstitutions = institutions.map(({ id, latestName }) => ({
     id,
-    latestName,
-    years,
-    slug
+    latestName
   }))
   const allCourses = institutions.flatMap((institution) =>
-    institution.courses.map(({ id, latestName, years, studyStart, eLearning, location, slug }) => ({
+    institution.courses.map(({ id, latestName, location }) => ({
       id,
       latestName,
-      years,
-      studyStart,
-      eLearning,
-      location,
-      slug
+      location
     }))
   )
 
