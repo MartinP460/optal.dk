@@ -2,7 +2,7 @@ import { beforeAll, describe, expect, it } from 'vitest'
 import { createCourseRow, createInstitutionSummaryRow, createSheetsFromKOTData } from './xlsx'
 import { getData } from '../../parse'
 import { KOTCourse, KOTInstitution } from '../../types'
-import { AVAILABLE_YEARS } from '../../utils/availableYears'
+import { AVAILABLE_YEARS } from '../../constants'
 
 const numberOfCourses = 3
 const labelGroup = { category: 'accepted', subcategory: 'admitted' } as const

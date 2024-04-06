@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { Readable } from 'stream'
 import { KOTCategory, KOTCourse, KOTInstitution, KOTSubCategory } from '../../types'
-import { AVAILABLE_YEARS } from '../../utils/availableYears'
+import { AVAILABLE_YEARS } from '../../constants'
 
 const LABEL_GROUPS: { category: KOTCategory; subcategory: KOTSubCategory }[] = [
   {

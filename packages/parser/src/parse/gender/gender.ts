@@ -1,7 +1,7 @@
 import path from 'path'
 import { readCSV } from '../../utils/readCSV'
 import { KOTDataset, KOTInstitution } from '../../types'
-import { AVAILABLE_YEARS } from '../../utils/availableYears'
+import { AVAILABLE_YEARS } from '../../constants'
 import { convertToNumber } from '../../utils/convertToNumber'
 import { sortInstitutionsAndCourses } from '../../utils/sortInstitutionsAndCourses'
 

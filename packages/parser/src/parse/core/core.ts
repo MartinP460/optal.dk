@@ -2,7 +2,7 @@ import _ from 'lodash'
 import path from 'path'
 import type { KOTCourse, KOTInstitution } from '../../types'
 import { readCSV } from '../../utils/readCSV'
-import { AVAILABLE_YEARS } from '../../utils/availableYears'
+import { AVAILABLE_YEARS } from '../../constants'
 import { convertToNumber } from '../../utils/convertToNumber'
 
 enum CSVDataIndexes {

@@ -4,6 +4,7 @@
   import Visualization from '$lib/components/Visualization.svelte'
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
+  import { LATEST_YEAR } from 'parser'
 
   export let data: PageData
 
@@ -18,11 +19,16 @@
     institutionName: institution.latestName,
     institutionYears: convertCourseYearsToString(institution.datasets[0].years)
   })
+
+  const institutionIsInactive = !institution.datasets[0].years.includes(LATEST_YEAR)
 </script>
 
 <svelte:head>
   <title>{title}</title>
   <meta name="description" content={description} />
+  {#if institutionIsInactive}
+    <meta name="robots" content="noindex" />
+  {/if}
 </svelte:head>
 
 <main class="mt-6 sm:mt-10">
