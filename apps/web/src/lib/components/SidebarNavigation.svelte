@@ -2,9 +2,9 @@
   import { createEventDispatcher } from 'svelte'
   import Logo from './Logo.svelte'
   import Button from './ui/button/button.svelte'
+  import LanguageSelect from './LanguageSelect.svelte'
   import * as Sheet from '$lib/components/ui/sheet'
   import { Separator } from '$lib/components/ui/separator'
-  import LanguageSelect from './LanguageSelect.svelte'
   import { t } from '$lib/i18n'
 
   const dispatch = createEventDispatcher()
