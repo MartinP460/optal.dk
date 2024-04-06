@@ -3,19 +3,15 @@
   import clsx from 'clsx'
   import { Toaster } from 'svelte-sonner'
   import { IconMenuDeep } from '@tabler/icons-svelte'
-  import type { Locales } from '$lib/i18n'
   import { page } from '$app/stores'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Head from '$lib/components/Head.svelte'
   import Logo from '$lib/components/Logo.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Sheet from '$lib/components/ui/sheet'
-  import * as Select from '$lib/components/ui/select'
-  import { LOCAL_STORAGE_LANGUAGE, locale, locales, t } from '$lib/i18n'
-  import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
+  import { t } from '$lib/i18n'
   import Sidebar from '$lib/components/Sidebar.svelte'
-
-  const selectLocale = { value: $locale }
+  import LanguageSelect from '$lib/components/LanguageSelect.svelte'
 
   $: isHomePath = $page.url.pathname === '/'
 
@@ -35,13 +31,6 @@
       handleCloseSidebar()
     }
   }
-
-  const handleLocaleChange = (item: unknown) => {
-    const { value } = item as { value: Locales }
-
-    locale.set(value)
-    localStorage.setItem(LOCAL_STORAGE_LANGUAGE, value)
-  }
 </script>
 
 <Toaster richColors />
@@ -55,17 +44,21 @@
       {#if !isHomePath}
         <a href="/" class="flex justify-center"><Logo class="w-24" /></a>
       {/if}
-      <div class="flex gap-6">
-        <Sheet.Trigger class="sm:hidden" on:click={() => (sidebarPage = 'navigation')}>
+      <div class="flex sm:gap-6">
+        <Sheet.Trigger on:click={() => (sidebarPage = 'navigation')}>
           <IconMenuDeep
-            class="w-8 h-8 stroke-teal-700 hover:stroke-teal-600 transition-colors"
+            class="w-8 h-8 stroke-teal-700 hover:stroke-teal-600 transition-colors sm:hidden"
             stroke={2.3}
           />
         </Sheet.Trigger>
-        <Sheet.Trigger class="hidden sm:block">
-          <Button on:click={() => (sidebarPage = 'feedback')} variant="ghost" class="font-normal"
-            >{$t('feedback')}</Button
+        <Sheet.Trigger>
+          <Button
+            on:click={() => (sidebarPage = 'feedback')}
+            variant="ghost"
+            class="font-normal hidden sm:block"
           >
+            {$t('feedback')}
+          </Button>
         </Sheet.Trigger>
         <Sidebar
           {sidebarPage}
@@ -73,16 +66,7 @@
           on:feedbackCancel={handleFeedbackCancel}
           on:feedbackOpen={() => (sidebarPage = 'feedback')}
         />
-        <Select.Root selected={selectLocale} onSelectedChange={handleLocaleChange}>
-          <Select.Trigger class="w-32 hidden sm:flex">
-            <Select.Value placeholder={convertLocaleToDisplayString(selectLocale.value ?? '')} />
-          </Select.Trigger>
-          <Select.Content>
-            {#each locales as locale}
-              <Select.Item value={locale}>{convertLocaleToDisplayString(locale)}</Select.Item>
-            {/each}
-          </Select.Content>
-        </Select.Root>
+        <LanguageSelect class="w-32 hidden sm:flex" />
       </div>
     </header>
     <slot />
