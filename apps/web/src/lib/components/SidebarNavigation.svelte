@@ -3,8 +3,8 @@
   import Logo from './Logo.svelte'
   import Button from './ui/button/button.svelte'
   import LanguageSelect from './LanguageSelect.svelte'
+  import DarkModeMenu from './DarkModeMenu.svelte'
   import * as Sheet from '$lib/components/ui/sheet'
-  import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n'
 
   const dispatch = createEventDispatcher()
@@ -18,6 +18,10 @@
       </a>
     </Sheet.Title>
   </Sheet.Header>
+  <div class="flex mt-8">
+    <LanguageSelect class="w-40 mx-2" />
+    <DarkModeMenu />
+  </div>
   <nav>
     <ul class="flex flex-col gap-1 mt-8">
       <li>
@@ -51,6 +55,4 @@
       </li>
     </ul>
   </nav>
-  <Separator class="my-6" />
-  <LanguageSelect class="w-40 mx-2" />
 </Sheet.Content>
