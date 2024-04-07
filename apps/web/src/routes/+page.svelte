@@ -116,8 +116,8 @@
                   <p
                     class="text-xs
                     text-gray-500 text-right
-                    group-hover/container:text-gray-400
-                    group-hover/item:text-gray-600"
+                    group-hover/container:text-muted-foreground
+                    group-hover/item:text-primary"
                   >
                     {course.item.institution.latestName}
                   </p>
@@ -160,12 +160,12 @@
                   data-sveltekit-preload-data="tap"
                 >
                   <div class="inline-flex flex-col items-start whitespace-break-spaces flex-1">
-                    <span class="text-xs text-gray-600">{$t('totalNumbersFor')}</span>
+                    <span class="text-xs text-muted-foreground">{$t('totalNumbersFor')}</span>
                     <span>{institution.latestName}</span>
                   </div>
                   <IconChevronRight class="w-5 h-5 ml-3" />
                 </Button>
-                <ul class="mt-4 hover:text-gray-500 transition-colors">
+                <ul class="mt-4 hover:text-muted-foreground transition-colors">
                   {#each institution.courses as course (course.id)}
                     <li class="hover:text-primary">
                       <a

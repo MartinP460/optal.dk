@@ -23,8 +23,8 @@
   </h1>
 
   <Alert.Root variant="default" class="mt-0.5">
-    <AlertCircle class="h-4 w-4 stroke-gray-700" />
-    <Alert.Description class="mt-[1px] text-gray-700">
+    <AlertCircle class="h-4 w-4 stroke-muted-foreground" />
+    <Alert.Description class="mt-[1px] text-muted-foreground">
       {$t('downloadDataOnThisPage')}
     </Alert.Description>
   </Alert.Root>

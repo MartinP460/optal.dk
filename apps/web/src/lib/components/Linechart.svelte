@@ -10,6 +10,7 @@
     Tooltip
   } from 'chart.js'
   import { Line } from 'svelte-chartjs'
+  import { mode } from 'mode-watcher'
   import type { KOTDataset } from 'parser'
   import { t } from '$lib/i18n'
   import { getColorFromDataset } from '$lib/utils/getColorFromDataset'
@@ -39,6 +40,7 @@
   $: maxY = selected.find((dataset) => selected.map(({ id }) => id).includes(dataset.id))?.max
 
   $: options = getChartOptions({
+    isDark: $mode === 'dark',
     maxY
   })
 

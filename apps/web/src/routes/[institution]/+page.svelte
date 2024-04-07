@@ -34,7 +34,7 @@
 <main class="mt-6 sm:mt-10">
   <Breadcrumb routes={breadcrumbRoutes} />
   <h1 class="text-2xl sm:text-3xl mt-4 mb-2">{institution.latestName}</h1>
-  <p class="text-sm font-medium leading-none mt-4 text-gray-600">
+  <p class="text-sm font-medium leading-none mt-4 text-muted-foreground">
     {$t('totalNumbersForInstitution', { institution: institution.latestName })}.
   </p>
 

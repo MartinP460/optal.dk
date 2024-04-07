@@ -15,7 +15,7 @@
       {$page.status === 404 ? $t('pageNotFound') : $t('pageError')}
     </p>
     <Button href="/" variant="outline" class="mt-6">
-      <IconHome class="h-5 mr-1 text-gray-700" />
+      <IconHome class="h-5 mr-1 text-muted-foreground" />
       {$t('home')}
     </Button>
   </div>

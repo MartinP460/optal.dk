@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Bar } from 'svelte-chartjs'
   import { BarElement, CategoryScale, Chart, Legend, LinearScale, Title, Tooltip } from 'chart.js'
+  import { mode } from 'mode-watcher'
   import type { KOTDataset } from 'parser'
   import { getChartOptions } from '$lib/utils/getChartOptions'
   import { noTypeCheck } from '$lib/utils/noTypeCheck'
@@ -28,6 +29,7 @@
     .sort((a, b) => (a.id < b.id ? -1 : 1))
 
   $: options = getChartOptions({
+    isDark: $mode === 'dark',
     xOffset: true,
     minimumMax: 10
   })

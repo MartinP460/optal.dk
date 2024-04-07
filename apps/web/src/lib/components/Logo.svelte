@@ -1,10 +1,12 @@
 <script lang="ts">
+  import clsx from 'clsx'
+
   let customClass = ''
   export { customClass as class }
 </script>
 
 <svg
-  class={customClass}
+  class={clsx('dark:brightness-125', customClass)}
   width="225"
   viewBox="0 0 225 73"
   fill="none"

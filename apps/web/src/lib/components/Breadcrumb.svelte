@@ -10,23 +10,23 @@
 <nav>
   <a
     href={`/${routesWithHome[routesWithHome.length - 2].url}`}
-    class="text-gray-600 md:text-sm hover:underline hover:text-black decoration-gray-400 flex items-center md:hidden"
+    class="text-muted-foreground md:text-sm hover:text-primary flex items-center md:hidden transition-colors"
     data-sveltekit-preload-data="tap"
-    ><IconChevronLeft size={16} class="mr-1.5" />{routesWithHome[routesWithHome.length - 2].text}
+    ><IconChevronLeft size={14} class="mr-1.5" />{routesWithHome[routesWithHome.length - 2].text}
   </a>
   <ul class="hidden md:flex items-center">
     {#each routesWithHome as route, index (route.url)}
-      <li>
+      <li class="text-muted-foreground md:text-sm flex items-center">
         {#if index !== routesWithHome.length - 1}
           <a
             href={`/${route.url}`}
-            class="text-gray-600 md:text-sm hover:underline hover:text-black decoration-gray-400 flex items-center"
+            class="hover:text-primary transition-colors"
             data-sveltekit-preload-data="tap"
             >{route.text}
-            <IconChevronRight size={16} class="mx-2" />
           </a>
+          <IconChevronRight size={14} class="mx-2" />
         {:else}
-          <span class="text-gray-600 text-sm flex items-center">{route.text}</span>
+          <span class="text-muted-foreground text-sm flex items-center">{route.text}</span>
         {/if}
       </li>
     {/each}

@@ -6,23 +6,55 @@ import type { ChartBaseProps } from 'svelte-chartjs'
 import { t as i18n, locale } from '$lib/i18n'
 
 export const getChartOptions = (config: {
+  isDark: boolean
   xOffset?: boolean
   minimumMax?: number
   maxY?: number
-}) =>
+}) => {
+  const gridColor = config.isDark ? '#374151' : '#e5e7eb' // gray.700 and gray.300 respectively
+  const textColor = config.isDark ? 'white' : 'black'
+  const tooltipColor = config.isDark ? '#18181b' : 'white'
+  const tooltipBorderColor = config.isDark ? '#3f3f46' : '#d1d5db'
+
   // We need to set undefined properties to null, otherwise the options are
   // carried over from chart to chart.
-  _.merge(chartOptions, {
+  return _.merge(chartOptions, {
     scales: {
       x: {
-        offset: config.xOffset ?? null
+        offset: config.xOffset ?? null,
+        ticks: {
+          color: textColor
+        },
+        grid: {
+          color: gridColor
+        }
       },
       y: {
         max: config.maxY ?? null,
-        suggestedMax: config.minimumMax ?? null
+        suggestedMax: config.minimumMax ?? null,
+        ticks: {
+          color: textColor
+        },
+        grid: {
+          color: gridColor
+        }
+      }
+    },
+    plugins: {
+      legend: {
+        labels: {
+          color: config.isDark ? '#9ca3af' : '#4b5563'
+        }
+      },
+      tooltip: {
+        backgroundColor: tooltipColor,
+        titleColor: textColor,
+        bodyColor: textColor,
+        borderColor: tooltipBorderColor
       }
     }
   })
+}
 
 const tooltip = (
   item: TooltipItem<'line'> & { dataset: KOTDataset & { dataLabels?: (string | number)[] } }
@@ -58,14 +90,13 @@ const chartOptions: ChartBaseProps['options'] = {
       grid: {
         display: false
       },
-      ticks: {
-        color: '#000'
+      border: {
+        display: false
       }
     },
     y: {
       beginAtZero: true,
       ticks: {
-        color: '#000',
         maxTicksLimit: 10
       }
     }

@@ -84,7 +84,7 @@
               class={selected
                 .map(({ categories }) => categories.category)
                 .includes(dataGroup[0].categories.category)
-                ? 'bg-gray-50'
+                ? 'bg-accent'
                 : 'bg-transparent'}
               >{$t(dataGroup[0].categories.category)}
               <IconChevronRight
@@ -142,7 +142,7 @@
     {/if}
   </div>
   <div class="flex justify-end mt-2">
-    <p class="text-sm text-gray-500">
+    <p class="text-sm text-muted-foreground">
       {$t('source')}:
       <a
         href="https://ufm.dk/uddannelse/statistik-og-analyser/sogning-og-optag-pa-videregaende-uddannelser/grundtal-om-sogning-og-optag/kot-hovedtal"

@@ -3,6 +3,7 @@
   import clsx from 'clsx'
   import { Toaster } from 'svelte-sonner'
   import { IconMenuDeep } from '@tabler/icons-svelte'
+  import { ModeWatcher } from 'mode-watcher'
   import { page } from '$app/stores'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Head from '$lib/components/Head.svelte'
@@ -12,6 +13,7 @@
   import { t } from '$lib/i18n'
   import Sidebar from '$lib/components/Sidebar.svelte'
   import LanguageSelect from '$lib/components/LanguageSelect.svelte'
+  import DarkModeMenu from '$lib/components/DarkModeMenu.svelte'
 
   $: isHomePath = $page.url.pathname === '/'
 
@@ -34,6 +36,7 @@
 </script>
 
 <Toaster richColors />
+<ModeWatcher />
 <Head />
 
 <svelte:window bind:innerWidth />
@@ -60,6 +63,7 @@
             {$t('feedback')}
           </Button>
         </Sheet.Trigger>
+        <DarkModeMenu class="hidden sm:flex" />
         <Sidebar
           {sidebarPage}
           on:close={handleCloseSidebar}
@@ -77,7 +81,7 @@
             <Button
               href="/about"
               variant="ghost"
-              class="text-gray-600 pb-3 w-24"
+              class="text-muted-foreground pb-3 w-24"
               data-sveltekit-preload-data="tap"
             >
               {$t('aboutUs')}
@@ -88,14 +92,18 @@
             <Button
               href="/data"
               variant="ghost"
-              class="text-gray-600 pb-3 w-24"
+              class="text-muted-foreground pb-3 w-24"
               data-sveltekit-preload-data="tap">{$t('data')}</Button
             >
           </li>
           <DotSeperator class="hidden sm:block" />
           <li>
             <Sheet.Trigger on:click={() => (sidebarPage = 'feedback')}>
-              <Button variant="ghost" class="text-gray-600 pb-3" data-sveltekit-preload-data="tap">
+              <Button
+                variant="ghost"
+                class="text-muted-foreground pb-3"
+                data-sveltekit-preload-data="tap"
+              >
                 {$t('feedback')}
               </Button>
             </Sheet.Trigger>
