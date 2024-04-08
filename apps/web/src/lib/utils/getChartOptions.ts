@@ -8,8 +8,7 @@ import { t as i18n, locale } from '$lib/i18n'
 export const getChartOptions = (config: {
   isDark: boolean
   xOffset?: boolean
-  minimumMax?: number
-  maxY?: number
+  suggestedMax?: number
 }) => {
   const gridColor = config.isDark ? '#374151' : '#e5e7eb' // gray.700 and gray.300 respectively
   const textColor = config.isDark ? 'white' : 'black'
@@ -30,8 +29,7 @@ export const getChartOptions = (config: {
         }
       },
       y: {
-        max: config.maxY ?? null,
-        suggestedMax: config.minimumMax ?? null,
+        suggestedMax: config.suggestedMax ?? null,
         ticks: {
           color: textColor
         },

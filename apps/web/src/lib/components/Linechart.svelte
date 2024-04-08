@@ -37,11 +37,12 @@
     lineTension: 0.3
   }))
 
-  $: maxY = datasets.find((dataset) => datasets.map(({ id }) => id).includes(dataset.id))?.max
+  $: suggestedMax =
+    Math.max(...datasetsWithProperties.map((dataset) => Math.max(...dataset.data))) * 1.2
 
   $: options = getChartOptions({
     isDark: $mode === 'dark',
-    maxY
+    suggestedMax
   })
 
   ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale)

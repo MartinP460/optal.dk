@@ -31,7 +31,7 @@
   $: options = getChartOptions({
     isDark: $mode === 'dark',
     xOffset: true,
-    minimumMax: 10
+    suggestedMax: 10
   })
 
   Chart.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)

@@ -88,60 +88,29 @@ export function parseCourseName(course: KOTCourse) {
   }
 }
 
-/** Adds a ´max´ property (which is the max-y value to render in a chart) and a unit. */
-function augmentDataset(courseOrInstitution: KOTInstitution | KOTCourse): KOTDataset[] {
+/** Adds a unit to all datasets. */
+function addUnit(courseOrInstitution: KOTInstitution | KOTCourse): KOTDataset[] {
   return courseOrInstitution.datasets.map((dataset) => {
     if (dataset.categories.category === 'accepted' || dataset.categories.category === 'applied') {
-      const admittedDataset = courseOrInstitution.datasets.find((dataset) => dataset.id === 3)
-
-      if (!admittedDataset) return { ...dataset, max: undefined }
-
-      const hasLetters = /[a-zA-Z]/g
-      const courseData = admittedDataset.data.map((datapoint) =>
-        typeof datapoint === 'string'
-          ? hasLetters.test(datapoint) || datapoint === ''
-            ? 0
-            : parseFloat(datapoint.replace(',', '.'))
-          : datapoint
-      )
-
-      const maxValue = Math.max(...courseData)
-
-      let roundedMax
-
-      if (maxValue < 50) {
-        roundedMax = 50
-      } else if (maxValue + 100 < 1000) {
-        roundedMax = Math.ceil(maxValue / 100) * 100
-      } else if (maxValue + 200 < 5000) {
-        roundedMax = Math.ceil(maxValue / 200) * 200
-      } else if (maxValue + 1000 < 20000) {
-        roundedMax = Math.ceil(maxValue / 1000) * 1000
-      } else {
-        roundedMax = Math.ceil((maxValue + 1000) / 5000) * 5000
-      }
-
       return {
         ...dataset,
-        max: roundedMax,
         unit: 'persons'
       }
     }
 
     return {
       ...dataset,
-      max: 14,
       unit: null
     }
   })
 }
 
-/** Augments all courses with fields latestName, meta, slug, and `max` in type `KOTDataset`. */
+/** Augments all courses with fields latestName, meta, slug and unit in type `KOTDataset`. */
 function augmentCourses(courses: KOTCourse[]): Required<KOTCourse>[] {
   return courses.map((course) => {
     const { name, ...rest } = parseCourseName(course)
 
-    const datasetsWithMax = augmentDataset(course)
+    const datasetsWithMax = addUnit(course)
 
     return {
       ...course,
@@ -164,7 +133,7 @@ export async function getAugmentedKOTInstitutions(): Promise<Required<KOTInstitu
       ),
       latestName: institution.institutionNames.slice(-1)[0],
       slug: createSlug(institution.institutionNames.slice(-1)[0]),
-      datasets: augmentDataset(institution)
+      datasets: addUnit(institution)
     }))
     .sort((a, b) => a.latestName.localeCompare(b.latestName, 'en'))
 }

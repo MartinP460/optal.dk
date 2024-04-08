@@ -37,7 +37,6 @@ export type KOTDataset = {
     | KOTCategoriesGenderApplied
   years: number[]
   data: (string | number)[]
-  max?: number
   unit?: Unit | null
 }
 
