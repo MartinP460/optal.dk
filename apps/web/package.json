@@ -4,10 +4,10 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "postbuild": "npx svelte-sitemap --out-dir .vercel/output/static  --domain https://www.optal.dk",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "postbuild": "npx svelte-sitemap  --domain https://www.optal.dk"
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",
