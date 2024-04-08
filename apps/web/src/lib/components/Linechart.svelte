@@ -17,10 +17,10 @@
   import { getChartOptions } from '$lib/utils/getChartOptions'
   import { noTypeCheck } from '$lib/utils/noTypeCheck'
 
-  export let selected: KOTDataset[]
+  export let datasets: KOTDataset[]
 
   const hasLetters = /[a-zA-Z]/
-  $: datasetsWithProperties = selected.map((dataset) => ({
+  $: datasetsWithProperties = datasets.map((dataset) => ({
     ...dataset,
     data: dataset.data.map((datapoint) =>
       typeof datapoint === 'string'
@@ -37,7 +37,7 @@
     lineTension: 0.3
   }))
 
-  $: maxY = selected.find((dataset) => selected.map(({ id }) => id).includes(dataset.id))?.max
+  $: maxY = datasets.find((dataset) => datasets.map(({ id }) => id).includes(dataset.id))?.max
 
   $: options = getChartOptions({
     isDark: $mode === 'dark',
@@ -51,7 +51,7 @@
   <Line
     height={320}
     data={{
-      labels: selected[0].years,
+      labels: datasets[0].years,
       datasets: datasetsWithProperties
     }}
     options={noTypeCheck(options)}

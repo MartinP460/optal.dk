@@ -1,7 +1,5 @@
 <script lang="ts">
-  import { IconAdjustmentsHorizontal, IconEye } from '@tabler/icons-svelte'
   import { createEventDispatcher } from 'svelte'
-  import clsx from 'clsx'
   import type { KOTDataset } from 'parser'
 
   import * as Accordion from '$lib/components/ui/accordion'
@@ -11,14 +9,11 @@
   import * as RadioGroup from '$lib/components/ui/radio-group'
   import * as Sheet from '$lib/components/ui/sheet'
   import { t } from '$lib/i18n'
-  import { getLabelColorFromLabel } from '$lib/utils/getColorFromDataset'
 
   export let dataGroups: KOTDataset[][]
   export let displayType: 'chart' | 'table'
-  export let selected: KOTDataset[]
-  export let hideDisplayTypeButton: boolean = false
-
-  const selectedLabel = selected[0].categories.category
+  export let selectedDatagroup: KOTDataset[]
+  export let triggeredSetting: 'category' | 'display' | undefined
 
   type DisplayType = {
     value: 'chart' | 'table'
@@ -38,56 +33,20 @@
     dispatch('filterChange', group)
   }
 
-  let triggerButton: 'category' | 'display' | undefined
+  $: selectedTab =
+    triggeredSetting === 'category' ? selectedDatagroup[0].categories.category : 'display'
 </script>
 
-<Sheet.Root>
-  <Sheet.Trigger asChild let:builder>
-    <Button
-      builders={[builder]}
-      variant="outline"
-      class="sm:hidden py-6"
-      on:click={() => (triggerButton = 'category')}
-    >
-      <IconAdjustmentsHorizontal class="text-gray-600 h-5 w-5 mr-2" />
-      <span class="flex flex-col text-left">
-        <p class={clsx('leading-none text-gray-600', displayType === 'chart' && 'text-xs')}>
-          {$t('category')}
-        </p>
-        {#if displayType === 'chart'}
-          <span class="flex"
-            ><p class="leading-tight">{$t(selectedLabel)}</p>
-            <span
-              class="w-2 h-2 rounded-full ml-2 mt-1.5"
-              style={`background-color: ${getLabelColorFromLabel(selectedLabel)};`}
-            /></span
-          >
-        {/if}
-      </span>
-    </Button>
-  </Sheet.Trigger>
-  {#if !hideDisplayTypeButton}
-    <Sheet.Trigger asChild let:builder>
-      <Button
-        builders={[builder]}
-        variant="outline"
-        class="sm:hidden py-6 ml-2"
-        on:click={() => (triggerButton = 'display')}
-      >
-        <IconEye class="text-gray-600 h-5 w-5 mr-2" />
-        {$t('display')}
-      </Button>
-    </Sheet.Trigger>
-  {/if}
-  <Sheet.Content class="flex flex-col">
-    <Sheet.Header>
-      <Sheet.Title class="mt-6 text-left">{$t('displaySettings')}</Sheet.Title>
-      <Sheet.Description class="text-left sr-only">
-        {$t('displaySettingsDescription')}
-      </Sheet.Description>
-    </Sheet.Header>
-    <div class="mt-4">
-      <Accordion.Root value={triggerButton}>
+<Sheet.Content class="flex flex-col">
+  <Sheet.Header>
+    <Sheet.Title class="mt-6 text-left">{$t('displaySettings')}</Sheet.Title>
+    <Sheet.Description class="text-left sr-only">
+      {$t('displaySettingsDescription')}
+    </Sheet.Description>
+  </Sheet.Header>
+  <div class="mt-4">
+    <Accordion.Root value={selectedTab}>
+      {#if triggeredSetting === 'display'}
         <Accordion.Item value="display">
           <Accordion.Trigger class="text-left text-sm sm:text-base gap-6"
             >{$t('display')}</Accordion.Trigger
@@ -117,44 +76,44 @@
             </RadioGroup.Root>
           </Accordion.Content>
         </Accordion.Item>
-        <Accordion.Item value="category">
-          <Accordion.Trigger class="text-left text-sm sm:text-base gap-6">
-            {$t('category')}
-          </Accordion.Trigger>
-          <Accordion.Content>
-            {#each dataGroups as dataGroup}
-              <p class="text-foreground leading-none font-medium first:mt-2 mt-6 mb-4">
-                {$t(dataGroup[0].categories.category)}
-              </p>
-              <div class="flex flex-col gap-y-4">
+      {/if}
+      {#if triggeredSetting === 'category'}
+        {#each dataGroups as dataGroup}
+          <Accordion.Item value={String(dataGroup[0].categories.category)}>
+            <Accordion.Trigger class="text-left text-sm sm:text-base gap-6">
+              {$t(dataGroup[0].categories.category)}
+            </Accordion.Trigger>
+            <Accordion.Content>
+              <div class="flex flex-col">
                 {#each dataGroup as dataset (dataset.id)}
                   <div class="flex items-center space-x-2 w-full">
                     <Label
                       for={String(dataset.id)}
-                      class="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 w-full font-normal"
+                      class="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 w-full font-normal py-3"
                     >
                       {$t(dataset.categories.subcategory)}
                     </Label>
                     <Checkbox
                       id={String(dataset.id)}
                       aria-labelledby={dataset.categories.subcategory}
-                      disabled={selected.length === 1 && selected[0].id === dataset.id}
-                      checked={selected.map(({ id }) => id).includes(dataset.id)}
-                      class="w-5 h-5"
+                      disabled={selectedDatagroup.length === 1 &&
+                        selectedDatagroup[0].id === dataset.id}
+                      checked={selectedDatagroup.map(({ id }) => id).includes(dataset.id)}
+                      class="w-5 h-5 hover:bg-muted"
                       on:click={() => handleFilterChange(dataset)}
                     />
                   </div>
                 {/each}
               </div>
-            {/each}
-          </Accordion.Content>
-        </Accordion.Item>
-      </Accordion.Root>
-    </div>
-    <Sheet.Footer class="mt-auto">
-      <Sheet.Close asChild let:builder>
-        <Button builders={[builder]} type="submit">{$t('saveChanges')}</Button>
-      </Sheet.Close>
-    </Sheet.Footer>
-  </Sheet.Content>
-</Sheet.Root>
+            </Accordion.Content>
+          </Accordion.Item>
+        {/each}
+      {/if}
+    </Accordion.Root>
+  </div>
+  <Sheet.Footer class="mt-auto">
+    <Sheet.Close asChild let:builder>
+      <Button builders={[builder]} type="submit" class="w-full">{$t('seeChanges')}</Button>
+    </Sheet.Close>
+  </Sheet.Footer>
+</Sheet.Content>
