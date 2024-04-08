@@ -2,7 +2,6 @@
   import { IconChevronDown, IconChevronRight } from '@tabler/icons-svelte'
   import clsx from 'clsx'
   import Fuse from 'fuse.js'
-  import type { KOTInstitution } from 'parser'
   import type { PageData } from './$types'
   import Logo from '$lib/components/Logo.svelte'
   import * as Accordion from '$lib/components/ui/accordion'
@@ -30,7 +29,7 @@
     }))
   )
 
-  const institutionIndex = Fuse.parseIndex<Required<KOTInstitution>>(searchIndexes.institutionIndex)
+  const institutionIndex = Fuse.parseIndex<(typeof institutions)[0]>(searchIndexes.institutionIndex)
   const courseIndex = Fuse.parseIndex<(typeof coursesWithInstitutions)[0]>(
     searchIndexes.courseIndex
   )
