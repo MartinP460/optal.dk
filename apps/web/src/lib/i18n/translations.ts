@@ -3,7 +3,7 @@ export const translations = {
   en: {
     aboutByline: 'The goal of optal.dk is to make admission figures more visible.',
     aboutDescription: 'optal.dk is a website with the goal of making admission figures in higher education in Denmark more visible. The idea to build optal.dk came from the need to see the development of admission figures over time - these figures were not readily available on most websites containing admission-related figures.',
-    aboutDisclaimer: "All data from optal.dk is sourced from the ministry of higher education and science. Parts of the data have been altered for convenience. These alterations include adding and modifying ID's on some institutions and courses. All admission figures remain unchanged, however, but errors may have been made. If you think there is an error in any of the data please let us know through the feedback form (you can access it by clicking the button titled \"Feedback\" at the bottom or top of this page). Thanks!",
+    aboutDisclaimer: "All data from optal.dk is sourced from the ministry of higher education and science. Parts of the data have been altered for convenience. These alterations include adding and modifying ID's on some institutions and courses. All admission figures remain unchanged, however, but errors may have been made. If you think there's an error in any of the data please let us know through the feedback form (you can access it by clicking the button titled \"Feedback\" at the bottom or top of this page). Thanks!",
     about: 'About',
     accepted: 'Accepted',
     admitted: 'Admitted',
