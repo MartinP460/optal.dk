@@ -31,7 +31,7 @@
           variant="ghost"
           class="w-full justify-start"
         >
-          {$t('aboutUs')}
+          {$t('about')}
         </Button>
       </li>
       <li>

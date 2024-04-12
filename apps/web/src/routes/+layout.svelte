@@ -84,7 +84,7 @@
               class="text-muted-foreground pb-3 w-24"
               data-sveltekit-preload-data="tap"
             >
-              {$t('aboutUs')}
+              {$t('about')}
             </Button>
           </li>
           <DotSeperator />
