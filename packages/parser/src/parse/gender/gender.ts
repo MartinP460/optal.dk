@@ -67,8 +67,9 @@ function getCourseGenderDistribution(
     {
       id: type === 'accepted' ? 7 : 9,
       categories: {
-        category: type === 'accepted' ? 'genderAccepted' : 'genderApplied',
-        subcategory: 'men'
+        category: 'gender',
+        subcategory: type === 'accepted' ? 'genderAccepted' : 'genderApplied',
+        subsubcategory: 'men'
       },
       data: [convertToNumber(row[CSVDataIndexes.Men])],
       years: [year]
@@ -76,8 +77,9 @@ function getCourseGenderDistribution(
     {
       id: type === 'accepted' ? 8 : 10,
       categories: {
-        category: type === 'accepted' ? 'genderAccepted' : 'genderApplied',
-        subcategory: 'women'
+        category: 'gender',
+        subcategory: type === 'accepted' ? 'genderAccepted' : 'genderApplied',
+        subsubcategory: 'women'
       },
       data: [convertToNumber(row[CSVDataIndexes.Women])],
       years: [year]

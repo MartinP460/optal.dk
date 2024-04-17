@@ -15,7 +15,7 @@
   $: datasetsWithProperties = datasets
     .map((dataset) => ({
       ...dataset,
-      label: $t(dataset.categories.subcategory),
+      label: $t(dataset.categories.subsubcategory ?? dataset.categories.subcategory),
       data: dataset.data.map((datapoint) =>
         typeof datapoint === 'string'
           ? hasLetters.test(datapoint) || datapoint === ''

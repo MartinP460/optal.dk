@@ -1,7 +1,9 @@
 import type { KOTDataset } from 'parser'
 
 /** Gets the color of the line in the line chart from the dataset. */
-export function getColorFromDataset({ categories: { category, subcategory } }: KOTDataset) {
+export function getColorFromDataset({
+  categories: { category, subcategory, subsubcategory }
+}: KOTDataset) {
   if (category === 'accepted') {
     if (subcategory === 'admitted') return '#4d7c0f'
     if (subcategory === 'standby') return '#84cc16'
@@ -17,9 +19,9 @@ export function getColorFromDataset({ categories: { category, subcategory } }: K
     if (subcategory === 'standby') return '#f43f5e'
   }
 
-  if (category === 'genderApplied' || category === 'genderAccepted') {
-    if (subcategory === 'men') return '#38bdf8'
-    if (subcategory === 'women') return '#e879f9'
+  if (category === 'gender') {
+    if (subsubcategory === 'men') return '#38bdf8'
+    if (subsubcategory === 'women') return '#e879f9'
   }
 
   return '#ecfccb'
@@ -33,7 +35,7 @@ export function getLabelColorFromLabel(label: KOTDataset['categories']['category
       return '#eab308'
     case 'quotient':
       return '#9f1239'
-    case 'genderApplied':
+    case 'gender':
       return '#e879f9'
   }
 }

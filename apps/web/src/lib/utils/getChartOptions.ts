@@ -66,7 +66,7 @@ const tooltip = (
     dataLabels && dataLabels[item.dataIndex] !== '' ? dataLabels[item.dataIndex] : t('unapplicale')
   const label = dataPoint ? dataPoint : dataLabel
 
-  return ` ${t(categories.subcategory)} - ${label.toLocaleString(currentLocale)} ${unit ? t(unit) : ''}`
+  return ` ${t(categories.subsubcategory ?? categories.subcategory)} - ${label.toLocaleString(currentLocale)} ${unit ? t(unit) : ''}`
 }
 
 const chartOptions: ChartBaseProps['options'] = {

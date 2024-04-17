@@ -5,26 +5,31 @@ export type KOTSubCategory = 'admitted' | 'standby' | 'total' | 'firstPriority' 
 type KOTCategoriesAccepted = {
   category: 'accepted'
   subcategory: 'admitted' | 'standby'
+  subsubcategory: null
 }
 
 type KOTCategoriesApplied = {
   category: 'applied'
   subcategory: 'total' | 'firstPriority'
+  subsubcategory: null
 }
 
 type KOTCategoriesQuotient = {
   category: 'quotient'
   subcategory: 'primary' | 'standby'
+  subsubcategory: null
 }
 
 type KOTCategoriesGenderAccepted = {
-  category: 'genderAccepted'
-  subcategory: 'men' | 'women'
+  category: 'gender'
+  subcategory: 'genderAccepted'
+  subsubcategory: 'men' | 'women'
 }
 
 type KOTCategoriesGenderApplied = {
-  category: 'genderApplied'
-  subcategory: 'men' | 'women'
+  category: 'gender'
+  subcategory: 'genderApplied'
+  subsubcategory: 'men' | 'women'
 }
 
 export type KOTDataset = {

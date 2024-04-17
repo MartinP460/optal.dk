@@ -1,5 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
+  import _ from 'lodash'
   import type { KOTDataset } from 'parser'
 
   import * as Accordion from '$lib/components/ui/accordion'
@@ -85,7 +86,7 @@
             </Accordion.Trigger>
             <Accordion.Content>
               <div class="flex flex-col">
-                {#each dataGroup as dataset (dataset.id)}
+                {#each _.uniqBy(dataGroup, 'categories.subcategory') as dataset (dataset.id)}
                   <div class="flex items-center space-x-2 w-full">
                     <Label
                       for={String(dataset.id)}
@@ -96,8 +97,12 @@
                     <Checkbox
                       id={String(dataset.id)}
                       aria-labelledby={dataset.categories.subcategory}
-                      disabled={selectedDatagroup.length === 1 &&
-                        selectedDatagroup[0].id === dataset.id}
+                      disabled={(selectedDatagroup.length === 1 &&
+                        selectedDatagroup[0].id === dataset.id) ||
+                        (Boolean(selectedDatagroup[0].categories.subsubcategory) &&
+                          selectedDatagroup[0].categories.subcategory ===
+                            dataset.categories.subcategory &&
+                          displayType === 'chart')}
                       checked={selectedDatagroup.map(({ id }) => id).includes(dataset.id)}
                       class="w-5 h-5 hover:bg-muted"
                       on:click={() => handleFilterChange(dataset)}

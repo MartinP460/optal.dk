@@ -15,7 +15,6 @@ describe('parseCourseName', () => {
   const course: KOTCourse = {
     id: '123',
     courseNames: [],
-    years: [],
     datasets: []
   }
 

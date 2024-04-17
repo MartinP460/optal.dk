@@ -86,7 +86,8 @@ describe('createInstitutionSummaryRow', () => {
           id: 1,
           categories: {
             category: 'accepted',
-            subcategory: 'admitted'
+            subcategory: 'admitted',
+            subsubcategory: null
           },
           data: [20, 50, 30, 40, 60],
           years: [2011, 2016, 2017, 2020, 2023]
@@ -136,7 +137,8 @@ describe('createCourseRow', () => {
           id: 1,
           categories: {
             category: 'accepted',
-            subcategory: 'admitted'
+            subcategory: 'admitted',
+            subsubcategory: null
           },
           data: [10, 50, 30],
           years: [2015, 2016, 2017]
@@ -163,7 +165,8 @@ describe('createCourseRow', () => {
           id: 1,
           categories: {
             category: 'accepted',
-            subcategory: 'admitted'
+            subcategory: 'admitted',
+            subsubcategory: null
           },
           data: [20, 50, 30, 40, 60],
           years: [2011, 2016, 2017, 2020, 2023]

@@ -32,7 +32,38 @@
   $: selectedDatagroup = dataGroups[0]
   $: selectedLabel = selectedDatagroup[0].categories.category
 
-  const handleSelect = (dataset: KOTDataset) => {
+  // i'm really, really sorry that you have to witness to this eyesore
+  const handleCategorySelect = (dataset: KOTDataset) => {
+    // if a datagroup consists of datasets that need to be displayed simultaneously
+    if (dataset.categories.subsubcategory) {
+      const originalDataGroup =
+        dataGroups.find(
+          (datagroup) => datagroup[0].categories.category === dataset.categories.category
+        ) ?? []
+
+      const selectedDatasets = originalDataGroup.filter(
+        ({ categories }) => categories.subcategory === dataset.categories.subcategory
+      )
+
+      if (displayType.value === 'chart') {
+        selectedDatagroup = selectedDatasets
+      } else {
+        const datagroupExists = selectedDatagroup.some(
+          ({ categories }) => categories.subcategory === dataset.categories.subcategory
+        )
+
+        if (datagroupExists) {
+          selectedDatagroup = selectedDatagroup.filter(
+            ({ categories }) => categories.subcategory !== dataset.categories.subcategory
+          )
+        } else {
+          selectedDatagroup = [...selectedDatagroup, ...selectedDatasets]
+        }
+      }
+
+      return
+    }
+
     // if de-selecting
     if (selectedDatagroup.some(({ id }) => id === dataset.id)) {
       selectedDatagroup = selectedDatagroup.filter(({ id }) => id !== dataset.id)
@@ -78,7 +109,7 @@
       {selectedDatagroup}
       {triggeredSetting}
       displayType={displayType.value}
-      on:filterChange={(e) => handleSelect(e.detail)}
+      on:filterChange={(e) => handleCategorySelect(e.detail)}
       on:displayTypeChange={(e) => handleDisplayTypeSelect(e.detail)}
     />
     <Sheet.Trigger asChild let:builder>
@@ -155,7 +186,7 @@
                       selectedDatagroup[0].id === dataset.id}
                     checked={selectedDatagroup.map(({ id }) => id).includes(dataset.id)}
                     class="hover:bg-muted"
-                    on:click={() => handleSelect(dataset)}
+                    on:click={() => handleCategorySelect(dataset)}
                   />
                   <Label
                     id={String(dataset.id)}
@@ -197,7 +228,7 @@
   </Sheet.Root>
   <div class="mt-6">
     {#if displayType.value === 'chart'}
-      {#if selectedDatagroup[0].categories.category.includes('gender')}
+      {#if selectedDatagroup[0].categories.category === 'gender'}
         <Barchart datasets={selectedDatagroup} />
       {:else if has5OrMoreYearsOfData}
         <Linechart datasets={selectedDatagroup} />

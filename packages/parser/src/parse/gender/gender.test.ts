@@ -24,10 +24,10 @@ describe('parseGenderData', () => {
 
     expect(course.datasets).length.greaterThanOrEqual(7)
     expect(
-      course.datasets.find((dataset) => dataset.categories.category === 'genderAccepted')
+      course.datasets.find((dataset) => dataset.categories.subcategory === 'genderAccepted')
     ).toBeDefined()
     expect(
-      course.datasets.find((dataset) => dataset.categories.category === 'genderApplied')
+      course.datasets.find((dataset) => dataset.categories.subcategory === 'genderApplied')
     ).toBeDefined()
   })
 })
@@ -40,8 +40,9 @@ describe('appendDataToCourse', () => {
       {
         id: 7,
         categories: {
-          category: 'genderApplied',
-          subcategory: 'men'
+          category: 'gender',
+          subcategory: 'genderApplied',
+          subsubcategory: 'men'
         },
         data: [1],
         years: [2020]
@@ -49,8 +50,9 @@ describe('appendDataToCourse', () => {
       {
         id: 8,
         categories: {
-          category: 'genderApplied',
-          subcategory: 'women'
+          category: 'gender',
+          subcategory: 'genderApplied',
+          subsubcategory: 'women'
         },
         data: [2],
         years: [2020]
@@ -74,8 +76,9 @@ describe('appendDataToCourse', () => {
       {
         id: 7,
         categories: {
-          category: 'genderApplied',
-          subcategory: 'men'
+          category: 'gender',
+          subcategory: 'genderApplied',
+          subsubcategory: 'men'
         },
         data: [5],
         years: [2020]
@@ -83,8 +86,9 @@ describe('appendDataToCourse', () => {
       {
         id: 8,
         categories: {
-          category: 'genderApplied',
-          subcategory: 'women'
+          category: 'gender',
+          subcategory: 'genderApplied',
+          subsubcategory: 'women'
         },
         data: [8],
         years: [2020]

@@ -106,7 +106,8 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
             id: 1,
             categories: {
               category: 'accepted',
-              subcategory: 'admitted'
+              subcategory: 'admitted',
+              subsubcategory: null
             },
             data: [acceptedAdmitted.data[0]],
             years: [acceptedAdmitted.years[0]]
@@ -115,7 +116,8 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
             id: 2,
             categories: {
               category: 'accepted',
-              subcategory: 'standby'
+              subcategory: 'standby',
+              subsubcategory: null
             },
             data: [acceptedStandby.data[0]],
             years: [acceptedAdmitted.years[0]]
@@ -124,7 +126,8 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
             id: 3,
             categories: {
               category: 'applied',
-              subcategory: 'total'
+              subcategory: 'total',
+              subsubcategory: null
             },
             data: [applicantsTotal.data[0]],
             years: [acceptedAdmitted.years[0]]
@@ -133,7 +136,8 @@ export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTI
             id: 4,
             categories: {
               category: 'applied',
-              subcategory: 'firstPriority'
+              subcategory: 'firstPriority',
+              subsubcategory: null
             },
             data: [applicantsFirstPriority.data[0]],
             years: [acceptedAdmitted.years[0]]
@@ -213,7 +217,8 @@ export async function parseKOTData(year: number) {
                   id: 1,
                   categories: {
                     category: 'accepted',
-                    subcategory: 'admitted'
+                    subcategory: 'admitted',
+                    subsubcategory: null
                   },
                   data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])],
                   years: [year]
@@ -222,7 +227,8 @@ export async function parseKOTData(year: number) {
                   id: 2,
                   categories: {
                     category: 'accepted',
-                    subcategory: 'standby'
+                    subcategory: 'standby',
+                    subsubcategory: null
                   },
                   data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])],
                   years: [year]
@@ -231,7 +237,8 @@ export async function parseKOTData(year: number) {
                   id: 3,
                   categories: {
                     category: 'applied',
-                    subcategory: 'total'
+                    subcategory: 'total',
+                    subsubcategory: null
                   },
                   data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])],
                   years: [year]
@@ -240,7 +247,8 @@ export async function parseKOTData(year: number) {
                   id: 4,
                   categories: {
                     category: 'applied',
-                    subcategory: 'firstPriority'
+                    subcategory: 'firstPriority',
+                    subsubcategory: null
                   },
                   data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])],
                   years: [year]
@@ -271,7 +279,8 @@ export async function parseKOTData(year: number) {
                       id: 1,
                       categories: {
                         category: 'accepted',
-                        subcategory: 'admitted'
+                        subcategory: 'admitted',
+                        subsubcategory: null
                       },
                       data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])],
                       years: [year]
@@ -280,7 +289,8 @@ export async function parseKOTData(year: number) {
                       id: 2,
                       categories: {
                         category: 'accepted',
-                        subcategory: 'standby'
+                        subcategory: 'standby',
+                        subsubcategory: null
                       },
                       data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])],
                       years: [year]
@@ -289,7 +299,8 @@ export async function parseKOTData(year: number) {
                       id: 3,
                       categories: {
                         category: 'applied',
-                        subcategory: 'total'
+                        subcategory: 'total',
+                        subsubcategory: null
                       },
                       data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])],
                       years: [year]
@@ -298,7 +309,8 @@ export async function parseKOTData(year: number) {
                       id: 4,
                       categories: {
                         category: 'applied',
-                        subcategory: 'firstPriority'
+                        subcategory: 'firstPriority',
+                        subsubcategory: null
                       },
                       data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])],
                       years: [year]
@@ -307,7 +319,8 @@ export async function parseKOTData(year: number) {
                       id: 5,
                       categories: {
                         category: 'quotient',
-                        subcategory: 'primary'
+                        subcategory: 'primary',
+                        subsubcategory: null
                       },
                       data: [row[CSVDataIndexes.QuotientPrimary]],
                       years: [year]
@@ -316,7 +329,8 @@ export async function parseKOTData(year: number) {
                       id: 6,
                       categories: {
                         category: 'quotient',
-                        subcategory: 'standby'
+                        subcategory: 'standby',
+                        subsubcategory: null
                       },
                       data: [row[CSVDataIndexes.QuotientStandby]],
                       years: [year]
