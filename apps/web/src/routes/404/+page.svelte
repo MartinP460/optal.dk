@@ -5,6 +5,10 @@
   import { t } from '$lib/i18n'
 </script>
 
+<svelte:head>
+  <meta name="robots" content="noindex" />
+</svelte:head>
+
 <Container>
   <div class="flex flex-col items-center mt-24">
     <h1 class="scroll-m-20 text-8xl font-bold tracking-tight">404</h1>
