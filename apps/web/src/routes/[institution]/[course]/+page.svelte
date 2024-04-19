@@ -12,8 +12,8 @@
   const { course, courseDataGroups, institution } = data
 
   const breadcrumbRoutes = [
-    { text: data.institution.latestName, url: data.institution.slug },
-    { text: data.course.latestName, url: data.course.slug }
+    { text: institution.latestName, url: institution.slug },
+    { text: course.latestName, url: course.slug }
   ]
   $: title = $t('metaTitleCourse', {
     courseName: course.latestName,
@@ -39,8 +39,14 @@
 
 <main class="mt-6 sm:mt-10">
   <Breadcrumb routes={breadcrumbRoutes} />
-  <h1 class="text-2xl sm:text-3xl mt-4 mb-2">{data.course.latestName}</h1>
-  <Meta course={data.course} />
+  <h1 class="text-2xl sm:text-3xl mt-4 mb-2">{course.latestName}</h1>
+  <h4 class="sr-only">
+    {$t('seoDescriptionCourse', {
+      courseName: course.latestName,
+      institutionName: institution.latestName
+    })}
+  </h4>
+  <Meta {course} />
 
   <Visualization dataGroups={courseDataGroups} />
 </main>

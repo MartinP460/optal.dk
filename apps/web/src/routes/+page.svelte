@@ -57,6 +57,7 @@
   <div class="lg:mt-16 mt-12 mb-20 text-center flex flex-col items-center">
     <h1 class="sr-only">optal.dk</h1>
     <Logo />
+    <h4 class="sr-only">{$t('seoDescriptionHome')}</h4>
     <p class="font-medium mt-3 md:mt-4">
       {$t('byline')}
     </p>
