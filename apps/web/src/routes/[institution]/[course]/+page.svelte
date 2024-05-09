@@ -6,6 +6,7 @@
   import Visualization from '$lib/components/Visualization.svelte'
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
+  import InformationAccordion from '$lib/components/InformationAccordion.svelte'
 
   export let data: PageData
 
@@ -40,13 +41,15 @@
 <main class="mt-6 sm:mt-10">
   <Breadcrumb routes={breadcrumbRoutes} />
   <h1 class="text-2xl sm:text-3xl mt-4 mb-2">{course.latestName}</h1>
-  <h4 class="sr-only">
+  <h2 class="sr-only">
     {$t('seoDescriptionCourse', {
       courseName: course.latestName,
       institutionName: institution.latestName
     })}
-  </h4>
+  </h2>
   <Meta {course} />
 
   <Visualization dataGroups={courseDataGroups} />
+
+  <InformationAccordion />
 </main>

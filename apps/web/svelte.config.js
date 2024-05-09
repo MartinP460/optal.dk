@@ -14,7 +14,15 @@ const config = {
     adapter: adapter(),
     alias: {
       $lib: './src/lib'
-    }
+    },
+    csp: {
+			directives: {
+				'script-src': ['self']
+			},
+			reportOnly: {
+				'script-src': ['self']
+			}
+		}
   }
 }
 
