@@ -51,5 +51,10 @@
 
   <Visualization dataGroups={courseDataGroups} />
 
-  <InformationAccordion />
+  <InformationAccordion
+    descriptionOpts={{
+      categoriesToDisplay: ['accepted', 'applied', 'quotient', 'gender'],
+      type: 'course'
+    }}
+  />
 </main>

@@ -5,6 +5,7 @@
   import Visualization from '$lib/components/Visualization.svelte'
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
+  import InformationAccordion from '$lib/components/InformationAccordion.svelte'
 
   export let data: PageData
 
@@ -39,4 +40,8 @@
   </p>
 
   <Visualization dataGroups={institutionDataGroups} />
+
+  <InformationAccordion
+    descriptionOpts={{ categoriesToDisplay: ['accepted', 'applied'], type: 'institution' }}
+  />
 </main>

@@ -1,5 +1,5 @@
 export type Unit = 'persons'
-export type KOTCategory = 'accepted' | 'applied' | 'quotient'
+export type KOTCategory = 'accepted' | 'applied' | 'quotient' | 'gender'
 export type KOTSubCategory = 'admitted' | 'standby' | 'total' | 'firstPriority' | 'primary'
 
 type KOTCategoriesAccepted = {

@@ -30,12 +30,16 @@ export function getColorFromDataset({
 export function getLabelColorFromLabel(label: KOTDataset['categories']['category']) {
   switch (label) {
     case 'accepted':
+      // lime-700
       return '#4d7c0f'
     case 'applied':
+      // yellow-500
       return '#eab308'
     case 'quotient':
+      // rose-800
       return '#9f1239'
     case 'gender':
+      // fuchsia-400
       return '#e879f9'
   }
 }
