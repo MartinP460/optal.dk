@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { VisAxis, VisCrosshair, VisGroupedBar, VisTooltip, VisXYContainer } from '@unovis/svelte'
   import type { KOTDataset } from 'parser'
   import {
     addDatasetsProperties,
@@ -9,7 +10,6 @@
     getXFunction,
     getYFunctions
   } from '$lib/utils/chartHelpers'
-  import { VisAxis, VisCrosshair, VisGroupedBar, VisTooltip, VisXYContainer } from '@unovis/svelte'
 
   export let datasets: KOTDataset[]
 
