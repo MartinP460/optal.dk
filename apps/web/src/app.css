@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --vis-tooltip-background-color: rgba(0, 0, 0, 0) !important;
+  --vis-tooltip-border-color: rgba(0, 0, 0, 0) !important;
+  --vis-axis-grid-color: hsl(var(--secondary)) !important;
+  --vis-axis-domain-color: hsl(var(--secondary)) !important;
+  --vis-axis-tick-color: hsl(var(--secondary)) !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
