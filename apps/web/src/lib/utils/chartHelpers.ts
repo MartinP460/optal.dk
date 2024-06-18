@@ -1,14 +1,14 @@
 import { get } from 'svelte/store'
-import type { KOTDataset, KOTSubCategory } from 'parser'
+import type { KOTDataset, KOTSubCategory, KOTSubSubCategory } from 'parser'
 import { getColorFromDataset } from '$lib/utils/getColorFromDataset'
 import { t as i18n, locale } from '$lib/i18n'
 
 type ChartData = { year: number } & {
-  [key in KOTSubCategory]?: number
+  [key in KOTSubCategory | KOTSubSubCategory]?: number
 }
 
 type ChartDataRaw = { year: number } & {
-  [key in KOTSubCategory]?: number | string
+  [key in KOTSubCategory | KOTSubSubCategory]?: number | string
 }
 
 type KOTDatasetForChart = Omit<KOTDataset, 'data'> & {
@@ -40,7 +40,13 @@ export function addDatasetsProperties(datasets: KOTDataset[]): KOTDatasetForChar
 export function formatData(datasets: KOTDataset[]): ChartData[] {
   return datasets[0].data.map((_, i) => ({
     year: datasets[0].years[i],
-    ...datasets.reduce((acc, elm) => ({ ...acc, [elm.categories.subcategory]: elm.data[i] }), {})
+    ...datasets.reduce(
+      (acc, elm) => ({
+        ...acc,
+        [elm.categories.subsubcategory ?? elm.categories.subcategory]: elm.data[i]
+      }),
+      {}
+    )
   }))
 }
 
@@ -53,7 +59,10 @@ export function getXFunction() {
 }
 
 export function getYFunctions(datasets: KOTDataset[]) {
-  return datasets.map((dataset) => (d: ChartData) => d[dataset.categories.subcategory])
+  return datasets.map(
+    (dataset) => (d: ChartData) =>
+      d[dataset.categories.subsubcategory ?? dataset.categories.subcategory]
+  )
 }
 
 export function computeSuggestedMaxY(datasets: KOTDatasetForChart[]) {
@@ -78,15 +87,18 @@ export function getTooltip(datasets: KOTDatasetForChart[]) {
         </span>
         ${datasets
           .map((dataset) => {
+            const categoryLevelToDisplay =
+              dataset.categories.subsubcategory ?? dataset.categories.subcategory
+
             const label =
-              d[dataset.categories.subcategory] === ''
+              d[categoryLevelToDisplay] === ''
                 ? t('unapplicale')
-                : (d[dataset.categories.subcategory] ?? '').toLocaleString(currentLocale)
+                : (d[categoryLevelToDisplay] ?? '').toLocaleString(currentLocale)
 
             return `
             <div class="flex flex-col">
                 <span class="text-[0.70rem] uppercase text-muted-foreground">
-                  ${t(dataset.categories.subcategory)}
+                  ${t(categoryLevelToDisplay)}
                 </span>
                 <span class="font-bold text-foreground">
                   ${label}

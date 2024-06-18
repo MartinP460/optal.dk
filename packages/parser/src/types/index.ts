@@ -8,6 +8,7 @@ export type KOTSubCategory =
   | 'primary'
   | 'genderAccepted'
   | 'genderApplied'
+export type KOTSubSubCategory = 'men' | 'women'
 
 type KOTCategoriesAccepted = {
   category: 'accepted'

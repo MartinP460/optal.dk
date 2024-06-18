@@ -1,49 +1,36 @@
 <script lang="ts">
-  import { Bar } from 'svelte-chartjs'
-  import { BarElement, CategoryScale, Chart, Legend, LinearScale, Title, Tooltip } from 'chart.js'
-  import { mode } from 'mode-watcher'
   import type { KOTDataset } from 'parser'
-  import { getChartOptions } from '$lib/utils/getChartOptions'
-  import { noTypeCheck } from '$lib/utils/noTypeCheck'
-  import { getColorFromDataset } from '$lib/utils/getColorFromDataset'
-  import { t } from '$lib/i18n'
+  import {
+    addDatasetsProperties,
+    computeSuggestedMaxY,
+    formatData,
+    getColorFunction,
+    getTooltip,
+    getXFunction,
+    getYFunctions
+  } from '$lib/utils/chartHelpers'
+  import { VisAxis, VisCrosshair, VisGroupedBar, VisTooltip, VisXYContainer } from '@unovis/svelte'
 
   export let datasets: KOTDataset[]
 
-  const hasLetters = /[a-zA-Z]/
-  $: labels = datasets[0].years
-  $: datasetsWithProperties = datasets
-    .map((dataset) => ({
-      ...dataset,
-      label: $t(dataset.categories.subsubcategory ?? dataset.categories.subcategory),
-      data: dataset.data.map((datapoint) =>
-        typeof datapoint === 'string'
-          ? hasLetters.test(datapoint) || datapoint === ''
-            ? 0
-            : parseFloat(datapoint.replace(',', '.'))
-          : datapoint
-      ),
-      hitRadius: 12,
-      backgroundColor: getColorFromDataset(dataset)
-    }))
-    .sort((a, b) => (a.id < b.id ? -1 : 1))
+  $: cleanedDataset = addDatasetsProperties(datasets)
+  $: data = formatData(cleanedDataset)
 
-  $: options = getChartOptions({
-    isDark: $mode === 'dark',
-    xOffset: true,
-    suggestedMax: 10
-  })
+  $: x = getXFunction()
+  $: y = getYFunctions(datasets)
 
-  Chart.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+  $: suggestedMaxY = computeSuggestedMaxY(cleanedDataset)
+
+  $: color = getColorFunction(datasets)
+  $: tooltip = getTooltip(cleanedDataset)
 </script>
 
 <figure>
-  <Bar
-    height={320}
-    data={{
-      labels,
-      datasets: datasetsWithProperties
-    }}
-    options={noTypeCheck(options)}
-  />
+  <VisXYContainer {data} height={320} yDomain={[0, suggestedMaxY]}>
+    <VisTooltip />
+    <VisGroupedBar {x} {y} {color} roundedCorners={4} />
+    <VisCrosshair {x} {y} template={tooltip} {color} />
+    <VisAxis type="x" gridLine={false} tickLine={false} />
+    <VisAxis type="y" domainLine={false} tickLine={false} />
+  </VisXYContainer>
 </figure>
