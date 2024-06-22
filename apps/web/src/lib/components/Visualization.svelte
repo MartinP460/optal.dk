@@ -14,12 +14,15 @@
   import Barchart from '$lib/components/Barchart.svelte'
   import { t } from '$lib/i18n'
   import { getLabelColorFromLabel } from '$lib/utils/getColorFromDataset'
+  import VisualizationPeriodSlider from '$lib/components/VisualizationPeriodSlider.svelte'
 
   export let dataGroups: KOTDataset[][]
 
   const MAX_DATAGROUP_BUTTONS = 3
 
   const has5OrMoreYearsOfData = dataGroups[0][0].years.length > 4
+  const minYear = dataGroups[0][0].years[0]
+  const maxYear = dataGroups[0][0].years[dataGroups[0][0].years.length - 1]
 
   let triggeredSetting: 'category' | 'display' | undefined
 
@@ -27,6 +30,8 @@
   $: displayType = has5OrMoreYearsOfData
     ? { value: 'chart', label: $t('chart') }
     : { value: 'table', label: $t('table') }
+
+  let period = [minYear, maxYear]
 
   let selectedDatagroup: KOTDataset[]
   $: selectedDatagroup = dataGroups[0]
@@ -61,6 +66,8 @@
         }
       }
 
+      period = [minYear, maxYear]
+
       return
     }
 
@@ -84,6 +91,8 @@
     } else {
       selectedDatagroup = [...selectedDatagroup, dataset]
     }
+
+    period = [minYear, maxYear]
   }
 
   const handleDisplayTypeSelect = (value: unknown) => {
@@ -94,11 +103,37 @@
       return
     }
 
-    displayType = newValue
-
     if (newValue.value === 'chart') {
       selectedDatagroup = dataGroups[0]
     }
+
+    displayType = newValue
+    period = [minYear, maxYear]
+  }
+
+  const handlePeriodChange = (value: number[]) => {
+    const newDatagroup = selectedDatagroup.map((dataset) => {
+      const originalDataset = dataGroups
+        .flat()
+        .find((originalDataset) =>
+          originalDataset.categories.subsubcategory
+            ? originalDataset.categories.subsubcategory === dataset.categories.subsubcategory
+            : originalDataset.categories.category === dataset.categories.category &&
+              originalDataset.categories.subcategory === dataset.categories.subcategory
+        ) as KOTDataset
+
+      const minYearDiff = value[0] > minYear ? value[0] - minYear : minYear - value[0]
+      const maxYearDiff = value[1] > maxYear ? value[1] - maxYear : maxYear - value[1]
+
+      return {
+        ...originalDataset,
+        years: originalDataset?.years.slice(minYearDiff, maxYear - minYear - maxYearDiff + 1),
+        data: originalDataset?.data.slice(minYearDiff, maxYear - minYear - maxYearDiff + 1)
+      }
+    })
+
+    selectedDatagroup = newDatagroup
+    period = value
   }
 </script>
 
@@ -214,15 +249,25 @@
         {/if}
       </div>
       {#if has5OrMoreYearsOfData}
-        <Select.Root selected={displayType} onSelectedChange={handleDisplayTypeSelect}>
-          <Select.Trigger class="w-32">
-            <Select.Value />
-          </Select.Trigger>
-          <Select.Content>
-            <Select.Item value="chart">{$t('chart')}</Select.Item>
-            <Select.Item value="table">{$t('table')}</Select.Item>
-          </Select.Content>
-        </Select.Root>
+        <div class="flex gap-4">
+          {#if displayType.value !== 'table'}
+            <VisualizationPeriodSlider
+              {period}
+              min={minYear}
+              max={maxYear}
+              on:periodChange={(e) => handlePeriodChange(e.detail)}
+            />
+          {/if}
+          <Select.Root selected={displayType} onSelectedChange={handleDisplayTypeSelect}>
+            <Select.Trigger class="w-32">
+              <Select.Value />
+            </Select.Trigger>
+            <Select.Content>
+              <Select.Item value="chart">{$t('chart')}</Select.Item>
+              <Select.Item value="table">{$t('table')}</Select.Item>
+            </Select.Content>
+          </Select.Root>
+        </div>
       {/if}
     </div>
   </Sheet.Root>
