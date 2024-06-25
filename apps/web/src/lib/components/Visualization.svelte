@@ -14,11 +14,12 @@
   import Barchart from '$lib/components/Barchart.svelte'
   import { t } from '$lib/i18n'
   import { getLabelColorFromLabel } from '$lib/utils/getColorFromDataset'
-  import VisualizationPeriodSlider from '$lib/components/VisualizationPeriodSlider.svelte'
+  import VisualizationPeriodDrawer from '$lib/components/VisualizationPeriodDrawer.svelte'
+  import VisualizationPeriodPopover from '$lib/components/VisualizationPeriodPopover.svelte'
 
   export let dataGroups: KOTDataset[][]
 
-  const MAX_DATAGROUP_BUTTONS = 3
+  const MAX_DATAGROUP_BUTTONS = 2
 
   const has5OrMoreYearsOfData = dataGroups[0][0].years.length > 4
   const minYear = dataGroups[0][0].years[0]
@@ -147,48 +148,58 @@
       on:filterChange={(e) => handleCategorySelect(e.detail)}
       on:displayTypeChange={(e) => handleDisplayTypeSelect(e.detail)}
     />
-    <Sheet.Trigger asChild let:builder>
-      <Button
-        builders={[builder]}
-        variant="outline"
-        class="md:hidden py-6"
-        on:click={() => (triggeredSetting = 'category')}
-      >
-        <IconAdjustmentsHorizontal class="text-muted-foreground h-5 w-5 mr-2" />
-        <span class="flex flex-col text-left">
-          <p
-            class={clsx(
-              'leading-none text-muted-foreground',
-              displayType.value === 'chart' && 'text-xs'
-            )}
-          >
-            {$t('category')}
-          </p>
-          {#if displayType.value === 'chart'}
-            <span class="flex"
-              ><p class="leading-tight">{$t(selectedLabel)}</p>
-              <span
-                class="w-2 h-2 rounded-full ml-2 mt-1.5"
-                style={`background-color: ${getLabelColorFromLabel(selectedLabel)};`}
-              /></span
-            >
-          {/if}
-        </span>
-      </Button>
-    </Sheet.Trigger>
-    {#if has5OrMoreYearsOfData}
+    <div class="flex gap-2 h-12 overflow-x-scroll md:hidden">
       <Sheet.Trigger asChild let:builder>
         <Button
           builders={[builder]}
           variant="outline"
-          class="md:hidden py-6 ml-2"
-          on:click={() => (triggeredSetting = 'display')}
+          class="h-full"
+          on:click={() => (triggeredSetting = 'category')}
         >
-          <IconEye class="text-gray-600 h-5 w-5 mr-2" />
-          {$t('display')}
+          <IconAdjustmentsHorizontal class="text-muted-foreground h-5 w-5 mr-2" />
+          <span class="flex flex-col text-left">
+            <p
+              class={clsx(
+                'leading-none text-muted-foreground',
+                displayType.value === 'chart' && 'text-xs'
+              )}
+            >
+              {$t('category')}
+            </p>
+            {#if displayType.value === 'chart'}
+              <span class="flex">
+                <p class="leading-tight">{$t(selectedLabel)}</p>
+                <span
+                  class="w-2 h-2 rounded-full ml-2 mt-1.5"
+                  style={`background-color: ${getLabelColorFromLabel(selectedLabel)};`}
+                />
+              </span>
+            {/if}
+          </span>
         </Button>
       </Sheet.Trigger>
-    {/if}
+      {#if has5OrMoreYearsOfData}
+        <Sheet.Trigger asChild let:builder>
+          <Button
+            builders={[builder]}
+            variant="outline"
+            class="h-full"
+            on:click={() => (triggeredSetting = 'display')}
+          >
+            <IconEye class="text-gray-600 h-5 w-5 mr-2" />
+            {$t('display')}
+          </Button>
+        </Sheet.Trigger>
+      {/if}
+      {#if displayType.value !== 'table'}
+        <VisualizationPeriodDrawer
+          {period}
+          min={minYear}
+          max={maxYear}
+          on:periodChange={(e) => handlePeriodChange(e.detail)}
+        />
+      {/if}
+    </div>
     <div class="hidden md:flex justify-between">
       <div class="flex gap-4">
         {#each dataGroups.slice(0, MAX_DATAGROUP_BUTTONS) as dataGroup}
@@ -251,7 +262,7 @@
       {#if has5OrMoreYearsOfData}
         <div class="flex gap-4">
           {#if displayType.value !== 'table'}
-            <VisualizationPeriodSlider
+            <VisualizationPeriodPopover
               {period}
               min={minYear}
               max={maxYear}
