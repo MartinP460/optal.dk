@@ -1,0 +1,104 @@
+{
+  "course": "Computer science",
+  "dataCategories": {
+    "accepted": {
+      "chartOptions": {
+        "bar": {
+          "showYearsSlider": true,
+          "years": "multiple",
+          "defaultYears": "all"
+        },
+        "line": {
+          "showYearsSlider": true,
+          "years": "multiple",
+          "defaultYears": "all"
+        },
+        "table": {
+          "showYearsSlider": false,
+          "years": null,
+          "defaultYears": null
+        }
+      },
+      "unit": "people",
+      "datasets": [
+        {
+          "year": 2011,
+          "admitted": 10,
+          "standby": 10
+        }
+      ]
+    },
+    "applied": {
+      "chartOptions": {
+        /* Same as above */
+      },
+      "total": [],
+      "firstPriority": []
+    },
+    "quotient": {
+      "chartOptions": {
+        /* Same as above */
+      },
+      "datasets": {
+        "primary": [],
+        "standby": []
+      }
+    },
+    "gender": {
+      "chartOptions": {
+        "bar": {
+          "showYearsSlider": true,
+          "years": "multiple",
+          "defaultYears": "all"
+        },
+        "table": {
+          "showYearsSlider": false,
+          "years": null,
+          "defaultYears": null
+        }
+      },
+      "datasets": {
+        "accepted": {
+          "men": [],
+          "women": []
+        },
+        "applied": {
+          "men": [],
+          "women": []
+        }
+      }
+    },
+    "age": {
+      "chartOptions": {
+        "bar": {
+          "years": "single",
+          "defaultYears": "latest"
+        },
+        "line": {
+          "years": "multiple",
+          "defaultYears": "all"
+        },
+        "table": {
+          "years": null,
+          "defaultYears": null
+        }
+      },
+      "datasets": {
+        "accepted": {
+          "younger": [],
+          "19": [],
+          "20": [],
+          "21": [],
+          "older": []
+        },
+        "applied": {
+          "younger": [],
+          "19": [],
+          "20": [],
+          "21": [],
+          "older": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+- Accepted
+
+  - Bar
+    - years: multiple
+    - yearsDefault: all
+  - Line
+    - years: multiple
+    - yearsDefault: all
+  - Table
+    - years: multiple
+    - yearsDefault: all
