@@ -1,8 +1,8 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte'
   import * as Drawer from '$lib/components/ui/drawer'
   import Button from '$lib/components/ui/button/button.svelte'
   import { t } from '$lib/i18n'
-  import { createEventDispatcher } from 'svelte'
   import VisualizationPeriodSlider from '$lib/components/VisualizationPeriodSlider.svelte'
 
   export let min: number
