@@ -2,23 +2,23 @@
   "course": "Computer science",
   "dataCategories": {
     "accepted": {
-      "chartOptions": {
-        "bar": {
-          "showYearsSlider": true,
-          "years": "multiple",
-          "defaultYears": "all"
-        },
-        "line": {
-          "showYearsSlider": true,
-          "years": "multiple",
-          "defaultYears": "all"
-        },
-        "table": {
-          "showYearsSlider": false,
-          "years": null,
-          "defaultYears": null
-        }
-      },
+      // "chartOptions": {
+      //   "bar": {
+      //     "showYearsSlider": true,
+      //     "years": "multiple",
+      //     "defaultYears": "all"
+      //   },
+      //   "line": {
+      //     "showYearsSlider": true,
+      //     "years": "multiple",
+      //     "defaultYears": "all"
+      //   },
+      //   "table": {
+      //     "showYearsSlider": false,
+      //     "years": null,
+      //     "defaultYears": null
+      //   }
+      // },
       "unit": "people",
       "datasets": [
         {
@@ -58,14 +58,20 @@
         }
       },
       "datasets": {
-        "accepted": {
-          "men": [],
-          "women": []
-        },
-        "applied": {
-          "men": [],
-          "women": []
-        }
+        "accepted": [
+          {
+            "year": 2011,
+            "men": 40,
+            "women": 40
+          }
+        ],
+        "applied": [
+          {
+            "year": 2011,
+            "men": 40,
+            "women": 40
+          }
+        ]
       }
     },
     "age": {
@@ -84,20 +90,26 @@
         }
       },
       "datasets": {
-        "accepted": {
-          "younger": [],
-          "19": [],
-          "20": [],
-          "21": [],
-          "older": []
-        },
-        "applied": {
-          "younger": [],
-          "19": [],
-          "20": [],
-          "21": [],
-          "older": []
-        }
+        "accepted": [
+          {
+            "year": 2011,
+            "younger": 1,
+            "19": 10,
+            "20": 20,
+            "21": 30,
+            "older": 25
+          }
+        ],
+        "applied": [
+          {
+            "year": 2011,
+            "younger": 1,
+            "19": 10,
+            "20": 20,
+            "21": 30,
+            "older": 25
+          }
+        ]
       }
     }
   }
