@@ -9,7 +9,7 @@
 
   export let data: PageData
 
-  const { institution, institutionDataGroups } = data
+  const { institution } = data
 
   const breadcrumbRoutes = [{ text: institution.latestName, url: institution.slug }]
   $: title = $t('metaTitleInstitution', {
@@ -39,7 +39,7 @@
     {$t('totalNumbersForInstitution', { institution: institution.latestName })}.
   </p>
 
-  <Visualization dataGroups={institutionDataGroups} />
+  <Visualization dataCategories={institution.dataCategories} />
 
   <InformationAccordion
     descriptionOpts={{ categoriesToDisplay: ['accepted', 'applied'], type: 'institution' }}

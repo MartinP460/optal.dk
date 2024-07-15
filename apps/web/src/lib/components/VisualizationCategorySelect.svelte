@@ -1,0 +1,66 @@
+<script lang="ts">
+  import { IconAdjustments } from '@tabler/icons-svelte'
+  import type {
+    NewKOTDataCategories,
+    NewKOTDataCategory
+  } from '$lib/utils/transformInstitutionsToNewFormat'
+  import * as Popover from '$lib/components/ui/popover'
+  import * as Drawer from '$lib/components/ui/drawer'
+  import Button from '$lib/components/ui/button/button.svelte'
+  import { t } from '$lib/i18n'
+  import VisualizationCategorySelectInput from '$lib/components/VisualizationCategorySelectInput.svelte'
+  import DotSeperator from '$lib/components/DotSeperator.svelte'
+  import { getLabelColorFromLabel } from '$lib/utils/getColorFromDataset'
+
+  export let dataCategories: NewKOTDataCategories
+  export let selectedDataCategory: NewKOTDataCategory
+
+  $: color = getLabelColorFromLabel(selectedDataCategory.name)
+</script>
+
+<Popover.Root>
+  <Popover.Trigger asChild let:builder>
+    <Button builders={[builder]} variant="outline" class="hidden md:flex h-12 w-42">
+      <IconAdjustments class="w-5 h-5 mr-2" stroke={1.75} />
+      <div class="text-left">
+        <p class="text-xs text-muted-foreground">{$t('categories')}</p>
+        <p class="inline-flex gap-2 items-center">
+          {$t(selectedDataCategory.name)}
+          <DotSeperator style={`background-color: ${color}`} />
+        </p>
+      </div>
+    </Button>
+  </Popover.Trigger>
+  <Popover.Content align="start" class="flex flex-col w-fit py-2 min-w-44">
+    <VisualizationCategorySelectInput {dataCategories} {selectedDataCategory} on:categorySelect />
+  </Popover.Content>
+</Popover.Root>
+
+<Drawer.Root>
+  <Drawer.Trigger asChild let:builder>
+    <Button builders={[builder]} variant="outline" class="flex md:hidden h-12 w-42">
+      <IconAdjustments class="w-5 h-5 mr-2" stroke={1.75} />
+      <div class="text-left">
+        <p class="text-xs text-muted-foreground">{$t('categories')}</p>
+        <p class="inline-flex gap-2">
+          {$t(selectedDataCategory.name)}
+          <DotSeperator style={`background-color: ${color}`} />
+        </p>
+      </div>
+    </Button>
+  </Drawer.Trigger>
+  <Drawer.Content>
+    <Drawer.Header>
+      <Drawer.Title>{$t('categories')}</Drawer.Title>
+      <Drawer.Description>{$t('categoriesSelect')}</Drawer.Description>
+    </Drawer.Header>
+    <div class="px-6 py-2">
+      <VisualizationCategorySelectInput {dataCategories} {selectedDataCategory} on:categorySelect />
+    </div>
+    <Drawer.Footer>
+      <Drawer.Close asChild let:builder>
+        <Button builders={[builder]}>{$t('seeChanges')}</Button>
+      </Drawer.Close>
+    </Drawer.Footer>
+  </Drawer.Content>
+</Drawer.Root>

@@ -1,37 +1,37 @@
 <script lang="ts">
-  import type { KOTDataset } from 'parser'
+  import type { NewKOTDataCategory } from '$lib/utils/transformInstitutionsToNewFormat'
   import * as Table from '$lib/components/ui/table'
+  import { getChartProps } from '$lib/utils/chartHelpers'
+  import { getSubCategoryValues } from '$lib/utils/chartCategoryHelpers'
   import { t } from '$lib/i18n'
 
-  export let datasets: KOTDataset[]
+  export let dataCategory: NewKOTDataCategory
 
-  $: sortedDatasets = datasets.sort((a, b) => a.id - b.id)
+  $: ({ legendLabels } = getChartProps(dataCategory))
 </script>
 
-<Table.Root class="text-xs mt-6 md:w-full">
+<Table.Root class="text-xs md:w-full">
   <Table.Header>
     <Table.Row>
       <Table.Head />
-      {#each sortedDatasets as { id, categories: { category, subcategory, subsubcategory } } (id)}
+      {#each legendLabels as { group, label } (label)}
         <Table.Head class="text-left pr-8 pt-2 lg:pr-4">
           <p class="text-muted-foreground">
-            {subsubcategory
-              ? `${$t(category)} - ${$t(subcategory).toLocaleLowerCase()}`
-              : $t(category)}
+            {group ? `${$t(dataCategory.name)} - ${$t(group)}` : $t(dataCategory.name)}
           </p>
           <p class="text-sm text-primary">
-            {$t(subsubcategory ?? subcategory)}
+            {$t(label)}
           </p>
         </Table.Head>
       {/each}
     </Table.Row>
   </Table.Header>
   <Table.Body>
-    {#each [...sortedDatasets[0].years].reverse() as label, index}
+    {#each dataCategory.datasets.reverse() as dataset}
       <Table.Row>
-        <Table.Head>{label}</Table.Head>
-        {#each datasets as dataset (dataset.id)}
-          <Table.Cell class="font-medium">{[...dataset.data].reverse()[index]}</Table.Cell>
+        <Table.Head>{dataset.year}</Table.Head>
+        {#each getSubCategoryValues(dataset) as subCategory (subCategory)}
+          <Table.Cell class="font-medium">{subCategory}</Table.Cell>
         {/each}
       </Table.Row>
     {/each}

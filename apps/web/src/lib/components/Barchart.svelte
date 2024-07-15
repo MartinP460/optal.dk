@@ -1,36 +1,21 @@
 <script lang="ts">
   import { VisAxis, VisCrosshair, VisGroupedBar, VisTooltip, VisXYContainer } from '@unovis/svelte'
-  import type { KOTDataset } from 'parser'
-  import {
-    addDatasetsProperties,
-    computeSuggestedMaxY,
-    formatData,
-    getColorFunction,
-    getTooltip,
-    getXFunction,
-    getYFunctions
-  } from '$lib/utils/chartHelpers'
+  import type { NewKOTDataCategory } from '$lib/utils/transformInstitutionsToNewFormat'
+  import { getChartProps } from '$lib/utils/chartHelpers'
+  import ChartLegend from '$lib/components/ChartLegend.svelte'
 
-  export let datasets: KOTDataset[]
+  export let dataCategory: NewKOTDataCategory
 
-  $: cleanedDataset = addDatasetsProperties(datasets)
-  $: data = formatData(cleanedDataset)
-
-  $: x = getXFunction()
-  $: y = getYFunctions(datasets)
-
-  $: suggestedMaxY = computeSuggestedMaxY(cleanedDataset)
-
-  $: color = getColorFunction(datasets)
-  $: tooltip = getTooltip(cleanedDataset)
+  $: ({ data, suggestedMaxY, legendLabels, y, x, tooltip, color } = getChartProps(dataCategory))
 </script>
 
 <figure>
-  <VisXYContainer {data} height={320} yDomain={[0, suggestedMaxY]}>
+  <VisXYContainer height={320} yDomain={[0, suggestedMaxY]}>
     <VisTooltip />
-    <VisGroupedBar {x} {y} {color} roundedCorners={4} />
-    <VisCrosshair {x} {y} template={tooltip} {color} />
+    <VisGroupedBar {data} {x} {y} {color} roundedCorners={4} />
+    <VisCrosshair {data} {x} {y} template={tooltip} {color} />
     <VisAxis type="x" gridLine={false} tickLine={false} />
     <VisAxis type="y" domainLine={false} tickLine={false} />
   </VisXYContainer>
+  <ChartLegend labels={legendLabels} />
 </figure>

@@ -10,7 +10,7 @@
 
   export let data: PageData
 
-  const { course, courseDataGroups, institution } = data
+  const { course, institution } = data
 
   const breadcrumbRoutes = [
     { text: institution.latestName, url: institution.slug },
@@ -49,7 +49,7 @@
   </h2>
   <Meta {course} />
 
-  <Visualization dataGroups={courseDataGroups} />
+  <Visualization dataCategories={course.dataCategories} />
 
   <InformationAccordion
     descriptionOpts={{

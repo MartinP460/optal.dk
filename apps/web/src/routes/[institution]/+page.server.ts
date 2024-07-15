@@ -1,24 +1,20 @@
 import { error } from '@sveltejs/kit'
-import _ from 'lodash'
-import { institutions } from '$lib/server/data'
+import { newInstitutions } from '$lib/server/data'
 
 export async function load({ params }) {
-  const institution = institutions.find((institution) => institution.slug === params.institution)
+  const institution = newInstitutions.find((institution) => institution.slug === params.institution)
 
   if (!institution) {
     error(404, 'Institution not found.')
   }
 
-  const institutionDataGroups = _.toArray(_.groupBy(institution.datasets, 'categories.category'))
-
   return {
-    institution,
-    institutionDataGroups
+    institution
   }
 }
 
 export async function entries() {
-  return institutions.map((institution) => ({
+  return newInstitutions.map((institution) => ({
     institution: institution.slug
   }))
 }

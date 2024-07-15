@@ -7,30 +7,14 @@
     VisTooltip,
     VisXYContainer
   } from '@unovis/svelte'
-  import type { KOTDataset } from 'parser'
-  import {
-    addDatasetsProperties,
-    computeSuggestedMaxY,
-    formatData,
-    getColorFunction,
-    getTooltip,
-    getXFunction,
-    getYFunctions
-  } from '$lib/utils/chartHelpers'
+  import type { NewKOTDataCategory } from '$lib/utils/transformInstitutionsToNewFormat'
+  import { getChartProps } from '$lib/utils/chartHelpers'
+  import ChartLegend from '$lib/components/ChartLegend.svelte'
 
-  export let datasets: KOTDataset[]
+  export let dataCategory: NewKOTDataCategory
 
-  $: cleanedDataset = addDatasetsProperties(datasets)
-  $: data = formatData(cleanedDataset)
-  $: datasetsWithOriginalData = formatData(datasets.sort((a, b) => a.id - b.id))
-
-  $: x = getXFunction()
-  $: y = getYFunctions(datasets)
-
-  $: suggestedMaxY = computeSuggestedMaxY(cleanedDataset)
-
-  $: color = getColorFunction(datasets)
-  $: tooltip = getTooltip(cleanedDataset)
+  $: ({ data, originalData, suggestedMaxY, legendLabels, y, x, tooltip, color } =
+    getChartProps(dataCategory))
 </script>
 
 <figure>
@@ -38,8 +22,9 @@
     <VisTooltip />
     <VisLine {data} {x} {y} {color} />
     <VisScatter {data} {x} {y} {color} />
-    <VisCrosshair data={datasetsWithOriginalData} {x} {y} template={tooltip} {color} />
+    <VisCrosshair data={originalData} {x} {y} template={tooltip} {color} />
     <VisAxis type="x" gridLine={false} tickLine={false} />
     <VisAxis type="y" domainLine={false} tickLine={false} />
   </VisXYContainer>
+  <ChartLegend labels={legendLabels} />
 </figure>

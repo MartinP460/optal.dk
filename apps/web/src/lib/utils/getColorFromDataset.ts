@@ -1,3 +1,4 @@
+import type { NewKOTSubcategory } from '$lib/utils/transformInstitutionsToNewFormat'
 import type { KOTDataset } from 'parser'
 
 /** Gets the color of the line in the line chart from the dataset. */
@@ -25,6 +26,31 @@ export function getColorFromDataset({
   }
 
   return '#ecfccb'
+}
+
+export function getNewGetColorFromDataset(subcategory: NewKOTSubcategory) {
+  switch (subcategory) {
+    case 'acceptedAdmitted':
+      return '#4d7c0f'
+    case 'acceptedStandby':
+      return '#84cc16'
+    case 'appliedTotal':
+      return '#eab308'
+    case 'appliedFirstpriority':
+      return '#facc15'
+    case 'quotientPrimary':
+      return '#9f1239'
+    case 'quotientStandby':
+      return '#f43f5e'
+    case 'genderAcceptedMen':
+    case 'genderAppliedMen':
+      return '#38bdf8'
+    case 'genderAcceptedWomen':
+    case 'genderAppliedWomen':
+      return '#e879f9'
+    default:
+      return '#ecfccb'
+  }
 }
 
 export function getLabelColorFromLabel(label: KOTDataset['categories']['category']) {

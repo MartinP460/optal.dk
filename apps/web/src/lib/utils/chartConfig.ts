@@ -1,49 +1,95 @@
+import type { DisplayType } from '$lib/types/chartDisplayType'
+import type { NewKOTSubcategory } from '$lib/utils/transformInstitutionsToNewFormat'
 import type { KOTCategory } from 'parser'
 
-type ChartVariants = 'line' | 'bar' | 'table'
 type ChartConfig = {
   [key in KOTCategory]: {
-    [key in ChartVariants]?: {
-      periodSelector?: 'multiple' | 'single' | null
+    subCategories: {
+      all: NewKOTSubcategory[]
+      default: NewKOTSubcategory[]
+      groups:
+        | { subCategories: NewKOTSubcategory[]; label: 'genderAccepted' | 'genderApplied' }[]
+        | null
+    }
+    defaultDisplayType: DisplayType
+    display: {
+      [key in DisplayType]?: {
+        periodSelector?: 'multiple' | 'single' | null
+      }
     }
   }
 }
 
 export const chartConfig: ChartConfig = {
   accepted: {
-    line: {
-      periodSelector: 'multiple'
+    subCategories: {
+      all: ['acceptedAdmitted', 'acceptedStandby'],
+      default: ['acceptedAdmitted', 'acceptedStandby'],
+      groups: null
     },
-    bar: {
-      periodSelector: 'multiple'
-    },
-    table: {}
+    defaultDisplayType: 'linechart',
+    display: {
+      linechart: {
+        periodSelector: 'multiple'
+      },
+      barchart: {
+        periodSelector: 'multiple'
+      },
+      table: {}
+    }
   },
   applied: {
-    line: {
-      periodSelector: 'multiple'
+    subCategories: {
+      all: ['appliedTotal', 'appliedFirstpriority'],
+      default: ['appliedTotal', 'appliedFirstpriority'],
+      groups: null
     },
-    bar: {
-      periodSelector: 'multiple'
-    },
-    table: {}
+    defaultDisplayType: 'linechart',
+    display: {
+      linechart: {
+        periodSelector: 'multiple'
+      },
+      barchart: {
+        periodSelector: 'multiple'
+      },
+      table: {}
+    }
   },
   quotient: {
-    line: {
-      periodSelector: 'multiple'
+    subCategories: {
+      all: ['quotientPrimary', 'quotientStandby'],
+      default: ['quotientPrimary', 'quotientStandby'],
+      groups: null
     },
-    bar: {
-      periodSelector: 'multiple'
-    },
-    table: {}
+    defaultDisplayType: 'linechart',
+    display: {
+      linechart: {
+        periodSelector: 'multiple'
+      },
+      barchart: {
+        periodSelector: 'multiple'
+      },
+      table: {}
+    }
   },
   gender: {
-    line: {
-      periodSelector: 'multiple'
+    subCategories: {
+      all: ['genderAcceptedMen', 'genderAcceptedWomen', 'genderAppliedMen', 'genderAppliedWomen'],
+      default: ['genderAcceptedMen', 'genderAcceptedWomen'],
+      groups: [
+        { subCategories: ['genderAcceptedMen', 'genderAcceptedWomen'], label: 'genderAccepted' },
+        { subCategories: ['genderAppliedMen', 'genderAppliedWomen'], label: 'genderApplied' }
+      ]
     },
-    bar: {
-      periodSelector: 'multiple'
-    },
-    table: {}
+    defaultDisplayType: 'barchart',
+    display: {
+      linechart: {
+        periodSelector: 'multiple'
+      },
+      barchart: {
+        periodSelector: 'multiple'
+      },
+      table: {}
+    }
   }
 }
