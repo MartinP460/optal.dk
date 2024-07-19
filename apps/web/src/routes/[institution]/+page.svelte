@@ -45,5 +45,6 @@
 
   <InformationAccordion
     descriptionOpts={{ categoriesToDisplay: ['accepted', 'applied'], type: 'institution' }}
+    {institution}
   />
 </main>

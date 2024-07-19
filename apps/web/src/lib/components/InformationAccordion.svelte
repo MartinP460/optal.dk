@@ -1,17 +1,19 @@
 <script lang="ts">
   /* eslint-disable svelte/no-at-html-tags */
   import _ from 'lodash'
-  import type { KOTCategory } from 'parser'
+  import type { KOTCategory, KOTInstitution } from 'parser'
   import * as Accordion from '$lib/components/ui/accordion'
   import * as Card from '$lib/components/ui/card'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Title from '$lib/components/Title.svelte'
   import { t } from '$lib/i18n'
+  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
 
   export let descriptionOpts: {
     categoriesToDisplay: Array<KOTCategory>
     type: 'institution' | 'course'
   }
+  export let institution: KOTInstitution | undefined = undefined
 
   const shouldDisplay = (category: KOTCategory) =>
     descriptionOpts.categoriesToDisplay.includes(category)
@@ -20,8 +22,8 @@
 </script>
 
 <Card.Root class="w-full md:w-[800px] px-6 py-2 mt-12 mx-auto">
-  <Accordion.Root multiple aria-hidden>
-    <Accordion.Item value="categories-description" class="border-0">
+  <Accordion.Root>
+    <Accordion.Item value="categories-description" aria-hidden>
       <Accordion.Trigger>
         {$t(`infoCategories${i18nType}`)}
       </Accordion.Trigger>
@@ -73,6 +75,37 @@
         {/if}
       </Accordion.Content>
     </Accordion.Item>
+    {#if descriptionOpts.type === 'institution' && institution}
+      <Accordion.Item value="courses">
+        <Accordion.Trigger>
+          {$t('courses')}
+        </Accordion.Trigger>
+        <Accordion.Content>
+          <p class="text-sm font-medium leading-tight text-muted-foreground">
+            {$t('coursesOffered')}
+          </p>
+          <ul class="hover:text-muted-foreground transition-colors mt-2">
+            {#each institution.courses as course (course.id)}
+              <li class="hover:text-primary">
+                <a href={`/${institution.slug}/${course.slug}`} class="flex flex-col gap-1 py-2">
+                  <p class="text-sm font-semibold">{course.latestName}</p>
+                  <p class="text-xs">
+                    {[
+                      convertCourseYearsToString(course.dataCategories),
+                      course.location,
+                      course.studyStart ? $t(course.studyStart) : '',
+                      course.eLearning ? 'e-learning' : null
+                    ]
+                      .filter((item) => item)
+                      .join(', ')}
+                  </p>
+                </a>
+              </li>
+            {/each}
+          </ul>
+        </Accordion.Content>
+      </Accordion.Item>
+    {/if}
   </Accordion.Root>
 
   <div class="sr-only">
