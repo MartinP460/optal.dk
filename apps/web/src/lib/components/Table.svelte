@@ -27,10 +27,10 @@
     </Table.Row>
   </Table.Header>
   <Table.Body>
-    {#each dataCategory.datasets.reverse() as dataset}
+    {#each dataCategory.datasets.reverse() as dataset (dataset.year)}
       <Table.Row>
         <Table.Head>{dataset.year}</Table.Head>
-        {#each getSubCategoryValues(dataset) as subCategory (subCategory)}
+        {#each getSubCategoryValues(dataset) as subCategory}
           <Table.Cell class="font-medium">{subCategory}</Table.Cell>
         {/each}
       </Table.Row>

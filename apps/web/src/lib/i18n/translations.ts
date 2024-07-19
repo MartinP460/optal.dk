@@ -145,7 +145,7 @@ export const translations = {
     displaySettingsDescription: 'Vælg hvilken kategori af optagelsestal der skal vises og hvordan disse skal vises.',
     download: 'Download',
     downloadDataOnThisPage: 'På denne side kan du downloade optagelsestallene i forskellige filformatter. Start med at vælge et filformat.',
-    downloadInFormat: 'Download admission figures in {{format}} format.',
+    downloadInFormat: 'Download optagelsestallene i {{format}} format.',
     eLearning: 'E-læring',
     error: 'Der skete en fejl. Prøv igen senere.',
     feedback: 'Feedback',
