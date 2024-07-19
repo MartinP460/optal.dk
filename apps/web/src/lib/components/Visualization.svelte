@@ -59,8 +59,8 @@
   }
 </script>
 
-<div class="mt-8 sm:mt-12">
-  <div class="flex gap-4 w-full overflow-x-scroll">
+<div class="mt-8 sm:mt-8">
+  <div class="flex gap-4 w-full overflow-x-scroll py-2 px-1">
     <VisualizationCategorySelect
       {dataCategories}
       {selectedDataCategory}
@@ -82,7 +82,7 @@
       />
     {/if}
   </div>
-  <div class="mt-6">
+  <div class="mt-2">
     {#if displayType === 'barchart'}
       <Barchart dataCategory={selectedDataCategory} />
     {:else if displayType === 'linechart'}

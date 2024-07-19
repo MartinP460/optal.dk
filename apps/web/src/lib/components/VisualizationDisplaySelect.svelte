@@ -34,7 +34,7 @@
     selected={{ value: selectedDisplayType, label: $t(selectedDisplayType) }}
     onSelectedChange={handleDisplayTypeSelect}
   >
-    <Select.Trigger class="w-32">
+    <Select.Trigger class="w-32 h-full">
       <Select.Value />
     </Select.Trigger>
     <Select.Content>

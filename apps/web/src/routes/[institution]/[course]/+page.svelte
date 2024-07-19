@@ -7,6 +7,7 @@
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
   import InformationAccordion from '$lib/components/InformationAccordion.svelte'
+  import Title from '$lib/components/Title.svelte'
 
   export let data: PageData
 
@@ -41,7 +42,7 @@
 
 <main class="mt-6 sm:mt-10">
   <Breadcrumb routes={breadcrumbRoutes} />
-  <h1 class="text-2xl sm:text-3xl mt-4 mb-2">{course.latestName}</h1>
+  <Title element="h1" variant="h2" class="mt-4 mb-2" responsive>{course.latestName}</Title>
   <h2 class="sr-only">
     {$t('seoDescriptionCourse', {
       courseName: course.latestName,
