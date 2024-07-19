@@ -1,8 +1,5 @@
 <script lang="ts">
-  import type {
-    NewKOTDataCategories,
-    NewKOTDataCategory
-  } from '$lib/utils/transformInstitutionsToNewFormat'
+  import type { KOTDataCategories, KOTDataCategory } from 'parser'
   import type { DisplayType } from '$lib/types/chartDisplayType'
   import Linechart from '$lib/components/Linechart.svelte'
   import Table from '$lib/components/Table.svelte'
@@ -14,11 +11,12 @@
   import VisualizationDisplaySelect from '$lib/components/VisualizationDisplaySelect.svelte'
   import { chartConfig } from '$lib/utils/chartConfig'
 
-  export let dataCategories: NewKOTDataCategories
+  export let dataCategories: KOTDataCategories
 
-  const has5OrMoreYearsOfData = dataCategories.accepted.datasets.length > 4
-  const minYear = Math.min(...dataCategories.accepted.datasets.map((datapoint) => datapoint.year))
-  const maxYear = Math.max(...dataCategories.accepted.datasets.map((datapoint) => datapoint.year))
+  const has5OrMoreYearsOfData = (dataCategories.accepted?.datasets.length ?? 0) > 4
+  const courseYears = (dataCategories.accepted?.datasets ?? []).map((datapoint) => datapoint.year)
+  const minYear = Math.min(...courseYears)
+  const maxYear = Math.max(...courseYears)
   const { initialDataCategory, setCategoryParam } = getCategoryParams(dataCategories)
 
   let displayType: DisplayType = has5OrMoreYearsOfData
@@ -29,10 +27,10 @@
 
   $: selectedDataCategory = initialDataCategory
 
-  const handleCategorySelect = (dataCategory: NewKOTDataCategory) => {
+  const handleCategorySelect = (dataCategory: KOTDataCategory) => {
     selectedDataCategory = dataCategory
 
-    if (selectedDataCategory.name !== dataCategory.name) {
+    if (selectedDataCategory?.name !== dataCategory?.name) {
       displayType = chartConfig[dataCategory.name].defaultDisplayType
     }
 
@@ -47,7 +45,7 @@
   const handlePeriodChange = (value: number[]) => {
     const category = getFullPeriodDataset(
       selectedDataCategory,
-      dataCategories[selectedDataCategory.name]
+      dataCategories[selectedDataCategory.name]!
     )
 
     const minYearDiff = value[0] > minYear ? value[0] - minYear : minYear - value[0]
@@ -56,7 +54,7 @@
     selectedDataCategory = {
       ...category,
       datasets: category.datasets.slice(minYearDiff, maxYear - minYear - maxYearDiff + 1)
-    } as NewKOTDataCategory
+    } as KOTDataCategory
     period = value
   }
 </script>

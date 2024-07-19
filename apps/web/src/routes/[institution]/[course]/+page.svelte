@@ -19,15 +19,16 @@
   $: title = $t('metaTitleCourse', {
     courseName: course.latestName,
     institutionName: institution.latestName,
-    courseYears: convertCourseYearsToString(course.datasets[0].years)
+    courseYears: convertCourseYearsToString(course.dataCategories)
   })
   $: description = $t('metaDescriptionCourse', {
     courseName: course.latestName,
     institutionName: institution.latestName,
-    courseYears: convertCourseYearsToString(course.datasets[0].years)
+    courseYears: convertCourseYearsToString(course.dataCategories)
   })
 
-  const courseIsInactive = !course.datasets[0].years.includes(LATEST_YEAR)
+  const courseIsInactive =
+    course.dataCategories.accepted?.datasets.slice(-1)[0].year !== LATEST_YEAR
 </script>
 
 <svelte:head>

@@ -1,14 +1,11 @@
 import { queryParam, ssp } from 'sveltekit-search-params'
 import { get } from 'svelte/store'
-import type {
-  NewKOTCategory,
-  NewKOTDataCategories
-} from '$lib/utils/transformInstitutionsToNewFormat'
+import type { KOTCategory, KOTDataCategories, KOTDataCategory } from 'parser'
 import { getDefaultSubCategories } from '$lib/utils/chartCategoryHelpers'
 
 const categories = ['accepted', 'applied', 'quotient', 'gender']
 
-export function getCategoryParams(dataCategories: NewKOTDataCategories) {
+export function getCategoryParams(dataCategories: KOTDataCategories) {
   const store = queryParam('category', ssp.string('accepted'))
 
   const param = get(store)
@@ -19,11 +16,13 @@ export function getCategoryParams(dataCategories: NewKOTDataCategories) {
   }
 
   const initialDataCategory = getDefaultSubCategories(
-    isValidCategory ? dataCategories[param as NewKOTCategory] : dataCategories.accepted
+    (isValidCategory
+      ? dataCategories[param as KOTCategory]
+      : (dataCategories.accepted as KOTDataCategory)) as KOTDataCategory
   )
 
   return {
     initialDataCategory,
-    setCategoryParam: (category: NewKOTCategory) => store.set(category)
+    setCategoryParam: (category: KOTCategory) => store.set(category)
   }
 }

@@ -1,14 +1,13 @@
 import type { DisplayType } from '$lib/types/chartDisplayType'
-import type { NewKOTSubcategory } from '$lib/utils/transformInstitutionsToNewFormat'
-import type { KOTCategory } from 'parser'
+import type { KOTCategory, KOTSubcategory } from 'parser'
 
 type ChartConfig = {
   [key in KOTCategory]: {
     subCategories: {
-      all: NewKOTSubcategory[]
-      default: NewKOTSubcategory[]
+      all: KOTSubcategory[]
+      default: KOTSubcategory[]
       groups:
-        | { subCategories: NewKOTSubcategory[]; label: 'genderAccepted' | 'genderApplied' }[]
+        | { subCategories: KOTSubcategory[]; label: 'genderAccepted' | 'genderApplied' }[]
         | null
     }
     defaultDisplayType: DisplayType

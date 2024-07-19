@@ -1,9 +1,7 @@
 import { KOTInstitution } from '../types'
 
 /** Sorts institutions and courses. `latestName` is required in all courses. */
-export function sortInstitutionsAndCourses(
-  data: Required<KOTInstitution>[]
-): Required<KOTInstitution>[] {
+export function sortInstitutionsAndCourses(data: KOTInstitution[]): KOTInstitution[] {
   return data
     .map((institution) => ({
       ...institution,

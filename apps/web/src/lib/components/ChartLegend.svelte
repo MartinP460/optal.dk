@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { NewKOTSubcategory } from '$lib/utils/transformInstitutionsToNewFormat'
+  import type { KOTSubcategory } from 'parser'
   import { t } from '$lib/i18n'
   import { getNewGetColorFromDataset } from '$lib/utils/getColorFromDataset'
 
   export let labels: {
     group: 'genderAccepted' | 'genderApplied' | null
-    label: NewKOTSubcategory
+    label: KOTSubcategory
   }[]
 </script>
 

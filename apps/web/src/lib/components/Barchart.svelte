@@ -1,10 +1,10 @@
 <script lang="ts">
   import { VisAxis, VisCrosshair, VisGroupedBar, VisTooltip, VisXYContainer } from '@unovis/svelte'
-  import type { NewKOTDataCategory } from '$lib/utils/transformInstitutionsToNewFormat'
+  import type { KOTDataCategory } from 'parser'
   import { getChartProps } from '$lib/utils/chartHelpers'
   import ChartLegend from '$lib/components/ChartLegend.svelte'
 
-  export let dataCategory: NewKOTDataCategory
+  export let dataCategory: KOTDataCategory
 
   $: ({ data, suggestedMaxY, legendLabels, y, x, tooltip, color } = getChartProps(dataCategory))
 </script>

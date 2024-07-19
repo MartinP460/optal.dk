@@ -5,6 +5,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev run-dev",
     "test": "turbo run test --filter=parser",
+    "test:watch": "turbo run test:watch --filter=parser",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write . && eslint . --fix",
     "prepare": "husky install",

@@ -1,8 +1,8 @@
 import { error } from '@sveltejs/kit'
-import { newInstitutions } from '$lib/server/data'
+import { institutions } from '$lib/server/data'
 
 export async function load({ params }) {
-  const institution = newInstitutions.find((institution) => institution.slug === params.institution)
+  const institution = institutions.find((institution) => institution.slug === params.institution)
 
   if (!institution) {
     error(404, 'Institution not found.')
@@ -24,7 +24,7 @@ export async function load({ params }) {
 }
 
 export async function entries() {
-  return newInstitutions.flatMap((institution) =>
+  return institutions.flatMap((institution) =>
     institution.courses.map((course) => ({
       course: course.slug as string,
       institution: institution.slug

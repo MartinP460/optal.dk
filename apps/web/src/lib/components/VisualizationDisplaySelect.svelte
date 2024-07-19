@@ -2,7 +2,7 @@
   import { createEventDispatcher } from 'svelte'
   import { IconChartBar } from '@tabler/icons-svelte'
   import type { DisplayType } from '$lib/types/chartDisplayType'
-  import type { NewKOTDataCategory } from '$lib/utils/transformInstitutionsToNewFormat'
+  import type { KOTDataCategory } from 'parser'
   import { getDisplayTypesFromDataCategory } from '$lib/utils/chartCategoryHelpers'
   import { Label } from '$lib/components/ui/label'
   import { Separator } from '$lib/components/ui/separator'
@@ -12,7 +12,7 @@
   import * as Drawer from '$lib/components/ui/drawer'
   import * as RadioGroup from '$lib/components/ui/radio-group'
 
-  export let selectedDataCategory: NewKOTDataCategory
+  export let selectedDataCategory: KOTDataCategory
   export let selectedDisplayType: DisplayType
 
   const displayTypes = getDisplayTypesFromDataCategory(selectedDataCategory)

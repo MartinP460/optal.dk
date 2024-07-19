@@ -1,12 +1,16 @@
-import _ from 'lodash'
+import slugify from 'slugify'
 import path from 'path'
-import type { KOTCourse, KOTInstitution } from '../../types'
 import { readCSV } from '../../utils/readCSV'
 import { AVAILABLE_YEARS } from '../../constants'
+import { KOTCategory, KOTDataCategories, KOTInstitution, KOTSubcategory } from '../../types'
 import { convertToNumber } from '../../utils/convertToNumber'
+import { cities } from '../../utils/cities'
+
+const FILEPATH = 'data/core'
 
 enum CSVDataIndexes {
-  Id = 1, // (string) id of the course or institution
+  CourseId = 0, // (string) id of the course
+  InstitutionId = 1, // (string) id of the institution
   Name = 2, // (string) name of the course or institution
   AdmittedDirect = 3, // (integer) number of people admitted
   AdmittedStandby = 4, // (integer) number of people put on standby
@@ -16,41 +20,233 @@ enum CSVDataIndexes {
   QuotientStandby = 8 // (float, string or null) quotient (average grade) for people put on standby
 }
 
-/** Checks whether a row is empty. */
-export function isRowEmpty(row: string[]) {
-  return row.slice(2).every((item) => item === '')
+export async function readCoreData() {
+  let institutions: KOTInstitution[] = []
+
+  const dataSheets = await Promise.all(
+    AVAILABLE_YEARS.map((year) => {
+      const filePath = path.resolve(`${FILEPATH}/${year}.csv`)
+      return readCSV(filePath)
+    })
+  )
+
+  dataSheets.forEach((dataSheet, i) => {
+    institutions = readDataSheet(dataSheet, institutions, AVAILABLE_YEARS[i])
+  })
+
+  return institutions
 }
 
-/** Checks whether a single row in the CSV file is an institution. */
-export function isRowInstitution(row: string[], activeInstitutionName: string) {
-  const id = row[CSVDataIndexes.Id]
+function readDataSheet(dataSheet: string[][], institutions: KOTInstitution[], year: number) {
+  let newInstitutions = institutions
 
-  const hasNoIdOrIdEndsWith00 = id.endsWith('00') || id.endsWith('50') || id === ''
+  const cleanedDataSheet = trimData(dataSheet)
 
-  if (
-    hasNoIdOrIdEndsWith00 &&
-    row[CSVDataIndexes.AdmittedDirect] === '' &&
-    row[CSVDataIndexes.Name] !== '' &&
-    (!row[CSVDataIndexes.Name].includes(activeInstitutionName) || activeInstitutionName == '')
-  ) {
-    return true
-  }
-  return false
+  cleanedDataSheet.forEach((row) => {
+    if (isRowInstitutionHeader(row)) {
+      newInstitutions = upsertInstitution(row, newInstitutions)
+    }
+    if (isRowCourse(row)) {
+      newInstitutions = upsertCourse(row, newInstitutions, year)
+    }
+    if (isRowInstitutionSummary(row)) {
+      newInstitutions = upsertInstitutionData(row, newInstitutions, year)
+    }
+  })
+
+  return newInstitutions
 }
 
-/** Checks whether a single row in the CSV file is the summary for an institution. */
-export function isRowInstitutionSummary(row: string[]) {
-  const summaryLabel = 'i alt'
+function isRowInstitutionHeader(row: string[]) {
+  return (
+    row[CSVDataIndexes.CourseId] === '' &&
+    row[CSVDataIndexes.InstitutionId] !== '' &&
+    row[CSVDataIndexes.AdmittedDirect] === ''
+  )
+}
 
-  if (
-    row[CSVDataIndexes.Name] !== '' &&
-    row[CSVDataIndexes.Name].toLowerCase().endsWith(summaryLabel) &&
-    row[CSVDataIndexes.AdmittedDirect] !== '' &&
-    row[CSVDataIndexes.QuotientPrimary] === ''
-  ) {
-    return true
+function isRowCourse(row: string[]) {
+  return (
+    row[CSVDataIndexes.CourseId] !== '' &&
+    (row[CSVDataIndexes.AdmittedDirect] !== '' || row[CSVDataIndexes.AppliedTotal] !== '')
+  )
+}
+
+function isRowInstitutionSummary(row: string[]) {
+  return (
+    row[CSVDataIndexes.CourseId] === '' &&
+    row[CSVDataIndexes.InstitutionId] !== '' &&
+    row[CSVDataIndexes.AdmittedDirect] !== ''
+  )
+}
+
+function upsertInstitution(row: string[], institutions: KOTInstitution[]): KOTInstitution[] {
+  const institutionId = row[CSVDataIndexes.InstitutionId]
+  const institutionName = row[CSVDataIndexes.Name]
+
+  const institution = institutions.find((inst) => inst.id === institutionId)
+
+  if (!institution) {
+    // console.log(`Institution: ${institutionName}`)
+
+    return [
+      {
+        id: institutionId,
+        institutionNames: [institutionName],
+        courses: [],
+        latestName: institutionName,
+        slug: createSlug(institutionName),
+        dataCategories: {}
+      },
+      ...institutions
+    ]
+  } else {
+    const filteredInstitutions = institutions.filter((inst) => inst.id !== institution.id)
+
+    const newInstitutionNames = institution.institutionNames.includes(institutionName)
+      ? institution.institutionNames
+      : [...institution.institutionNames, institutionName]
+
+    return [
+      {
+        ...institution,
+        institutionNames: newInstitutionNames,
+        latestName: institutionName,
+        slug: createSlug(institutionName)
+      },
+      ...filteredInstitutions
+    ]
   }
-  return false
+}
+
+function upsertCourse(
+  row: string[],
+  institutions: KOTInstitution[],
+  year: number
+): KOTInstitution[] {
+  const courseId = row[CSVDataIndexes.CourseId]
+  const courseName = row[CSVDataIndexes.Name]
+  const institutionId = row[CSVDataIndexes.InstitutionId]
+
+  const institution = institutions.find((inst) => inst.id === institutionId)
+
+  if (!institution)
+    throw new Error(`No institution with ID: ${institutionId} for course: ${courseName}.`)
+
+  const course = institution.courses.find((crs) => crs.id === courseId)
+
+  const filteredInstitutions = institutions.filter((inst) => inst.id !== institution.id)
+  const filteredCourses = institution.courses.filter((course) => course.id !== courseId)
+
+  const newCourseNames = course?.courseNames.includes(courseName)
+    ? course.courseNames
+    : [...(course?.courseNames ?? []), courseName]
+
+  const additionalData = parseCourseName(courseId, courseName)
+
+  return [
+    ...filteredInstitutions,
+    {
+      ...institution,
+      courses: [
+        ...filteredCourses,
+        {
+          id: courseId,
+          courseNames: newCourseNames,
+          dataCategories: addDataCategories(row, course?.dataCategories ?? {}, year, [
+            'accepted',
+            'applied',
+            'quotient'
+          ]),
+          ...additionalData
+        }
+      ]
+    }
+  ]
+}
+
+function upsertInstitutionData(
+  row: string[],
+  institutions: KOTInstitution[],
+  year: number
+): KOTInstitution[] {
+  const institutionId = row[CSVDataIndexes.InstitutionId]
+
+  const institution = institutions.find((inst) => inst.id === institutionId)
+
+  if (!institution)
+    throw new Error(`No institution with ID: ${institutionId} found to insert institution data.`)
+
+  const filteredInstitutions = institutions.filter((inst) => inst.id !== institution.id)
+
+  return [
+    ...filteredInstitutions,
+    {
+      ...institution,
+      dataCategories: addDataCategories(row, institution.dataCategories, year, [
+        'accepted',
+        'applied'
+      ])
+    }
+  ]
+}
+
+const CATEGORY_UNITS = {
+  accepted: 'persons',
+  applied: 'persons',
+  quotient: null,
+  gender: null
+}
+
+function addDataCategories(
+  row: string[],
+  dataCategories: KOTDataCategories,
+  year: number,
+  categories: KOTCategory[]
+): KOTDataCategories {
+  return Object.fromEntries(
+    categories.map((category) => [
+      category,
+      {
+        name: category,
+        unit: CATEGORY_UNITS[category],
+        datasets: [
+          ...(dataCategories[category]?.datasets ?? []),
+          {
+            year,
+            ...getDatapointsFromCategory(row, category)
+          }
+        ]
+      }
+    ])
+  )
+}
+
+function getDatapointsFromCategory(
+  row: string[],
+  category: KOTCategory
+): {
+  [key in KOTSubcategory]?: number | string
+} {
+  switch (category) {
+    case 'accepted':
+      return {
+        acceptedAdmitted: convertToNumber(row[CSVDataIndexes.AdmittedDirect]),
+        acceptedStandby: convertToNumber(row[CSVDataIndexes.AdmittedStandby])
+      }
+    case 'applied':
+      return {
+        appliedTotal: convertToNumber(row[CSVDataIndexes.AppliedTotal]),
+        appliedFirstpriority: convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])
+      }
+    case 'quotient':
+      return {
+        quotientPrimary: row[CSVDataIndexes.QuotientPrimary],
+        quotientStandby: row[CSVDataIndexes.QuotientStandby]
+      }
+    default:
+      throw new Error(`Unknown category: ${category}`)
+  }
 }
 
 /** Trims data and replaces all - (dash signs) with 0's. */
@@ -67,408 +263,81 @@ function trimData(data: string[][]) {
   )
 }
 
-/**
- * Populates summary data for institutions with just one course because they sometimes
- * don't have a seperate row for summaries.
- */
-export function populateSingleCourseInstitutions(result: KOTInstitution[]): KOTInstitution[] {
-  return result.map((institution) => {
-    if (institution.courses.length === 1 && institution.datasets.length === 0) {
-      const course = institution.courses[0]
+/** Parses course names to extract or create the core name, meta-information and slug from the name. */
+function parseCourseName(courseId: string, latestName: string) {
+  const newLatestName = replaceCourseMetaInParentheses(latestName)
+  const parts = newLatestName.split(', ')
 
-      const acceptedAdmitted = course.datasets.find(
-        (dataset) =>
-          dataset.categories.category === 'accepted' &&
-          dataset.categories.subcategory === 'admitted'
-      )
-      const acceptedStandby = course.datasets.find(
-        (dataset) =>
-          dataset.categories.category === 'accepted' && dataset.categories.subcategory === 'standby'
-      )
-      const applicantsTotal = course.datasets.find(
-        (dataset) =>
-          dataset.categories.category === 'applied' && dataset.categories.subcategory === 'total'
-      )
-      const applicantsFirstPriority = course.datasets.find(
-        (dataset) =>
-          dataset.categories.category === 'applied' &&
-          dataset.categories.subcategory === 'firstPriority'
-      )
+  const indexOfLocation = parts.findIndex((part) => cities.includes(part.toLowerCase()))
 
-      if (!acceptedAdmitted || !acceptedStandby || !applicantsTotal || !applicantsFirstPriority) {
-        throw new Error('could not find course data for institution with single course')
-      }
-
-      return {
-        ...institution,
-        datasets: [
-          {
-            id: 1,
-            categories: {
-              category: 'accepted',
-              subcategory: 'admitted',
-              subsubcategory: null
-            },
-            data: [acceptedAdmitted.data[0]],
-            years: [acceptedAdmitted.years[0]]
-          },
-          {
-            id: 2,
-            categories: {
-              category: 'accepted',
-              subcategory: 'standby',
-              subsubcategory: null
-            },
-            data: [acceptedStandby.data[0]],
-            years: [acceptedAdmitted.years[0]]
-          },
-          {
-            id: 3,
-            categories: {
-              category: 'applied',
-              subcategory: 'total',
-              subsubcategory: null
-            },
-            data: [applicantsTotal.data[0]],
-            years: [acceptedAdmitted.years[0]]
-          },
-          {
-            id: 4,
-            categories: {
-              category: 'applied',
-              subcategory: 'firstPriority',
-              subsubcategory: null
-            },
-            data: [applicantsFirstPriority.data[0]],
-            years: [acceptedAdmitted.years[0]]
-          }
-        ]
-      }
-    } else {
-      return institution
-    }
-  })
-}
-
-/** Verifies whether fields in the resulting array of objects include the required data. */
-function verifyParsedResult(result: KOTInstitution[]) {
-  const allInstitutionsHaveData = result.every((institution) => institution.datasets.length !== 0)
-
-  if (!allInstitutionsHaveData) {
-    const faultyInstitution = result.find((institution) => institution.datasets.length === 0)
-
-    throw new Error(
-      `Parsing error: ${faultyInstitution?.institutionNames[0]} included no summary data.`
-    )
-  }
-
-  const allCoursesHaveData = result.every((institution) =>
-    institution.courses.every((course) => course.datasets.length !== 0)
-  )
-
-  if (!allCoursesHaveData) {
-    const faultyInstitution = result.find((institution) =>
-      institution.courses.find((course) => course.datasets.length === 0)
-    )
-
-    throw new Error(
-      `Parsing error: Course ${faultyInstitution?.institutionNames[0]} included a course with no data`
-    )
-  }
-}
-
-/** Parses admission-related data in CSV format from KOT ("Den koordinerede tilmelding"). */
-export async function parseKOTData(year: number) {
-  const filePath = path.resolve(`data/core/${year}.csv`)
-
-  const csvData = await readCSV(filePath)
-  const cleanedData = trimData(csvData)
-  const data = cleanedData.slice(0, -1)
-  // const annualData = csvData[csvData.length - 1]
-
-  let result: KOTInstitution[] = []
-  let activeInstitutionName = ''
-
-  for (const row of data) {
-    if (isRowInstitution(row, activeInstitutionName)) {
-      // assuming we are parsing an institution header
-
-      activeInstitutionName = row[CSVDataIndexes.Name]
-
-      result.push({
-        id: row[CSVDataIndexes.Id],
-        institutionNames: [row[CSVDataIndexes.Name].trim()],
-        datasets: [],
-        courses: []
-      })
-
-      continue
-    }
-
-    if (isRowInstitutionSummary(row)) {
-      // assuming we are parsing an institution summary
-
-      result = result.map((institution: KOTInstitution) =>
-        institution.institutionNames[0] === activeInstitutionName
-          ? {
-              ...institution,
-              datasets: [
-                {
-                  id: 1,
-                  categories: {
-                    category: 'accepted',
-                    subcategory: 'admitted',
-                    subsubcategory: null
-                  },
-                  data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])],
-                  years: [year]
-                },
-                {
-                  id: 2,
-                  categories: {
-                    category: 'accepted',
-                    subcategory: 'standby',
-                    subsubcategory: null
-                  },
-                  data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])],
-                  years: [year]
-                },
-                {
-                  id: 3,
-                  categories: {
-                    category: 'applied',
-                    subcategory: 'total',
-                    subsubcategory: null
-                  },
-                  data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])],
-                  years: [year]
-                },
-                {
-                  id: 4,
-                  categories: {
-                    category: 'applied',
-                    subcategory: 'firstPriority',
-                    subsubcategory: null
-                  },
-                  data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])],
-                  years: [year]
-                }
-              ]
-            }
-          : institution
-      )
-
-      continue
-    }
-
-    if (!isRowEmpty(row)) {
-      // assuming we are parsing a course
-
-      result = result.map((institution: KOTInstitution) =>
-        institution.institutionNames[0] === activeInstitutionName
-          ? {
-              ...institution,
-              courses: [
-                ...institution.courses,
-                {
-                  id: row[CSVDataIndexes.Id],
-                  courseNames: [row[CSVDataIndexes.Name]],
-                  years: [year],
-                  datasets: [
-                    {
-                      id: 1,
-                      categories: {
-                        category: 'accepted',
-                        subcategory: 'admitted',
-                        subsubcategory: null
-                      },
-                      data: [convertToNumber(row[CSVDataIndexes.AdmittedDirect])],
-                      years: [year]
-                    },
-                    {
-                      id: 2,
-                      categories: {
-                        category: 'accepted',
-                        subcategory: 'standby',
-                        subsubcategory: null
-                      },
-                      data: [convertToNumber(row[CSVDataIndexes.AdmittedStandby])],
-                      years: [year]
-                    },
-                    {
-                      id: 3,
-                      categories: {
-                        category: 'applied',
-                        subcategory: 'total',
-                        subsubcategory: null
-                      },
-                      data: [convertToNumber(row[CSVDataIndexes.AppliedTotal])],
-                      years: [year]
-                    },
-                    {
-                      id: 4,
-                      categories: {
-                        category: 'applied',
-                        subcategory: 'firstPriority',
-                        subsubcategory: null
-                      },
-                      data: [convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])],
-                      years: [year]
-                    },
-                    {
-                      id: 5,
-                      categories: {
-                        category: 'quotient',
-                        subcategory: 'primary',
-                        subsubcategory: null
-                      },
-                      data: [row[CSVDataIndexes.QuotientPrimary]],
-                      years: [year]
-                    },
-                    {
-                      id: 6,
-                      categories: {
-                        category: 'quotient',
-                        subcategory: 'standby',
-                        subsubcategory: null
-                      },
-                      data: [row[CSVDataIndexes.QuotientStandby]],
-                      years: [year]
-                    }
-                  ]
-                }
-              ]
-            }
-          : institution
-      )
+  if (indexOfLocation === -1) {
+    return {
+      latestName: newLatestName,
+      studyStart: null,
+      eLearning: null,
+      location: null,
+      slug: courseId
     }
   }
 
-  const populatedData = populateSingleCourseInstitutions(result)
+  const name = parts.slice(0, indexOfLocation).join(', ')
+  const meta = transformMetaData(parts.slice(indexOfLocation))
+  const slug = createSlug(`${name}-${courseId}`)
 
-  verifyParsedResult(populatedData)
-
-  return populatedData
+  return {
+    latestName: name,
+    slug,
+    ...meta
+  }
 }
 
-/** Merges institution names for an array of institutions. */
-function mergeInstitutionNames(institutions: KOTInstitution[]) {
-  const names: string[] = []
+/** Creates a "slug" from the name of an institution or course. */
+function createSlug(name: string) {
+  // replaces the characters / and , with -
+  const additionallyTransformedName = `${name.replaceAll(/[/,]/g, '-')}`
 
-  institutions.forEach((institution) => {
-    if (!names.includes(institution.institutionNames[0])) {
-      names.push(institution.institutionNames[0])
-    }
-  })
-
-  return names
-}
-
-/** Merges datasets formatted as a KOTDataset. */
-function mergeDatasets(courseOrInstitution: KOTInstitution[] | KOTCourse[]) {
-  return courseOrInstitution[0].datasets.map((initialDataset) => {
-    return {
-      ...initialDataset,
-      data: courseOrInstitution.map((institution) => {
-        const dataset = institution.datasets.find(
-          (dataset) =>
-            initialDataset.categories.category === dataset.categories.category &&
-            initialDataset.categories.subcategory === dataset.categories.subcategory
-        )
-
-        if (!dataset) {
-          throw new Error('dataset not found while merging')
-        }
-
-        return dataset.data[0]
-      }),
-      years: courseOrInstitution.map((institution) => {
-        const dataset = institution.datasets.find(
-          (dataset) =>
-            initialDataset.categories.category === dataset.categories.category &&
-            initialDataset.categories.subcategory === dataset.categories.subcategory
-        )
-
-        if (!dataset) {
-          throw new Error('dataset not found while merging')
-        }
-
-        return dataset.years[0]
-      })
-    }
+  return slugify(additionallyTransformedName, {
+    replacement: '-',
+    remove: /[*+~./()'"!:@]/g,
+    lower: true
   })
 }
 
-/** Merges course names for an array of courses. */
-function mergeCourseNames(courses: KOTCourse[]) {
-  const names: string[] = []
+/** Transforms an item in the array of meta-data into a standarized format. */
+function transformMetaData(metaData: string[]) {
+  let studyStart = null
+  let eLearning = false
+  let location = null
 
-  courses.forEach((course) => {
-    if (!names.includes(course.courseNames[0])) {
-      names.push(course.courseNames[0])
+  metaData.forEach((metaItem) => {
+    const item = metaItem.toLowerCase()
+
+    if (item.includes('sommer') || item.includes('summer')) {
+      studyStart = 'summerstart'
+      return
+    }
+    if (item.includes('vinter') || item.includes('winter')) {
+      studyStart = 'winterstart'
+      return
+    }
+    if (item.includes('e-læring') || item.includes('e-learning')) {
+      eLearning = true
+      return
+    }
+    if (cities.includes(item)) {
+      location = metaItem
+      return
     }
   })
 
-  return names
+  return { studyStart, eLearning, location }
 }
 
-/** Merges an array of courses. */
-function mergeCourses(institutions: KOTInstitution[]) {
-  const allCourses = institutions.map((institution) => institution.courses).flat()
-
-  const uniqueCourses = allCourses.filter(
-    (initalCourse, i, a) => a.findIndex((course) => course.id === initalCourse.id) === i
-  )
-
-  return uniqueCourses.map((initialCourse) => {
-    // all courses through the years for the selected course
-    const allCourses = institutions
-      .map(
-        (institution) =>
-          institution.courses.find((course) => initialCourse.id === course.id) ?? null
-      )
-      .filter((course) => course !== null) as KOTCourse[]
-
-    return {
-      id: initialCourse.id,
-      courseNames: mergeCourseNames(allCourses),
-      datasets: mergeDatasets(allCourses)
-    }
-  })
-}
-
-/** Gets all unique institution from a 2d array of institutions. */
-export function getAllUniqueInstitutions(data: KOTInstitution[][]) {
-  const allInstitutions = data
-    .map((institutions) => institutions.map((institution) => institution))
-    .flat()
-
-  return _.uniqBy(allInstitutions, 'id')
-}
-
-/**
- * Fetches all core admission-related data from KOT ("Den koordinerede tilmelding").
- * Source: https://ufm.dk/uddannelse/statistik-og-analyser/sogning-og-optag-pa-videregaende-uddannelser/grundtal-om-sogning-og-optag/kot-hovedtal
- */
-export async function getCoreKOTData(): Promise<KOTInstitution[]> {
-  const data = await Promise.all(AVAILABLE_YEARS.map((year) => parseKOTData(year)))
-
-  const uniqueCourses = getAllUniqueInstitutions(data)
-
-  return uniqueCourses.map((institution) => {
-    // an array of institutions for each year that the institution is present in the data
-    const allInstitutionsPerYear = data
-      .map(
-        (institutions) =>
-          institutions.find((otherInstitution) => institution.id === otherInstitution.id) ?? null
-      )
-      .filter((institution) => institution !== null) as KOTInstitution[]
-
-    return {
-      id: allInstitutionsPerYear.find((institution) => institution?.id !== '')?.id ?? '',
-      institutionNames: mergeInstitutionNames(allInstitutionsPerYear),
-      datasets: mergeDatasets(allInstitutionsPerYear),
-      courses: mergeCourses(allInstitutionsPerYear)
-    }
-  })
+/** Replaces any course meta data wrapped in parenthes with commas, e.g. "...Ballerup (winter)" with "...Ballerup, winter" */
+function replaceCourseMetaInParentheses(str: string) {
+  return str
+    .replace(' (sommer)', ', sommer')
+    .replace(' (vinter)', ', vinter')
+    .replace(' (summer)', ', summer')
+    .replace(' (winter)', ', winter')
 }

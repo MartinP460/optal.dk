@@ -14,14 +14,15 @@
   const breadcrumbRoutes = [{ text: institution.latestName, url: institution.slug }]
   $: title = $t('metaTitleInstitution', {
     institutionName: institution.latestName,
-    institutionYears: convertCourseYearsToString(institution.datasets[0].years)
+    institutionYears: convertCourseYearsToString(institution.dataCategories)
   })
   $: description = $t('metaDescriptionInstitution', {
     institutionName: institution.latestName,
-    institutionYears: convertCourseYearsToString(institution.datasets[0].years)
+    institutionYears: convertCourseYearsToString(institution.dataCategories)
   })
 
-  const institutionIsInactive = !institution.datasets[0].years.includes(LATEST_YEAR)
+  const institutionIsInactive =
+    institution.dataCategories.accepted?.datasets.slice(-1)[0].year !== LATEST_YEAR
 </script>
 
 <svelte:head>

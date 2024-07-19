@@ -4,12 +4,12 @@
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
 
-  export let course: Required<KOTCourse>
+  export let course: KOTCourse
 </script>
 
 <div class="flex items-center gap-2 mt-4 flex-wrap">
   {#if course.location}
-    <Badge class="text-xs">{convertCourseYearsToString(course.datasets[0].years)}</Badge>
+    <Badge class="text-xs">{convertCourseYearsToString(course.dataCategories)}</Badge>
   {/if}
   {#if course.location}
     <Badge class="text-xs">{course.location}</Badge>

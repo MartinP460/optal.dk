@@ -1,15 +1,12 @@
 import { get } from 'svelte/store'
 import _ from 'lodash'
-import type {
-  NewKOTDataCategory,
-  NewKOTSubcategory
-} from '$lib/utils/transformInstitutionsToNewFormat'
+import type { KOTDataCategory, KOTSubcategory } from 'parser'
 import { getNewGetColorFromDataset } from '$lib/utils/getColorFromDataset'
 import { t as i18n, locale } from '$lib/i18n'
 import { chartConfig } from '$lib/utils/chartConfig'
 import { getSubCategories } from '$lib/utils/chartCategoryHelpers'
 
-export function getChartProps(dataCategory: NewKOTDataCategory) {
+export function getChartProps(dataCategory: KOTDataCategory) {
   const data = formatNewDataset(dataCategory.datasets)
 
   return {
@@ -24,7 +21,7 @@ export function getChartProps(dataCategory: NewKOTDataCategory) {
   }
 }
 
-function getLegendLabels(dataCategory: NewKOTDataCategory) {
+function getLegendLabels(dataCategory: KOTDataCategory) {
   const groups = chartConfig[dataCategory.name].subCategories.groups
   const subCategories = getSubCategories(dataCategory)
 
@@ -40,7 +37,7 @@ function getLegendLabels(dataCategory: NewKOTDataCategory) {
   }))
 }
 
-function formatNewDataset(dataset: NewKOTDataCategory['datasets']): NewKOTDataCategory['datasets'] {
+function formatNewDataset(dataset: KOTDataCategory['datasets']): KOTDataCategory['datasets'] {
   const hasLetters = /[a-zA-Z]/
   // @ts-expect-error The data category can be any of the ones in the return type.
   return dataset.map((data) =>
@@ -54,29 +51,29 @@ function formatNewDataset(dataset: NewKOTDataCategory['datasets']): NewKOTDataCa
   )
 }
 
-function getColorFunction(datasets: NewKOTDataCategory['datasets']) {
-  return (_: NewKOTDataCategory['datasets'], i: number) => {
+function getColorFunction(datasets: KOTDataCategory['datasets']) {
+  return (_: KOTDataCategory['datasets'], i: number) => {
     const colors = Object.keys(datasets[0])
       .filter((subcategory) => subcategory !== 'year')
-      .map((subcategory) => getNewGetColorFromDataset(subcategory as NewKOTSubcategory))
+      .map((subcategory) => getNewGetColorFromDataset(subcategory as KOTSubcategory))
 
     return colors[i]
   }
 }
 
 function getXFunction() {
-  return (d: NewKOTDataCategory['datasets'][number]) => d.year
+  return (d: KOTDataCategory['datasets'][number]) => d.year
 }
 
-function getYFunctions(datasets: NewKOTDataCategory['datasets']) {
+function getYFunctions(datasets: KOTDataCategory['datasets']) {
   const keys = Object.keys(datasets[0]).filter((key) => key !== 'year')
 
   // We have to do this typecast because typescript cannot infer the type of the categories
   // from Object.keys.
-  return keys.map((key) => (d: NewKOTDataCategory['datasets'][number]) => d[key as 'year'])
+  return keys.map((key) => (d: KOTDataCategory['datasets'][number]) => d[key as 'year'])
 }
 
-function computeSuggestedMaxY(datasets: NewKOTDataCategory['datasets']) {
+function computeSuggestedMaxY(datasets: KOTDataCategory['datasets']) {
   const QUOTIENT_MAX_Y = 13
 
   // @ts-expect-error These properties do exist on one of the data categories.
@@ -96,11 +93,11 @@ function computeSuggestedMaxY(datasets: NewKOTDataCategory['datasets']) {
   return maxValue * 1.2
 }
 
-function getTooltip(dataCategory: NewKOTDataCategory) {
+function getTooltip(dataCategory: KOTDataCategory) {
   const t = get(i18n)
   const currentLocale = get(locale)
 
-  return (d: NewKOTDataCategory['datasets'][number]) => {
+  return (d: KOTDataCategory['datasets'][number]) => {
     return `
     <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-sm">
         <span class="font-bold text-sm text-muted-foreground">

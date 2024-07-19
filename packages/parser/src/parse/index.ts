@@ -1,9 +1,10 @@
-import { getCoreData } from './core'
-import { getGenderData } from './gender/gender'
+import { readCoreData } from './core/core'
+import { readGenderData } from './gender/gender'
+import { sortInstitutionsAndCourses } from '../utils/sortInstitutionsAndCourses'
 
 export async function getData() {
-  const coreData = await getCoreData()
-  const genderData = await getGenderData(coreData)
+  const institutions = await readCoreData()
+  const institutionsWithGender = await readGenderData(institutions)
 
-  return genderData
+  return sortInstitutionsAndCourses(institutionsWithGender)
 }

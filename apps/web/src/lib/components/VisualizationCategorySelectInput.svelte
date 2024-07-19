@@ -2,12 +2,7 @@
   import { createEventDispatcher } from 'svelte'
   import { slide } from 'svelte/transition'
   import _ from 'lodash'
-  import type {
-    NewKOTCategory,
-    NewKOTDataCategories,
-    NewKOTDataCategory,
-    NewKOTSubcategory
-  } from '$lib/utils/transformInstitutionsToNewFormat'
+  import type { KOTCategory, KOTDataCategories, KOTDataCategory, KOTSubcategory } from 'parser'
   import { Checkbox } from '$lib/components/ui/checkbox'
   import { Separator } from '$lib/components/ui/separator'
   import { chartConfig } from '$lib/utils/chartConfig'
@@ -20,40 +15,37 @@
   import { Label } from '$lib/components/ui/label'
   import { t } from '$lib/i18n'
 
-  export let dataCategories: NewKOTDataCategories
-  export let selectedDataCategory: NewKOTDataCategory
+  export let dataCategories: KOTDataCategories
+  export let selectedDataCategory: KOTDataCategory
 
   const dispatch = createEventDispatcher<{
-    categorySelect: NewKOTDataCategory
+    categorySelect: KOTDataCategory
   }>()
 
   $: selectedSubCategories = getSubCategories(selectedDataCategory)
 
-  $: isSelectedCategory = (category: NewKOTCategory) => {
-    const subCategories = getSubCategories(dataCategories[category])
+  $: isSelectedCategory = (category: KOTCategory) => {
+    const subCategories = getSubCategories(dataCategories[category]!)
 
     return selectedSubCategories.some((subCategory) => subCategories.includes(subCategory))
   }
 
-  $: isSelectedSubCategoryGroup = (groupSubCategories: NewKOTSubcategory[]) => {
+  $: isSelectedSubCategoryGroup = (groupSubCategories: KOTSubcategory[]) => {
     return selectedSubCategories.some((subCategory) => groupSubCategories.includes(subCategory))
   }
 
-  const handleCategorySelect = (category: NewKOTCategory) => {
-    const filteredDataCategory = getDefaultSubCategories(dataCategories[category])
+  const handleCategorySelect = (category: KOTCategory) => {
+    const filteredDataCategory = getDefaultSubCategories(dataCategories[category]!)
 
     dispatch('categorySelect', filteredDataCategory)
   }
 
-  const handleSubCategoryGroupSelect = (
-    category: NewKOTCategory,
-    subCategories: NewKOTSubcategory[]
-  ) => {
+  const handleSubCategoryGroupSelect = (category: KOTCategory, subCategories: KOTSubcategory[]) => {
     const subCategoriesWithYear = [...subCategories, 'year']
 
-    const filteredDataset = dataCategories[category].datasets.map((datapoint) =>
-      _.pickBy(datapoint, (_, key) => subCategoriesWithYear.includes(key as NewKOTSubcategory))
-    ) as NewKOTDataCategory['datasets']
+    const filteredDataset = dataCategories[category]?.datasets.map((datapoint) =>
+      _.pickBy(datapoint, (_, key) => subCategoriesWithYear.includes(key as KOTSubcategory))
+    ) as KOTDataCategory['datasets']
 
     // @ts-expect-error The filtered dataset is a type of dataset, but not all.
     dispatch('categorySelect', {
@@ -62,15 +54,15 @@
     })
   }
 
-  const handleSubCategorySelect = (category: NewKOTCategory, subCategory: NewKOTSubcategory) => {
+  const handleSubCategorySelect = (category: KOTCategory, subCategory: KOTSubcategory) => {
     const groups = chartConfig[category].subCategories.groups
 
-    let subCategories: NewKOTSubcategory[]
+    let subCategories: KOTSubcategory[]
     if (groups) {
       subCategories =
         groups.find((group) => group.subCategories.includes(subCategory))?.subCategories ?? []
     } else {
-      subCategories = getSubCategories(dataCategories[category])
+      subCategories = getSubCategories(dataCategories[category]!)
     }
 
     const isSelected = !selectedSubCategories.includes(subCategory)
@@ -80,7 +72,7 @@
     )
 
     const filteredDataset = filterDatasetsBySubCategories(
-      dataCategories[category],
+      dataCategories[category]!,
       newSelectedSubCategories
     )
 

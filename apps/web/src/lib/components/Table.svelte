@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { NewKOTDataCategory } from '$lib/utils/transformInstitutionsToNewFormat'
+  import type { KOTDataCategory } from 'parser'
   import * as Table from '$lib/components/ui/table'
   import { getChartProps } from '$lib/utils/chartHelpers'
   import { getSubCategoryValues } from '$lib/utils/chartCategoryHelpers'
   import { t } from '$lib/i18n'
 
-  export let dataCategory: NewKOTDataCategory
+  export let dataCategory: KOTDataCategory
 
   $: ({ legendLabels } = getChartProps(dataCategory))
 </script>

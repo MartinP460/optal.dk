@@ -6,15 +6,17 @@ export const load = () => {
     id,
     latestName,
     slug,
-    courses: courses.map(({ id, latestName, slug, location, studyStart, eLearning, datasets }) => ({
-      id,
-      latestName,
-      slug,
-      location,
-      studyStart,
-      eLearning,
-      datasets: datasets.slice(0, 1).map(({ years }) => ({ years }))
-    }))
+    courses: courses.map(
+      ({ id, latestName, slug, location, studyStart, eLearning, dataCategories }) => ({
+        id,
+        latestName,
+        slug,
+        location,
+        studyStart,
+        eLearning,
+        dataCategories
+      })
+    )
   }))
 
   return {

@@ -1,34 +1,6 @@
-import type { NewKOTSubcategory } from '$lib/utils/transformInstitutionsToNewFormat'
-import type { KOTDataset } from 'parser'
+import type { KOTCategory, KOTSubcategory } from 'parser'
 
-/** Gets the color of the line in the line chart from the dataset. */
-export function getColorFromDataset({
-  categories: { category, subcategory, subsubcategory }
-}: KOTDataset) {
-  if (category === 'accepted') {
-    if (subcategory === 'admitted') return '#4d7c0f'
-    if (subcategory === 'standby') return '#84cc16'
-  }
-
-  if (category === 'applied') {
-    if (subcategory === 'total') return '#eab308'
-    if (subcategory === 'firstPriority') return '#facc15'
-  }
-
-  if (category === 'quotient') {
-    if (subcategory === 'primary') return '#9f1239'
-    if (subcategory === 'standby') return '#f43f5e'
-  }
-
-  if (category === 'gender') {
-    if (subsubcategory === 'men') return '#38bdf8'
-    if (subsubcategory === 'women') return '#e879f9'
-  }
-
-  return '#ecfccb'
-}
-
-export function getNewGetColorFromDataset(subcategory: NewKOTSubcategory) {
+export function getNewGetColorFromDataset(subcategory: KOTSubcategory) {
   switch (subcategory) {
     case 'acceptedAdmitted':
       return '#4d7c0f'
@@ -53,7 +25,7 @@ export function getNewGetColorFromDataset(subcategory: NewKOTSubcategory) {
   }
 }
 
-export function getLabelColorFromLabel(label: KOTDataset['categories']['category']) {
+export function getLabelColorFromLabel(label: KOTCategory) {
   switch (label) {
     case 'accepted':
       // lime-700

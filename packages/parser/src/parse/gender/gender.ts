@@ -1,9 +1,8 @@
 import path from 'path'
 import { readCSV } from '../../utils/readCSV'
-import { KOTDataset, KOTInstitution } from '../../types'
+import { KOTDataCategories, KOTInstitution, KOTSubcategory } from '../../types'
 import { AVAILABLE_YEARS } from '../../constants'
 import { convertToNumber } from '../../utils/convertToNumber'
-import { sortInstitutionsAndCourses } from '../../utils/sortInstitutionsAndCourses'
 
 enum CSVDataIndexes {
   InstitutionId = 0, // (string) id of the institution
@@ -16,91 +15,61 @@ enum CSVDataIndexes {
 }
 
 /** Parses gender-related admission data in CSV format from KOT ("Den koordinerede tilmelding"). */
-export async function getGenderData(
-  data: Required<KOTInstitution>[]
-): Promise<Required<KOTInstitution>[]> {
-  const genderDataAccepted = await getAcceptedOrAppliedGenderData(data, 'accepted')
-  const genderDataApplied = await getAcceptedOrAppliedGenderData(genderDataAccepted, 'applied')
+export async function readGenderData(institutions: KOTInstitution[]): Promise<KOTInstitution[]> {
+  const genderDataAccepted = await getAcceptedOrAppliedGenderData(institutions, 'genderAccepted')
+  const genderDataApplied = await getAcceptedOrAppliedGenderData(
+    genderDataAccepted,
+    'genderApplied'
+  )
 
-  return sortInstitutionsAndCourses(genderDataApplied)
+  return genderDataApplied
 }
 
 /** Parses gender-related data from either the accepted or applied files. */
 async function getAcceptedOrAppliedGenderData(
-  data: Required<KOTInstitution>[],
-  type: 'applied' | 'accepted'
+  institutions: KOTInstitution[],
+  category: 'genderAccepted' | 'genderApplied'
 ) {
-  let newData = [...data]
+  let newInstitutions = institutions
 
   const genderData = await Promise.all(
     AVAILABLE_YEARS.map((year) => {
-      const filePath = path.resolve(`data/gender/${type}/${year}.csv`)
+      const filePath = path.resolve(`data/gender/${category}/${year}.csv`)
       return readCSV(filePath)
     })
   )
 
   genderData.forEach((rows, i) => {
     rows.forEach((row) => {
-      const newDatasets = getCourseGenderDistribution(row, AVAILABLE_YEARS[i], type)
-      const courseId = row[CSVDataIndexes.CourseId]
-      const institutionId = row[CSVDataIndexes.InstitutionId] + '0'
-
-      newData = appendDataToCourse({
-        coreData: newData,
-        institutionId,
-        courseId,
-        newDatasets
+      newInstitutions = appendDataToCourse({
+        row,
+        institutions: newInstitutions,
+        year: AVAILABLE_YEARS[i],
+        category
       })
     })
   })
 
-  return newData
-}
-
-/** Gets the gender distribution of a course from a row of data. */
-function getCourseGenderDistribution(
-  row: string[],
-  year: number,
-  type: 'applied' | 'accepted'
-): KOTDataset[] {
-  return [
-    {
-      id: type === 'accepted' ? 7 : 9,
-      categories: {
-        category: 'gender',
-        subcategory: type === 'accepted' ? 'genderAccepted' : 'genderApplied',
-        subsubcategory: 'men'
-      },
-      data: [convertToNumber(row[CSVDataIndexes.Men])],
-      years: [year]
-    },
-    {
-      id: type === 'accepted' ? 8 : 10,
-      categories: {
-        category: 'gender',
-        subcategory: type === 'accepted' ? 'genderAccepted' : 'genderApplied',
-        subsubcategory: 'women'
-      },
-      data: [convertToNumber(row[CSVDataIndexes.Women])],
-      years: [year]
-    }
-  ]
+  return newInstitutions
 }
 
 /** Appends a new dataset or data entry to a course and returns the updated array of institutions. */
 export function appendDataToCourse({
-  coreData,
-  institutionId,
-  courseId,
-  newDatasets
+  row,
+  institutions,
+  year,
+  category
 }: {
-  coreData: Required<KOTInstitution>[]
-  institutionId: string
-  courseId: string
-  newDatasets: KOTDataset[]
-}): Required<KOTInstitution>[] {
-  const institution = coreData.find((institution) => institution.id === institutionId)
-  const restInstitutions = coreData.filter((institution) => institution.id !== institutionId)
+  row: string[]
+  institutions: KOTInstitution[]
+  year: number
+  category: 'genderAccepted' | 'genderApplied'
+}): KOTInstitution[] {
+  const courseId = row[CSVDataIndexes.CourseId]
+  const institutionId = row[CSVDataIndexes.InstitutionId] + '0'
+
+  const institution = institutions.find((institution) => institution.id === institutionId)
+  const restInstitutions = institutions.filter((institution) => institution.id !== institutionId)
 
   if (!institution)
     throw new Error(
@@ -115,24 +84,6 @@ export function appendDataToCourse({
       `No course with id ${courseId} from ${institutionId} was found while appending data to course.`
     )
 
-  // merges the data property
-  const datasets = newDatasets.map((dataset) => {
-    const existingDataset = course.datasets.find((courseDataset) => courseDataset.id === dataset.id)
-
-    return existingDataset
-      ? {
-          ...existingDataset,
-          data: [...existingDataset.data, ...dataset.data],
-          years: [...(existingDataset?.years ?? []), ...(dataset.years ?? [])]
-        }
-      : dataset
-  })
-
-  // removes the updated objects
-  const previousDatasets = course.datasets.filter(
-    (dataset) => !datasets.map(({ id }) => id).includes(dataset.id)
-  )
-
   return [
     ...restInstitutions,
     {
@@ -141,9 +92,62 @@ export function appendDataToCourse({
         ...restCourses,
         {
           ...course,
-          datasets: [...previousDatasets, ...datasets]
+          dataCategories: addDataCategories(row, course.dataCategories ?? {}, year, category)
         }
       ]
     }
   ]
+}
+
+function addDataCategories(
+  row: string[],
+  dataCategories: KOTDataCategories,
+  year: number,
+  category: 'genderAccepted' | 'genderApplied'
+): KOTDataCategories {
+  const currentDataset = dataCategories.gender?.datasets.find(
+    (datapoint) => datapoint.year === year
+  )
+  const filteredDatasets =
+    dataCategories.gender?.datasets.filter((dataset) => dataset.year !== currentDataset?.year) ?? []
+
+  return {
+    ...dataCategories,
+    gender: {
+      name: 'gender',
+      unit: null,
+      datasets: [
+        ...filteredDatasets,
+        {
+          year,
+          ...dataCategories.gender?.datasets.find((datapoint) => datapoint.year === year),
+          ...getDatapointsFromCategory(row, category)
+        }
+      ]
+    }
+  }
+}
+
+function getDatapointsFromCategory(
+  row: string[],
+  category: 'genderAccepted' | 'genderApplied'
+): {
+  [key in KOTSubcategory]: number | string
+} {
+  switch (category) {
+    case 'genderAccepted':
+      // @ts-expect-error We are returning a subset of subcategories but I can be bothered to fix it.
+      return {
+        genderAcceptedMen: convertToNumber(row[CSVDataIndexes.Men]),
+        genderAcceptedWomen: convertToNumber(row[CSVDataIndexes.Women])
+      }
+    case 'genderApplied':
+      // @ts-expect-error Same as above.
+      return {
+        genderAppliedMen: convertToNumber(row[CSVDataIndexes.Men]),
+        genderAppliedWomen: convertToNumber(row[CSVDataIndexes.Women])
+      }
+    default:
+      throw new Error(`Unknown category: ${category}`)
+  }
 }

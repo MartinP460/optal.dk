@@ -1,9 +1,6 @@
 <script lang="ts">
   import { IconAdjustments } from '@tabler/icons-svelte'
-  import type {
-    NewKOTDataCategories,
-    NewKOTDataCategory
-  } from '$lib/utils/transformInstitutionsToNewFormat'
+  import type { KOTDataCategories, KOTDataCategory } from 'parser'
   import * as Popover from '$lib/components/ui/popover'
   import * as Drawer from '$lib/components/ui/drawer'
   import Button from '$lib/components/ui/button/button.svelte'
@@ -12,8 +9,8 @@
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import { getLabelColorFromLabel } from '$lib/utils/getColorFromDataset'
 
-  export let dataCategories: NewKOTDataCategories
-  export let selectedDataCategory: NewKOTDataCategory
+  export let dataCategories: KOTDataCategories
+  export let selectedDataCategory: KOTDataCategory
 
   $: color = getLabelColorFromLabel(selectedDataCategory.name)
 </script>
