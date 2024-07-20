@@ -31,7 +31,7 @@
       <VisLine {data} {x} {y} {color} />
       <VisScatter {data} {x} {y} {color} />
     {:else}
-      <VisGroupedBar {data} {x} {y} {color} roundedCorners={4} />
+      <VisGroupedBar {data} {x} {y} {color} roundedCorners={4} dataStep={1} />
     {/if}
     <VisCrosshair data={originalData} {x} {y} template={tooltip} {color} />
     <VisAxis type="x" gridLine={false} tickLine={false} tickValues={tickValues(innerWidth)} />
