@@ -9,9 +9,9 @@
     VisXYContainer
   } from '@unovis/svelte'
   import type { KOTDataCategory } from 'parser'
+  import type { DisplayType } from '$lib/types/chartDisplayType'
   import { getChartProps } from '$lib/utils/chartHelpers'
   import ChartLegend from '$lib/components/ChartLegend.svelte'
-  import type { DisplayType } from '$lib/types/chartDisplayType'
 
   export let dataCategory: KOTDataCategory
   export let displayType: Omit<DisplayType, 'table'>
