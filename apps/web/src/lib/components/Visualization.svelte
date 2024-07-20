@@ -1,9 +1,8 @@
 <script lang="ts">
   import type { KOTDataCategories, KOTDataCategory } from 'parser'
   import type { DisplayType } from '$lib/types/chartDisplayType'
-  import Linechart from '$lib/components/Linechart.svelte'
   import Table from '$lib/components/Table.svelte'
-  import Barchart from '$lib/components/Barchart.svelte'
+  import Chart from '$lib/components/Chart.svelte'
   import { getCategoryParams } from '$lib/utils/visualizationCategoryParams'
   import { getFullPeriodDataset } from '$lib/utils/chartCategoryHelpers'
   import VisualizationPeriodSelect from '$lib/components/VisualizationPeriodSelect.svelte'
@@ -82,12 +81,10 @@
     {/if}
   </div>
   <div class="mt-2">
-    {#if displayType === 'barchart'}
-      <Barchart dataCategory={selectedDataCategory} />
-    {:else if displayType === 'linechart'}
-      <Linechart dataCategory={selectedDataCategory} />
-    {:else}
+    {#if displayType === 'table'}
       <Table dataCategory={selectedDataCategory} />
+    {:else}
+      <Chart {displayType} dataCategory={selectedDataCategory} />
     {/if}
   </div>
 </div>

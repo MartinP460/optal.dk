@@ -17,6 +17,7 @@ export function getChartProps(dataCategory: KOTDataCategory) {
     y: getYFunctions(dataCategory.datasets),
     x: getXFunction(),
     color: getColorFunction(data),
+    tickValues: getTickValueFunction(data),
     tooltip: getTooltip(dataCategory)
   }
 }
@@ -91,6 +92,29 @@ function computeSuggestedMaxY(datasets: KOTDataCategory['datasets']) {
   }, 0)
 
   return maxValue * 1.2
+}
+
+function getTickValueFunction(datasets: KOTDataCategory['datasets']) {
+  const labels = datasets.map((dataset) => dataset.year)
+  const isEven = labels.length % 2 === 0
+
+  const lower = labels[0]
+  const upper = labels.slice(-1)[0]
+  const center = labels[Math.floor(labels.length * 0.5)]
+  const lowerCenter = labels[Math.floor(labels.length * (1 / 3))]
+  const upperCenter = labels[Math.floor(labels.length * (2 / 3))]
+
+  return (innerWidth: number) => {
+    if (labels.length < 8) {
+      return labels
+    }
+
+    if (innerWidth < 600) {
+      return isEven ? [lower, lowerCenter, upperCenter, upper] : [lower, center, upper]
+    } else {
+      return labels
+    }
+  }
 }
 
 function getTooltip(dataCategory: KOTDataCategory) {
