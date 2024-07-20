@@ -28,12 +28,11 @@
   $: selectedDataCategory = initialDataCategory
 
   const handleCategorySelect = (dataCategory: KOTDataCategory) => {
-    selectedDataCategory = dataCategory
-
     if (selectedDataCategory?.name !== dataCategory?.name) {
       displayType = chartConfig[dataCategory.name].defaultDisplayType
     }
 
+    selectedDataCategory = dataCategory
     setCategoryParam(dataCategory.name)
   }
 
