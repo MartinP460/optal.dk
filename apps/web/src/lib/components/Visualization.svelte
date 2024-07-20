@@ -27,7 +27,7 @@
   $: selectedDataCategory = initialDataCategory
 
   const handleCategorySelect = (dataCategory: KOTDataCategory) => {
-    if (selectedDataCategory?.name !== dataCategory?.name) {
+    if (selectedDataCategory?.name !== dataCategory?.name && has5OrMoreYearsOfData) {
       displayType = chartConfig[dataCategory.name].defaultDisplayType
     }
 
@@ -41,19 +41,26 @@
   }
 
   const handlePeriodChange = (value: number[]) => {
+    const sortedValue = value.sort()
+
     const category = getFullPeriodDataset(
       selectedDataCategory,
       dataCategories[selectedDataCategory.name]!
     )
 
-    const minYearDiff = value[0] > minYear ? value[0] - minYear : minYear - value[0]
-    const maxYearDiff = value[1] > maxYear ? value[1] - maxYear : maxYear - value[1]
+    const lower = category.datasets.findIndex((dataset) => dataset.year === sortedValue[0])
+    const upper = category.datasets.reduce(
+      (acc, item, i) => (item.year <= sortedValue[1] ? i : acc),
+      -1
+    )
+
+    const newDataset = category.datasets.slice(lower, upper + 1)
 
     selectedDataCategory = {
       ...category,
-      datasets: category.datasets.slice(minYearDiff, maxYear - minYear - maxYearDiff + 1)
+      datasets: newDataset.length === 0 ? selectedDataCategory.datasets : newDataset
     } as KOTDataCategory
-    period = value
+    period = sortedValue
   }
 </script>
 

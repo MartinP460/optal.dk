@@ -4,6 +4,7 @@
   import { getChartProps } from '$lib/utils/chartHelpers'
   import { getSubCategoryValues } from '$lib/utils/chartCategoryHelpers'
   import { t } from '$lib/i18n'
+  import Source from '$lib/components/Source.svelte'
 
   export let dataCategory: KOTDataCategory
 
@@ -37,3 +38,6 @@
     {/each}
   </Table.Body>
 </Table.Root>
+<div class="flex justify-end mt-4">
+  <Source />
+</div>
