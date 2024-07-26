@@ -1,0 +1,997 @@
+﻿;10000;Københavns Universitet;;;;;;
+10110;10000;Medicin, København Ø, Studiestart: sommer- og vinterstart;546;50;3.269;1.687;10,6;10,4
+10112;10000;Medicin, Køge, Studiestart: sommer- og vinterstart;130;20;1.841;234;10,3;10,1
+10115;10000;Folkesundhedsvidenskab, København K, Studiestart: sommerstart;68;8;277;88;9,4;8,9
+10117;10000;Farmaci, København Ø, Studiestart: sommerstart;228;10;937;291;8,5;8,2
+10120;10000;Odontologi, København Ø, Studiestart: sommerstart;120;14;1.263;471;10,3;10,2
+10140;10000;Veterinærmedicin, Frederiksberg C, Studiestart: sommerstart;186;6;872;486;10,1;10,0
+10150;10000;Sundhed og informatik, København Ø, Studiestart: sommerstart;32;0;119;20;Alle optaget, ledige pladser;
+10160;10000;Professionsbachelor, tandplejer, København N, Studiestart: sommerstart;78;9;716;259;9,2;8,8
+10203;10000;Bioinformatik, København Ø, Studiestart: sommerstart;44;1;201;38;6,9;Alle optaget, ledige pladser
+10205;10000;Biokemi, København Ø, Studiestart: sommerstart;114;12;524;104;8,3;6,9
+10218;10000;Datalogi-økonomi, København Ø, Studiestart: sommerstart;102;0;349;68;6;Alle optaget, ledige pladser
+10220;10000;Datalogi, København Ø, Studiestart: sommerstart;208;0;572;195;Alle optaget;Alle optaget, ledige pladser
+10221;10000;Forsikringsmatematik, København Ø, Studiestart: sommerstart;76;8;391;180;10,7;10,4
+10222;10000;Kognitions- og datavidenskab, København K, Studiestart: sommerstart;46;5;244;92;10,6;10,0
+10230;10000;Fysik, København Ø, Studiestart: sommerstart;144;0;301;166;Alle optaget, ledige pladser;
+10234;10000;Bioteknologi, Frederiksberg C, Studiestart: sommerstart;76;10;282;72;7,8;7,0
+10238;10000;Miljø- og fødevareøkonomi, Frederiksberg C, Studiestart: sommerstart;36;0;89;29;6,1;Alle optaget, ledige pladser
+10240;10000;Landskabsarkitektur, Frederiksberg C, Studiestart: sommerstart;62;8;178;77;8,6;7,0
+10242;10000;Fødevarer og ernæring, Frederiksberg C, Studiestart: sommerstart;60;0;145;64;Alle optaget, ledige pladser;
+10244;10000;Naturressourcer, Frederiksberg C, Studiestart: sommerstart;60;0;136;56;Alle optaget, ledige pladser;
+10246;10000;Professionsbachelor, skov- og landskabsingeniør, Fredensborg, Studiestart: sommerstart;50;9;163;84;9,2;6,8
+10247;10000;Professionsbachelor, skov- og landskabsingeniør, Auning, Studiestart: sommerstart;38;3;102;65;8,2;Alle optaget, ledige pladser
+10250;10000;Biologi, København Ø, Studiestart: sommerstart;198;20;573;216;7,6;6,7
+10270;10000;Geografi og geoinformatik, København K, Studiestart: sommerstart;90;0;190;95;6,1;Alle optaget, ledige pladser
+10275;10000;Geologi-geoscience, København K, Studiestart: sommerstart;35;0;90;39;Alle optaget, ledige pladser;
+10285;10000;Idræt og fysisk aktivitet, København Ø, Studiestart: sommerstart;132;10;358;156;7,2;Alle optaget
+10286;10000;Kemi, København Ø, Studiestart: sommerstart;43;0;173;39;Alle optaget;Alle optaget, ledige pladser
+10287;10000;Matematik, København Ø, Studiestart: sommerstart;130;8;334;143;7,5;Alle optaget, ledige pladser
+10288;10000;Matematik-økonomi, København Ø, Studiestart: sommerstart;86;10;353;92;9,1;7,7
+10289;10000;Molekylær biomedicin, København Ø, Studiestart: sommerstart;80;6;543;176;11,1;10,8
+10290;10000;Nanoscience, København Ø, Studiestart: sommerstart;24;0;110;25;Alle optaget, ledige pladser;
+10292;10000;Machine learning og datavidenskab, København Ø, Studiestart: sommerstart;101;0;313;88;6,0;Alle optaget, ledige pladser
+10293;10000;Medicinalkemi, København Ø, Studiestart: sommerstart;53;3;281;43;7,0;Alle optaget, ledige pladser
+10304;10000;Audiologopædi, København S, Studiestart: sommerstart;44;4;174;74;8,8;8,3
+10306;10000;Dansk, København S, Studiestart: sommerstart;170;0;424;134;6,0;Alle optaget
+10308;10000;Engelsk, København S, Studiestart: sommerstart;124;1;368;130;6,2;Alle optaget
+10310;10000;Grønlandske og arktiske studier, København S, Studiestart: sommerstart;6;2;43;17;7,0;6,2
+10312;10000;Europæisk etnologi, København S, Studiestart: sommerstart;58;12;237;56;8,3;6,9
+10314;10000;Film- og medievidenskab, København S, Studiestart: sommerstart;92;7;672;210;9,5;9,2
+10316;10000;Filosofi, København S, Studiestart: sommerstart;54;8;280;51;7,7;6,4
+10322;10000;Forhistorisk arkæologi, København S, Studiestart: sommerstart;38;3;154;51;6,7;Alle optaget, ledige pladser
+10324;10000;Fransk sprog og kultur, København S, Studiestart: sommerstart;24;0;85;29;6,2;Alle optaget
+10326;10000;Græsk, klassisk, København S, Studiestart: sommerstart;12;0;38;9;Alle optaget;Alle optaget, ledige pladser
+10332;10000;Historie, København S, Studiestart: sommerstart;156;14;556;204;6,7;Alle optaget, ledige pladser
+10334;10000;Indianske sprog og kulturer, København S, Studiestart: sommerstart;5;0;10;4;Alle optaget;
+10338;10000;Italiensk sprog og kultur, København S, Studiestart: sommerstart;19;0;57;23;6,1;Alle optaget
+10340;10000;Asienstudier (japanstudier), København S, Studiestart: sommerstart;30;0;110;34;6,1;Alle optaget
+10341;10000;Moderne Indien og Sydasienstudier, København S, Studiestart: sommerstart;6;0;16;5;Alle optaget;
+10342;10000;Asienstudier (kinastudier), København S, Studiestart: sommerstart;14;0;52;16;Alle optaget;
+10344;10000;Klassisk arkæologi, København S, Studiestart: sommerstart;22;2;85;28;7,5;Alle optaget, ledige pladser
+10345;10000;Kommunikation og it, København S, Studiestart: sommerstart;116;11;554;145;7,8;7,6
+10346;10000;Asienstudier (koreastudier), København S, Studiestart: sommerstart;28;0;92;34;6,1;Alle optaget
+10348;10000;Kunsthistorie, København S, Studiestart: sommerstart;62;12;333;126;9,0;8,0
+10350;10000;Latin, København S, Studiestart: sommerstart;8;0;26;5;Alle optaget, ledige pladser;
+10352;10000;Litteraturvidenskab, København S, Studiestart: sommerstart;62;8;305;100;9,7;7,8
+10353;10000;Mellemøstens sprog og samfund (arabisk, hebraisk, persisk, tyrkisk), København S, Studiestart: sommerstart;37;0;121;44;Alle optaget;
+10354;10000;Musikvidenskab, København S, Studiestart: sommerstart;49;0;139;64;2,9;Alle optaget, ledige pladser
+10360;10000;Mellemøstens sprog og samfund (assyriologi, nærorientalsk arkæologi, ægyptologi), København S, Studiestart: sommerstart;12;1;53;20;7,1;Alle optaget
+10368;10000;Psykologi, København K, Studiestart: sommerstart;280;14;3.148;1.555;11,1;11,0
+10370;10000;Pædagogik, København S, Studiestart: sommerstart;56;10;286;70;9,2;8,8
+10372;10000;Religionsvidenskab, København S, Studiestart: sommerstart;55;0;183;48;Alle optaget;
+10374;10000;Retorik, København S, Studiestart: sommerstart;56;7;251;67;8,8;Alle optaget
+10378;10000;Spansk og latinamerikansk sprog og kultur, København S, Studiestart: sommerstart;35;0;102;35;Alle optaget;
+10380;10000;Lingvistik, København S, Studiestart: sommerstart;34;5;133;52;8,9;6,8
+10382;10000;Teater- og performancestudier, København S, Studiestart: sommerstart;44;6;174;52;8,2;7,3
+10390;10000;Tysk sprog og kultur, København S, Studiestart: sommerstart;27;0;71;31;6,2;Alle optaget
+10393;10000;Østeuropastudier, København S, Studiestart: sommerstart;25;0;75;24;Alle optaget;
+10395;10000;Informationsstudier, København S, Studiestart: sommerstart;50;3;209;52;6,4;Alle optaget
+10410;10000;Jura, København S, Studiestart: sommerstart;878;130;3.197;1.533;9,0;8,6
+10415;10000;Samfundsfag, København K, Studiestart: sommerstart;34;8;438;48;10,0;9,6
+10420;10000;Statskundskab, København K, Studiestart: sommerstart;300;20;1.292;607;10,5;10,3
+10430;10000;Økonomi, København K, Studiestart: sommerstart;350;35;975;383;7,6;6,4
+10435;10000;Sociologi, København K, Studiestart: sommerstart;92;10;926;194;10,4;10,3
+10440;10000;Antropologi, København K, Studiestart: sommerstart;87;10;1.047;254;10,5;10,4
+10500;10000;Teologi, København S, Studiestart: sommerstart;103;0;213;130;6,0;Alle optaget, ledige pladser
+;10000;Københavns Universitet i alt;7.230;573;33.993;12.686;;
+;13000;Copenhagen Business School - Handelshøjskolen;;;;;;
+13010;13000;Erhvervsøkonomi, HA, Frederiksberg, Studiestart: sommerstart;760;0;2.732;925;7,9;
+13015;13000;Erhvervsøkonomi-informationsteknologi, HA (it.), Frederiksberg, Studiestart: sommerstart;170;0;681;223;8,0;
+13020;13000;Erhvervsøkonomi-erhvervsret, HA (jur.), Frederiksberg, Studiestart: sommerstart;240;0;1.216;305;8,2;
+13023;13000;Erhvervsøkonomi og markeds- og kulturanalyse, HA i markeds- og kulturanalyse, Frederiksberg, Studiestart: sommerstart;100;0;677;251;9,9;
+13025;13000;Erhvervsøkonomi-matematik, HA (mat.), Frederiksberg, Studiestart: sommerstart;105;0;340;89;7,8;
+13030;13000;Erhvervsøkonomi-filosofi, HA (fil.), Frederiksberg, Studiestart: sommerstart;80;0;359;83;8,6;
+13035;13000;Erhvervsøkonomi-virksomhedskommunikation, HA (kom.), Frederiksberg, Studiestart: sommerstart;170;0;831;217;9,3;
+13040;13000;Erhvervsøkonomi-psykologi, HA (psyk.), Frederiksberg, Studiestart: sommerstart;165;0;1.116;447;9,8;
+13045;13000;Erhvervsøkonomi, HA (Projektledelse), Frederiksberg, Studiestart: sommerstart;135;0;933;342;9,8;
+13055;13000;Business, Language and Culture, Frederiksberg, Study start: Summer start;130;0;615;219;8,0;
+13060;13000;International Business, Frederiksberg, Study start: Summer start;240;0;2.208;1.229;11,1;
+13070;13000;International Business and Politics, Frederiksberg, Study start: Summer start;150;0;1.250;420;10,6;
+13075;13000;Business Administration and Sociology, Frederiksberg, Study start: Summer start;100;0;990;244;10,0;
+13080;13000;Business Administration and Service Management, Frederiksberg, Study start: Summer start;170;0;1.202;328;9,2;
+13085;13000;Business, Asian Language and Culture - International Business in Asia, Japanese/English, Frederiksberg, Study start: Summer start;35;0;204;71;8,9;
+13090;13000;Business, Asian Language and Culture - International Business in Asia, Chinese/English, Frederiksberg, Study start: Summer start;45;0;213;72;8,4;
+13100;13000;Business Administration and Digital Management, Frederiksberg, Study start: Summer start;200;0;1.730;601;9,6;
+13280;13000;International Shipping and Trade, Frederiksberg, Study start: Summer start;75;0;847;272;9,9;
+13290;13000;Europæisk business, HA i europæisk business, Frederiksberg, Studiestart: sommerstart;195;0;823;273;8,7;
+;13000;Copenhagen Business School - Handelshøjskolen i alt;3.265;0;18.967;6.611;;
+;14500;IT-Universitetet i København;;;;;;
+14505;14500;Digital design og interaktive teknologier, København S, Studiestart: sommerstart;75;0;316;87;7,0;
+14510;14500;Softwareudvikling, København S, Studiestart: sommerstart;175;0;506;218;Alle optaget;
+14515;14500;Global Business Informatics, København S, Study start: Summer start;78;0;435;112;7,7;
+14525;14500;Data Science, København S, Study start: Summer start;111;0;862;361;8,4;
+;14500;IT-Universitetet i København i alt;439;0;2.119;778;;
+;15000;Danmarks Tekniske Universitet;;;;;;
+15010;15000;Teknisk videnskab (civilingeniør) Bioteknologi, Kgs. Lyngby, Studiestart: sommerstart;60;10;241;61;8,4;6,2
+15015;15000;Teknisk videnskab (civilingeniør) Byggeteknologi, Kgs. Lyngby, Studiestart: sommerstart;60;6;222;67;7,1;4,1
+15016;15000;Teknisk videnskab (civilingeniør) Bæredygtigt energidesign, Kgs. Lyngby, Studiestart: sommerstart;60;0;173;48;5,2;Alle optaget
+15017;15000;Teknisk videnskab (civilingeniør) Bygningsdesign, Kgs. Lyngby, Studiestart: sommerstart;60;6;232;59;6,8;4,6
+15020;15000;Teknisk videnskab (civilingeniør) Design og innovation, Kgs. Lyngby, Studiestart: sommerstart;60;6;249;87;8,2;6,7
+15025;15000;Teknisk videnskab (civilingeniør) Elektroteknologi, Kgs. Lyngby, Studiestart: sommerstart;72;7;244;86;6,7;4,4
+15030;15000;Teknisk videnskab (civilingeniør) Fysik og ingeniørvidenskab, Kgs. Lyngby, Studiestart: sommerstart;60;5;175;69;8,4;Alle optaget
+15033;15000;Teknisk videnskab (civilingeniør) Geofysik og Rumteknologi, Kgs. Lyngby, Studiestart: sommerstart;48;5;137;66;8,6;7,0
+15035;15000;Teknisk videnskab (civilingeniør) Kemi og teknologi, Kgs. Lyngby, Studiestart: sommerstart;60;6;250;102;9,6;8,2
+15037;15000;Teknisk videnskab (civilingeniør) Kunstig intelligens og data, Kgs. Lyngby, Studiestart: sommerstart;90;9;339;122;8,9;7,3
+15040;15000;Teknisk videnskab (civilingeniør) Cyberteknologi, Kgs. Lyngby, Studiestart: sommerstart;30;3;218;27;6,8;6,3
+15045;15000;Teknisk videnskab (civilingeniør) Matematik og teknologi, Kgs. Lyngby, Studiestart: sommerstart;60;7;271;79;9,2;5,6
+15050;15000;Teknisk videnskab (civilingeniør) Medicin og teknologi, Kgs. Lyngby, Studiestart: sommerstart;120;12;445;133;7,7;6,6
+15055;15000;Teknisk videnskab (civilingeniør) Miljøteknologi, Kgs. Lyngby, Studiestart: sommerstart;40;0;111;44;6,7;Alle optaget
+15060;15000;Teknisk videnskab (civilingeniør) Produktion og konstruktion, Kgs. Lyngby, Studiestart: sommerstart;73;7;252;120;8,9;7,5
+15065;15000;Teknisk videnskab (civilingeniør) Softwareteknologi, Kgs. Lyngby, Studiestart: sommerstart;90;9;399;131;7,7;6,7
+15075;15000;Teknisk videnskab (civilingeniør) Teknisk biomedicin, Kgs. Lyngby, Studiestart: sommerstart;60;13;309;100;9,3;7,3
+15080;15000;Teknisk videnskab (civilingeniør) Data science og management, Kgs. Lyngby, Studiestart: sommerstart;30;3;239;91;9,8;8,9
+15095;15000;Teknisk videnskab (civilingeniør) Teknisk videnskab (teknologi), Kgs. Lyngby, E-læring, Studiestart: sommerstart;11;0;26;11;Alle optaget, ledige pladser;
+15100;15000;Teknisk videnskab (civilingeniør) Computer engineering, Kgs. Lyngby, Studiestart: sommerstart;30;3;218;58;7,9;5,3
+15110;15000;Diplomingeniør, arktisk byggeri og infrastruktur, Sisimiut, Studiestart: sommerstart;7;0;17;7;Alle optaget, ledige pladser;
+15115;15000;Diplomingeniør, bygningsdesign, Kgs. Lyngby, Studiestart: sommerstart;73;7;285;98;7,7;6,1
+15120;15000;Diplomingeniør, byggeri og infrastruktur, Ballerup, Studiestart: sommerstart;100;10;324;139;6,9;5,7
+15122;15000;Diplomingeniør, global business og teknologi, Ballerup, Studiestart: sommerstart;50;5;267;107;7,5;7,0
+15125;15000;Diplomingeniør, elektroteknologi, Ballerup, Studiestart: sommerstart;42;4;167;62;6,0;Alle optaget
+15126;15000;Diplomingeniør, fiskeriteknologi, Sisimiut, Studiestart: sommerstart;4;0;10;5;Alle optaget, ledige pladser;
+15127;15000;Diplomingeniør, fødevaresikkerhed og -kvalitet, Kgs. Lyngby, Studiestart: sommerstart;18;1;53;13;5,3;Alle optaget
+15130;15000;Diplomingeniør, it-elektronik, Ballerup, Studiestart: sommerstart;30;2;127;23;4,4;Alle optaget
+15135;15000;Diplomingeniør, kemi- og bioteknik, Kgs. Lyngby, Studiestart: sommerstart;36;4;151;40;7,3;6,6
+15139;15000;Diplomingeniør, maritim teknik, Ballerup, Studiestart: sommerstart;12;0;27;8;Alle optaget, ledige pladser;
+15140;15000;Diplomingeniør, maskinteknik, Ballerup, Studiestart: sommerstart;72;8;230;102;7,3;Alle optaget
+15145;15000;Diplomingeniør, proces og innovation, Ballerup, Studiestart: sommerstart;48;4;139;50;7,7;Alle optaget
+15147;15000;Diplomingeniør, produktion (produktionsteknik), Ballerup, Studiestart: sommerstart;36;4;140;64;7,5;6,4
+15150;15000;Diplomingeniør, kemiteknik og International Business , Kgs. Lyngby, Studiestart: sommerstart;24;3;82;27;7,3;6,1
+15160;15000;Diplomingeniør, it og økonomi, Kgs. Lyngby, Studiestart: sommerstart;36;4;193;61;6,9;6,4
+15165;15000;Diplomingeniør, mobilitet, transport og logistik, Ballerup, Studiestart: sommerstart;36;4;104;36;4,7;3,1
+15170;15000;Diplomingeniør, elektrisk energiteknologi, Ballerup, Studiestart: sommerstart;30;0;82;28;3,6;Alle optaget
+15175;15000;Diplomingeniør, softwareteknologi, Kgs. Lyngby, Studiestart: sommerstart;92;10;364;134;7,2;6,3
+15180;15000;Diplomingeniør, sundhedsteknologi, Ballerup, Studiestart: sommerstart;36;4;155;43;7,3;6,0
+15432;15000;Bachelor of Science (BSc) in Engineering (General Engineering), Kgs. Lyngby, Study start: Summer start;200;20;914;537;9,8;6,8
+;15000;Danmarks Tekniske Universitet i alt;2.156;211;8.581;3.145;;
+;16000;Roskilde Universitet;;;;;;
+16010;16000;Naturvidenskabelig bacheloruddannelse, Roskilde, Studiestart: sommerstart;74;0;152;50;Alle optaget, ledige pladser;
+16015;16000;International Bachelor in Natural Sciences, Roskilde, Study start: Summer start;113;0;520;209;Alle optaget;
+16020;16000;Humanistisk bacheloruddannelse, Roskilde, Studiestart: sommerstart;638;0;1.216;394;Alle optaget;
+16022;16000;Humanistisk bacheloruddannelse + journalistik + andet fag, Roskilde, Studiestart: sommerstart;74;0;403;124;8,4;
+16025;16000;Bachelor in Global Humanities, Roskilde, Study start: Summer start;174;0;744;279;Alle optaget;
+16030;16000;Samfundsvidenskabelig bacheloruddannelse, Roskilde, Studiestart: sommerstart;327;0;752;228;Alle optaget, ledige pladser;
+16032;16000;Samfundsvidenskabelig bacheloruddannelse + journalistik + andet fag, Roskilde, Studiestart: sommerstart;56;0;181;53;7,7;
+16035;16000;International Bachelor in Social Sciences, Roskilde, Study start: Summer start;200;0;993;362;5,8;
+16040;16000;Humanistisk-teknologisk bacheloruddannelse, Roskilde, Studiestart: sommerstart;114;0;253;93;Alle optaget, ledige pladser;
+16042;16000;Humanistisk-teknologisk bacheloruddannelse + journalistik + andet fag, Roskilde, Studiestart: sommerstart;13;0;36;8;Alle optaget;
+;16000;Roskilde Universitet i alt;1.783;0;5.250;1.800;;
+;17000;Syddansk Universitet;;;;;;
+17010;17000;Biologi, Odense M, Studiestart: sommerstart;76;2;216;64;6,4;Alle optaget
+17015;17000;Biomedicin, Odense M, Studiestart: sommerstart;111;3;452;80;6,6;Alle optaget
+17020;17000;Datalogi, Odense M, Studiestart: sommerstart;72;0;207;76;Alle optaget, ledige pladser;
+17025;17000;Farmaci, Odense M, Studiestart: sommerstart;111;23;513;107;7,7;Alle optaget
+17040;17000;Idræt og sundhed, Odense M, Studiestart: sommerstart;83;0;192;80;Alle optaget;
+17050;17000;Matematik-økonomi, Odense M, Studiestart: sommerstart;37;0;98;35;Alle optaget, ledige pladser;
+17064;17000;Matematik og anvendt matematik, Odense M, Studiestart: sommerstart;43;0;104;42;Alle optaget, ledige pladser;
+17070;17000;Fysik, Odense M, Studiestart: sommerstart;33;0;93;34;Alle optaget, ledige pladser;
+17080;17000;Biokemi og molekylær biologi, Odense M, Studiestart: sommerstart;41;0;187;31;Alle optaget, ledige pladser;
+17085;17000;Kemi, Odense M, Studiestart: sommerstart;37;0;90;32;Alle optaget, ledige pladser;
+17090;17000;Kunstig intelligens, Odense M, Studiestart: sommerstart;37;0;138;39;Alle optaget;
+17110;17000;Klinisk biomekanik, Odense M, Studiestart: sommer- og vinterstart;105;4;262;100;9,2;Alle optaget
+17115;17000;Medicin, Odense M, Studiestart: sommer- og vinterstart;313;55;2.356;584;10,4;10,1
+17117;17000;Medicin, Odense M, Studiestart: sommerstart;40;2;1.194;70;9,9;9,8
+17120;17000;Folkesundhedsvidenskab, Odense M, Studiestart: sommerstart;27;0;65;12;Alle optaget;
+17200;17000;Psykologi, Odense M, Studiestart: sommerstart;137;17;1.760;525;10,7;10,6
+17210;17000;Dansk, Odense M, Studiestart: sommerstart;27;0;87;21;Alle optaget, ledige pladser;
+17215;17000;Engelsk, Odense M, Studiestart: sommerstart;33;0;134;31;Alle optaget;
+17217;17000;Amerikanske Studier, Odense M, Studiestart: sommerstart;31;0;86;31;Alle optaget, ledige pladser;
+17220;17000;Filosofi, Odense M, Studiestart: sommerstart;13;0;74;16;Alle optaget;
+17230;17000;Oldtidskundskab, Odense M, Studiestart: sommerstart;17;0;51;19;Alle optaget, ledige pladser;
+17235;17000;Historie, Odense M, Studiestart: sommerstart;66;0;182;62;Alle optaget, ledige pladser;
+17240;17000;Litteraturvidenskab, Odense M, Studiestart: sommerstart;37;0;108;31;Alle optaget;
+17245;17000;Audiologi, Odense M, Studiestart: sommerstart;20;0;78;18;Alle optaget, ledige pladser;
+17247;17000;Audiologopædi, Odense M, Studiestart: sommerstart;53;4;145;54;8,2;Alle optaget
+17250;17000;Medievidenskab, Odense M, Studiestart: sommerstart;67;0;181;49;Alle optaget;
+17260;17000;Religionsstudier, Odense M, Studiestart: sommerstart;15;0;53;13;Alle optaget;
+17270;17000;Tysk, Odense M, Studiestart: sommerstart;8;0;27;10;Alle optaget, ledige pladser;
+17310;17000;International virksomhedskommunikation i 2 fremmedsprog, Odense M, Studiestart: sommerstart;7;0;22;5;Alle optaget;
+17312;17000;International virksomhedskommunikation i engelsk, Odense M, Studiestart: sommerstart;40;0;147;33;Alle optaget, ledige pladser;
+17316;17000;International virksomhedskommunikation i tysk, Odense M, Studiestart: sommerstart;7;0;17;6;Alle optaget, ledige pladser;
+17410;17000;Jura, Odense M, Studiestart: sommerstart;170;30;1.172;307;8,7;8,3
+17412;17000;Samfundsfag, Odense M, Studiestart: sommerstart;31;0;150;18;Alle optaget;
+17415;17000;Statskundskab, Odense M, Studiestart: sommerstart;90;32;402;93;9,0;7,8
+17420;17000;Økonomi, Odense M, Studiestart: sommerstart;47;0;172;44;Alle optaget, ledige pladser;
+17430;17000;Market and Management Anthropology, Odense M, Study start: Summer start;93;0;544;159;Alle optaget;
+17510;17000;Erhvervsøkonomi, HA, Odense M, Studiestart: sommerstart;220;13;611;194;6,7;Alle optaget, ledige pladser
+17520;17000;Erhvervsøkonomi-jura, HA (jur.), Odense M, Studiestart: sommerstart;50;10;358;60;7,8;Alle optaget
+17530;17000;Erhvervsøkonomi-erhvervssprog (negot) (SDU - Odense), Odense M, Studiestart: sommerstart;95;0;188;83;3,8;Alle optaget, ledige pladser
+17610;17000;Journalistik, Odense M, Studiestart: sommerstart;106;0;281;118;Kun kvote 2;
+17815;17000;Diplomingeniør, bygningsteknik, Odense M, Studiestart: sommerstart;64;0;149;54;Alle optaget;
+17820;17000;Diplomingeniør, elektronik, Odense M, Studiestart: sommerstart;25;0;75;32;Alle optaget;
+17823;17000;Diplomingeniør, global ledelse og design af produktionsnetværk, GMM, Odense M, Studiestart: sommerstart;50;0;123;57;5,4;Alle optaget
+17825;17000;Diplomingeniør, kemi- og bioteknologi, Odense M, Studiestart: sommerstart;31;0;85;20;Alle optaget;
+17830;17000;Diplomingeniør, softwareteknologi, Odense M, Studiestart: sommerstart;53;0;204;58;Alle optaget;
+17835;17000;Diplomingeniør, integreret design, Odense M, Studiestart: sommerstart;41;0;86;45;Alle optaget;
+17840;17000;Diplomingeniør, maskinteknik, Odense M, Studiestart: sommerstart;49;0;107;48;Alle optaget;
+17845;17000;Diplomingeniør, produktion (produktionsteknik), Odense M, Studiestart: sommerstart;31;0;76;28;Alle optaget;
+17855;17000;Diplomingeniør, robotteknologi, Odense M, Studiestart: sommerstart;44;0;139;41;Alle optaget;
+17860;17000;Teknisk videnskab (civilingeniør) Sundheds- og velfærdsteknologi, Odense M, Studiestart: sommerstart;35;2;105;40;5,3;Alle optaget
+17865;17000;Teknisk videnskab (civilingeniør) Spiludvikling og læringsteknologi, Odense M, Studiestart: sommerstart;40;0;85;41;Alle optaget;
+17870;17000;Teknisk videnskab (civilingeniør) Robotteknologi, Odense M, Studiestart: sommerstart;49;0;122;50;Alle optaget;
+17875;17000;Teknisk videnskab (civilingeniør) Fysik og teknologi, Odense M, Studiestart: sommerstart;15;0;51;16;Alle optaget, ledige pladser;
+17880;17000;Teknisk videnskab (civilingeniør) Kemi og bioteknologi, Odense M, Studiestart: sommerstart;17;0;66;19;Alle optaget;
+17882;17000;Teknisk videnskab (civilingeniør) Mekanik, Odense M, Studiestart: sommerstart;25;0;62;30;7,1;Alle optaget
+17888;17000;Teknisk videnskab (civilingeniør) Produktudvikling og innovation, Odense M, Studiestart: sommerstart;21;0;76;17;Alle optaget;
+17892;17000;Teknisk videnskab (civilingeniør) Software Engineering, Odense M, Studiestart: sommerstart;74;0;197;79;Alle optaget;
+17895;17000;Teknisk videnskab (civilingeniør) Energisystemer, Odense M, Studiestart: sommerstart;12;0;36;12;Alle optaget;
+17900;17000;Teknisk videnskab (civilingeniør) Bygningsteknik, Odense M, Studiestart: sommerstart;21;0;73;25;Alle optaget;
+17910;17000;Teknisk videnskab (civilingeniør) Elektronik, Odense M, Studiestart: sommerstart;10;0;42;10;Alle optaget;
+18005;17000;Biblioteksvidenskab, it og kommunikation, Kolding, Studiestart: sommerstart;37;0;64;42;Alle optaget, ledige pladser;
+18020;17000;Digital design med interaktionsstudier og IT, Kolding, Studiestart: sommerstart;8;0;34;9;Alle optaget, ledige pladser;
+18030;17000;Designkultur med mode og erhvervsøkonomi, Kolding, Studiestart: sommerstart;28;0;79;26;Alle optaget, ledige pladser;
+18035;17000;Designkultur med rum og æstetik, Kolding, Studiestart: sommerstart;39;0;100;32;Alle optaget, ledige pladser;
+18140;17000;International virksomhedskommunikation i engelsk, Kolding, Studiestart: sommerstart;10;0;27;11;Alle optaget, ledige pladser;
+18210;17000;Erhvervsøkonomi, HA, Kolding, Studiestart: sommerstart;63;0;185;52;Alle optaget, ledige pladser;
+19010;17000;Bachelor of Science (BSc) in Engineering (Engineering, Innovation and Business), Sønderborg, Study start: Summer start;82;0;436;136;6,4;
+19020;17000;Bachelor of Science (BSc) in Engineering (Mechatronics), Sønderborg, Study start: Summer start;37;0;274;55;Alle optaget;
+19025;17000;Bachelor of Science (BSc) in Engineering (Mechanical Engineering), Sønderborg, Study start: Summer start;23;0;251;59;Alle optaget;
+19030;17000;Bachelor of Science (BSc) in Engineering (Electronics), Sønderborg, Study start: Summer start;17;0;184;27;Alle optaget;
+19035;17000;Bachelor of Science (BSc) in Engineering (Software Engineering), Sønderborg, Study start: Summer start;169;0;783;383;Alle optaget;
+19112;17000;Bachelor of Engineering in Electronics, Sønderborg, Study start: Summer start;45;0;337;81;Alle optaget;
+19114;17000;Bachelor of Engineering in Mechanical Engineering, Sønderborg, Study start: Summer start;82;3;467;162;Alle optaget;
+19120;17000;Bachelor of Engineering in Mechatronics, Sønderborg, Study start: Summer start;105;5;486;184;4,6;Alle optaget
+19215;17000;Economics and Business Administration, Sønderborg, Study start: Summer start;90;0;919;255;8,0;
+19220;17000;International erhvervsøkonomi med fremmedsprog, Sønderborg, Studiestart: sommerstart;9;0;32;11;Alle optaget, ledige pladser;
+19225;17000;European Studies, Sønderborg, Study start: Summer start;70;0;418;139;8,3;
+20210;17000;Erhvervsøkonomi, HA, Esbjerg Ø, Studiestart: sommerstart;38;0;102;39;Alle optaget, ledige pladser;
+20410;17000;Jura, Esbjerg Ø, Studiestart: sommerstart;50;11;462;89;8,4;8,1
+;17000;Syddansk Universitet i alt;4.355;216;20.796;5.900;;
+;22000;Aarhus Universitet;;;;;;
+22010;22000;Medicin, Aarhus C, Studiestart: sommer- og vinterstart;587;40;2.823;1.044;10,1;9,9
+22015;22000;Odontologi, Aarhus C, Studiestart: sommerstart;104;14;1.100;476;10,6;10,4
+22020;22000;Professionsbachelor, tandplejer, Aarhus C, Studiestart: sommerstart;89;11;570;231;9,3;8,8
+22023;22000;Professionsbachelor, klinisk tandteknik, Aarhus C, Studiestart: sommerstart;29;6;171;34;8,6;8,0
+22025;22000;Folkesundhedsvidenskab, Aarhus C, Studiestart: sommerstart;69;1;187;57;7,3;Alle optaget, ledige pladser
+22105;22000;Molekylær medicin, Aarhus C, Studiestart: sommerstart;43;6;378;93;10,4;10,0
+22110;22000;Biologi, Aarhus C, Studiestart: sommerstart;78;8;320;103;8,1;7,1
+22115;22000;Datalogi, Aarhus C, Studiestart: sommerstart;158;0;318;156;Alle optaget, ledige pladser;
+22117;22000;Datavidenskab, Aarhus C, Studiestart: sommerstart;25;0;109;25;Alle optaget, ledige pladser;
+22120;22000;Fysik, Aarhus C, Studiestart: sommerstart;91;0;184;95;Alle optaget, ledige pladser;
+22125;22000;Geoscience, Aarhus C, Studiestart: sommerstart;35;3;89;39;7,1;Alle optaget, ledige pladser
+22130;22000;Idrætsvidenskab, Aarhus C, Studiestart: sommerstart;73;8;251;133;7,5;6,5
+22131;22000;Teknisk videnskab (civilingeniør) Bioteknologi, Aarhus C, Studiestart: sommerstart;60;5;198;75;9,2;7,5
+22132;22000;Teknisk videnskab (civilingeniør) Kemiteknologi, Aarhus C, Studiestart: sommerstart;36;0;99;33;Alle optaget, ledige pladser;
+22134;22000;Teknisk videnskab (civilingeniør) Elektroteknologi, Aarhus C, Studiestart: sommerstart;29;0;83;28;Alle optaget, ledige pladser;
+22135;22000;Kemi, Aarhus C, Studiestart: sommerstart;46;0;118;41;Alle optaget, ledige pladser;
+22136;22000;Teknisk videnskab (civilingeniør) Computerteknologi, Aarhus C, Studiestart: sommerstart;38;0;113;35;Alle optaget, ledige pladser;
+22137;22000;Teknisk videnskab (civilingeniør) Byggeri, Aarhus C, Studiestart: sommerstart;55;0;144;43;Alle optaget, ledige pladser;
+22138;22000;Teknisk videnskab (civilingeniør) Mekanik, Aarhus C, Studiestart: sommerstart;75;2;182;91;8,0;Alle optaget, ledige pladser
+22140;22000;Matematik, Aarhus C, Studiestart: sommerstart;60;0;185;58;6,1;Alle optaget, ledige pladser
+22145;22000;Matematik-økonomi, Aarhus C, Studiestart: sommerstart;60;6;199;73;8,4;7,2
+22150;22000;Medicinalkemi, Aarhus C, Studiestart: sommerstart;30;4;198;33;8,4;7,5
+22155;22000;Molekylærbiologi, Aarhus C, Studiestart: sommerstart;76;8;287;66;8,9;7,2
+22160;22000;Nanoscience, Aarhus C, Studiestart: sommerstart;30;0;83;20;7,0;Alle optaget, ledige pladser
+22170;22000;It-produktudvikling, Aarhus C, Studiestart: sommerstart;27;0;97;31;Alle optaget, ledige pladser;
+22180;22000;Dyrevidenskab, Tjele, Studiestart: sommerstart;35;5;160;25;8,7;8,1
+22185;22000;Plante- og fødevarevidenskab, Tjele, Studiestart: sommerstart;10;0;35;5;Alle optaget, ledige pladser;
+22190;22000;Veterinærmedicin, Tjele, Studiestart: sommerstart;32;5;716;377;10,6;10,3
+22205;22000;Arabisk- og islamstudier, Aarhus C, Studiestart: sommerstart;14;0;44;14;Alle optaget, ledige pladser;
+22215;22000;Dramaturgi, Aarhus C, Studiestart: sommerstart;45;0;102;53;Alle optaget, ledige pladser;
+22220;22000;Engelsk, Aarhus C, Studiestart: sommerstart;68;0;210;47;Alle optaget, ledige pladser;
+22225;22000;Antropologi, Aarhus C, Studiestart: sommerstart;115;10;686;183;9,7;9,5
+22230;22000;Filosofi, Aarhus C, Studiestart: sommerstart;68;0;210;54;Alle optaget, ledige pladser;
+22245;22000;Fransk sprog, litteratur og kultur, Aarhus C, Studiestart: sommerstart;15;0;49;15;Alle optaget, ledige pladser;
+22255;22000;Historie, Aarhus C, Studiestart: sommerstart;126;3;346;123;5,9;
+22260;22000;Idéhistorie, Aarhus C, Studiestart: sommerstart;32;0;138;23;Alle optaget, ledige pladser;
+22265;22000;Indien- og sydasienstudier, Aarhus C, Studiestart: sommerstart;3;0;12;4;Alle optaget, ledige pladser;
+22270;22000;Informationsvidenskab, Aarhus C, Studiestart: sommerstart;139;10;327;145;7,2;6,5
+22280;22000;Japanstudier, Aarhus C, Studiestart: sommerstart;33;0;75;40;Alle optaget, ledige pladser;
+22285;22000;Kinastudier, Aarhus C, Studiestart: sommerstart;15;0;39;12;Alle optaget, ledige pladser;
+22288;22000;Arkæologi, Aarhus C, Studiestart: sommerstart;66;0;157;67;Alle optaget, ledige pladser;
+22290;22000;Klassisk arkæologi, Aarhus C, Studiestart: sommerstart;18;0;60;16;Alle optaget, ledige pladser;
+22295;22000;Klassisk filologi, Aarhus C, Studiestart: sommerstart;11;0;33;9;Alle optaget, ledige pladser;
+22300;22000;Kunsthistorie, Aarhus C, Studiestart: sommerstart;64;1;161;52;6,2;Alle optaget, ledige pladser
+22310;22000;Lingvistik, Aarhus C, Studiestart: sommerstart;46;0;125;40;Alle optaget, ledige pladser;
+22315;22000;Litteraturhistorie, Aarhus C, Studiestart: sommerstart;58;1;168;58;7,4;Alle optaget, ledige pladser
+22320;22000;Medievidenskab, Aarhus C, Studiestart: sommerstart;132;10;559;176;8,9;8,6
+22330;22000;Musikvidenskab, Aarhus C, Studiestart: sommerstart;42;0;110;62;Alle optaget, ledige pladser;
+22335;22000;Nordisk sprog og litteratur (dansk), Aarhus C, Studiestart: sommerstart;84;0;200;68;Alle optaget, ledige pladser;
+22340;22000;Religionsvidenskab, Aarhus C, Studiestart: sommerstart;33;0;100;31;Alle optaget, ledige pladser;
+22350;22000;Ruslandstudier, Aarhus C, Studiestart: sommerstart;13;0;30;12;Alle optaget, ledige pladser;
+22355;22000;Spansk og spanskamerikansk sprog, litteratur og kultur, Aarhus C, Studiestart: sommerstart;29;0;77;24;Alle optaget, ledige pladser;
+22365;22000;Tysk sprog, litteratur og kultur, Aarhus C, Studiestart: sommerstart;17;0;56;16;Alle optaget, ledige pladser;
+22375;22000;Æstetik og kultur, Aarhus C, Studiestart: sommerstart;59;9;215;69;8,2;6,4
+22380;22000;Digital design - it, æstetik og interaktion, Aarhus C, Studiestart: sommerstart;64;10;236;73;7,0;Alle optaget, ledige pladser
+22390;22000;Teologi, Aarhus C, Studiestart: sommerstart;82;0;143;90;6,2;Alle optaget, ledige pladser
+22410;22000;Erhvervsøkonomi med tilvalg, Aarhus C, Studiestart: sommerstart;81;8;526;96;8,2;7,6
+22415;22000;Jura, Aarhus C, Studiestart: sommerstart;490;40;1.939;750;8,8;8,5
+22419;22000;Cognitive Science, Aarhus C, Study start: Summer start;109;10;962;462;10,4;10,1
+22420;22000;Psykologi, Aarhus C, Studiestart: sommerstart;254;32;2.639;1.156;10,7;10,6
+22422;22000;Samfundsfag, Aarhus C, Studiestart: sommerstart;30;10;278;41;8,8;7,6
+22425;22000;Statskundskab, Aarhus C, Studiestart: sommerstart;305;30;989;349;8,9;8,3
+22430;22000;Økonomi, Aarhus C, Studiestart: sommerstart;170;5;419;161;6,7;6,2
+22450;22000;Politik og økonomi , Aarhus C, Studiestart: sommerstart;55;10;216;82;8,6;7,1
+22510;22000;Uddannelsesvidenskab, Aarhus C, Studiestart: sommerstart;124;15;324;106;7,8;6,1
+22520;22000;Uddannelsesvidenskab, København NV, Studiestart: sommerstart;61;0;150;41;Alle optaget, ledige pladser;
+22610;22000;Erhvervsøkonomi, HA, Aarhus C, Studiestart: sommerstart;607;50;1.694;826;7,9;7,2
+22615;22000;Economics and Business Administration, Aarhus C, Study start: Summer start;312;25;1.831;740;8,2;7,4
+22650;22000;Erhvervsøkonomi-erhvervsret, HA (jur.), Aarhus C, Studiestart: sommerstart;143;13;705;217;8,1;7,7
+22712;22000;International virksomhedskommunikation i engelsk, Aarhus C, Studiestart: sommerstart;121;11;365;98;6,5;Alle optaget, ledige pladser
+22722;22000;International virksomhedskommunikation i fransk, Aarhus C, Studiestart: sommerstart;7;0;27;6;Alle optaget, ledige pladser;
+22732;22000;International virksomhedskommunikation i spansk, Aarhus C, Studiestart: sommerstart;25;0;57;23;Alle optaget, ledige pladser;
+22742;22000;International virksomhedskommunikation i tysk, Aarhus C, Studiestart: sommerstart;23;0;51;18;Alle optaget, ledige pladser;
+22810;22000;Diplomingeniør, bioteknologi, Aarhus C, Studiestart: sommerstart;60;5;173;53;7,7;Alle optaget, ledige pladser
+22820;22000;Diplomingeniør, bygning , Aarhus C, Studiestart: sommerstart;143;0;319;135;Alle optaget, ledige pladser;
+22825;22000;Diplomingeniør, bygning , Aarhus C, Studiestart: vinterstart;36;0;123;36;Alle optaget, ledige pladser;
+22830;22000;Diplomingeniør, bygningsdesign, Aarhus C, Studiestart: sommerstart;75;3;188;62;7,5;Alle optaget, ledige pladser
+22835;22000;Diplomingeniør, bygningsdesign, Aarhus C, Studiestart: vinterstart;34;0;102;24;Alle optaget, ledige pladser;
+22840;22000;Diplomingeniør, elektronik, Aarhus C, Studiestart: sommerstart;50;0;131;47;5,8;Alle optaget, ledige pladser
+22845;22000;Diplomingeniør, elektronik, Aarhus C, Studiestart: vinterstart;4;0;39;3;Alle optaget, ledige pladser;
+22850;22000;Diplomingeniør, softwareteknologi, Aarhus C, Studiestart: sommerstart;134;0;308;141;Alle optaget, ledige pladser;
+22855;22000;Diplomingeniør, softwareteknologi, Aarhus C, Studiestart: vinterstart;39;0;126;37;Alle optaget, ledige pladser;
+22860;22000;Diplomingeniør, maskinteknik, Aarhus C, Studiestart: sommerstart;126;0;246;121;Alle optaget, ledige pladser;
+22865;22000;Diplomingeniør, maskinteknik, Aarhus C, Studiestart: vinterstart;20;0;64;19;Alle optaget, ledige pladser;
+22870;22000;Diplomingeniør, elektrisk energiteknologi, Aarhus C, Studiestart: sommerstart;36;0;99;40;Alle optaget, ledige pladser;
+22880;22000;Diplomingeniør, sundhedsteknologi, Aarhus C, Studiestart: sommerstart;70;6;185;85;8,1;5,6
+22890;22000;Diplomingeniør, kemiteknologi, Aarhus C, Studiestart: sommerstart;33;0;97;32;Alle optaget, ledige pladser;
+22900;22000;Diplomingeniør, fødevareteknologi, Aarhus C, Studiestart: sommerstart;28;0;83;29;Alle optaget, ledige pladser;
+22930;22000;Erhvervsøkonomi, HA, Herning, Studiestart: sommerstart;42;0;133;38;Alle optaget, ledige pladser;
+22935;22000;Economics and Business Administration, Herning, Study start: Summer start;121;10;703;84;6,0;
+22957;22000;Diplomingeniør, forretningsudvikling (Business Development), BDE, Herning, Studiestart: sommerstart;25;0;50;25;Alle optaget, ledige pladser;
+22964;22000;Diplomingeniør, global ledelse og design af produktionsnetværk, GMM, Herning, Studiestart: sommerstart;17;0;43;18;Alle optaget, ledige pladser;
+22970;22000;Diplomingeniør, elektrisk energiteknologi, Herning, Studiestart: sommerstart;30;0;63;36;Alle optaget, ledige pladser;
+;22000;Aarhus Universitet i alt;7.611;469;30.512;11.333;;
+;25000;Aalborg Universitet;;;;;;
+25015;25000;Teknisk videnskab (civilingeniør) Arkitektur og design, Aalborg Øst, Studiestart: sommerstart;131;4;248;129;4,5;Alle optaget
+25017;25000;Teknisk videnskab (civilingeniør) Bioteknologi, Aalborg Øst, Studiestart: sommerstart;40;0;99;43;Alle optaget, ledige pladser;
+25020;25000;Teknisk videnskab (civilingeniør) Byggeri og anlæg, Aalborg Øst, Studiestart: sommerstart;25;0;62;28;Alle optaget, ledige pladser;
+25023;25000;Teknisk videnskab (civilingeniør) Ingeniørvidenskab, Aalborg Øst, Studiestart: sommerstart;14;0;30;15;Alle optaget, ledige pladser;
+25025;25000;Teknisk videnskab (civilingeniør) Computerteknologi, Aalborg Øst, Studiestart: sommerstart;26;0;82;27;Alle optaget, ledige pladser;
+25030;25000;Teknisk videnskab (civilingeniør) Elektronik og systemdesign, Aalborg Øst, Studiestart: sommerstart;26;0;58;30;Alle optaget, ledige pladser;
+25035;25000;Teknisk videnskab (civilingeniør) Globale forretningssystemer, Aalborg Øst, Studiestart: sommerstart;48;0;73;49;Alle optaget, ledige pladser;
+25040;25000;Teknisk videnskab (civilingeniør) Mekanik og produktion, Aalborg Øst, Studiestart: sommerstart;43;0;100;45;Alle optaget, ledige pladser;
+25042;25000;Teknisk videnskab (civilingeniør) Miljøvidenskab, Aalborg Øst, Studiestart: sommerstart;9;0;24;9;Alle optaget, ledige pladser;
+25047;25000;Teknisk videnskab (civilingeniør) Kemiteknologi, Aalborg Øst, Studiestart: sommerstart;24;0;60;22;Alle optaget, ledige pladser;
+25053;25000;Teknisk videnskab (civilingeniør) Fysik og teknologi, Aalborg Øst, Studiestart: sommerstart;18;0;42;19;Alle optaget, ledige pladser;
+25055;25000;Teknisk videnskab (civilingeniør) By-, energi- og miljøplanlægning, Aalborg Øst, Studiestart: sommerstart;21;0;46;21;Alle optaget, ledige pladser;
+25057;25000;Teknisk videnskab (civilingeniør) Robotteknologi, Aalborg Øst, Studiestart: sommerstart;31;0;91;33;Alle optaget, ledige pladser;
+25060;25000;Teknisk videnskab (civilingeniør) Software, Aalborg Øst, Studiestart: sommerstart;110;0;227;112;Alle optaget, ledige pladser;
+25062;25000;Teknisk videnskab (civilingeniør) Software, København SV, Studiestart: sommerstart;94;3;319;85;5,4;5,1
+25065;25000;Teknisk videnskab (civilingeniør) Sundhedsteknologi, Aalborg Øst, Studiestart: sommerstart;28;0;74;21;Alle optaget, ledige pladser;
+25070;25000;Teknisk videnskab (civilingeniør) By-, energi- og miljøplanlægning, København SV, Studiestart: sommerstart;36;0;93;32;Alle optaget, ledige pladser;
+25073;25000;Teknisk videnskab (civilingeniør) Cyber- og computerteknologi, København SV, Studiestart: sommerstart;58;0;156;47;Alle optaget, ledige pladser;
+25074;25000;Teknisk videnskab (civilingeniør) Bæredygtige byggeprocesser, København SV, Studiestart: sommerstart;29;0;72;24;Alle optaget, ledige pladser;
+25075;25000;Teknisk videnskab (civilingeniør) Energi, Aalborg Øst, Studiestart: sommerstart;37;0;76;37;Alle optaget, ledige pladser;
+25078;25000;Teknisk videnskab (civilingeniør) Bæredygtigt design, København SV, Studiestart: sommerstart;42;4;113;52;8,1;7,6
+25085;25000;Landinspektørvidenskab, København SV, Studiestart: sommerstart;19;0;57;16;Alle optaget, ledige pladser;
+25090;25000;Landinspektørvidenskab, Aalborg Øst, Studiestart: sommerstart;32;0;57;37;Alle optaget, ledige pladser;
+25100;25000;Teknoantropologi, Aalborg Øst, Studiestart: sommerstart;12;0;40;7;Alle optaget, ledige pladser;
+25220;25000;Diplomingeniør, globale forretningssystemer, Aalborg Øst, Studiestart: sommerstart;16;0;53;16;Alle optaget, ledige pladser;
+25230;25000;Diplomingeniør, kemi- og bioteknologi, Aalborg Øst, Studiestart: sommerstart;23;0;73;20;Alle optaget, ledige pladser;
+25240;25000;Diplomingeniør, byggeri og anlæg, Aalborg Øst, Studiestart: sommerstart;32;0;89;38;Alle optaget, ledige pladser;
+25250;25000;Diplomingeniør, bæredygtig energiteknik, Aalborg Øst, Studiestart: sommerstart;15;0;49;15;Alle optaget, ledige pladser;
+25260;25000;Diplomingeniør, elektronik, Aalborg Øst, Studiestart: sommerstart;8;0;41;11;Alle optaget, ledige pladser;
+25270;25000;Diplomingeniør, maskinteknik, Aalborg Øst, Studiestart: sommerstart;52;0;107;56;Alle optaget, ledige pladser;
+25290;25000;Diplomingeniør, design og anvendelse af kunstig intelligens, Aalborg Øst, Studiestart: sommerstart;34;0;81;35;Alle optaget, ledige pladser;
+25305;25000;Biologi, Aalborg Øst, Studiestart: sommerstart;38;0;136;37;Alle optaget, ledige pladser;
+25306;25000;Datalogi, Aalborg Øst, Studiestart: sommerstart;58;0;178;60;Alle optaget, ledige pladser;
+25307;25000;Fysik, Aalborg Øst, Studiestart: sommerstart;13;0;38;14;Alle optaget, ledige pladser;
+25308;25000;Datavidenskab og machine learning, Aalborg Øst, Studiestart: sommerstart;15;0;57;12;Alle optaget, ledige pladser;
+25311;25000;Geografi, Aalborg Øst, Studiestart: sommerstart;15;0;30;11;Alle optaget, ledige pladser;
+25313;25000;Kemi, Aalborg Øst, Studiestart: sommerstart;6;0;32;7;Alle optaget, ledige pladser;
+25314;25000;Matematik, Aalborg Øst, Studiestart: sommerstart;19;0;57;20;Alle optaget, ledige pladser;
+25318;25000;Teknisk videnskab (civilingeniør) Matematik-teknologi, Aalborg Øst, Studiestart: sommerstart;13;0;41;13;Alle optaget, ledige pladser;
+25319;25000;Matematik-økonomi, Aalborg Øst, Studiestart: sommerstart;27;0;74;27;Alle optaget, ledige pladser;
+25320;25000;Medicin, Aalborg Øst, Studiestart: sommerstart;195;13;1.926;499;9,9;9,8
+25321;25000;Medialogi, Aalborg Øst, Studiestart: sommerstart;24;0;76;30;Alle optaget, ledige pladser;
+25322;25000;Medialogi, København SV, Studiestart: sommerstart;79;0;172;80;Alle optaget;Alle optaget, ledige pladser
+25325;25000;Idræt, Aalborg Øst, Studiestart: sommerstart;26;0;78;24;Alle optaget, ledige pladser;
+25330;25000;Medicin med industriel specialisering, Aalborg Øst, Studiestart: sommerstart;134;8;308;73;7,2;6,2
+25340;25000;Informationsteknologi, Aalborg Øst, Studiestart: sommerstart;37;0;90;32;Alle optaget, ledige pladser;
+25350;25000;Interaktionsdesign, Aalborg Øst, Studiestart: sommerstart;23;0;75;21;Alle optaget, ledige pladser;
+25405;25000;Anvendt filosofi, Aalborg Øst, Studiestart: sommerstart;19;0;72;21;Alle optaget, ledige pladser;
+25410;25000;Dansk, Aalborg Øst, Studiestart: sommerstart;20;0;54;24;Alle optaget, ledige pladser;
+25420;25000;Kommunikation og digitale medier, Aalborg Øst, Studiestart: sommerstart;115;0;271;95;Alle optaget;
+25425;25000;Musik, Aalborg Øst, Studiestart: sommerstart;21;0;38;24;Alle optaget, ledige pladser;
+25430;25000;Musikterapi, Aalborg Øst, Studiestart: sommerstart;12;0;27;14;Alle optaget, ledige pladser;
+25435;25000;Psykologi, Aalborg Øst, Studiestart: sommerstart;216;9;1.558;434;10;9,9
+25445;25000;Kunst og teknologi, Aalborg Øst, Studiestart: sommerstart;14;0;40;10;Alle optaget, ledige pladser;
+25450;25000;Engelsk, Aalborg Øst, Studiestart: sommerstart;26;0;121;29;Alle optaget, ledige pladser;
+25457;25000;Sprog og internationale studier, engelsk, Aalborg Øst, Studiestart: sommerstart;42;0;126;45;Alle optaget, ledige pladser;
+25520;25000;International virksomhedskommunikation i engelsk, Aalborg Øst, Studiestart: sommerstart;32;0;103;31;Alle optaget, ledige pladser;
+25610;25000;Politik og Administration, Aalborg Øst, Studiestart: sommerstart;60;0;165;42;Alle optaget, ledige pladser;
+25612;25000;Samfundsfag, Aalborg Øst, Studiestart: sommerstart;22;0;95;12;Alle optaget, ledige pladser;
+25615;25000;Historie, Aalborg Øst, Studiestart: sommerstart;38;0;118;42;Alle optaget, ledige pladser;
+25620;25000;Sociologi, Aalborg Øst, Studiestart: sommerstart;183;7;437;106;5,7;Alle optaget
+25625;25000;Økonomi, Aalborg Øst, Studiestart: sommerstart;39;0;120;33;Alle optaget, ledige pladser;
+25630;25000;Jura, Aalborg Øst, Studiestart: sommerstart;161;7;971;289;8,5;8,3
+25640;25000;Organisatorisk læring, Aalborg Øst, Studiestart: sommerstart;13;0;42;11;Alle optaget, ledige pladser;
+25650;25000;Innovation og digitalisering, Aalborg Øst, Studiestart: sommerstart;17;0;65;13;Alle optaget, ledige pladser;
+25710;25000;Erhvervsøkonomi, HA, Aalborg Øst, Studiestart: sommerstart;299;0;584;250;Alle optaget, ledige pladser;
+25712;25000;Economics and Business Administration, Aalborg Øst, Study start: Summer start;50;7;558;66;5,9;5,2
+25715;25000;Erhvervsøkonomi-jura, HA (jur.), Aalborg Øst, Studiestart: sommerstart;145;8;409;95;5,5;3,4
+25810;25000;Professionsbachelor, socialrådgiver, Aalborg Øst, Studiestart: sommerstart;225;0;407;197;Alle optaget, ledige pladser;
+26512;25000;Bachelor of Science (BSc) in Engineering (Applied Industrial Electronics), Esbjerg, Study start: Summer start;31;0;234;56;Alle optaget, ledige pladser;
+26513;25000;Teknisk videnskab (civilingeniør) Energi, Esbjerg, Studiestart: sommerstart;7;0;11;6;Alle optaget, ledige pladser;
+26525;25000;Bachelor of Science (BSc) in Engineering (Chemical Engineering and Biotechnology), Esbjerg, Study start: Summer start;40;0;257;102;Alle optaget, ledige pladser;
+26620;25000;Diplomingeniør, kemi- og bioteknologi, Esbjerg, Studiestart: sommerstart;7;0;26;6;Alle optaget, ledige pladser;
+26630;25000;Diplomingeniør, byggeri og anlæg, Esbjerg, Studiestart: sommerstart;10;0;22;14;Alle optaget, ledige pladser;
+26635;25000;Diplomingeniør, bæredygtig energiteknik, Esbjerg, Studiestart: sommerstart;4;0;18;3;Alle optaget, ledige pladser;
+26650;25000;Diplomingeniør, maskinteknik, Esbjerg, Studiestart: sommerstart;7;0;18;10;Alle optaget, ledige pladser;
+;25000;Aalborg Universitet i alt;3.730;70;13.127;4.171;;
+;30000;Det Kongelige Akademi - Arkitektur, Design, Konservering;;;;;;
+30010;30000;Arkitekt, København K, Studiestart: sommerstart;159;8;1.343;668;10,9;10,8
+30050;30000;Arkitekt, Kalundborg, Studiestart: sommerstart;56;16;338;26;9,5;8,2
+32010;30000;Designer, København K, Studiestart: sommerstart;83;6;991;476;11,4;11,2
+32020;30000;Bachelor of Crafts in Glass and Ceramics, Nexø, Study start: Summer start;16;1;165;99;Kun kvote 2;
+;30000;Det Kongelige Akademi - Arkitektur, Design, Konservering i alt;314;31;2.837;1.269;;
+;35000;Arkitektskolen Aarhus;;;;;;
+30060;35000;Arkitekt, Aarhus C, Studiestart: sommerstart;115;5;884;386;Kun kvote 2;
+;35000;Arkitektskolen Aarhus i alt;115;5;884;386;;
+;32100;Designskolen Kolding;;;;;;
+32110;32100;Designer, Kolding, Studiestart: sommerstart;78;21;470;234;11,3;
+;32100;Designskolen Kolding i alt;78;21;470;234;;
+;41000;Københavns Professionshøjskole;;;;;;
+40010;41000;Professionsbachelor, psykomotorik, Hillerød, Studiestart: sommerstart;67;1;158;91;Kun kvote 2;Ledige pladser
+40510;41000;Professionsbachelor, beredskab, katastrofe- og risikomanagement, København N, Studiestart: sommerstart;76;30;248;133;8,8;6,4
+40512;41000;Professionsbachelor, beredskab, katastrofe- og risikomanagement, København N, Studiestart: vinterstart;34;14;147;44;8,4;5,3
+40610;41000;Professionsbachelor, bioanalytiker, København N, Studiestart: sommerstart;85;24;437;145;7,4;5,0
+40612;41000;Professionsbachelor, bioanalytiker, København N, Studiestart: vinterstart;85;20;357;89;6,2;Alle optaget, ledige pladser
+42020;41000;Professionsbachelor, ergoterapeut, København N, Studiestart: sommerstart;72;20;288;97;8,2;3,8
+42022;41000;Professionsbachelor, ergoterapeut, København N, Studiestart: vinterstart;58;0;181;44;Alle optaget, ledige pladser;
+45010;41000;Professionsbachelor, ernæring og sundhed, København N, Studiestart: sommerstart;80;8;268;127;7,9;Alle optaget, ledige pladser
+46020;41000;Professionsbachelor, folkeskolelærer, Frederiksberg, Studiestart: sommerstart;168;0;395;159;Alle optaget, ledige pladser;
+46036;41000;Professionsbachelor, folkeskolelærer, Rønne, Studiestart: sommerstart;7;0;12;9;Alle optaget, ledige pladser;
+46210;41000;Professionsbachelor, folkeskolelærer, København V, Studiestart: sommerstart;306;0;885;335;Alle optaget, ledige pladser;
+46215;41000;Professionsbachelor, folkeskolelærer, København V, Studiestart: vinterstart;48;0;260;64;Alle optaget, ledige pladser;
+46220;41000;Professionsbachelor, folkeskolelærer, København V, E-læring, Studiestart: sommerstart;26;0;141;41;Alle optaget, ledige pladser;
+46230;41000;Professionsbachelor, folkeskolelærer, Hillerød, Studiestart: sommerstart;28;0;123;37;Alle optaget, ledige pladser;
+47020;41000;Professionsbachelor, fysioterapeut, København N, Studiestart: sommerstart;125;45;681;339;9,7;7,5
+47022;41000;Professionsbachelor, fysioterapeut, København N, Studiestart: vinterstart;126;50;535;133;8,3;3,5
+47040;41000;Professionsbachelor, fysioterapeut, Hillerød, Studiestart: sommerstart;40;13;213;48;7,9;Alle optaget, ledige pladser
+47045;41000;Professionsbachelor, fysioterapeut, Hillerød, Studiestart: vinterstart;40;0;185;14;Alle optaget;Alle optaget, ledige pladser
+50010;41000;Professionsbachelor, jordemoder, København N, Studiestart: sommerstart;47;14;502;231;11,1;10,5
+50012;41000;Professionsbachelor, jordemoder, København N, Studiestart: vinterstart;48;16;477;123;10,9;10,5
+50810;41000;Professionsbachelor, kristendom, kultur og kommunikation, Frederiksberg, Studiestart: sommerstart;14;0;44;9;Alle optaget, ledige pladser;
+52610;41000;Professionsbachelor, offentlig administration, København N, Studiestart: sommerstart;90;13;270;92;5,1;Alle optaget, ledige pladser
+52612;41000;Professionsbachelor, offentlig administration, København N, Studiestart: vinterstart;34;0;128;22;Alle optaget, ledige pladser;
+53050;41000;Professionsbachelor, pædagog, København V, Studiestart: sommerstart;734;0;1.188;717;Alle optaget, ledige pladser;
+53055;41000;Professionsbachelor, pædagog, København V, Studiestart: vinterstart;147;0;418;148;Alle optaget, ledige pladser;
+53100;41000;Professionsbachelor, pædagog, Hillerød, Studiestart: sommerstart;88;0;205;94;Alle optaget, ledige pladser;
+53102;41000;Professionsbachelor, pædagog, Hillerød, E-læring, Studiestart: sommerstart;40;0;98;49;3,0;Alle optaget, ledige pladser
+53104;41000;Professionsbachelor, pædagog, Hillerød, E-læring, Studiestart: vinterstart;7;0;48;15;Alle optaget, ledige pladser;
+53105;41000;Professionsbachelor, pædagog, Hillerød, Studiestart: vinterstart;15;0;111;21;Alle optaget, ledige pladser;
+53120;41000;Professionsbachelor, pædagog, Rønne, Studiestart: sommerstart;7;0;13;8;Alle optaget, ledige pladser;
+54020;41000;Professionsbachelor, radiograf, København N, Studiestart: sommerstart;49;16;429;134;7,9;6,9
+54022;41000;Professionsbachelor, radiograf, København N, Studiestart: vinterstart;49;24;289;55;6,6;3,3
+54710;41000;Professionsbachelor, skat, København N, Studiestart: sommerstart;53;8;251;55;5,7;Alle optaget, ledige pladser
+55010;41000;Professionsbachelor, socialrådgiver, Frederiksberg, Studiestart: sommerstart;210;35;873;366;7,4;5,9
+55012;41000;Professionsbachelor, socialrådgiver, Frederiksberg, Studiestart: vinterstart;210;15;592;165;3,9;Alle optaget, ledige pladser
+55017;41000;Professionsbachelor, socialrådgiver, Hillerød, Studiestart: sommerstart;40;14;268;78;6,9;Alle optaget, ledige pladser
+55019;41000;Professionsbachelor, socialrådgiver, Hillerød, Studiestart: vinterstart;33;0;191;24;Alle optaget, ledige pladser;
+56020;41000;Professionsbachelor, sygeplejerske, Frederiksberg, Studiestart: sommerstart;43;21;545;105;8,9;5,1
+56022;41000;Professionsbachelor, sygeplejerske, Frederiksberg, Studiestart: vinterstart;43;7;325;49;7,6;Alle optaget, ledige pladser
+56040;41000;Professionsbachelor, sygeplejerske, København N, Studiestart: sommerstart;463;51;1.202;510;6,8;Alle optaget, ledige pladser
+56042;41000;Professionsbachelor, sygeplejerske, København N, Studiestart: vinterstart;267;0;775;211;Alle optaget, ledige pladser;
+56080;41000;Professionsbachelor, sygeplejerske, Hillerød, Studiestart: sommerstart;164;0;416;158;2,0;Alle optaget, ledige pladser
+56085;41000;Professionsbachelor, sygeplejerske, Hillerød, Studiestart: vinterstart;46;0;226;55;Alle optaget, ledige pladser;
+56100;41000;Professionsbachelor, sygeplejerske, Rønne, Studiestart: sommerstart;4;0;9;5;Alle optaget, ledige pladser;
+56105;41000;Professionsbachelor, sygeplejerske, Rønne, Studiestart: vinterstart;3;0;6;3;Alle optaget, ledige pladser;
+57030;41000;Professionsbachelor, dansk tegnsprog og tolkning, København V, Studiestart: sommerstart;11;0;27;10;Kun kvote 2, ledige pladser;
+57320;41000;Professionsbachelor, tekstildesign, -håndværk og formidling, København V, Studiestart: sommerstart;52;15;162;89;Kun kvote 2;
+78010;41000;Laborant, København N, Studiestart: sommerstart;108;9;360;126;5,4;Alle optaget, ledige pladser
+78012;41000;Laborant, København N, Studiestart: vinterstart;64;0;226;44;Alle optaget, ledige pladser;
+89010;41000;Sundhedsadministrativ koordinator, København N, Studiestart: sommerstart;60;5;150;79;5,2;Alle optaget, ledige pladser
+89012;41000;Sundhedsadministrativ koordinator, København N, Studiestart: vinterstart;28;0;92;29;Alle optaget, ledige pladser;
+;41000;Københavns Professionshøjskole i alt;4.742;488;16.430;5.828;;
+;50000;Professionshøjskolen Absalon;;;;;;
+40630;50000;Professionsbachelor, bioanalytiker, Kalundborg, Studiestart: sommerstart;32;0;88;30;Alle optaget, ledige pladser;
+40640;50000;Professionsbachelor, bioanalytiker, Næstved, Studiestart: sommerstart;65;1;177;50;2,6;Alle optaget, ledige pladser
+42040;50000;Professionsbachelor, ergoterapeut, Næstved, Studiestart: sommerstart;30;0;82;25;Alle optaget, ledige pladser;
+45120;50000;Professionsbachelor, ernæring og sundhed, Slagelse, Studiestart: sommerstart;29;0;64;30;Alle optaget, ledige pladser;
+46045;50000;Professionsbachelor, folkeskolelærer, Roskilde, Studiestart: sommerstart;101;0;275;106;Alle optaget, ledige pladser;
+46046;50000;Professionsbachelor, folkeskolelærer, Roskilde, Studiestart: vinterstart;20;0;117;19;Alle optaget, ledige pladser;
+46047;50000;Professionsbachelor, folkeskolelærer, Roskilde, E-læring, Studiestart: sommerstart;41;0;91;43;Alle optaget, ledige pladser;
+46070;50000;Professionsbachelor, folkeskolelærer, Vordingborg, Studiestart: sommerstart;135;0;272;202;Alle optaget, ledige pladser;
+46072;50000;Professionsbachelor, folkeskolelærer, Vordingborg, Studiestart: vinterstart;12;0;27;14;Alle optaget, ledige pladser;
+47050;50000;Professionsbachelor, fysioterapeut, Roskilde, Studiestart: sommerstart;90;10;315;90;7,2;5,7
+47052;50000;Professionsbachelor, fysioterapeut, Roskilde, Studiestart: vinterstart;52;9;262;48;5,8;Alle optaget, ledige pladser
+47060;50000;Professionsbachelor, fysioterapeut, Næstved, Studiestart: sommerstart;66;0;163;56;Alle optaget, ledige pladser;
+48500;50000;Diplomingeniør, bioteknologi, Kalundborg, Studiestart: sommerstart;19;0;34;17;Alle optaget, ledige pladser;
+48505;50000;Bachelor of Engineering in Biotechnology, Kalundborg, Study start: Summer start;80;1;283;105;3,8;Alle optaget
+48520;50000;Diplomingeniør, maskinteknologi, Kalundborg, Studiestart: sommerstart;10;0;24;8;Alle optaget, ledige pladser;
+50030;50000;Professionsbachelor, jordemoder, Slagelse, Studiestart: sommerstart;20;5;271;55;10,3;9,7
+50032;50000;Professionsbachelor, jordemoder, Slagelse, Studiestart: vinterstart;20;7;264;41;10,2;9,7
+53130;50000;Professionsbachelor, pædagog, Roskilde, Studiestart: sommerstart;166;0;381;158;Alle optaget, ledige pladser;
+53132;50000;Professionsbachelor, pædagog, Roskilde, Studiestart: vinterstart;40;0;178;33;Alle optaget, ledige pladser;
+53135;50000;Professionsbachelor, pædagog, Roskilde, E-læring, Studiestart: sommerstart;43;0;105;49;Alle optaget, ledige pladser;
+53137;50000;Professionsbachelor, pædagog, Roskilde, E-læring, Studiestart: vinterstart;5;0;42;8;Alle optaget, ledige pladser;
+53140;50000;Professionsbachelor, pædagog, Slagelse, Studiestart: sommerstart;104;0;218;108;Alle optaget, ledige pladser;
+53142;50000;Professionsbachelor, pædagog, Slagelse, Studiestart: vinterstart;23;0;72;21;Alle optaget, ledige pladser;
+53150;50000;Professionsbachelor, pædagog, Holbæk, Studiestart: sommerstart;41;0;78;38;Alle optaget, ledige pladser;
+53152;50000;Professionsbachelor, pædagog, Holbæk, Studiestart: vinterstart;0;0;39;10;Ikke oprettet;
+53160;50000;Professionsbachelor, pædagog, Nykøbing F, Studiestart: sommerstart;70;0;120;80;Alle optaget, ledige pladser;
+53165;50000;Professionsbachelor, pædagog, Vordingborg, Studiestart: sommerstart;81;0;138;87;Alle optaget, ledige pladser;
+53167;50000;Professionsbachelor, pædagog, Vordingborg, Studiestart: vinterstart;0;0;37;12;Ikke oprettet;
+54030;50000;Professionsbachelor, radiograf, Næstved, Studiestart: sommerstart;40;10;179;54;6,2;Alle optaget
+55030;50000;Professionsbachelor, socialrådgiver, Roskilde, Studiestart: sommerstart;178;2;459;152;4,6;4,3
+55032;50000;Professionsbachelor, socialrådgiver, Roskilde, Studiestart: vinterstart;85;2;314;74;3,1;2,5
+55040;50000;Professionsbachelor, socialrådgiver, Slagelse, Studiestart: sommerstart;64;0;162;51;Alle optaget, ledige pladser;
+55042;50000;Professionsbachelor, socialrådgiver, Slagelse, Studiestart: vinterstart;25;0;92;20;Alle optaget, ledige pladser;
+55050;50000;Professionsbachelor, socialrådgiver, Nykøbing F, Studiestart: sommerstart;50;0;99;46;Alle optaget, ledige pladser;
+55055;50000;Professionsbachelor, socialrådgiver, Nykøbing F, E-læring, Studiestart: sommerstart;67;0;128;70;Alle optaget, ledige pladser;
+56120;50000;Professionsbachelor, sygeplejerske, Roskilde, Studiestart: sommerstart;130;3;373;109;4,3;Alle optaget, ledige pladser
+56122;50000;Professionsbachelor, sygeplejerske, Roskilde, Studiestart: vinterstart;82;0;236;63;Alle optaget, ledige pladser;
+56140;50000;Professionsbachelor, sygeplejerske, Slagelse, Studiestart: sommerstart;69;0;152;56;Alle optaget, ledige pladser;
+56142;50000;Professionsbachelor, sygeplejerske, Slagelse, Studiestart: vinterstart;17;0;74;17;Alle optaget, ledige pladser;
+56145;50000;Professionsbachelor, sygeplejerske, Slagelse, E-læring, Studiestart: sommerstart;60;0;141;64;2,0;Alle optaget, ledige pladser
+56147;50000;Professionsbachelor, sygeplejerske, Slagelse, E-læring, Studiestart: vinterstart;24;0;87;20;Alle optaget, ledige pladser;
+56150;50000;Professionsbachelor, sygeplejerske, Holbæk, Studiestart: sommerstart;29;0;94;28;Alle optaget, ledige pladser;
+56152;50000;Professionsbachelor, sygeplejerske, Holbæk, Studiestart: vinterstart;10;0;50;9;Alle optaget;
+56160;50000;Professionsbachelor, sygeplejerske, Næstved, Studiestart: sommerstart;51;0;133;49;Alle optaget, ledige pladser;
+56162;50000;Professionsbachelor, sygeplejerske, Næstved, Studiestart: vinterstart;16;0;68;16;Alle optaget, ledige pladser;
+56180;50000;Professionsbachelor, sygeplejerske, Nykøbing F, Studiestart: sommerstart;52;0;88;52;Alle optaget, ledige pladser;
+89026;50000;Sundhedsadministrativ koordinator, Roskilde, Studiestart: sommerstart;65;0;117;64;3,3;Alle optaget, ledige pladser
+89030;50000;Sundhedsadministrativ koordinator, Næstved, Studiestart: sommerstart;48;0;84;48;Alle optaget, ledige pladser;
+;50000;Professionshøjskolen Absalon i alt;2.557;50;7.347;2.605;;
+;55000;Professionshøjskolen UC Syddanmark;;;;;;
+40660;55000;Professionsbachelor, bioanalytiker, Esbjerg Ø, Studiestart: sommerstart;42;0;95;39;2,2;Alle optaget, ledige pladser
+42070;55000;Professionsbachelor, ergoterapeut, Haderslev, Studiestart: sommerstart;20;0;45;19;Alle optaget, ledige pladser;
+45160;55000;Professionsbachelor, ernæring og sundhed, Haderslev, Studiestart: sommerstart;22;0;43;20;Alle optaget, ledige pladser;
+46100;55000;Professionsbachelor, folkeskolelærer, Haderslev, Studiestart: sommerstart;78;0;186;116;Alle optaget, ledige pladser;
+46102;55000;Professionsbachelor, folkeskolelærer, Haderslev, E-læring, Studiestart: sommer- og vinterstart;51;0;113;68;Alle optaget, ledige pladser;
+46110;55000;Professionsbachelor, folkeskolelærer, Esbjerg Ø, Studiestart: sommerstart;44;0;99;54;Alle optaget, ledige pladser;
+47100;55000;Professionsbachelor, fysioterapeut, Esbjerg Ø, Studiestart: sommerstart;38;0;84;37;Alle optaget, ledige pladser;
+47105;55000;Professionsbachelor, fysioterapeut, Esbjerg Ø, Studiestart: vinterstart;0;0;37;7;Ikke oprettet;
+47110;55000;Professionsbachelor, fysioterapeut, Haderslev, Studiestart: sommerstart;33;0;72;25;Alle optaget, ledige pladser;
+47560;55000;Professionsbachelor, grafisk kommunikation, Kolding, Studiestart: sommerstart;42;4;130;64;Kun kvote 2;Ledige pladser
+50015;55000;Professionsbachelor, jordemoder, Esbjerg Ø, Studiestart: sommer- og vinterstart;64;31;260;104;9,6;9,1
+51510;55000;Professionsbachelor, lyddesign, Kolding, Studiestart: sommerstart;43;5;123;96;Kun kvote 2;
+52627;55000;Professionsbachelor, offentlig administration, Haderslev, Studiestart: sommerstart;0;0;24;6;Ikke oprettet;
+52630;55000;Professionsbachelor, offentlig administration, Esbjerg Ø, Studiestart: sommerstart;14;0;35;17;Alle optaget, ledige pladser;
+53190;55000;Professionsbachelor, pædagog, Kolding, Studiestart: sommer- og vinterstart;136;0;222;139;Alle optaget, ledige pladser;
+53200;55000;Professionsbachelor, pædagog, Aabenraa, E-læring, Studiestart: sommerstart;44;1;90;48;3,5;Alle optaget, ledige pladser
+53202;55000;Professionsbachelor, pædagog, Aabenraa, E-læring, Studiestart: vinterstart;0;0;36;9;Ikke oprettet;
+53210;55000;Professionsbachelor, pædagog, Aabenraa, Studiestart: sommerstart;87;0;144;94;Alle optaget, ledige pladser;
+53212;55000;Professionsbachelor, pædagog, Aabenraa, Studiestart: vinterstart;13;0;47;16;Alle optaget, ledige pladser;
+53214;55000;Professionsbachelor, pædagog, Tønder, Studiestart: sommerstart;21;0;32;22;Alle optaget, ledige pladser;
+53220;55000;Professionsbachelor, pædagog, Esbjerg Ø, Studiestart: sommerstart;75;0;128;63;Alle optaget, ledige pladser;
+53225;55000;Professionsbachelor, pædagog, Esbjerg Ø, Studiestart: vinterstart;0;0;35;13;Ikke oprettet;
+55210;55000;Professionsbachelor, socialrådgiver, Esbjerg Ø, Studiestart: sommer- og vinterstart;38;0;80;42;Alle optaget, ledige pladser;
+55213;55000;Professionsbachelor, socialrådgiver, Esbjerg Ø, E-læring, Studiestart: sommer- og vinterstart;48;0;104;49;Alle optaget, ledige pladser;
+55220;55000;Professionsbachelor, socialrådgiver, Aabenraa, Studiestart: sommerstart;22;0;59;23;Alle optaget, ledige pladser;
+55225;55000;Professionsbachelor, socialrådgiver, Aabenraa, Studiestart: vinterstart;0;0;23;10;Ikke oprettet;
+56230;55000;Professionsbachelor, sygeplejerske, Aabenraa, Studiestart: sommer- og vinterstart;69;0;113;71;Alle optaget, ledige pladser;
+56237;55000;Professionsbachelor, sygeplejerske, Aabenraa, E-læring, Studiestart: vinterstart;21;0;54;25;Alle optaget, ledige pladser;
+56260;55000;Professionsbachelor, sygeplejerske, Esbjerg Ø, Studiestart: sommer- og vinterstart;88;0;148;88;Alle optaget, ledige pladser;
+78270;55000;Laborant, Esbjerg Ø, Studiestart: sommerstart;18;0;59;21;Alle optaget, ledige pladser;
+89046;55000;Sundhedsadministrativ koordinator, Haderslev, Studiestart: sommerstart;19;0;36;23;Alle optaget, ledige pladser;
+89050;55000;Sundhedsadministrativ koordinator, Esbjerg Ø, Studiestart: sommerstart;23;0;35;24;Alle optaget, ledige pladser;
+;55000;Professionshøjskolen UC Syddanmark i alt;1.213;41;2.791;1.452;;
+;66000;UCL Erhvervsakademi og Professionshøjskole;;;;;;
+40650;66000;Professionsbachelor, bioanalytiker, Odense M, Studiestart: sommerstart;26;11;240;83;9,0;7,2
+40652;66000;Professionsbachelor, bioanalytiker, Odense M, Studiestart: vinterstart;28;9;159;21;6,8;Alle optaget, ledige pladser
+41110;66000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Odense C, Studiestart: sommerstart;87;0;176;83;Alle optaget, ledige pladser;
+41112;66000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Odense C, Studiestart: vinterstart;23;0;70;24;Alle optaget, ledige pladser;
+42060;66000;Professionsbachelor, ergoterapeut, Odense M, Studiestart: sommerstart;49;0;121;40;Alle optaget, ledige pladser;
+42062;66000;Professionsbachelor, ergoterapeut, Odense M, Studiestart: vinterstart;25;0;84;23;Alle optaget, ledige pladser;
+45830;66000;Professionsbachelor, finans, Odense C, Studiestart: sommerstart;127;0;260;124;Alle optaget, ledige pladser;
+46080;66000;Professionsbachelor, folkeskolelærer, Odense M, Studiestart: sommerstart;126;0;293;139;Alle optaget, ledige pladser;
+46081;66000;Professionsbachelor, folkeskolelærer, Odense M, Studiestart: vinterstart;10;0;89;20;Alle optaget, ledige pladser;
+46088;66000;Professionsbachelor, folkeskolelærer, Fredericia, Studiestart: sommerstart;17;0;46;24;Alle optaget, ledige pladser;
+46120;66000;Professionsbachelor, folkeskolelærer, Jelling, Studiestart: sommerstart;37;0;91;48;Alle optaget, ledige pladser;
+46122;66000;Professionsbachelor, folkeskolelærer, Jelling, E-læring, Studiestart: sommerstart;11;0;49;16;Alle optaget, ledige pladser;
+47080;66000;Professionsbachelor, fysioterapeut, Odense M, Studiestart: sommerstart;76;18;280;106;7,7;Alle optaget, ledige pladser
+47082;66000;Professionsbachelor, fysioterapeut, Odense M, Studiestart: vinterstart;77;4;254;74;5,4;Alle optaget, ledige pladser
+52620;66000;Professionsbachelor, offentlig administration, Odense C, Studiestart: sommerstart;45;0;100;42;Alle optaget, ledige pladser;
+53170;66000;Professionsbachelor, pædagog, Odense M, Studiestart: sommerstart;255;0;452;262;Alle optaget, ledige pladser;
+53172;66000;Professionsbachelor, pædagog, Odense M, Studiestart: vinterstart;55;0;204;59;Alle optaget, ledige pladser;
+53185;66000;Professionsbachelor, pædagog, Svendborg, Studiestart: vinterstart;24;0;65;30;Alle optaget, ledige pladser;
+53230;66000;Professionsbachelor, pædagog, Jelling, Studiestart: sommerstart;54;0;118;59;Alle optaget, ledige pladser;
+54040;66000;Professionsbachelor, radiograf, Odense M, Studiestart: sommerstart;44;15;310;101;8,1;4,9
+54042;66000;Professionsbachelor, radiograf, Odense M, Studiestart: vinterstart;44;7;191;51;5,6;Alle optaget, ledige pladser
+54910;66000;Professionsbachelor, skat, Odense C, Studiestart: sommerstart;0;0;50;7;Ikke oprettet;
+55110;66000;Professionsbachelor, socialrådgiver, Odense M, Studiestart: sommerstart;130;0;296;117;2,4;Alle optaget, ledige pladser
+55120;66000;Professionsbachelor, socialrådgiver, Odense M, E-læring, Studiestart: sommerstart;92;0;199;94;Alle optaget, ledige pladser;
+55130;66000;Professionsbachelor, socialrådgiver, Odense M, Studiestart: vinterstart;34;0;143;37;Alle optaget, ledige pladser;
+55131;66000;Professionsbachelor, socialrådgiver, Odense M, E-læring, Studiestart: vinterstart;20;0;91;24;Alle optaget, ledige pladser;
+55140;66000;Professionsbachelor, socialrådgiver, Vejle, Studiestart: sommerstart;67;0;164;66;Alle optaget, ledige pladser;
+55142;66000;Professionsbachelor, socialrådgiver, Vejle, Studiestart: vinterstart;28;0;79;28;Alle optaget, ledige pladser;
+56200;66000;Professionsbachelor, sygeplejerske, Odense M, Studiestart: sommerstart;162;16;424;194;6,5;Alle optaget, ledige pladser
+56202;66000;Professionsbachelor, sygeplejerske, Odense M, Studiestart: vinterstart;104;0;256;78;Alle optaget, ledige pladser;
+56220;66000;Professionsbachelor, sygeplejerske, Svendborg, Studiestart: sommerstart;34;0;97;30;Alle optaget, ledige pladser;
+56222;66000;Professionsbachelor, sygeplejerske, Svendborg, Studiestart: vinterstart;12;0;50;10;Alle optaget, ledige pladser;
+56280;66000;Professionsbachelor, sygeplejerske, Vejle, Studiestart: sommerstart;101;0;249;99;Alle optaget, ledige pladser;
+56282;66000;Professionsbachelor, sygeplejerske, Vejle, Studiestart: vinterstart;34;0;116;31;Alle optaget, ledige pladser;
+58030;66000;Professionsbachelor, økonomi og informationsteknologi, Odense C, Studiestart: sommerstart;22;0;69;19;Alle optaget, ledige pladser;
+70330;66000;Automationsteknolog, Odense C, Studiestart: sommerstart;42;0;83;40;Alle optaget, ledige pladser;
+70340;66000;Automationsteknolog, Fredericia, Studiestart: sommerstart;14;0;33;16;Alle optaget, ledige pladser;
+71410;66000;Datamatiker, Odense C, Studiestart: sommerstart;111;1;229;128;3,7;Alle optaget, ledige pladser
+71413;66000;Datamatiker, Odense C, E-læring, Studiestart: vinterstart;97;5;257;141;5,4;Alle optaget, ledige pladser
+71560;66000;Datamatiker, Vejle, Studiestart: sommerstart;49;0;115;49;Alle optaget, ledige pladser;
+71562;66000;Datamatiker, Vejle, Studiestart: vinterstart;14;0;41;12;Alle optaget, ledige pladser;
+72110;66000;Byggekoordinator, Odense C, Studiestart: sommerstart;23;0;52;18;Alle optaget, ledige pladser;
+73330;66000;Energiteknolog, Odense C, Studiestart: sommerstart;0;0;22;4;Ikke oprettet;
+74060;66000;Finansøkonom, Odense C, Studiestart: sommerstart;175;0;367;174;Alle optaget, ledige pladser;
+74062;66000;Finansøkonom, Odense C, Studiestart: vinterstart;36;0;114;36;Alle optaget, ledige pladser;
+74430;66000;Financial controller, Odense C, Studiestart: sommerstart;17;0;62;18;Alle optaget, ledige pladser;
+74625;66000;Handelsøkonom, Odense C, Studiestart: sommerstart;42;4;125;47;5,0;Alle optaget, ledige pladser
+74630;66000;Handelsøkonom, Vejle, Studiestart: sommerstart;36;0;82;37;Alle optaget, ledige pladser;
+75210;66000;Installatør, stærkstrøm, Odense C, Studiestart: sommerstart;12;0;14;13;Udenfor kvotesystemet, ledige pladser;
+75215;66000;Installatør, VVS, Odense C, Studiestart: sommerstart;3;0;6;3;Udenfor kvotesystemet, ledige pladser;
+75260;66000;Installatør, stærkstrøm, Vejle, Studiestart: sommerstart;4;0;6;5;Udenfor kvotesystemet, ledige pladser;
+76200;66000;It-teknolog, Odense C, Studiestart: sommerstart;64;0;133;59;Alle optaget, ledige pladser;
+77060;66000;Jordbrugsteknolog, Odense C, Studiestart: sommerstart;23;0;56;26;Alle optaget, ledige pladser;
+79210;66000;Markedsføringsøkonom, Odense C, Studiestart: sommerstart;90;0;191;91;Alle optaget, ledige pladser;
+79212;66000;Markedsføringsøkonom, Odense C, Studiestart: vinterstart;14;0;45;13;Alle optaget, ledige pladser;
+81310;66000;Multimediedesigner, Odense C, Studiestart: sommerstart;49;0;121;48;Alle optaget, ledige pladser;
+81312;66000;Multimediedesigner, Odense C, Studiestart: vinterstart;11;0;36;9;Alle optaget, ledige pladser;
+83160;66000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Vejle, Studiestart: sommerstart;13;0;33;19;Alle optaget, ledige pladser;
+84110;66000;Produktionsteknolog, Odense C, Studiestart: sommerstart;17;0;34;17;Alle optaget, ledige pladser;
+86110;66000;Service- og oplevelsesøkonom, Odense C, Studiestart: sommerstart;41;0;84;42;Alle optaget, ledige pladser;
+86112;66000;Service- og oplevelsesøkonom, Odense C, Studiestart: vinterstart;11;0;28;10;Alle optaget, ledige pladser;
+86130;66000;Service- og oplevelsesøkonom, Vejle, Studiestart: sommerstart;19;0;47;20;Alle optaget, ledige pladser;
+87060;66000;Logistikøkonom , Vejle, Studiestart: sommerstart;33;0;62;33;Alle optaget, ledige pladser;
+88530;66000;Professionsbachelor i filmproduktionsledelse, Svendborg, Studiestart: sommerstart;25;0;88;45;Kun kvote 2, ledige pladser;
+89060;66000;Sundhedsadministrativ koordinator, Odense C, Studiestart: sommerstart;32;2;90;46;4,9;Alle optaget, ledige pladser
+89062;66000;Sundhedsadministrativ koordinator, Odense C, Studiestart: vinterstart;18;0;56;22;Alle optaget, ledige pladser;
+89070;66000;Sundhedsadministrativ koordinator, Vejle, Studiestart: sommerstart;35;0;77;42;Alle optaget, ledige pladser;
+;66000;UCL Erhvervsakademi og Professionshøjskole i alt;3.250;92;8.724;3.546;;
+;70000;Professionshøjskolen VIA University College;;;;;;
+40060;70000;Professionsbachelor, psykomotorik, Randers C, Studiestart: sommer- og vinterstart;39;0;85;51;Kun kvote 2, ledige pladser;
+40310;70000;Professionsbachelor i protese- og ortoseteknologi, Horsens, Studiestart: sommerstart;16;0;29;14;Alle optaget, ledige pladser;
+40670;70000;Professionsbachelor, bioanalytiker, Aarhus N, Studiestart: sommer- og vinterstart;133;33;409;176;6,6;Alle optaget, ledige pladser
+41160;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Horsens, Studiestart: sommer- og vinterstart;57;0;147;67;Alle optaget, ledige pladser;
+41165;70000;Bachelor of Architectural Technology and Construction Management, Horsens, Study start: Summer start;43;10;473;275;9,4;9,0
+41170;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Aarhus C, Studiestart: sommer- og vinterstart;250;7;484;255;4,1;Alle optaget, ledige pladser
+41180;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Randers C, Studiestart: sommer- og vinterstart;31;0;80;34;Alle optaget, ledige pladser;
+41215;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Holstebro, Studiestart: sommer- og vinterstart;35;0;67;42;Alle optaget, ledige pladser;
+42100;70000;Professionsbachelor, ergoterapeut, Holstebro, Studiestart: sommerstart;27;0;50;29;Alle optaget, ledige pladser;
+42120;70000;Professionsbachelor, ergoterapeut, Aarhus N, Studiestart: sommer- og vinterstart;120;13;324;112;6,9;Alle optaget, ledige pladser
+44311;70000;Professionsbachelor, procesøkonomi og værdikædeledelse , Aarhus C, Studiestart: sommerstart;109;0;202;96;Alle optaget, ledige pladser;
+45210;70000;Professionsbachelor, ernæring og sundhed, Aarhus N, Studiestart: sommerstart;105;16;268;135;7,9;Alle optaget, ledige pladser
+46126;70000;Professionsbachelor, folkeskolelærer, Holstebro, Studiestart: sommerstart;30;0;68;30;Alle optaget, ledige pladser;
+46130;70000;Professionsbachelor, folkeskolelærer, Lemvig, Studiestart: sommerstart;0;0;14;5;Ikke oprettet;
+46132;70000;Professionsbachelor, folkeskolelærer, Lemvig, E-læring, Studiestart: sommerstart;14;0;45;22;Alle optaget, ledige pladser;
+46140;70000;Professionsbachelor, folkeskolelærer, Skive, Studiestart: sommerstart;27;0;57;35;Alle optaget, ledige pladser;
+46150;70000;Professionsbachelor, folkeskolelærer, Aarhus C, Studiestart: sommerstart;505;19;987;551;7,0;Alle optaget, ledige pladser
+46160;70000;Professionsbachelor, folkeskolelærer, Silkeborg, Studiestart: sommer- og vinterstart;66;0;195;71;Alle optaget, ledige pladser;
+47120;70000;Professionsbachelor, fysioterapeut, Holstebro, Studiestart: sommer- og vinterstart;64;0;128;51;Alle optaget, ledige pladser;
+47140;70000;Professionsbachelor, fysioterapeut, Aarhus N, Studiestart: sommer- og vinterstart;146;48;730;346;8,9;7,9
+49225;70000;Diplomingeniør, global business og teknologi, Aarhus C, Studiestart: sommerstart;117;0;225;106;Alle optaget, ledige pladser;
+49310;70000;Diplomingeniør, byggeri og anlæg, Horsens, Studiestart: sommer- og vinterstart;27;0;75;24;Alle optaget, ledige pladser;
+49319;70000;Diplomingeniør, softwareteknologi, Horsens, Studiestart: sommerstart;30;0;89;28;Alle optaget, ledige pladser;
+49320;70000;Bachelor of Engineering in Software Technology, Horsens, Study start: Summer start;95;20;627;261;5,1;2,2
+49322;70000;Diplomingeniør, softwareteknologi, Viborg, Studiestart: sommerstart;17;0;38;18;Alle optaget, ledige pladser;
+49325;70000;Diplomingeniør, maskinteknologi, Horsens, Studiestart: sommerstart;17;0;28;19;Alle optaget, ledige pladser;
+49327;70000;Diplomingeniør, maskinteknologi, Horsens, E-læring, Studiestart: sommerstart;24;0;45;27;Alle optaget, ledige pladser;
+49340;70000;Diplomingeniør, produktion (produktionsteknik), Horsens, Studiestart: sommerstart;14;0;21;14;Alle optaget, ledige pladser;
+49700;70000;Diplomingeniør, Klima og forsyningsteknik, Horsens, Studiestart: sommerstart;0;0;13;3;Ikke oprettet;
+49705;70000;Bachelor of Engineering in Climate and Supply Engineering, Horsens, Study start: Summer start;32;8;179;50;5,6;Alle optaget
+50610;70000;Bachelor of Animation, Viborg, Study start: Summer start;54;4;583;516;Kun kvote 2;
+50630;70000;Professionsbachelor, Multiplatform Storytelling and Production, Aarhus C, Studiestart: sommerstart;30;1;233;153;Kun kvote 2;
+50860;70000;Professionsbachelor, kristendom, kultur og kommunikation, Højbjerg, Studiestart: sommerstart;15;0;42;11;Alle optaget, ledige pladser;
+52640;70000;Professionsbachelor, offentlig administration, Aarhus C, Studiestart: sommerstart;55;0;186;56;5,2;Alle optaget, ledige pladser
+53240;70000;Professionsbachelor, pædagog, Ikast, Studiestart: sommer- og vinterstart;51;0;102;58;Alle optaget, ledige pladser;
+53250;70000;Professionsbachelor, pædagog, Holstebro, Studiestart: sommer- og vinterstart;65;0;118;73;Alle optaget, ledige pladser;
+53260;70000;Professionsbachelor, pædagog, Aarhus C, Studiestart: sommer- og vinterstart;458;94;1.026;617;6,9;Alle optaget, ledige pladser
+53273;70000;Professionsbachelor, pædagog, Grenaa, Studiestart: sommerstart;26;0;49;33;Alle optaget, ledige pladser;
+53275;70000;Professionsbachelor, pædagog, Randers C, Studiestart: sommer- og vinterstart;97;0;209;93;Alle optaget, ledige pladser;
+53280;70000;Professionsbachelor, pædagog, Horsens, Studiestart: sommer- og vinterstart;92;0;205;91;Alle optaget, ledige pladser;
+53290;70000;Professionsbachelor, pædagog, Viborg, Studiestart: sommer- og vinterstart;61;0;130;67;Alle optaget, ledige pladser;
+53292;70000;Professionsbachelor, pædagog, Viborg, E-læring, Studiestart: sommerstart;31;0;89;49;Alle optaget, ledige pladser;
+54550;70000;Professionsbachelor, diakoni og socialpædagogik, Højbjerg, Studiestart: sommer- og vinterstart;83;0;137;81;Alle optaget, ledige pladser;
+54810;70000;Professionsbachelor, skat, Herning, Studiestart: sommerstart;0;0;37;9;Ikke oprettet;
+54811;70000;Professionsbachelor, skat, Herning, E-læring, Studiestart: sommerstart;28;0;60;20;Alle optaget, ledige pladser;
+54830;70000;Professionsbachelor, skat, Randers C, Studiestart: sommerstart;17;0;34;15;Alle optaget, ledige pladser;
+54831;70000;Professionsbachelor, skat, Randers C, E-læring, Studiestart: sommerstart;21;0;45;19;Alle optaget, ledige pladser;
+55310;70000;Professionsbachelor, socialrådgiver, Aarhus C, Studiestart: sommer- og vinterstart;300;12;643;269;5,1;Alle optaget, ledige pladser
+55313;70000;Professionsbachelor, socialrådgiver, Aarhus C, E-læring, Studiestart: sommerstart;70;13;273;121;6,2;Alle optaget, ledige pladser
+55320;70000;Professionsbachelor, socialrådgiver, Holstebro, Studiestart: sommer- og vinterstart;67;0;121;73;Alle optaget, ledige pladser;
+56290;70000;Professionsbachelor, sygeplejerske, Herning, Studiestart: sommerstart;37;0;95;33;Alle optaget, ledige pladser;
+56300;70000;Professionsbachelor, sygeplejerske, Holstebro, Studiestart: sommer- og vinterstart;63;0;127;65;Alle optaget, ledige pladser;
+56340;70000;Professionsbachelor, sygeplejerske, Aarhus N, Studiestart: sommer- og vinterstart;317;90;1.238;677;8,8;7,8
+56360;70000;Professionsbachelor, sygeplejerske, Silkeborg, Studiestart: sommer- og vinterstart;93;0;288;50;Alle optaget, ledige pladser;
+56370;70000;Professionsbachelor, sygeplejerske, Horsens, Studiestart: sommer- og vinterstart;129;0;287;83;Alle optaget, ledige pladser;
+56380;70000;Professionsbachelor, sygeplejerske, Viborg, Studiestart: sommer- og vinterstart;45;0;138;52;Alle optaget, ledige pladser;
+56385;70000;Professionsbachelor, sygeplejerske, Viborg, E-læring, Studiestart: sommer- og vinterstart;40;0;113;42;Alle optaget, ledige pladser;
+56400;70000;Professionsbachelor, sygeplejerske, Randers C, Studiestart: sommer- og vinterstart;103;0;232;72;Alle optaget, ledige pladser;
+73110;70000;Designteknolog, Herning, Studiestart: sommerstart;224;4;455;269;Kun kvote 2;Ledige pladser
+73115;70000;AP Graduate in Design, Technology and Business, Herning, Study start: Summer start;91;3;478;243;Kun kvote 2;
+84360;70000;Produktionsteknolog, Horsens, Studiestart: sommerstart;11;0;24;13;Alle optaget, ledige pladser;
+88160;70000;Kort- og landmålingstekniker, Horsens, Studiestart: sommerstart;30;0;44;29;Alle optaget, ledige pladser;
+89080;70000;Sundhedsadministrativ koordinator, Aarhus C, Studiestart: sommer- og vinterstart;74;0;150;76;Alle optaget, ledige pladser;
+89086;70000;Sundhedsadministrativ koordinator, Viborg, Studiestart: sommer- og vinterstart;41;0;78;44;Alle optaget, ledige pladser;
+;70000;Professionshøjskolen VIA University College i alt;5.109;395;14.251;7.119;;
+;75000;Professionshøjskolen University College Nordjylland;;;;;;
+40690;75000;Professionsbachelor, bioanalytiker, Hjørring, Studiestart: sommerstart;30;3;89;39;6,9;Alle optaget, ledige pladser
+40692;75000;Professionsbachelor, bioanalytiker, Hjørring, Studiestart: vinterstart;21;0;66;19;Alle optaget, ledige pladser;
+41210;75000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Aalborg SV, Studiestart: sommerstart;55;0;117;58;Alle optaget, ledige pladser;
+41211;75000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Aalborg SV, Studiestart: vinterstart;19;0;55;21;Alle optaget, ledige pladser;
+41590;75000;Professionsbachelor, eksport og teknologi, Aalborg, E-læring, Studiestart: sommerstart;21;0;44;17;Alle optaget, ledige pladser;
+42140;75000;Professionsbachelor, ergoterapeut, Aalborg Øst, Studiestart: sommerstart;44;0;110;34;Alle optaget;Alle optaget, ledige pladser
+42142;75000;Professionsbachelor, ergoterapeut, Aalborg Øst, Studiestart: vinterstart;12;0;54;12;Alle optaget, ledige pladser;
+45880;75000;Professionsbachelor, finans, Aalborg, Studiestart: sommerstart;108;0;244;105;Alle optaget, ledige pladser;
+46170;75000;Professionsbachelor, folkeskolelærer, Aalborg SØ, Studiestart: sommerstart;171;0;318;183;Alle optaget, ledige pladser;
+46180;75000;Professionsbachelor, folkeskolelærer, Hjørring, Studiestart: sommerstart;28;0;55;31;Alle optaget, ledige pladser;
+46185;75000;Professionsbachelor, folkeskolelærer, Hjørring, Studiestart: vinterstart;2;0;21;4;Alle optaget, ledige pladser;
+47160;75000;Professionsbachelor, fysioterapeut, Aalborg Øst, Studiestart: sommerstart;81;25;268;126;8,5;4,9
+47162;75000;Professionsbachelor, fysioterapeut, Aalborg Øst, Studiestart: vinterstart;69;4;200;44;5,1;Alle optaget, ledige pladser
+50020;75000;Professionsbachelor, jordemoder, Aalborg Øst, Studiestart: sommerstart;40;10;344;109;10,2;10,0
+50022;75000;Professionsbachelor, jordemoder, Aalborg Øst, Studiestart: vinterstart;40;15;307;81;10,2;9,5
+52650;75000;Professionsbachelor, offentlig administration, Aalborg, Studiestart: sommerstart;30;0;72;30;Alle optaget, ledige pladser;
+53300;75000;Professionsbachelor, pædagog, Aalborg SØ, Studiestart: sommerstart;196;12;394;231;5,1;Alle optaget, ledige pladser
+53302;75000;Professionsbachelor, pædagog, Aalborg SØ, Studiestart: vinterstart;70;0;176;67;Alle optaget, ledige pladser;
+53330;75000;Professionsbachelor, pædagog, Hjørring, Studiestart: sommerstart;67;0;113;67;Alle optaget, ledige pladser;
+53332;75000;Professionsbachelor, pædagog, Hjørring, Studiestart: vinterstart;19;0;63;21;Alle optaget, ledige pladser;
+53340;75000;Professionsbachelor, pædagog, Thisted, Studiestart: sommerstart;37;0;53;38;Alle optaget, ledige pladser;
+53342;75000;Professionsbachelor, pædagog, Thisted, Studiestart: vinterstart;0;0;15;3;Ikke oprettet;
+54060;75000;Professionsbachelor, radiograf, Aalborg Øst, Studiestart: sommerstart;35;10;185;67;8,2;4,8
+54062;75000;Professionsbachelor, radiograf, Aalborg Øst, Studiestart: vinterstart;30;0;112;13;Alle optaget, ledige pladser;
+56390;75000;Professionsbachelor, sygeplejerske, Thisted, Studiestart: sommerstart;19;0;36;19;Alle optaget, ledige pladser;
+56420;75000;Professionsbachelor, sygeplejerske, Aalborg Øst, Studiestart: sommerstart;159;23;411;171;6,9;Alle optaget, ledige pladser
+56422;75000;Professionsbachelor, sygeplejerske, Aalborg Øst, Studiestart: vinterstart;82;0;246;62;Alle optaget, ledige pladser;
+56440;75000;Professionsbachelor, sygeplejerske, Hjørring, Studiestart: sommerstart;42;0;90;39;Alle optaget, ledige pladser;
+56442;75000;Professionsbachelor, sygeplejerske, Hjørring, Studiestart: vinterstart;10;0;47;13;Alle optaget, ledige pladser;
+56443;75000;Professionsbachelor, sygeplejerske, Hjørring, E-læring, Studiestart: vinterstart;31;0;55;42;Alle optaget, ledige pladser;
+70390;75000;Automationsteknolog, Aalborg SV, Studiestart: sommerstart;27;0;60;31;Alle optaget, ledige pladser;
+71810;75000;Datamatiker, Aalborg SV, Studiestart: sommerstart;93;0;190;98;Alle optaget, ledige pladser;
+71812;75000;Datamatiker, Aalborg SV, Studiestart: vinterstart;20;0;64;24;Alle optaget, ledige pladser;
+73160;75000;Designteknolog, Aalborg SV, Studiestart: sommerstart;40;0;119;49;Kun kvote 2, ledige pladser;
+73390;75000;Energiteknolog, Aalborg SV, Studiestart: sommerstart;0;0;8;2;Ikke oprettet;
+74160;75000;Finansøkonom, Aalborg, Studiestart: sommerstart;164;0;356;161;Alle optaget, ledige pladser;
+74165;75000;Finansøkonom, Thisted, Studiestart: sommerstart;15;0;25;18;Alle optaget, ledige pladser;
+74460;75000;Financial controller, Aalborg, Studiestart: sommerstart;29;0;63;30;Alle optaget, ledige pladser;
+75410;75000;Installatør, stærkstrøm, Aalborg SV, Studiestart: sommerstart;5;0;9;6;Udenfor kvotesystemet, ledige pladser;
+75413;75000;Installatør, stærkstrøm, Aalborg SV, E-læring, Studiestart: vinterstart;3;0;7;4;Udenfor kvotesystemet, ledige pladser;
+75415;75000;Installatør, VVS, Aalborg SV, Studiestart: sommerstart;1;0;4;2;Udenfor kvotesystemet, ledige pladser;
+75418;75000;Installatør, VVS, Aalborg SV, E-læring, Studiestart: sommerstart;4;0;8;6;Udenfor kvotesystemet, ledige pladser;
+76260;75000;It-teknolog, Aalborg SV, Studiestart: sommerstart;40;2;100;53;4,8;Alle optaget, ledige pladser
+79610;75000;Markedsføringsøkonom, Aalborg, Studiestart: sommerstart;112;0;238;112;Alle optaget, ledige pladser;
+79611;75000;Markedsføringsøkonom, Aalborg, E-læring, Studiestart: sommerstart;54;0;162;51;Alle optaget, ledige pladser;
+81610;75000;Multimediedesigner, Aalborg SV, Studiestart: sommerstart;34;0;99;33;Alle optaget, ledige pladser;
+84460;75000;Produktionsteknolog, Aalborg SV, Studiestart: sommerstart;11;0;29;12;Alle optaget, ledige pladser;
+84462;75000;Produktionsteknolog, Aalborg SV, Studiestart: vinterstart;0;0;12;1;Ikke oprettet;
+86210;75000;Service- og oplevelsesøkonom, Aalborg, Studiestart: sommerstart;67;0;118;67;Alle optaget, ledige pladser;
+86212;75000;Service- og oplevelsesøkonom, Aalborg, E-læring, Studiestart: sommerstart;57;0;115;63;Alle optaget, ledige pladser;
+86220;75000;Service- og oplevelsesøkonom, Frederikshavn, Studiestart: sommerstart;15;0;22;17;Alle optaget, ledige pladser;
+89090;75000;Sundhedsadministrativ koordinator, Aalborg Øst, Studiestart: sommerstart;40;7;94;50;5,2;Alle optaget, ledige pladser
+89092;75000;Sundhedsadministrativ koordinator, Aalborg Øst, Studiestart: vinterstart;16;0;48;16;Alle optaget, ledige pladser;
+;75000;Professionshøjskolen University College Nordjylland i alt;2.415;111;6.310;2.672;;
+;78100;Danmarks Medie- og Journalisthøjskole;;;;;;
+47510;78100;Professionsbachelor, visuel kommunikation, København S, Studiestart: sommerstart;81;6;664;308;Kun kvote 2;
+50310;78100;Professionsbachelor, journalist, Aarhus N, Studiestart: sommer- og vinterstart;224;20;752;459;Kun kvote 2;
+50315;78100;Professionsbachelor, fotojournalist, Aarhus N, Studiestart: sommerstart;12;3;116;55;Kun kvote 2;
+50745;78100;Professionsbachelor, kommunikation, København S, Studiestart: vinterstart;53;14;348;181;11,1;10,1
+50750;78100;Professionsbachelor, kommunikation, Aarhus N, Studiestart: sommerstart;52;14;318;169;11,2;11,0
+52010;78100;Professionsbachelor, medieproduktion og ledelse, København S, Studiestart: sommerstart;50;7;504;212;Kun kvote 2;
+52030;78100;Professionsbachelor, tv- og medietilrettelæggelse, København S, Studiestart: sommerstart;37;7;436;198;Kun kvote 2;
+;78100;Danmarks Medie- og Journalisthøjskole i alt;509;71;3.138;1.582;;
+;78300;Den Frie Lærerskole;;;;;;
+46510;78300;Lærer til de frie skoler, Vester Skerninge, Studiestart: sommerstart;66;0;98;83;Alle optaget, ledige pladser;
+;78300;Den Frie Lærerskole i alt;66;0;98;83;;
+;78600;Maskinmesterskolen København;;;;;;
+51010;78600;Professionsbachelor, maskinmester, Kgs. Lyngby, Studiestart: sommerstart;189;10;418;303;Udenfor kvotesystemet;
+51030;78600;Professionsbachelor, maskinmester, Sisimiut, Studiestart: sommerstart;19;0;21;20;Udenfor kvotesystemet;
+;78600;Maskinmesterskolen København i alt;208;10;439;323;;
+;78700;Svendborg International Maritime Academy, SIMAC;;;;;;
+51110;78700;Professionsbachelor, maskinmester, Svendborg, Studiestart: sommerstart;84;0;122;79;Udenfor kvotesystemet, ledige pladser;
+79710;78700;Professionsbachelor, skibsofficer, Svendborg, Studiestart: sommerstart;8;0;16;5;Udenfor kvotesystemet, ledige pladser;
+79810;78700;Professionsbachelor, skibsfører, Svendborg, Studiestart: sommerstart;58;0;68;57;Udenfor kvotesystemet, ledige pladser;
+;78700;Svendborg International Maritime Academy, SIMAC i alt;150;0;206;141;;
+;78800;Fredericia Maskinmesterskole;;;;;;
+51190;78800;Professionsbachelor, maskinmester, Sønderborg, Studiestart: sommerstart;7;0;23;6;Udenfor kvotesystemet, ledige pladser;
+51200;78800;Professionsbachelor, maskinmester, Esbjerg, Studiestart: sommer- og vinterstart;33;0;64;32;Udenfor kvotesystemet, ledige pladser;
+51210;78800;Professionsbachelor, maskinmester, Fredericia, Studiestart: sommer- og vinterstart;47;1;95;55;Udenfor kvotesystemet, ledige pladser;
+;78800;Fredericia Maskinmesterskole i alt;87;1;182;93;;
+;78900;Aarhus Maskinmesterskole;;;;;;
+51260;78900;Professionsbachelor, maskinmester, Aarhus C, Studiestart: sommerstart;156;19;362;262;Udenfor kvotesystemet;
+51265;78900;Professionsbachelor, maskinmester, Aarhus C, Studiestart: vinterstart;49;0;99;43;Udenfor kvotesystemet, ledige pladser;
+51267;78900;Professionsbachelor, maskinmester, Aarhus C, E-læring, Studiestart: vinterstart;11;0;31;16;Udenfor kvotesystemet, ledige pladser;
+51270;78900;Professionsbachelor, maskinmester, Viborg, Studiestart: sommerstart;24;0;63;32;Udenfor kvotesystemet;
+51275;78900;Professionsbachelor, maskinmester, Viborg, Studiestart: vinterstart;15;0;21;16;Udenfor kvotesystemet, ledige pladser;
+;78900;Aarhus Maskinmesterskole i alt;255;19;576;369;;
+;79000;MARTEC - Maritime and Polytechnic University College;;;;;;
+51350;79000;Professionsbachelor, maskinmester, Thisted, Studiestart: sommerstart;6;0;12;5;Udenfor kvotesystemet, ledige pladser;
+51360;79000;Professionsbachelor, maskinmester, Frederikshavn, Studiestart: sommerstart;108;0;136;108;Udenfor kvotesystemet, ledige pladser;
+79890;79000;Professionsbachelor, skibsfører, Frederikshavn, Studiestart: sommerstart;21;0;36;16;Udenfor kvotesystemet, ledige pladser;
+79950;79000;Professionsbachelor, skibsteknik og marin konstruktion, Frederikshavn, Studiestart: sommerstart;2;0;8;2;Udenfor kvotesystemet, ledige pladser;
+;79000;MARTEC - Maritime and Polytechnic University College i alt;137;0;192;131;;
+;80000;Erhvervsakademiet Copenhagen Business Academy;;;;;;
+44300;80000;Professionsbachelor, procesøkonomi og værdikædeledelse , Kgs. Lyngby, Studiestart: sommerstart;38;4;110;38;4,6;Alle optaget
+45810;80000;Professionsbachelor, finans, København K, Studiestart: sommerstart;360;27;992;384;6,4;4,6
+71110;80000;Datamatiker, Kgs. Lyngby, Studiestart: sommerstart;82;4;318;78;3,9;Alle optaget
+74010;80000;Finansøkonom, København K, Studiestart: sommerstart;451;31;1.394;508;5,5;4,2
+74011;80000;Finansøkonom, Hillerød, E-læring, Studiestart: sommerstart;60;2;300;126;7,0;6,9
+74022;80000;Finansøkonom, Rønne, Studiestart: sommerstart;9;0;15;8;Alle optaget, ledige pladser;
+74024;80000;Finansøkonom, Hillerød, Studiestart: sommerstart;76;6;358;78;4,4;3,4
+74400;80000;Financial controller, København K, Studiestart: sommerstart;91;6;302;93;5,3;3,6
+74414;80000;Financial controller, Hillerød, Studiestart: sommerstart;38;1;134;37;3,6;Alle optaget
+74605;80000;Handelsøkonom, København K, Studiestart: sommerstart;164;19;543;182;5,8;4,0
+74607;80000;Handelsøkonom, Hillerød, Studiestart: sommerstart;38;2;123;28;3,5;Alle optaget
+77500;80000;Miljøteknolog, Hillerød, Studiestart: sommerstart;20;0;46;25;Alle optaget, ledige pladser;
+78060;80000;Laborant, Hillerød, Studiestart: sommerstart;40;1;146;52;5,9;Alle optaget
+78065;80000;Laborant, Hillerød, Studiestart: vinterstart;16;0;71;10;3,3;Alle optaget
+79010;80000;Markedsføringsøkonom, København K, Studiestart: sommerstart;516;34;1.132;459;6,0;3,1
+79011;80000;Markedsføringsøkonom, Hillerød, E-læring, Studiestart: sommerstart;60;3;193;76;6,0;Alle optaget
+79068;80000;Markedsføringsøkonom, Hillerød, Studiestart: sommerstart;38;1;121;28;2,5;Alle optaget
+81060;80000;Multimediedesigner, Kgs. Lyngby, Studiestart: sommerstart;81;0;237;47;Alle optaget, ledige pladser;
+86010;80000;Service- og oplevelsesøkonom, København K, Studiestart: sommerstart;171;0;343;150;Alle optaget, ledige pladser;
+86011;80000;Service- og oplevelsesøkonom, Hillerød, E-læring, Studiestart: sommerstart;60;0;144;60;3,3;Alle optaget
+87010;80000;Logistikøkonom , København K, Studiestart: sommerstart;90;2;222;79;4,3;Alle optaget
+;80000;Erhvervsakademiet Copenhagen Business Academy i alt;2.499;143;7.244;2.546;;
+;81000;Københavns Erhvervsakademi (KEA);;;;;;
+41010;81000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, København N, Studiestart: sommerstart;285;30;725;351;6,6;4,4
+41020;81000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Hillerød, Studiestart: sommerstart;50;7;181;61;4,6;Alle optaget
+52710;81000;Professionsbachelor, optometri, København N, Studiestart: sommerstart;91;0;189;82;Alle optaget, ledige pladser;
+58500;81000;Professionsbachelor, økonomi og informationsteknologi, København N, Studiestart: sommerstart;140;6;361;128;4,7;Alle optaget
+59010;81000;Professionsbachelor, smykker, teknologi og business, København N, Studiestart: sommerstart;34;3;288;148;Kun kvote 2;
+60210;81000;Professionsbachelor, it-arkitektur, København N, Studiestart: sommerstart;35;3;159;48;7,0;6,5
+70310;81000;Automationsteknolog, København NV, Studiestart: sommerstart;123;0;213;116;Alle optaget, ledige pladser;
+71060;81000;Datamatiker, København N, Studiestart: sommerstart;180;20;586;228;5,6;3,8
+72010;81000;Byggekoordinator, København N, Studiestart: sommerstart;72;3;161;69;3,1;Alle optaget
+73010;81000;Designteknolog, København N, Studiestart: sommerstart;192;27;1.038;538;Kun kvote 2;
+73310;81000;Energiteknolog, København NV, Studiestart: sommerstart;16;0;47;13;Alle optaget, ledige pladser;
+73610;81000;Entreprenørskab og design, København N, Studiestart: sommerstart;88;7;461;141;Kun kvote 2;
+75010;81000;Installatør, stærkstrøm, København NV, Studiestart: sommerstart;33;0;44;33;Udenfor kvotesystemet;
+75015;81000;Installatør, VVS, København NV, Studiestart: sommerstart;20;0;37;23;Udenfor kvotesystemet;
+76010;81000;It-teknolog, København NV, Studiestart: sommerstart;166;12;373;204;4,8;Alle optaget
+81010;81000;Multimediedesigner, København N, Studiestart: sommerstart;230;20;671;239;7,6;6,5
+84010;81000;Produktionsteknolog, København N, Studiestart: sommerstart;73;0;166;56;Alle optaget, ledige pladser;
+88010;81000;Kort- og landmålingstekniker, København N, Studiestart: sommerstart;35;0;63;37;Alle optaget, ledige pladser;
+;81000;Københavns Erhvervsakademi (KEA) i alt;1.863;138;5.763;2.515;;
+;82000;Zealand Sjællands Erhvervsakademi;;;;;;
+41060;82000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Næstved, Studiestart: sommerstart;58;0;156;61;Alle optaget, ledige pladser;
+41062;82000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Næstved, Studiestart: vinterstart;12;0;43;11;Alle optaget, ledige pladser;
+41067;82000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Næstved, E-læring, Studiestart: sommerstart;36;0;98;44;Alle optaget, ledige pladser;
+41069;82000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Næstved, E-læring, Studiestart: vinterstart;12;0;43;20;Alle optaget, ledige pladser;
+41070;82000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Nykøbing F, Studiestart: sommerstart;17;0;30;19;Alle optaget, ledige pladser;
+43190;82000;Professionsbachelor, fremmedsprog og digital markedskommunikation, Slagelse, Studiestart: sommerstart;25;0;58;20;Alle optaget, ledige pladser;
+44258;82000;Professionsbachelor, event management og økonomi, Roskilde, Studiestart: sommerstart;97;0;195;84;Alle optaget, ledige pladser;
+45820;82000;Professionsbachelor, finans, Næstved, Studiestart: sommerstart;49;0;127;34;Alle optaget, ledige pladser;
+47710;82000;Professionsbachelor, urban landskabsingeniør, Fredensborg, Studiestart: sommerstart;40;3;97;41;6,5;Alle optaget, ledige pladser
+58600;82000;Professionsbachelor, økonomi og informationsteknologi, Roskilde, Studiestart: sommerstart;0;0;49;9;Ikke oprettet;
+70020;82000;Administrationsøkonom, Køge, Studiestart: sommerstart;38;3;169;64;5,3;3,8
+70400;82000;Autoteknolog, Køge, Studiestart: sommerstart;10;0;33;10;Alle optaget, ledige pladser;
+70402;82000;Autoteknolog, Køge, Studiestart: vinterstart;7;0;12;4;Alle optaget, ledige pladser;
+71210;82000;Datamatiker, Roskilde, Studiestart: sommerstart;106;1;282;94;3,0;Alle optaget, ledige pladser
+71212;82000;Datamatiker, Roskilde, Studiestart: vinterstart;35;0;141;33;Alle optaget, ledige pladser;
+71310;82000;Datamatiker, Næstved, Studiestart: sommerstart;32;0;87;32;Alle optaget;Alle optaget, ledige pladser
+74028;82000;Finansøkonom, Holbæk, Studiestart: sommerstart;37;2;117;44;4,4;3,9
+74030;82000;Finansøkonom, Næstved, Studiestart: sommerstart;75;1;194;68;2,8;Alle optaget, ledige pladser
+74032;82000;Finansøkonom, Køge, Studiestart: sommerstart;75;7;333;102;4,6;2,7
+74610;82000;Handelsøkonom, Næstved, Studiestart: sommerstart;33;0;75;31;Alle optaget;Alle optaget, ledige pladser
+75115;82000;Installatør, VVS, Slagelse, Studiestart: sommerstart;0;0;11;9;Ikke oprettet;
+75160;82000;Installatør, stærkstrøm, Næstved, Studiestart: sommerstart;9;0;12;10;Udenfor kvotesystemet, ledige pladser;
+76050;82000;It-teknolog, Køge, Studiestart: sommerstart;49;0;123;40;Alle optaget, ledige pladser;
+77010;82000;Jordbrugsteknolog, Slagelse, Studiestart: sommerstart;12;0;36;13;Alle optaget, ledige pladser;
+78110;82000;Laborant, Roskilde, Studiestart: sommerstart;27;3;156;49;6,9;5,5
+78112;82000;Laborant, Roskilde, Studiestart: vinterstart;17;0;78;8;Alle optaget, ledige pladser;
+78160;82000;Laborant, Slagelse, Studiestart: sommerstart;25;2;89;38;6,4;Alle optaget, ledige pladser
+78162;82000;Laborant, Slagelse, Studiestart: vinterstart;8;0;34;8;Alle optaget, ledige pladser;
+79160;82000;Markedsføringsøkonom, Roskilde, Studiestart: sommerstart;44;0;128;37;Alle optaget, ledige pladser;
+79161;82000;Markedsføringsøkonom, Roskilde, E-læring, Studiestart: sommerstart;35;0;108;32;Alle optaget, ledige pladser;
+79162;82000;Markedsføringsøkonom, Roskilde, Studiestart: vinterstart;13;0;38;13;Alle optaget, ledige pladser;
+79163;82000;Markedsføringsøkonom, Roskilde, E-læring, Studiestart: vinterstart;7;0;30;6;Alle optaget, ledige pladser;
+79168;82000;Markedsføringsøkonom, Slagelse, Studiestart: sommerstart;8;0;38;11;Alle optaget, ledige pladser;
+79180;82000;Markedsføringsøkonom, Nykøbing F, Studiestart: sommerstart;6;0;20;8;Alle optaget, ledige pladser;
+81160;82000;Multimediedesigner, Slagelse, Studiestart: sommerstart;18;0;48;20;Alle optaget, ledige pladser;
+81210;82000;Multimediedesigner, Køge, Studiestart: sommerstart;28;0;99;20;Alle optaget, ledige pladser;
+81212;82000;Multimediedesigner, Køge, Studiestart: vinterstart;5;0;26;5;Alle optaget, ledige pladser;
+81230;82000;Multimediedesigner, Nykøbing F, Studiestart: sommerstart;11;0;22;10;Alle optaget, ledige pladser;
+83060;82000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Roskilde, Studiestart: sommerstart;28;0;64;31;Alle optaget, ledige pladser;
+83065;82000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Roskilde, Studiestart: vinterstart;3;0;27;7;Alle optaget, ledige pladser;
+84060;82000;Produktionsteknolog, Slagelse, Studiestart: sommerstart;8;0;19;8;Alle optaget, ledige pladser;
+86080;82000;Service- og oplevelsesøkonom, Slagelse, Studiestart: sommerstart;0;0;17;6;Ikke oprettet;
+86090;82000;Service- og oplevelsesøkonom, Køge, Studiestart: sommerstart;20;0;47;20;Alle optaget, ledige pladser;
+86091;82000;Service- og oplevelsesøkonom, Køge, E-læring, Studiestart: sommerstart;17;0;59;17;Alle optaget, ledige pladser;
+86092;82000;Service- og oplevelsesøkonom, Køge, Studiestart: vinterstart;2;0;9;1;Alle optaget, ledige pladser;
+87030;82000;Logistikøkonom , Køge, Studiestart: sommerstart;23;0;53;20;Alle optaget, ledige pladser;
+;82000;Zealand Sjællands Erhvervsakademi i alt;1.217;22;3.730;1.272;;
+;84000;IBA Erhvervsakademi Kolding;;;;;;
+45840;84000;Professionsbachelor, finans, Kolding, Studiestart: sommerstart;54;0;113;50;Alle optaget, ledige pladser;
+60270;84000;Professionsbachelor, it-arkitektur, Kolding, Studiestart: sommerstart;16;0;40;14;Alle optaget, ledige pladser;
+73650;84000;Entreprenørskab og design, Kolding, Studiestart: sommerstart;24;0;60;28;Kun kvote 2;Ledige pladser
+74070;84000;Finansøkonom, Kolding, Studiestart: sommerstart;84;0;179;84;Alle optaget, ledige pladser;
+74071;84000;Finansøkonom, Kolding, E-læring, Studiestart: sommerstart;79;0;195;71;Alle optaget, ledige pladser;
+74446;84000;Financial controller, Kolding, Studiestart: sommerstart;21;0;46;21;Alle optaget, ledige pladser;
+79260;84000;Markedsføringsøkonom, Kolding, Studiestart: sommerstart;40;0;78;37;Alle optaget, ledige pladser;
+79261;84000;Markedsføringsøkonom, Kolding, E-læring, Studiestart: sommerstart;53;0;160;49;Alle optaget, ledige pladser;
+81360;84000;Multimediedesigner, Kolding, Studiestart: sommerstart;20;0;70;20;Alle optaget, ledige pladser;
+81361;84000;Multimediedesigner, Kolding, E-læring, Studiestart: sommerstart;82;16;235;136;6,6;Alle optaget, ledige pladser
+84130;84000;Produktionsteknolog, Kolding, Studiestart: sommerstart;9;0;22;10;Alle optaget, ledige pladser;
+;84000;IBA Erhvervsakademi Kolding i alt;482;16;1.198;520;;
+;85000;Erhvervsakademi SydVest;;;;;;
+41115;85000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Esbjerg, Studiestart: sommer- og vinterstart;29;0;55;28;Alle optaget, ledige pladser;
+41118;85000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Esbjerg, E-læring, Studiestart: sommerstart;74;0;125;76;Alle optaget, ledige pladser;
+45845;85000;Professionsbachelor, finans, Esbjerg, Studiestart: sommerstart;23;0;50;23;Alle optaget, ledige pladser;
+45846;85000;Professionsbachelor, finans, Esbjerg, E-læring, Studiestart: sommerstart;68;0;146;74;Alle optaget, ledige pladser;
+71456;85000;Datamatiker, Tønder, Studiestart: sommerstart;6;0;14;7;Alle optaget, ledige pladser;
+71460;85000;Datamatiker, Sønderborg, Studiestart: sommerstart;20;0;34;17;Alle optaget, ledige pladser;
+71510;85000;Datamatiker, Esbjerg, Studiestart: sommerstart;29;0;53;30;Alle optaget, ledige pladser;
+71515;85000;AP Graduate in Computer Science, Esbjerg, Study start: Summer start;28;6;267;86;4,6;2,3
+72166;85000;Byggekoordinator, Sønderborg, Studiestart: sommerstart;0;0;11;7;Ikke oprettet;
+73060;85000;Designteknolog, Sønderborg, Studiestart: sommerstart;0;0;17;4;Ikke oprettet;
+73344;85000;Energiteknolog, Esbjerg, Studiestart: sommerstart;0;0;6;2;Ikke oprettet;
+73410;85000;Driftsteknolog - Offshore, Esbjerg, Studiestart: sommerstart;6;0;16;7;Alle optaget, ledige pladser;
+73411;85000;Driftsteknolog - Offshore, Esbjerg, E-læring, Studiestart: sommerstart;12;0;26;9;Alle optaget, ledige pladser;
+74080;85000;Finansøkonom, Esbjerg, Studiestart: sommerstart;49;0;99;51;Alle optaget, ledige pladser;
+74084;85000;Finansøkonom, Sønderborg, Studiestart: sommerstart;25;0;58;25;Alle optaget, ledige pladser;
+75230;85000;Installatør, stærkstrøm, Esbjerg, Studiestart: sommerstart;0;0;2;1;Ikke oprettet;
+79290;85000;Markedsføringsøkonom, Sønderborg, Studiestart: sommerstart;0;0;34;6;Ikke oprettet;
+79310;85000;Markedsføringsøkonom, Esbjerg, Studiestart: sommerstart;30;0;55;30;Alle optaget, ledige pladser;
+79311;85000;Markedsføringsøkonom, Esbjerg, E-læring, Studiestart: sommerstart;35;0;107;36;Alle optaget, ledige pladser;
+81410;85000;Multimediedesigner, Esbjerg, Studiestart: sommerstart;18;0;39;18;Alle optaget, ledige pladser;
+81412;85000;AP Graduate in Multimedia Design, Esbjerg, Study start: Summer start;20;6;202;70;8,3;
+81420;85000;Multimediedesigner, Sønderborg, Studiestart: sommerstart;13;0;34;12;Alle optaget, ledige pladser;
+84160;85000;Produktionsteknolog, Sønderborg, Studiestart: sommerstart;7;0;15;6;Alle optaget, ledige pladser;
+84210;85000;Produktionsteknolog, Esbjerg, Studiestart: sommerstart;11;0;20;12;Alle optaget, ledige pladser;
+86114;85000;Service- og oplevelsesøkonom, Sønderborg, Studiestart: sommerstart;15;0;24;12;Alle optaget, ledige pladser;
+86120;85000;Service- og oplevelsesøkonom, Esbjerg, Studiestart: sommerstart;12;0;27;14;Alle optaget, ledige pladser;
+;85000;Erhvervsakademi SydVest i alt;530;12;1.536;663;;
+;86000;Erhvervsakademi MidtVest;;;;;;
+45850;86000;Professionsbachelor, finans, Herning, Studiestart: sommerstart;16;0;48;14;Alle optaget, ledige pladser;
+71610;86000;Datamatiker, Herning, Studiestart: sommerstart;30;0;62;31;3,8;Alle optaget, ledige pladser
+72140;86000;Byggekoordinator, Herning, Studiestart: sommerstart;7;0;20;9;Alle optaget, ledige pladser;
+74090;86000;Finansøkonom, Herning, Studiestart: sommerstart;41;0;90;44;Alle optaget, ledige pladser;
+74100;86000;Finansøkonom, Holstebro, Studiestart: sommerstart;33;0;65;38;Alle optaget, ledige pladser;
+75310;86000;Installatør, stærkstrøm, Herning, Studiestart: sommerstart;6;0;8;6;Udenfor kvotesystemet, ledige pladser;
+75315;86000;Installatør, VVS, Herning, Studiestart: sommerstart;5;0;8;6;Udenfor kvotesystemet, ledige pladser;
+78310;86000;Laborant, Holstebro, Studiestart: sommerstart;25;0;56;30;3,4;Alle optaget, ledige pladser
+79360;86000;Markedsføringsøkonom, Herning, Studiestart: sommerstart;28;0;59;27;Alle optaget, ledige pladser;
+81460;86000;Multimediedesigner, Herning, Studiestart: sommerstart;25;0;58;20;Alle optaget, ledige pladser;
+83210;86000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Holstebro, Studiestart: sommerstart;11;0;21;13;Alle optaget, ledige pladser;
+84260;86000;Produktionsteknolog, Herning, Studiestart: sommerstart;17;0;30;18;Alle optaget, ledige pladser;
+86150;86000;Service- og oplevelsesøkonom, Holstebro, Studiestart: sommerstart;16;0;28;17;Alle optaget, ledige pladser;
+;86000;Erhvervsakademi MidtVest i alt;260;0;553;273;;
+;87000;Erhvervsakademi Aarhus;;;;;;
+43320;87000;Professionsbachelor, e-commerce og digital marketing, Viby J, Studiestart: sommerstart;90;15;346;161;7,2;5,8
+45860;87000;Professionsbachelor, finans, Viby J, Studiestart: sommerstart;260;20;637;301;6,4;4,6
+47360;87000;Professionsbachelor, fødevareteknologi og applikation, Viby J, Studiestart: sommerstart;16;0;40;11;Alle optaget, ledige pladser;
+47760;87000;Professionsbachelor, urban landskabsingeniør, Viby J, Studiestart: sommerstart;28;0;59;23;Alle optaget, ledige pladser;
+47810;87000;Professionsbachelor, natur og jordbrugsproduktion, Viby J, Studiestart: sommerstart;11;0;31;7;Alle optaget, ledige pladser;
+47900;87000;Professionsbachelor, business og vandteknologi, Viby J, Studiestart: sommerstart;13;0;33;11;Alle optaget, ledige pladser;
+58800;87000;Professionsbachelor, økonomi og informationsteknologi, Viby J, Studiestart: sommerstart;72;0;185;69;4,2;Alle optaget, ledige pladser
+60300;87000;Professionsbachelor, it-arkitektur, Viby J, Studiestart: sommerstart;37;5;117;37;5,2;Alle optaget, ledige pladser
+70350;87000;Automationsteknolog, Aarhus C, Studiestart: sommerstart;40;8;107;61;4,9;Alle optaget, ledige pladser
+71710;87000;Datamatiker, Viby J, Studiestart: sommerstart;68;20;320;183;6,9;5,5
+74110;87000;Finansøkonom, Viby J, Studiestart: sommerstart;260;20;703;326;5,8;4,4
+74450;87000;Financial controller, Viby J, Studiestart: sommerstart;46;2;117;46;4,3;Alle optaget, ledige pladser
+76210;87000;It-teknolog, Viby J, Studiestart: sommerstart;37;13;160;76;5,8;3,8
+77110;87000;Jordbrugsteknolog, Viby J, Studiestart: sommerstart;120;0;158;116;Alle optaget, ledige pladser;
+77700;87000;Miljøteknolog, Viby J, Studiestart: sommerstart;17;0;47;18;Alle optaget, ledige pladser;
+78360;87000;Laborant, Viby J, Studiestart: sommerstart;76;0;155;73;Alle optaget, ledige pladser;
+79410;87000;Markedsføringsøkonom, Viby J, Studiestart: sommerstart;431;0;746;367;Alle optaget, ledige pladser;
+81560;87000;Multimediedesigner, Viby J, Studiestart: sommerstart;126;3;276;108;4,9;Alle optaget, ledige pladser
+81565;87000;AP Graduate in Multimedia Design, Viby J, Study start: Summer start;44;8;313;136;9,5;7,7
+84290;87000;Produktionsteknolog, Aarhus C, Studiestart: sommerstart;24;0;66;25;Alle optaget, ledige pladser;
+86156;87000;Service- og oplevelsesøkonom, Viby J, Studiestart: sommerstart;104;15;268;148;7,1;4,5
+;87000;Erhvervsakademi Aarhus i alt;1.920;129;4.884;2.303;;
+;88000;Erhvervsakademi Dania;;;;;;
+45890;88000;Professionsbachelor, finans, Silkeborg, Studiestart: sommerstart;36;1;65;24;3,1;Alle optaget, ledige pladser
+52750;88000;Professionsbachelor, optometri, Randers SØ, Studiestart: sommerstart;52;0;101;47;Alle optaget, ledige pladser;
+52753;88000;Professionsbachelor, optometri, Randers SØ, E-læring, Studiestart: sommerstart;20;0;44;17;Alle optaget, ledige pladser;
+58820;88000;Professionsbachelor, økonomi og informationsteknologi, Viborg, Studiestart: sommerstart;2;0;12;2;Alle optaget;
+70200;88000;Administrationsøkonom, Horsens, Studiestart: sommerstart;27;0;67;32;Alle optaget, ledige pladser;
+70378;88000;Automationsteknolog, Randers SØ, Studiestart: sommerstart;17;0;33;15;Alle optaget, ledige pladser;
+71660;88000;Datamatiker, Skive, Studiestart: sommerstart;5;0;24;8;Alle optaget, ledige pladser;
+71665;88000;Datamatiker, Grenaa, Studiestart: sommerstart;27;0;44;26;Alle optaget, ledige pladser;
+73372;88000;Energiteknolog, Randers SØ, Studiestart: sommerstart;9;0;15;10;Alle optaget, ledige pladser;
+74210;88000;Finansøkonom, Hobro, Studiestart: sommerstart;42;0;66;41;Alle optaget, ledige pladser;
+74215;88000;Finansøkonom, Silkeborg, Studiestart: sommerstart;56;0;137;40;Alle optaget, ledige pladser;
+74216;88000;Finansøkonom, Silkeborg, E-læring, Studiestart: sommerstart;125;6;245;139;3,9;Alle optaget, ledige pladser
+74217;88000;Finansøkonom, Silkeborg, Studiestart: vinterstart;22;0;56;18;Alle optaget, ledige pladser;
+74660;88000;Handelsøkonom, Randers SØ, Studiestart: sommerstart;30;0;64;29;Alle optaget, ledige pladser;
+74662;88000;Handelsøkonom, Randers SØ, Studiestart: vinterstart;4;0;26;4;Alle optaget, ledige pladser;
+74670;88000;Handelsøkonom, Silkeborg, Studiestart: sommerstart;46;0;77;41;Alle optaget, ledige pladser;
+74672;88000;Handelsøkonom, Silkeborg, Studiestart: vinterstart;8;0;25;8;Alle optaget, ledige pladser;
+74675;88000;Handelsøkonom, Hobro, Studiestart: sommerstart;10;0;24;11;Alle optaget, ledige pladser;
+74680;88000;Handelsøkonom, Horsens, Studiestart: sommerstart;22;0;66;21;Alle optaget, ledige pladser;
+74681;88000;Handelsøkonom, Horsens, E-læring, Studiestart: sommerstart;60;6;152;85;5,6;3,0
+75370;88000;Installatør, stærkstrøm, Randers SØ, Studiestart: sommerstart;2;0;4;3;Udenfor kvotesystemet, ledige pladser;
+76270;88000;It-teknolog, Viborg, Studiestart: sommerstart;20;0;38;18;Alle optaget, ledige pladser;
+79510;88000;Markedsføringsøkonom, Viborg, Studiestart: sommerstart;9;0;28;10;Alle optaget, ledige pladser;
+79560;88000;Markedsføringsøkonom, Randers SØ, Studiestart: sommerstart;22;0;49;20;Alle optaget, ledige pladser;
+79563;88000;Markedsføringsøkonom, Randers SØ, E-læring, Studiestart: vinterstart;13;0;39;11;Alle optaget, ledige pladser;
+81580;88000;Multimediedesigner, Grenaa, Studiestart: sommerstart;14;0;29;12;Alle optaget, ledige pladser;
+81590;88000;Multimediedesigner, Skive, Studiestart: sommerstart;12;0;18;12;Alle optaget, ledige pladser;
+84410;88000;Produktionsteknolog, Randers SØ, Studiestart: sommerstart;6;0;11;6;Alle optaget, ledige pladser;
+86160;88000;Service- og oplevelsesøkonom, Randers SØ, Studiestart: sommerstart;20;0;40;15;Alle optaget, ledige pladser;
+86164;88000;Service- og oplevelsesøkonom, Randers SØ, E-læring, Studiestart: sommerstart;45;0;97;45;Alle optaget, ledige pladser;
+86166;88000;Service- og oplevelsesøkonom, Randers SØ, E-læring, Studiestart: vinterstart;11;0;33;9;Alle optaget, ledige pladser;
+87110;88000;Logistikøkonom , Hobro, Studiestart: sommerstart;12;0;24;15;Alle optaget, ledige pladser;
+;88000;Erhvervsakademi Dania i alt;806;13;1.753;794;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
