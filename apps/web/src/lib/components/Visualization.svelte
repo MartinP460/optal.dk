@@ -4,7 +4,7 @@
   import Table from '$lib/components/Table.svelte'
   import Chart from '$lib/components/Chart.svelte'
   import { getCategoryParams } from '$lib/utils/visualizationCategoryParams'
-  import { getFullPeriodDataset } from '$lib/utils/chartCategoryHelpers'
+  import { getCategoryInPeriod } from '$lib/utils/chartCategoryHelpers'
   import VisualizationPeriodSelect from '$lib/components/VisualizationPeriodSelect.svelte'
   import VisualizationCategorySelect from '$lib/components/VisualizationCategorySelect.svelte'
   import VisualizationDisplaySelect from '$lib/components/VisualizationDisplaySelect.svelte'
@@ -31,7 +31,11 @@
       displayType = chartConfig[dataCategory.name].defaultDisplayType
     }
 
-    selectedDataCategory = dataCategory
+    selectedDataCategory = getCategoryInPeriod(
+      dataCategory,
+      dataCategories[dataCategory.name]!,
+      period
+    )
     setCategoryParam(dataCategory.name)
   }
 
@@ -41,26 +45,15 @@
   }
 
   const handlePeriodChange = (value: number[]) => {
-    const sortedValue = value.sort()
+    const sortedPeriod = value.sort()
 
-    const category = getFullPeriodDataset(
+    selectedDataCategory = getCategoryInPeriod(
       selectedDataCategory,
-      dataCategories[selectedDataCategory.name]!
+      dataCategories[selectedDataCategory.name]!,
+      sortedPeriod
     )
 
-    const lower = category.datasets.findIndex((dataset) => dataset.year === sortedValue[0])
-    const upper = category.datasets.reduce(
-      (acc, item, i) => (item.year <= sortedValue[1] ? i : acc),
-      -1
-    )
-
-    const newDataset = category.datasets.slice(lower, upper + 1)
-
-    selectedDataCategory = {
-      ...category,
-      datasets: newDataset.length === 0 ? selectedDataCategory.datasets : newDataset
-    } as KOTDataCategory
-    period = sortedValue
+    period = sortedPeriod
   }
 </script>
 

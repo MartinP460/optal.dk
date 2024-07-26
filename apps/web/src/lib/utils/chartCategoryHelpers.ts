@@ -44,6 +44,29 @@ export function getFullPeriodDataset(
   return filterDatasetsBySubCategories(originalDataCategory, subCategories)
 }
 
+/** Gets the data category with the datasets filtered to only include years in the specified interval. */
+export function getCategoryInPeriod(
+  dataCategory: KOTDataCategory,
+  originalDataCategory: KOTDataCategory,
+  period: number[]
+) {
+  const category = getFullPeriodDataset(dataCategory, originalDataCategory)
+
+  // With datasets with "gaps" in years, this picks the lower and upper bound closest to those given
+  const lower = category.datasets.reduce(
+    (acc, item, i) => (item.year >= period[0] && acc === -1 ? i : acc),
+    -1
+  )
+  const upper = category.datasets.reduce((acc, item, i) => (item.year <= period[1] ? i : acc), -1)
+
+  const newDataset = category.datasets.slice(lower, upper + 1)
+
+  return {
+    ...category,
+    datasets: newDataset.length === 0 ? dataCategory.datasets : newDataset
+  } as KOTDataCategory
+}
+
 export function getSubCategoryValues(dataset: { [key in KOTSubcategory]: string | number }) {
   return Object.values(_.omit(dataset, 'year'))
 }
