@@ -1,0 +1,865 @@
+﻿1000;Københavns Universitet;10110;Medicin;22;327;355;302;179;116;69;52;124;60;1606
+1000;Københavns Universitet;10115;Folkesundhedsvidenskab;0;8;25;26;18;7;1;1;5;9;100
+1000;Københavns Universitet;10117;Farmaci;8;64;71;47;18;7;7;4;13;10;249
+1000;Københavns Universitet;10120;Odontologi (tandlæge);5;39;58;61;35;26;24;8;43;24;323
+1000;Københavns Universitet;10140;Veterinærmedicin;4;71;136;116;88;45;34;19;40;20;573
+1000;Københavns Universitet;10150;It og sundhed;1;3;5;8;2;1;3;0;1;3;27
+1000;Københavns Universitet;10160;Tandplejer;0;13;26;26;18;14;11;15;26;20;169
+1000;Københavns Universitet;10205;Biokemi;3;17;23;27;12;7;3;3;11;5;111
+1000;Københavns Universitet;10220;Datalogi;0;33;42;39;23;15;11;7;16;12;198
+1000;Københavns Universitet;10221;Forsikringsmatematik;1;27;34;15;11;4;4;4;6;8;114
+1000;Københavns Universitet;10230;Fysiske fag;3;35;46;24;13;6;9;2;8;9;155
+1000;Københavns Universitet;10234;Biologi - Bioteknologi;1;5;24;16;7;6;5;1;4;2;71
+1000;Københavns Universitet;10237;Husdyrvidenskab;1;4;11;18;16;9;5;3;5;1;73
+1000;Københavns Universitet;10238;Jordbrugsøkonomi;1;3;5;10;2;4;2;2;4;0;33
+1000;Københavns Universitet;10240;Landskabsarkitektur;0;4;8;12;10;6;5;3;9;7;64
+1000;Københavns Universitet;10242;Fødevarer og ernæring;1;6;24;31;10;12;5;4;8;3;104
+1000;Københavns Universitet;10244;Naturressourcer;0;2;12;13;8;6;4;6;11;1;63
+1000;Københavns Universitet;10246;Skov-og landskabsingeniør;0;5;16;21;13;7;17;8;12;16;115
+1000;Københavns Universitet;10250;Biologi;0;26;44;60;36;29;24;10;21;13;263
+1000;Københavns Universitet;10270;Geografi og geoinformatik;0;2;25;22;20;5;7;3;12;10;106
+1000;Københavns Universitet;10275;Geologi-geoscience;1;5;14;14;9;5;6;3;6;5;68
+1000;Københavns Universitet;10285;Idræt;0;17;43;60;69;29;20;15;30;6;289
+1000;Københavns Universitet;10286;Kemi;0;12;17;19;5;7;1;1;6;5;73
+1000;Københavns Universitet;10287;Matematisk;3;21;26;26;19;12;15;4;20;17;163
+1000;Københavns Universitet;10288;Matematik-økonomi;2;13;30;16;7;3;5;0;4;5;85
+1000;Københavns Universitet;10289;Molekylær biomedicin;5;25;48;22;5;4;2;3;8;3;125
+1000;Københavns Universitet;10290;Nanoscience;3;13;9;6;2;2;2;0;3;2;42
+1000;Københavns Universitet;10294;Naturvidenskab og it;0;2;3;2;2;2;2;1;1;1;16
+1000;Københavns Universitet;10302;Arabisk;0;5;14;14;16;9;5;6;11;15;95
+1000;Københavns Universitet;10304;Audiologopædi;0;5;18;19;18;5;9;2;10;21;107
+1000;Københavns Universitet;10306;Dansk;1;14;41;51;39;25;12;3;13;10;209
+1000;Københavns Universitet;10308;Engelsk;0;31;52;54;33;20;6;7;12;14;229
+1000;Københavns Universitet;10310;Eskimologi;0;1;2;1;0;2;0;0;2;4;12
+1000;Københavns Universitet;10312;Europæisk etnologi;0;1;13;13;17;8;2;1;1;2;58
+1000;Københavns Universitet;10314;Film- og medievidenskab;0;20;77;84;69;36;22;11;27;3;349
+1000;Københavns Universitet;10316;Filosofi;1;11;23;30;20;15;6;4;11;6;127
+1000;Københavns Universitet;10318;Finsk;0;1;0;0;0;0;0;0;1;1;3
+1000;Københavns Universitet;10322;Forhistorisk arkæologi;0;5;6;7;7;3;2;0;7;4;41
+1000;Københavns Universitet;10324;Fransk sp,litteratur og kultur;0;2;4;6;6;2;2;2;3;10;37
+1000;Københavns Universitet;10326;Græsk, klassisk;0;0;3;2;0;2;1;1;1;1;11
+1000;Københavns Universitet;10328;Østsyd (Grækenlandsstudier);0;0;1;1;1;0;0;1;0;1;5
+1000;Københavns Universitet;10330;Hebraisk;0;0;1;0;2;0;0;0;0;2;5
+1000;Københavns Universitet;10332;Historie;0;18;54;75;41;21;11;10;21;24;275
+1000;Københavns Universitet;10334;Indianske sprog og kulturer;0;4;0;0;4;3;2;2;0;2;17
+1000;Københavns Universitet;10335;Indologi;0;0;0;1;0;2;0;1;0;5;9
+1000;Københavns Universitet;10336;Indoeuropæisk;0;2;2;1;2;0;1;0;0;5;13
+1000;Københavns Universitet;10337;Indonesisk/Sydøstasienst.;0;0;1;1;0;0;0;0;0;2;4
+1000;Københavns Universitet;10338;Italiensk;1;2;1;5;4;4;1;1;3;12;34
+1000;Københavns Universitet;10340;Japanstudier;0;7;11;16;14;8;4;6;8;2;76
+1000;Københavns Universitet;10341;Moderne Indien og Sydøstasien;0;1;5;4;8;1;3;2;2;0;26
+1000;Københavns Universitet;10342;Kinastudier;0;8;15;15;5;5;4;5;8;6;71
+1000;Københavns Universitet;10344;Klassisk arkæologi;0;5;5;4;2;2;2;3;3;0;26
+1000;Københavns Universitet;10345;Kommunikation og it;0;9;20;31;24;3;3;1;7;1;99
+1000;Københavns Universitet;10346;Koreastudier;0;2;9;6;6;3;1;1;3;3;34
+1000;Københavns Universitet;10348;Kunsthistorie;2;9;19;19;19;14;11;6;10;14;123
+1000;Københavns Universitet;10350;Latin;0;0;1;0;2;3;4;0;1;3;14
+1000;Københavns Universitet;10352;Litteraturvidenskab;3;11;32;26;16;7;6;10;6;8;125
+1000;Københavns Universitet;10354;Musikvidenskab;1;6;18;23;26;19;7;7;13;8;128
+1000;Københavns Universitet;10358; Nederlandsk;0;0;0;0;0;0;0;0;0;1;1
+1000;Københavns Universitet;10360;Nærorientalsk;0;4;13;4;7;1;2;0;0;3;34
+1000;Københavns Universitet;10362;Persisk;0;0;1;1;0;3;3;4;6;3;21
+1000;Københavns Universitet;10364;Polsk;0;1;1;0;0;1;1;0;0;2;6
+1000;Københavns Universitet;10366;Portugisisk;0;1;2;4;8;4;3;1;8;14;45
+1000;Københavns Universitet;10368;Psykologi;5;79;156;187;140;78;77;51;125;141;1039
+1000;Københavns Universitet;10370;Pædagogik;0;7;13;18;15;8;5;7;4;5;82
+1000;Københavns Universitet;10372;Religionsvidenskab;2;4;19;28;32;8;5;4;10;8;120
+1000;Københavns Universitet;10374;Retorik;0;4;22;18;12;3;4;3;8;10;84
+1000;Københavns Universitet;10376;Russisk;0;2;6;4;5;4;2;3;7;8;41
+1000;Københavns Universitet;10378;Spansk sprog og kultur;0;2;13;13;13;9;2;5;10;13;80
+1000;Københavns Universitet;10380;Lingvistik;0;2;3;8;3;3;3;2;4;4;32
+1000;Københavns Universitet;10382;Teatervidenskab;0;3;11;12;13;7;2;3;9;2;62
+1000;Københavns Universitet;10384;Thai/Sydøstasienstudier;0;1;3;1;0;3;0;0;0;5;13
+1000;Københavns Universitet;10386;Tibetologi;0;0;0;1;0;0;0;1;0;3;5
+1000;Københavns Universitet;10389;Tyrkisk;0;1;2;3;1;2;0;2;1;1;13
+1000;Københavns Universitet;10390;Tysk;0;7;13;7;9;3;2;2;1;14;58
+1000;Københavns Universitet;10392;Balkanstudier;0;2;1;3;0;2;0;2;0;2;12
+1000;Københavns Universitet;10410;Jura;14;229;395;254;113;69;38;46;118;121;1397
+1000;Københavns Universitet;10420;Statskundskab/Samfundsfag;3;70;142;111;57;28;24;9;19;10;473
+1000;Københavns Universitet;10430;Økonomi;3;54;121;70;31;12;8;5;9;12;325
+1000;Københavns Universitet;10435;Sociologi;0;18;44;66;25;13;6;10;14;10;206
+1000;Københavns Universitet;10440;Antropologi;1;22;55;74;57;26;15;8;19;14;291
+1000;Københavns Universitet;10500;Teologi;0;4;11;14;8;11;5;5;15;37;110
+1300;Copenhagen Business School - H;13010;Almen Erhvervsøkonomi, HA;3;195;266;170;107;45;31;17;48;18;900
+1300;Copenhagen Business School - H;13015;Erhv.økon.-inf.tekn., HA (it.);1;17;29;27;9;7;2;3;7;2;104
+1300;Copenhagen Business School - H;13020;Erhv.økon.-erhv.ret,HA (jur.);1;29;75;41;36;8;11;7;19;9;236
+1300;Copenhagen Business School - H;13025;Erhv.økon.-matematik,HA (mat.);2;15;28;18;10;3;2;2;1;3;84
+1300;Copenhagen Business School - H;13030;Erhv.økon.-filosofi, HA (fil.);0;8;16;10;4;2;4;1;4;3;52
+1300;Copenhagen Business School - H;13035;Erhv.økon.-virk.kom.,HA (kom.);0;16;74;45;21;17;5;6;11;4;199
+1300;Copenhagen Business School - H;13040;Erhv.økon.-psyk., HA (psyk.);2;19;47;58;33;9;16;6;22;10;222
+1300;Copenhagen Business School - H;13045;Erhv.økon.-projek., HA;3;84;191;165;85;51;38;23;32;11;683
+1300;Copenhagen Business School - H;13050;Europædisk business;2;49;100;93;51;27;17;10;16;5;370
+1300;Copenhagen Business School - H;13055;Business, Lang.&Culture(SPRØK);7;27;50;42;18;9;4;4;9;9;179
+1300;Copenhagen Business School - H;13060;International Business;33;140;172;98;38;14;14;3;28;7;547
+1300;Copenhagen Business School - H;13070;Internat. Business and Politic;11;55;109;59;22;6;12;3;14;8;299
+1300;Copenhagen Business School - H;13075;Business Adm.&Sociology;3;23;35;25;11;5;4;1;9;3;119
+1300;Copenhagen Business School - H;13080;Business Adm.&Service Managem;15;20;48;55;42;22;16;9;20;9;256
+1300;Copenhagen Business School - H;13085;Asian Studies Prg,Japanese/Eng;1;6;16;13;13;6;5;1;3;6;70
+1300;Copenhagen Business School - H;13090;Asian Studies Prg,Chinese/Eng.;5;14;23;24;16;5;1;2;4;0;94
+1300;Copenhagen Business School - H;13240;Engelsk og organisationskomm.;2;18;50;33;20;11;8;4;4;6;156
+1300;Copenhagen Business School - H;13265;Interkul markedskomm.;2;32;117;120;59;25;19;11;19;5;409
+1300;Copenhagen Business School - H;13270;Information Management;1;10;8;12;4;6;1;3;9;4;58
+1450;IT-Universitetet i København;14505;Digitale medier og design;0;13;26;31;15;18;17;5;22;11;158
+1450;IT-Universitetet i København;14510;Softwareudvikling;1;40;32;27;14;10;6;5;16;7;158
+1450;IT-Universitetet i København;14515;Global Business Informatics;3;18;29;19;18;12;5;4;26;9;143
+1500;Danmarks Tekniske Universitet;15010;Civiling. Bioteknologi;1;24;30;16;7;2;4;3;4;0;91
+1500;Danmarks Tekniske Universitet;15015;Civiling. Byggeteknologi;0;13;27;23;9;5;4;4;5;0;90
+1500;Danmarks Tekniske Universitet;15017;Bygningsdesign;1;10;15;19;4;3;0;2;1;1;56
+1500;Danmarks Tekniske Universitet;15020;Civiling. Design og innovation;0;15;31;24;14;7;2;3;7;4;107
+1500;Danmarks Tekniske Universitet;15025;Civiling. Elektroteknologi;1;18;30;18;7;4;4;5;2;2;91
+1500;Danmarks Tekniske Universitet;15030;Civiling. Fysik og nanotekn.;1;24;31;19;10;3;2;4;1;2;97
+1500;Danmarks Tekniske Universitet;15033;Civiling. geofysik og rumtekn.;1;14;13;7;2;4;5;2;3;2;53
+1500;Danmarks Tekniske Universitet;15035;Civiling. Kemi og teknologi;1;29;42;13;6;4;1;2;5;1;104
+1500;Danmarks Tekniske Universitet;15040;Civiling. IT og komm.tekn.;1;11;10;5;2;3;1;2;0;1;36
+1500;Danmarks Tekniske Universitet;15045;Civiling. Matematik og tekn.;0;18;17;11;6;3;2;0;2;3;62
+1500;Danmarks Tekniske Universitet;15050;Civiling. Medicin og tekn.;1;12;27;20;9;7;1;1;3;1;82
+1500;Danmarks Tekniske Universitet;15055;Civiling. Miljøteknologi;1;10;9;10;4;3;2;2;6;0;47
+1500;Danmarks Tekniske Universitet;15060;Civiling. Produktion og konstr;3;25;31;28;7;2;4;1;3;3;107
+1500;Danmarks Tekniske Universitet;15065;Civiling. Softwareteknologi;1;20;37;24;6;3;4;5;9;1;110
+1500;Danmarks Tekniske Universitet;15075;Civiling. Sundhed&produktion;2;23;24;11;4;3;2;1;2;2;74
+1500;Danmarks Tekniske Universitet;15110;Diploming. Arktisk teknologi;0;0;4;7;4;1;3;2;7;2;30
+1500;Danmarks Tekniske Universitet;15115;Diploming. Bygningsdesign;0;7;13;15;8;3;3;4;7;4;64
+1500;Danmarks Tekniske Universitet;15117;Diploming. bære energite Balle;0;3;5;1;3;1;2;1;4;7;27
+1500;Danmarks Tekniske Universitet;15120;Diploming. Bygning;0;12;20;15;11;5;4;5;6;6;84
+1500;Danmarks Tekniske Universitet;15122;Diploming. eksport Ballerup;1;8;14;13;6;7;2;4;5;2;62
+1500;Danmarks Tekniske Universitet;15125;Diploming. Elektro;0;10;11;5;5;3;2;3;9;5;53
+1500;Danmarks Tekniske Universitet;15127;Diploming. Fødevareanalytiker;0;2;6;3;4;4;0;1;1;1;22
+1500;Danmarks Tekniske Universitet;15130;Diploming. IT;0;14;21;18;10;5;5;6;11;6;96
+1500;Danmarks Tekniske Universitet;15135;Diploming. Kemi-&bioteknologi;1;7;11;11;3;4;3;1;7;7;55
+1500;Danmarks Tekniske Universitet;15140;Diploming. Maskin;1;13;30;22;14;6;8;4;11;3;112
+1500;Danmarks Tekniske Universitet;15145;Diplom. proces innova Bal;0;2;4;1;4;5;1;3;2;1;23
+1500;Danmarks Tekniske Universitet;15147;Diplom. produktion Bal;0;0;5;2;7;6;4;0;5;1;30
+1500;Danmarks Tekniske Universitet;15150;Dip.ing. Teknologi&økon.(Kemi);0;1;2;1;1;2;1;1;2;1;12
+1500;Danmarks Tekniske Universitet;15160;DipIng.Tekn.&øko.(Internettek);0;1;4;10;1;0;2;0;4;2;24
+1500;Danmarks Tekniske Universitet;15165;Dipl.ing. Trafik og Transport;0;1;1;4;2;3;2;2;4;1;20
+1500;Danmarks Tekniske Universitet;15170;Diplom. strærkstrøm Bal;0;0;3;1;1;1;3;2;8;1;20
+1500;Danmarks Tekniske Universitet;15180;Diplom. sundhedtek Bal;3;5;4;5;2;4;3;0;2;1;29
+1500;Danmarks Tekniske Universitet;15220;Diploming. Bygning Ballerup;0;6;9;9;5;4;4;3;4;6;50
+1500;Danmarks Tekniske Universitet;15225;Diploming. Elektro ballerup;0;2;1;0;1;2;2;1;5;7;21
+1500;Danmarks Tekniske Universitet;15230;Diploming. info & kom Bal;0;3;2;5;3;1;3;1;4;3;25
+1500;Danmarks Tekniske Universitet;15240;Diploming. Maskin Ballerup;0;1;2;5;2;8;2;3;5;8;36
+1500;Danmarks Tekniske Universitet;15310;Diploming. elec & com Ballerup;0;4;4;4;2;5;1;5;5;6;36
+1500;Danmarks Tekniske Universitet;15315;Diploming. info & com Ballerup;3;6;5;5;3;1;0;1;8;4;36
+1500;Danmarks Tekniske Universitet;15320;Diploming. mechanical Ballerup;6;9;6;6;4;6;5;3;9;8;62
+1500;Danmarks Tekniske Universitet;15322;Diploming. production Ballerup;0;1;4;2;1;0;3;3;4;5;23
+1500;Danmarks Tekniske Universitet;15325;(N13)Diping. sustainabl,Ball;0;0;0;1;1;0;0;0;0;0;2
+1600;Roskilde Universitet;16010;NAT-BAS;0;12;15;13;7;3;2;0;5;10;67
+1600;Roskilde Universitet;16012;NAT-BAS + journalistik;0;0;2;2;2;1;0;0;0;0;7
+1600;Roskilde Universitet;16015;NAT-BAS INT;8;10;8;6;6;2;4;2;11;6;63
+1600;Roskilde Universitet;16020;HUM-BAS;1;39;109;140;110;70;37;20;35;30;591
+1600;Roskilde Universitet;16022;HUM-BAS + journalistik + andet;0;13;34;46;18;14;10;1;12;6;154
+1600;Roskilde Universitet;16025;HUM-BAS INT;8;15;20;27;21;20;12;13;18;6;160
+1600;Roskilde Universitet;16030;SAM-BAS;3;22;60;79;64;38;14;12;22;10;324
+1600;Roskilde Universitet;16032;SAM-BAS + journalistik;0;1;17;23;13;10;7;4;1;4;80
+1600;Roskilde Universitet;16035;SAM-BAS INT;3;12;27;28;17;14;10;5;19;11;146
+1600;Roskilde Universitet;16040;HUM-TEK BAS;0;9;24;34;26;10;4;9;7;3;126
+1600;Roskilde Universitet;16042;HUM-TEK BAS + journalistik;0;0;6;7;6;1;1;0;2;1;24
+1700;Syddansk Universitet i Odense;17010;Biologi;0;6;10;12;4;1;6;3;3;3;48
+1700;Syddansk Universitet i Odense;17020;Datalogi;0;9;10;8;6;2;4;1;4;4;48
+1700;Syddansk Universitet i Odense;17025;Farmaceut;1;17;30;21;9;2;3;1;1;1;86
+1700;Syddansk Universitet i Odense;17040;Idræt og sundhed;0;4;27;37;35;16;12;3;9;3;146
+1700;Syddansk Universitet i Odense;17050;Matematik-økonomi;0;6;7;3;2;2;1;1;1;2;25
+1700;Syddansk Universitet i Odense;17060;Naturvidenskab;3;29;71;44;21;11;9;7;9;3;207
+1700;Syddansk Universitet i Odense;17110;Klinisk biomekanik;0;13;26;25;12;8;2;2;5;4;97
+1700;Syddansk Universitet i Odense;17115;Lægevidenskab;5;108;142;155;91;52;26;17;47;24;667
+1700;Syddansk Universitet i Odense;17120;Folkesundhedsvidenskab;0;3;7;9;4;1;0;0;1;2;27
+1700;Syddansk Universitet i Odense;17200;Psykologi;0;25;57;58;26;23;22;15;30;68;324
+1700;Syddansk Universitet i Odense;17210;Dansk/nordisk, Odense;0;4;17;11;10;7;2;1;1;9;62
+1700;Syddansk Universitet i Odense;17215;Engelsk, Odense;1;10;18;27;12;5;4;3;8;4;92
+1700;Syddansk Universitet i Odense;17217;Amerikanske Studier;0;7;19;13;17;7;4;4;8;5;84
+1700;Syddansk Universitet i Odense;17220;Filosofi;0;4;5;11;13;6;6;4;7;14;70
+1700;Syddansk Universitet i Odense;17230;Oldtidskundskab;0;3;2;3;7;1;2;1;5;1;25
+1700;Syddansk Universitet i Odense;17235;Historie, Odense;0;11;27;28;20;9;4;6;13;15;133
+1700;Syddansk Universitet i Odense;17237;Interkulturel pædgogik-arabisk;1;3;8;11;2;4;1;0;3;5;38
+1700;Syddansk Universitet i Odense;17238;Interkulturel pædgogik-dansk2;0;1;5;6;4;1;0;1;3;2;23
+1700;Syddansk Universitet i Odense;17240;Litteraturvidenskab;0;3;12;11;17;6;2;0;6;4;61
+1700;Syddansk Universitet i Odense;17245;Audiologi;0;5;7;9;2;2;1;0;2;6;34
+1700;Syddansk Universitet i Odense;17246;Pædagogisk audiologi;0;2;6;5;4;2;3;1;4;7;34
+1700;Syddansk Universitet i Odense;17247;Logopædi;0;3;10;15;6;5;5;2;7;10;63
+1700;Syddansk Universitet i Odense;17250;Medievidenskab;0;9;33;23;20;5;3;5;6;4;108
+1700;Syddansk Universitet i Odense;17260;Religion;0;2;4;14;4;7;1;0;2;2;36
+1700;Syddansk Universitet i Odense;17265;Spanske og spanskamerik. stud.;1;3;8;4;4;0;0;1;1;1;23
+1700;Syddansk Universitet i Odense;17270;Tysk;0;1;6;3;1;1;1;0;1;3;17
+1700;Syddansk Universitet i Odense;17310;Int.virk.kom.2 fr.spr,Odense;0;5;12;12;5;3;0;0;0;2;39
+1700;Syddansk Universitet i Odense;17340;Int.virk.kom.1fr.spr og medier;0;9;25;24;13;4;4;0;4;5;88
+1700;Syddansk Universitet i Odense;17350;IntVirkKom.1fr.spr&kom.,Odense;0;2;8;10;3;2;4;1;2;2;34
+1700;Syddansk Universitet i Odense;17360;Int.virk.kom. Arabisk og komm.;1;2;11;7;5;7;2;1;5;3;44
+1700;Syddansk Universitet i Odense;17410;Jura;1;42;61;38;23;17;14;9;20;29;254
+1700;Syddansk Universitet i Odense;17412;Samfundsfag;0;4;10;7;5;2;1;0;2;1;32
+1700;Syddansk Universitet i Odense;17415;Statskundskab;1;16;18;12;5;0;0;3;5;1;61
+1700;Syddansk Universitet i Odense;17420;Økonomi;0;6;6;11;4;4;1;2;4;0;38
+1700;Syddansk Universitet i Odense;17430;Markeds og ledelsesantropologi;0;8;12;21;6;6;2;4;9;2;70
+1700;Syddansk Universitet i Odense;17510;Almen erhv.økon., HA, Odense;2;27;68;51;30;25;11;11;7;7;239
+1700;Syddansk Universitet i Odense;17517;Eco. and Business Admin,OdensC;0;2;4;4;3;2;1;1;7;4;28
+1700;Syddansk Universitet i Odense;17520;Erhv.økon-jurt,HA;0;6;11;10;5;3;3;1;2;3;44
+1700;Syddansk Universitet i Odense;17530;Erh.øko.-erh.sp.(negot),Odense;0;10;38;45;24;11;9;5;2;2;146
+1700;Syddansk Universitet i Odense;17610;Journalistik;1;19;36;52;30;17;13;5;13;5;191
+1700;Syddansk Universitet i Odense;17815;Diploming. Bygning;0;12;16;8;4;8;4;3;6;2;63
+1700;Syddansk Universitet i Odense;17820;Diploming. Elektro;0;4;4;9;1;1;2;2;6;5;34
+1700;Syddansk Universitet i Odense;17822;Glob.Managem&Manuf.(dip.ing.);2;7;8;14;11;5;3;1;12;2;65
+1700;Syddansk Universitet i Odense;17825;Diploming. Kemi;0;2;4;2;2;3;0;0;0;1;14
+1700;Syddansk Universitet i Odense;17830;Dip.ing.Informations-&kom.tekn;0;1;3;3;4;5;4;1;0;3;24
+1700;Syddansk Universitet i Odense;17835;Diploming. Integreret design;0;7;19;16;12;2;3;3;6;1;69
+1700;Syddansk Universitet i Odense;17840;Diploming. Maskin;0;6;11;10;9;4;2;3;4;3;52
+1700;Syddansk Universitet i Odense;17845;Diploming. Produktion;0;6;8;7;5;0;1;1;3;3;34
+1700;Syddansk Universitet i Odense;17850;Diploming. Stærkstrøm;0;5;2;3;3;2;1;4;2;1;23
+1700;Syddansk Universitet i Odense;17860;Civiling. Velfærdsteknologi;0;3;3;8;0;0;0;1;3;1;19
+1700;Syddansk Universitet i Odense;17865;Civing.Lærings-&oplevelsestekn;0;2;6;4;2;1;1;0;6;1;23
+1700;Syddansk Universitet i Odense;17870;Civiling. Robotteknologi;0;16;14;11;2;3;1;1;4;2;54
+1700;Syddansk Universitet i Odense;17875;Civiling. Fysik og teknologi;0;6;2;7;3;1;0;0;1;0;20
+1700;Syddansk Universitet i Odense;17880;Civiling. Kemi og bioteknologi;0;4;8;5;2;0;3;0;0;1;23
+1700;Syddansk Universitet i Odense;17890;Product Devel.&Innov.(civing);0;6;13;10;7;2;1;0;4;1;44
+1700;Syddansk Universitet i Odense;17892;Software (civing);0;9;14;11;3;9;6;2;2;0;56
+1700;Syddansk Universitet i Odense;17895;Civiling. Energi teknologi;0;2;13;6;4;6;3;0;3;2;39
+1700;Syddansk Universitet i Odense;18005;Biblio. og videnskomm.,Kolding;0;3;0;0;1;1;1;0;6;10;22
+1700;Syddansk Universitet i Odense;18020;Informations- og komm.vidensk;0;0;2;3;6;1;1;0;2;0;15
+1700;Syddansk Universitet i Odense;18030;Design og kulturøkonomi;0;3;13;23;15;5;6;1;4;3;73
+1700;Syddansk Universitet i Odense;18035;Designkultur;0;5;8;11;10;4;4;1;2;2;47
+1700;Syddansk Universitet i Odense;18110; Int.virk.kom.2fr.spr, Kold;0;0;2;1;0;0;1;0;0;1;5
+1700;Syddansk Universitet i Odense;18140;IntVirkKom.1fr.spr,IT&web;0;6;5;4;6;4;0;4;2;3;34
+1700;Syddansk Universitet i Odense;18210;Almen erhv.økon., HA, Kolding;2;21;31;19;12;13;11;7;14;6;136
+1700;Syddansk Universitet i Odense;18215;Erh.øk.erh.spr(negot),Kold.;0;0;0;0;0;2;0;0;0;0;2
+1700;Syddansk Universitet i Odense;19010;Innovation&Busin.(civ.ing);2;4;5;2;2;1;1;0;3;1;21
+1700;Syddansk Universitet i Odense;19015;Civiling. Mekatronik;0;2;2;0;2;1;1;0;0;0;8
+1700;Syddansk Universitet i Odense;19020;Mechatronics (civilingeniør);0;2;1;0;2;0;1;1;3;0;10
+1700;Syddansk Universitet i Odense;19115;Interaction Design (dipl.ing);0;5;2;2;1;0;0;1;2;1;14
+1700;Syddansk Universitet i Odense;19120;Mechatronics (diplomingeniør);4;11;6;3;3;0;2;0;3;6;38
+1700;Syddansk Universitet i Odense;19125;Diploming. Mekatronik;0;0;1;0;2;2;3;1;3;2;14
+1700;Syddansk Universitet i Odense;19215;Business Administration;3;14;10;10;3;3;0;0;0;5;48
+1700;Syddansk Universitet i Odense;19220;Erhv.øk.-erh.spr.SPRØK,Sønderb;0;7;4;4;1;2;0;0;2;0;20
+1700;Syddansk Universitet i Odense;19225;European Studies;3;20;21;11;4;1;1;0;4;6;71
+1700;Syddansk Universitet i Odense;19230;Bus,Lang. & Culture (Chinese);1;16;12;5;4;2;3;0;3;2;48
+1700;Syddansk Universitet i Odense;19250;Int.virk.kom.Spr.&kult.formidl;2;7;8;7;9;1;0;3;1;0;38
+1700;Syddansk Universitet i Odense;20015;Miljø og ressource mangament;0;1;2;1;6;1;1;1;4;2;19
+1700;Syddansk Universitet i Odense;20210;Almen erhv.økon., HA, Esbjerg;0;11;14;12;9;4;3;3;8;0;64
+1700;Syddansk Universitet i Odense;20220;Sociologi og kulturanalyse;1;4;16;8;17;3;3;0;5;8;65
+1700;Syddansk Universitet i Odense;20515;IntVirkKom.1frSpr&kom,Slagelse;0;5;17;5;7;8;4;2;3;2;53
+1700;Syddansk Universitet i Odense;20520;IntVirkKom.1frSpr&int.marketin;0;7;11;22;16;5;6;3;4;3;77
+1700;Syddansk Universitet i Odense;20525;Erhv.spr.&IT-bas.markedskom.;0;1;5;4;4;4;1;2;4;2;27
+1700;Syddansk Universitet i Odense;20530;Almen erhv.økon.,HA, Slagelse;0;21;37;30;20;16;7;4;16;8;159
+1700;Syddansk Universitet i Odense;20540;Econ. and Information Techn.;1;2;3;1;1;1;1;1;2;3;16
+2200;Aarhus Universitet;22010;Lægevidenskab;6;138;208;197;93;40;27;16;21;17;763
+2200;Aarhus Universitet;22015;Odontologi (tandlæge);4;19;34;56;30;10;10;5;10;9;187
+2200;Aarhus Universitet;22020;Tandplejer;0;7;19;24;16;19;17;8;26;19;155
+2200;Aarhus Universitet;22025;Folkesundhedsvidenskab;0;1;13;17;13;4;1;2;5;1;57
+2200;Aarhus Universitet;22105;Molekylær medicin;0;16;23;33;13;7;3;2;2;1;100
+2200;Aarhus Universitet;22110;Biologi;0;11;16;35;31;11;9;5;12;7;137
+2200;Aarhus Universitet;22115;Datalogi;0;19;35;27;19;13;8;4;16;11;152
+2200;Aarhus Universitet;22120;Fysik;1;21;35;31;13;4;2;4;10;5;126
+2200;Aarhus Universitet;22125;Geoscience;0;1;10;20;6;4;4;2;5;1;53
+2200;Aarhus Universitet;22130;Idræt;0;2;29;51;35;13;13;3;8;3;157
+2200;Aarhus Universitet;22135;Kemi;1;9;25;19;7;1;3;0;2;2;69
+2200;Aarhus Universitet;22140;Matematik;1;16;29;30;5;2;5;2;8;7;105
+2200;Aarhus Universitet;22145;Matematik-økonomi;0;5;18;19;7;7;2;1;5;1;65
+2200;Aarhus Universitet;22150;Medicinalkemi;1;8;16;12;5;2;3;0;2;2;51
+2200;Aarhus Universitet;22155;Molekylærbiologi;0;19;22;23;10;2;2;1;5;1;85
+2200;Aarhus Universitet;22160;Nanosceience;1;12;22;14;6;5;4;1;3;0;68
+2200;Aarhus Universitet;22170;IT;0;12;15;20;12;8;6;5;5;4;87
+2200;Aarhus Universitet;22175;Agrobiologi;0;1;5;7;6;2;4;1;1;1;28
+2200;Aarhus Universitet;22205;Arabisk- og islamstudier;1;6;12;7;12;10;4;1;7;5;65
+2200;Aarhus Universitet;22210;Brasilianske studier;0;0;6;3;6;3;3;2;4;1;28
+2200;Aarhus Universitet;22215;Dramaturgi;0;4;17;31;26;7;7;3;6;2;103
+2200;Aarhus Universitet;22220;Engelsk;0;9;22;34;20;15;3;2;4;5;114
+2200;Aarhus Universitet;22225;Antropologi;0;14;48;69;40;17;12;4;9;12;225
+2200;Aarhus Universitet;22230;Filosofi;1;6;23;17;10;4;6;3;5;4;79
+2200;Aarhus Universitet;22240;Forhistorisk arkæologi;0;2;4;6;8;4;1;1;0;4;30
+2200;Aarhus Universitet;22245;Fransk spr, litt. og kult;0;1;4;5;0;2;0;1;2;2;17
+2200;Aarhus Universitet;22255;Historie;0;3;27;36;31;8;11;11;13;8;148
+2200;Aarhus Universitet;22260;Idéhistorie;0;3;8;26;8;5;2;2;6;4;64
+2200;Aarhus Universitet;22265;Sydasienstudier;0;0;2;1;2;1;0;0;1;1;8
+2200;Aarhus Universitet;22270;Informationsvidenskab;0;4;17;29;18;10;8;3;8;0;97
+2200;Aarhus Universitet;22275;Italiensk spr, litt. og kult;0;0;3;3;4;1;0;1;0;4;16
+2200;Aarhus Universitet;22280;Japanstudier;0;7;10;17;8;8;6;3;3;0;62
+2200;Aarhus Universitet;22285;Kinastudier;0;5;8;13;10;7;1;3;1;1;49
+2200;Aarhus Universitet;22290;Klassisk arkæologi;0;1;9;7;6;3;3;2;2;4;37
+2200;Aarhus Universitet;22295;Klassiske sprog;0;2;6;1;1;1;0;0;0;0;11
+2200;Aarhus Universitet;22300;Kunsthistorie;0;3;20;22;9;9;3;2;5;13;86
+2200;Aarhus Universitet;22310;Lingvistik;0;3;13;13;9;6;2;0;3;2;51
+2200;Aarhus Universitet;22315;Litteraturhistorie;0;8;13;14;5;7;4;1;1;1;54
+2200;Aarhus Universitet;22320;Medievidenskab;0;12;55;76;34;13;6;5;9;3;213
+2200;Aarhus Universitet;22325;Middelalder- og renæssancearkæ;0;3;9;6;5;5;0;2;1;2;33
+2200;Aarhus Universitet;22330;Musikvidenskab;0;5;15;16;22;8;7;2;4;5;84
+2200;Aarhus Universitet;22335;Nordisk sprog og litteratur;0;4;25;31;22;8;4;7;7;5;113
+2200;Aarhus Universitet;22340;Religionsvidenskab;0;3;20;20;21;5;2;3;3;4;81
+2200;Aarhus Universitet;22350;Østeuropastudier;0;3;7;5;0;5;2;2;1;2;27
+2200;Aarhus Universitet;22355;Spansk/spanskam.spr,litt,kult;0;6;4;14;4;0;2;4;3;5;42
+2200;Aarhus Universitet;22365;Tysk sprog, litt. og kultur;0;2;6;8;3;1;1;0;2;4;27
+2200;Aarhus Universitet;22375;Æstetik og kultur;0;1;11;22;13;3;1;3;4;2;60
+2200;Aarhus Universitet;22380;Digital design;0;1;17;19;14;7;8;0;7;2;75
+2200;Aarhus Universitet;22390;Teologi;0;2;9;12;7;2;6;1;4;10;53
+2200;Aarhus Universitet;22410;Erhvervsøkonomi;0;7;20;36;9;7;1;0;5;2;87
+2200;Aarhus Universitet;22415;Jura;4;95;186;178;65;26;19;22;26;20;641
+2200;Aarhus Universitet;22420;Psykologi;0;36;81;131;87;34;15;13;31;43;471
+2200;Aarhus Universitet;22422;Samfundsfag;0;2;12;13;10;6;5;2;3;3;56
+2200;Aarhus Universitet;22425;Statskundskab;1;33;111;108;37;14;9;6;11;1;331
+2200;Aarhus Universitet;22430;Økonomi;0;30;64;68;21;9;6;5;8;3;214
+2200;Aarhus Universitet;22510;Uddannelsesvidenskab - Århus;0;2;33;42;27;12;8;5;9;14;152
+2200;Aarhus Universitet;22520;Uddannelsesvidenskab - Kbh.;0;5;23;25;15;7;14;5;15;14;123
+2200;Aarhus Universitet;22610;Almen erhv.økon., HA, Århus;0;52;190;218;84;33;22;9;27;5;640
+2200;Aarhus Universitet;22615;Business Administration;8;46;47;53;21;11;11;3;13;11;224
+2200;Aarhus Universitet;22620;HA (int.) med tysk;0;0;5;8;1;2;0;0;1;0;17
+2200;Aarhus Universitet;22650;Erhv.økon.-erhv.ret,HA (jur.);0;14;35;31;25;5;2;4;7;6;129
+2200;Aarhus Universitet;22710;Int.virk.komm. Engelsk-tysk;0;4;4;6;4;0;3;1;1;0;23
+2200;Aarhus Universitet;22715;Int.virk.komm. Engelsk-fransk;0;3;2;6;1;3;1;0;1;1;18
+2200;Aarhus Universitet;22720;Int.virk.komm. Engelsk-spansk;0;5;14;10;7;2;0;0;0;0;38
+2200;Aarhus Universitet;22740;Int.virk.komm. Engelsk og komm;0;11;36;50;26;9;5;3;3;2;145
+2200;Aarhus Universitet;22745;Int.virk.komm. Tysk og komm;1;2;12;10;14;1;2;2;1;1;46
+2200;Aarhus Universitet;22750;Int.virk.komm. Fransk og komm;0;1;1;1;1;4;0;0;0;1;9
+2200;Aarhus Universitet;22755;Int.virk.komm. Spansk og komm;1;5;5;11;11;3;2;0;2;0;40
+2200;Aarhus Universitet;22760;Int.virk.komm. Eng./europ.stud;1;6;18;26;18;2;5;2;0;0;78
+2200;Aarhus Universitet;22765;Int.virk.komm. Tysk/europ.stud;0;2;4;7;1;2;0;1;1;2;20
+2200;Aarhus Universitet;22770;Int.virk.kom. Fransk/europ.st;0;0;0;1;0;0;0;0;0;0;1
+2200;Aarhus Universitet;22775;Int.virk.komm. Spansk/europ.st;0;1;2;4;3;0;2;1;0;0;13
+2200;Aarhus Universitet;22780;Marketing and Management Comm.;4;26;35;58;32;19;1;7;8;7;197
+2200;Aarhus Universitet;22810;Dip.ing. bio.tek,sommer;0;2;17;5;4;3;2;5;5;4;47
+2200;Aarhus Universitet;22820;Dip.ing. bygning, sommer;0;8;20;29;18;13;2;10;11;6;117
+2200;Aarhus Universitet;22825;Dip.ing. bygning, vinter;0;3;5;7;5;5;1;0;8;3;37
+2200;Aarhus Universitet;22830;Dip.ing. bygningsdesign,sommer;0;4;28;24;16;5;1;0;3;2;83
+2200;Aarhus Universitet;22835;Dip.ing. bygningsdesign,vinter;0;4;7;6;4;2;2;0;1;2;28
+2200;Aarhus Universitet;22840;Dip.ing. elektro, sommer;0;3;15;26;15;2;5;4;10;5;85
+2200;Aarhus Universitet;22845;Dip.ing. elektro, vinter;0;1;3;2;4;2;1;2;4;1;20
+2200;Aarhus Universitet;22850;Dip.ing. inform&kom.tek,sommer;0;6;11;17;8;5;2;3;7;1;60
+2200;Aarhus Universitet;22855;Dip.ing. inform&kom.tek,vinter;0;2;4;1;1;1;0;2;5;1;17
+2200;Aarhus Universitet;22860;Dip.ing. maskin, sommer;0;13;20;31;12;10;7;1;10;3;107
+2200;Aarhus Universitet;22865;Dip.ing. maskin, vinter;0;2;4;3;2;6;1;1;11;12;42
+2200;Aarhus Universitet;22870;Dip.ing. stærkstrøm, sommer;0;0;0;4;4;3;1;0;2;0;14
+2200;Aarhus Universitet;22875;Dip.ing. stærkstrøm, vinter;0;0;0;0;1;1;1;0;3;1;7
+2200;Aarhus Universitet;22880;Dip.ing. sundhedstek., sommer;0;1;13;17;8;3;2;1;3;4;52
+2200;Aarhus Universitet;22890;Dip.ing. Kemi., sommer;0;3;8;6;8;3;1;0;4;2;35
+2200;Aarhus Universitet;22925;Int Comm. and Multimedia;2;27;22;21;10;5;4;3;8;3;105
+2200;Aarhus Universitet;22930;Almen erhv.økon., HA, Herning;0;5;18;19;9;2;0;1;10;5;69
+2200;Aarhus Universitet;22935;HA International Management;3;32;18;10;1;4;3;2;2;1;76
+2200;Aarhus Universitet;22950;Dipl.ing. Bus.Devel.Engineer;0;4;11;21;7;0;1;0;1;5;50
+2200;Aarhus Universitet;22955;Diploming. Elektro;2;3;4;3;2;1;1;1;3;4;24
+2200;Aarhus Universitet;22965;Glob. Manag./Manufac.,dipl.ing;0;4;7;3;2;3;1;3;4;4;31
+2500;Aalborg Universitet;25015;Civiling. Arkitektur og design;0;19;38;41;21;5;7;3;10;2;146
+2500;Aalborg Universitet;25017;Civiling. Bioteknologi;0;3;9;3;2;1;0;0;1;0;19
+2500;Aalborg Universitet;25020;Civiling. Byggeri og anlæg;1;11;16;13;4;3;1;1;1;0;51
+2500;Aalborg Universitet;25025;Civing. Internettekn/comp.syst;1;2;3;3;1;0;0;0;0;1;11
+2500;Aalborg Universitet;25030;Civiling. Elektronik og it;0;14;16;9;5;1;2;0;7;1;55
+2500;Aalborg Universitet;25035;Civiling. Glob. forretn.syst.;0;5;18;13;6;1;4;2;1;1;51
+2500;Aalborg Universitet;25040;Civiling.Maskin og produktion;0;8;21;12;6;6;2;4;2;2;63
+2500;Aalborg Universitet;25042;Civiling. Miljøteknologi;0;4;2;2;1;2;2;0;0;0;13
+2500;Aalborg Universitet;25047;Civiling. Kemiteknologi;0;2;4;4;2;0;0;1;0;1;14
+2500;Aalborg Universitet;25050;Civiling. Nanoteknologi;0;4;7;2;1;0;0;0;0;0;14
+2500;Aalborg Universitet;25055;Civiling.By,energi,miljøplanlæ;0;1;4;7;3;1;0;0;3;0;19
+2500;Aalborg Universitet;25060;Civiling. Software;0;28;30;21;9;9;2;3;5;2;109
+2500;Aalborg Universitet;25065;Civiling. Sundhedsteknologi;1;5;8;11;3;0;0;1;2;1;32
+2500;Aalborg Universitet;25070;Civiling.By,energi,miljø.,Ball;0;3;6;12;3;0;2;1;8;0;35
+2500;Aalborg Universitet;25071;Teknoantropologi;0;1;13;17;12;10;6;7;6;2;74
+2500;Aalborg Universitet;25072;Civiling. Bæredygtig biotek;7;7;12;2;1;0;1;0;0;2;32
+2500;Aalborg Universitet;25075;Civiling. Energi;0;4;26;11;5;3;1;1;2;1;54
+2500;Aalborg Universitet;25078;Civiling. Bæredygtigt design;0;2;7;10;4;4;2;2;2;1;34
+2500;Aalborg Universitet;25085;Landinspektør, KBH;0;0;2;4;0;5;2;0;2;3;18
+2500;Aalborg Universitet;25090;Landinspektør, Aalborg;0;1;6;7;5;1;1;1;0;4;26
+2500;Aalborg Universitet;25095;IT,Comm.and NewMedia(civ.ing.);4;15;10;5;3;10;1;0;2;8;58
+2500;Aalborg Universitet;25100;Teknoantropologi;0;4;6;7;4;3;1;2;4;3;34
+2500;Aalborg Universitet;25210;Diplomingeniør, Aalborg;0;7;12;10;8;2;6;3;2;4;54
+2500;Aalborg Universitet;25220;Dipl.ing, Eksportteknologi;0;0;5;6;2;2;0;0;2;2;19
+2500;Aalborg Universitet;25230;Dipl.ing,Kemi/biotekn.,Aalborg;0;0;6;1;1;2;1;0;1;0;12
+2500;Aalborg Universitet;25305;Biologi;0;6;13;13;5;4;4;1;3;0;49
+2500;Aalborg Universitet;25306;Datalogi;0;9;14;15;2;2;4;0;2;4;52
+2500;Aalborg Universitet;25307;Fysik;1;5;3;3;2;1;0;1;2;0;18
+2500;Aalborg Universitet;25311;Geografi;0;1;3;5;2;1;1;1;3;3;20
+2500;Aalborg Universitet;25312;Informatik;0;7;3;7;6;2;0;1;2;1;29
+2500;Aalborg Universitet;25313;Kemi;0;6;2;2;0;0;0;0;0;0;10
+2500;Aalborg Universitet;25314;Matematik og statistik;0;4;9;8;3;1;0;1;3;1;30
+2500;Aalborg Universitet;25315;Medialogy (København);4;31;50;59;28;13;12;13;13;9;232
+2500;Aalborg Universitet;25317;Medialogi, Aalborg (eng);1;22;40;16;15;8;11;5;6;5;129
+2500;Aalborg Universitet;25318;Civiling. Matematik-teknologi;0;2;9;1;1;0;3;0;0;1;17
+2500;Aalborg Universitet;25319;Matematik-økonomi;0;3;3;5;2;1;1;1;0;0;16
+2500;Aalborg Universitet;25320;Lægevidenskab;3;36;53;33;21;11;2;2;14;6;181
+2500;Aalborg Universitet;25325;Idræt;0;7;43;66;40;22;11;3;10;4;206
+2500;Aalborg Universitet;25330;Medicin m. industr. specialis.;0;18;23;20;7;6;4;3;1;2;84
+2500;Aalborg Universitet;25335;Produkt- og designpsykologi;0;4;7;7;0;0;0;0;3;0;21
+2500;Aalborg Universitet;25340;Informationsteknologi;0;2;5;7;6;1;2;1;2;1;27
+2500;Aalborg Universitet;25345;Art and Technology (eng);3;15;12;11;10;1;2;3;5;3;65
+2500;Aalborg Universitet;25405;Anvendt filosofi;0;4;13;8;10;7;2;3;6;7;60
+2500;Aalborg Universitet;25410;Dansk;1;1;8;11;5;5;3;1;2;5;42
+2500;Aalborg Universitet;25420;Humanistisk informatik,Aalborg;0;10;73;67;33;14;9;5;12;5;228
+2500;Aalborg Universitet;25425;Musik;0;2;7;14;4;5;0;1;1;0;34
+2500;Aalborg Universitet;25430;Musikterapi;0;3;1;7;4;0;2;2;0;4;23
+2500;Aalborg Universitet;25435;Psykologi;1;29;67;63;27;18;8;10;25;47;295
+2500;Aalborg Universitet;25440;Humanistisk informatik, Kbh.;0;18;46;80;46;21;9;14;10;0;244
+2500;Aalborg Universitet;25450;Engelsk;2;6;12;22;9;10;0;3;7;2;73
+2500;Aalborg Universitet;25455;Eng.spr. og internat.stud.;1;5;23;32;13;4;5;4;2;5;94
+2500;Aalborg Universitet;25460;Spansk spr. og internat.stud.;0;3;4;9;4;1;2;0;3;1;27
+2500;Aalborg Universitet;25465;Tysk;0;1;1;3;3;0;0;0;1;1;10
+2500;Aalborg Universitet;25515;International virksomhedskomm.;0;16;52;73;22;10;10;1;6;3;193
+2500;Aalborg Universitet;25610;Politik og Adm.;1;9;25;21;4;8;0;0;4;7;79
+2500;Aalborg Universitet;25612;Samfundsfag;0;1;5;9;4;1;1;0;2;1;24
+2500;Aalborg Universitet;25615;Historie;0;2;15;24;7;9;8;1;3;5;74
+2500;Aalborg Universitet;25620;Sociologi;1;16;34;56;19;8;2;5;4;4;149
+2500;Aalborg Universitet;25625;Økonomi;0;4;11;8;6;2;0;1;0;1;33
+2500;Aalborg Universitet;25630;Jura;2;37;57;50;23;13;8;8;14;18;230
+2500;Aalborg Universitet;25710;Almen erhvervsøkonomi, HA;0;41;80;72;15;15;8;5;13;7;256
+2500;Aalborg Universitet;25712;Economics and Business Adm;0;26;8;6;3;4;3;1;5;3;59
+2500;Aalborg Universitet;25715;Erhv.økon.-jura,HA;0;13;17;17;10;3;5;0;3;5;73
+2500;Aalborg Universitet;25810;Socialrådgiver;2;22;44;62;38;26;23;14;34;85;350
+2500;Aalborg Universitet;26511;Bygge og anlæg, Esbjerg;0;3;6;2;1;1;0;0;0;0;13
+2500;Aalborg Universitet;26512;Elec.Computer , Esbjerg (eng);4;7;8;1;0;1;0;2;2;2;27
+2500;Aalborg Universitet;26513;Energi (Esbjerg;0;8;10;4;1;2;1;2;2;2;32
+2500;Aalborg Universitet;26514;Maskinkonstruki, Esbjerg;0;3;5;2;1;0;0;0;0;2;13
+2500;Aalborg Universitet;26515;Civiling.Kemi og bioteknologi;0;1;3;3;0;2;1;0;2;1;13
+2500;Aalborg Universitet;26520;Medialogi, Esbjerg (eng);0;12;10;9;1;2;3;2;2;0;41
+2500;Aalborg Universitet;26610;Diplomingeniør, Esbjerg;0;1;5;2;2;2;0;1;7;6;26
+2500;Aalborg Universitet;26620;Dipl.ing.Kemi og biotekn.,Esbj;0;1;1;4;2;2;0;1;0;4;15
+2500;Aalborg Universitet;26710;Fiskeritekn.(fagligt trin);0;1;0;0;2;0;1;1;0;3;8
+3000;Det Kongelige Danske Kunstakad;30010;Arkitekt;5;43;110;144;102;72;66;37;69;24;672
+3000;Det Kongelige Danske Kunstakad;32010;Designer;2;33;100;150;181;145;89;66;168;56;990
+3000;Det Kongelige Danske Kunstakad;32610;Kunsthåndværker;0;4;4;0;6;2;3;2;19;10;50
+3000;Det Kongelige Danske Kunstakad;33010;Konservator;0;5;9;12;14;11;8;10;29;51;149
+3500;Arkitektskolen Aarhus;30060;Arkitekt;0;20;80;88;52;28;22;9;14;11;324
+3210;Designskolen Kolding;32110;Designer;2;12;33;44;37;33;20;17;31;17;246
+4000;PH Metropol UC;40510;Bered/forebyg/kat/risi.,Kbh.N;0;1;17;30;25;28;21;21;32;14;189
+4000;PH Metropol UC;40610;Bioanalytiker, Kbh.N;1;18;36;29;28;16;17;15;32;42;234
+4000;PH Metropol UC;42020;Ergoterapeut, Kbh.N;1;8;24;32;26;15;6;10;23;32;177
+4000;PH Metropol UC;45010;Ernæring og sundhed, Kbh.K;2;12;67;90;76;55;34;27;55;54;472
+4000;PH Metropol UC;45012;Glob.Nutri.&Health, S - Kbh.K;1;7;8;9;10;15;14;12;33;17;126
+4000;PH Metropol UC;46020;Folkeskolelærer, Frb.;0;13;41;73;61;42;24;23;61;34;372
+4000;PH Metropol UC;47020;Fysioterapeut, Kbh.N;1;34;88;140;109;78;64;59;122;65;760
+4000;PH Metropol UC;50010;Jordemoder, Kbh.N;0;16;43;52;36;22;24;18;58;38;307
+4000;PH Metropol UC;50810;Kristendom,kul.&kom., Frb.;0;0;1;4;3;6;4;1;3;9;31
+4000;PH Metropol UC;52610;Offentlig admistration, Frb.;0;7;13;22;17;11;5;4;30;18;127
+4000;PH Metropol UC;54020;Radiograf, Kbh.N;1;17;25;28;19;18;9;12;31;32;192
+4000;PH Metropol UC;55010;Socialrådgiver, Frb.;2;40;88;80;78;73;56;31;112;114;674
+4000;PH Metropol UC;55017;Socialrådgiver, Hillerød;0;20;26;19;12;7;8;11;22;42;167
+4000;PH Metropol UC;56020;Sygeplejerske-Diakonis. Frb;0;5;33;53;35;24;9;13;46;50;268
+4000;PH Metropol UC;56040;Sygeplejerske, Kbh.N;2;69;165;195;145;92;51;49;115;129;1012
+4000;PH Metropol UC;70010;Administrationsøkonom, Frb.;0;4;9;10;11;5;3;6;16;21;85
+4000;PH Metropol UC;78010;Laborant, Kbh.N;0;6;14;23;13;8;6;5;27;26;128
+4000;PH Metropol UC;83010;Procesteknolog, Kbh.N;0;0;0;1;3;5;2;2;9;14;36
+4500;PH UCC;40010;Psykomotorisk ter.,Hillerød;0;1;5;16;16;10;14;7;40;44;153
+4500;PH UCC;46010;Folkeskolelærer, Kbh.K;4;13;46;70;74;51;40;28;42;42;410
+4500;PH UCC;46036;Folkeskolelærer, Bornholm;0;1;1;1;2;0;0;1;1;3;10
+4500;PH UCC;46040;Folkeskolelærer,dagafd.,Søborg;1;13;22;28;28;9;12;6;19;20;158
+4500;PH UCC;46042;Folkeskolelærer,aft.afd.Søborg;0;2;2;1;2;2;2;1;9;19;40
+4500;PH UCC;47040;Fysioterapeut, Hillerød;0;9;30;23;12;12;10;4;13;16;129
+4500;PH UCC;53010;Pædagog, Frb.C;1;15;46;105;101;66;50;51;85;43;563
+4500;PH UCC;53020;Pædagog, Kbh. Ø;0;12;47;57;45;43;44;32;59;51;390
+4500;PH UCC;53030;Pædagog, Kbh.SV;1;23;62;70;52;48;40;23;74;66;459
+4500;PH UCC;53040;Pædagog, Ballerup;1;24;35;40;29;17;20;19;45;40;270
+4500;PH UCC;53100;Pædagog, Hillerød;0;18;37;40;23;19;18;7;29;39;230
+4500;PH UCC;53102;Pædagog, e-læring, Hillerød;0;0;1;3;1;2;2;2;9;25;45
+4500;PH UCC;53120;Pædagog, Bornholm;0;5;0;3;4;2;3;1;7;9;34
+4500;PH UCC;56080;Sygeplejerske, Hillerød;1;10;23;20;17;9;9;8;19;44;160
+4500;PH UCC;56082;Sygeplej, e-læring,S,Hillerød;0;1;1;0;2;1;4;1;12;58;80
+4500;PH UCC;57010;Tegnsprogs- og MHS-tolk,Kbh.N;0;5;11;15;6;10;7;9;14;22;99
+4500;PH UCC;57310;Tekstile fag og form.,Kbh.K;0;0;5;2;8;4;1;6;9;21;56
+5000;PH Sjælland UC;40640;Bioanalytiker, Næstved;0;7;16;12;6;2;4;2;12;10;71
+5000;PH Sjælland UC;40645;Bioanalytiker E-lærin, Næstved;0;1;2;5;1;1;0;1;3;11;25
+5000;PH Sjælland UC;42040;Ergoterapeut - S, Næstved;0;3;6;9;4;0;1;2;3;12;40
+5000;PH Sjælland UC;42045;Ergoterapeut,e-læring, Næstved;0;1;1;0;0;2;1;0;9;19;33
+5000;PH Sjælland UC;44115;Leisure Manage,S Nyk.F(eng);1;11;5;8;5;4;0;1;7;2;44
+5000;PH Sjælland UC;44121;Leisure Manag,V elæ Nyk.F(eng);0;0;0;0;1;0;1;0;0;0;2
+5000;PH Sjælland UC;44250;Leisure Manag. - S, Roskilde;0;2;8;18;23;16;12;4;7;4;94
+5000;PH Sjælland UC;44256;Leisure Manag.V e-læ, Roskilde;0;0;2;0;0;1;0;0;0;1;4
+5000;PH Sjælland UC;45110;Ernæring og sundhed - S, Sorø;0;6;19;11;9;8;9;6;14;23;105
+5000;PH Sjælland UC;45115;Ernæring og sundhed - V, Sorø;0;4;5;8;3;4;2;0;3;4;33
+5000;PH Sjælland UC;45117;Ernær.& sund.,e-læring S, Sorø;0;1;3;7;6;6;10;11;7;30;81
+5000;PH Sjælland UC;45119;Ernær.& sund.,e-læring V, Sorø;0;0;1;2;2;2;1;1;3;12;24
+5000;PH Sjælland UC;46045;Folkeskolelærer, S, Roskilde;0;6;25;22;5;9;10;6;5;17;105
+5000;PH Sjælland UC;46046;Folkeskolelærer, V, Roskilde;0;1;6;0;3;0;0;0;5;0;15
+5000;PH Sjælland UC;46047;Folkeskolelærer,e-læring, Rosk;0;0;2;6;0;5;4;2;17;27;63
+5000;PH Sjælland UC;46050;Folkeskolelærer, Holbæk;1;3;2;3;3;0;2;2;9;10;35
+5000;PH Sjælland UC;46070;Folkeskolelærer, S,Vordingborg;3;8;11;8;11;9;6;1;14;27;98
+5000;PH Sjælland UC;46072;Folkeskolelærer, V,Vordingborg;0;1;1;2;0;1;0;1;2;5;13
+5000;PH Sjælland UC;47050;Fysioterapeut, Roskilde;1;14;24;21;19;14;8;7;16;18;142
+5000;PH Sjælland UC;47060;Fysioterapeut - S, Næstved;1;3;13;5;7;8;5;4;7;5;58
+5000;PH Sjælland UC;47062;Fysioterapeut - V, Næstved;0;6;6;3;1;1;1;1;2;2;23
+5000;PH Sjælland UC;47065;Fysioterapeut - E-lær, Næstved;0;0;1;4;7;3;2;2;10;34;63
+5000;PH Sjælland UC;52660;Offentlig admistration,Næst S;0;0;4;2;3;2;2;0;6;7;26
+5000;PH Sjælland UC;52665;Offentlig admistration,Næst V;0;0;1;1;0;0;0;1;1;0;4
+5000;PH Sjælland UC;53130;Pædagog - S, Roskilde;1;30;43;52;39;29;22;15;30;31;292
+5000;PH Sjælland UC;53132;Pædagog - V, Roskilde;1;2;5;6;7;4;6;2;6;7;46
+5000;PH Sjælland UC;53135;Pædagog - E-lær,S, Roskilde;0;1;5;3;5;4;3;5;16;32;74
+5000;PH Sjælland UC;53137;Pædagog, e-læring- V ,Roskilde;0;0;1;0;0;0;0;1;2;1;5
+5000;PH Sjælland UC;53140;Pædagog - S, Slagelse;0;11;29;21;23;20;8;11;20;27;170
+5000;PH Sjælland UC;53142;Pædagog - V, Slagelse;0;2;3;3;1;3;3;3;2;2;22
+5000;PH Sjælland UC;53160;Pædagog - S, Nykøbing F;0;20;21;14;12;5;5;5;14;18;114
+5000;PH Sjælland UC;53162;Pædagog - V, Nykøbing F;1;1;2;1;0;1;0;0;4;7;17
+5000;PH Sjælland UC;53165;Pædagog - S, Vordingborg;0;8;20;14;15;13;8;6;15;22;121
+5000;PH Sjælland UC;53167;Pædagog - V, Vordingborg;0;0;0;3;0;1;0;1;5;4;14
+5000;PH Sjælland UC;55030;Socialrådgiver - S, Roskilde;1;15;21;22;27;18;11;10;44;76;245
+5000;PH Sjælland UC;55032;Socialrådgiver - V, Roskilde;0;14;22;7;2;4;2;2;7;12;72
+5000;PH Sjælland UC;55050;Socialrådgiver - S, Nykøbing F;0;3;8;5;4;2;7;5;7;35;76
+5000;PH Sjælland UC;55052;Socialrådgiver - V, Nykøbing F;0;1;1;1;0;1;1;0;2;4;11
+5000;PH Sjælland UC;55057;Socialrådgiver - E-lær,V, NykF;0;1;0;1;0;1;1;0;8;32;44
+5000;PH Sjælland UC;56120;Sygeplejerske - S, Roskilde;2;14;27;32;21;14;6;4;19;26;165
+5000;PH Sjælland UC;56122;Sygeplejerske - V, Roskilde;0;13;13;8;7;2;1;0;8;8;60
+5000;PH Sjælland UC;56140;Sygeplejerske - S, Slagelse;0;15;16;11;10;4;2;5;9;11;83
+5000;PH Sjælland UC;56142;Sygeplejerske - V, Slagelse;0;4;3;4;4;2;2;1;1;2;23
+5000;PH Sjælland UC;56145;Sygepl., e-læring- S, Slagelse;0;0;1;1;3;1;2;1;16;55;80
+5000;PH Sjælland UC;56147;Sygepl., e-læring- V, Slagelse;0;0;0;1;1;0;0;0;5;13;20
+5000;PH Sjælland UC;56160;Sygeplejerske - S, Næstved;1;11;15;12;9;4;3;3;8;12;78
+5000;PH Sjælland UC;56162;Sygeplejerske - V, Næstved;0;4;3;2;1;0;0;0;1;5;16
+5000;PH Sjælland UC;56180;Sygeplejerske - S, Nykøbing F;1;6;6;14;3;2;2;2;1;8;45
+5000;PH Sjælland UC;56182;Sygeplejerske - V, Nykøbing F;0;1;1;2;0;0;0;0;1;1;6
+5500;PH Syddanmark EsbjergHaderslev;40660;Bioanalytiker, Esbjerg Ø;0;1;6;11;5;4;5;4;7;8;51
+5500;PH Syddanmark EsbjergHaderslev;42080;Ergoterapeut, Esbjerg Ø;0;3;11;6;7;7;2;3;7;16;62
+5500;PH Syddanmark EsbjergHaderslev;43200;Erhv.sp&IT-bas.mark.,Haderslev;0;11;10;9;4;2;1;0;2;5;44
+5500;PH Syddanmark EsbjergHaderslev;45160;Ernæring og sundhed, Haderslev;0;4;16;13;11;9;4;6;10;19;92
+5500;PH Syddanmark EsbjergHaderslev;46100;Folkeskolelærer, Haderslev;2;15;22;17;12;11;7;7;25;60;178
+5500;PH Syddanmark EsbjergHaderslev;46110;Folkeskolelærer, Esbjerg Ø;0;10;27;19;15;2;4;7;9;15;108
+5500;PH Syddanmark EsbjergHaderslev;47100;Fysioterapeut, Esbjerg Ø;0;15;27;37;18;14;9;4;14;8;146
+5500;PH Syddanmark EsbjergHaderslev;47110;Fysioterapeut, Haderslev;0;4;20;15;7;6;3;8;7;12;82
+5500;PH Syddanmark EsbjergHaderslev;47560;Grafisk kommunik., Haderslev;0;5;4;13;15;12;9;6;13;3;80
+5500;PH Syddanmark EsbjergHaderslev;50015;Jordemoder, Esbjerg Ø;0;15;22;30;11;7;7;5;11;12;120
+5500;PH Syddanmark EsbjergHaderslev;51510;Medie- & Sonokomm., Haderslev;1;3;9;16;19;9;13;9;14;4;97
+5500;PH Syddanmark EsbjergHaderslev;52630;Offentlig adm., Esbjerg Ø;0;1;1;5;5;4;4;2;7;14;43
+5500;PH Syddanmark EsbjergHaderslev;53190;Pædagog, Kolding;4;16;36;44;32;23;21;12;34;30;252
+5500;PH Syddanmark EsbjergHaderslev;53200;Pædagog, Net pæd., Aabenraa;0;0;2;0;0;1;2;3;13;24;45
+5500;PH Syddanmark EsbjergHaderslev;53210;Pædagog, Dagundervis.,Aabenraa;2;18;36;22;22;16;12;13;33;48;222
+5500;PH Syddanmark EsbjergHaderslev;53220;Pædagog, Esbjerg Ø;0;18;28;42;24;19;17;15;46;49;258
+5500;PH Syddanmark EsbjergHaderslev;55210;Socialrådgiver, Esbjerg Ø;0;5;17;10;13;8;4;6;21;49;133
+5500;PH Syddanmark EsbjergHaderslev;55220;Socialrådgiver, Aabenraa;0;6;14;6;7;5;7;6;17;43;111
+5500;PH Syddanmark EsbjergHaderslev;56240;Sygeplejerske, Sønderborg;0;16;12;14;6;2;6;4;15;42;117
+5500;PH Syddanmark EsbjergHaderslev;56260;Sygeplejerske, Esbjerg Ø;0;12;36;26;11;6;9;5;13;21;139
+6500;PH Lillebælt UC;40650;Bioanalytiker, Odense SØ;0;11;12;7;18;9;6;3;15;14;95
+6500;PH Lillebælt UC;42060;Ergoterapeut, Odense SØ;0;11;21;17;20;11;6;3;5;17;111
+6500;PH Lillebælt UC;46080;Folkeskolelærer, Odense V;1;14;38;33;38;33;17;11;25;27;237
+6500;PH Lillebælt UC;46120;Folkeskolelærer, Jelling;0;6;12;12;5;4;6;4;8;11;68
+6500;PH Lillebælt UC;47080;Fysioterapeut, Odense SØ;0;17;62;58;44;22;20;5;28;21;277
+6500;PH Lillebælt UC;52620;Offentlig admistration,OdenseC;0;6;5;5;5;6;4;1;10;15;57
+6500;PH Lillebælt UC;52625;Offentlig adm. IT net,OdenseC;0;0;1;1;0;1;1;0;10;11;25
+6500;PH Lillebælt UC;53170;Pædagog, Odense V;0;35;72;76;83;53;36;29;74;74;532
+6500;PH Lillebælt UC;53185;Pædagog, Svendborg;0;5;9;10;11;3;3;4;17;19;81
+6500;PH Lillebælt UC;53230;Pædagog, Jelling;1;10;24;15;16;13;10;9;25;25;148
+6500;PH Lillebælt UC;54040;Radiograf, Odense SØ;0;20;27;23;17;11;12;9;10;15;144
+6500;PH Lillebælt UC;55110;Socialrådgiv.dag.stu, Odense C;0;18;26;34;32;26;19;13;41;74;283
+6500;PH Lillebælt UC;55120;Socialrådgiv.arb.& it,Odense C;0;1;1;2;2;3;3;3;30;75;120
+6500;PH Lillebælt UC;55140;Socialrådgiv.t,Vejle;0;6;14;17;15;7;8;7;24;43;141
+6500;PH Lillebælt UC;56200;Sygeplejerske, Odense SØ;0;28;78;82;29;18;24;17;41;37;354
+6500;PH Lillebælt UC;56220;Sygeplejerske, Svendborg;0;7;12;15;6;6;7;2;13;21;89
+6500;PH Lillebælt UC;56280;Sygeplejerske, Vejle;1;14;33;29;32;19;11;11;34;46;230
+7000;PH VIA University College;40060;Psykomotorisk ter., Randers;0;0;5;12;9;12;4;4;11;21;78
+7000;PH VIA University College;40310;Bandagist/ortopædiing.,Horsens;0;1;1;3;1;1;2;0;1;1;11
+7000;PH VIA University College;40670;Bioanalytiker, Århus C;0;11;30;32;16;15;12;6;22;27;171
+7000;PH VIA University College;41160;Bygningskonstruktør, Horsens;0;1;5;3;6;3;5;3;17;21;64
+7000;PH VIA University College;41165;Arc.Tech.& Con.man, Horsens;0;20;6;6;3;3;4;1;8;2;53
+7000;PH VIA University College;41170;Bygningskonstruktør, Århus N;0;2;9;23;19;23;6;15;32;28;157
+7000;PH VIA University College;41175;Arc.Tech.& Con.man, Århus N;1;31;6;0;1;3;5;1;8;1;57
+7000;PH VIA University College;41215;Bygningskonstruktør, Holstebro;0;0;3;5;9;1;3;0;9;11;41
+7000;PH VIA University College;42100;Ergoterapeut, Holstebro;0;0;9;6;6;2;5;7;7;21;63
+7000;PH VIA University College;42120;Ergoterapeut, Århus N;0;6;19;32;22;13;5;4;12;13;126
+7000;PH VIA University College;44310;Value Chain Manageme., Horsens;4;5;4;3;1;2;0;1;6;2;28
+7000;PH VIA University College;44315;Value Chain Manageme., Århus N;2;5;6;6;7;4;4;2;8;4;48
+7000;PH VIA University College;45210;Ernæring og sundhed, Århus C;0;6;36;54;56;24;20;18;28;29;271
+7000;PH VIA University College;45215;Global Nut.& Health, Århus C;1;6;13;10;16;13;2;5;10;3;79
+7000;PH VIA University College;46130;Folkeskolelærer, Nr. Nissum;0;2;6;2;4;4;0;4;7;26;55
+7000;PH VIA University College;46140;Folkeskolelærer, Skive;0;3;6;3;14;1;4;2;10;9;52
+7000;PH VIA University College;46150;Folkeskolelærer, Århus;2;12;61;126;125;63;34;27;50;28;528
+7000;PH VIA University College;46160;Folkeskolelærer, Silkeborg;0;7;20;27;19;9;5;3;15;17;122
+7000;PH VIA University College;47120;Fysioterapeut, Holstebro;0;6;18;33;16;5;12;9;16;18;133
+7000;PH VIA University College;47140;Fysioterapeut, Århus N;0;11;60;112;92;72;24;25;41;25;462
+7000;PH VIA University College;47650;Grafisk fortælling, Viborg;2;7;5;9;8;10;6;3;12;4;66
+7000;PH VIA University College;49200;(N13)Dip.ing. Materi.tek,Herni;0;0;0;2;0;1;1;1;0;1;6
+7000;PH VIA University College;49310;Dip.ing. bygning, Horsens;1;2;5;1;0;1;3;0;3;1;17
+7000;PH VIA University College;49315;Bach.global buss.E, Horsens;3;7;8;4;4;3;0;2;3;3;37
+7000;PH VIA University College;49317;Bach.global buss.E, Århus N;1;5;9;11;6;6;3;1;9;1;52
+7000;PH VIA University College;49320;Bach.infor&com.tek, Horsens;4;22;12;7;3;1;3;1;8;2;63
+7000;PH VIA University College;49325;Dip.ing. maskin, Horsens;0;6;5;2;0;1;0;0;2;2;18
+7000;PH VIA University College;49410;Bach.civil enginee, Horsens;4;24;8;3;2;1;6;5;2;5;60
+7000;PH VIA University College;49425;Bach.mecha.enginee, Horsens,;8;17;12;5;0;1;1;2;5;3;54
+7000;PH VIA University College;50610;Animation, Viborg;4;16;36;33;29;27;29;20;31;7;232
+7000;PH VIA University College;50630;Multiplatform Strory & Produc;0;6;3;17;16;20;10;8;16;10;106
+7000;PH VIA University College;50860;Kristendom,Kul.&komm., Århus;0;1;2;5;6;4;3;0;5;7;33
+7000;PH VIA University College;52640;Offentlig admistration, Århus;0;2;6;10;8;4;8;6;14;6;64
+7000;PH VIA University College;52645;Off. admistration, Viborg;0;0;0;2;2;2;1;1;5;4;17
+7000;PH VIA University College;53240;Pædagog, Ikast;0;11;20;30;16;21;14;7;11;34;164
+7000;PH VIA University College;53250;Pædagog, Holstebro;0;21;39;40;28;23;16;10;25;30;232
+7000;PH VIA University College;53260;Pædagog (P. Sabroe), Århus C;0;10;64;104;99;70;56;37;103;49;592
+7000;PH VIA University College;53270;Pædagog (Jydsk), Århus N;0;9;20;41;62;46;26;42;68;29;343
+7000;PH VIA University College;53273;Pædagog (Jydsk), Grenaa;0;2;4;5;9;7;4;3;12;25;71
+7000;PH VIA University College;53275;Pædagog, Randers;0;12;32;23;28;23;20;9;28;19;194
+7000;PH VIA University College;53280;Pædagog, Horsens;1;13;30;31;16;17;13;18;41;31;211
+7000;PH VIA University College;53290;Pædagog, Viborg;0;14;25;21;16;17;10;10;32;26;171
+7000;PH VIA University College;53292;Pædagog, netbaseret, Viborg;0;1;5;4;5;2;1;2;11;46;77
+7000;PH VIA University College;53295;Pædagog, Thisted;2;11;8;6;11;6;5;4;14;24;91
+7000;PH VIA University College;54550;Diakoni og Socialpæd;0;7;8;35;16;11;8;3;5;11;104
+7000;PH VIA University College;55310;Socialrådg.-alm linje, Århus C;1;13;41;66;38;35;22;21;66;70;373
+7000;PH VIA University College;55313;Socialrådgiver IT,V,Risskov;0;0;7;1;3;0;4;1;7;7;30
+7000;PH VIA University College;55320;Socialrådgiver, Holstebro;0;11;10;20;9;3;8;6;21;39;127
+7000;PH VIA University College;56300;Sygeplejerske, Holstebro;1;12;33;29;18;11;6;4;12;18;144
+7000;PH VIA University College;56320;Sygeplejerske, Thisted;0;0;8;9;3;4;4;1;3;4;36
+7000;PH VIA University College;56340;Sygeplejerske, Aarhus N;1;24;75;178;102;50;25;12;50;22;539
+7000;PH VIA University College;56345;Sygeplej. Netbas. (S),Aarhus N;0;0;3;7;6;2;2;2;5;20;47
+7000;PH VIA University College;56360;Sygeplejerske, Silkeborg;0;12;18;18;13;18;5;3;9;16;112
+7000;PH VIA University College;56370;Sygeplejerske, Horsens;0;8;10;14;7;5;6;2;9;19;80
+7000;PH VIA University College;56380;Sygeplejerske, Viborg;0;8;32;22;12;11;7;3;16;31;142
+7000;PH VIA University College;56400;Sygeplejerske, Randers;0;11;22;29;9;4;4;3;8;23;113
+7000;PH VIA University College;57360;Tekstile fag og formid,Herning;0;0;2;3;2;7;0;1;4;10;29
+7000;PH VIA University College;73110;Designteknolog, Herning;2;24;57;80;53;28;17;14;22;19;316
+7000;PH VIA University College;73115;AP.G in Design,Tec&Bus,Herning;6;79;52;26;20;11;10;10;8;5;227
+7000;PH VIA University College;79460;Markedsføringsøkonom, Horsens;0;2;4;11;1;2;3;0;3;3;29
+7000;PH VIA University College;79465;AP.G in Marketing Man.,Horsens;5;49;21;11;11;6;2;2;7;5;119
+7000;PH VIA University College;84360;Produktionsteknolog, Horsens;0;0;0;4;0;2;1;1;6;2;16
+7500;PH UC Nordjylland;41210;Bygningskonstruktør, Aalborg;0;1;6;16;12;8;9;2;17;19;90
+7500;PH UC Nordjylland;41212;Arch. Tech.& Con.man., Aalborg;3;28;8;4;1;2;2;0;3;0;51
+7500;PH UC Nordjylland;41590;Eksport og tek., Nørresu;0;0;3;0;2;0;2;0;2;0;9
+7500;PH UC Nordjylland;41595;Export og techn. mann, Aalborg;3;9;6;3;1;0;3;0;2;2;29
+7500;PH UC Nordjylland;42140;Ergoterapeut, Aalborg Ø;0;7;21;27;10;9;5;5;9;15;108
+7500;PH UC Nordjylland;45880;Finans, Aalborg;0;5;19;24;10;8;2;2;4;1;75
+7500;PH UC Nordjylland;46170;Folkeskolelærer, Aalborg;0;16;52;41;36;24;10;12;26;20;237
+7500;PH UC Nordjylland;46180;Folkeskolelærer, Hjørring;0;8;15;7;6;5;2;5;12;11;71
+7500;PH UC Nordjylland;47160;Fysioterapeut, Aalborg Ø;0;19;57;62;47;20;16;7;23;17;268
+7500;PH UC Nordjylland;50020;Jordemoder, Aalborg Ø;0;7;32;38;24;15;18;13;28;25;200
+7500;PH UC Nordjylland;52510;Natur- og kulturfor., Hjørring;0;0;0;3;5;1;0;2;2;8;21
+7500;PH UC Nordjylland;52515;Natural and cultural, Hjørring;4;10;9;1;4;2;0;2;3;2;37
+7500;PH UC Nordjylland;52650;Offentlig admistration,Aalborg;0;1;5;3;6;4;6;3;11;2;41
+7500;PH UC Nordjylland;53300;Pædagog, Aalborg;0;43;82;102;70;50;45;33;78;86;589
+7500;PH UC Nordjylland;53330;Pædagog, Hjørring;0;11;21;23;16;9;8;4;25;32;149
+7500;PH UC Nordjylland;54060;Radiograf, Aalborg Ø;0;11;21;15;9;7;7;4;13;26;113
+7500;PH UC Nordjylland;56420;Sygeplejerske, Aalborg Ø;1;39;62;69;39;26;12;15;18;27;308
+7500;PH UC Nordjylland;56440;Sygeplejerske, Hjørring;0;14;31;19;7;4;3;2;9;17;106
+7500;PH UC Nordjylland;70390;Automationstek,Aalborg SV;0;0;0;2;2;2;1;0;0;1;8
+7500;PH UC Nordjylland;70395;AP Gr in Autom.Eng, Aalborg SV;0;5;2;1;0;0;0;0;0;0;8
+7500;PH UC Nordjylland;71810;Datamatiker, Aalborg SV;0;6;12;6;5;7;3;6;5;5;55
+7500;PH UC Nordjylland;71815;AP.G in Comp. Scie,Aalborg SV;3;25;11;4;4;2;1;0;2;1;53
+7500;PH UC Nordjylland;73160;Designteknolog, Aalborg SV;0;3;12;19;10;8;7;8;6;4;77
+7500;PH UC Nordjylland;73165;AP.G in Design,Tec&Bus,Aalborg;2;15;14;6;3;4;0;1;6;1;52
+7500;PH UC Nordjylland;73365;AP.G in Energy techn,Aalborg;0;5;4;3;5;2;1;1;6;2;29
+7500;PH UC Nordjylland;73375;(N13)Energitek., Frederikshavn;0;0;1;0;0;0;0;0;0;2;3
+7500;PH UC Nordjylland;73390;Energiteknolog, Aalborg SV;0;0;0;1;1;1;2;0;3;7;15
+7500;PH UC Nordjylland;74160;Finansøkonom, Aalborg;0;16;28;31;16;13;13;9;16;4;146
+7500;PH UC Nordjylland;74162;AP.G in Financial Man.,Aalborg;2;25;9;0;2;3;1;2;4;3;51
+7500;PH UC Nordjylland;74165;Finansøkonom, Thisted;0;3;2;6;4;0;1;0;4;4;24
+7500;PH UC Nordjylland;74460;Business Controller, Aalborg;0;2;1;1;3;2;1;0;4;5;19
+7500;PH UC Nordjylland;75410;Installatør,Stærkstrøm,Aalborg;0;0;0;0;0;0;0;0;2;2;4
+7500;PH UC Nordjylland;75415;Installatør, VVS, Aalborg SV;0;0;0;0;0;0;0;0;1;1;2
+7500;PH UC Nordjylland;76260;IT-teknolog, Aalborg SV;0;0;2;6;3;1;2;1;7;1;23
+7500;PH UC Nordjylland;76265;AP.G IT Technology, Aalborg SV;1;8;3;0;1;1;1;2;1;1;19
+7500;PH UC Nordjylland;78410;Laborant, Aalborg SV;0;3;4;1;6;2;4;3;5;4;32
+7500;PH UC Nordjylland;79610;Markedsføringsøkonom, Aalborg;0;2;17;33;10;5;12;4;7;7;97
+7500;PH UC Nordjylland;79615;AP.G in Marketing Man, Aalborg;2;37;16;9;2;3;2;1;3;1;76
+7500;PH UC Nordjylland;79620;Markedsføringsøkonom, Thisted;0;0;4;1;2;3;2;1;1;2;16
+7500;PH UC Nordjylland;81610;Multimediedesigner, Aalborg SV;0;2;19;12;7;7;5;5;6;6;69
+7500;PH UC Nordjylland;81615;AP.G inMulti.Desig&Com,Aalborg;0;14;14;8;4;2;0;0;2;0;44
+7500;PH UC Nordjylland;84460;Produktionsteknolog,Aalborg SV;0;0;1;1;4;2;3;1;8;8;28
+7500;PH UC Nordjylland;86210;Serviceøkonom, Aalborg SV;0;2;16;25;42;17;13;6;27;23;171
+7500;PH UC Nordjylland;86215;AP.G in Hosp.&Tour, Aalborg SV;8;66;36;19;5;17;9;9;40;16;225
+7800;Bornholms Sundh.og Sygpl.skole;56100;Sygeplejerske, Rønne;0;4;3;1;1;0;1;3;1;9;23
+7810;DK Medie og Journalisthøjskole;47510;Visuel kommunikation, Kbh. NV;1;25;56;91;128;81;74;50;126;52;684
+7810;DK Medie og Journalisthøjskole;50310;Journalist, Århus N;8;84;163;183;123;92;50;40;81;41;865
+7810;DK Medie og Journalisthøjskole;50315;Fotojournalist, Århus N;2;6;10;22;25;15;15;10;21;15;141
+7810;DK Medie og Journalisthøjskole;50745;Kommunikation, Kbh.NV;0;4;13;23;19;15;11;4;12;6;107
+7810;DK Medie og Journalisthøjskole;50750;Kommunikation, Århus N;1;5;16;37;26;13;10;1;3;2;114
+7810;DK Medie og Journalisthøjskole;52010;Medieproduk. og ledelse,Kbh.NV;0;4;8;18;18;18;10;13;11;4;104
+7810;DK Medie og Journalisthøjskole;52030;TV-og medietilrettelæg.,Kbh.NV;0;5;29;40;49;29;39;22;52;21;286
+7830;Den Frie Lærerskole;46510;Fri,høj-& efter.lærer,Ollerup;0;0;4;14;21;18;13;7;15;4;96
+7860;KBH. Maskin- og Elinstal.skole;51010;Maskinmester, Kgs.Lyngby;0;5;14;16;23;17;12;12;28;16;143
+7860;KBH. Maskin- og Elinstal.skole;51015;Maskinmester, V, Kgs.Lyngby;1;0;2;2;2;1;3;0;3;1;15
+7870;Svendborg Int. Mar. Aca., SIMA;51110;Maskinmester, (S) Svendborg;0;7;9;9;11;5;3;4;6;7;61
+7870;Svendborg Int. Mar. Aca., SIMA;51115;Maskinmester, (V) Svendborg;0;1;1;3;1;0;1;0;1;0;8
+7870;Svendborg Int. Mar. Aca., SIMA;79710;Skibsofficer,S, Svendborg;0;4;7;1;3;5;2;1;4;1;28
+7870;Svendborg Int. Mar. Aca., SIMA;79715;Skibsofficer,V, Svendborg;0;0;1;0;0;0;0;0;0;0;1
+7870;Svendborg Int. Mar. Aca., SIMA;79810;Skibsfører,S, Svendborg;0;3;5;5;6;2;5;1;4;1;32
+7870;Svendborg Int. Mar. Aca., SIMA;79815;Skibsfører,V, Svendborg;0;0;0;0;2;0;0;0;0;0;2
+7880;Fredericia Maskinmesterskole;51210;Maskinmester, Fredericia;0;6;7;14;10;9;6;5;10;11;78
+7890;Aarhus Maskinmesterskole;51260;Maskinmester, (S), Arhus C;0;3;30;29;26;25;22;12;21;12;180
+7890;Aarhus Maskinmesterskole;51265;Maskinmester, (V), Arhus C;0;2;7;16;20;6;9;8;14;7;89
+7890;Aarhus Maskinmesterskole;51267;Maskinm.e-læring, (V), Arhus C;0;0;0;2;1;2;2;1;6;22;36
+7900;MARTEC;51360;Maskinmester, Frederiksha;0;11;13;8;16;8;7;2;15;11;91
+7910;Pharmakon;45610;Farmakonom, Hillerød;1;27;50;33;27;28;12;10;43;66;297
+8000;EA Copenhagen Business Academy;45810;PB i Finans, Kbh. K;1;11;22;33;16;11;12;6;6;2;120
+8000;EA Copenhagen Business Academy;71110;Datamatiker,(S), Lyngby;1;9;9;9;6;8;3;2;8;6;61
+8000;EA Copenhagen Business Academy;71112;Datamatiker,(V), Lyngby;0;1;0;1;2;0;0;0;0;1;5
+8000;EA Copenhagen Business Academy;71115;AP Gr in Computer Sci., Lyngby;0;16;7;4;1;2;2;3;6;7;48
+8000;EA Copenhagen Business Academy;74010;Finansøkonom,(S), Kbh. K;0;18;62;78;51;31;18;13;43;14;328
+8000;EA Copenhagen Business Academy;74015;Finansøkonom,(V), Kbh. K;0;2;6;5;5;1;0;2;3;2;26
+8000;EA Copenhagen Business Academy;74020;Finansøkonom, Lyngby;0;13;30;19;15;13;8;5;9;1;113
+8000;EA Copenhagen Business Academy;74410;Business Controller,Kgs.Lyngby;0;3;2;7;2;4;2;1;5;10;36
+8000;EA Copenhagen Business Academy;74605;Handelsøkonom, Kbh. K;0;14;27;32;25;40;28;15;37;15;233
+8000;EA Copenhagen Business Academy;78060;Laborant, Hillerød, Sommer;0;4;6;6;3;3;0;2;6;16;46
+8000;EA Copenhagen Business Academy;78065;Laborant, Hillerød, V;0;1;2;0;1;0;0;0;0;2;6
+8000;EA Copenhagen Business Academy;79010;Markedsføringsøkonom, Kbh. K;0;16;57;88;53;28;17;16;26;7;308
+8000;EA Copenhagen Business Academy;79012;Markedsføringsøkonom, Nørrebro;0;1;2;6;5;0;3;2;2;0;21
+8000;EA Copenhagen Business Academy;79015;AP Gr in Mark. Manag(S) Kbh. K;3;17;13;18;9;10;6;7;18;11;112
+8000;EA Copenhagen Business Academy;79017;AP Gr in Mark. Manag(V) Kbh. K;0;0;3;1;5;2;0;0;2;2;15
+8000;EA Copenhagen Business Academy;79060;Markedsføringsøk. ,Kgs. Lyngby;0;9;23;21;13;4;5;3;9;2;89
+8000;EA Copenhagen Business Academy;79062;Markedsføringsøk. ,Kgs. Lyngby;0;1;0;4;1;0;0;0;0;0;6
+8000;EA Copenhagen Business Academy;79065;AP Gr in Mark. Manag(S) Lyngby;7;49;15;9;3;3;2;0;6;4;98
+8000;EA Copenhagen Business Academy;79067;AP Gr in Mark. Manag(V) Lyngby;0;1;1;0;0;1;0;1;2;0;6
+8000;EA Copenhagen Business Academy;81060;Multimediedesigner, Lyngby;0;3;14;15;10;6;3;5;4;13;73
+8000;EA Copenhagen Business Academy;81065;AP Gr in Multim. Des., Lyngby;3;22;11;6;5;1;3;3;7;8;69
+8000;EA Copenhagen Business Academy;86010;Serviceøkonom, sommer, Valby;2;3;21;26;35;21;18;15;28;20;189
+8000;EA Copenhagen Business Academy;86012;Serviceøkonom, vinter, Valby;0;2;0;3;2;3;1;0;2;1;14
+8000;EA Copenhagen Business Academy;86015;AP Gr in Service, H&T(S)Kbh. K;0;16;15;9;6;11;10;5;24;14;110
+8000;EA Copenhagen Business Academy;86017;AP Gr in Service,H&T(V) Kbh. K;0;1;0;1;1;0;4;2;3;3;15
+8000;EA Copenhagen Business Academy;86060;Serviceøkonom, Lyngby;0;3;11;9;10;12;6;1;7;4;63
+8000;EA Copenhagen Business Academy;86065;AP Gr in Service, H&T, Lyngby;5;29;20;10;7;5;6;2;10;9;103
+8000;EA Copenhagen Business Academy;87010;Logistikøkonom, Kbh. K;0;1;5;9;5;9;7;3;16;10;65
+8100;KEA Københavns Erhvervsakademi;41010;Bygningskonstruktør, Kbh. N;0;8;11;23;39;24;20;14;60;58;257
+8100;KEA Københavns Erhvervsakademi;41015;Arch. Tech.& Con.man., Kbh N;2;22;9;9;2;6;7;6;8;12;83
+8100;KEA Københavns Erhvervsakademi;52710;Optometri, Frederiksberg;1;5;9;9;11;3;3;4;7;4;56
+8100;KEA Københavns Erhvervsakademi;58500;Økonomi og IT;0;1;8;10;6;0;4;1;3;1;34
+8100;KEA Københavns Erhvervsakademi;58505;Economics and Information;3;10;12;11;5;6;4;4;8;7;70
+8100;KEA Københavns Erhvervsakademi;59010;Smykker;0;2;10;15;13;16;16;6;13;10;101
+8100;KEA Københavns Erhvervsakademi;59015;(N13)Jewellery;0;4;3;2;5;8;0;6;9;9;46
+8100;KEA Københavns Erhvervsakademi;70310;(U13)Automationstek., Fred.b;0;0;0;1;2;3;6;1;3;5;21
+8100;KEA Københavns Erhvervsakademi;71060;Datamatiker, Kbh. NV;0;2;19;7;15;15;12;5;15;8;98
+8100;KEA Københavns Erhvervsakademi;71065;AP Gr in Computer Sci., Kbh NV;2;16;6;1;2;2;6;4;9;8;56
+8100;KEA Københavns Erhvervsakademi;73010;Designteknolog, Kbh Ø;1;19;55;77;49;38;14;17;27;14;311
+8100;KEA Københavns Erhvervsakademi;73015;AP Gr in Design & Tech., Kbh Ø;3;18;26;14;11;12;11;9;17;11;132
+8100;KEA Københavns Erhvervsakademi;73310;Energiteknolog, Fred.b;0;0;0;2;6;2;1;7;9;12;39
+8100;KEA Københavns Erhvervsakademi;73610;E-designer, Kbh. Ø;0;1;9;18;16;10;7;9;12;6;88
+8100;KEA Københavns Erhvervsakademi;75010;Installatør, Stærkstr., Fred.b;0;0;3;4;3;3;2;4;13;17;49
+8100;KEA Københavns Erhvervsakademi;75015;Installatør, VVS, Fred.b;0;0;1;2;2;2;2;3;2;12;26
+8100;KEA Københavns Erhvervsakademi;76010;It-teknolog, Frederiksberg;0;0;3;8;5;6;4;4;5;8;43
+8100;KEA Københavns Erhvervsakademi;76015;AP Gr in IT Technology, Fred.b;1;6;2;2;2;1;1;1;6;9;31
+8100;KEA Københavns Erhvervsakademi;81010;Multimediedesigner, Kbh. NV;0;9;40;49;40;23;19;10;29;16;235
+8100;KEA Københavns Erhvervsakademi;81015;AP Gr in Multim. Des., Kbh. NV;2;29;11;21;15;15;13;9;20;13;148
+8100;KEA Københavns Erhvervsakademi;84010;Produktionsteknolog, Kbh. N;0;0;4;9;10;6;6;1;13;15;64
+8200;Erhvervsakademi Sjælland;41060;Bygningskonstruktør, Næstved;0;3;3;4;3;3;4;7;14;46;87
+8200;Erhvervsakademi Sjælland;47710;Have- og parkingeniør,Roskilde;0;1;3;3;2;1;2;1;2;4;19
+8200;Erhvervsakademi Sjælland;70020;Administrationsøkonom, Køge;0;1;4;0;1;0;1;2;6;16;31
+8200;Erhvervsakademi Sjælland;70410;Autoteknolog, Næstved;1;0;1;2;5;0;1;1;4;0;15
+8200;Erhvervsakademi Sjælland;71210;Datamatiker, Roskilde;0;4;8;14;8;0;2;2;13;3;54
+8200;Erhvervsakademi Sjælland;71215;AP Gr in Comp. Sci, Roskilde;4;16;7;5;4;1;1;3;3;4;48
+8200;Erhvervsakademi Sjælland;71265;AP Gr in Comp. Sci, Slag;0;3;2;1;1;2;1;0;0;0;10
+8200;Erhvervsakademi Sjælland;71310;Datamatiker, Næstved;0;1;1;3;2;4;1;3;3;5;23
+8200;Erhvervsakademi Sjælland;74030;Finansøkonom, Næstved;0;8;24;16;13;12;2;9;7;6;97
+8200;Erhvervsakademi Sjælland;74610;Handelsøkonom, Næstved;0;3;7;11;7;8;7;3;5;5;56
+8200;Erhvervsakademi Sjælland;74615;AP Gr in Com. Man., Næstved;2;5;4;3;2;3;4;1;8;2;34
+8200;Erhvervsakademi Sjælland;75115;Installatør, VVS, Slagelse;0;0;0;1;0;1;0;3;1;4;10
+8200;Erhvervsakademi Sjælland;75160;Installatør, Stærkstrøm, Nyk.F;0;0;0;0;0;1;0;0;2;11;14
+8200;Erhvervsakademi Sjælland;77010;Jordbrugsteknolog, Slagelse;1;0;4;2;4;7;3;1;11;16;49
+8200;Erhvervsakademi Sjælland;78110;Laborant, Roskilde;0;5;3;4;5;2;1;1;8;14;43
+8200;Erhvervsakademi Sjælland;78160;Laborant, Slagelse;0;1;0;3;0;0;1;2;7;8;22
+8200;Erhvervsakademi Sjælland;79160;Markedsføringsøkonom, Roskilde;0;7;21;19;13;3;3;1;3;2;72
+8200;Erhvervsakademi Sjælland;79165;AP Gr in Mark. Man., Roskilde;1;35;22;9;5;3;10;10;18;7;120
+8200;Erhvervsakademi Sjælland;79185;AP Gr in Mark. Man., Nykøb. F;0;1;2;1;1;1;1;1;1;0;9
+8200;Erhvervsakademi Sjælland;81160;Multimediedesigner, Slagelse;0;3;5;6;3;2;1;1;4;11;36
+8200;Erhvervsakademi Sjælland;81165;AP Gr in Multim. Design, Slage;1;0;2;1;0;1;0;1;2;3;11
+8200;Erhvervsakademi Sjælland;81210;Multimediedesigner, Køge;0;2;10;8;6;5;2;2;3;5;43
+8200;Erhvervsakademi Sjælland;81215;AP Gr in Multim. Design, Køge;2;10;10;4;2;2;2;2;5;5;44
+8200;Erhvervsakademi Sjælland;81235;AP Gr in Multim. Design, Nyk.F;0;4;4;4;3;4;5;2;2;5;33
+8200;Erhvervsakademi Sjælland;83060;Procesteknolog, Roskilde;0;0;1;1;4;4;2;3;6;22;43
+8200;Erhvervsakademi Sjælland;84060;Produktionsteknolog, Slagelse;0;0;0;1;2;1;3;1;3;17;28
+8200;Erhvervsakademi Sjælland;86080;Serviceøkonom, Slagelse;0;1;0;4;0;0;1;0;4;1;11
+8200;Erhvervsakademi Sjælland;86082;AP Gr in Service hospi,Slagels;0;0;0;0;0;0;0;0;0;1;1
+8200;Erhvervsakademi Sjælland;86085;AP Gr in Service hospi m, Køge;3;17;14;9;8;3;7;5;9;3;78
+8200;Erhvervsakademi Sjælland;86090;Serviceøkonom, Køge;0;1;1;3;1;1;2;1;2;1;13
+8200;Erhvervsakademi Sjælland;87030;Logistikøkonom, Køge;0;1;4;2;1;1;0;0;7;4;20
+8200;Erhvervsakademi Sjælland;87035;AP Gr in Log. mann, Køge;1;8;2;4;1;2;5;7;6;3;39
+8300;Erhvervsakademi Lillebælt;41110;Bygningskonstruktør, Odense;0;1;6;14;9;15;4;9;21;19;98
+8300;Erhvervsakademi Lillebælt;41120;Architectural Tech, Odense;2;14;4;6;0;1;1;5;6;5;44
+8300;Erhvervsakademi Lillebælt;45830;PB i finans, Odense;0;3;18;22;10;9;4;2;4;0;72
+8300;Erhvervsakademi Lillebælt;70430;Autoteknolog, Odense C;0;2;3;2;0;2;1;3;2;1;16
+8300;Erhvervsakademi Lillebælt;71410;Datamatiker, Odense;0;6;6;9;10;7;10;4;10;4;66
+8300;Erhvervsakademi Lillebælt;71415;AP Gr in Comp. Sci, Odense C;0;8;7;2;2;0;3;2;3;2;29
+8300;Erhvervsakademi Lillebælt;71560;Datamatiker, Vejle;2;4;4;5;5;1;2;3;3;4;33
+8300;Erhvervsakademi Lillebælt;73330;Energiteknolog, Odense;0;0;0;0;2;1;2;1;4;11;21
+8300;Erhvervsakademi Lillebælt;73340;Energiteknolog, Vejle;0;0;0;0;1;0;0;0;1;6;8
+8300;Erhvervsakademi Lillebælt;74060;Finansøkonom, Odense;0;6;18;22;13;4;7;6;12;7;95
+8300;Erhvervsakademi Lillebælt;74430;Business Controller, Odense C;0;1;5;1;1;2;2;0;6;7;25
+8300;Erhvervsakademi Lillebælt;74625;Handelsøkonom, Odense C;0;1;14;11;16;18;8;12;13;6;99
+8300;Erhvervsakademi Lillebælt;74630;Handelsøkonom, Vejle;0;6;3;12;8;12;7;4;9;9;70
+8300;Erhvervsakademi Lillebælt;75210;Installatør, Stærkstrøm,Odense;0;0;0;2;0;2;1;3;8;4;20
+8300;Erhvervsakademi Lillebælt;75215;Installatør, VVS, Odense;0;0;0;2;4;1;1;1;0;10;19
+8300;Erhvervsakademi Lillebælt;75260;Installatør, Stærkstrøm, Vejle;0;0;2;3;1;0;1;1;3;2;13
+8300;Erhvervsakademi Lillebælt;76065;AP Gr in IT Technology, Odense;1;2;6;4;0;1;2;3;4;2;25
+8300;Erhvervsakademi Lillebælt;76200;It-teknolog, Odense;0;1;2;4;2;1;4;1;7;7;29
+8300;Erhvervsakademi Lillebælt;77060;Jordbrugsteknolog, Odense S;0;2;2;2;6;7;5;3;6;17;50
+8300;Erhvervsakademi Lillebælt;78210;Laborant, Odense S.;0;2;5;0;6;1;5;2;8;11;40
+8300;Erhvervsakademi Lillebælt;79210;Markedsføringsøkonom, Odense;0;3;15;27;17;8;4;3;8;2;87
+8300;Erhvervsakademi Lillebælt;79215;AP Gr in Marketing Man.,Odense;3;18;11;7;3;1;5;0;2;2;52
+8300;Erhvervsakademi Lillebælt;81310;Multimediedesigner, Odense;0;12;11;19;12;17;7;5;9;13;105
+8300;Erhvervsakademi Lillebælt;81315;AP Gr in Multim. Des., Odense;2;9;12;9;8;5;1;3;7;2;58
+8300;Erhvervsakademi Lillebælt;83110;Procesteknolog, Odense S;0;0;1;1;5;1;2;3;7;13;33
+8300;Erhvervsakademi Lillebælt;83160;Procesteknolog, Vejle;0;0;3;3;0;1;2;2;12;25;48
+8300;Erhvervsakademi Lillebælt;84110;Produktionsteknolog, Odense;0;0;2;2;1;1;4;3;7;9;29
+8300;Erhvervsakademi Lillebælt;86110;Serviceøkonom, Odense S;0;2;13;14;16;12;4;5;11;8;85
+8300;Erhvervsakademi Lillebælt;86115;AP Gr in SHT Mann, Odense;2;18;10;8;5;7;2;1;14;11;78
+8300;Erhvervsakademi Lillebælt;86130;Serviceøkonom, Vejle;0;1;3;8;5;7;2;3;9;5;43
+8300;Erhvervsakademi Lillebælt;86135;(N13)AP Gr in SHT Mann, Vejle;1;0;1;0;1;0;0;0;0;3;6
+8300;Erhvervsakademi Lillebælt;87060;Logistikøkonom, Vejle;0;1;9;1;3;6;3;1;13;9;46
+8300;Erhvervsakademi Lillebælt;87065;AP Gr in Logistics Man., Vejle;0;10;2;2;2;8;1;0;9;4;38
+8400;Erhvervsakademi Kolding;73650;E-designer, Kolding;0;2;0;2;1;5;2;1;1;0;14
+8400;Erhvervsakademi Kolding;73655;AP Gr in E-design, Koling;1;7;1;1;1;2;1;0;2;1;17
+8400;Erhvervsakademi Kolding;74070;Finansøkonom, Kolding;1;22;33;13;8;5;5;5;8;10;110
+8400;Erhvervsakademi Kolding;74075;AP Gr in Financ.Mang., Koling;1;13;4;3;2;0;2;1;0;2;28
+8400;Erhvervsakademi Kolding;79260;Markedsføringsøkonom, Kolding;0;2;14;7;7;3;5;4;6;11;59
+8400;Erhvervsakademi Kolding;79265;AP Gr in Mark. Mang., Kolding;8;55;24;7;5;2;0;1;7;6;115
+8400;Erhvervsakademi Kolding;81360;Multimediedesigner, Kolding;0;7;4;13;6;3;2;1;3;9;48
+8400;Erhvervsakademi Kolding;81365;AP Gr in Multim. Des., Kolding;1;15;11;6;5;3;3;4;4;2;54
+8500;Erhvervsakademi SydVest;41115;Bygningskonstruktør, Esbjerg;0;2;2;1;5;3;4;6;6;9;38
+8500;Erhvervsakademi SydVest;41117;Arch. Tech.& Con.man.,Esbjerg;0;0;0;0;0;0;0;0;1;0;1
+8500;Erhvervsakademi SydVest;71460;Datamatiker, Sønderborg;0;2;4;3;2;2;3;0;1;3;20
+8500;Erhvervsakademi SydVest;71465;AP Gr in Comp. Sci.,Sønderborg;2;1;1;0;0;0;0;0;1;2;7
+8500;Erhvervsakademi SydVest;71510;Datamatiker, Esbjerg;0;8;7;6;4;3;1;1;6;2;38
+8500;Erhvervsakademi SydVest;71515;AP Gr in Comp. Sci., Esbjerg;0;1;3;3;0;0;0;0;4;2;13
+8500;Erhvervsakademi SydVest;73060;Designteknolog, Sønderborg;0;2;1;1;1;1;0;0;4;3;13
+8500;Erhvervsakademi SydVest;73065;AP Gr in Design&Techn,Sønderb.;4;4;5;1;3;1;0;0;2;0;20
+8500;Erhvervsakademi SydVest;73410;Driftsteknolog offsh., Esbjerg;0;0;2;3;6;7;0;2;10;8;38
+8500;Erhvervsakademi SydVest;74080;Finansøkonom, Esbjerg;0;14;17;5;13;3;3;2;9;3;69
+8500;Erhvervsakademi SydVest;75230;Installatør,Stærkstrøm,Esbjerg;0;0;2;1;2;0;1;1;3;5;15
+8500;Erhvervsakademi SydVest;78260;Laborant, Esbjerg;0;2;1;2;2;1;0;2;8;8;26
+8500;Erhvervsakademi SydVest;79290;Markedsføringsøkonom, Sønderb.;0;0;3;5;2;2;2;0;4;5;23
+8500;Erhvervsakademi SydVest;79295;AP Gr in Marketing M.,Sønderb.;0;1;2;0;0;0;0;1;3;2;9
+8500;Erhvervsakademi SydVest;79310;Markedsføringsøkonom, Esbjerg;0;2;7;8;7;2;4;2;4;1;37
+8500;Erhvervsakademi SydVest;79315;AP Gr in Marketing Man., Esbj.;3;8;8;4;1;3;0;0;2;5;34
+8500;Erhvervsakademi SydVest;81410;Multimediedesigner, Esbjerg;0;3;8;3;2;2;1;1;3;3;26
+8500;Erhvervsakademi SydVest;81412;AP Gr in Multimedia Des.,Esbj.;0;4;5;1;3;4;1;1;5;3;27
+8500;Erhvervsakademi SydVest;81420;Multimediedesigner, Sønderborg;0;2;4;0;1;4;1;1;2;4;19
+8500;Erhvervsakademi SydVest;81422;(N13)AP Gr in Multi.Des.,Sønde;0;0;0;0;0;0;0;0;0;1;1
+8500;Erhvervsakademi SydVest;84160;Produktionsteknolog, Sønderb.;0;1;0;0;0;3;0;1;1;7;13
+8500;Erhvervsakademi SydVest;84210;Produktionsteknolog, Esbjerg;0;0;2;2;5;2;2;2;7;10;32
+8600;Erhvervsakademi MidtVest;71610;Datamatiker, Herning;0;1;3;5;3;3;2;2;3;7;29
+8600;Erhvervsakademi MidtVest;74090;Finansøkonom, Herning;0;7;15;11;3;9;2;1;9;6;63
+8600;Erhvervsakademi MidtVest;74100;Finansøkonom, Holstebro;0;3;9;7;7;1;2;3;9;7;48
+8600;Erhvervsakademi MidtVest;75310;Installatør, Stærkstr, Herning;0;0;0;0;2;4;0;0;6;3;15
+8600;Erhvervsakademi MidtVest;75315;Installatør, VVS, Herning;0;0;0;0;2;3;0;2;1;4;12
+8600;Erhvervsakademi MidtVest;78310;Laborant, Holstebro;0;3;0;3;4;0;0;1;2;7;20
+8600;Erhvervsakademi MidtVest;79360;Markedsføringsøkonom, Herning;1;2;9;11;9;2;3;3;10;4;54
+8600;Erhvervsakademi MidtVest;81460;Multimediedesigner, Herning;0;6;2;5;9;3;1;1;5;6;38
+8600;Erhvervsakademi MidtVest;83210;Procesteknolog, Holstebro;0;0;0;0;1;3;1;5;2;14;26
+8600;Erhvervsakademi MidtVest;84260;Produktionsteknolog, Herning;0;0;0;0;2;4;1;1;7;11;26
+8600;Erhvervsakademi MidtVest;86150;Serviceøkonom, Holstebro;0;3;5;6;12;5;4;3;6;7;51
+8700;Erhvervsakademi Aarhus;45860;PB i finans, Viby J.;1;7;13;51;26;6;5;3;6;2;120
+8700;Erhvervsakademi Aarhus;45865;Fin. Man. & Ser., Viby J.;3;34;5;3;2;2;2;1;5;4;61
+8700;Erhvervsakademi Aarhus;70460;Autoteknolog, Viby J.;0;2;2;4;5;4;2;0;2;2;23
+8700;Erhvervsakademi Aarhus;70470;AP Gr in Autom. Tech, Viby J.;0;11;6;2;0;2;4;1;4;1;31
+8700;Erhvervsakademi Aarhus;71710;Datamatiker, Viby J.;0;4;10;15;7;11;6;6;9;10;78
+8700;Erhvervsakademi Aarhus;71715;AP Gr in Computer Sci., Viby J;1;29;10;4;2;4;4;2;5;1;62
+8700;Erhvervsakademi Aarhus;74110;Finansøkonom, Viby J.;0;8;53;66;39;23;20;16;28;4;257
+8700;Erhvervsakademi Aarhus;74450;Business Controller, Viby J.;0;1;2;4;8;8;3;0;8;5;39
+8700;Erhvervsakademi Aarhus;76210;It-teknolog, Århus N.;0;0;2;5;4;1;2;5;7;4;30
+8700;Erhvervsakademi Aarhus;76215;AP Gr in IT Technology, Århus;1;10;3;4;3;1;2;0;4;2;30
+8700;Erhvervsakademi Aarhus;77110;Jordbrugsteknolog, Risskov;0;0;5;10;21;17;11;14;31;29;138
+8700;Erhvervsakademi Aarhus;77115;AP Gr in Agro, Risskov;0;7;3;3;1;2;3;1;2;0;22
+8700;Erhvervsakademi Aarhus;77700;Miljøteknolog, Viby;0;0;0;0;3;4;3;0;3;7;20
+8700;Erhvervsakademi Aarhus;78360;Laborant, Viby J.;0;2;9;7;5;1;2;2;9;7;44
+8700;Erhvervsakademi Aarhus;78370;AP Gr in Che.&Biot.Sci, Viby J;3;29;8;1;1;2;2;3;6;4;59
+8700;Erhvervsakademi Aarhus;79410;Markedsføringsøkonom, Viby J.;0;10;47;115;69;48;17;17;23;7;353
+8700;Erhvervsakademi Aarhus;79415;AP Gr in Market. Man., Viby J;6;46;17;13;11;5;5;5;7;1;116
+8700;Erhvervsakademi Aarhus;81560;Multimediedesigner, Viby J.;0;5;31;37;23;20;14;10;19;11;170
+8700;Erhvervsakademi Aarhus;81565;AP Gr in Multimedia D., Viby J;2;33;11;7;6;5;5;5;11;5;90
+8800;Erhvervsakademi Dania;52750;Optometri, Randers;0;1;8;7;4;4;6;1;6;6;43
+8800;Erhvervsakademi Dania;70210;Administrationøkonom, Hobro;0;0;1;0;1;3;4;5;9;21;44
+8800;Erhvervsakademi Dania;70370;Automationsteknolog, Hadsten;0;0;0;0;1;4;1;2;4;3;15
+8800;Erhvervsakademi Dania;70510;Autoteknolog, Viborg;0;1;0;7;1;6;1;1;2;4;23
+8800;Erhvervsakademi Dania;70515;AP Gr Automotive, Viborg;1;8;4;1;1;1;1;2;0;2;21
+8800;Erhvervsakademi Dania;71660;Datamatiker, Skive;0;2;4;2;0;2;1;0;1;5;17
+8800;Erhvervsakademi Dania;71665;Datamatiker, Grenaa;5;19;21;23;11;4;6;5;7;1;102
+8800;Erhvervsakademi Dania;73370;Energiteknolog, Hadsten;0;0;0;2;2;1;1;0;2;6;14
+8800;Erhvervsakademi Dania;74210;Finansøkonom, Hobro;0;5;12;9;10;3;2;4;11;11;67
+8800;Erhvervsakademi Dania;74215;Finansøkonom, Silkeborg;0;3;10;4;5;4;3;2;12;7;50
+8800;Erhvervsakademi Dania;74660;Handelsøkonom, Randers;0;1;12;12;12;11;7;8;9;6;78
+8800;Erhvervsakademi Dania;74670;Handelsøkonom, Silkeborg;0;9;5;6;6;5;1;0;9;7;48
+8800;Erhvervsakademi Dania;74675;Handelsøkonom, Hobro;0;1;4;3;4;3;3;7;6;2;33
+8800;Erhvervsakademi Dania;74680;Handelsøkonom, Horsens;1;2;4;5;5;6;5;2;10;3;43
+8800;Erhvervsakademi Dania;75360;Installatør, Stærkstrøm, Hadst;0;0;0;3;3;2;0;4;2;3;17
+8800;Erhvervsakademi Dania;75365;Installatør, VVS, Hadsten;0;0;0;1;0;0;0;0;0;6;7
+8800;Erhvervsakademi Dania;76255;AP Gr IT Technology, Viborg;0;4;2;1;3;0;0;0;4;3;17
+8800;Erhvervsakademi Dania;76270; IT-teknolog, Viborg;0;0;1;1;1;0;0;1;2;2;8
+8800;Erhvervsakademi Dania;79510;Markedsføringsøkonom, Viborg;0;4;4;6;4;4;2;2;1;5;32
+8800;Erhvervsakademi Dania;79512;AP Gr in Marketing Man. Viborg;1;12;7;3;3;1;1;1;2;5;36
+8800;Erhvervsakademi Dania;79560;Markedsføringsøkonom, Randers;0;4;5;6;11;4;1;4;5;3;43
+8800;Erhvervsakademi Dania;79565;AP Gr in Marketing M., Randers;3;15;5;0;5;4;1;2;0;4;39
+8800;Erhvervsakademi Dania;81590;Multimediedesigner, Skive;0;4;1;6;4;2;2;2;5;8;34
+8800;Erhvervsakademi Dania;84310;Produktionsteknolog, Skive;0;0;1;4;2;1;0;2;7;9;26
+8800;Erhvervsakademi Dania;84410;Produktionsteknolog, Randers;0;0;1;0;2;1;0;1;6;15;26
+8800;Erhvervsakademi Dania;86160;Serviceøkonom, Randers;0;2;9;25;11;13;9;4;18;11;102
+8800;Erhvervsakademi Dania;86165;AP Gr in Ser, Hos,Tou, Randers;3;21;10;2;7;3;3;2;1;6;58
+8800;Erhvervsakademi Dania;86170;Serviceøkonom, Skive;0;2;2;3;1;1;0;1;1;1;12

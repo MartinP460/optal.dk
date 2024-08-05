@@ -75,6 +75,29 @@ export type KOTDataCategories = {
     genderAppliedMen: KOTData
     genderAppliedWomen: KOTData
   }>
+  age?: KOTDataCategoryGeneric<{
+    year: number
+    ageAcceptedYounger: KOTData
+    ageAccepted19: KOTData
+    ageAccepted20: KOTData
+    ageAccepted21: KOTData
+    ageAccepted22: KOTData
+    ageAccepted23: KOTData
+    ageAccepted24: KOTData
+    ageAccepted25: KOTData
+    ageAccepted26To30: KOTData
+    ageAcceptedOlder: KOTData
+    ageAppliedYounger: KOTData
+    ageApplied19: KOTData
+    ageApplied20: KOTData
+    ageApplied21: KOTData
+    ageApplied22: KOTData
+    ageApplied23: KOTData
+    ageApplied24: KOTData
+    ageApplied25: KOTData
+    ageApplied26To30: KOTData
+    ageAppliedOlder: KOTData
+  }>
 }
 
 export type KOTDataCategory = NonNullable<KOTDataCategories[keyof KOTDataCategories]>
