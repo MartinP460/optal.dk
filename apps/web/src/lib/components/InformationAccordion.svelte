@@ -4,7 +4,6 @@
   import type { KOTCategory, KOTInstitution } from 'parser'
   import * as Accordion from '$lib/components/ui/accordion'
   import * as Card from '$lib/components/ui/card'
-  import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Title from '$lib/components/Title.svelte'
   import { t } from '$lib/i18n'
   import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
@@ -30,7 +29,8 @@
       <Accordion.Content>
         {#if shouldDisplay('accepted')}
           <Title element="h4" variant="h5" class="mb-2 flex gap-4"
-            >{$t('accepted')}<DotSeperator class="bg-lime-700" /></Title
+            >{$t('accepted')}
+            <div class="bg-lime-700 w-2 h-2 rounded-[3px] self-center" /></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('admitted')}</Title>
           <p>
@@ -46,7 +46,8 @@
 
         {#if shouldDisplay('applied')}
           <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
-            >{$t('applied')}<DotSeperator class="bg-yellow-700" /></Title
+            >{$t('applied')}
+            <div class="bg-yellow-700 w-2 h-2 rounded-[3px] self-center" /></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('firstPriority')}</Title>
           <p>{$t(`infoAppliedFirstpriority${i18nType}`)}</p>
@@ -56,7 +57,8 @@
 
         {#if shouldDisplay('quotient')}
           <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
-            >{$t('quotient')}<DotSeperator class="bg-rose-800" /></Title
+            >{$t('quotient')}
+            <div class="bg-rose-800 w-2 h-2 rounded-[3px] self-center" /></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('primary')}</Title>
           <p>{$t(`infoQuotientPrimary${i18nType}`)}</p>
@@ -66,12 +68,24 @@
 
         {#if shouldDisplay('gender')}
           <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
-            >{$t('gender')}<DotSeperator class="bg-fuchsia-400" /></Title
+            >{$t('gender')}
+            <div class="bg-fuchsia-400 w-2 h-2 rounded-[3px] self-center" /></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('accepted')}</Title>
           <p>{$t(`infoGenderAccepted${i18nType}`)}</p>
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('applied')}</Title>
           <p>{$t(`infoGenderApplied${i18nType}`)}</p>
+        {/if}
+
+        {#if shouldDisplay('age')}
+          <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
+            >{$t('age')}
+            <div class="bg-purple-500 w-2 h-2 rounded-[3px] self-center" /></Title
+          >
+          <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('accepted')}</Title>
+          <p>{$t(`infoAgeAccepted${i18nType}`)}</p>
+          <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('applied')}</Title>
+          <p>{$t(`infoAgeApplied${i18nType}`)}</p>
         {/if}
       </Accordion.Content>
     </Accordion.Item>
@@ -141,6 +155,14 @@
       <p>{$t(`infoGenderAccepted${i18nType}`)}</p>
       <h5>{$t('applied')}</h5>
       <p>{$t(`infoGenderApplied${i18nType}`)}</p>
+    {/if}
+
+    {#if shouldDisplay('age')}
+      <h4>{$t('age')}</h4>
+      <h5>{$t('accepted')}</h5>
+      <p>{$t(`infoAgeAccepted${i18nType}`)}</p>
+      <h5>{$t('applied')}</h5>
+      <p>{$t(`infoAgeApplied${i18nType}`)}</p>
     {/if}
   </div>
 </Card.Root>

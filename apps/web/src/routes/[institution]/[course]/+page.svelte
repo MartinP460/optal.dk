@@ -55,7 +55,7 @@
 
   <InformationAccordion
     descriptionOpts={{
-      categoriesToDisplay: ['accepted', 'applied', 'quotient', 'gender'],
+      categoriesToDisplay: ['accepted', 'applied', 'quotient', 'gender', 'age'],
       type: 'course'
     }}
   />
