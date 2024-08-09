@@ -17,12 +17,12 @@
   const minYear = Math.min(...courseYears)
   const maxYear = Math.max(...courseYears)
   const { initialDataCategory, setCategoryParam } = getCategoryParams(dataCategories)
-
-  let displayType: DisplayType = has5OrMoreYearsOfData
+  const initialDisplayType = has5OrMoreYearsOfData
     ? chartConfig[initialDataCategory.name].defaultDisplayType
     : 'table'
 
   let period = [minYear, maxYear]
+  let displayType: DisplayType = initialDisplayType
 
   $: selectedDataCategory = initialDataCategory
 
@@ -36,6 +36,7 @@
       dataCategories[dataCategory.name]!,
       period
     )
+
     setCategoryParam(dataCategory.name)
   }
 
@@ -74,7 +75,6 @@
     {/if}
     {#if has5OrMoreYearsOfData}
       <VisualizationDisplaySelect
-        {selectedDataCategory}
         selectedDisplayType={displayType}
         on:displayTypeSelect={(e) => handleDisplayTypeSelect(e.detail)}
       />

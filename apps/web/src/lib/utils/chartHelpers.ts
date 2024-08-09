@@ -1,18 +1,22 @@
 import { get } from 'svelte/store'
 import _ from 'lodash'
 import type { KOTDataCategory, KOTSubcategory } from 'parser'
+import type { DisplayType } from '$lib/types/chartDisplayType'
 import { getNewGetColorFromDataset } from '$lib/utils/getColorFromDataset'
 import { t as i18n, locale } from '$lib/i18n'
 import { chartConfig } from '$lib/utils/chartConfig'
 import { getSubCategories } from '$lib/utils/chartCategoryHelpers'
 
-export function getChartProps(dataCategory: KOTDataCategory) {
+type Datapoint = KOTDataCategory['datasets'][number]
+type Datapoints = Datapoint[]
+
+export function getChartProps(dataCategory: KOTDataCategory, displayType?: DisplayType) {
   const data = formatNewDataset(dataCategory.datasets)
 
   return {
     data,
     originalData: dataCategory.datasets,
-    suggestedMaxY: computeSuggestedMaxY(data),
+    suggestedMaxY: computeSuggestedMaxY(dataCategory, displayType ?? 'table'),
     legendLabels: getLegendLabels(dataCategory),
     y: getYFunctions(dataCategory.datasets),
     x: getXFunction(),
@@ -29,18 +33,14 @@ function getLegendLabels(dataCategory: KOTDataCategory) {
   const groupLabel = groups
     ? groups.find((group) =>
         group.subCategories.some((subCategory) => subCategories.includes(subCategory))
-      )?.label
+      )?.label ?? null
     : null
 
-  return subCategories.map((subCategory) => ({
-    group: groupLabel ?? null,
-    label: subCategory
-  }))
+  return { group: groupLabel, labels: subCategories.map((subCategory) => subCategory) }
 }
 
-function formatNewDataset(dataset: KOTDataCategory['datasets']): KOTDataCategory['datasets'] {
+function formatNewDataset(dataset: Datapoints): Datapoints {
   const hasLetters = /[a-zA-Z]/
-  // @ts-expect-error The data category can be any of the ones in the return type.
   return dataset.map((data) =>
     _.mapValues(data, (value: number | string) =>
       typeof value === 'string'
@@ -52,8 +52,8 @@ function formatNewDataset(dataset: KOTDataCategory['datasets']): KOTDataCategory
   )
 }
 
-function getColorFunction(datasets: KOTDataCategory['datasets']) {
-  return (_: KOTDataCategory['datasets'], i: number) => {
+function getColorFunction(datasets: Datapoints) {
+  return (_: Datapoints, i: number) => {
     const colors = Object.keys(datasets[0])
       .filter((subcategory) => subcategory !== 'year')
       .map((subcategory) => getNewGetColorFromDataset(subcategory as KOTSubcategory))
@@ -63,30 +63,34 @@ function getColorFunction(datasets: KOTDataCategory['datasets']) {
 }
 
 function getXFunction() {
-  return (d: KOTDataCategory['datasets'][number]) => d.year
+  return (d: Datapoint) => d.year
 }
 
-function getYFunctions(datasets: KOTDataCategory['datasets']) {
+function getYFunctions(datasets: Datapoints) {
   const keys = Object.keys(datasets[0]).filter((key) => key !== 'year')
 
   // We have to do this typecast because typescript cannot infer the type of the categories
   // from Object.keys.
-  return keys.map((key) => (d: KOTDataCategory['datasets'][number]) => d[key as 'year'])
+  return keys.map((key) => (d: Datapoint) => d[key as 'year'])
 }
 
-function computeSuggestedMaxY(datasets: KOTDataCategory['datasets']) {
+function computeSuggestedMaxY(dataCategory: KOTDataCategory, displayType: DisplayType) {
   const QUOTIENT_MAX_Y = 13
 
-  // @ts-expect-error These properties do exist on one of the data categories.
-  const isQuotient = datasets[0]?.quotientPrimary || datasets[0]?.quotientStandby
+  const isQuotient = dataCategory.name === 'quotient'
+  const isGenderOrAgeAndBarChart =
+    (dataCategory.name === 'gender' || dataCategory.name === 'age') && displayType === 'barchart'
+
   if (isQuotient) {
     return QUOTIENT_MAX_Y
   }
 
-  const values = Object.values(datasets)
+  const values = Object.values(dataCategory.datasets)
 
   const maxValue = values.reduce((acc, item) => {
-    const maxInYear = Math.max(...Object.values(_.omit(item, ['year']) as object))
+    const maxInYear = isGenderOrAgeAndBarChart
+      ? _.sum(Object.values(_.omit(item, ['year']) as object))
+      : Math.max(...Object.values(_.omit(item, ['year']) as object))
 
     return maxInYear > acc ? maxInYear : acc
   }, 0)
@@ -94,7 +98,7 @@ function computeSuggestedMaxY(datasets: KOTDataCategory['datasets']) {
   return maxValue * 1.2
 }
 
-function getTickValueFunction(datasets: KOTDataCategory['datasets']) {
+function getTickValueFunction(datasets: Datapoints) {
   const labels = datasets.map((dataset) => dataset.year)
   const isEven = labels.length % 2 === 0
 
@@ -121,40 +125,45 @@ function getTooltip(dataCategory: KOTDataCategory) {
   const t = get(i18n)
   const currentLocale = get(locale)
 
-  return (d: KOTDataCategory['datasets'][number]) => {
+  return (d: Datapoint) => {
     return `
     <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-sm">
         <span class="font-bold text-sm text-muted-foreground">
         ${d.year}
         </span>
-        ${Object.keys(dataCategory.datasets[0])
-          .filter((key) => key !== 'year')
-          .map((category) => {
-            const label =
-              // @ts-expect-error Typescript cannot infer the type of the categories from Object.keys.
-              d[category] === ''
-                ? t('unapplicale')
-                : // @ts-expect-error Same as above.
-                  (d[category] ?? '').toLocaleString(currentLocale)
+        <div class="${Object.keys(d).length > 4 ? 'grid grid-cols-3 last:row-span-3' : ''}">
+          ${Object.keys(dataCategory.datasets[0])
+            .filter((key) => key !== 'year')
+            .map((category) => {
+              const label =
+                // @ts-expect-error Typescript cannot infer the type of the categories from Object.keys.
+                d[category] === ''
+                  ? t('unapplicale')
+                  : // @ts-expect-error Same as above.
+                    (d[category] ?? '').toLocaleString(currentLocale)
 
-            // @ts-expect-error Same as above.
-            const categoryT = t(category)
+              // @ts-expect-error Same as above.
+              const categoryT = t(category)
+              // @ts-expect-error Same as above.
+              const color = getNewGetColorFromDataset(category)
 
-            return `
-            <div class="flex flex-col">
-                <span class="text-[0.70rem] uppercase text-muted-foreground">
-                  ${categoryT}
-                </span>
-                <span class="font-bold text-foreground">
-                  ${label}
-                  <span class="font-normal text-xs text-muted-foreground">
-                    ${dataCategory.unit ? t(dataCategory.unit) : ''}
+              return `
+              <div class="flex flex-col w-full">
+                  <span class="text-[0.70rem] uppercase text-muted-foreground flex items-center">
+                    ${categoryT}
+                    <span class="w-2 h-2 inline-block ml-1 mr-2 rounded-[2px]" style="background-color: ${color}"></span>
                   </span>
-                </span>
-            </div>
-            `
-          })
-          .join('')}
+                  <span class="font-bold text-foreground">
+                    ${label}
+                    <span class="font-normal text-xs text-muted-foreground">
+                      ${dataCategory.unit ? t(dataCategory.unit) : ''}
+                    </span>
+                  </span>
+              </div>
+              `
+            })
+            .join('')}
+        </div>
     </div>
     `
   }

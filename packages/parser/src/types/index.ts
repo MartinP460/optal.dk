@@ -34,17 +34,44 @@ export type KOTInstitution = {
   slug: string
 }
 
-export type KOTCategory = 'accepted' | 'applied' | 'quotient' | 'gender'
+export type KOTCategory = 'accepted' | 'applied' | 'quotient' | 'gender' | 'age'
+
+export type KOTSubcategoryGeneric<T extends KOTCategory> = Omit<
+  keyof NonNullable<KOTDataCategories[T]>['datasets'][number],
+  'year'
+>
 
 type KOTDatasetCategory = {
   accepted: 'acceptedAdmitted' | 'acceptedStandby'
   applied: 'appliedTotal' | 'appliedFirstpriority'
   quotient: 'quotientPrimary' | 'quotientStandby'
   gender: 'genderAcceptedMen' | 'genderAcceptedWomen' | 'genderAppliedMen' | 'genderAppliedWomen'
+  age:
+    | 'ageAcceptedYounger'
+    | 'ageAccepted19'
+    | 'ageAccepted20'
+    | 'ageAccepted21'
+    | 'ageAccepted22'
+    | 'ageAccepted23'
+    | 'ageAccepted24'
+    | 'ageAccepted25'
+    | 'ageAccepted26To30'
+    | 'ageAcceptedOlder'
+    | 'ageAppliedYounger'
+    | 'ageApplied19'
+    | 'ageApplied20'
+    | 'ageApplied21'
+    | 'ageApplied22'
+    | 'ageApplied23'
+    | 'ageApplied24'
+    | 'ageApplied25'
+    | 'ageApplied26To30'
+    | 'ageAppliedOlder'
 }
+
 export type KOTSubcategory = KOTDatasetCategory[keyof KOTDatasetCategory]
 
-type KOTData = string | number
+export type KOTData = string | number
 
 type KOTDataCategoryGeneric<T> = {
   name: KOTCategory

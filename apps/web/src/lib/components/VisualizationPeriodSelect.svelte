@@ -9,6 +9,9 @@
   export let min: number
   export let max: number
   export let period: number[]
+
+  $: label =
+    period.length < 2 || period[0] === period[1] ? period[0] : `${period[0]} - ${period[1]}`
 </script>
 
 <Popover.Root>
@@ -18,7 +21,7 @@
       <div class="text-left">
         <p class="text-xs text-muted-foreground">{$t('timePeriod')}</p>
         <p class="inline-flex gap-2 items-center">
-          {period[0] === period[1] ? period[0] : `${period[0]} - ${period[1]}`}
+          {label}
         </p>
       </div>
     </Button>
@@ -36,7 +39,7 @@
       <div class="text-left">
         <p class="text-xs text-muted-foreground">{$t('timePeriod')}</p>
         <p class="inline-flex gap-2 items-center">
-          {period[0] === period[1] ? period[0] : `${period[0]} - ${period[1]}`}
+          {label}
         </p>
       </div>
     </Button>

@@ -1,5 +1,11 @@
 import _ from 'lodash'
-import type { KOTCategory, KOTDataCategories, KOTDataCategory, KOTSubcategory } from 'parser'
+import type {
+  KOTCategory,
+  KOTData,
+  KOTDataCategories,
+  KOTDataCategory,
+  KOTSubcategory
+} from 'parser'
 import type { DisplayType } from '$lib/types/chartDisplayType'
 import { chartConfig } from '$lib/utils/chartConfig'
 
@@ -7,7 +13,7 @@ export function getCategories(dataCategories: KOTDataCategories) {
   return Object.keys(dataCategories) as KOTCategory[]
 }
 
-export function getSubCategories(dataCategory: KOTDataCategory) {
+export function getSubCategories(dataCategory?: KOTDataCategory) {
   return Object.keys(_.omit(dataCategory?.datasets[0], 'year')) as KOTSubcategory[]
 }
 
@@ -67,10 +73,10 @@ export function getCategoryInPeriod(
   } as KOTDataCategory
 }
 
-export function getSubCategoryValues(dataset: { [key in KOTSubcategory]: string | number }) {
+export function getSubCategoryValues(dataset: { [key in KOTSubcategory]?: KOTData }) {
   return Object.values(_.omit(dataset, 'year'))
 }
 
-export function getDisplayTypesFromDataCategory(dataCategory: KOTDataCategory) {
-  return Object.keys(chartConfig[dataCategory?.name].display) as DisplayType[]
+export function getDisplayTypesFromDataCategory(): DisplayType[] {
+  return ['barchart', 'linechart', 'table']
 }

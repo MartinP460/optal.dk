@@ -7,15 +7,13 @@ type ChartConfig = {
       all: KOTSubcategory[]
       default: KOTSubcategory[]
       groups:
-        | { subCategories: KOTSubcategory[]; label: 'genderAccepted' | 'genderApplied' }[]
+        | {
+            subCategories: KOTSubcategory[]
+            label: 'genderAccepted' | 'genderApplied' | 'ageAccepted' | 'ageApplied'
+          }[]
         | null
     }
     defaultDisplayType: DisplayType
-    display: {
-      [key in DisplayType]?: {
-        periodSelector?: 'multiple' | 'single' | null
-      }
-    }
   }
 }
 
@@ -26,16 +24,7 @@ export const chartConfig: ChartConfig = {
       default: ['acceptedAdmitted', 'acceptedStandby'],
       groups: null
     },
-    defaultDisplayType: 'linechart',
-    display: {
-      linechart: {
-        periodSelector: 'multiple'
-      },
-      barchart: {
-        periodSelector: 'multiple'
-      },
-      table: {}
-    }
+    defaultDisplayType: 'linechart'
   },
   applied: {
     subCategories: {
@@ -43,16 +32,7 @@ export const chartConfig: ChartConfig = {
       default: ['appliedTotal', 'appliedFirstpriority'],
       groups: null
     },
-    defaultDisplayType: 'linechart',
-    display: {
-      linechart: {
-        periodSelector: 'multiple'
-      },
-      barchart: {
-        periodSelector: 'multiple'
-      },
-      table: {}
-    }
+    defaultDisplayType: 'linechart'
   },
   quotient: {
     subCategories: {
@@ -60,16 +40,7 @@ export const chartConfig: ChartConfig = {
       default: ['quotientPrimary', 'quotientStandby'],
       groups: null
     },
-    defaultDisplayType: 'linechart',
-    display: {
-      linechart: {
-        periodSelector: 'multiple'
-      },
-      barchart: {
-        periodSelector: 'multiple'
-      },
-      table: {}
-    }
+    defaultDisplayType: 'linechart'
   },
   gender: {
     subCategories: {
@@ -80,15 +51,75 @@ export const chartConfig: ChartConfig = {
         { subCategories: ['genderAppliedMen', 'genderAppliedWomen'], label: 'genderApplied' }
       ]
     },
-    defaultDisplayType: 'barchart',
-    display: {
-      linechart: {
-        periodSelector: 'multiple'
-      },
-      barchart: {
-        periodSelector: 'multiple'
-      },
-      table: {}
-    }
+    defaultDisplayType: 'barchart'
+  },
+  age: {
+    subCategories: {
+      all: [
+        'ageAcceptedYounger',
+        'ageAccepted19',
+        'ageAccepted20',
+        'ageAccepted21',
+        'ageAccepted22',
+        'ageAccepted23',
+        'ageAccepted24',
+        'ageAccepted25',
+        'ageAccepted26To30',
+        'ageAcceptedOlder',
+        'ageAppliedYounger',
+        'ageApplied20',
+        'ageApplied21',
+        'ageApplied22',
+        'ageApplied23',
+        'ageApplied24',
+        'ageApplied25',
+        'ageApplied26To30',
+        'ageAppliedOlder'
+      ],
+      default: [
+        'ageAcceptedYounger',
+        'ageAccepted19',
+        'ageAccepted20',
+        'ageAccepted21',
+        'ageAccepted22',
+        'ageAccepted23',
+        'ageAccepted24',
+        'ageAccepted25',
+        'ageAccepted26To30',
+        'ageAcceptedOlder'
+      ],
+      groups: [
+        {
+          subCategories: [
+            'ageAcceptedYounger',
+            'ageAccepted19',
+            'ageAccepted20',
+            'ageAccepted21',
+            'ageAccepted22',
+            'ageAccepted23',
+            'ageAccepted24',
+            'ageAccepted25',
+            'ageAccepted26To30',
+            'ageAcceptedOlder'
+          ],
+          label: 'ageAccepted'
+        },
+        {
+          subCategories: [
+            'ageAppliedYounger',
+            'ageApplied20',
+            'ageApplied21',
+            'ageApplied22',
+            'ageApplied23',
+            'ageApplied24',
+            'ageApplied25',
+            'ageApplied26To30',
+            'ageAppliedOlder'
+          ],
+          label: 'ageApplied'
+        }
+      ]
+    },
+    defaultDisplayType: 'barchart'
   }
 }

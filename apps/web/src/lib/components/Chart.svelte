@@ -5,6 +5,7 @@
     VisGroupedBar,
     VisLine,
     VisScatter,
+    VisStackedBar,
     VisTooltip,
     VisXYContainer
   } from '@unovis/svelte'
@@ -14,12 +15,12 @@
   import ChartLegend from '$lib/components/ChartLegend.svelte'
 
   export let dataCategory: KOTDataCategory
-  export let displayType: Omit<DisplayType, 'table'>
+  export let displayType: DisplayType
 
   let innerWidth = 0
 
-  $: ({ data, originalData, suggestedMaxY, legendLabels, y, x, tooltip, tickValues, color } =
-    getChartProps(dataCategory))
+  $: ({ data, originalData, x, y, color, tooltip, suggestedMaxY, legendLabels, tickValues } =
+    getChartProps(dataCategory, displayType))
 </script>
 
 <svelte:window bind:innerWidth />
@@ -27,15 +28,17 @@
 <figure>
   <VisXYContainer class="min-h-80" height={320} yDomain={[0, suggestedMaxY]}>
     <VisTooltip />
+    <VisAxis type="y" domainLine={false} tickLine={false} />
+    <VisAxis type="x" gridLine={false} tickLine={false} tickValues={tickValues(innerWidth ?? 0)} />
     {#if displayType === 'linechart'}
       <VisLine {data} {x} {y} {color} />
       <VisScatter {data} {x} {y} {color} />
+    {:else if dataCategory.name === 'gender' || dataCategory.name === 'age'}
+      <VisStackedBar {data} {x} {y} {color} roundedCorners={4} barPadding={0.2} />
     {:else}
       <VisGroupedBar {data} {x} {y} {color} roundedCorners={4} dataStep={1} />
     {/if}
     <VisCrosshair data={originalData} {x} {y} template={tooltip} {color} />
-    <VisAxis type="x" gridLine={false} tickLine={false} tickValues={tickValues(innerWidth)} />
-    <VisAxis type="y" domainLine={false} tickLine={false} />
   </VisXYContainer>
-  <ChartLegend labels={legendLabels} />
+  <ChartLegend group={legendLabels.group} labels={legendLabels.labels} />
 </figure>

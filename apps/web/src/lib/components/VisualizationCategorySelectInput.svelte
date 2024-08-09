@@ -25,7 +25,7 @@
   $: selectedSubCategories = getSubCategories(selectedDataCategory)
 
   $: isSelectedCategory = (category: KOTCategory) => {
-    const subCategories = getSubCategories(dataCategories[category]!)
+    const subCategories = getSubCategories(dataCategories[category])
 
     return selectedSubCategories.some((subCategory) => subCategories.includes(subCategory))
   }
@@ -62,13 +62,13 @@
       subCategories =
         groups.find((group) => group.subCategories.includes(subCategory))?.subCategories ?? []
     } else {
-      subCategories = getSubCategories(dataCategories[category]!)
+      subCategories = getSubCategories(dataCategories[category])
     }
 
     const isSelected = !selectedSubCategories.includes(subCategory)
 
     const newSelectedSubCategories = subCategories.filter((prevSubCategory) =>
-      prevSubCategory !== subCategory ? true : isSelected
+      prevSubCategory !== subCategory ? selectedSubCategories.includes(prevSubCategory) : isSelected
     )
 
     const filteredDataset = filterDatasetsBySubCategories(

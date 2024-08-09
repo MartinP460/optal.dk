@@ -3,7 +3,7 @@ import { get } from 'svelte/store'
 import type { KOTCategory, KOTDataCategories, KOTDataCategory } from 'parser'
 import { getDefaultSubCategories } from '$lib/utils/chartCategoryHelpers'
 
-const categories = ['accepted', 'applied', 'quotient', 'gender']
+const categories = ['accepted', 'applied', 'quotient', 'gender', 'age']
 
 export function getCategoryParams(dataCategories: KOTDataCategories) {
   const store = queryParam('category', ssp.string('accepted'))

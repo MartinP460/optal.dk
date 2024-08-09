@@ -8,18 +8,17 @@
 
   export let dataCategory: KOTDataCategory
 
-  $: ({ legendLabels } = getChartProps(dataCategory))
+  $: ({
+    legendLabels: { group, labels }
+  } = getChartProps(dataCategory))
 </script>
 
 <Table.Root class="text-xs md:w-full">
   <Table.Header>
     <Table.Row>
-      <Table.Head />
-      {#each legendLabels as { group, label } (label)}
+      <Table.Head class="text-sm">{group ? $t(group) : ''}</Table.Head>
+      {#each labels as label (label)}
         <Table.Head class="text-left pr-8 pt-2 lg:pr-4">
-          <p class="text-muted-foreground">
-            {group ? `${$t(dataCategory.name)} - ${$t(group)}` : $t(dataCategory.name)}
-          </p>
           <p class="text-sm text-primary">
             {$t(label)}
           </p>
