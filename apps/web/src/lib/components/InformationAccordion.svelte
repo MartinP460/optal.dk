@@ -1,18 +1,27 @@
 <script lang="ts">
   /* eslint-disable svelte/no-at-html-tags */
   import _ from 'lodash'
-  import type { KOTCategory, KOTInstitution } from 'parser'
+  import type { KOTCategory, KOTCourse, KOTInstitution } from 'parser'
   import * as Accordion from '$lib/components/ui/accordion'
   import * as Card from '$lib/components/ui/card'
   import Title from '$lib/components/Title.svelte'
   import { t } from '$lib/i18n'
-  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
+  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
+
+  type PartialCourse = Pick<
+    KOTCourse,
+    'id' | 'latestName' | 'eLearning' | 'period' | 'studyStart' | 'slug' | 'location'
+  >
 
   export let descriptionOpts: {
     categoriesToDisplay: Array<KOTCategory>
     type: 'institution' | 'course'
   }
-  export let institution: KOTInstitution | undefined = undefined
+  export let institution:
+    | (Omit<KOTInstitution, 'courses'> & {
+        courses: PartialCourse[]
+      })
+    | undefined = undefined
 
   const shouldDisplay = (category: KOTCategory) =>
     descriptionOpts.categoriesToDisplay.includes(category)
@@ -105,7 +114,7 @@
                   <p class="text-sm font-semibold">{course.latestName}</p>
                   <p class="text-xs">
                     {[
-                      convertCourseYearsToString(course.dataCategories),
+                      getPeriodIntervalFromPeriod(course.period),
                       course.location,
                       course.studyStart ? $t(course.studyStart) : '',
                       course.eLearning ? 'e-learning' : null

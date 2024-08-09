@@ -10,7 +10,7 @@
   import { Input } from '$lib/components/ui/input'
   import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n'
-  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
+  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
   export let data: PageData
 
@@ -104,7 +104,7 @@
                     <p class="text-sm font-semibold">{course.item.latestName}</p>
                     <p class="text-xs">
                       {[
-                        convertCourseYearsToString(course.item.dataCategories),
+                        getPeriodIntervalFromPeriod(course.item.period),
                         course.item.location,
                         course.item.studyStart ? $t(course.item.studyStart) : '',
                         course.item.eLearning ? 'e-learning' : null
@@ -175,7 +175,7 @@
                         <p class="text-sm font-semibold">{course.latestName}</p>
                         <p class="text-xs">
                           {[
-                            convertCourseYearsToString(course.dataCategories),
+                            getPeriodIntervalFromPeriod(course.period),
                             course.location,
                             course.studyStart ? $t(course.studyStart) : '',
                             course.eLearning ? 'e-learning' : null

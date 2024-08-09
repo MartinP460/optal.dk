@@ -5,9 +5,9 @@
   import Meta from '$lib/components/Meta.svelte'
   import Visualization from '$lib/components/Visualization.svelte'
   import { t } from '$lib/i18n'
-  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
   import InformationAccordion from '$lib/components/InformationAccordion.svelte'
   import Title from '$lib/components/Title.svelte'
+  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
   export let data: PageData
 
@@ -20,12 +20,12 @@
   $: title = $t('metaTitleCourse', {
     courseName: course.latestName,
     institutionName: institution.latestName,
-    courseYears: convertCourseYearsToString(course.dataCategories)
+    courseYears: getPeriodIntervalFromPeriod(course.period)
   })
   $: description = $t('metaDescriptionCourse', {
     courseName: course.latestName,
     institutionName: institution.latestName,
-    courseYears: convertCourseYearsToString(course.dataCategories)
+    courseYears: getPeriodIntervalFromPeriod(course.period)
   })
 
   const courseIsInactive =

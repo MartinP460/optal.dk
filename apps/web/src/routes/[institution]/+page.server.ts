@@ -8,8 +8,24 @@ export async function load({ params }) {
     error(404, 'Institution not found.')
   }
 
+  // we are removing properties to reduce the amount of data sent over the network
+  const shortenedInstitution = {
+    ...institution,
+    courses: institution.courses.map(
+      ({ id, latestName, slug, location, studyStart, eLearning, period }) => ({
+        id,
+        latestName,
+        slug,
+        location,
+        studyStart,
+        eLearning,
+        period
+      })
+    )
+  }
+
   return {
-    institution
+    institution: shortenedInstitution
   }
 }
 

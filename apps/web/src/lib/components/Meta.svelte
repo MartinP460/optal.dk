@@ -2,14 +2,14 @@
   import type { KOTCourse } from 'parser'
   import { Badge } from '$lib/components/ui/badge'
   import { t } from '$lib/i18n'
-  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
+  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
   export let course: KOTCourse
 </script>
 
 <div class="flex items-center gap-2 mt-4 flex-wrap">
   {#if course.location}
-    <Badge class="text-xs">{convertCourseYearsToString(course.dataCategories)}</Badge>
+    <Badge class="text-xs">{getPeriodIntervalFromPeriod(course.period)}</Badge>
   {/if}
   {#if course.location}
     <Badge class="text-xs">{course.location}</Badge>

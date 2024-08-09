@@ -96,7 +96,8 @@ function upsertInstitution(row: string[], institutions: KOTInstitution[]): KOTIn
         courses: [],
         latestName: institutionName,
         slug: createSlug(institutionName),
-        dataCategories: {}
+        dataCategories: {},
+        period: [0]
       },
       ...institutions
     ]
@@ -143,6 +144,12 @@ function upsertCourse(
     : [...(course?.courseNames ?? []), courseName]
 
   const additionalData = parseCourseName(courseId, courseName)
+  const newDataCategories = addDataCategories(row, course?.dataCategories ?? {}, year, [
+    'accepted',
+    'applied',
+    'quotient'
+  ])
+  const period = createPeriod(newDataCategories)
 
   return [
     ...filteredInstitutions,
@@ -153,11 +160,8 @@ function upsertCourse(
         {
           id: courseId,
           courseNames: newCourseNames,
-          dataCategories: addDataCategories(row, course?.dataCategories ?? {}, year, [
-            'accepted',
-            'applied',
-            'quotient'
-          ]),
+          dataCategories: newDataCategories,
+          period,
           ...additionalData
         }
       ]
@@ -179,6 +183,12 @@ function upsertInstitutionData(
 
   const filteredInstitutions = institutions.filter((inst) => inst.id !== institution.id)
 
+  const newDataCategories = addDataCategories(row, institution.dataCategories, year, [
+    'accepted',
+    'applied'
+  ])
+  const period = createPeriod(newDataCategories)
+
   return [
     ...filteredInstitutions,
     {
@@ -186,7 +196,8 @@ function upsertInstitutionData(
       dataCategories: addDataCategories(row, institution.dataCategories, year, [
         'accepted',
         'applied'
-      ])
+      ]),
+      period
     }
   ]
 }
@@ -341,4 +352,13 @@ function replaceCourseMetaInParentheses(str: string) {
     .replace(' (vinter)', ', vinter')
     .replace(' (summer)', ', summer')
     .replace(' (winter)', ', winter')
+}
+
+/** Creates the time period in which the course is active. */
+function createPeriod(dataCategories: KOTDataCategories) {
+  // We pick the accepted category since it will always be defined
+  const min = dataCategories?.accepted?.datasets[0].year ?? 0
+  const max = dataCategories?.accepted?.datasets.slice(-1)[0].year ?? 0
+
+  return min === max ? [min] : [min, max]
 }

@@ -4,9 +4,9 @@
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Visualization from '$lib/components/Visualization.svelte'
   import { t } from '$lib/i18n'
-  import { convertCourseYearsToString } from '$lib/utils/convertCourseYearsToString'
   import InformationAccordion from '$lib/components/InformationAccordion.svelte'
   import Title from '$lib/components/Title.svelte'
+  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
   export let data: PageData
 
@@ -15,11 +15,11 @@
   const breadcrumbRoutes = [{ text: institution.latestName, url: institution.slug }]
   $: title = $t('metaTitleInstitution', {
     institutionName: institution.latestName,
-    institutionYears: convertCourseYearsToString(institution.dataCategories)
+    institutionYears: getPeriodIntervalFromPeriod(institution.period)
   })
   $: description = $t('metaDescriptionInstitution', {
     institutionName: institution.latestName,
-    institutionYears: convertCourseYearsToString(institution.dataCategories)
+    institutionYears: getPeriodIntervalFromPeriod(institution.period)
   })
 
   const institutionIsInactive =

@@ -80,3 +80,7 @@ export function getSubCategoryValues(dataset: { [key in KOTSubcategory]?: KOTDat
 export function getDisplayTypesFromDataCategory(): DisplayType[] {
   return ['barchart', 'linechart', 'table']
 }
+
+export function getPeriodIntervalFromPeriod(period: number[]) {
+  return period.length < 2 || period[0] === period[1] ? period[0] : `${period[0]} - ${period[1]}`
+}

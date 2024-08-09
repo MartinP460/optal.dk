@@ -17,6 +17,8 @@ export type KOTCourse = {
   location?: string | null
   /** The slug used to identify the course. */
   slug: string
+  /** The time period in which the course has been active. */
+  period: number[]
 }
 
 export type KOTInstitution = {
@@ -32,6 +34,8 @@ export type KOTInstitution = {
   latestName: string
   /** The slug used to identify the institution. */
   slug: string
+  /** The time period in which the institution has been active. */
+  period: number[]
 }
 
 export type KOTCategory = 'accepted' | 'applied' | 'quotient' | 'gender' | 'age'
