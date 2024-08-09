@@ -107,6 +107,7 @@ export const chartConfig: ChartConfig = {
         {
           subCategories: [
             'ageAppliedYounger',
+            'ageApplied19',
             'ageApplied20',
             'ageApplied21',
             'ageApplied22',
