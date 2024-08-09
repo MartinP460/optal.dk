@@ -187,8 +187,8 @@ function getDatapointsFromCategory({
     const csvDataIndexes = CSV_DATA_INDEX_MAP[category]
 
     if (type === 'accepted') {
+      // @ts-expect-error We are returning a subset of subcategories but I can't be bothered to fix it.
       return {
-        // @ts-expect-error We are returning a subset of subcategories but I can't be bothered to fix it.
         ageAcceptedYounger: convertToNumber(row[csvDataIndexes.younger]),
         ageAccepted19: convertToNumber(row[csvDataIndexes.nineteen]),
         ageAccepted20: convertToNumber(row[csvDataIndexes.twenty]),
@@ -203,8 +203,8 @@ function getDatapointsFromCategory({
     }
 
     if (type === 'applied') {
+      // @ts-expect-error Same as above.
       return {
-        // @ts-expect-error Same as above.
         ageAppliedYounger: convertToNumber(row[csvDataIndexes.younger]),
         ageApplied19: convertToNumber(row[csvDataIndexes.nineteen]),
         ageApplied20: convertToNumber(row[csvDataIndexes.twenty]),
