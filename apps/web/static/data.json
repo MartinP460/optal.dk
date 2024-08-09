@@ -75262,11 +75262,11 @@
             ]
           }
         },
-        "latestName": "Dyrevidenskab, Tjele, Studiestart: sommerstart",
-        "studyStart": null,
-        "eLearning": null,
-        "location": null,
-        "slug": "22180"
+        "latestName": "Dyrevidenskab",
+        "slug": "dyrevidenskab-22180",
+        "studyStart": "summerstart",
+        "eLearning": false,
+        "location": "Tjele"
       },
       {
         "id": "22615",
@@ -108858,11 +108858,11 @@
             ]
           }
         },
-        "latestName": "Plante- og fødevarevidenskab, Tjele, Studiestart: sommerstart",
-        "studyStart": null,
-        "eLearning": null,
-        "location": null,
-        "slug": "22185"
+        "latestName": "Plante- og fødevarevidenskab",
+        "slug": "plante-og-fodevarevidenskab-22185",
+        "studyStart": "summerstart",
+        "eLearning": false,
+        "location": "Tjele"
       },
       {
         "id": "22450",
@@ -119194,11 +119194,11 @@
             ]
           }
         },
-        "latestName": "Veterinærmedicin, Tjele, Studiestart: sommerstart",
-        "studyStart": null,
-        "eLearning": null,
-        "location": null,
-        "slug": "22190"
+        "latestName": "Veterinærmedicin",
+        "slug": "veterinaermedicin-22190",
+        "studyStart": "summerstart",
+        "eLearning": false,
+        "location": "Tjele"
       }
     ],
     "latestName": "Aarhus Universitet",
