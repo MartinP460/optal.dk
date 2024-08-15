@@ -45,21 +45,21 @@
   <Sheet.Root bind:open={sheetOpen}>
     <header class={clsx('py-4 flex justify-between', isHomePath && 'flex-row-reverse')}>
       {#if !isHomePath}
-        <a href="/" class="flex justify-center"><Logo class="w-24" /></a>
+        <a href="/" class="flex justify-center" aria-label="Go to homepage"><Logo class="w-24" /></a
+        >
       {/if}
       <div class="flex sm:gap-6">
-        <Sheet.Trigger on:click={() => (sidebarPage = 'navigation')}>
+        <Sheet.Trigger
+          on:click={() => (sidebarPage = 'navigation')}
+          aria-label="Open sidebar navigation"
+        >
           <IconMenuDeep
             class="w-8 h-8 stroke-teal-700 hover:stroke-teal-600 transition-colors sm:hidden"
             stroke={2.3}
           />
         </Sheet.Trigger>
-        <Sheet.Trigger>
-          <Button
-            on:click={() => (sidebarPage = 'feedback')}
-            variant="ghost"
-            class="font-normal hidden sm:block"
-          >
+        <Sheet.Trigger aria-label="Open feedback form" on:click={() => (sidebarPage = 'feedback')}>
+          <Button variant="ghost" class="font-normal hidden sm:block">
             {$t('feedback')}
           </Button>
         </Sheet.Trigger>
@@ -87,7 +87,7 @@
               {$t('about')}
             </Button>
           </li>
-          <DotSeperator />
+          <DotSeperator aria-hidden />
           <li>
             <Button
               href="/data"
@@ -96,7 +96,7 @@
               data-sveltekit-preload-data="tap">{$t('data')}</Button
             >
           </li>
-          <DotSeperator class="hidden sm:block" />
+          <DotSeperator class="hidden sm:block" aria-hidden />
           <li>
             <Sheet.Trigger on:click={() => (sidebarPage = 'feedback')}>
               <Button

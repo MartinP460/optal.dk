@@ -30,8 +30,8 @@
 </script>
 
 <Card.Root class="w-full md:w-[800px] px-6 py-2 mt-12 mx-auto">
-  <Accordion.Root>
-    <Accordion.Item value="categories-description" aria-hidden>
+  <Accordion.Root aria-disabled>
+    <Accordion.Item value="categories-description">
       <Accordion.Trigger>
         {$t(`infoCategories${i18nType}`)}
       </Accordion.Trigger>
