@@ -54173,19 +54173,6 @@
             "unit": null,
             "datasets": [
               {
-                "year": 2011,
-                "ageAppliedYounger": 0,
-                "ageApplied19": 4,
-                "ageApplied20": 15,
-                "ageApplied21": 28,
-                "ageApplied22": 31,
-                "ageApplied23": 39,
-                "ageApplied24": 16,
-                "ageApplied25": 17,
-                "ageApplied26To30": 22,
-                "ageAppliedOlder": 26
-              },
-              {
                 "year": 2013,
                 "ageAcceptedYounger": 0,
                 "ageAccepted19": 1,
