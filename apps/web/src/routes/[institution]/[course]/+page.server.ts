@@ -8,7 +8,17 @@ export async function load({ params }) {
     error(404, 'Institution not found.')
   }
 
-  const course = institution.courses.find((course) => course.slug === params.course)
+  // Gets the ID of the course
+  const regex = /[^-]+$/
+  const match = params.course.match(regex)
+
+  if (!match)
+    throw new Error(
+      `Course not found while generating pages.\n\nInstitution: ${params.institution} \nCourse: ${params.course}`
+    )
+
+  const courseId = match[0]
+  const course = institution.courses.find((course) => course.id === courseId)
 
   if (!course) {
     error(404, 'Course not found.')
@@ -26,7 +36,7 @@ export async function load({ params }) {
 export async function entries() {
   return institutions.flatMap((institution) =>
     institution.courses.map((course) => ({
-      course: course.slug as string,
+      course: course.slug,
       institution: institution.slug
     }))
   )
