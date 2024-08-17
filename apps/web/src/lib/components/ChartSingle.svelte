@@ -4,8 +4,8 @@
 -->
 <script lang="ts">
   import { VisDonut, VisSingleContainer, VisTooltip } from '@unovis/svelte'
-  import { getSingleChartProps } from '$lib/utils/chartHelpers'
   import type { KOTDataCategory } from 'parser'
+  import { getSingleChartProps } from '$lib/utils/chartHelpers'
 
   export let dataCategory: KOTDataCategory
   export let period: number[]

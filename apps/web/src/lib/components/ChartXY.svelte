@@ -3,8 +3,6 @@
   Charts for displaying 2-dimensional data (for multiple years in our case).
 -->
 <script lang="ts">
-  import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
-  import { getChartProps } from '$lib/utils/chartHelpers'
   import {
     VisAxis,
     VisCrosshair,
@@ -16,6 +14,8 @@
     VisXYContainer
   } from '@unovis/svelte'
   import type { KOTDataCategory } from 'parser'
+  import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
+  import { getChartProps } from '$lib/utils/chartHelpers'
 
   let innerWidth = 0
 
