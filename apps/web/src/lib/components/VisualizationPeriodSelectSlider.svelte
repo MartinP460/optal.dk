@@ -6,16 +6,23 @@
   export let min: number
   export let max: number
   export let period: number[]
+  export let mode: 'single' | 'multiple'
 
   const dispatch = createEventDispatcher<{
     periodChange: number[]
   }>()
+
+  const handlePeriodChange = (value: number[]) => {
+    const newValue = value.length === 1 ? [value[0], value[0]] : value
+
+    dispatch('periodChange', newValue)
+  }
 </script>
 
 <div class="flex flex-col items-center mt-2 mx-2">
   <Slider
-    value={period}
-    onValueChange={(value) => dispatch('periodChange', value)}
+    value={mode === 'single' ? [period[1]] : period}
+    onValueChange={handlePeriodChange}
     {min}
     {max}
     step={1}

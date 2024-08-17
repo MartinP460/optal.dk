@@ -1,6 +1,6 @@
 import type { KOTCategory, KOTSubcategory } from 'parser'
 
-export function getNewGetColorFromDataset(subcategory: KOTSubcategory) {
+export function getColorFromSubcategory(subcategory: KOTSubcategory) {
   switch (subcategory) {
     case 'acceptedAdmitted':
       return '#4d7c0f' // lime-700
@@ -22,40 +22,40 @@ export function getNewGetColorFromDataset(subcategory: KOTSubcategory) {
       return '#e879f9' // fuchsia-400
     case 'ageAcceptedYounger':
     case 'ageAppliedYounger':
-      return '#ede9fe' // purple-100
+      return '#ef4444' // red-500
     case 'ageAccepted19':
     case 'ageApplied19':
-      return '#e9d5ff' // purple-200
+      return '#f97316' // orange-500
     case 'ageAccepted20':
     case 'ageApplied20':
-      return '#c4b5fd' // purple-300
+      return '#eab308' // yellow-500
     case 'ageAccepted21':
     case 'ageApplied21':
-      return '#a78bfa' // purple-400
+      return '#84cc16' // lime-500
     case 'ageAccepted22':
     case 'ageApplied22':
-      return '#8b5cf6' // purple-500
+      return '#14b8a6' // teal-500
     case 'ageAccepted23':
     case 'ageApplied23':
-      return '#7c3aed' // purple-600
+      return '#06b6d4' // cyan-500
     case 'ageAccepted24':
     case 'ageApplied24':
-      return '#6d28d9' // purple-700
+      return '#3b82f6' // blue-500
     case 'ageAccepted25':
     case 'ageApplied25':
-      return '#5b21b6' // purple-800
+      return '#8b5cf6' // violet-500
     case 'ageAccepted26To30':
     case 'ageApplied26To30':
-      return '#581c87' // purple-900
+      return '#d946ef' // fuchsia-500
     case 'ageAcceptedOlder':
     case 'ageAppliedOlder':
-      return '#3b0764' // purple-950
+      return '#64748b' // slate-500
     default:
       return '#ecfccb'
   }
 }
 
-export function getLabelColorFromLabel(label: KOTCategory) {
+export function getColorFromCategory(label: KOTCategory) {
   switch (label) {
     case 'accepted':
       return '#4d7c0f' // lime-700

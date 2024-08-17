@@ -1,4 +1,4 @@
-import type { DisplayType } from '$lib/types/chartDisplayType'
+import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
 import type { KOTCategory, KOTSubcategory } from 'parser'
 
 type ChartConfig = {
@@ -121,6 +121,6 @@ export const chartConfig: ChartConfig = {
         }
       ]
     },
-    defaultDisplayType: 'barchart'
+    defaultDisplayType: 'donutchart'
   }
 }

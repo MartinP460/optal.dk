@@ -1,14 +1,17 @@
 import { get } from 'svelte/store'
 import _ from 'lodash'
-import type { KOTDataCategory, KOTSubcategory } from 'parser'
-import type { DisplayType } from '$lib/types/chartDisplayType'
-import { getNewGetColorFromDataset } from '$lib/utils/getColorFromDataset'
+import { Donut } from '@unovis/ts'
+import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from 'parser'
+import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
+import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
 import { t as i18n, locale } from '$lib/i18n'
 import { chartConfig } from '$lib/utils/chartConfig'
 import { getSubCategories } from '$lib/utils/chartCategoryHelpers'
 
 type Datapoint = KOTDataCategory['datasets'][number]
 type Datapoints = Datapoint[]
+
+type SingleDatapoint = { subCategory: KOTSubcategoryAge; value: number }
 
 export function getChartProps(dataCategory: KOTDataCategory, displayType?: DisplayType) {
   const data = formatNewDataset(dataCategory.datasets)
@@ -17,7 +20,6 @@ export function getChartProps(dataCategory: KOTDataCategory, displayType?: Displ
     data,
     originalData: dataCategory.datasets,
     suggestedMaxY: computeSuggestedMaxY(dataCategory, displayType ?? 'table'),
-    legendLabels: getLegendLabels(dataCategory),
     y: getYFunctions(dataCategory.datasets),
     x: getXFunction(),
     color: getColorFunction(data),
@@ -26,7 +28,19 @@ export function getChartProps(dataCategory: KOTDataCategory, displayType?: Displ
   }
 }
 
-function getLegendLabels(dataCategory: KOTDataCategory) {
+export function getSingleChartProps(dataCategory: KOTDataCategory, year: number) {
+  const allData = formatNewDataset(dataCategory.datasets)
+  const data = allData.find((dataset) => dataset.year === year)!
+
+  return {
+    data: getSingleData(data),
+    triggers: getSingleTriggers(),
+    value: getSingleValue(),
+    color: getSingleColorFunction()
+  }
+}
+
+export function getLegendLabels(dataCategory: KOTDataCategory) {
   const groups = chartConfig[dataCategory.name].subCategories.groups
   const subCategories = getSubCategories(dataCategory)
 
@@ -56,7 +70,7 @@ function getColorFunction(datasets: Datapoints) {
   return (_: Datapoints, i: number) => {
     const colors = Object.keys(datasets[0])
       .filter((subcategory) => subcategory !== 'year')
-      .map((subcategory) => getNewGetColorFromDataset(subcategory as KOTSubcategory))
+      .map((subcategory) => getColorFromSubcategory(subcategory as KOTSubcategory))
 
     return colors[i]
   }
@@ -122,9 +136,6 @@ function getTickValueFunction(datasets: Datapoints) {
 }
 
 function getTooltip(dataCategory: KOTDataCategory) {
-  const t = get(i18n)
-  const currentLocale = get(locale)
-
   return (d: Datapoint) => {
     return `
     <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-sm">
@@ -135,6 +146,9 @@ function getTooltip(dataCategory: KOTDataCategory) {
           ${Object.keys(dataCategory.datasets[0])
             .filter((key) => key !== 'year')
             .map((category) => {
+              const t = get(i18n)
+              const currentLocale = get(locale)
+
               const label =
                 // @ts-expect-error Typescript cannot infer the type of the categories from Object.keys.
                 d[category] === ''
@@ -145,7 +159,7 @@ function getTooltip(dataCategory: KOTDataCategory) {
               // @ts-expect-error Same as above.
               const categoryT = t(category)
               // @ts-expect-error Same as above.
-              const color = getNewGetColorFromDataset(category)
+              const color = getColorFromSubcategory(category)
 
               return `
               <div class="flex flex-col w-full">
@@ -167,4 +181,44 @@ function getTooltip(dataCategory: KOTDataCategory) {
     </div>
     `
   }
+}
+
+function getSingleData(datapoint: Datapoint) {
+  return Object.entries(_.omit(datapoint, 'year')).map(([key, val]) => ({
+    subCategory: key,
+    value: val
+  }))
+}
+
+function getSingleValue() {
+  return (d: SingleDatapoint) => d.value
+}
+
+function getSingleTriggers() {
+  return {
+    [Donut.selectors.segment]: ({ data }: { data: SingleDatapoint }) => {
+      const t = get(i18n)
+      const color = getColorFromSubcategory(data.subCategory)
+
+      return `
+      <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-sm">
+        <div class="flex flex-col w-full">
+          <span class="text-[0.70rem] uppercase text-muted-foreground flex items-center">
+            ${t(data.subCategory)}
+            <span class="w-2 h-2 inline-block ml-1 mr-2 rounded-[2px]" style="background-color: ${color}"></span>
+          </span>
+          <span class="font-bold text-foreground">
+            ${data.value}
+            <span class="font-normal text-xs text-muted-foreground">
+            </span>
+          </span>
+        </div>
+      </div>
+      `
+    }
+  }
+}
+
+function getSingleColorFunction() {
+  return (d: SingleDatapoint) => getColorFromSubcategory(d.subCategory)
 }

@@ -1,10 +1,14 @@
 <script lang="ts">
   import type { KOTDataCategories, KOTDataCategory } from 'parser'
-  import type { DisplayType } from '$lib/types/chartDisplayType'
+  import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
   import Table from '$lib/components/Table.svelte'
   import Chart from '$lib/components/Chart.svelte'
   import { getCategoryParams } from '$lib/utils/visualizationCategoryParams'
-  import { getCategoryInPeriod } from '$lib/utils/chartCategoryHelpers'
+  import {
+    getCategoryInPeriod,
+    isDefaultSingleCategory,
+    isDisplayTypeSingleCategory
+  } from '$lib/utils/chartCategoryHelpers'
   import VisualizationPeriodSelect from '$lib/components/VisualizationPeriodSelect.svelte'
   import VisualizationCategorySelect from '$lib/components/VisualizationCategorySelect.svelte'
   import VisualizationDisplaySelect from '$lib/components/VisualizationDisplaySelect.svelte'
@@ -16,18 +20,39 @@
   const courseYears = (dataCategories.accepted?.datasets ?? []).map((datapoint) => datapoint.year)
   const minYear = Math.min(...courseYears)
   const maxYear = Math.max(...courseYears)
+
   const { initialDataCategory, setCategoryParam } = getCategoryParams(dataCategories)
   const initialDisplayType = has5OrMoreYearsOfData
     ? chartConfig[initialDataCategory.name].defaultDisplayType
     : 'table'
+  const initalPeriod = isDisplayTypeSingleCategory(initialDisplayType)
+    ? [maxYear, maxYear]
+    : [minYear, maxYear]
 
-  let period = [minYear, maxYear]
+  let period = initalPeriod
   let displayType: DisplayType = initialDisplayType
-
   $: selectedDataCategory = initialDataCategory
 
   const handleCategorySelect = (dataCategory: KOTDataCategory) => {
-    if (selectedDataCategory?.name !== dataCategory?.name && has5OrMoreYearsOfData) {
+    const hasChangedCategory = selectedDataCategory.name !== dataCategory.name
+
+    const hasChangedToMultipleCategory =
+      isDisplayTypeSingleCategory(displayType) &&
+      !isDefaultSingleCategory(dataCategory.name) &&
+      hasChangedCategory
+
+    const hasChangedToSingleCategory =
+      isDefaultSingleCategory(dataCategory.name) &&
+      !isDisplayTypeSingleCategory(displayType) &&
+      hasChangedCategory
+
+    if (hasChangedToMultipleCategory) {
+      period = [minYear, period[1]]
+    } else if (hasChangedToSingleCategory) {
+      period = [period[1], period[1]]
+    }
+
+    if (hasChangedCategory && has5OrMoreYearsOfData) {
       displayType = chartConfig[dataCategory.name].defaultDisplayType
     }
 
@@ -41,8 +66,19 @@
   }
 
   const handleDisplayTypeSelect = (value: DisplayType) => {
+    if (isDisplayTypeSingleCategory(value)) {
+      period = [maxYear, maxYear]
+    } else {
+      period = [minYear, maxYear]
+    }
+
+    selectedDataCategory = getCategoryInPeriod(
+      selectedDataCategory,
+      dataCategories[selectedDataCategory.name]!,
+      period
+    )
+
     displayType = value
-    period = [minYear, maxYear]
   }
 
   const handlePeriodChange = (value: number[]) => {
@@ -70,21 +106,23 @@
         {period}
         min={minYear}
         max={maxYear}
+        mode={isDisplayTypeSingleCategory(displayType) ? 'single' : 'multiple'}
         on:periodChange={(e) => handlePeriodChange(e.detail)}
       />
     {/if}
     {#if has5OrMoreYearsOfData}
       <VisualizationDisplaySelect
+        {selectedDataCategory}
         selectedDisplayType={displayType}
         on:displayTypeSelect={(e) => handleDisplayTypeSelect(e.detail)}
       />
     {/if}
   </div>
-  <div class="mt-2">
+  <div class={displayType === 'table' ? 'mt-2' : 'mt-4'}>
     {#if displayType === 'table'}
       <Table dataCategory={selectedDataCategory} />
     {:else}
-      <Chart {displayType} dataCategory={selectedDataCategory} />
+      <Chart {displayType} dataCategory={selectedDataCategory} {period} />
     {/if}
   </div>
 </div>

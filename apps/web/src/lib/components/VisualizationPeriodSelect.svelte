@@ -9,6 +9,7 @@
   export let min: number
   export let max: number
   export let period: number[]
+  export let mode: 'single' | 'multiple'
 
   $: label =
     period.length < 2 || period[0] === period[1] ? period[0] : `${period[0]} - ${period[1]}`
@@ -28,7 +29,7 @@
   </Popover.Trigger>
   <Popover.Content class="flex flex-col text-center w-80">
     <p class="text-sm tracking-tight text-muted-foreground">{$t('selectTimePeriod')}</p>
-    <VisualizationPeriodSelectSlider {period} {min} {max} on:periodChange />
+    <VisualizationPeriodSelectSlider {period} {min} {max} {mode} on:periodChange />
   </Popover.Content>
 </Popover.Root>
 
@@ -50,7 +51,7 @@
       <Drawer.Description>{$t('timePeriodSelect')}</Drawer.Description>
     </Drawer.Header>
     <div class="px-6 py-2">
-      <VisualizationPeriodSelectSlider {period} {min} {max} on:periodChange />
+      <VisualizationPeriodSelectSlider {period} {min} {max} {mode} on:periodChange />
     </div>
     <Drawer.Footer>
       <Drawer.Close asChild let:builder>

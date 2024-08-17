@@ -6,8 +6,10 @@ import type {
   KOTDataCategory,
   KOTSubcategory
 } from 'parser'
-import type { DisplayType } from '$lib/types/chartDisplayType'
 import { chartConfig } from '$lib/utils/chartConfig'
+
+export const displayTypes = ['linechart', 'barchart', 'donutchart', 'table'] as const
+export type DisplayType = (typeof displayTypes)[number]
 
 export function getCategories(dataCategories: KOTDataCategories) {
   return Object.keys(dataCategories) as KOTCategory[]
@@ -77,10 +79,23 @@ export function getSubCategoryValues(dataset: { [key in KOTSubcategory]?: KOTDat
   return Object.values(_.omit(dataset, 'year'))
 }
 
-export function getDisplayTypesFromDataCategory(): DisplayType[] {
-  return ['barchart', 'linechart', 'table']
+export function getDisplayTypesFromDataCategory(category: KOTCategory): DisplayType[] {
+  if (category === 'quotient') {
+    return displayTypes.filter((type) => type !== 'donutchart')
+  }
+
+  // @ts-expect-error It doesn't matter that the constant is not mutable.
+  return displayTypes
 }
 
 export function getPeriodIntervalFromPeriod(period: number[]) {
   return period.length < 2 || period[0] === period[1] ? period[0] : `${period[0]} - ${period[1]}`
+}
+
+export function isDefaultSingleCategory(category: KOTCategory) {
+  return chartConfig[category].defaultDisplayType === 'donutchart'
+}
+
+export function isDisplayTypeSingleCategory(displayType: DisplayType) {
+  return displayType === 'donutchart'
 }

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { KOTSubcategory } from 'parser'
   import { t } from '$lib/i18n'
-  import { getNewGetColorFromDataset } from '$lib/utils/getColorFromDataset'
+  import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
   import Source from '$lib/components/Source.svelte'
 
   export let group: 'genderAccepted' | 'genderApplied' | 'ageAccepted' | 'ageApplied' | null
@@ -18,7 +18,7 @@
         <span class="flex items-center gap-2 text-sm text-muted-foreground">
           <div
             class="w-3 h-3 rounded"
-            style={`background-color: ${getNewGetColorFromDataset(label)}`}
+            style={`background-color: ${getColorFromSubcategory(label)}`}
           />
           {$t(label)}
         </span>

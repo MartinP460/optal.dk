@@ -1,7 +1,8 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   import { IconChartBar } from '@tabler/icons-svelte'
-  import type { DisplayType } from '$lib/types/chartDisplayType'
+  import type { KOTDataCategory } from 'parser'
+  import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
   import { getDisplayTypesFromDataCategory } from '$lib/utils/chartCategoryHelpers'
   import { Label } from '$lib/components/ui/label'
   import { Separator } from '$lib/components/ui/separator'
@@ -11,9 +12,10 @@
   import * as Drawer from '$lib/components/ui/drawer'
   import * as RadioGroup from '$lib/components/ui/radio-group'
 
+  export let selectedDataCategory: KOTDataCategory
   export let selectedDisplayType: DisplayType
 
-  const displayTypes = getDisplayTypesFromDataCategory()
+  $: displayTypes = getDisplayTypesFromDataCategory(selectedDataCategory.name)
 
   const dispatch = createEventDispatcher<{
     displayTypeSelect: DisplayType

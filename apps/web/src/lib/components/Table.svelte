@@ -1,16 +1,14 @@
 <script lang="ts">
   import type { KOTDataCategory } from 'parser'
   import * as Table from '$lib/components/ui/table'
-  import { getChartProps } from '$lib/utils/chartHelpers'
+  import { getLegendLabels } from '$lib/utils/chartHelpers'
   import { getSubCategoryValues } from '$lib/utils/chartCategoryHelpers'
   import { t } from '$lib/i18n'
   import Source from '$lib/components/Source.svelte'
 
   export let dataCategory: KOTDataCategory
 
-  $: ({
-    legendLabels: { group, labels }
-  } = getChartProps(dataCategory))
+  const { group, labels } = getLegendLabels(dataCategory)
 </script>
 
 <Table.Root class="text-xs md:w-full">
@@ -18,8 +16,8 @@
     <Table.Row>
       <Table.Head class="text-sm">{group ? $t(group) : ''}</Table.Head>
       {#each labels as label (label)}
-        <Table.Head class="text-left pr-8 pt-2 lg:pr-4">
-          <p class="text-sm text-primary">
+        <Table.Head class="text-left pr-8 lg:pr-4">
+          <p class="text-sm text-primary text-nowrap">
             {$t(label)}
           </p>
         </Table.Head>

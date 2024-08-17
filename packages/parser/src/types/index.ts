@@ -74,6 +74,11 @@ type KOTDatasetCategory = {
 }
 
 export type KOTSubcategory = KOTDatasetCategory[keyof KOTDatasetCategory]
+export type KOTSubcategoryAccepted = KOTDatasetCategory['accepted']
+export type KOTSubcategoryApplied = KOTDatasetCategory['applied']
+export type KOTSubcategoryQuotient = KOTDatasetCategory['quotient']
+export type KOTSubcategoryGender = KOTDatasetCategory['gender']
+export type KOTSubcategoryAge = KOTDatasetCategory['age']
 
 export type KOTData = string | number
 

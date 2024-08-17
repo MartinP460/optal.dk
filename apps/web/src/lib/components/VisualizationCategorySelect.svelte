@@ -7,12 +7,12 @@
   import { t } from '$lib/i18n'
   import VisualizationCategorySelectInput from '$lib/components/VisualizationCategorySelectInput.svelte'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
-  import { getLabelColorFromLabel } from '$lib/utils/getColorFromDataset'
+  import { getColorFromCategory } from '$lib/utils/getColorFromDataset'
 
   export let dataCategories: KOTDataCategories
   export let selectedDataCategory: KOTDataCategory
 
-  $: color = getLabelColorFromLabel(selectedDataCategory.name)
+  $: color = getColorFromCategory(selectedDataCategory.name)
 </script>
 
 <Popover.Root>
