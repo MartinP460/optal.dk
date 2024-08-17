@@ -136,7 +136,20 @@ function getTickValueFunction(datasets: Datapoints) {
 }
 
 function getTooltip(dataCategory: KOTDataCategory) {
+  const isGender = dataCategory.name === 'gender'
+
   return (d: Datapoint) => {
+    let total = 0
+
+    if (isGender) {
+      const dataset = dataCategory.datasets.find((dataset) => dataset.year === d.year)
+      total =
+        // @ts-expect-error It does exist on one of the objects (the one we selected).
+        (dataset?.genderAcceptedMen ?? dataset?.genderAppliedMen) +
+        // @ts-expect-error Same as above.
+        (dataset?.genderAcceptedWomen ?? dataset?.genderAppliedWomen)
+    }
+
     return `
     <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-sm">
         <span class="font-bold text-sm text-muted-foreground">
@@ -168,7 +181,10 @@ function getTooltip(dataCategory: KOTDataCategory) {
                     <span class="w-2 h-2 inline-block ml-1 mr-2 rounded-[2px]" style="background-color: ${color}"></span>
                   </span>
                   <span class="font-bold text-foreground">
-                    ${label}
+                    <span>${label}</span>
+                    <span class="text-muted-foreground text-xs ${isGender ? 'ml-1' : ''}">
+                      ${isGender ? '(' + Math.round((label / total) * 100) + '%)' : ''}
+                    </span>
                     <span class="font-normal text-xs text-muted-foreground">
                       ${dataCategory.unit ? t(dataCategory.unit) : ''}
                     </span>
