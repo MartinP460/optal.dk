@@ -8,7 +8,7 @@
 
   export let dataCategory: KOTDataCategory
 
-  const { group, labels } = getLegendLabels(dataCategory)
+  $: ({ group, labels } = getLegendLabels(dataCategory))
 </script>
 
 <Table.Root class="text-xs md:w-full">
