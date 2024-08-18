@@ -199,10 +199,10 @@ function getTooltip(dataCategory: KOTDataCategory) {
   }
 }
 
-function getSingleData(datapoint: Datapoint) {
+function getSingleData(datapoint: Datapoint): SingleDatapoint[] {
   return Object.entries(_.omit(datapoint, 'year')).map(([key, val]) => ({
-    subCategory: key,
-    value: val
+    subCategory: key as KOTSubcategoryAge,
+    value: val as number
   }))
 }
 
