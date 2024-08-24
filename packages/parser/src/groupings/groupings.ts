@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { groupings } from '../constants/groupings'
+import { groupings } from '../constants'
 import {
   KOTCourse,
   KOTDataCategories,
