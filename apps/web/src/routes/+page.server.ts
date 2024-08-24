@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { ParentGroupingName } from 'parser/src/constants/groupings'
+import { ParentGroupingName } from 'parser'
 import { courseSearchIndexes, groupings, institutions } from '$lib/server/data'
 
 export const load = () => {
