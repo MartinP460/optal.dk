@@ -1,5 +1,7 @@
-import { generateFiles } from './compile'
-import { getData } from './parse'
+import path from 'path'
+import { getGroupings } from './groupings'
+import { getInstitutions } from './institutions'
+import { writeToFile } from './utils/writeToFile'
 
 async function parseAndGenerateKOTData() {
   const args = process.argv.slice(2)
@@ -19,9 +21,23 @@ async function parseAndGenerateKOTData() {
     )
   }
 
-  const data = await getData()
+  const institutions = await getInstitutions()
+  const groupings = getGroupings(institutions)
 
-  await generateFiles(data)
+  writeToJSON('institutions', institutions)
+  writeToJSON('groupings', groupings)
+}
+
+function writeToJSON(name: string, data: unknown) {
+  const rootPath = path.join(process.cwd(), '../..')
+  const relativeOutputDir = process.argv.slice(2)[0]
+  const relativeJSONOutputDir = process.argv.slice(2)[1]
+
+  const outputDir = rootPath + relativeOutputDir
+  const JSONOutputDir = rootPath + relativeJSONOutputDir
+
+  writeToFile(name, 'json', JSON.stringify(data), outputDir)
+  writeToFile(name, 'json', JSON.stringify(data), JSONOutputDir)
 }
 
 parseAndGenerateKOTData()

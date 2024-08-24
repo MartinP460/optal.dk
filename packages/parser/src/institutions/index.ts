@@ -3,7 +3,7 @@ import { readGenderData } from './gender/gender'
 import { readAgeData } from './age/age'
 import { sortInstitutionsAndCourses } from '../utils/sortInstitutionsAndCourses'
 
-export async function getData() {
+export async function getInstitutions() {
   const institutions = await readCoreData()
   const institutionsWithGender = await readGenderData(institutions)
   const institutionsWithAge = await readAgeData(institutionsWithGender)

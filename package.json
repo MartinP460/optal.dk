@@ -13,7 +13,7 @@
     "parser:test": "turbo run test --filter=parser",
     "parser:test:watch": "turbo run test:watch --filter=parser",
     "parser:coverage": "turbo run coverage --filter=parser",
-    "parser:gen": "turbo run gen --filter=parser -- /apps/web/static /apps/web/src/lib/server && npm run format",
+    "parser:gen": "turbo run gen --filter=parser -- /apps/web/static /apps/web/src/lib/server",
     "web:check": "turbo run check --filter=web",
     "web:check:watch": "turbo run check:watch --filter=web",
     "api:dev": "turbo run run-dev --filter=api",

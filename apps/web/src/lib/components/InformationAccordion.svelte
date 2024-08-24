@@ -1,32 +1,21 @@
 <script lang="ts">
   /* eslint-disable svelte/no-at-html-tags */
   import _ from 'lodash'
-  import type { KOTCategory, KOTCourse, KOTInstitution } from 'parser'
+  import type { KOTCategory } from 'parser'
   import * as Accordion from '$lib/components/ui/accordion'
   import * as Card from '$lib/components/ui/card'
   import Title from '$lib/components/Title.svelte'
   import { t } from '$lib/i18n'
-  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
-
-  type PartialCourse = Pick<
-    KOTCourse,
-    'id' | 'latestName' | 'eLearning' | 'period' | 'studyStart' | 'slug' | 'location'
-  >
 
   export let descriptionOpts: {
     categoriesToDisplay: Array<KOTCategory>
-    type: 'institution' | 'course'
+    type: 'institution' | 'course' | 'grouping'
   }
-  export let institution:
-    | (Omit<KOTInstitution, 'courses'> & {
-        courses: PartialCourse[]
-      })
-    | undefined = undefined
 
   const shouldDisplay = (category: KOTCategory) =>
     descriptionOpts.categoriesToDisplay.includes(category)
 
-  const i18nType = _.capitalize(descriptionOpts.type) as 'Institution' | 'Course'
+  const i18nType = _.capitalize(descriptionOpts.type) as 'Institution' | 'Course' | 'Grouping'
 </script>
 
 <Card.Root class="w-full md:w-[800px] px-6 py-2 mt-12 mx-auto">
@@ -98,34 +87,23 @@
         {/if}
       </Accordion.Content>
     </Accordion.Item>
-    {#if descriptionOpts.type === 'institution' && institution}
+    {#if $$slots.coursesInInstitution}
       <Accordion.Item value="courses">
         <Accordion.Trigger>
           {$t('courses')}
         </Accordion.Trigger>
         <Accordion.Content>
-          <p class="text-sm font-medium leading-tight text-muted-foreground">
-            {$t('coursesOffered')}
-          </p>
-          <ul class="hover:text-muted-foreground transition-colors mt-2">
-            {#each institution.courses as course (course.id)}
-              <li class="hover:text-primary">
-                <a href={`/${institution.slug}/${course.slug}`} class="flex flex-col gap-1 py-2">
-                  <p class="text-sm font-semibold">{course.latestName}</p>
-                  <p class="text-xs">
-                    {[
-                      getPeriodIntervalFromPeriod(course.period),
-                      course.location,
-                      course.studyStart ? $t(course.studyStart) : '',
-                      course.eLearning ? 'e-learning' : null
-                    ]
-                      .filter((item) => item)
-                      .join(', ')}
-                  </p>
-                </a>
-              </li>
-            {/each}
-          </ul>
+          <slot name="coursesInInstitution" />
+        </Accordion.Content>
+      </Accordion.Item>
+    {/if}
+    {#if $$slots.coursesInGrouping}
+      <Accordion.Item value="courses">
+        <Accordion.Trigger>
+          {$t('coursesInEducation')}
+        </Accordion.Trigger>
+        <Accordion.Content>
+          <slot name="coursesInGrouping" />
         </Accordion.Content>
       </Accordion.Item>
     {/if}

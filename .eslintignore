@@ -11,7 +11,8 @@
 **/.temp/
 **/.vercel/
 **/vite.config.js.timestamp-*
-**/data.json
+**/institutions.json
+**/groupings.json
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml

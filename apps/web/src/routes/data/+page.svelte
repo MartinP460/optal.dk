@@ -54,7 +54,7 @@
           <Card.Description>{$t('downloadInFormat', { format: 'JSON' })}</Card.Description>
         </Card.Header>
         <Card.Content>
-          <Button href="/data.json" download
+          <Button href="/institutions.json" download
             ><IconDownload class="h-5 mr-2" /> {$t('download')}</Button
           >
         </Card.Content>

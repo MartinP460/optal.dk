@@ -1,10 +1,13 @@
 import Fuse from 'fuse.js'
-import type { KOTInstitution } from 'parser'
-import data from './data.json'
+import type { KOTGrouping, KOTInstitution } from 'parser'
+import institutionsData from './institutions.json'
+import groupingsData from './groupings.json'
 
-export const institutions = data as KOTInstitution[]
+export const institutions = institutionsData as KOTInstitution[]
 export const courses = institutions.flatMap((institution) => institution.courses)
 export const courseSearchIndexes = getSearchIndex()
+
+export const groupings = groupingsData as KOTGrouping[]
 
 function getSearchIndex() {
   const allInstitutions = institutions.map(({ id, latestName }) => ({

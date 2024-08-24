@@ -1,8 +1,12 @@
+import { GroupingName, ParentGroupingName } from './constants'
+
 export type Unit = 'persons'
+
+export type KOTId = string
 
 export type KOTCourse = {
   /** The id of the course. */
-  id: string
+  id: KOTId
   /** All unique course names throughout the years. */
   courseNames: string[]
   /** The different categories of data available for the course. */
@@ -23,7 +27,7 @@ export type KOTCourse = {
 
 export type KOTInstitution = {
   /** The id of the institution (note: they stopped using them in 2013). */
-  id: string
+  id: KOTId
   /** All names that the institution has had since 2011. */
   institutionNames: string[]
   /** The different categories of data available for the course. */
@@ -137,3 +141,22 @@ export type KOTDataCategories = {
 }
 
 export type KOTDataCategory = NonNullable<KOTDataCategories[keyof KOTDataCategories]>
+
+export type KOTGrouping = {
+  /** The ID of the grouping. */
+  id: string
+  /** The sum of properties in each dataset of each data category for the particular group of courses. */
+  dataCategories: KOTDataCategories
+  /** The name of the grouping (i.e. computer science or biology). */
+  name: GroupingName
+  /** The slug associated with the grouping. */
+  slug: string
+  /** The ID of courses included in the grouping. */
+  courseIds: KOTId[]
+  /** The number of courses in the grouping. Equivalent to the length of courseIds. */
+  courseCount: number
+  /** The earliest and latest of year of recorded data across courses in the grouping. */
+  period: number[]
+  /** The parent grouping that the grouping is a part of (e.g. IT for computer science). */
+  parentGroupings: ParentGroupingName[]
+}

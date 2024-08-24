@@ -1,19 +1,14 @@
 import fs from 'fs'
-import path from 'path'
 
 /**
  * Writes a string to a file in the output directory.
- * @param prefix The file-prefix.
+ * @param name The name of the file.
+ * @param prefix The filetype.
  * @param data The data to be written to the file.
- * @param outputDir The output directory relative to root. Defaults to first supplied command-line argument.
+ * @param outputDir The output directory relative to root.
  */
-export function writeToFile(prefix: 'json', data: string, outputDir?: string) {
-  const rootPath = path.join(process.cwd(), '../..')
-  const relativeOutputDir = process.argv.slice(2)[0]
-
-  const defaultOutputDir = rootPath + relativeOutputDir
-
-  fs.writeFile(`${outputDir ?? defaultOutputDir}/data.${prefix}`, data, (err) => {
+export function writeToFile(name: string, prefix: 'json', data: string, outputDir: string) {
+  fs.writeFile(`${outputDir}/${name}.${prefix}`, data, (err) => {
     if (err) {
       throw err
     }

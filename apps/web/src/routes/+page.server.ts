@@ -1,4 +1,6 @@
-import { courseSearchIndexes, institutions } from '$lib/server/data'
+import _ from 'lodash'
+import { ParentGroupingName } from 'parser/src/constants/groupings'
+import { courseSearchIndexes, groupings, institutions } from '$lib/server/data'
 
 export const load = () => {
   // we are removing properties to reduce the amount of data sent over the network
@@ -17,8 +19,28 @@ export const load = () => {
     }))
   }))
 
+  const shortenedGroupings = _.mapValues(
+    _.keyBy(Object.values(ParentGroupingName)),
+    (parentGroupingName) =>
+      groupings
+        .filter((grouping) => grouping.parentGroupings.includes(parentGroupingName))
+        .map(({ id, name, slug, period, courseCount }) => ({
+          id,
+          name,
+          slug,
+          period,
+          courseCount
+        }))
+  )
+
+  const parentGroupings = Object.entries(shortenedGroupings) as [
+    ParentGroupingName,
+    (typeof shortenedGroupings)[keyof typeof shortenedGroupings]
+  ][]
+
   return {
     institutions: shortenedInstitutions,
+    parentGroupings,
     searchIndexes: courseSearchIndexes
   }
 }
