@@ -170,6 +170,9 @@ function getTooltip(dataCategory: KOTDataCategory) {
                     (d[category] ?? '').toLocaleString(currentLocale)
 
               // @ts-expect-error Same as above.
+              const labelNumber = d[category]
+
+              // @ts-expect-error Same as above.
               const categoryT = t(category)
               // @ts-expect-error Same as above.
               const color = getColorFromSubcategory(category)
@@ -183,7 +186,7 @@ function getTooltip(dataCategory: KOTDataCategory) {
                   <span class="font-bold text-foreground">
                     <span>${label}</span>
                     <span class="text-muted-foreground text-xs ${isGender ? 'ml-1' : ''}">
-                      ${isGender ? '(' + Math.round((label / total) * 100) + '%)' : ''}
+                      ${isGender ? '(' + Math.round((labelNumber / total) * 100) + '%)' : ''}
                     </span>
                     <span class="font-normal text-xs text-muted-foreground">
                       ${dataCategory.unit ? t(dataCategory.unit) : ''}
