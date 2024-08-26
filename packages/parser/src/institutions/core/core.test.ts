@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { readCoreData } from './core'
+import { KOTInstitution } from '../../types'
+import { removeDuplicates } from '../../utils/removeDuplicates'
 
-describe('getCoreKOTData', () => {
+describe('readCoreKOTData', () => {
   it('returns all the institutions required properties', async () => {
     const institutions = await readCoreData()
 
@@ -61,5 +63,46 @@ describe('getCoreKOTData', () => {
     expect(cs?.dataCategories.applied?.datasets[0].appliedFirstpriority).toBeDefined()
     expect(cs?.dataCategories.quotient?.datasets[0].quotientPrimary).toBeDefined()
     expect(cs?.dataCategories.quotient?.datasets[0].quotientStandby).toBeDefined()
+  })
+})
+
+describe('removeDuplicates', () => {
+  it('removes duplicates and gives previous courses a new ID', async () => {
+    const institutions = [
+      {
+        id: '10',
+        latestName: 'A',
+        courses: [
+          {
+            id: '1',
+            period: [2011, 2018]
+          }
+        ]
+      },
+      {
+        id: '20',
+        latestName: 'B',
+        courses: [
+          {
+            id: '1',
+            period: [2019, 2024]
+          }
+        ]
+      }
+    ] as KOTInstitution[]
+
+    const result = removeDuplicates(institutions)
+
+    expect(result.find((institution) => institution.latestName === 'A')?.courses[0].id).toBe('1t')
+    expect(result.find((institution) => institution.latestName === 'B')?.courses[0].id).toBe('1')
+
+    expect(
+      result.find((institution) => institution.latestName === 'A')?.courses[0]
+        .otherOfferedInstitutions
+    ).toStrictEqual(['20'])
+    expect(
+      result.find((institution) => institution.latestName === 'B')?.courses[0]
+        .otherOfferedInstitutions
+    ).toStrictEqual(['10'])
   })
 })

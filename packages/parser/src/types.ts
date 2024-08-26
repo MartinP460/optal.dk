@@ -23,6 +23,8 @@ export type KOTCourse = {
   slug: string
   /** The time period in which the course has been active. */
   period: number[]
+  /** The institutions where this exact course has also been offered. */
+  otherOfferedInstitutions: KOTId[]
 }
 
 export type KOTInstitution = {
@@ -159,4 +161,9 @@ export type KOTGrouping = {
   period: number[]
   /** The parent grouping that the grouping is a part of (e.g. IT for computer science). */
   parentGroupings: ParentGroupingName[]
+}
+
+type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
+export type KOTInstitutionPartial = Omit<KOTInstitution, 'courses'> & {
+  courses: PartialBy<KOTCourse, 'otherOfferedInstitutions'>[]
 }

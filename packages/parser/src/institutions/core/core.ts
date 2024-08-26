@@ -2,7 +2,7 @@ import slugify from 'slugify'
 import path from 'path'
 import { readCSV } from '../../utils/readCSV'
 import { AVAILABLE_YEARS } from '../../constants'
-import { KOTCategory, KOTDataCategories, KOTInstitution, KOTSubcategory } from '../../types'
+import { KOTCategory, KOTDataCategories, KOTInstitutionPartial, KOTSubcategory } from '../../types'
 import { convertToNumber } from '../../utils/convertToNumber'
 import { cities } from '../../utils/cities'
 
@@ -21,7 +21,7 @@ enum CSVDataIndexes {
 }
 
 export async function readCoreData() {
-  let institutions: KOTInstitution[] = []
+  let institutions: KOTInstitutionPartial[] = []
 
   const dataSheets = await Promise.all(
     AVAILABLE_YEARS.map((year) => {
@@ -37,7 +37,7 @@ export async function readCoreData() {
   return institutions
 }
 
-function readDataSheet(dataSheet: string[][], institutions: KOTInstitution[], year: number) {
+function readDataSheet(dataSheet: string[][], institutions: KOTInstitutionPartial[], year: number) {
   let newInstitutions = institutions
 
   const cleanedDataSheet = trimData(dataSheet)
@@ -80,7 +80,10 @@ function isRowInstitutionSummary(row: string[]) {
   )
 }
 
-function upsertInstitution(row: string[], institutions: KOTInstitution[]): KOTInstitution[] {
+function upsertInstitution(
+  row: string[],
+  institutions: KOTInstitutionPartial[]
+): KOTInstitutionPartial[] {
   const institutionId = row[CSVDataIndexes.InstitutionId]
   const institutionName = row[CSVDataIndexes.Name]
 
@@ -122,9 +125,9 @@ function upsertInstitution(row: string[], institutions: KOTInstitution[]): KOTIn
 
 function upsertCourse(
   row: string[],
-  institutions: KOTInstitution[],
+  institutions: KOTInstitutionPartial[],
   year: number
-): KOTInstitution[] {
+): KOTInstitutionPartial[] {
   const courseId = row[CSVDataIndexes.CourseId]
   const courseName = row[CSVDataIndexes.Name]
   const institutionId = row[CSVDataIndexes.InstitutionId]
@@ -171,9 +174,9 @@ function upsertCourse(
 
 function upsertInstitutionData(
   row: string[],
-  institutions: KOTInstitution[],
+  institutions: KOTInstitutionPartial[],
   year: number
-): KOTInstitution[] {
+): KOTInstitutionPartial[] {
   const institutionId = row[CSVDataIndexes.InstitutionId]
 
   const institution = institutions.find((inst) => inst.id === institutionId)

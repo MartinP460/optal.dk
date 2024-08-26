@@ -1,7 +1,7 @@
 import path from 'path'
 import { convertToNumber } from './convertToNumber'
 import { readCSV } from './readCSV'
-import { KOTDataCategories, KOTInstitution, KOTSubcategory } from '../types'
+import { KOTDataCategories, KOTInstitutionPartial, KOTSubcategory } from '../types'
 import { AVAILABLE_YEARS } from '../constants'
 
 export const BASE_CSV_DATA_INDEXES = {
@@ -34,9 +34,9 @@ const CSV_DATA_INDEX_MAP = {
 
 /** Parses non-core admission data in CSV format from KOT ("Den koordinerede tilmelding"). */
 export async function readData(
-  institutions: KOTInstitution[],
+  institutions: KOTInstitutionPartial[],
   category: 'gender' | 'age'
-): Promise<KOTInstitution[]> {
+): Promise<KOTInstitutionPartial[]> {
   const dataAccepted = await getAcceptedOrAppliedData(institutions, 'accepted', category)
   const dataApplied = await getAcceptedOrAppliedData(dataAccepted, 'applied', category)
 
@@ -45,7 +45,7 @@ export async function readData(
 
 /** Parses data from either the accepted or applied files. */
 async function getAcceptedOrAppliedData(
-  institutions: KOTInstitution[],
+  institutions: KOTInstitutionPartial[],
   type: 'accepted' | 'applied',
   category: 'gender' | 'age'
 ) {
@@ -82,11 +82,11 @@ export function appendDataToCourse({
   category
 }: {
   row: string[]
-  institutions: KOTInstitution[]
+  institutions: KOTInstitutionPartial[]
   year: number
   type: 'accepted' | 'applied'
   category: 'age' | 'gender'
-}): KOTInstitution[] {
+}): KOTInstitutionPartial[] {
   const courseId = row[BASE_CSV_DATA_INDEXES.CourseId]
   const institutionId = row[BASE_CSV_DATA_INDEXES.InstitutionId] + '0'
 
