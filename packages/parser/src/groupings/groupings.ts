@@ -39,8 +39,13 @@ function getNewGrouping(
     return course
   })
 
+  // We select the longest running course as the baseline period but this could cause bugs.
+  const longestRunningCourse = courses.sort((a, b) =>
+    a.period[0] - (a.period[1] ?? a.period[0]) > b.period[0] - (b.period[1] ?? b.period[0]) ? 1 : -1
+  )[0]
+
   const dataCategories = _.mapValues(
-    _.omit(courses[0]?.dataCategories, DATACATEGORIES_TO_EXCLUDE),
+    _.omit(longestRunningCourse?.dataCategories, DATACATEGORIES_TO_EXCLUDE),
     (dataCategory) => ({
       ...dataCategory,
       datasets: dataCategory?.datasets.map((dataset) =>
@@ -48,14 +53,16 @@ function getNewGrouping(
           if (key === 'year') return value
 
           return _.sum(
-            courses.map(
-              (course) =>
-                // @ts-expect-error bruh
-                // eslint-disable-next-line no-unsafe-optional-chaining
-                (course.dataCategories[dataCategory.name]?.datasets.find(
-                  (dataCategory) => dataCategory.year === dataset.year
-                ))[key as KOTSubcategory]
-            )
+            courses.map((course) => {
+              const foundDataset = course.dataCategories[dataCategory.name]?.datasets.find(
+                (dataCategory) => dataCategory.year === dataset.year
+              )
+
+              if (!foundDataset) return 0
+
+              // @ts-expect-error bruh
+              return foundDataset[key as KOTSubcategory]
+            })
           )
         })
       )
