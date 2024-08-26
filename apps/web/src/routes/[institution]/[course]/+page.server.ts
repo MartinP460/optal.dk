@@ -8,17 +8,7 @@ export async function load({ params }) {
     error(404, 'Institution not found.')
   }
 
-  // Gets the ID of the course
-  const regex = /[^-]+$/
-  const match = params.course.match(regex)
-
-  if (!match)
-    throw new Error(
-      `Course not found while generating pages.\n\nInstitution: ${params.institution} \nCourse: ${params.course}`
-    )
-
-  const courseId = match[0]
-  const course = institution.courses.find((course) => course.id === courseId)
+  const course = institution.courses.find((course) => course.slug === params.course)
 
   if (!course) {
     error(404, 'Course not found.')
