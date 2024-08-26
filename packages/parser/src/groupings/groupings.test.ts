@@ -3,7 +3,7 @@ import { getGroupings } from './groupings'
 import { GroupingName } from '../constants'
 import { getInstitutions } from '../institutions'
 
-it.only('returns the sum of dataset properties for a year', async () => {
+it('returns the sum of dataset properties for a year', async () => {
   const institutions = await getInstitutions()
   const result = getGroupings(institutions)
 
