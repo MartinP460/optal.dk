@@ -31,15 +31,24 @@ export enum GroupingName {
   PsychomotorTherapist = 'psychomotorTherapist',
   Radiographer = 'radiographer',
   Nurse = 'nurse',
-  DentalHygienist = 'dentalHygienist'
+  DentalHygienist = 'dentalHygienist',
+  Biology = 'biology',
+  Geology = 'geology',
+  Physics = 'physics',
+  Chemistry = 'chemistry',
+  Mathematics = 'mathematics',
+  MathematicsEconomics = 'mathematicsEconomics',
+  Medialogy = 'medialogy',
+  MedicinalChemistry = 'medicinalChemistry',
+  Nanoscience = 'nanoscience',
+  PhysicalEducation = 'physicalEducation'
 }
 
 export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGroupings'>[] = [
-  {
-    name: GroupingName.ComputerScience,
-    courseIds: ['25306', '22115', '10220', '17020'],
-    parentGroupings: [ParentGroupingName.IT, ParentGroupingName.NaturalScience]
-  },
+  /*
+  HEALTHCARE EDUCATIONS
+  */
+
   {
     name: GroupingName.Medicin,
     courseIds: ['25320', '22010', '10110', '10112', '17115', '17117'],
@@ -256,5 +265,65 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
     name: GroupingName.DentalHygienist,
     courseIds: ['22020', '10160'],
     parentGroupings: [ParentGroupingName.Healthcare]
+  },
+
+  /*
+  SCIENCE EDUCATIONS
+  */
+
+  {
+    name: GroupingName.Biology,
+    courseIds: ['25305', '22110', '10250', '17010'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
+  },
+  {
+    name: GroupingName.Geology,
+    courseIds: ['22125', '10275'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
+  },
+  {
+    name: GroupingName.Physics,
+    courseIds: ['25307', '22120', '10230', '17070'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
+  },
+  {
+    name: GroupingName.Chemistry,
+    courseIds: ['25313', '22135', '10286', '17085'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
+  },
+  {
+    name: GroupingName.Mathematics,
+    courseIds: ['25314', '22140', '10287', '17064'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
+  },
+  {
+    name: GroupingName.MathematicsEconomics,
+    courseIds: ['25319', '22145', '10288', '17050'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
+  },
+  {
+    name: GroupingName.ComputerScience,
+    courseIds: ['25306', '22115', '10220', '17020'],
+    parentGroupings: [ParentGroupingName.NaturalScience, ParentGroupingName.IT]
+  },
+  {
+    name: GroupingName.Medialogy,
+    courseIds: ['25321', '25322', '26520', '25315', '25317'],
+    parentGroupings: [ParentGroupingName.NaturalScience, ParentGroupingName.IT]
+  },
+  {
+    name: GroupingName.MedicinalChemistry,
+    courseIds: ['22150', '10293'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
+  },
+  {
+    name: GroupingName.Nanoscience,
+    courseIds: ['22160', '10290'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
+  },
+  {
+    name: GroupingName.PhysicalEducation,
+    courseIds: ['25325', '22130', '17040', '10285'],
+    parentGroupings: [ParentGroupingName.NaturalScience]
   }
 ]
