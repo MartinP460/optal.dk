@@ -1,6 +1,8 @@
 import _ from 'lodash'
 import { ParentGroupingName } from 'parser'
+import { get } from 'svelte/store'
 import { courseSearchIndexes, groupings, institutions } from '$lib/server/data'
+import { t as i18n } from '$lib/i18n'
 
 export const load = () => {
   // we are removing properties to reduce the amount of data sent over the network
@@ -19,6 +21,8 @@ export const load = () => {
     }))
   }))
 
+  const t = get(i18n)
+
   const shortenedGroupings = _.mapValues(
     _.keyBy(Object.values(ParentGroupingName)),
     (parentGroupingName) =>
@@ -31,6 +35,7 @@ export const load = () => {
           period,
           courseCount
         }))
+        .sort((a, b) => t(a.name).localeCompare(t(b.name), 'en'))
   )
 
   const parentGroupings = Object.entries(shortenedGroupings) as [

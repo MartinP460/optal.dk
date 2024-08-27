@@ -20,7 +20,7 @@ export function getGroupings(institutions: KOTInstitution[]) {
 
   const newResult = groupings.map((grouping) => getNewGrouping(grouping, courseMap))
 
-  return newResult
+  return newResult.sort((a, b) => a.name.localeCompare(b.name, 'en'))
 }
 
 function getNewGrouping(
