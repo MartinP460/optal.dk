@@ -24,7 +24,14 @@ export enum GroupingName {
   Dentistry = 'dentistry',
   BiomedicalLaboratoryTechnologist = 'biomedicalLaboratoryTechnologist',
   OccupationalTherapist = 'occupationalTherapist',
-  NutritionAndHealth = 'nutritionAndHealth'
+  NutritionAndHealth = 'nutritionAndHealth',
+  Physiotherapist = 'physiotherapist',
+  Midwife = 'midwife',
+  Optometry = 'optometry',
+  PsychomotorTherapist = 'psychomotorTherapist',
+  Radiographer = 'radiographer',
+  Nurse = 'nurse',
+  DentalHygienist = 'dentalHygienist'
 }
 
 export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGroupings'>[] = [
@@ -114,6 +121,140 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '45115',
       '45117'
     ],
+    parentGroupings: [ParentGroupingName.Healthcare]
+  },
+  {
+    name: GroupingName.Physiotherapist,
+    courseIds: [
+      '47020',
+      '47022',
+      '47040',
+      '47045',
+      '47065',
+      '47067',
+      '47062',
+      '47050',
+      '47052',
+      '47060',
+      '47080t',
+      '47020t',
+      '47022t',
+      '47100',
+      '47105',
+      '47110',
+      '47040t',
+      '47045t',
+      '47160',
+      '47162',
+      '47120',
+      '47140',
+      '47080',
+      '47082'
+    ],
+    parentGroupings: [ParentGroupingName.Healthcare]
+  },
+  {
+    name: GroupingName.Midwife,
+    courseIds: ['50010', '50012', '50030', '50032', '50010t', '50012t', '50015', '50020', '50022'],
+    parentGroupings: [ParentGroupingName.Healthcare]
+  },
+  {
+    name: GroupingName.Optometry,
+    courseIds: ['52750', '52753', '52710'],
+    parentGroupings: [ParentGroupingName.Healthcare]
+  },
+  {
+    name: GroupingName.PsychomotorTherapist,
+    courseIds: ['40010', '40010t', '40060'],
+    parentGroupings: [ParentGroupingName.Healthcare]
+  },
+  {
+    name: GroupingName.Radiographer,
+    courseIds: [
+      '54020',
+      '54022',
+      '54030',
+      '54040t',
+      '54020t',
+      '54022t',
+      '54060',
+      '54062',
+      '54040',
+      '54042'
+    ],
+    parentGroupings: [ParentGroupingName.Healthcare]
+  },
+  {
+    name: GroupingName.Nurse,
+    courseIds: [
+      '56100t',
+      '56082',
+      '56087',
+      '56020',
+      '56022',
+      '56040',
+      '56042',
+      '56080',
+      '56085',
+      '56100',
+      '56105',
+      '56182',
+      '56120',
+      '56122',
+      '56140',
+      '56142',
+      '56145',
+      '56147',
+      '56150',
+      '56152',
+      '56160',
+      '56162',
+      '56180',
+      '56200t',
+      '56220t',
+      '56280t',
+      '56020t',
+      '56022t',
+      '56040t',
+      '56042t',
+      '56240',
+      '56230',
+      '56237',
+      '56260',
+      '56080t',
+      '56082t',
+      '56085t',
+      '56087t',
+      '56100tt',
+      '56105t',
+      '56390',
+      '56420',
+      '56422',
+      '56440',
+      '56442',
+      '56443',
+      '56345',
+      '56320',
+      '56290',
+      '56300',
+      '56340',
+      '56360',
+      '56370',
+      '56380',
+      '56385',
+      '56400',
+      '56200',
+      '56202',
+      '56220',
+      '56222',
+      '56280',
+      '56282'
+    ],
+    parentGroupings: [ParentGroupingName.Healthcare]
+  },
+  {
+    name: GroupingName.DentalHygienist,
+    courseIds: ['22020', '10160'],
     parentGroupings: [ParentGroupingName.Healthcare]
   }
 ]

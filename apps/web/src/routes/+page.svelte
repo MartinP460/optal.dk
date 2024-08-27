@@ -22,9 +22,6 @@
   const coursesWithInstitutions = institutions.flatMap((institution) =>
     institution.courses.map((course) => ({
       ...course,
-      // we have to generate different id's since KOT does not have unique id's
-      id: Math.random().toString(36).substring(2, 9),
-      kotId: course.id,
       institution
     }))
   )
