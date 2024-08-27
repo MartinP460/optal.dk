@@ -75,7 +75,7 @@ function getNewGrouping(
   return {
     ...grouping,
     id: grouping.name,
-    slug: grouping.name,
+    slug: _.kebabCase(grouping.name),
     courseCount: grouping.courseIds.length,
     dataCategories,
     period
