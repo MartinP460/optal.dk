@@ -115,7 +115,8 @@
                             getPeriodIntervalFromPeriod(course.item.period),
                             course.item.location,
                             course.item.studyStart ? $t(course.item.studyStart) : '',
-                            course.item.eLearning ? 'e-learning' : null
+                            course.item.eLearning ? 'e-learning' : null,
+                            course.item.id
                           ]
                             .filter((item) => item)
                             .join(', ')}
