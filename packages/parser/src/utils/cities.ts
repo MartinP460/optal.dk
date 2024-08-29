@@ -71,5 +71,6 @@ export const cities = [
   'viby j',
   'vinter',
   'vordingborg',
+  'valby',
   'winter'
 ]

@@ -41,7 +41,10 @@ function getNewGrouping(
 
   // We select the longest running course as the baseline period but this could cause bugs.
   const longestRunningCourse = courses.sort((a, b) =>
-    a.period[0] - (a.period[1] ?? a.period[0]) > b.period[0] - (b.period[1] ?? b.period[0]) ? 1 : -1
+    (a.dataCategories.accepted?.datasets ?? []).length <
+    (b.dataCategories.accepted?.datasets ?? []).length
+      ? 1
+      : -1
   )[0]
 
   const dataCategories = _.mapValues(
