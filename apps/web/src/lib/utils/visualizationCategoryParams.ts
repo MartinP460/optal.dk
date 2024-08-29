@@ -6,7 +6,7 @@ import { getDefaultSubCategories } from '$lib/utils/chartCategoryHelpers'
 const categories = ['accepted', 'applied', 'quotient', 'gender', 'age']
 
 export function getCategoryParams(dataCategories: KOTDataCategories) {
-  const store = queryParam('category', ssp.string('accepted'))
+  const store = queryParam('category', ssp.string('accepted'), { pushHistory: false })
 
   const param = get(store)
 
