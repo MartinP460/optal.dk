@@ -9,11 +9,11 @@ it('returns the sum of dataset properties for a year', async () => {
 
   const datalogi = result.find((grouping) => grouping.name === GroupingName.ComputerScience)
 
-  expect(result[0].id).toBe('computerScience')
-  expect(result[0].slug).toBe('computer-science')
-  expect(result[0].name).toBe('computerScience')
-  expect(result[0].period).toStrictEqual([2011, 2024])
-  expect(result[0].parentGroupings).toStrictEqual(['it', 'naturalScience'])
+  expect(datalogi?.id).toBe('computerScience')
+  expect(datalogi?.slug).toBe('computer-science')
+  expect(datalogi?.name).toBe('computerScience')
+  expect(datalogi?.period).toStrictEqual([2011, 2024])
+  expect(datalogi?.parentGroupings).toStrictEqual(['naturalScience', 'it'])
 
   const accepted = datalogi?.dataCategories.accepted
 
