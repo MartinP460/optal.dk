@@ -59,7 +59,7 @@ export enum GroupingName {
   FinancialController = 'financialController',
   FinancialManagement = 'financialManagement',
   CommerceManagement = 'commerceManagement',
-  LogisticsManagement = 'logisticsManagement',
+  LogisticManagement = 'logisticManagement',
   MarketingManagement = 'marketingManagement',
   ServiceHospitalityTourismManagement = 'serviceHospitalityTourismManagement',
   AdministrativeManagement = 'administrativeManagement',
@@ -81,7 +81,10 @@ export enum GroupingName {
   LiteraryScience = 'literaryScience',
   MediaStudies = 'mediaStudies',
   Musicology = 'musicology',
-  ReligiousStudies = 'religiousStudies'
+  ReligiousStudies = 'religiousStudies',
+  ComputerScienceAP = 'computerScienceAP',
+  ITTechnology = 'itTechnology',
+  MultimediaDesign = 'multimediaDesign'
 }
 
 export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGroupings'>[] = [
@@ -499,7 +502,8 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '45840',
       '45880',
       '45830',
-      '45820'
+      '45820',
+      '45865'
     ],
     parentGroupings: [ParentGroupingName.SocialScience]
   },
@@ -536,7 +540,10 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '74062',
       '74028',
       '74030',
-      '74032'
+      '74032',
+      '74077',
+      '74075',
+      '74162'
     ],
     parentGroupings: [ParentGroupingName.SocialScience]
   },
@@ -558,13 +565,15 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '74625',
       '74630',
       '74612',
-      '74610'
+      '74610',
+      '74617',
+      '74615'
     ],
     parentGroupings: [ParentGroupingName.SocialScience]
   },
   {
-    name: GroupingName.LogisticsManagement,
-    courseIds: ['87110', '87010', '87060t', '87060', '87030'],
+    name: GroupingName.LogisticManagement,
+    courseIds: ['87110', '87010', '87060t', '87060', '87030', '87065t', '87065', '87035'],
     parentGroupings: [ParentGroupingName.SocialScience]
   },
   {
@@ -601,7 +610,25 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '79162',
       '79163',
       '79168',
-      '79180'
+      '79180',
+      '79415',
+      '79512',
+      '79565',
+      '79295',
+      '79315',
+      '79017',
+      '79067',
+      '79015',
+      '79065',
+      '79215t',
+      '79267',
+      '79265',
+      '79615',
+      '79465',
+      '79215',
+      '79185',
+      '79165',
+      '79167'
     ],
     parentGroupings: [ParentGroupingName.SocialScience]
   },
@@ -636,7 +663,21 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '86080',
       '86090',
       '86091',
-      '86092'
+      '86092',
+      '86157',
+      '86165',
+      '86017',
+      '86065',
+      '86015',
+      '86115t',
+      '86135t',
+      '86215',
+      '86217',
+      '86115',
+      '86135',
+      '86082',
+      '86085',
+      '86087'
     ],
     parentGroupings: [ParentGroupingName.SocialScience]
   },
@@ -763,5 +804,108 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
     name: GroupingName.ReligiousStudies,
     courseIds: ['22340', '10372', '17260'],
     parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+
+  /*
+  IT EDUCATIONS
+  */
+
+  {
+    name: GroupingName.ComputerScienceAP,
+    courseIds: [
+      '71710',
+      '71667',
+      '71660',
+      '71665',
+      '71610',
+      '71456',
+      '71460',
+      '71510',
+      '71112',
+      '71100',
+      '71110',
+      '71410t',
+      '71560t',
+      '71060',
+      '71810',
+      '71812',
+      '71410',
+      '71413',
+      '71560',
+      '71562',
+      '71210',
+      '71212',
+      '71310',
+      '71715',
+      '71465',
+      '71515',
+      '71115',
+      '71415',
+      '71065',
+      '71815',
+      '71220',
+      '71375',
+      '71265',
+      '71217',
+      '71215'
+    ],
+    parentGroupings: [ParentGroupingName.IT]
+  },
+  {
+    name: GroupingName.ITTechnology,
+    courseIds: [
+      '76210',
+      '76270',
+      '76200t',
+      '76010',
+      '76260',
+      '76200',
+      '76050',
+      '76215',
+      '76255',
+      '76065t',
+      '76065',
+      '76015',
+      '76265'
+    ],
+    parentGroupings: [ParentGroupingName.IT]
+  },
+  {
+    name: GroupingName.MultimediaDesign,
+    courseIds: [
+      '81510',
+      '81560',
+      '81580',
+      '81590',
+      '81460',
+      '81410',
+      '81420',
+      '81060',
+      '81310t',
+      '81360',
+      '81361',
+      '81010',
+      '81610',
+      '81310',
+      '81312',
+      '81160',
+      '81210',
+      '81212',
+      '81230',
+      '81565',
+      '81412',
+      '81365',
+      '81015',
+      '81615',
+      '81215',
+      '81520',
+      '81422',
+      '81065',
+      '81315',
+      '81367',
+      '81165',
+      '81235'
+    ],
+    parentGroupings: [ParentGroupingName.IT]
   }
 ]

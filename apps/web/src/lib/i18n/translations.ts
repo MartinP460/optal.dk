@@ -144,7 +144,7 @@ export const translations = {
     lightMode: 'Light',
     linechart: 'Line',
     literaryScience: 'Literary science',
-    logisticsManagement: 'Logistics management',
+    logisticManagement: 'Logistics management',
     marketingManagement: 'Marketing management',
     mathematics: 'Mathematics',
     mathematicsEconomics: 'Mathematics-economics',
@@ -235,6 +235,9 @@ export const translations = {
     veterinaryMedicine: 'Veterinary medicine',
     winterstart: 'winter-start',
     women: 'Women',
+    computerScienceAP: 'Computer science (AP)',
+    itTechnology: 'IT technology',
+    multimediaDesign: 'Multimedia design',
   },
   da: {
     about: 'Om optal',
@@ -380,7 +383,7 @@ export const translations = {
     lightMode: 'Lys',
     linechart: 'Linje',
     literaryScience: 'Litteraturvidenskab',
-    logisticsManagement: 'Logistikøkonom',
+    logisticManagement: 'Logistikøkonom',
     marketingManagement: 'Markedsføringsøkonom',
     mathematics: 'Matematik',
     mathematicsEconomics: 'Matematik-økonomi',
@@ -471,5 +474,8 @@ export const translations = {
     veterinaryMedicine: 'Veterinærmedicin',
     winterstart: 'vinterstart',
     women: 'Kvinder',
+    computerScienceAP: 'Datamatiker',
+    itTechnology: 'IT-teknolog',
+    multimediaDesign: 'Multimediedesign',
   }
 }
