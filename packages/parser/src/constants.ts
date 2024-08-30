@@ -92,7 +92,17 @@ export enum GroupingName {
   ChinaStudies = 'chinaStudies',
   Linguistics = 'linguistics',
   Spanish = 'spanish',
-  German = 'german'
+  German = 'german',
+  DesignTechnologyBusiness = 'designTechnologyBusiness',
+  BiotechnologyBSEngineering = 'biotechnologyBSEngineering',
+  ArchitecturalEngineeringBSEngineering = 'architecturalEngineeringBSEngineering',
+  SustainableEnergyEngineeringBSEngineering = 'sustainableEnergyEngineeringBSEngineering',
+  ElectricalEnergyTechnologyBSEngineering = 'electricalEnergyTechnologyBSEngineering',
+  ElectronicsBSEngineering = 'electronicsBSEngineering',
+  ChemicalEngineeringBSEngineering = 'chemicalEngineeringBSEngineering',
+  MechanicalEngineeringBSEngineering = 'mechanicalEngineeringBSEngineering',
+  ManufacturingManagementBSEngineering = 'manufacturingManagementBSEngineering',
+  SoftwareTechnologyBSEngineering = 'softwareTechnologyBSEngineering'
 }
 
 export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGroupings'>[] = [
@@ -763,6 +773,67 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
     courseIds: ['25060', '25062'],
     parentGroupings: [ParentGroupingName.Technical, ParentGroupingName.IT]
   },
+  {
+    name: GroupingName.BiotechnologyBSEngineering,
+    courseIds: ['22810', '48500', '48505'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ArchitecturalEngineeringBSEngineering,
+    courseIds: ['22820', '22825', '15220', '25240', '26630', '15120', '17815'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.SustainableEnergyEngineeringBSEngineering,
+    courseIds: ['48013', '25250', '26635', '15117', '15325', '48213'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ElectricalEnergyTechnologyBSEngineering,
+    courseIds: ['22875', '22870', '22970', '15170', '17850', '49035', '49135', '48045'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ElectronicsBSEngineering,
+    courseIds: ['26640', '25260', '22955', '22840', '22845', '17820', '19112'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ChemicalEngineeringBSEngineering,
+    courseIds: ['25230', '26620', '17825', '15135'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.MechanicalEngineeringBSEngineering,
+    courseIds: [
+      '25270',
+      '26650',
+      '22960',
+      '22860',
+      '22865',
+      '15140',
+      '17840',
+      '48520',
+      '49325',
+      '49327',
+      '15240',
+      '15320',
+      '48027',
+      '49425',
+      '19114'
+    ],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ManufacturingManagementBSEngineering,
+    courseIds: ['15147', '49340', '17845'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.SoftwareTechnologyBSEngineering,
+    courseIds: ['22850', '22855', '15175', '49319', '49322', '17830', '49320'],
+    parentGroupings: [ParentGroupingName.Technical, ParentGroupingName.IT]
+  },
 
   /*
   HUMANITIES AND DESIGN EDUCATIONS
@@ -851,6 +922,11 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
   {
     name: GroupingName.German,
     courseIds: ['25465', '17270', '10390', '22365'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.DesignTechnologyBusiness,
+    courseIds: ['73060', '73010', '73160', '73110', '73065', '73015', '73165', '73115'],
     parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
   },
 
