@@ -84,7 +84,15 @@ export enum GroupingName {
   ReligiousStudies = 'religiousStudies',
   ComputerScienceAP = 'computerScienceAP',
   ITTechnology = 'itTechnology',
-  MultimediaDesign = 'multimediaDesign'
+  MultimediaDesign = 'multimediaDesign',
+  English = 'english',
+  French = 'french',
+  IndianSouthAsianStudies = 'indiaSouthAsiaStudies',
+  JapanStudies = 'japanStudies',
+  ChinaStudies = 'chinaStudies',
+  Linguistics = 'linguistics',
+  Spanish = 'spanish',
+  German = 'german'
 }
 
 export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGroupings'>[] = [
@@ -803,6 +811,46 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
   {
     name: GroupingName.ReligiousStudies,
     courseIds: ['22340', '10372', '17260'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.English,
+    courseIds: ['25450', '22220', '10308', '17215', '18015'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.French,
+    courseIds: ['10324', '22245'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.IndianSouthAsianStudies,
+    courseIds: ['22265', '10341'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.JapanStudies,
+    courseIds: ['22280', '10340'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.ChinaStudies,
+    courseIds: ['22285', '10342'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.Linguistics,
+    courseIds: ['22310', '10380'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.Spanish,
+    courseIds: ['25460', '10378', '22355', '17265'],
+    parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
+  },
+  {
+    name: GroupingName.German,
+    courseIds: ['25465', '17270', '10390', '22365'],
     parentGroupings: [ParentGroupingName.HumanitiesAndDesign]
   },
 
