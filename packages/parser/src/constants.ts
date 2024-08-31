@@ -1172,7 +1172,6 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '79611',
       '79460',
       '79210',
-      '79210',
       '79212',
       '79160',
       '79161',

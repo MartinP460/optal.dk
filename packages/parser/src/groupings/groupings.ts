@@ -27,6 +27,10 @@ function getNewGrouping(
   grouping: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGroupings'>,
   courseMap: Map<KOTId, KOTCourse>
 ): KOTGrouping {
+  if (new Set(grouping.courseIds).size !== grouping.courseIds.length) {
+    throw new Error(`Grouping ${grouping.name} has duplicate courses.`)
+  }
+
   const courses = grouping.courseIds.map((courseId) => {
     const course = courseMap.get(courseId)
 
