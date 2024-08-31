@@ -12,12 +12,15 @@
   import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
+  import { createLocalStorageState } from '$lib/utils/createLocalStorageState'
 
   export let data: PageData
   const { institutions, parentGroupings, searchIndexes } = data
 
   const COURSE_RESULTS_LIMIT = 25
   const INSTITUTION_RESULTS_LIMIT = 10
+
+  const tabsState = createLocalStorageState('tabsState', 'institutions')
 
   const coursesWithInstitutions = institutions.flatMap((institution) =>
     institution.courses.map((course) => ({
@@ -59,12 +62,20 @@
       {$t('byline')}
     </p>
   </div>
-  <Tabs.Root value="institutions" class="flex flex-col justify-center items-center">
+  <Tabs.Root value={$tabsState} class="flex flex-col justify-center items-center">
     <Tabs.List class="w-full sm:w-[600px] h-12">
-      <Tabs.Trigger value="institutions" class="w-full h-full">
+      <Tabs.Trigger
+        value="institutions"
+        class="w-full h-full"
+        on:click={() => tabsState.set('institutions')}
+      >
         {$t('byInstitution')}
       </Tabs.Trigger>
-      <Tabs.Trigger value="groupings" class="w-full h-full">
+      <Tabs.Trigger
+        value="groupings"
+        class="w-full h-full"
+        on:click={() => tabsState.set('groupings')}
+      >
         {$t('byEducation')}
       </Tabs.Trigger>
     </Tabs.List>
