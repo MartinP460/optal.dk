@@ -102,7 +102,19 @@ export enum GroupingName {
   ChemicalEngineeringBSEngineering = 'chemicalEngineeringBSEngineering',
   MechanicalEngineeringBSEngineering = 'mechanicalEngineeringBSEngineering',
   ManufacturingManagementBSEngineering = 'manufacturingManagementBSEngineering',
-  SoftwareTechnologyBSEngineering = 'softwareTechnologyBSEngineering'
+  SoftwareTechnologyBSEngineering = 'softwareTechnologyBSEngineering',
+  AgroBusinessLandscapeManagement = 'agroBusinessLandscapeManagement',
+  LaboratoryTechnician = 'laboratoryTechnician',
+  NutritionAndTechnology = 'nutritionAndTechnology',
+  AutomationEngineering = 'automationEngineering',
+  AutomotiveTechnology = 'automotiveTechnology',
+  ConstructionBusinessConstructionCoordinator = 'constructionBusinessConstructionCoordinator',
+  ManagementTechnologyOffshore = 'managementTechnologyOffshore',
+  Electrician = 'electrician',
+  EnergyTechnology = 'energyTechnology',
+  SurveyingAndMapping = 'surveyingAndMapping',
+  ProductionTechnology = 'productionTechnology',
+  ServiceEngineeringPlumbingTechnology = 'serviceEngineeringPlumbingTechnology'
 }
 
 export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGroupings'>[] = [
@@ -833,6 +845,143 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
     name: GroupingName.SoftwareTechnologyBSEngineering,
     courseIds: ['22850', '22855', '15175', '49319', '49322', '17830', '49320'],
     parentGroupings: [ParentGroupingName.Technical, ParentGroupingName.IT]
+  },
+  {
+    name: GroupingName.AgroBusinessLandscapeManagement,
+    courseIds: ['77110', '77060t', '77060', '77010', '77115'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.LaboratoryTechnician,
+    courseIds: [
+      '78360',
+      '78310',
+      '78260',
+      '78065',
+      '78210t',
+      '78010',
+      '78012',
+      '78010t',
+      '78012t',
+      '78270',
+      '78410',
+      '78210',
+      '78110',
+      '78112',
+      '78160',
+      '78162'
+    ],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.NutritionAndTechnology,
+    courseIds: ['83210', '83010', '83110', '83160', '83060', '83065', '83110t', '83160t'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.AutomationEngineering,
+    courseIds: [
+      '70350',
+      '70380',
+      '70370',
+      '70376',
+      '70378',
+      '70330t',
+      '70310',
+      '70390',
+      '70330',
+      '70340',
+      '70320',
+      '70360',
+      '70395'
+    ],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.AutomotiveTechnology,
+    courseIds: ['70460', '70510', '70430t', '70430', '70410', '70400', '70402', '70470', '70515'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ConstructionBusinessConstructionCoordinator,
+    courseIds: ['72170', '72150', '72140', '72160', '72166', '72110t', '72010', '72110'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ManagementTechnologyOffshore,
+    courseIds: ['73410', '73411', '73415'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.Electrician,
+    courseIds: [
+      '75360',
+      '75362',
+      '75372',
+      '75370',
+      '75310',
+      '75230',
+      '75210t',
+      '75260t',
+      '75010',
+      '75413',
+      '75210',
+      '75260',
+      '75160'
+    ],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.EnergyTechnology,
+    courseIds: [
+      '73370',
+      '73372',
+      '73350',
+      '73344',
+      '73340',
+      '73330t',
+      '73310',
+      '73375',
+      '73390',
+      '73330',
+      '73360',
+      '73365'
+    ],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.SurveyingAndMapping,
+    courseIds: ['88010', '88160'],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ProductionTechnology,
+    courseIds: [
+      '84290',
+      '84415',
+      '84310',
+      '84410',
+      '84260',
+      '84160',
+      '84210',
+      '84110t',
+      '84132',
+      '84130',
+      '84010',
+      '84460',
+      '84462',
+      '84360',
+      '84110',
+      '84060',
+      '84115',
+      '84015'
+    ],
+    parentGroupings: [ParentGroupingName.Technical]
+  },
+  {
+    name: GroupingName.ServiceEngineeringPlumbingTechnology,
+    courseIds: ['75365', '75375', '75315', '75215t', '75015', '75415', '75418', '75215', '75115'],
+    parentGroupings: [ParentGroupingName.Technical]
   },
 
   /*
