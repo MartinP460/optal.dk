@@ -3,7 +3,7 @@ import { getGroupings } from './groupings'
 import { getInstitutions } from './institutions'
 import { writeToFile } from './utils/writeToFile'
 
-async function parseAndGenerateKOTData() {
+async function readAndGenerateKOTData() {
   const args = process.argv.slice(2)
 
   // output folder for all file types
@@ -40,4 +40,4 @@ function writeToJSON(name: string, data: unknown) {
   writeToFile(name, 'json', JSON.stringify(data), JSONOutputDir)
 }
 
-parseAndGenerateKOTData()
+readAndGenerateKOTData()

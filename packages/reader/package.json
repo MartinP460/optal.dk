@@ -1,6 +1,6 @@
 {
-  "name": "parser",
-  "description": "The parser for extracting admission figures from CSV-files with KOT data.",
+  "name": "reader",
+  "description": "The reader for extracting admission figures from CSV-files with KOT data.",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "scripts": {
