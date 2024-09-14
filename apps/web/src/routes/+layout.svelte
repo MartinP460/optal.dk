@@ -96,7 +96,16 @@
               data-sveltekit-preload-data="tap">{$t('data')}</Button
             >
           </li>
-          <DotSeperator class="hidden sm:block" aria-hidden />
+          <DotSeperator aria-hidden class="hidden sm:block" />
+          <li>
+            <Button
+              href="/faq"
+              variant="ghost"
+              class="text-muted-foreground pb-3 w-24"
+              data-sveltekit-preload-data="tap">{$t('faq')}</Button
+            >
+          </li>
+          <DotSeperator aria-hidden />
           <li>
             <Sheet.Trigger on:click={() => (sidebarPage = 'feedback')}>
               <Button

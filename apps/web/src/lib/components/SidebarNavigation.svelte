@@ -46,6 +46,16 @@
       </li>
       <li>
         <Button
+          on:click={() => dispatch('close')}
+          href="/faq"
+          variant="ghost"
+          class="w-full justify-start"
+        >
+          {$t('faq')}
+        </Button>
+      </li>
+      <li>
+        <Button
           on:click={() => dispatch('feedbackOpen')}
           variant="ghost"
           class="w-full justify-start"
