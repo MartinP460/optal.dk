@@ -2,7 +2,7 @@
   import { createEventDispatcher } from 'svelte'
   import { slide } from 'svelte/transition'
   import _ from 'lodash'
-  import type { KOTCategory, KOTDataCategories, KOTDataCategory, KOTSubcategory } from 'parser'
+  import type { KOTCategory, KOTDataCategories, KOTDataCategory, KOTSubcategory } from 'reader'
   import { Checkbox } from '$lib/components/ui/checkbox'
   import { Separator } from '$lib/components/ui/separator'
   import { chartConfig } from '$lib/utils/chartConfig'

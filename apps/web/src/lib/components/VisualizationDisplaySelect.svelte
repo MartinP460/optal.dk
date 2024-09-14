@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   import { IconChartBar } from '@tabler/icons-svelte'
-  import type { KOTDataCategory } from 'parser'
+  import type { KOTDataCategory } from 'reader'
   import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
   import { getDisplayTypesFromDataCategory } from '$lib/utils/chartCategoryHelpers'
   import { Label } from '$lib/components/ui/label'

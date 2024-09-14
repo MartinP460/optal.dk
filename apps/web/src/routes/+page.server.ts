@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { ParentGroupingName } from 'parser'
+import { ParentGroupingName } from 'reader'
 import { get } from 'svelte/store'
 import { courseSearchIndexes, groupings, institutions } from '$lib/server/data'
 import { t as i18n } from '$lib/i18n'

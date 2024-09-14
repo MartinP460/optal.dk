@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { KOTCourse } from 'parser'
+  import type { KOTCourse } from 'reader'
   import { Badge } from '$lib/components/ui/badge'
   import { t } from '$lib/i18n'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'

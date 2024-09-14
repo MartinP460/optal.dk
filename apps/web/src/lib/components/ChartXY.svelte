@@ -13,7 +13,7 @@
     VisTooltip,
     VisXYContainer
   } from '@unovis/svelte'
-  import type { KOTDataCategory } from 'parser'
+  import type { KOTDataCategory } from 'reader'
   import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
   import { getChartProps } from '$lib/utils/chartHelpers'
 

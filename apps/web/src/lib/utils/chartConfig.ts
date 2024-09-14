@@ -1,5 +1,5 @@
 import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
-import type { KOTCategory, KOTSubcategory } from 'parser'
+import type { KOTCategory, KOTSubcategory } from 'reader'
 
 type ChartConfig = {
   [key in KOTCategory]: {

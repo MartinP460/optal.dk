@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { KOTDataCategory } from 'parser'
+  import type { KOTDataCategory } from 'reader'
   import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
   import { getLegendLabels } from '$lib/utils/chartHelpers'
   import ChartLegend from '$lib/components/ChartLegend.svelte'

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { LATEST_YEAR } from 'parser'
+  import { LATEST_YEAR } from 'reader'
   import type { PageData } from './$types'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Visualization from '$lib/components/Visualization.svelte'

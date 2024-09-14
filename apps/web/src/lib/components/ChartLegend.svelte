@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { KOTSubcategory } from 'parser'
+  import type { KOTSubcategory } from 'reader'
   import { t } from '$lib/i18n'
   import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
   import Source from '$lib/components/Source.svelte'

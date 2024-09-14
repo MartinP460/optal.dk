@@ -1,4 +1,4 @@
-import type { KOTCategory, KOTSubcategory } from 'parser'
+import type { KOTCategory, KOTSubcategory } from 'reader'
 
 export function getColorFromSubcategory(subcategory: KOTSubcategory) {
   switch (subcategory) {

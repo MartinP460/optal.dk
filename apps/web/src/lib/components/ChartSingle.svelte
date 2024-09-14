@@ -4,7 +4,7 @@
 -->
 <script lang="ts">
   import { VisDonut, VisSingleContainer, VisTooltip } from '@unovis/svelte'
-  import type { KOTDataCategory } from 'parser'
+  import type { KOTDataCategory } from 'reader'
   import { getSingleChartProps } from '$lib/utils/chartHelpers'
 
   export let dataCategory: KOTDataCategory

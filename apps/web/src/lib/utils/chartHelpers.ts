@@ -1,7 +1,7 @@
 import { get } from 'svelte/store'
 import _ from 'lodash'
 import { Donut } from '@unovis/ts'
-import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from 'parser'
+import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from 'reader'
 import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
 import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
 import { t as i18n, locale } from '$lib/i18n'
