@@ -1,9 +1,9 @@
 import { beforeEach, expect, it } from 'vitest'
 import { readGenderData } from './gender'
-import { KOTInstitution } from '../../types'
+import { KOTInstitutionPartial } from '../../types'
 import { readCoreData } from '../core/core'
 
-let institutions: KOTInstitution[]
+let institutions: KOTInstitutionPartial[]
 
 beforeEach(async () => {
   institutions = await readCoreData()

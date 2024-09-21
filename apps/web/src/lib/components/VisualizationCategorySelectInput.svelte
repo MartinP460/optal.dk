@@ -126,7 +126,7 @@
                 </Label>
               </div>
               {#if isSelectedSubCategoryGroup(group.subCategories)}
-                <div class="ml-3" transition:slide>
+                <div class="ml-3 max-h-96 sm:max-h-fit overflow-y-scroll" transition:slide>
                   {#each group.subCategories as subCategory (subCategory)}
                     <div class="flex items-center space-x-2">
                       <Checkbox
@@ -141,7 +141,7 @@
                       <Label
                         id={subCategory}
                         for={subCategory}
-                        class="text-base md:text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 py-2 md:py-1 w-full"
+                        class="text-base md:text-sm leading-snug peer-disabled:cursor-not-allowed peer-disabled:opacity-70 py-2 md:py-1 w-full"
                       >
                         {$t(subCategory)}
                       </Label>

@@ -44,7 +44,7 @@ export type KOTInstitution = {
   period: number[]
 }
 
-export type KOTCategory = 'accepted' | 'applied' | 'quotient' | 'gender' | 'age'
+export type KOTCategory = 'accepted' | 'applied' | 'quotient' | 'gender' | 'age' | 'education'
 
 export type KOTSubcategoryGeneric<T extends KOTCategory> = Omit<
   keyof NonNullable<KOTDataCategories[T]>['datasets'][number],
@@ -77,6 +77,39 @@ type KOTDatasetCategory = {
     | 'ageApplied25'
     | 'ageApplied26To30'
     | 'ageAppliedOlder'
+  education:
+    | 'edAcceptedUnknown'
+    | 'edAcceptedSTX'
+    | 'edAcceptedHF'
+    | 'edAcceptedHHX'
+    | 'edAcceptedHTX'
+    | 'edAcceptedIB'
+    | 'edAcceptedGIF'
+    | 'edAcceptedEngineer'
+    | 'edAcceptedEUD'
+    | 'edAcceptedIBForeign'
+    | 'edAcceptedForeign'
+    | 'edAcceptedEUX'
+    | 'edAcceptedEUXPartOne'
+    | 'edAcceptedFaroese'
+    | 'edAcceptedGreenlandic'
+    | 'edAcceptedOther'
+    | 'edAppliedUnknown'
+    | 'edAppliedSTX'
+    | 'edAppliedHF'
+    | 'edAppliedHHX'
+    | 'edAppliedHTX'
+    | 'edAppliedIB'
+    | 'edAppliedGIF'
+    | 'edAppliedEngineer'
+    | 'edAppliedEUD'
+    | 'edAppliedIBForeign'
+    | 'edAppliedForeign'
+    | 'edAppliedEUX'
+    | 'edAppliedEUXPartOne'
+    | 'edAppliedFaroese'
+    | 'edAppliedGreenlandic'
+    | 'edAppliedOther'
 }
 
 export type KOTSubcategory = KOTDatasetCategory[keyof KOTDatasetCategory]
@@ -85,6 +118,7 @@ export type KOTSubcategoryApplied = KOTDatasetCategory['applied']
 export type KOTSubcategoryQuotient = KOTDatasetCategory['quotient']
 export type KOTSubcategoryGender = KOTDatasetCategory['gender']
 export type KOTSubcategoryAge = KOTDatasetCategory['age']
+export type KOTSubcategoryEducation = KOTDatasetCategory['education']
 
 export type KOTData = string | number
 
@@ -139,6 +173,41 @@ export type KOTDataCategories = {
     ageApplied25: KOTData
     ageApplied26To30: KOTData
     ageAppliedOlder: KOTData
+  }>
+  education?: KOTDataCategoryGeneric<{
+    year: number
+    edAcceptedUnknown: KOTData
+    edAcceptedSTX: KOTData
+    edAcceptedHF: KOTData
+    edAcceptedHHX: KOTData
+    edAcceptedHTX: KOTData
+    edAcceptedIB: KOTData
+    edAcceptedGIF: KOTData
+    edAcceptedEngineer: KOTData
+    edAcceptedEUD: KOTData
+    edAcceptedIBForeign: KOTData
+    edAcceptedForeign: KOTData
+    edAcceptedEUX: KOTData
+    edAcceptedEUXPartOne: KOTData
+    edAcceptedFaroese: KOTData
+    edAcceptedGreenlandic: KOTData
+    edAcceptedOther: KOTData
+    edAppliedUnknown: KOTData
+    edAppliedSTX: KOTData
+    edAppliedHF: KOTData
+    edAppliedHHX: KOTData
+    edAppliedHTX: KOTData
+    edAppliedIB: KOTData
+    edAppliedGIF: KOTData
+    edAppliedEngineer: KOTData
+    edAppliedEUD: KOTData
+    edAppliedIBForeign: KOTData
+    edAppliedForeign: KOTData
+    edAppliedEUX: KOTData
+    edAppliedEUXPartOne: KOTData
+    edAppliedFaroese: KOTData
+    edAppliedGreenlandic: KOTData
+    edAppliedOther: KOTData
   }>
 }
 

@@ -29,13 +29,31 @@ const CSV_DATA_INDEX_MAP = {
     twentySixToThirty: 12, // (integer) number of first-priority applicants from ages 26 to 30
     older: 13, // (integer) number of first-priority applicants older than 30
     total: 14 // (integer) number of total first-priority applicants
+  },
+  education: {
+    unknown: 4, // (integer) number of applicants/admitted with unspecified degree
+    stx: 5, // (integer) number of applicants/admitted with an STX degree
+    hf: 6, // (integer) number of applicants/admitted with a HF degree
+    hhx: 7, // (integer) number of applicants/admitted with a HHX degree
+    htx: 8, // (integer) number of applicants/admitted with a HTX degree
+    ib: 9, // (integer) number of applicants/admitted with a IB degree
+    gif: 10, // (integer) number of applicants/admitted with a GIF degree
+    engineer: 11, // (integer) number of applicants/admitted with an entry exam for engineering degrees
+    eud: 12, // (integer) number of applicants/admitted with an EUD degree
+    other: 13, // (integer) number of applicants/admitted with a different degreeal background
+    ibForeign: 14, // (integer) number of applicants/admitted with a foreign IB degree
+    foreign: 15, // (integer) number of applicants/admitted with a foreign degree
+    eux: 16, // (integer) number of applicants/admitted with an EUX degree
+    euxPartOne: 17, // (integer) number of applicants/admitted with the first part of an EUX degree
+    faroese: 18, // (integer) number of applicants/admitted with a faroese degree
+    greenlandic: 19 // (integer) number of applicants/admitted with a greenlandic degree
   }
 } as const
 
 /** Parses non-core admission data in CSV format from KOT ("Den koordinerede tilmelding"). */
 export async function readData(
   institutions: KOTInstitutionPartial[],
-  category: 'gender' | 'age'
+  category: 'gender' | 'age' | 'education'
 ): Promise<KOTInstitutionPartial[]> {
   const dataAccepted = await getAcceptedOrAppliedData(institutions, 'accepted', category)
   const dataApplied = await getAcceptedOrAppliedData(dataAccepted, 'applied', category)
@@ -47,7 +65,7 @@ export async function readData(
 async function getAcceptedOrAppliedData(
   institutions: KOTInstitutionPartial[],
   type: 'accepted' | 'applied',
-  category: 'gender' | 'age'
+  category: 'gender' | 'age' | 'education'
 ) {
   let newInstitutions = institutions
 
@@ -85,7 +103,7 @@ export function appendDataToCourse({
   institutions: KOTInstitutionPartial[]
   year: number
   type: 'accepted' | 'applied'
-  category: 'age' | 'gender'
+  category: 'age' | 'gender' | 'education'
 }): KOTInstitutionPartial[] {
   const courseId = row[BASE_CSV_DATA_INDEXES.CourseId]
   const institutionId = row[BASE_CSV_DATA_INDEXES.InstitutionId] + '0'
@@ -145,7 +163,7 @@ function addDataCategory({
   dataCategories: KOTDataCategories
   year: number
   type: 'accepted' | 'applied'
-  category: 'age' | 'gender'
+  category: 'age' | 'gender' | 'education'
 }): KOTDataCategories {
   const currentDataset = dataCategories[category]?.datasets.find(
     (datapoint) => datapoint.year === year
@@ -179,7 +197,7 @@ function getDatapointsFromCategory({
 }: {
   row: string[]
   type: 'accepted' | 'applied'
-  category: 'age' | 'gender'
+  category: 'age' | 'gender' | 'education'
 }): {
   [key in KOTSubcategory]: number | string
 } {
@@ -215,6 +233,55 @@ function getDatapointsFromCategory({
         ageApplied25: convertToNumber(row[csvDataIndexes.twentyFive]),
         ageApplied26To30: convertToNumber(row[csvDataIndexes.twentySixToThirty]),
         ageAppliedOlder: convertToNumber(row[csvDataIndexes.older])
+      }
+    }
+  }
+
+  if (category === 'education') {
+    const csvDataIndexes = CSV_DATA_INDEX_MAP[category]
+
+    if (type === 'accepted') {
+      // @ts-expect-error Same as above.
+      return {
+        edAcceptedSTX: convertToNumber(row[csvDataIndexes.stx]),
+        edAcceptedHTX: convertToNumber(row[csvDataIndexes.htx]),
+        edAcceptedHHX: convertToNumber(row[csvDataIndexes.hhx]),
+        edAcceptedHF: convertToNumber(row[csvDataIndexes.hf]),
+        // EUX, EUX 1st part, Faroese and Greenlandic were introduced later so some datasets don't have them
+        edAcceptedEUX: convertToNumber(row[csvDataIndexes.eux] ?? '0'),
+        edAcceptedEUXPartOne: convertToNumber(row[csvDataIndexes.euxPartOne] ?? '0'),
+        edAcceptedEUD: convertToNumber(row[csvDataIndexes.eud]),
+        edAcceptedIB: convertToNumber(row[csvDataIndexes.ib]),
+        edAcceptedIBForeign: convertToNumber(row[csvDataIndexes.ibForeign]),
+        edAcceptedGIF: convertToNumber(row[csvDataIndexes.gif]),
+        edAcceptedEngineer: convertToNumber(row[csvDataIndexes.engineer]),
+        edAcceptedForeign: convertToNumber(row[csvDataIndexes.foreign]),
+        edAcceptedFaroese: convertToNumber(row[csvDataIndexes.faroese] ?? '0'),
+        edAcceptedGreenlandic: convertToNumber(row[csvDataIndexes.greenlandic] ?? '0'),
+        edAcceptedUnknown: convertToNumber(row[csvDataIndexes.unknown]),
+        edAcceptedOther: convertToNumber(row[csvDataIndexes.other])
+      }
+    }
+
+    if (type === 'applied') {
+      // @ts-expect-error Same as above.
+      return {
+        edAppliedSTX: convertToNumber(row[csvDataIndexes.stx]),
+        edAppliedHTX: convertToNumber(row[csvDataIndexes.htx]),
+        edAppliedHHX: convertToNumber(row[csvDataIndexes.hhx]),
+        edAppliedHF: convertToNumber(row[csvDataIndexes.hf]),
+        edAppliedEUX: convertToNumber(row[csvDataIndexes.eux] ?? '0'),
+        edAppliedEUXPartOne: convertToNumber(row[csvDataIndexes.euxPartOne] ?? '0'),
+        edAppliedEUD: convertToNumber(row[csvDataIndexes.eud]),
+        edAppliedIB: convertToNumber(row[csvDataIndexes.ib]),
+        edAppliedIBForeign: convertToNumber(row[csvDataIndexes.ibForeign]),
+        edAppliedGIF: convertToNumber(row[csvDataIndexes.gif]),
+        edAppliedEngineer: convertToNumber(row[csvDataIndexes.engineer]),
+        edAppliedForeign: convertToNumber(row[csvDataIndexes.foreign]),
+        edAppliedFaroese: convertToNumber(row[csvDataIndexes.faroese] ?? '0'),
+        edAppliedGreenlandic: convertToNumber(row[csvDataIndexes.greenlandic] ?? '0'),
+        edAppliedUnknown: convertToNumber(row[csvDataIndexes.unknown]),
+        edAppliedOther: convertToNumber(row[csvDataIndexes.other])
       }
     }
   }

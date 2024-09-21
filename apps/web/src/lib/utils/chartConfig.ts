@@ -9,7 +9,13 @@ type ChartConfig = {
       groups:
         | {
             subCategories: KOTSubcategory[]
-            label: 'genderAccepted' | 'genderApplied' | 'ageAccepted' | 'ageApplied'
+            label:
+              | 'genderAccepted'
+              | 'genderApplied'
+              | 'ageAccepted'
+              | 'ageApplied'
+              | 'edAccepted'
+              | 'edApplied'
           }[]
         | null
     }
@@ -118,6 +124,107 @@ export const chartConfig: ChartConfig = {
             'ageAppliedOlder'
           ],
           label: 'ageApplied'
+        }
+      ]
+    },
+    defaultDisplayType: 'donutchart'
+  },
+  education: {
+    subCategories: {
+      all: [
+        'edAcceptedUnknown',
+        'edAcceptedSTX',
+        'edAcceptedHF',
+        'edAcceptedHHX',
+        'edAcceptedHTX',
+        'edAcceptedIB',
+        'edAcceptedGIF',
+        'edAcceptedEngineer',
+        'edAcceptedEUD',
+        'edAcceptedIBForeign',
+        'edAcceptedForeign',
+        'edAcceptedEUX',
+        'edAcceptedEUXPartOne',
+        'edAcceptedFaroese',
+        'edAcceptedGreenlandic',
+        'edAcceptedOther',
+        'edAppliedUnknown',
+        'edAppliedSTX',
+        'edAppliedHF',
+        'edAppliedHHX',
+        'edAppliedHTX',
+        'edAppliedIB',
+        'edAppliedGIF',
+        'edAppliedEngineer',
+        'edAppliedEUD',
+        'edAppliedIBForeign',
+        'edAppliedForeign',
+        'edAppliedEUX',
+        'edAppliedEUXPartOne',
+        'edAppliedFaroese',
+        'edAppliedGreenlandic',
+        'edAppliedOther'
+      ],
+      default: [
+        'edAcceptedUnknown',
+        'edAcceptedSTX',
+        'edAcceptedHF',
+        'edAcceptedHHX',
+        'edAcceptedHTX',
+        'edAcceptedIB',
+        'edAcceptedGIF',
+        'edAcceptedEngineer',
+        'edAcceptedEUD',
+        'edAcceptedIBForeign',
+        'edAcceptedForeign',
+        'edAcceptedEUX',
+        'edAcceptedEUXPartOne',
+        'edAcceptedFaroese',
+        'edAcceptedGreenlandic',
+        'edAcceptedOther'
+      ],
+      groups: [
+        {
+          subCategories: [
+            'edAcceptedSTX',
+            'edAcceptedHTX',
+            'edAcceptedHHX',
+            'edAcceptedHF',
+            'edAcceptedGIF',
+            'edAcceptedEUD',
+            'edAcceptedEUX',
+            'edAcceptedEUXPartOne',
+            'edAcceptedIB',
+            'edAcceptedIBForeign',
+            'edAcceptedEngineer',
+            'edAcceptedForeign',
+            'edAcceptedFaroese',
+            'edAcceptedGreenlandic',
+            'edAcceptedUnknown',
+            'edAcceptedOther'
+          ],
+          label: 'edAccepted'
+        },
+        {
+          subCategories: [
+            'edAppliedSTX',
+            'edAppliedHTX',
+            'edAppliedHHX',
+            'edAppliedHF',
+            'edAppliedGIF',
+            'edAppliedEUD',
+            'edAppliedEUX',
+            'edAppliedEUXPartOne',
+            'edAppliedIB',
+            'edAppliedIBForeign',
+            'edAppliedEngineer',
+            'edAppliedForeign',
+            'edAppliedFaroese',
+            'edAppliedGreenlandic',
+            'edAppliedUnknown',
+            'edAppliedOther'
+          ],
+          label: 'edApplied'
         }
       ]
     },

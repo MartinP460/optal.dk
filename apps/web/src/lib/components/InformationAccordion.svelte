@@ -18,7 +18,7 @@
   const i18nType = _.capitalize(descriptionOpts.type) as 'Institution' | 'Course' | 'Grouping'
 </script>
 
-<Card.Root class="w-full md:w-[800px] px-6 py-2 mt-12 mx-auto">
+<Card.Root class="w-full max-w-[800px] px-6 py-2 mt-12 mx-auto">
   <Accordion.Root aria-disabled>
     <Accordion.Item value="categories-description">
       <Accordion.Trigger>

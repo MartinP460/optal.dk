@@ -50,6 +50,54 @@ export function getColorFromSubcategory(subcategory: KOTSubcategory) {
     case 'ageAcceptedOlder':
     case 'ageAppliedOlder':
       return '#64748b' // slate-500
+    case 'edAcceptedSTX':
+    case 'edAppliedSTX':
+      return '#7f1d1d' // red-900
+    case 'edAcceptedHHX':
+    case 'edAppliedHHX':
+      return '#2563eb' // blue-600
+    case 'edAcceptedHTX':
+    case 'edAppliedHTX':
+      return '#1e3a8a' // blue-900
+    case 'edAcceptedHF':
+    case 'edAppliedHF':
+      return '#38bdf8' // sky-500
+    case 'edAcceptedEUX':
+    case 'edAppliedEUX':
+      return '#737373' // neutral-500
+    case 'edAcceptedEUXPartOne':
+    case 'edAppliedEUXPartOne':
+      return '#e5e5e5' // neutral-200
+    case 'edAcceptedEUD':
+    case 'edAppliedEUD':
+      return '#581c87' // purple-900
+    case 'edAcceptedGIF':
+    case 'edAppliedGIF':
+      return '#ea580c' // orange-600
+    case 'edAcceptedIB':
+    case 'edAppliedIB':
+      return '#4ade80' // green-400
+    case 'edAcceptedIBForeign':
+    case 'edAppliedIBForeign':
+      return '#14532d' // green-900
+    case 'edAcceptedEngineer':
+    case 'edAppliedEngineer':
+      return '#115e59' // teal-900
+    case 'edAcceptedForeign':
+    case 'edAppliedForeign':
+      return '#c026d3' // fuchsia-600
+    case 'edAcceptedFaroese':
+    case 'edAppliedFaroese':
+      return '#083344' // cyan-950
+    case 'edAcceptedGreenlandic':
+    case 'edAppliedGreenlandic':
+      return '#dc2626' // red-600
+    case 'edAcceptedUnknown':
+    case 'edAppliedUnknown':
+      return '#262626' // neutral-800
+    case 'edAcceptedOther':
+    case 'edAppliedOther':
+      return '#e879f9' // pink-900
     default:
       return '#ecfccb'
   }
@@ -67,5 +115,7 @@ export function getColorFromCategory(label: KOTCategory) {
       return '#e879f9' // fuchsia-400
     case 'age':
       return '#a855f7' // purple-500
+    case 'education':
+      return '#92400e' // amber-800
   }
 }
