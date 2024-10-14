@@ -14,6 +14,7 @@
   } from '$lib/utils/chartCategoryHelpers'
   import { Label } from '$lib/components/ui/label'
   import { t } from '$lib/i18n'
+  import Button from '$lib/components/ui/button/button.svelte'
 
   export let dataCategories: KOTDataCategories
   export let selectedDataCategory: KOTDataCategory
@@ -21,6 +22,8 @@
   const dispatch = createEventDispatcher<{
     categorySelect: KOTDataCategory
   }>()
+
+  let isSubCategoriesExpanded = false
 
   $: selectedSubCategories = getSubCategories(selectedDataCategory)
 
@@ -38,6 +41,8 @@
     const filteredDataCategory = getDefaultSubCategories(dataCategories[category]!)
 
     dispatch('categorySelect', filteredDataCategory)
+
+    isSubCategoriesExpanded = false
   }
 
   const handleSubCategoryGroupSelect = (category: KOTCategory, subCategories: KOTSubcategory[]) => {
@@ -52,6 +57,8 @@
       ...selectedDataCategory,
       datasets: filteredDataset
     })
+
+    isSubCategoriesExpanded = false
   }
 
   const handleSubCategorySelect = (category: KOTCategory, subCategory: KOTSubcategory) => {
@@ -127,7 +134,7 @@
               </div>
               {#if isSelectedSubCategoryGroup(group.subCategories)}
                 <div class="ml-3 max-h-96 sm:max-h-fit overflow-y-scroll" transition:slide>
-                  {#each group.subCategories as subCategory (subCategory)}
+                  {#each isSubCategoriesExpanded || !group.collapsedSubCategories ? group.subCategories : group.collapsedSubCategories as subCategory (subCategory)}
                     <div class="flex items-center space-x-2">
                       <Checkbox
                         id={subCategory}
@@ -141,12 +148,24 @@
                       <Label
                         id={subCategory}
                         for={subCategory}
-                        class="text-base md:text-sm leading-snug peer-disabled:cursor-not-allowed peer-disabled:opacity-70 py-2 md:py-1 w-full"
+                        class="text-base md:text-sm leading-snug peer-disabled:cursor-not-allowed peer-disabled:opacity-70 py-1.5 md:py-1 w-full"
                       >
                         {$t(subCategory)}
                       </Label>
                     </div>
                   {/each}
+                  {#if group.collapsedSubCategories}
+                    <Button
+                      variant="link"
+                      class="text-muted-foreground text-base sm:text-sm p-0 my-0 h-fit"
+                      on:click={() => (isSubCategoriesExpanded = !isSubCategoriesExpanded)}
+                      >{isSubCategoriesExpanded
+                        ? $t('showFewer')
+                        : $t('showXMore', {
+                            number: group.subCategories.length - group.collapsedSubCategories.length
+                          })}
+                    </Button>
+                  {/if}
                 </div>
               {/if}
             {/each}

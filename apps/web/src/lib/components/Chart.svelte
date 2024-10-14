@@ -19,5 +19,9 @@
   {:else}
     <ChartXY {dataCategory} {displayType} />
   {/if}
-  <ChartLegend group={legendLabels.group} labels={legendLabels.labels} />
+  <ChartLegend
+    group={legendLabels.group}
+    labels={legendLabels.labels}
+    collapsedLabels={legendLabels.collapsedLabels}
+  />
 </figure>

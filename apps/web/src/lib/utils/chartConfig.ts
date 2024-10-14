@@ -9,6 +9,7 @@ type ChartConfig = {
       groups:
         | {
             subCategories: KOTSubcategory[]
+            collapsedSubCategories?: KOTSubcategory[]
             label:
               | 'genderAccepted'
               | 'genderApplied'
@@ -203,6 +204,12 @@ export const chartConfig: ChartConfig = {
             'edAcceptedUnknown',
             'edAcceptedOther'
           ],
+          collapsedSubCategories: [
+            'edAcceptedSTX',
+            'edAcceptedHTX',
+            'edAcceptedHHX',
+            'edAcceptedHF'
+          ],
           label: 'edAccepted'
         },
         {
@@ -224,6 +231,7 @@ export const chartConfig: ChartConfig = {
             'edAppliedUnknown',
             'edAppliedOther'
           ],
+          collapsedSubCategories: ['edAppliedSTX', 'edAppliedHTX', 'edAppliedHHX', 'edAppliedHF'],
           label: 'edApplied'
         }
       ]

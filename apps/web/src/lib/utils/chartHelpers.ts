@@ -44,13 +44,20 @@ export function getLegendLabels(dataCategory: KOTDataCategory) {
   const groups = chartConfig[dataCategory.name].subCategories.groups
   const subCategories = getSubCategories(dataCategory)
 
-  const groupLabel = groups
+  const currentGroup = groups
     ? groups.find((group) =>
         group.subCategories.some((subCategory) => subCategories.includes(subCategory))
-      )?.label ?? null
+      )
     : null
 
-  return { group: groupLabel, labels: subCategories.map((subCategory) => subCategory) }
+  const groupLabel = currentGroup?.label ?? null
+  const collapsedSubCategories = currentGroup?.collapsedSubCategories ?? null
+
+  return {
+    group: groupLabel,
+    labels: subCategories.map((subCategory) => subCategory),
+    collapsedLabels: collapsedSubCategories
+  }
 }
 
 function formatNewDataset(dataset: Datapoints): Datapoints {

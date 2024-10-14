@@ -3,6 +3,7 @@
   import { t } from '$lib/i18n'
   import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
   import Source from '$lib/components/Source.svelte'
+  import Button from '$lib/components/ui/button/button.svelte'
 
   export let group:
     | 'genderAccepted'
@@ -14,6 +15,9 @@
     | null
 
   export let labels: KOTSubcategory[]
+  export let collapsedLabels: KOTSubcategory[] | null
+
+  let isLabelsExpanded = false
 </script>
 
 <div class="flex flex-col sm:flex-row-reverse justify-between mt-4 sm:gap-8 sm:items-center">
@@ -23,7 +27,7 @@
       <p class="text-muted-foreground text-sm">({$t(group)})</p>
     {/if}
     <div class="flex flex-wrap gap-x-5 gap-y-2 mt-2">
-      {#each labels as label (label)}
+      {#each !isLabelsExpanded && collapsedLabels ? collapsedLabels : labels as label (label)}
         <span class="flex items-center gap-2 text-sm text-muted-foreground">
           <div
             class="w-3 h-3 rounded flex-shrink-0"
@@ -32,6 +36,18 @@
           {$t(label)}
         </span>
       {/each}
+      {#if collapsedLabels}
+        <Button
+          variant="link"
+          class="text-muted-foreground text-sm p-0 my-0 h-fit"
+          on:click={() => (isLabelsExpanded = !isLabelsExpanded)}
+          >{isLabelsExpanded
+            ? $t('showFewer')
+            : $t('showXMore', {
+                number: labels.length - collapsedLabels.length
+              })}
+        </Button>
+      {/if}
     </div>
   </div>
 </div>
