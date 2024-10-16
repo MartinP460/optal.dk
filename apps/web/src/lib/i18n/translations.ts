@@ -322,6 +322,7 @@ export const translations = {
     veterinaryMedicine: 'Veterinary medicine',
     winterstart: 'winter-start',
     women: 'Women',
+    noDataForPeriod: 'No data for {{period}}',
   },
   da: {
     about: 'Om optal',
@@ -645,5 +646,6 @@ export const translations = {
     veterinaryMedicine: 'Veterinærmedicin',
     winterstart: 'vinterstart',
     women: 'Kvinder',
+    noDataForPeriod: 'Ingen data for {{period}}',
   }
 }

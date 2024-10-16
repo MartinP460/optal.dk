@@ -10,10 +10,10 @@
   export let dataCategory: KOTDataCategory
   export let period: number[]
 
-  $: ({ data, value, color, triggers } = getSingleChartProps(dataCategory, period[1]))
+  $: ({ data, centralLabel, value, color, triggers } = getSingleChartProps(dataCategory, period[1]))
 </script>
 
 <VisSingleContainer class="min-h-80" {data}>
-  <VisDonut {value} {color} centralLabel={period[1]} arcWidth={50} />
+  <VisDonut {value} {color} {centralLabel} arcWidth={50} />
   <VisTooltip {triggers} />
 </VisSingleContainer>

@@ -30,11 +30,13 @@ export function getChartProps(dataCategory: KOTDataCategory, displayType?: Displ
 
 export function getSingleChartProps(dataCategory: KOTDataCategory, year: number) {
   const allData = formatNewDataset(dataCategory.datasets)
-  const data = allData.find((dataset) => dataset.year === year)!
+  const datasetInYear = allData.find((dataset) => dataset.year === year)!
+  const data = getSingleData(datasetInYear)
 
   return {
-    data: getSingleData(data),
+    data,
     triggers: getSingleTriggers(),
+    centralLabel: getCentralLabel(data, year),
     value: getSingleValue(),
     color: getSingleColorFunction()
   }
@@ -247,4 +249,12 @@ function getSingleTriggers() {
 
 function getSingleColorFunction() {
   return (d: SingleDatapoint) => getColorFromSubcategory(d.subCategory)
+}
+
+function getCentralLabel(data: SingleDatapoint[], year: number) {
+  const t = get(i18n)
+
+  const zerosInSubCategories = data.every((datapoint) => datapoint.value === 0)
+
+  return zerosInSubCategories ? t('noDataForPeriod', { period: year }) : year
 }
