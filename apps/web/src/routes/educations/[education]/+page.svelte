@@ -34,7 +34,7 @@
 
   <InformationAccordion
     descriptionOpts={{
-      categoriesToDisplay: ['accepted', 'age', 'applied', 'gender'],
+      categoriesToDisplay: ['accepted', 'age', 'applied', 'gender', 'education'],
       type: 'grouping'
     }}
   >

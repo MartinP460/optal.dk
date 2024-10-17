@@ -85,6 +85,17 @@
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('applied')}</Title>
           <p>{$t(`infoAgeApplied${i18nType}`)}</p>
         {/if}
+
+        {#if shouldDisplay('education')}
+          <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
+            >{$t('education')}
+            <div class="bg-amber-800 w-2 h-2 rounded-[3px] self-center" /></Title
+          >
+          <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('accepted')}</Title>
+          <p>{$t(`infoEducationAccepted${i18nType}`)}</p>
+          <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('applied')}</Title>
+          <p>{$t(`infoEducationApplied${i18nType}`)}</p>
+        {/if}
       </Accordion.Content>
     </Accordion.Item>
     {#if $$slots.coursesInInstitution}
@@ -108,48 +119,4 @@
       </Accordion.Item>
     {/if}
   </Accordion.Root>
-
-  <div class="sr-only">
-    <h3>{$t(`infoCategories${i18nType}`)}</h3>
-
-    {#if shouldDisplay('accepted')}
-      <h4>{$t('accepted')}</h4>
-      <h5>{$t('admitted')}</h5>
-      <p>{$t(`infoAcceptedAdmitted${i18nType}`)}</p>
-      <h5>{$t('standby')}</h5>
-      <p>{@html $t(`infoAcceptedStandby${i18nType}`)}</p>
-    {/if}
-
-    {#if shouldDisplay('applied')}
-      <h4>{$t('applied')}</h4>
-      <h5>{$t('firstPriority')}</h5>
-      <p>{$t(`infoAppliedFirstpriority${i18nType}`)}</p>
-      <h5>{$t('total')}</h5>
-      <p>{$t(`infoAppliedTotal${i18nType}`)}</p>
-    {/if}
-
-    {#if shouldDisplay('quotient')}
-      <h4>{$t('quotient')}</h4>
-      <h5>{$t('primary')}</h5>
-      <p>{$t(`infoQuotientPrimary${i18nType}`)}</p>
-      <h5>{$t('standby')}</h5>
-      <p>{$t(`infoQuotientStandby${i18nType}`)}</p>
-    {/if}
-
-    {#if shouldDisplay('gender')}
-      <h4>{$t('gender')}</h4>
-      <h5>{$t('accepted')}</h5>
-      <p>{$t(`infoGenderAccepted${i18nType}`)}</p>
-      <h5>{$t('applied')}</h5>
-      <p>{$t(`infoGenderApplied${i18nType}`)}</p>
-    {/if}
-
-    {#if shouldDisplay('age')}
-      <h4>{$t('age')}</h4>
-      <h5>{$t('accepted')}</h5>
-      <p>{$t(`infoAgeAccepted${i18nType}`)}</p>
-      <h5>{$t('applied')}</h5>
-      <p>{$t(`infoAgeApplied${i18nType}`)}</p>
-    {/if}
-  </div>
 </Card.Root>
