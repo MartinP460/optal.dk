@@ -52,8 +52,12 @@
       period = [period[1], period[1]]
     }
 
-    if (hasChangedCategory && has5OrMoreYearsOfData) {
-      displayType = chartConfig[dataCategory.name].defaultDisplayType
+    if (hasChangedCategory) {
+      if (has5OrMoreYearsOfData || isDefaultSingleCategory(dataCategory.name)) {
+        displayType = chartConfig[dataCategory.name].defaultDisplayType
+      } else if (!has5OrMoreYearsOfData) {
+        displayType = 'table'
+      }
     }
 
     selectedDataCategory = getCategoryInPeriod(
