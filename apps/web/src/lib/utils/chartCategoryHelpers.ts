@@ -16,7 +16,10 @@ export function getCategories(dataCategories: KOTDataCategories) {
 }
 
 export function getSubCategories(dataCategory?: KOTDataCategory) {
-  return Object.keys(_.omit(dataCategory?.datasets[0], 'year')) as KOTSubcategory[]
+  const indexToStart =
+    dataCategory?.datasets.findIndex((dataset) => Object.keys(dataset).length > 1) ?? 0
+
+  return Object.keys(_.omit(dataCategory?.datasets[indexToStart], 'year')) as KOTSubcategory[]
 }
 
 export function filterDatasetsBySubCategories(

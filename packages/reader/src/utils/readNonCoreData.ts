@@ -181,8 +181,8 @@ function addDataCategory({
         ...filteredDatasets,
         {
           year,
-          ...dataCategories[category]?.datasets.find((datapoint) => datapoint.year === year),
-          ...getDatapointsFromCategory({ row, type, category })
+          ...getDatapointsFromCategory({ row, type, category }),
+          ...dataCategories[category]?.datasets.find((datapoint) => datapoint.year === year)
         }
       ]
     }
@@ -223,7 +223,17 @@ function getDatapointsFromCategory({
     if (type === 'applied') {
       // @ts-expect-error Same as above.
       return {
-        ageAppliedYounger: convertToNumber(row[csvDataIndexes.younger]),
+        ageAcceptedYounger: 0,
+        ageAccepted19: 0,
+        ageAccepted20: 0,
+        ageAccepted21: 0,
+        ageAccepted22: 0,
+        ageAccepted23: 0,
+        ageAccepted24: 0,
+        ageAccepted25: 0,
+        ageAccepted26To30: 0,
+        ageAcceptedOlder: 0,
+        ageAppliedYounger: 0,
         ageApplied19: convertToNumber(row[csvDataIndexes.nineteen]),
         ageApplied20: convertToNumber(row[csvDataIndexes.twenty]),
         ageApplied21: convertToNumber(row[csvDataIndexes.twentyOne]),
@@ -266,6 +276,22 @@ function getDatapointsFromCategory({
     if (type === 'applied') {
       // @ts-expect-error Same as above.
       return {
+        edAcceptedSTX: 0,
+        edAcceptedHTX: 0,
+        edAcceptedHHX: 0,
+        edAcceptedHF: 0,
+        edAcceptedEUX: 0,
+        edAcceptedEUXPartOne: 0,
+        edAcceptedEUD: 0,
+        edAcceptedIB: 0,
+        edAcceptedIBForeign: 0,
+        edAcceptedGIF: 0,
+        edAcceptedEngineer: 0,
+        edAcceptedForeign: 0,
+        edAcceptedFaroese: 0,
+        edAcceptedGreenlandic: 0,
+        edAcceptedUnknown: 0,
+        edAcceptedOther: 0,
         edAppliedSTX: convertToNumber(row[csvDataIndexes.stx]),
         edAppliedHTX: convertToNumber(row[csvDataIndexes.htx]),
         edAppliedHHX: convertToNumber(row[csvDataIndexes.hhx]),
@@ -299,6 +325,8 @@ function getDatapointsFromCategory({
     if (type === 'applied') {
       // @ts-expect-error Same as above.
       return {
+        genderAcceptedMen: 0,
+        genderAcceptedWomen: 0,
         genderAppliedMen: convertToNumber(row[csvDataIndexes.men]),
         genderAppliedWomen: convertToNumber(row[csvDataIndexes.women])
       }
