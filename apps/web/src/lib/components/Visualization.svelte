@@ -22,9 +22,10 @@
   const maxYear = Math.max(...courseYears)
 
   const { initialDataCategory, setCategoryParam } = getCategoryParams(dataCategories)
-  const initialDisplayType = has5OrMoreYearsOfData
-    ? chartConfig[initialDataCategory.name].defaultDisplayType
-    : 'table'
+  const initialDisplayType =
+    has5OrMoreYearsOfData || isDefaultSingleCategory(initialDataCategory.name)
+      ? chartConfig[initialDataCategory.name].defaultDisplayType
+      : 'table'
   const initalPeriod = isDisplayTypeSingleCategory(initialDisplayType)
     ? [maxYear, maxYear]
     : [minYear, maxYear]
@@ -105,7 +106,7 @@
       {selectedDataCategory}
       on:categorySelect={(e) => handleCategorySelect(e.detail)}
     />
-    {#if displayType !== 'table' && has5OrMoreYearsOfData}
+    {#if displayType !== 'table' && (has5OrMoreYearsOfData || isDefaultSingleCategory(selectedDataCategory.name))}
       <VisualizationPeriodSelect
         {period}
         min={minYear}
@@ -114,7 +115,7 @@
         on:periodChange={(e) => handlePeriodChange(e.detail)}
       />
     {/if}
-    {#if has5OrMoreYearsOfData}
+    {#if has5OrMoreYearsOfData || isDefaultSingleCategory(selectedDataCategory.name)}
       <VisualizationDisplaySelect
         {selectedDataCategory}
         selectedDisplayType={displayType}

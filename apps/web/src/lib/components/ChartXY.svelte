@@ -37,7 +37,7 @@
   {#if displayType === 'linechart'}
     <VisLine {data} {x} {y} {color} />
     <VisScatter {data} {x} {y} {color} />
-  {:else if dataCategory.name === 'gender' || dataCategory.name === 'age'}
+  {:else if dataCategory.name === 'gender' || dataCategory.name === 'age' || dataCategory.name === 'education'}
     <VisStackedBar {data} {x} {y} {color} roundedCorners={4} barPadding={0.2} />
   {:else}
     <VisGroupedBar {data} {x} {y} {color} roundedCorners={4} dataStep={1} />

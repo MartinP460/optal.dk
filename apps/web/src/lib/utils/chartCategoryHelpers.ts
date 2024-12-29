@@ -102,3 +102,7 @@ export function isDefaultSingleCategory(category: KOTCategory) {
 export function isDisplayTypeSingleCategory(displayType: DisplayType) {
   return displayType === 'donutchart'
 }
+
+export function isStackedBarChart(category: KOTCategory) {
+  return chartConfig[category].isStackedBarChart ?? false
+}

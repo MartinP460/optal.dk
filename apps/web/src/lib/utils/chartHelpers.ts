@@ -6,7 +6,7 @@ import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
 import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
 import { t as i18n, locale } from '$lib/i18n'
 import { chartConfig } from '$lib/utils/chartConfig'
-import { getSubCategories } from '$lib/utils/chartCategoryHelpers'
+import { getSubCategories, isStackedBarChart } from '$lib/utils/chartCategoryHelpers'
 
 type Datapoint = KOTDataCategory['datasets'][number]
 type Datapoints = Datapoint[]
@@ -98,20 +98,17 @@ function getYFunctions(datasets: Datapoints) {
 }
 
 function computeSuggestedMaxY(dataCategory: KOTDataCategory, displayType: DisplayType) {
-  const QUOTIENT_MAX_Y = 13
-
-  const isQuotient = dataCategory.name === 'quotient'
-  const isGenderOrAgeAndBarChart =
-    (dataCategory.name === 'gender' || dataCategory.name === 'age') && displayType === 'barchart'
-
-  if (isQuotient) {
+  if (dataCategory.name === 'quotient') {
+    const QUOTIENT_MAX_Y = 13
     return QUOTIENT_MAX_Y
   }
+
+  const isStackedBar = isStackedBarChart(dataCategory.name) && displayType === 'barchart'
 
   const values = Object.values(dataCategory.datasets)
 
   const maxValue = values.reduce((acc, item) => {
-    const maxInYear = isGenderOrAgeAndBarChart
+    const maxInYear = isStackedBar
       ? _.sum(Object.values(_.omit(item, ['year']) as object))
       : Math.max(...Object.values(_.omit(item, ['year']) as object))
 

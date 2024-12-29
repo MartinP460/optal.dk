@@ -21,6 +21,7 @@ type ChartConfig = {
         | null
     }
     defaultDisplayType: DisplayType
+    isStackedBarChart?: boolean
   }
 }
 
@@ -58,7 +59,8 @@ export const chartConfig: ChartConfig = {
         { subCategories: ['genderAppliedMen', 'genderAppliedWomen'], label: 'genderApplied' }
       ]
     },
-    defaultDisplayType: 'barchart'
+    defaultDisplayType: 'barchart',
+    isStackedBarChart: true
   },
   age: {
     subCategories: {
@@ -128,7 +130,8 @@ export const chartConfig: ChartConfig = {
         }
       ]
     },
-    defaultDisplayType: 'donutchart'
+    defaultDisplayType: 'donutchart',
+    isStackedBarChart: true
   },
   education: {
     subCategories: {
@@ -236,6 +239,7 @@ export const chartConfig: ChartConfig = {
         }
       ]
     },
-    defaultDisplayType: 'donutchart'
+    defaultDisplayType: 'donutchart',
+    isStackedBarChart: true
   }
 }
