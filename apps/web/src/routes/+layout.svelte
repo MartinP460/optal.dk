@@ -118,17 +118,6 @@
             </Sheet.Trigger>
           </li>
         </ul>
-        <!-- <div class="mt-6 text-sm text-gray-500">
-        Created by
-        <a
-          href="https://www.martpol.dev/"
-          class="underline-offset-4 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Martin Polley
-        </a>
-      </div> -->
       </nav>
     </footer>
   </Sheet.Root>
