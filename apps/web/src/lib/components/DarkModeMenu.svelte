@@ -7,8 +7,11 @@
   import { Button } from '$lib/components/ui/button/index.js'
   import { t } from '$lib/i18n'
 
-  let customClass = ''
-  export { customClass as class }
+  type Props = {
+    class?: string
+  }
+
+  let { class: customClass = '' }: Props = $props()
 </script>
 
 <DropdownMenu.Root>

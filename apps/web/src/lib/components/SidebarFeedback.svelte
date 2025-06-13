@@ -16,11 +16,11 @@
     return new Promise((res) => setTimeout(res, delay))
   }
 
-  let text: string
-  let loading = false
-  let success = false
-  let error = false
-  let fieldErrors: string[] = []
+  let text: string = $state('')
+  let loading = $state(false)
+  let success = $state(false)
+  let error = $state(false)
+  let fieldErrors: string[] = $state([])
 
   const handleSubmit = async () => {
     fieldErrors = []
@@ -68,7 +68,7 @@
     </Alert.Description>
   </Alert.Root>
 
-  <form on:submit={handleSubmit} class="flex flex-col gap-6 mt-8">
+  <form onsubmit={handleSubmit} class="flex flex-col gap-6 mt-8">
     <div class="flex flex-col gap-1.5">
       <Label for="content">{$t('content')} <span class="text-red-500">*</span></Label>
       <Textarea

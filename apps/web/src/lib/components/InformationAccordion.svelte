@@ -7,10 +7,16 @@
   import Title from '$lib/components/Title.svelte'
   import { t } from '$lib/i18n'
 
-  export let descriptionOpts: {
-    categoriesToDisplay: Array<KOTCategory>
-    type: 'institution' | 'course' | 'grouping'
+  interface Props {
+    descriptionOpts: {
+      categoriesToDisplay: Array<KOTCategory>
+      type: 'institution' | 'course' | 'grouping'
+    };
+    coursesInInstitution?: import('svelte').Snippet;
+    coursesInGrouping?: import('svelte').Snippet;
   }
+
+  let { descriptionOpts, coursesInInstitution, coursesInGrouping }: Props = $props();
 
   const shouldDisplay = (category: KOTCategory) =>
     descriptionOpts.categoriesToDisplay.includes(category)
@@ -28,7 +34,7 @@
         {#if shouldDisplay('accepted')}
           <Title element="h4" variant="h5" class="mb-2 flex gap-4"
             >{$t('accepted')}
-            <div class="bg-lime-700 w-2 h-2 rounded-[3px] self-center" /></Title
+            <div class="bg-lime-700 w-2 h-2 rounded-[3px] self-center"></div></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('admitted')}</Title>
           <p>
@@ -45,7 +51,7 @@
         {#if shouldDisplay('applied')}
           <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
             >{$t('applied')}
-            <div class="bg-yellow-700 w-2 h-2 rounded-[3px] self-center" /></Title
+            <div class="bg-yellow-700 w-2 h-2 rounded-[3px] self-center"></div></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('firstPriority')}</Title>
           <p>{$t(`infoAppliedFirstpriority${i18nType}`)}</p>
@@ -56,7 +62,7 @@
         {#if shouldDisplay('quotient')}
           <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
             >{$t('quotient')}
-            <div class="bg-rose-800 w-2 h-2 rounded-[3px] self-center" /></Title
+            <div class="bg-rose-800 w-2 h-2 rounded-[3px] self-center"></div></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('primary')}</Title>
           <p>{$t(`infoQuotientPrimary${i18nType}`)}</p>
@@ -67,7 +73,7 @@
         {#if shouldDisplay('gender')}
           <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
             >{$t('gender')}
-            <div class="bg-fuchsia-400 w-2 h-2 rounded-[3px] self-center" /></Title
+            <div class="bg-fuchsia-400 w-2 h-2 rounded-[3px] self-center"></div></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('accepted')}</Title>
           <p>{$t(`infoGenderAccepted${i18nType}`)}</p>
@@ -78,7 +84,7 @@
         {#if shouldDisplay('age')}
           <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
             >{$t('age')}
-            <div class="bg-purple-500 w-2 h-2 rounded-[3px] self-center" /></Title
+            <div class="bg-purple-500 w-2 h-2 rounded-[3px] self-center"></div></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('accepted')}</Title>
           <p>{$t(`infoAgeAccepted${i18nType}`)}</p>
@@ -89,7 +95,7 @@
         {#if shouldDisplay('education')}
           <Title element="h4" variant="h5" class="mb-2 mt-4 flex gap-4"
             >{$t('education')}
-            <div class="bg-amber-800 w-2 h-2 rounded-[3px] self-center" /></Title
+            <div class="bg-amber-800 w-2 h-2 rounded-[3px] self-center"></div></Title
           >
           <Title element="h5" variant="h6" class="mt-2 mb-1">{$t('accepted')}</Title>
           <p>{$t(`infoEducationAccepted${i18nType}`)}</p>
@@ -98,23 +104,23 @@
         {/if}
       </Accordion.Content>
     </Accordion.Item>
-    {#if $$slots.coursesInInstitution}
+    {#if coursesInInstitution}
       <Accordion.Item value="courses">
         <Accordion.Trigger>
           {$t('courses')}
         </Accordion.Trigger>
         <Accordion.Content>
-          <slot name="coursesInInstitution" />
+          {@render coursesInInstitution?.()}
         </Accordion.Content>
       </Accordion.Item>
     {/if}
-    {#if $$slots.coursesInGrouping}
+    {#if coursesInGrouping}
       <Accordion.Item value="courses">
         <Accordion.Trigger>
           {$t('coursesInEducation')}
         </Accordion.Trigger>
         <Accordion.Content>
-          <slot name="coursesInGrouping" />
+          {@render coursesInGrouping?.()}
         </Accordion.Content>
       </Accordion.Item>
     {/if}

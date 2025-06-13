@@ -4,8 +4,11 @@
   import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
   import { LOCAL_STORAGE_LANGUAGE, locale, locales } from '$lib/i18n'
 
-  let customClass = ''
-  export { customClass as class }
+  type Props = {
+    class?: string
+  }
+
+  let { class: customClass = '' }: Props = $props()
 
   const selectLocale = { value: $locale }
 

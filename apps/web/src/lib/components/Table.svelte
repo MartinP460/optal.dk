@@ -6,9 +6,13 @@
   import { t } from '$lib/i18n'
   import Source from '$lib/components/Source.svelte'
 
-  export let dataCategory: KOTDataCategory
+  type Props = {
+    dataCategory: KOTDataCategory
+  }
 
-  $: ({ group, labels } = getLegendLabels(dataCategory))
+  let { dataCategory }: Props = $props()
+
+  let { group, labels } = $derived(getLegendLabels(dataCategory))
 </script>
 
 <Table.Root class="text-xs md:w-full">

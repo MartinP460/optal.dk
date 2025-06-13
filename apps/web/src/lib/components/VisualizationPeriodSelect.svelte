@@ -6,13 +6,18 @@
   import Button from '$lib/components/ui/button/button.svelte'
   import VisualizationPeriodSelectSlider from '$lib/components/VisualizationPeriodSelectSlider.svelte'
 
-  export let min: number
-  export let max: number
-  export let period: number[]
-  export let mode: 'single' | 'multiple'
+  type Props = {
+    min: number
+    max: number
+    period: number[]
+    mode: 'single' | 'multiple'
+  }
 
-  $: label =
+  let { min, max, period, mode }: Props = $props()
+
+  let label = $derived(
     period.length < 2 || period[0] === period[1] ? period[0] : `${period[0]} - ${period[1]}`
+  )
 </script>
 
 <Popover.Root>

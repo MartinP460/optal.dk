@@ -9,10 +9,14 @@
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import { getColorFromCategory } from '$lib/utils/getColorFromDataset'
 
-  export let dataCategories: KOTDataCategories
-  export let selectedDataCategory: KOTDataCategory
+  type Props = {
+    dataCategories: KOTDataCategories
+    selectedDataCategory: KOTDataCategory
+  }
 
-  $: color = getColorFromCategory(selectedDataCategory.name)
+  let { dataCategories, selectedDataCategory }: Props = $props()
+
+  let color = $derived(getColorFromCategory(selectedDataCategory.name))
 </script>
 
 <Popover.Root>

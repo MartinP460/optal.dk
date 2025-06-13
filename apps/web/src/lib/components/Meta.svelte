@@ -4,7 +4,11 @@
   import { t } from '$lib/i18n'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
-  export let course: KOTCourse
+  type Props = {
+    course: KOTCourse
+  }
+
+  let { course }: Props = $props()
 </script>
 
 <div class="flex items-center gap-2 mt-4 flex-wrap">

@@ -12,10 +12,14 @@
   import * as Drawer from '$lib/components/ui/drawer'
   import * as RadioGroup from '$lib/components/ui/radio-group'
 
-  export let selectedDataCategory: KOTDataCategory
-  export let selectedDisplayType: DisplayType
+  type Props = {
+    selectedDataCategory: KOTDataCategory
+    selectedDisplayType: DisplayType
+  }
 
-  $: displayTypes = getDisplayTypesFromDataCategory(selectedDataCategory.name)
+  let { selectedDataCategory, selectedDisplayType }: Props = $props()
+
+  let displayTypes = $derived(getDisplayTypesFromDataCategory(selectedDataCategory.name))
 
   const dispatch = createEventDispatcher<{
     displayTypeSelect: DisplayType

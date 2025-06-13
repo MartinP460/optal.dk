@@ -16,26 +16,30 @@
   import { t } from '$lib/i18n'
   import Button from '$lib/components/ui/button/button.svelte'
 
-  export let dataCategories: KOTDataCategories
-  export let selectedDataCategory: KOTDataCategory
+  type Props = {
+    dataCategories: KOTDataCategories
+    selectedDataCategory: KOTDataCategory
+  }
+
+  let { dataCategories, selectedDataCategory }: Props = $props()
 
   const dispatch = createEventDispatcher<{
     categorySelect: KOTDataCategory
   }>()
 
-  let isSubCategoriesExpanded = false
+  let isSubCategoriesExpanded = $state(false)
 
-  $: selectedSubCategories = getSubCategories(selectedDataCategory)
+  let selectedSubCategories = $derived(getSubCategories(selectedDataCategory))
 
-  $: isSelectedCategory = (category: KOTCategory) => {
+  let isSelectedCategory = $derived((category: KOTCategory) => {
     const subCategories = getSubCategories(dataCategories[category])
 
     return selectedSubCategories.some((subCategory) => subCategories.includes(subCategory))
-  }
+  })
 
-  $: isSelectedSubCategoryGroup = (groupSubCategories: KOTSubcategory[]) => {
+  let isSelectedSubCategoryGroup = $derived((groupSubCategories: KOTSubcategory[]) => {
     return selectedSubCategories.some((subCategory) => groupSubCategories.includes(subCategory))
-  }
+  })
 
   const handleCategorySelect = (category: KOTCategory) => {
     const filteredDataCategory = getDefaultSubCategories(dataCategories[category]!)

@@ -14,7 +14,11 @@
   import VisualizationDisplaySelect from '$lib/components/VisualizationDisplaySelect.svelte'
   import { chartConfig } from '$lib/utils/chartConfig'
 
-  export let dataCategories: KOTDataCategories
+  type Props = {
+    dataCategories: KOTDataCategories
+  }
+
+  let { dataCategories }: Props = $props()
 
   const has5OrMoreYearsOfData = (dataCategories.accepted?.datasets.length ?? 0) > 4
   const courseYears = (dataCategories.accepted?.datasets ?? []).map((datapoint) => datapoint.year)
@@ -30,9 +34,9 @@
     ? [maxYear, maxYear]
     : [minYear, maxYear]
 
-  let period = initalPeriod
-  let displayType: DisplayType = initialDisplayType
-  $: selectedDataCategory = initialDataCategory
+  let period = $state(initalPeriod)
+  let displayType: DisplayType = $state(initialDisplayType)
+  let selectedDataCategory = $derived(initialDataCategory)
 
   const handleCategorySelect = (dataCategory: KOTDataCategory) => {
     const hasChangedCategory = selectedDataCategory.name !== dataCategory.name

@@ -3,10 +3,14 @@
   import _ from 'lodash'
   import { Slider } from '$lib/components/ui/slider'
 
-  export let min: number
-  export let max: number
-  export let period: number[]
-  export let mode: 'single' | 'multiple'
+  type Props = {
+    min: number
+    max: number
+    period: number[]
+    mode: 'single' | 'multiple'
+  }
+
+  let { min, max, period, mode }: Props = $props()
 
   const dispatch = createEventDispatcher<{
     periodChange: number[]

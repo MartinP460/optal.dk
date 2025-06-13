@@ -1,8 +1,11 @@
 <script lang="ts">
   import { t } from '$lib/i18n'
 
-  let customClass = ''
-  export { customClass as class }
+  type Props = {
+    class?: string
+  }
+
+  let { class: customClass = '' }: Props = $props()
 </script>
 
 <div class="flex text-sm text-muted-foreground {customClass}">

@@ -17,15 +17,18 @@
   import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
   import { getChartProps } from '$lib/utils/chartHelpers'
 
-  let innerWidth = 0
+  let innerWidth = $state(0)
 
-  export let dataCategory: KOTDataCategory
-  export let displayType: DisplayType
+  type Props = {
+    dataCategory: KOTDataCategory
+    displayType: DisplayType
+  }
 
-  $: ({ data, originalData, x, y, color, tooltip, suggestedMaxY, tickValues } = getChartProps(
-    dataCategory,
-    displayType
-  ))
+  let { dataCategory, displayType }: Props = $props()
+
+  let { data, originalData, x, y, color, tooltip, suggestedMaxY, tickValues } = $derived(
+    getChartProps(dataCategory, displayType)
+  )
 </script>
 
 <svelte:window bind:innerWidth />

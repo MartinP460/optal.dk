@@ -5,7 +5,11 @@
 
   const dispatch = createEventDispatcher()
 
-  export let sidebarPage: 'navigation' | 'feedback'
+  type Props = {
+    sidebarPage: 'navigation' | 'feedback'
+  }
+
+  let { sidebarPage }: Props = $props()
 </script>
 
 {#if sidebarPage === 'feedback'}

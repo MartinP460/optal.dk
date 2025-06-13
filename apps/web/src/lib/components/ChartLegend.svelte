@@ -5,19 +5,22 @@
   import Source from '$lib/components/Source.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
 
-  export let group:
-    | 'genderAccepted'
-    | 'genderApplied'
-    | 'ageAccepted'
-    | 'ageApplied'
-    | 'edAccepted'
-    | 'edApplied'
-    | null
+  type Props = {
+    group:
+      | 'genderAccepted'
+      | 'genderApplied'
+      | 'ageAccepted'
+      | 'ageApplied'
+      | 'edAccepted'
+      | 'edApplied'
+      | null
+    labels: KOTSubcategory[]
+    collapsedLabels: KOTSubcategory[] | null
+  }
 
-  export let labels: KOTSubcategory[]
-  export let collapsedLabels: KOTSubcategory[] | null
+  let { group, labels, collapsedLabels }: Props = $props()
 
-  let isLabelsExpanded = false
+  let isLabelsExpanded = $state(false)
 </script>
 
 <div class="flex flex-col sm:flex-row-reverse justify-between mt-4 sm:gap-8 sm:items-center">
@@ -32,7 +35,7 @@
           <div
             class="w-3 h-3 rounded flex-shrink-0"
             style={`background-color: ${getColorFromSubcategory(label)}`}
-          />
+          ></div>
           {$t(label)}
         </span>
       {/each}

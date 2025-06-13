@@ -13,7 +13,7 @@
 <Sheet.Content side="right">
   <Sheet.Header>
     <Sheet.Title class="text-left p-3">
-      <a on:click={() => dispatch('close')} href="/">
+      <a onclick={() => dispatch('close')} href="/">
         <Logo class="w-24" />
       </a>
     </Sheet.Title>

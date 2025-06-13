@@ -6,11 +6,15 @@
   import ChartSingle from '$lib/components/ChartSingle.svelte'
   import ChartXY from '$lib/components/ChartXY.svelte'
 
-  export let dataCategory: KOTDataCategory
-  export let displayType: DisplayType
-  export let period: number[]
+  type Props = {
+    dataCategory: KOTDataCategory
+    displayType: DisplayType
+    period: number[]
+  }
 
-  $: legendLabels = getLegendLabels(dataCategory)
+  let { dataCategory, displayType, period }: Props = $props()
+
+  let legendLabels = $derived(getLegendLabels(dataCategory))
 </script>
 
 <figure>
