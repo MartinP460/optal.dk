@@ -4,7 +4,7 @@
   import * as Accordion from '$lib/components/ui/accordion'
   import { t } from '$lib/i18n'
 
-  $: QUESTIONS = [
+  let QUESTIONS = $derived([
     {
       id: '5',
       question: $t('faqQuestion5'),
@@ -30,9 +30,9 @@
       question: $t('faqQuestion4'),
       answer: $t('faqAnswer4')
     }
-  ]
+  ])
 
-  $: breadcrumbRoutes = [{ text: $t('faq'), url: '/faq' }]
+  let breadcrumbRoutes = $derived([{ text: $t('faq'), url: '/faq' }])
 </script>
 
 <svelte:head>

@@ -2,7 +2,7 @@
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import { t } from '$lib/i18n'
 
-  $: breadcrumbRoutes = [{ text: $t('about'), url: '/about' }]
+  let breadcrumbRoutes = $derived([{ text: $t('about'), url: '/about' }])
 </script>
 
 <svelte:head>

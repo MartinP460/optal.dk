@@ -7,15 +7,17 @@
   import { t } from '$lib/i18n'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
-  export let data: PageData
+  let { data } = $props()
   const { grouping, includedCourses } = data
 
-  $: breadcrumbRoutes = [{ text: $t(grouping.name), url: grouping.slug }]
-  $: title = $t('metaTitleEducation', { groupingName: $t(grouping.name) })
-  $: description = $t('metaDescriptionEducation', {
-    groupingName: $t(grouping.name),
-    courseYears: getPeriodIntervalFromPeriod(grouping.period)
-  })
+  let breadcrumbRoutes = $derived([{ text: $t(grouping.name), url: grouping.slug }])
+  let title = $derived($t('metaTitleEducation', { groupingName: $t(grouping.name) }))
+  let description = $derived(
+    $t('metaDescriptionEducation', {
+      groupingName: $t(grouping.name),
+      courseYears: getPeriodIntervalFromPeriod(grouping.period)
+    })
+  )
 </script>
 
 <svelte:head>

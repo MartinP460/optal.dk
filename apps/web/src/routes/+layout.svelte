@@ -15,11 +15,13 @@
   import LanguageSelect from '$lib/components/LanguageSelect.svelte'
   import DarkModeMenu from '$lib/components/DarkModeMenu.svelte'
 
-  $: isHomePath = $page.url.pathname === '/'
+  let { children } = $props()
 
-  let sheetOpen = false
-  let sidebarPage: 'navigation' | 'feedback' = 'navigation'
-  let innerWidth = 0
+  let isHomePath = $derived($page.url.pathname === '/')
+
+  let sheetOpen = $state(false)
+  let sidebarPage: 'navigation' | 'feedback' = $state('navigation')
+  let innerWidth = $state(0)
 
   const handleCloseSidebar = () => {
     sheetOpen = false
@@ -73,7 +75,7 @@
         <LanguageSelect class="w-32 hidden sm:flex" />
       </div>
     </header>
-    <slot />
+    {@render children()}
     <footer class="w-full flex justify-center mt-auto">
       <nav class="flex flex-col my-12 items-center">
         <ul class="flex gap-x-4 flex-wrap justify-center gap-y-2 w-72 sm:w-fit">
@@ -107,7 +109,7 @@
           </li>
           <DotSeperator aria-hidden />
           <li>
-            <Sheet.Trigger on:click={() => (sidebarPage = 'feedback')}>
+            <Sheet.Trigger onclick={() => (sidebarPage = 'feedback')}>
               <Button
                 variant="ghost"
                 class="text-muted-foreground pb-3"

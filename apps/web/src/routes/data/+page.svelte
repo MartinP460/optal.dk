@@ -8,7 +8,7 @@
   import * as Tabs from '$lib/components/ui/tabs'
   import { t } from '$lib/i18n'
 
-  $: breadcrumbRoutes = [{ text: $t('data'), url: '/about' }]
+  let breadcrumbRoutes = $derived([{ text: $t('data'), url: '/about' }])
 </script>
 
 <svelte:head>

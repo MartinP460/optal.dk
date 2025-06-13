@@ -8,19 +8,23 @@
   import Title from '$lib/components/Title.svelte'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
-  export let data: PageData
+  let { data } = $props()
 
   const { institution } = data
 
   const breadcrumbRoutes = [{ text: institution.latestName, url: institution.slug }]
-  $: title = $t('metaTitleInstitution', {
-    institutionName: institution.latestName,
-    institutionYears: getPeriodIntervalFromPeriod(institution.period)
-  })
-  $: description = $t('metaDescriptionInstitution', {
-    institutionName: institution.latestName,
-    institutionYears: getPeriodIntervalFromPeriod(institution.period)
-  })
+  let title = $derived(
+    $t('metaTitleInstitution', {
+      institutionName: institution.latestName,
+      institutionYears: getPeriodIntervalFromPeriod(institution.period)
+    })
+  )
+  let description = $derived(
+    $t('metaDescriptionInstitution', {
+      institutionName: institution.latestName,
+      institutionYears: getPeriodIntervalFromPeriod(institution.period)
+    })
+  )
 
   const institutionIsInactive =
     institution.dataCategories.accepted?.datasets.slice(-1)[0].year !== LATEST_YEAR

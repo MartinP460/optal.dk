@@ -1,7 +1,6 @@
 <script lang="ts">
   import Fuse from 'fuse.js'
   import { IconChevronDown, IconChevronRight } from '@tabler/icons-svelte'
-  import type { PageData } from './$types'
   import Logo from '$lib/components/Logo.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Accordion from '$lib/components/ui/accordion'
@@ -12,7 +11,7 @@
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
   import { createLocalStorageState } from '$lib/utils/createLocalStorageState'
 
-  export let data: PageData
+  let { data } = $props()
   const { institutions, parentGroupings, searchIndexes } = data
 
   const COURSE_RESULTS_LIMIT = 25
@@ -39,11 +38,11 @@
   const institutionFuse = new Fuse(institutions, fuseOptions, institutionIndex)
   const courseFuse = new Fuse(coursesWithInstitutions, fuseOptions, courseIndex)
 
-  let searchQuery = ''
-  let coursePage = COURSE_RESULTS_LIMIT
+  let searchQuery = $state('')
+  let coursePage = $state(COURSE_RESULTS_LIMIT)
 
-  $: instutionsResult = institutionFuse.search(searchQuery)
-  $: coursesResult = courseFuse.search(searchQuery)
+  let instutionsResult = $derived(institutionFuse.search(searchQuery))
+  let coursesResult = $derived(courseFuse.search(searchQuery))
 </script>
 
 <svelte:head>
