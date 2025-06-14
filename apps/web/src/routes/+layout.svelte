@@ -66,9 +66,9 @@
         <DarkModeMenu class="hidden sm:flex" />
         <Sidebar
           {sidebarPage}
-          on:close={handleCloseSidebar}
-          on:feedbackCancel={handleFeedbackCancel}
-          on:feedbackOpen={() => (sidebarPage = 'feedback')}
+          onClose={handleCloseSidebar}
+          onFeedbackCancel={handleFeedbackCancel}
+          onFeedbackOpen={() => (sidebarPage = 'feedback')}
         />
         <LanguageSelect class="w-32 hidden sm:flex" />
       </div>

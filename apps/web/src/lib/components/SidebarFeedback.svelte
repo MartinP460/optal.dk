@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte'
   import clsx from 'clsx'
   import { AlertCircle, Check, Loader2 } from '@lucide/svelte'
   import * as Sheet from '$lib/components/ui/sheet'
@@ -10,7 +9,11 @@
   import { t } from '$lib/i18n/index.svelte'
   import { sendFeedback } from '$lib/utils/sendFeedback'
 
-  const dispatch = createEventDispatcher()
+  type Props = {
+    onCancel: () => void
+  }
+
+  let { onCancel }: Props = $props()
 
   function timeout(delay: number) {
     return new Promise((res) => setTimeout(res, delay))
@@ -100,9 +103,7 @@
           {t('submit')}
         {/if}
       </Button>
-      <Button onclick={() => dispatch('cancel')} type="button" variant="outline"
-        >{t('cancel')}
-      </Button>
+      <Button onclick={onCancel} type="button" variant="outline">{t('cancel')}</Button>
     </div>
   </form>
 </Sheet.Content>

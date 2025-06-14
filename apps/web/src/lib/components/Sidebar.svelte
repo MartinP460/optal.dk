@@ -1,22 +1,19 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte'
   import SidebarFeedback from '$lib/components/SidebarFeedback.svelte'
   import SidebarNavigation from '$lib/components/SidebarNavigation.svelte'
 
-  const dispatch = createEventDispatcher()
-
   type Props = {
     sidebarPage: 'navigation' | 'feedback'
+    onClose: () => void
+    onFeedbackCancel: () => void
+    onFeedbackOpen: () => void
   }
 
-  let { sidebarPage }: Props = $props()
+  let { sidebarPage, onClose, onFeedbackCancel, onFeedbackOpen }: Props = $props()
 </script>
 
 {#if sidebarPage === 'feedback'}
-  <SidebarFeedback on:cancel={() => dispatch('feedbackCancel')} />
+  <SidebarFeedback onCancel={onFeedbackCancel} />
 {:else if sidebarPage === 'navigation'}
-  <SidebarNavigation
-    on:close={() => dispatch('close')}
-    on:feedbackOpen={() => dispatch('feedbackOpen')}
-  />
+  <SidebarNavigation {onClose} {onFeedbackOpen} />
 {/if}
