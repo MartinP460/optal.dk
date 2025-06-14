@@ -10,7 +10,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@lucide/svelte": "^0.482.0",
+    "@lucide/svelte": "^0.515.0",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/adapter-static": "^3.0.0",
     "@sveltejs/adapter-vercel": "^5.1.0",
@@ -23,7 +23,7 @@
     "@unovis/svelte": "^1.5.2",
     "@unovis/ts": "^1.5.2",
     "autoprefixer": "^10.4.17",
-    "bits-ui": "^1.4.7",
+    "bits-ui": "^2.7.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.45.1",
@@ -53,7 +53,6 @@
     "clsx": "^2.1.0",
     "fuse.js": "^7.0.0",
     "lodash": "^4.17.21",
-    "lucide-svelte": "^0.323.0",
     "papaparse": "^5.4.1",
     "reader": "*",
     "slugify": "^1.6.6",

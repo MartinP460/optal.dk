@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   import clsx from 'clsx'
-  import { AlertCircle, Check, Loader2 } from 'lucide-svelte'
+  import { AlertCircle, Check, Loader2 } from '@lucide/svelte'
   import * as Sheet from '$lib/components/ui/sheet'
   import * as Alert from '$lib/components/ui/alert'
   import Button from '$lib/components/ui/button/button.svelte'
