@@ -3,7 +3,7 @@
   import clsx from 'clsx'
   import { IconMenuDeep } from '@tabler/icons-svelte'
   import { ModeWatcher } from 'mode-watcher'
-  import { page } from '$app/stores'
+  import { page } from '$app/state'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Head from '$lib/components/Head.svelte'
   import Logo from '$lib/components/Logo.svelte'
@@ -16,7 +16,7 @@
 
   let { children } = $props()
 
-  let isHomePath = $derived($page.url.pathname === '/')
+  let isHomePath = $derived(page.url.pathname === '/')
 
   let sheetOpen = $state(false)
   let sidebarPage: 'navigation' | 'feedback' = $state('navigation')

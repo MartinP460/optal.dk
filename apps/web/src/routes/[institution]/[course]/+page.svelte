@@ -1,6 +1,5 @@
 <script lang="ts">
   import { LATEST_YEAR } from 'reader'
-  import type { PageData } from './$types'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Meta from '$lib/components/Meta.svelte'
   import Visualization from '$lib/components/Visualization.svelte'
@@ -9,7 +8,7 @@
   import Title from '$lib/components/Title.svelte'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
-  export let data: PageData
+  let { data } = $props()
 
   const { course, institution } = data
 
@@ -17,16 +16,20 @@
     { text: institution.latestName, url: institution.slug },
     { text: course.latestName, url: course.slug }
   ]
-  $: title = t('metaTitleCourse', {
-    courseName: course.latestName,
-    institutionName: institution.latestName,
-    courseYears: getPeriodIntervalFromPeriod(course.period)
-  })
-  $: description = t('metaDescriptionCourse', {
-    courseName: course.latestName,
-    institutionName: institution.latestName,
-    courseYears: getPeriodIntervalFromPeriod(course.period)
-  })
+  let title = $derived(
+    t('metaTitleCourse', {
+      courseName: course.latestName,
+      institutionName: institution.latestName,
+      courseYears: getPeriodIntervalFromPeriod(course.period)
+    })
+  )
+  let description = $derived(
+    t('metaDescriptionCourse', {
+      courseName: course.latestName,
+      institutionName: institution.latestName,
+      courseYears: getPeriodIntervalFromPeriod(course.period)
+    })
+  )
 
   const courseIsInactive =
     course.dataCategories.accepted?.datasets.slice(-1)[0].year !== LATEST_YEAR
