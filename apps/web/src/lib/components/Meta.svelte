@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { KOTCourse } from 'reader'
   import { Badge } from '$lib/components/ui/badge'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
   type Props = {
@@ -19,9 +19,9 @@
     <Badge class="text-xs">{course.location}</Badge>
   {/if}
   {#if course.studyStart}
-    <Badge class="capitalize">{$t(course.studyStart)}</Badge>
+    <Badge class="capitalize">{t(course.studyStart)}</Badge>
   {/if}
   {#if course.eLearning}
-    <Badge>{$t('eLearning')}</Badge>
+    <Badge>{t('eLearning')}</Badge>
   {/if}
 </div>

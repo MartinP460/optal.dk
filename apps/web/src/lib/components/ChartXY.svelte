@@ -33,7 +33,7 @@
 
 <svelte:window bind:innerWidth />
 
-<VisXYContainer class="min-h-80" height={320} yDomain={[0, suggestedMaxY]}>
+<VisXYContainer key={dataCategory} class="min-h-80" height={320} yDomain={[0, suggestedMaxY]}>
   <VisTooltip />
   <VisAxis type="y" domainLine={false} tickLine={false} />
   <VisAxis type="x" gridLine={false} tickLine={false} tickValues={tickValues(innerWidth ?? 0)} />

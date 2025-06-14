@@ -4,7 +4,7 @@
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Meta from '$lib/components/Meta.svelte'
   import Visualization from '$lib/components/Visualization.svelte'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
   import InformationAccordion from '$lib/components/InformationAccordion.svelte'
   import Title from '$lib/components/Title.svelte'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
@@ -17,12 +17,12 @@
     { text: institution.latestName, url: institution.slug },
     { text: course.latestName, url: course.slug }
   ]
-  $: title = $t('metaTitleCourse', {
+  $: title = t('metaTitleCourse', {
     courseName: course.latestName,
     institutionName: institution.latestName,
     courseYears: getPeriodIntervalFromPeriod(course.period)
   })
-  $: description = $t('metaDescriptionCourse', {
+  $: description = t('metaDescriptionCourse', {
     courseName: course.latestName,
     institutionName: institution.latestName,
     courseYears: getPeriodIntervalFromPeriod(course.period)
@@ -44,7 +44,7 @@
   <Breadcrumb routes={breadcrumbRoutes} />
   <Title element="h1" variant="h2" class="mt-4 mb-2" responsive>{course.latestName}</Title>
   <h2 class="sr-only">
-    {$t('seoDescriptionCourse', {
+    {t('seoDescriptionCourse', {
       courseName: course.latestName,
       institutionName: institution.latestName
     })}

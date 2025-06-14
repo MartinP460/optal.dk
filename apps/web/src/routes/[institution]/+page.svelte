@@ -3,7 +3,7 @@
   import type { PageData } from './$types'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Visualization from '$lib/components/Visualization.svelte'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
   import InformationAccordion from '$lib/components/InformationAccordion.svelte'
   import Title from '$lib/components/Title.svelte'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
@@ -14,13 +14,13 @@
 
   const breadcrumbRoutes = [{ text: institution.latestName, url: institution.slug }]
   let title = $derived(
-    $t('metaTitleInstitution', {
+    t('metaTitleInstitution', {
       institutionName: institution.latestName,
       institutionYears: getPeriodIntervalFromPeriod(institution.period)
     })
   )
   let description = $derived(
-    $t('metaDescriptionInstitution', {
+    t('metaDescriptionInstitution', {
       institutionName: institution.latestName,
       institutionYears: getPeriodIntervalFromPeriod(institution.period)
     })
@@ -42,7 +42,7 @@
   <Breadcrumb routes={breadcrumbRoutes} />
   <Title element="h1" variant="h2" class="mt-4 mb-2" responsive>{institution.latestName}</Title>
   <p class="text-sm font-medium leading-tight mt-4 text-muted-foreground">
-    {$t('totalNumbersForInstitution', { institution: institution.latestName })}.
+    {t('totalNumbersForInstitution', { institution: institution.latestName })}.
   </p>
 
   <Visualization dataCategories={institution.dataCategories} />
@@ -52,7 +52,7 @@
   >
     <svelte:fragment slot="coursesInInstitution">
       <p class="text-sm font-medium leading-tight text-muted-foreground">
-        {$t('coursesOffered')}
+        {t('coursesOffered')}
       </p>
       <ul class="hover:text-muted-foreground transition-colors mt-2">
         {#each institution.courses as course (course.id)}
@@ -63,7 +63,7 @@
                 {[
                   getPeriodIntervalFromPeriod(course.period),
                   course.location,
-                  course.studyStart ? $t(course.studyStart) : '',
+                  course.studyStart ? t(course.studyStart) : '',
                   course.eLearning ? 'e-learning' : null
                 ]
                   .filter((item) => item)

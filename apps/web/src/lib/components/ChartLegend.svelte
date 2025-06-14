@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { KOTSubcategory } from 'reader'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
   import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
   import Source from '$lib/components/Source.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
@@ -27,7 +27,7 @@
   <Source class="self-end sm:self-start" />
   <div>
     {#if group}
-      <p class="text-muted-foreground text-sm">({$t(group)})</p>
+      <p class="text-muted-foreground text-sm">({t(group)})</p>
     {/if}
     <div class="flex flex-wrap gap-x-5 gap-y-2 mt-2">
       {#each !isLabelsExpanded && collapsedLabels ? collapsedLabels : labels as label (label)}
@@ -36,17 +36,17 @@
             class="w-3 h-3 rounded flex-shrink-0"
             style={`background-color: ${getColorFromSubcategory(label)}`}
           ></div>
-          {$t(label)}
+          {t(label)}
         </span>
       {/each}
       {#if collapsedLabels}
         <Button
           variant="link"
           class="text-muted-foreground text-sm p-0 my-0 h-fit"
-          on:click={() => (isLabelsExpanded = !isLabelsExpanded)}
+          onclick={() => (isLabelsExpanded = !isLabelsExpanded)}
           >{isLabelsExpanded
-            ? $t('showFewer')
-            : $t('showXMore', {
+            ? t('showFewer')
+            : t('showXMore', {
                 number: labels.length - collapsedLabels.length
               })}
         </Button>

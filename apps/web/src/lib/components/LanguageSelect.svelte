@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Locales } from '$lib/i18n'
+  import type { Locales } from '$lib/i18n/index.svelte'
   import * as Select from '$lib/components/ui/select'
   import { convertLocaleToDisplayString } from '$lib/utils/convertLocaleToDisplayString'
-  import { LOCAL_STORAGE_LANGUAGE, locale, locales } from '$lib/i18n'
+  import { LOCAL_STORAGE_LANGUAGE, locale, locales } from '$lib/i18n/index.svelte'
 
   type Props = {
     class?: string
@@ -10,19 +10,15 @@
 
   let { class: customClass = '' }: Props = $props()
 
-  const selectLocale = { value: $locale }
-
-  const handleLocaleChange = (item: unknown) => {
-    const { value } = item as { value: Locales }
-
-    locale.set(value)
+  const handleLocaleChange = (value: string) => {
+    locale.value = value as Locales
     localStorage.setItem(LOCAL_STORAGE_LANGUAGE, value)
   }
 </script>
 
-<Select.Root selected={selectLocale} onSelectedChange={handleLocaleChange}>
+<Select.Root type="single" value={locale.value} onValueChange={handleLocaleChange}>
   <Select.Trigger class={customClass}>
-    <Select.Value placeholder={convertLocaleToDisplayString(selectLocale.value ?? '')} />
+    {convertLocaleToDisplayString(locale.value ?? '')}
   </Select.Trigger>
   <Select.Content>
     {#each locales as locale}

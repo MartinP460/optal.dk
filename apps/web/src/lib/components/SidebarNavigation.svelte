@@ -5,7 +5,7 @@
   import LanguageSelect from './LanguageSelect.svelte'
   import DarkModeMenu from './DarkModeMenu.svelte'
   import * as Sheet from '$lib/components/ui/sheet'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
 
   const dispatch = createEventDispatcher()
 </script>
@@ -26,41 +26,41 @@
     <ul class="flex flex-col gap-1 mt-8">
       <li>
         <Button
-          on:click={() => dispatch('close')}
+          onclick={() => dispatch('close')}
           href="/about"
           variant="ghost"
           class="w-full justify-start"
         >
-          {$t('about')}
+          {t('about')}
         </Button>
       </li>
       <li>
         <Button
-          on:click={() => dispatch('close')}
+          onclick={() => dispatch('close')}
           href="/data"
           variant="ghost"
           class="w-full justify-start"
         >
-          {$t('data')}
+          {t('data')}
         </Button>
       </li>
       <li>
         <Button
-          on:click={() => dispatch('close')}
+          onclick={() => dispatch('close')}
           href="/faq"
           variant="ghost"
           class="w-full justify-start"
         >
-          {$t('faq')}
+          {t('faq')}
         </Button>
       </li>
       <li>
         <Button
-          on:click={() => dispatch('feedbackOpen')}
+          onclick={() => dispatch('feedbackOpen')}
           variant="ghost"
           class="w-full justify-start"
         >
-          {$t('feedback')}
+          {t('feedback')}
         </Button>
       </li>
     </ul>

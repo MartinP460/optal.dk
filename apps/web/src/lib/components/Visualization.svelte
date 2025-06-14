@@ -36,7 +36,7 @@
 
   let period = $state(initalPeriod)
   let displayType: DisplayType = $state(initialDisplayType)
-  let selectedDataCategory = $derived(initialDataCategory)
+  let selectedDataCategory = $state(initialDataCategory)
 
   const handleCategorySelect = (dataCategory: KOTDataCategory) => {
     const hasChangedCategory = selectedDataCategory.name !== dataCategory.name
@@ -108,7 +108,7 @@
     <VisualizationCategorySelect
       {dataCategories}
       {selectedDataCategory}
-      on:categorySelect={(e) => handleCategorySelect(e.detail)}
+      onCategorySelect={(value) => handleCategorySelect(value)}
     />
     {#if displayType !== 'table' && (has5OrMoreYearsOfData || isDefaultSingleCategory(selectedDataCategory.name))}
       <VisualizationPeriodSelect
@@ -116,14 +116,14 @@
         min={minYear}
         max={maxYear}
         mode={isDisplayTypeSingleCategory(displayType) ? 'single' : 'multiple'}
-        on:periodChange={(e) => handlePeriodChange(e.detail)}
+        onPeriodChange={(value) => handlePeriodChange(value)}
       />
     {/if}
     {#if has5OrMoreYearsOfData || isDefaultSingleCategory(selectedDataCategory.name)}
       <VisualizationDisplaySelect
         {selectedDataCategory}
         selectedDisplayType={displayType}
-        on:displayTypeSelect={(e) => handleDisplayTypeSelect(e.detail)}
+        onDisplayTypeSelect={(value) => handleDisplayTypeSelect(value)}
       />
     {/if}
   </div>

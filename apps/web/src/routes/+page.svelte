@@ -7,7 +7,7 @@
   import * as Tabs from '$lib/components/ui/tabs'
   import { Input } from '$lib/components/ui/input'
   import { Separator } from '$lib/components/ui/separator'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte.js'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
   import { createLocalStorageState } from '$lib/utils/createLocalStorageState'
 
@@ -46,17 +46,17 @@
 </script>
 
 <svelte:head>
-  <title>{$t('metaTitleHome')}</title>
-  <meta name="description" content={$t('metaDescriptionHome')} />
+  <title>{t('metaTitleHome')}</title>
+  <meta name="description" content={t('metaDescriptionHome')} />
 </svelte:head>
 
 <main>
   <div class="lg:mt-16 mt-12 mb-20 text-center flex flex-col items-center">
     <h1 class="sr-only">optal.dk</h1>
     <Logo />
-    <h2 class="sr-only">{$t('seoDescriptionHome')}</h2>
+    <h2 class="sr-only">{t('seoDescriptionHome')}</h2>
     <p class="font-medium mt-3 md:mt-4">
-      {$t('byline')}
+      {t('byline')}
     </p>
   </div>
   <Tabs.Root value={$tabsState} class="flex flex-col justify-center items-center">
@@ -64,23 +64,23 @@
       <Tabs.Trigger
         value="institutions"
         class="w-full h-full"
-        on:click={() => tabsState.set('institutions')}
+        onclick={() => tabsState.set('institutions')}
       >
-        {$t('byInstitution')}
+        {t('byInstitution')}
       </Tabs.Trigger>
       <Tabs.Trigger
         value="groupings"
         class="w-full h-full"
-        on:click={() => tabsState.set('groupings')}
+        onclick={() => tabsState.set('groupings')}
       >
-        {$t('byEducation')}
+        {t('byEducation')}
       </Tabs.Trigger>
     </Tabs.List>
     <Tabs.Content value="institutions" class="w-full sm:w-[625px] px-2 sm:px-4 py-6">
       <form class="w-full flex items-center space-x-2 mb-4">
         <Input
           bind:value={searchQuery}
-          on:input={() => (coursePage = COURSE_RESULTS_LIMIT)}
+          oninput={() => (coursePage = COURSE_RESULTS_LIMIT)}
           placeholder="Aalborg Universitet, datalogi, medicin..."
           class="h-12"
         />
@@ -88,7 +88,7 @@
       {#if searchQuery}
         {#if instutionsResult.length > 0}
           <div>
-            <h3 class="scroll-m-20 text-xl font-semibold tracking-tight">{$t('institutions')}</h3>
+            <h3 class="scroll-m-20 text-xl font-semibold tracking-tight">{t('institutions')}</h3>
             <ul class="mt-2 hover:text-gray-500 transition-colors">
               {#each instutionsResult.slice(0, INSTITUTION_RESULTS_LIMIT) as institution (institution.item.id)}
                 <li class="hover:text-primary">
@@ -107,7 +107,7 @@
         {/if}
         {#if coursesResult.length > 0}
           <div>
-            <h3 class="scroll-m-20 text-xl font-semibold tracking-tight">{$t('courses')}</h3>
+            <h3 class="scroll-m-20 text-xl font-semibold tracking-tight">{t('courses')}</h3>
             <ul class="group/container mt-2 hover:text-gray-500 transition-colors">
               {#each coursesResult.slice(0, coursePage) as course (course.item.id)}
                 <li class="group/item hover:text-primary">
@@ -121,7 +121,7 @@
                         {[
                           getPeriodIntervalFromPeriod(course.item.period),
                           course.item.location,
-                          course.item.studyStart ? $t(course.item.studyStart) : '',
+                          course.item.studyStart ? t(course.item.studyStart) : '',
                           course.item.eLearning ? 'e-learning' : null
                         ]
                           .filter((item) => item)
@@ -142,12 +142,12 @@
             </ul>
             {#if coursesResult.length - coursePage > 0}
               <Button
-                on:click={() => (coursePage += 25)}
+                onclick={() => (coursePage += 25)}
                 variant="ghost"
                 class="w-full mt-2 text-gray-600"
               >
                 <IconChevronDown class="w-5 h-5 mr-2" />
-                {$t('showXMore', {
+                {t('showXMore', {
                   number: Math.min(coursesResult.length - coursePage, COURSE_RESULTS_LIMIT)
                 })}
               </Button>
@@ -155,10 +155,10 @@
           </div>
         {/if}
         {#if !(instutionsResult.length > 0) && !(coursesResult.length > 0)}
-          <p class="text-gray-600 text-center">{$t('noResults')}</p>
+          <p class="text-gray-600 text-center">{t('noResults')}</p>
         {/if}
       {:else}
-        <Accordion.Root multiple>
+        <Accordion.Root type="multiple">
           {#each institutions as institution (institution.id)}
             <Accordion.Item value={institution.latestName}>
               <Accordion.Trigger
@@ -175,7 +175,7 @@
                     data-sveltekit-preload-data="tap"
                   >
                     <div class="inline-flex flex-col items-start whitespace-break-spaces flex-1">
-                      <span class="text-xs text-muted-foreground">{$t('totalNumbersFor')}</span>
+                      <span class="text-xs text-muted-foreground">{t('totalNumbersFor')}</span>
                       <span>{institution.latestName}</span>
                     </div>
                     <IconChevronRight class="w-5 h-5 ml-3" />
@@ -192,7 +192,7 @@
                             {[
                               getPeriodIntervalFromPeriod(course.period),
                               course.location,
-                              course.studyStart ? $t(course.studyStart) : '',
+                              course.studyStart ? t(course.studyStart) : '',
                               course.eLearning ? 'e-learning' : null
                             ]
                               .filter((item) => item)
@@ -210,23 +210,23 @@
       {/if}
     </Tabs.Content>
     <Tabs.Content value="groupings" class="w-full sm:w-[625px] px-2 sm:px-4">
-      <Accordion.Root multiple class="py-2">
+      <Accordion.Root type="multiple" class="py-2">
         {#each parentGroupings as [name, groupings]}
           <Accordion.Item value={name}>
             <Accordion.Trigger
               class="text-left text-sm sm:text-base data-[state=open]:text-teal-700"
             >
-              {$t(name)}
+              {t(name)}
             </Accordion.Trigger>
             <Accordion.Content class="sm:mx-3">
               <ul class="hover:text-muted-foreground transition-colors">
                 {#each groupings as group (group.id)}
                   <li class="hover:text-primary">
                     <a href={`/educations/${group.slug}`} class="flex flex-col gap-1 py-2">
-                      <p class="text-sm font-semibold">{$t(group.name)}</p>
+                      <p class="text-sm font-semibold">{t(group.name)}</p>
                       <p class="text-xs">
                         {[
-                          $t('nCourses', { n: group.courseCount }),
+                          t('nCourses', { n: group.courseCount }),
                           getPeriodIntervalFromPeriod(group.period)
                         ]
                           .filter((item) => item)

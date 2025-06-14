@@ -1,6 +1,6 @@
 <script lang="ts">
   import { IconChevronLeft, IconChevronRight } from '@tabler/icons-svelte'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
 
   type Props = {
     routes: { text: string; url: string }[]
@@ -8,7 +8,7 @@
 
   let { routes }: Props = $props()
 
-  let routesWithHome = $derived([{ text: $t('home'), url: '' }, ...routes])
+  let routesWithHome = $derived([{ text: t('home'), url: '' }, ...routes])
 </script>
 
 <nav>

@@ -6,7 +6,7 @@
   import { getDisplayTypesFromDataCategory } from '$lib/utils/chartCategoryHelpers'
   import { Label } from '$lib/components/ui/label'
   import { Separator } from '$lib/components/ui/separator'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
   import { Button } from '$lib/components/ui/button'
   import * as Select from '$lib/components/ui/select'
   import * as Drawer from '$lib/components/ui/drawer'
@@ -15,77 +15,72 @@
   type Props = {
     selectedDataCategory: KOTDataCategory
     selectedDisplayType: DisplayType
+    onDisplayTypeSelect: (value: DisplayType) => void
   }
 
-  let { selectedDataCategory, selectedDisplayType }: Props = $props()
+  let { selectedDataCategory, selectedDisplayType, onDisplayTypeSelect }: Props = $props()
 
   let displayTypes = $derived(getDisplayTypesFromDataCategory(selectedDataCategory.name))
 
-  const dispatch = createEventDispatcher<{
-    displayTypeSelect: DisplayType
-  }>()
-
-  const handleDisplayTypeSelect = (value: unknown) => {
-    // the library has bad typing ):
-    const newValue = value as { value: DisplayType; label: string }
-
-    dispatch('displayTypeSelect', newValue.value)
+  const handleDisplayTypeSelect = (value: string) => {
+    onDisplayTypeSelect(value as DisplayType)
   }
 </script>
 
 <div class="gap-4 hidden md:flex md:ml-auto">
   <Select.Root
-    selected={{ value: selectedDisplayType, label: $t(selectedDisplayType) }}
-    onSelectedChange={handleDisplayTypeSelect}
+    type="single"
+    value={selectedDisplayType}
+    onValueChange={handleDisplayTypeSelect}
   >
-    <Select.Trigger class="w-32 h-full">
-      <Select.Value />
-    </Select.Trigger>
+    <Select.Trigger class="w-32 h-full">{t(selectedDisplayType)}</Select.Trigger>
     <Select.Content>
       {#each displayTypes as displayType (displayType)}
-        <Select.Item value={displayType}>{$t(displayType)}</Select.Item>
+        <Select.Item value={displayType}>{t(displayType)}</Select.Item>
       {/each}
     </Select.Content>
   </Select.Root>
 </div>
 
 <Drawer.Root>
-  <Drawer.Trigger asChild let:builder>
-    <Button builders={[builder]} variant="outline" class="h-12 flex md:hidden">
-      <IconChartBar class="w-5 h-5 mr-3" stroke={1.75} />
-      <div class="text-left">
-        <p class="text-xs text-muted-foreground">{$t('display')}</p>
-        <p class="inline-flex gap-2 items-center">
-          {$t(selectedDisplayType)}
-        </p>
-      </div>
-    </Button>
+  <Drawer.Trigger>
+    {#snippet children()}  
+      <Button variant="outline" class="h-12 flex md:hidden">
+        <IconChartBar class="w-5 h-5 mr-3" stroke={1.75} />
+        <div class="text-left">
+          <p class="text-xs text-muted-foreground">{t('display')}</p>
+          <p class="inline-flex gap-2 items-center">
+            {t(selectedDisplayType)}
+          </p>
+        </div>
+      </Button>
+    {/snippet}
   </Drawer.Trigger>
   <Drawer.Content>
     <Drawer.Header>
-      <Drawer.Title>{$t('display')}</Drawer.Title>
-      <Drawer.Description>{$t('displaySelect')}</Drawer.Description>
+      <Drawer.Title>{t('display')}</Drawer.Title>
+      <Drawer.Description>{t('displaySelect')}</Drawer.Description>
     </Drawer.Header>
     <div class="px-6 py-2">
       <RadioGroup.Root value={selectedDisplayType} class="gap-0">
         {#each displayTypes as displayType (displayType)}
           <div class="flex items-center gap-x-3 py-3">
             <RadioGroup.Item
-              id={$t(displayType)}
+              id={t(displayType)}
               value={displayType}
-              on:click={() => dispatch('displayTypeSelect', displayType)}
+              onclick={() => onDisplayTypeSelect(displayType)}
             />
-            <Label for={$t(displayType)} class="font-normal text-base w-full"
-              >{$t(displayType)}</Label
-            >
+            <Label for={t(displayType)} class="font-normal text-base w-full">{t(displayType)}</Label>
           </div>
           <Separator />
         {/each}
       </RadioGroup.Root>
     </div>
     <Drawer.Footer>
-      <Drawer.Close asChild let:builder>
-        <Button builders={[builder]}>{$t('seeChanges')}</Button>
+      <Drawer.Close>
+        {#snippet children()}
+          <Button>{t('seeChanges')}</Button>
+        {/snippet}
       </Drawer.Close>
     </Drawer.Footer>
   </Drawer.Content>

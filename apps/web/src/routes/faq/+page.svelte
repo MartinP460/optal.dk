@@ -2,51 +2,51 @@
   /* eslint-disable svelte/no-at-html-tags */
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import * as Accordion from '$lib/components/ui/accordion'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
 
   let QUESTIONS = $derived([
     {
       id: '5',
-      question: $t('faqQuestion5'),
-      answer: $t('faqAnswer5')
+      question: t('faqQuestion5'),
+      answer: t('faqAnswer5')
     },
     {
       id: '1',
-      question: $t('faqQuestion1'),
-      answer: $t('faqAnswer1')
+      question: t('faqQuestion1'),
+      answer: t('faqAnswer1')
     },
     {
       id: '2',
-      question: $t('faqQuestion2'),
-      answer: $t('faqAnswer2')
+      question: t('faqQuestion2'),
+      answer: t('faqAnswer2')
     },
     {
       id: '3',
-      question: $t('faqQuestion3'),
-      answer: $t('faqAnswer3')
+      question: t('faqQuestion3'),
+      answer: t('faqAnswer3')
     },
     {
       id: '4',
-      question: $t('faqQuestion4'),
-      answer: $t('faqAnswer4')
+      question: t('faqQuestion4'),
+      answer: t('faqAnswer4')
     }
   ])
 
-  let breadcrumbRoutes = $derived([{ text: $t('faq'), url: '/faq' }])
+  let breadcrumbRoutes = $derived([{ text: t('faq'), url: '/faq' }])
 </script>
 
 <svelte:head>
-  <title>{`${$t('faq')} • optal.dk`}</title>
-  <meta name="description" content={$t('metaDescriptionData')} />
+  <title>{`${t('faq')} • optal.dk`}</title>
+  <meta name="description" content={t('metaDescriptionData')} />
 </svelte:head>
 
 <main class="mt-6 sm:mt-10 mx-auto container px-0 max-w-2xl">
   <Breadcrumb routes={breadcrumbRoutes} />
   <h1 class="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-4 mb-8">
-    {$t('faq')}
+    {t('faq')}
   </h1>
 
-  <Accordion.Root>
+  <Accordion.Root type="multiple">
     {#each QUESTIONS as question}
       <Accordion.Item value={question.id}>
         <Accordion.Trigger

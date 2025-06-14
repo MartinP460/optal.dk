@@ -1,10 +1,9 @@
-import { get } from 'svelte/store'
 import _ from 'lodash'
 import { Donut } from '@unovis/ts'
 import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from 'reader'
 import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
 import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
-import { t as i18n, locale } from '$lib/i18n'
+import { locale, t } from '$lib/i18n/index.svelte'
 import { chartConfig } from '$lib/utils/chartConfig'
 import { getSubCategories, isStackedBarChart } from '$lib/utils/chartCategoryHelpers'
 
@@ -165,15 +164,12 @@ function getTooltip(dataCategory: KOTDataCategory) {
           ${Object.keys(dataCategory.datasets[0])
             .filter((key) => key !== 'year')
             .map((category) => {
-              const t = get(i18n)
-              const currentLocale = get(locale)
-
               const label =
                 // @ts-expect-error Typescript cannot infer the type of the categories from Object.keys.
                 d[category] === ''
                   ? t('unapplicale')
                   : // @ts-expect-error Same as above.
-                    (d[category] ?? '').toLocaleString(currentLocale)
+                    (d[category] ?? '').toLocaleString(locale)
 
               // @ts-expect-error Same as above.
               const labelNumber = d[category]
@@ -222,7 +218,6 @@ function getSingleValue() {
 function getSingleTriggers() {
   return {
     [Donut.selectors.segment]: ({ data }: { data: SingleDatapoint }) => {
-      const t = get(i18n)
       const color = getColorFromSubcategory(data.subCategory)
 
       return `
@@ -249,8 +244,6 @@ function getSingleColorFunction() {
 }
 
 function getCentralLabel(data: SingleDatapoint[], year: number) {
-  const t = get(i18n)
-
   const zerosInSubCategories = data.every((datapoint) => datapoint.value === 0)
 
   return zerosInSubCategories ? t('noDataForPeriod', { period: year }) : year

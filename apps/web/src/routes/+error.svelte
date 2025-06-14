@@ -3,7 +3,7 @@
   import { page } from '$app/stores'
   import Container from '$lib/components/Container.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
 </script>
 
 <Container>
@@ -12,11 +12,11 @@
       {$page.status}
     </h1>
     <p class="font-medium mt-4">
-      {$page.status === 404 ? $t('pageNotFound') : $t('pageError')}
+      {$page.status === 404 ? t('pageNotFound') : t('pageError')}
     </p>
     <Button href="/" variant="outline" class="mt-6">
       <IconHome class="h-5 mr-1 text-muted-foreground" />
-      {$t('home')}
+      {t('home')}
     </Button>
   </div>
 </Container>

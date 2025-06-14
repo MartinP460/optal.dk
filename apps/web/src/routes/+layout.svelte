@@ -1,7 +1,6 @@
 <script lang="ts">
   import '../app.css'
   import clsx from 'clsx'
-  import { Toaster } from 'svelte-sonner'
   import { IconMenuDeep } from '@tabler/icons-svelte'
   import { ModeWatcher } from 'mode-watcher'
   import { page } from '$app/stores'
@@ -10,7 +9,7 @@
   import Logo from '$lib/components/Logo.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
   import * as Sheet from '$lib/components/ui/sheet'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
   import Sidebar from '$lib/components/Sidebar.svelte'
   import LanguageSelect from '$lib/components/LanguageSelect.svelte'
   import DarkModeMenu from '$lib/components/DarkModeMenu.svelte'
@@ -37,7 +36,6 @@
   }
 </script>
 
-<Toaster richColors />
 <ModeWatcher />
 <Head />
 
@@ -52,7 +50,7 @@
       {/if}
       <div class="flex sm:gap-6">
         <Sheet.Trigger
-          on:click={() => (sidebarPage = 'navigation')}
+          onclick={() => (sidebarPage = 'navigation')}
           aria-label="Open sidebar navigation"
         >
           <IconMenuDeep
@@ -60,9 +58,9 @@
             stroke={2.3}
           />
         </Sheet.Trigger>
-        <Sheet.Trigger aria-label="Open feedback form" on:click={() => (sidebarPage = 'feedback')}>
+        <Sheet.Trigger aria-label="Open feedback form" onclick={() => (sidebarPage = 'feedback')}>
           <Button variant="ghost" class="font-normal hidden sm:block">
-            {$t('feedback')}
+            {t('feedback')}
           </Button>
         </Sheet.Trigger>
         <DarkModeMenu class="hidden sm:flex" />
@@ -86,7 +84,7 @@
               class="text-muted-foreground pb-3 w-24"
               data-sveltekit-preload-data="tap"
             >
-              {$t('about')}
+              {t('about')}
             </Button>
           </li>
           <DotSeperator aria-hidden />
@@ -95,7 +93,7 @@
               href="/data"
               variant="ghost"
               class="text-muted-foreground pb-3 w-24"
-              data-sveltekit-preload-data="tap">{$t('data')}</Button
+              data-sveltekit-preload-data="tap">{t('data')}</Button
             >
           </li>
           <DotSeperator aria-hidden class="hidden sm:block" />
@@ -104,7 +102,7 @@
               href="/faq"
               variant="ghost"
               class="text-muted-foreground pb-3 w-24"
-              data-sveltekit-preload-data="tap">{$t('faq')}</Button
+              data-sveltekit-preload-data="tap">{t('faq')}</Button
             >
           </li>
           <DotSeperator aria-hidden />
@@ -115,7 +113,7 @@
                 class="text-muted-foreground pb-3"
                 data-sveltekit-preload-data="tap"
               >
-                {$t('feedback')}
+                {t('feedback')}
               </Button>
             </Sheet.Trigger>
           </li>
