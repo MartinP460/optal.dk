@@ -6,7 +6,7 @@
   import { Label } from '$lib/components/ui/label'
   import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n/index.svelte'
-  import { Button } from '$lib/components/ui/button'
+  import { Button, buttonVariants } from '$lib/components/ui/button'
   import * as Select from '$lib/components/ui/select'
   import * as Drawer from '$lib/components/ui/drawer'
   import * as RadioGroup from '$lib/components/ui/radio-group'
@@ -43,8 +43,8 @@
 
 <Drawer.Root>
   <Drawer.Trigger>
-    {#snippet children()}  
-      <Button variant="outline" class="h-12 flex md:hidden">
+    {#snippet child({ props })}  
+      <Button {...props} variant="outline" class="h-12 flex md:hidden">
         <IconChartBar class="w-5 h-5 mr-3" stroke={1.75} />
         <div class="text-left">
           <p class="text-xs text-muted-foreground">{t('display')}</p>
@@ -76,10 +76,8 @@
       </RadioGroup.Root>
     </div>
     <Drawer.Footer>
-      <Drawer.Close>
-        {#snippet children()}
-          <Button>{t('seeChanges')}</Button>
-        {/snippet}
+      <Drawer.Close class={buttonVariants({ variant: 'default' })}>
+        {t('seeChanges')}
       </Drawer.Close>
     </Drawer.Footer>
   </Drawer.Content>

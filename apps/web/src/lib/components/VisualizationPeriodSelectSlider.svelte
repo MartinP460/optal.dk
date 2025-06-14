@@ -12,9 +12,16 @@
 
   let { min, max, period, mode, onPeriodChange }: Props = $props()
 
+  // Some of these bindings may be excessive, although this way we don't get errors in the browser console.
+  let periodState = $state(mode === 'single' ? period[0] : period)
+
   const handlePeriodChange = (value: number[] | number) => {
     const newValue = typeof value === 'number' ? [value, value] : value
-
+    if (mode === 'single') {
+      periodState = newValue[0]
+    } else {
+      periodState = newValue
+    }
     onPeriodChange(newValue)
   }
 </script>
@@ -26,7 +33,7 @@
       {min}
       {max}
       step={1}
-      value={period[0]}
+      bind:value={periodState as number}
       onValueChange={handlePeriodChange}
     />
   {:else}
@@ -35,7 +42,7 @@
       {min}
       {max}
       step={1}
-      value={period}
+      bind:value={periodState as number[]}
       onValueChange={handlePeriodChange}
     />
   {/if}

@@ -7,12 +7,13 @@
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import Head from '$lib/components/Head.svelte'
   import Logo from '$lib/components/Logo.svelte'
-  import Button from '$lib/components/ui/button/button.svelte'
+  import Button, { buttonVariants } from '$lib/components/ui/button/button.svelte'
   import * as Sheet from '$lib/components/ui/sheet'
   import { t } from '$lib/i18n/index.svelte'
   import Sidebar from '$lib/components/Sidebar.svelte'
   import LanguageSelect from '$lib/components/LanguageSelect.svelte'
   import DarkModeMenu from '$lib/components/DarkModeMenu.svelte'
+  import { cn } from '$lib/utils'
 
   let { children } = $props()
 
@@ -58,10 +59,12 @@
             stroke={2.3}
           />
         </Sheet.Trigger>
-        <Sheet.Trigger aria-label="Open feedback form" onclick={() => (sidebarPage = 'feedback')}>
-          <Button variant="ghost" class="font-normal hidden sm:block">
-            {t('feedback')}
-          </Button>
+        <Sheet.Trigger 
+          aria-label="Open feedback form" 
+          onclick={() => (sidebarPage = 'feedback')} 
+          class={cn(buttonVariants({ variant: 'ghost' }), 'font-normal hidden sm:block')}
+        >
+          {t('feedback')}
         </Sheet.Trigger>
         <DarkModeMenu class="hidden sm:flex" />
         <Sidebar
@@ -107,14 +110,11 @@
           </li>
           <DotSeperator aria-hidden />
           <li>
-            <Sheet.Trigger onclick={() => (sidebarPage = 'feedback')}>
-              <Button
-                variant="ghost"
-                class="text-muted-foreground pb-3"
-                data-sveltekit-preload-data="tap"
-              >
-                {t('feedback')}
-              </Button>
+            <Sheet.Trigger 
+              onclick={() => (sidebarPage = 'feedback')} 
+              class={cn(buttonVariants({ variant: 'ghost' }), 'text-muted-foreground pb-3')}
+            >
+              {t('feedback')}
             </Sheet.Trigger>
           </li>
         </ul>
