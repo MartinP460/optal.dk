@@ -50,29 +50,31 @@
   <InformationAccordion
     descriptionOpts={{ categoriesToDisplay: ['accepted', 'applied'], type: 'institution' }}
   >
-    <svelte:fragment slot="coursesInInstitution">
-      <p class="text-sm font-medium leading-tight text-muted-foreground">
-        {t('coursesOffered')}
-      </p>
-      <ul class="hover:text-muted-foreground transition-colors mt-2">
-        {#each institution.courses as course (course.id)}
-          <li class="hover:text-primary">
-            <a href={`/${institution.slug}/${course.slug}`} class="flex flex-col gap-1 py-2">
-              <p class="text-sm font-semibold">{course.latestName}</p>
-              <p class="text-xs">
-                {[
-                  getPeriodIntervalFromPeriod(course.period),
-                  course.location,
-                  course.studyStart ? t(course.studyStart) : '',
-                  course.eLearning ? 'e-learning' : null
-                ]
-                  .filter((item) => item)
-                  .join(', ')}
-              </p>
-            </a>
-          </li>
-        {/each}
-      </ul>
-    </svelte:fragment>
+    {#snippet coursesInInstitution()}
+      <div>
+        <p class="text-sm font-medium leading-tight text-muted-foreground">
+          {t('coursesOffered')}
+        </p>
+        <ul class="hover:text-muted-foreground transition-colors mt-2">
+          {#each institution.courses as course (course.id)}
+            <li class="hover:text-primary">
+              <a href={`/${institution.slug}/${course.slug}`} class="flex flex-col gap-1 py-2">
+                <p class="text-sm font-semibold">{course.latestName}</p>
+                <p class="text-xs">
+                  {[
+                    getPeriodIntervalFromPeriod(course.period),
+                    course.location,
+                    course.studyStart ? t(course.studyStart) : '',
+                    course.eLearning ? 'e-learning' : null
+                  ]
+                    .filter((item) => item)
+                    .join(', ')}
+                </p>
+              </a>
+            </li>
+          {/each}
+        </ul>
+      </div>
+    {/snippet}
   </InformationAccordion>
 </main>
