@@ -1,16 +1,14 @@
-import { writable } from 'svelte/store'
 import { browser } from '$app/environment'
 
 export function createLocalStorageState(name: string, defaultValue: string) {
   const initialValue = browser ? window.localStorage.getItem(name) ?? defaultValue : defaultValue
 
-  const localStorageState = writable<string>(initialValue)
-
-  localStorageState.subscribe((value) => {
+  // Set up a watcher to sync state changes to localStorage
+  const sync = (newState: string) => {
     if (browser) {
-      window.localStorage.setItem(name, value)
+      window.localStorage.setItem(name, newState)
     }
-  })
+  }
 
-  return localStorageState
+  return { initialValue, sync }
 }
