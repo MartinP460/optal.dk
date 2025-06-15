@@ -1,6 +1,6 @@
 <script>
   import { IconDownload, IconJson, IconTable } from '@tabler/icons-svelte'
-  import { AlertCircle } from 'lucide-svelte'
+  import { AlertCircle } from '@lucide/svelte'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import * as Alert from '$lib/components/ui/alert'
   import Button from '$lib/components/ui/button/button.svelte'
