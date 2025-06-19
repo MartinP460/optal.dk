@@ -11,12 +11,12 @@
     descriptionOpts: {
       categoriesToDisplay: Array<KOTCategory>
       type: 'institution' | 'course' | 'grouping'
-    };
-    coursesInInstitution?: import('svelte').Snippet;
-    coursesInGrouping?: import('svelte').Snippet;
+    }
+    coursesInInstitution?: import('svelte').Snippet
+    coursesInGrouping?: import('svelte').Snippet
   }
 
-  let { descriptionOpts, coursesInInstitution, coursesInGrouping }: Props = $props();
+  let { descriptionOpts, coursesInInstitution, coursesInGrouping }: Props = $props()
 
   const shouldDisplay = (category: KOTCategory) =>
     descriptionOpts.categoriesToDisplay.includes(category)

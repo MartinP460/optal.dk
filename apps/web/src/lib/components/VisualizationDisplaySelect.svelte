@@ -27,11 +27,7 @@
 </script>
 
 <div class="gap-4 hidden md:flex md:ml-auto">
-  <Select.Root
-    type="single"
-    value={selectedDisplayType}
-    onValueChange={handleDisplayTypeSelect}
-  >
+  <Select.Root type="single" value={selectedDisplayType} onValueChange={handleDisplayTypeSelect}>
     <Select.Trigger class="w-32 h-full">{t(selectedDisplayType)}</Select.Trigger>
     <Select.Content>
       {#each displayTypes as displayType (displayType)}
@@ -43,7 +39,7 @@
 
 <Drawer.Root>
   <Drawer.Trigger>
-    {#snippet child({ props })}  
+    {#snippet child({ props })}
       <Button {...props} variant="outline" class="h-12 flex md:hidden">
         <IconChartBar class="w-5 h-5 mr-3" stroke={1.75} />
         <div class="text-left">
@@ -69,7 +65,8 @@
               value={displayType}
               onclick={() => onDisplayTypeSelect(displayType)}
             />
-            <Label for={t(displayType)} class="font-normal text-base w-full">{t(displayType)}</Label>
+            <Label for={t(displayType)} class="font-normal text-base w-full">{t(displayType)}</Label
+            >
           </div>
           <Separator />
         {/each}

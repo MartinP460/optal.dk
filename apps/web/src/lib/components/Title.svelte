@@ -2,11 +2,11 @@
   import clsx from 'clsx'
 
   type Props = {
-    element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-    variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-    responsive?: boolean;
-    class?: string;
-    children?: import('svelte').Snippet;
+    element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+    variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+    responsive?: boolean
+    class?: string
+    children?: import('svelte').Snippet
   }
 
   let {
@@ -16,7 +16,7 @@
     class: customClass = '',
     children
   }: Props = $props()
-  
+
   const classNames = {
     h1: `scroll-m-20 font-bold tracking-tight lg:text-5xl ${responsive ? 'sm:text-4xl text-3xl' : 'text-4xl'}`,
     h2: `scroll-m-20 font-semibold tracking-tight ${responsive ? 'sm:text-3xl text-2xl' : 'text-3xl'}`,

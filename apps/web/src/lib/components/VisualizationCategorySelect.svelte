@@ -23,16 +23,16 @@
 <Popover.Root>
   <Popover.Trigger>
     {#snippet child({ props })}
-    <Button {...props} variant="outline" class="hidden md:flex h-12 w-42">
-      <IconAdjustments class="w-5 h-5 mr-2" stroke={1.75} />
-      <div class="text-left">
-        <p class="text-xs text-muted-foreground">{t('categories')}</p>
-        <span class="inline-flex gap-2 items-center">
-          <p>{t(selectedDataCategory.name)}</p>
-          <DotSeperator style={`background-color: ${color}`} />
-        </span>
-      </div>
-    </Button>
+      <Button {...props} variant="outline" class="hidden md:flex h-12 w-42">
+        <IconAdjustments class="w-5 h-5 mr-2" stroke={1.75} />
+        <div class="text-left">
+          <p class="text-xs text-muted-foreground">{t('categories')}</p>
+          <span class="inline-flex gap-2 items-center">
+            <p>{t(selectedDataCategory.name)}</p>
+            <DotSeperator style={`background-color: ${color}`} />
+          </span>
+        </div>
+      </Button>
     {/snippet}
   </Popover.Trigger>
   <Popover.Content align="start" class="flex flex-col w-fit py-2 min-w-44">
@@ -61,7 +61,11 @@
       <Drawer.Description>{t('categoriesSelect')}</Drawer.Description>
     </Drawer.Header>
     <div class="px-6 py-2">
-      <VisualizationCategorySelectInput {dataCategories} {selectedDataCategory} {onCategorySelect} />
+      <VisualizationCategorySelectInput
+        {dataCategories}
+        {selectedDataCategory}
+        {onCategorySelect}
+      />
     </div>
     <Drawer.Footer>
       <Drawer.Close class={buttonVariants({ variant: 'default' })}>{t('seeChanges')}</Drawer.Close>

@@ -59,9 +59,9 @@
             stroke={2.3}
           />
         </Sheet.Trigger>
-        <Sheet.Trigger 
-          aria-label="Open feedback form" 
-          onclick={() => (sidebarPage = 'feedback')} 
+        <Sheet.Trigger
+          aria-label="Open feedback form"
+          onclick={() => (sidebarPage = 'feedback')}
           class={cn(buttonVariants({ variant: 'ghost' }), 'font-normal hidden sm:block')}
         >
           {t('feedback')}
@@ -110,8 +110,8 @@
           </li>
           <DotSeperator aria-hidden />
           <li>
-            <Sheet.Trigger 
-              onclick={() => (sidebarPage = 'feedback')} 
+            <Sheet.Trigger
+              onclick={() => (sidebarPage = 'feedback')}
               class={cn(buttonVariants({ variant: 'ghost' }), 'text-muted-foreground pb-3')}
             >
               {t('feedback')}

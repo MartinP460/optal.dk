@@ -47,7 +47,10 @@
         <ul class="hover:text-muted-foreground transition-colors mt-2">
           {#each includedCourses as course (course.id)}
             <li class="hover:text-primary">
-              <a href={`/${course.institution.slug}/${course.slug}`} class="flex flex-col gap-1 py-2">
+              <a
+                href={`/${course.institution.slug}/${course.slug}`}
+                class="flex flex-col gap-1 py-2"
+              >
                 <p class="text-sm font-semibold">{course.latestName}</p>
                 <p class="text-xs">
                   {[course.institution.latestName, getPeriodIntervalFromPeriod(course.period)]
