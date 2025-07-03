@@ -100,7 +100,7 @@
 </script>
 
 <div class="mt-8 sm:mt-8">
-  <div class="flex gap-4 w-full overflow-x-scroll py-2 px-1">
+  <div class="flex gap-4 w-full py-2 px-1">
     <VisualizationCategorySelect
       {dataCategories}
       {selectedDataCategory}
