@@ -90,7 +90,7 @@
               {t('about')}
             </Button>
           </li>
-          <DotSeperator aria-hidden />
+          <DotSeperator />
           <li>
             <Button
               href="/data"
@@ -99,7 +99,7 @@
               data-sveltekit-preload-data="tap">{t('data')}</Button
             >
           </li>
-          <DotSeperator aria-hidden class="hidden sm:block" />
+          <DotSeperator class="hidden sm:block" />
           <li>
             <Button
               href="/faq"
@@ -108,7 +108,7 @@
               data-sveltekit-preload-data="tap">{t('faq')}</Button
             >
           </li>
-          <DotSeperator aria-hidden />
+          <DotSeperator />
           <li>
             <Sheet.Trigger
               onclick={() => (sidebarPage = 'feedback')}
