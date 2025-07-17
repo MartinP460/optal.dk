@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev run-dev",
+    "dev:web": "turbo run dev --filter=web",
     "test": "turbo run test --filter=reader",
     "test:watch": "turbo run test:watch --filter=reader",
     "lint": "prettier --check . && eslint .",
