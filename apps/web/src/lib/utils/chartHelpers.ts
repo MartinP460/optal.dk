@@ -156,7 +156,7 @@ function getTooltip(dataCategory: KOTDataCategory) {
     }
 
     return `
-    <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-sm">
+    <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-xs">
         <span class="font-bold text-sm text-muted-foreground">
         ${d.year}
         </span>
@@ -221,7 +221,7 @@ function getSingleTriggers() {
       const color = getColorFromSubcategory(data.subCategory)
 
       return `
-      <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-sm">
+      <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-xs">
         <div class="flex flex-col w-full">
           <span class="text-[0.70rem] uppercase text-muted-foreground flex items-center">
             ${t(data.subCategory)}

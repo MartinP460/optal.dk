@@ -87,8 +87,8 @@
         disabled={loading || success || error}
         class={clsx(
           'transition',
-          success && 'bg-green-500 hover:bg-green-500 cursor-default !opacity-90',
-          error && 'bg-red-500 hover:bg-red-500 cursor-default !opacity-90 sm:text-sm text-xs'
+          success && 'bg-green-500 hover:bg-green-500 cursor-default opacity-90!',
+          error && 'bg-red-500 hover:bg-red-500 cursor-default opacity-90! sm:text-sm text-xs'
         )}
       >
         <Check class={clsx('mr-2 h-4 w-4 transition-all', !success && 'hidden')} />

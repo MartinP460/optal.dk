@@ -89,7 +89,7 @@
 
 <div>
   {#each getCategories(dataCategories) as category (category)}
-    <div class={isSelectedCategory(category) ? 'pb-2 md:pb-0' : ''}>
+    <div class="{isSelectedCategory(category) ? 'pb-2 md:pb-0.5' : ''} py-3 md:py-1">
       <div class="flex items-center space-x-2">
         <Checkbox
           id={category}
@@ -102,17 +102,13 @@
         <Label
           id={category}
           for={category}
-          class="text-base md:text-sm font-normal leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 pt-4 {isSelectedCategory(
-            category
-          )
-            ? 'pb-2'
-            : 'pb-4'} transition-all md:py-1 w-full"
+          class="text-base md:text-sm font-normal leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 transition-all md:py-1 w-full"
         >
           {t(category)}
         </Label>
       </div>
       {#if isSelectedCategory(category)}
-        <div class="ml-3" transition:slide>
+        <div class="ml-3 pt-2 md:pt-1" transition:slide>
           {#if chartConfig[category].subCategories.groups}
             {#each chartConfig[category].subCategories.groups as group (group.label)}
               <div class="flex items-center space-x-2">
@@ -191,7 +187,7 @@
                     <Label
                       id={subCategory}
                       for={subCategory}
-                      class="text-base md:text-sm font-normal leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 py-2 md:py-1 w-full"
+                      class="text-base md:text-sm font-normal leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 py-2 md:py-1.5 w-full"
                     >
                       {t(subCategory)}
                     </Label>

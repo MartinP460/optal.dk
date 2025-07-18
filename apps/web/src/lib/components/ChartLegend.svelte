@@ -33,7 +33,7 @@
       {#each !isLabelsExpanded && collapsedLabels ? collapsedLabels : labels as label (label)}
         <span class="flex items-center gap-2 text-sm text-muted-foreground">
           <div
-            class="w-3 h-3 rounded flex-shrink-0"
+            class="w-3 h-3 rounded shrink-0"
             style={`background-color: ${getColorFromSubcategory(label)}`}
           ></div>
           {t(label)}
