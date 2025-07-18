@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { KOTDataCategory } from 'reader'
+  import type { KOTDataCategory } from '@optaldk/reader'
   import * as Table from '$lib/components/ui/table'
   import { getLegendLabels } from '$lib/utils/chartHelpers'
   import { getSubCategoryValues } from '$lib/utils/chartCategoryHelpers'

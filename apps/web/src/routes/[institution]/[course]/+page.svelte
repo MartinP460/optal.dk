@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { LATEST_YEAR } from 'reader'
+  import { LATEST_YEAR } from '@optaldk/reader'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Meta from '$lib/components/Meta.svelte'
   import Visualization from '$lib/components/Visualization.svelte'

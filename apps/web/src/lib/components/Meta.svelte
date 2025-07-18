@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { KOTCourse } from 'reader'
+  import type { KOTCourse } from '@optaldk/reader'
   import { Badge } from '$lib/components/ui/badge'
   import { t } from '$lib/i18n/index.svelte'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'

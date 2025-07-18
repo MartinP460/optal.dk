@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { KOTSubcategory } from 'reader'
+  import type { KOTSubcategory } from '@optaldk/reader'
   import { t } from '$lib/i18n/index.svelte'
   import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
   import Source from '$lib/components/Source.svelte'

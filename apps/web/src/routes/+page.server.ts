@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { ParentGroupingName } from 'reader'
+import { ParentGroupingName } from '@optaldk/reader'
 import { courseSearchIndexes, groupings, institutions } from '$lib/server/data'
 import { t } from '$lib/i18n/index.svelte'
 

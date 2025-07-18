@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { Donut } from '@unovis/ts'
-import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from 'reader'
+import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from '@optaldk/reader'
 import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
 import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
 import { locale, t } from '$lib/i18n/index.svelte'

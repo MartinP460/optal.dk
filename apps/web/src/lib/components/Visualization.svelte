@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { KOTDataCategories, KOTDataCategory } from 'reader'
+  import type { KOTDataCategories, KOTDataCategory } from '@optaldk/reader'
   import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
   import Table from '$lib/components/Table.svelte'
   import Chart from '$lib/components/Chart.svelte'

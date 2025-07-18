@@ -1,7 +1,7 @@
 <script lang="ts">
   /* eslint-disable svelte/no-at-html-tags */
   import _ from 'lodash'
-  import type { KOTCategory } from 'reader'
+  import type { KOTCategory } from '@optaldk/reader'
   import * as Accordion from '$lib/components/ui/accordion'
   import * as Card from '$lib/components/ui/card'
   import Title from '$lib/components/Title.svelte'

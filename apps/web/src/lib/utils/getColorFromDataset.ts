@@ -1,4 +1,4 @@
-import type { KOTCategory, KOTSubcategory } from 'reader'
+import type { KOTCategory, KOTSubcategory } from '@optaldk/reader'
 
 export function getColorFromSubcategory(subcategory: KOTSubcategory) {
   switch (subcategory) {

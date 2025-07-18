@@ -1,6 +1,6 @@
 <script lang="ts">
   import { IconAdjustments } from '@tabler/icons-svelte'
-  import type { KOTDataCategories, KOTDataCategory } from 'reader'
+  import type { KOTDataCategories, KOTDataCategory } from '@optaldk/reader'
   import * as Popover from '$lib/components/ui/popover'
   import * as Drawer from '$lib/components/ui/drawer'
   import Button, { buttonVariants } from '$lib/components/ui/button/button.svelte'

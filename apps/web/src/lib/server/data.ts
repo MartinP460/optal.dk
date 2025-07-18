@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js'
-import type { KOTGrouping, KOTInstitution } from 'reader'
+import type { KOTGrouping, KOTInstitution } from '@optaldk/reader'
 import institutionsData from './institutions.json'
 import groupingsData from './groupings.json'
 
