@@ -1,6 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "globalEnv": [
+    "NODE_ENV",
+    "SUPABASE_URL",
+    "SUPABASE_ANON_KEY",
+    "OPTAL_WEB_DOMAIN"
+  ],
+  "tasks": {
     "build": {
       "dependsOn": [
         "^build"
@@ -60,11 +66,5 @@
     "sb:stop": {
       "cache": false
     }
-  },
-  "globalEnv": [
-    "NODE_ENV",
-    "SUPABASE_URL",
-    "SUPABASE_ANON_KEY",
-    "OPTAL_WEB_DOMAIN"
-  ]
+  }
 }
