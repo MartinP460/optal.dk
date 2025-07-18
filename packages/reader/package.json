@@ -1,13 +1,15 @@
 {
   "name": "reader",
+  "type": "module",
   "description": "The reader for extracting admission figures from CSV-files with KOT data.",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "gen": "npx tsx ./src/generate.ts"
+    "gen": "npx tsx ./src/generate.ts",
+    "lint": "eslint .",
+    "test:watch": "vitest",
+    "test": "vitest run"
   },
   "dependencies": {
     "lodash": "^4.17.21",
@@ -18,6 +20,7 @@
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
   },
   "devDependencies": {
-    "@vitest/coverage-v8": "^1.2.2"
+    "@vitest/coverage-v8": "^1.2.2",
+    "@optaldk/eslint-config-custom": "*"
   }
 }

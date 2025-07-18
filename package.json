@@ -7,7 +7,7 @@
     "dev:web": "turbo run dev --filter=web",
     "test": "turbo run test --filter=reader",
     "test:watch": "turbo run test:watch --filter=reader",
-    "lint": "prettier --check . && eslint .",
+    "lint": "turbo run lint",
     "format": "prettier --write . && eslint . --fix",
     "preview": "turbo run preview",
     "reader:test": "turbo run test --filter=reader",
@@ -28,8 +28,6 @@
     "api:sb:stop": "turbo run sb:stop --filter=api"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "eslint": "^8.0.0",
     "eslint-config-custom": "*",
     "prettier": "^3.5.3",
     "prettier-plugin-svelte": "^3.4.0",
