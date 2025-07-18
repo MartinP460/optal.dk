@@ -2,7 +2,8 @@
   "name": "api",
   "type": "module",
   "scripts": {
-    "lint": "eslint .",
+    "format": "prettier --ignore-path ../../.prettierignore --write . && eslint . --fix",
+    "lint": "prettier --ignore-path ../../.prettierignore --check . && eslint .",
     "run-dev": "npm run sb:start && npm run set-env nodemon api/index.ts",
     "sb:diff": "supabase db diff",
     "sb:migrate-latest": "supabase migration up",

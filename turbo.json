@@ -1,27 +1,16 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": [
-    "NODE_ENV",
-    "SUPABASE_URL",
-    "SUPABASE_ANON_KEY",
-    "OPTAL_WEB_DOMAIN"
-  ],
+  "globalEnv": ["NODE_ENV", "SUPABASE_URL", "SUPABASE_ANON_KEY", "OPTAL_WEB_DOMAIN"],
   "tasks": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        ".svelte-kit/**",
-        ".vercel/**"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": [".svelte-kit/**", ".vercel/**"]
     },
     "lint": {},
+    "format": {},
     "test": {},
     "gen": {
-      "outputs": [
-        ".static/**"
-      ]
+      "outputs": [".static/**"]
     },
     "dev": {
       "cache": false,

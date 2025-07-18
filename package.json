@@ -8,7 +8,7 @@
     "test": "turbo run test --filter=reader",
     "test:watch": "turbo run test:watch --filter=reader",
     "lint": "turbo run lint",
-    "format": "prettier --write . && eslint . --fix",
+    "format": "turbo run format",
     "preview": "turbo run preview",
     "reader:test": "turbo run test --filter=reader",
     "reader:test:watch": "turbo run test:watch --filter=reader",
@@ -28,11 +28,8 @@
     "api:sb:stop": "turbo run sb:stop --filter=api"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
     "prettier": "^3.5.3",
     "prettier-plugin-svelte": "^3.4.0",
-    "supabase": "^1.142.2",
-    "svelte": "^5.34.6",
     "turbo": "^2.5.5"
   },
   "packageManager": "npm@10.1.0",

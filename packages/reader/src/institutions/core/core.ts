@@ -242,8 +242,8 @@ function getDatapointsFromCategory(
   row: string[],
   category: KOTCategory
 ): {
-    [key in KOTSubcategory]?: number | string
-  } {
+  [key in KOTSubcategory]?: number | string
+} {
   switch (category) {
     case 'accepted':
       return {

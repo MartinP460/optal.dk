@@ -6,8 +6,9 @@
   "types": "src/index.ts",
   "scripts": {
     "coverage": "vitest run --coverage",
+    "format": "prettier --ignore-path ../../.prettierignore --write . && eslint . --fix",
     "gen": "npx tsx ./src/generate.ts",
-    "lint": "eslint .",
+    "lint": "prettier --ignore-path ../../.prettierignore --check . && eslint .",
     "test:watch": "vitest",
     "test": "vitest run"
   },

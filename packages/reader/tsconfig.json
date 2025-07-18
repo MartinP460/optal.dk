@@ -6,8 +6,6 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "lib": [
-      "ES2021.String"
-    ],
-  },
+    "lib": ["ES2021.String"]
+  }
 }
