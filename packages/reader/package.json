@@ -1,5 +1,5 @@
 {
-  "name": "reader",
+  "name": "@optaldk/reader",
   "type": "module",
   "description": "The reader for extracting admission figures from CSV-files with KOT data.",
   "main": "src/index.ts",
