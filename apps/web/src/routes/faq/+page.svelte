@@ -47,7 +47,7 @@
   </h1>
 
   <Accordion.Root type="multiple">
-    {#each QUESTIONS as question}
+    {#each QUESTIONS as question (question.id)}
       <Accordion.Item value={question.id}>
         <Accordion.Trigger
           class="text:lg sm:text-xl text-left py-6 data-[state=open]:text-teal-700 gap-8"

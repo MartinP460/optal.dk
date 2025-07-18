@@ -220,7 +220,7 @@
       </Tabs.Content>
       <Tabs.Content value="groupings" class="w-full sm:w-[625px] px-2 sm:px-4">
         <Accordion.Root type="multiple" class="py-2">
-          {#each parentGroupings as [name, groupings]}
+          {#each parentGroupings as [name, groupings] (name)}
             <Accordion.Item value={name}>
               <Accordion.Trigger
                 class="text-left text-sm sm:text-base data-[state=open]:text-teal-700"

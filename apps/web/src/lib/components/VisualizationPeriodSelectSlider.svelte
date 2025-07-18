@@ -47,7 +47,7 @@
     />
   {/if}
   <div class="flex w-[108%] justify-between mt-2 text-xs">
-    {#each _.range(min, max + 1) as year}
+    {#each _.range(min, max + 1) as year (year)}
       <span class="text-muted-foreground hidden first:inline last:inline">{year}</span>
     {/each}
   </div>

@@ -21,7 +21,7 @@
     {convertLocaleToDisplayString(locale.value ?? '')}
   </Select.Trigger>
   <Select.Content>
-    {#each locales as locale}
+    {#each locales as locale (locale)}
       <Select.Item value={locale}>{convertLocaleToDisplayString(locale)}</Select.Item>
     {/each}
   </Select.Content>

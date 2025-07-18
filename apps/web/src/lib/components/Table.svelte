@@ -33,7 +33,7 @@
     {#each datasets as dataset (dataset.year)}
       <Table.Row>
         <Table.Head>{dataset.year}</Table.Head>
-        {#each getSubCategoryValues(dataset) as subCategory}
+        {#each getSubCategoryValues(dataset) as subCategory (subCategory)}
           <Table.Cell class="font-medium">{subCategory}</Table.Cell>
         {/each}
       </Table.Row>
