@@ -10,7 +10,6 @@ const app = Fastify({
   logger: process.env.NODE_ENV === 'production'
 })
 
-// eslint-disable-next-line turbo/no-undeclared-env-vars
 const allowedOrigins = process.env.OPTAL_WEB_DOMAIN ? [process.env.OPTAL_WEB_DOMAIN] : []
 
 app.register(cors, {
