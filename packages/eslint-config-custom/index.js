@@ -6,6 +6,7 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 import turboPlugin from 'eslint-plugin-turbo'
 import importPlugin from 'eslint-plugin-import'
 import svelte from 'eslint-plugin-svelte'
+import vitest from '@vitest/eslint-plugin'
 import globals from 'globals'
 
 export const config = ts.config(
@@ -89,5 +90,16 @@ export const config = ts.config(
     plugins: {
       onlyWarn,
     }
-  }
+  },
+
+  /* Vitest config. */
+  {
+    files: ['**/*.test.ts'], // or any other pattern
+    plugins: {
+      vitest,
+    },
+    rules: {
+      ...vitest.configs.recommended.rules, // you can also use vitest.configs.all.rules to enable all rules
+    },
+  },
 )

@@ -17,7 +17,7 @@ it('returns the sum of dataset properties for a year', async () => {
 
   const accepted = datalogi?.dataCategories.accepted
 
-  expect(accepted?.datasets[0].acceptedAdmitted).toBeDefined
+  expect(accepted?.datasets[0].acceptedAdmitted).toBeDefined()
   expect(accepted?.datasets[0].acceptedStandby).toBeTypeOf('number')
 })
 

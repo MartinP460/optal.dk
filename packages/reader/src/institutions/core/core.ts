@@ -210,7 +210,8 @@ const CATEGORY_UNITS = {
   applied: 'persons',
   quotient: null,
   gender: null,
-  age: null
+  age: null,
+  education: null
 }
 
 function addDataCategories(
@@ -241,8 +242,8 @@ function getDatapointsFromCategory(
   row: string[],
   category: KOTCategory
 ): {
-  [key in KOTSubcategory]?: number | string
-} {
+    [key in KOTSubcategory]?: number | string
+  } {
   switch (category) {
     case 'accepted':
       return {
