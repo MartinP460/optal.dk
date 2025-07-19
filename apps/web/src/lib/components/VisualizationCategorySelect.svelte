@@ -23,7 +23,7 @@
 <Popover.Root>
   <Popover.Trigger>
     {#snippet child({ props })}
-      <Button {...props} variant="outline" class="hidden md:flex h-12 w-36">
+      <Button {...props} variant="outline" class="hidden md:flex h-12 min-w-36">
         <IconAdjustments class="w-5 h-5 mr-1" stroke={1.75} />
         <div class="text-left flex-1">
           <p class="text-xs text-muted-foreground">{t('categories')}</p>
@@ -43,7 +43,7 @@
 <Drawer.Root>
   <Drawer.Trigger>
     {#snippet child({ props })}
-      <Button {...props} variant="outline" class="flex md:hidden h-12 w-36">
+      <Button {...props} variant="outline" class="flex md:hidden h-12 min-w-36">
         <IconAdjustments class="w-5 h-5 mr-1" stroke={1.75} />
         <div class="text-left">
           <p class="text-xs text-muted-foreground">{t('categories')}</p>

@@ -9,14 +9,8 @@
     "lint": {},
     "format": {},
     "test": {},
-    "gen": {
-      "outputs": [".static/**"]
-    },
+    "gen": {},
     "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "run-dev": {
       "cache": false,
       "persistent": true
     },
