@@ -5,7 +5,7 @@ import type {
   KOTDataCategories,
   KOTDataCategory,
   KOTSubcategory
-} from 'reader'
+} from '@optaldk/reader'
 import { chartConfig } from '$lib/utils/chartConfig'
 
 export const displayTypes = ['linechart', 'barchart', 'donutchart', 'table'] as const

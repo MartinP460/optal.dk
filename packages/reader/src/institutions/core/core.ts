@@ -210,7 +210,8 @@ const CATEGORY_UNITS = {
   applied: 'persons',
   quotient: null,
   gender: null,
-  age: null
+  age: null,
+  education: null
 }
 
 function addDataCategories(

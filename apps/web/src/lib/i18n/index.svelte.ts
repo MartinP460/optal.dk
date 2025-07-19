@@ -1,13 +1,12 @@
-import { type Writable, derived, writable } from 'svelte/store'
 import { translations } from './translations'
 
 export type Locales = 'en' | 'da'
 type TranslationKeys = keyof typeof translations.en
 
 export const LOCAL_STORAGE_LANGUAGE = 'storedLanguage'
-
 export const fallbackLocale = 'da'
-export const locale: Writable<Locales> = writable(fallbackLocale)
+
+export const locale: { value: Locales } = $state({ value: fallbackLocale })
 export const locales = Object.keys(translations)
 
 function translate(locale: Locales, key: TranslationKeys, vars: { [key: string]: string }) {
@@ -25,9 +24,6 @@ function translate(locale: Locales, key: TranslationKeys, vars: { [key: string]:
   return text
 }
 
-export const t = derived(
-  locale,
-  ($locale) =>
-    (key: TranslationKeys, vars = {}) =>
-      translate($locale, key, vars)
-)
+export function t(key: TranslationKeys, vars = {}) {
+  return translate(locale.value, key, vars)
+}

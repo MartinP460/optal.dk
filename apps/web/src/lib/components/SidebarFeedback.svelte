@@ -1,26 +1,29 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte'
   import clsx from 'clsx'
-  import { AlertCircle, Check, Loader2 } from 'lucide-svelte'
+  import { AlertCircle, Check, Loader2 } from '@lucide/svelte'
   import * as Sheet from '$lib/components/ui/sheet'
   import * as Alert from '$lib/components/ui/alert'
   import Button from '$lib/components/ui/button/button.svelte'
   import Label from '$lib/components/ui/label/label.svelte'
   import Textarea from '$lib/components/ui/textarea/textarea.svelte'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
   import { sendFeedback } from '$lib/utils/sendFeedback'
 
-  const dispatch = createEventDispatcher()
+  type Props = {
+    onCancel: () => void
+  }
+
+  let { onCancel }: Props = $props()
 
   function timeout(delay: number) {
     return new Promise((res) => setTimeout(res, delay))
   }
 
-  let text: string
-  let loading = false
-  let success = false
-  let error = false
-  let fieldErrors: string[] = []
+  let text: string = $state('')
+  let loading = $state(false)
+  let success = $state(false)
+  let error = $state(false)
+  let fieldErrors: string[] = $state([])
 
   const handleSubmit = async () => {
     fieldErrors = []
@@ -56,25 +59,25 @@
   <Sheet.Header>
     <Sheet.Title>
       <h3 class="scroll-m-20 font-bold tracking-tight text-2xl mt-4 text-left">
-        {$t('feedback')}
+        {t('feedback')}
       </h3>
     </Sheet.Title>
   </Sheet.Header>
 
   <Alert.Root variant="default" class="mt-4">
-    <AlertCircle class="h-4 w-4 stroke-muted-foreground" />
-    <Alert.Description class="mt-[1px] text-muted-foreground">
-      {$t('feedbackInfo')}
+    <AlertCircle class="h-4 w-4 mt-1 stroke-muted-foreground" />
+    <Alert.Description class="text-muted-foreground">
+      {t('feedbackInfo')}
     </Alert.Description>
   </Alert.Root>
 
-  <form on:submit={handleSubmit} class="flex flex-col gap-6 mt-8">
+  <form onsubmit={handleSubmit} class="flex flex-col gap-6 mt-8">
     <div class="flex flex-col gap-1.5">
-      <Label for="content">{$t('content')} <span class="text-red-500">*</span></Label>
+      <Label for="content">{t('content')} <span class="text-red-500">*</span></Label>
       <Textarea
         bind:value={text}
         id="content"
-        placeholder={$t('feedbackPlaceholder')}
+        placeholder={t('feedbackPlaceholder')}
         class={clsx('min-h-[133px]', fieldErrors.includes('content') && 'border-red-500')}
       />
     </div>
@@ -84,25 +87,23 @@
         disabled={loading || success || error}
         class={clsx(
           'transition',
-          success && 'bg-green-500 hover:bg-green-500 cursor-default !opacity-90',
-          error && 'bg-red-500 hover:bg-red-500 cursor-default !opacity-90 sm:text-sm text-xs'
+          success && 'bg-green-500 hover:bg-green-500 cursor-default opacity-90!',
+          error && 'bg-red-500 hover:bg-red-500 cursor-default opacity-90! sm:text-sm text-xs'
         )}
       >
         <Check class={clsx('mr-2 h-4 w-4 transition-all', !success && 'hidden')} />
         <Loader2 class={clsx('mr-2 h-4 w-4 animate-spin transition-all', !loading && 'hidden')} />
         {#if success}
-          {$t('submitted')}
+          {t('submitted')}
         {:else if error}
-          {$t('error')}
+          {t('error')}
         {:else if loading}
-          {$t('submitting')}
+          {t('submitting')}
         {:else}
-          {$t('submit')}
+          {t('submit')}
         {/if}
       </Button>
-      <Button on:click={() => dispatch('cancel')} type="button" variant="outline"
-        >{$t('cancel')}
-      </Button>
+      <Button onclick={onCancel} type="button" variant="outline">{t('cancel')}</Button>
     </div>
   </form>
 </Sheet.Content>

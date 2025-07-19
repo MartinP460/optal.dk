@@ -1,10 +1,14 @@
 <script lang="ts">
   import { IconChevronLeft, IconChevronRight } from '@tabler/icons-svelte'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
 
-  export let routes: { text: string; url: string }[]
+  type Props = {
+    routes: { text: string; url: string }[]
+  }
 
-  $: routesWithHome = [{ text: $t('home'), url: '' }, ...routes]
+  let { routes }: Props = $props()
+
+  let routesWithHome = $derived([{ text: t('home'), url: '' }, ...routes])
 </script>
 
 <nav>

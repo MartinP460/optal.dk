@@ -1,20 +1,16 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "globalEnv": ["NODE_ENV", "SUPABASE_URL", "SUPABASE_ANON_KEY", "OPTAL_WEB_DOMAIN"],
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".svelte-kit/**", ".vercel/**"]
     },
     "lint": {},
+    "format": {},
     "test": {},
-    "gen": {
-      "outputs": [".static/**"]
-    },
+    "gen": {},
     "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "run-dev": {
       "cache": false,
       "persistent": true
     },
@@ -26,15 +22,32 @@
     },
     "check": {},
     "check:watch": {},
-    "sb:diff": { "cache": false },
-    "sb:migrate-latest": { "cache": false },
-    "sb:migrate-new": { "cache": false },
-    "sb:pull": { "cache": false },
-    "sb:push": { "cache": false },
-    "sb:reset": { "cache": false },
-    "sb:start": { "cache": false },
-    "sb:status": { "cache": false },
-    "sb:stop": { "cache": false }
-  },
-  "globalEnv": ["NODE_ENV", "SUPABASE_URL", "SUPABASE_ANON_KEY"]
+    "sb:diff": {
+      "cache": false
+    },
+    "sb:migrate-latest": {
+      "cache": false
+    },
+    "sb:migrate-new": {
+      "cache": false
+    },
+    "sb:pull": {
+      "cache": false
+    },
+    "sb:push": {
+      "cache": false
+    },
+    "sb:reset": {
+      "cache": false
+    },
+    "sb:start": {
+      "cache": false
+    },
+    "sb:status": {
+      "cache": false
+    },
+    "sb:stop": {
+      "cache": false
+    }
+  }
 }

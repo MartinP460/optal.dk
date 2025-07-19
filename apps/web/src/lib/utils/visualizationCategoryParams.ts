@@ -1,6 +1,6 @@
 import { queryParam, ssp } from 'sveltekit-search-params'
 import { get } from 'svelte/store'
-import type { KOTCategory, KOTDataCategories, KOTDataCategory } from 'reader'
+import type { KOTCategory, KOTDataCategories, KOTDataCategory } from '@optaldk/reader'
 import { getDefaultSubCategories } from '$lib/utils/chartCategoryHelpers'
 
 const categories = ['accepted', 'applied', 'quotient', 'gender', 'age', 'education']

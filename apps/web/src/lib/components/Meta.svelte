@@ -1,10 +1,14 @@
 <script lang="ts">
-  import type { KOTCourse } from 'reader'
+  import type { KOTCourse } from '@optaldk/reader'
   import { Badge } from '$lib/components/ui/badge'
-  import { t } from '$lib/i18n'
+  import { t } from '$lib/i18n/index.svelte'
   import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
 
-  export let course: KOTCourse
+  type Props = {
+    course: KOTCourse
+  }
+
+  let { course }: Props = $props()
 </script>
 
 <div class="flex items-center gap-2 mt-4 flex-wrap">
@@ -15,9 +19,9 @@
     <Badge class="text-xs">{course.location}</Badge>
   {/if}
   {#if course.studyStart}
-    <Badge class="capitalize">{$t(course.studyStart)}</Badge>
+    <Badge class="capitalize">{t(course.studyStart)}</Badge>
   {/if}
   {#if course.eLearning}
-    <Badge>{$t('eLearning')}</Badge>
+    <Badge>{t('eLearning')}</Badge>
   {/if}
 </div>

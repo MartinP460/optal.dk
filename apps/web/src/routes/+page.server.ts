@@ -1,8 +1,7 @@
 import _ from 'lodash'
-import { ParentGroupingName } from 'reader'
-import { get } from 'svelte/store'
+import { ParentGroupingName } from '@optaldk/reader'
 import { courseSearchIndexes, groupings, institutions } from '$lib/server/data'
-import { t as i18n } from '$lib/i18n'
+import { t } from '$lib/i18n/index.svelte'
 
 export const load = () => {
   // we are removing properties to reduce the amount of data sent over the network
@@ -20,8 +19,6 @@ export const load = () => {
       period
     }))
   }))
-
-  const t = get(i18n)
 
   const shortenedGroupings = _.mapValues(
     _.keyBy(Object.values(ParentGroupingName)),

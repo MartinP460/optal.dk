@@ -13,24 +13,27 @@
     VisTooltip,
     VisXYContainer
   } from '@unovis/svelte'
-  import type { KOTDataCategory } from 'reader'
+  import type { KOTDataCategory } from '@optaldk/reader'
   import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
   import { getChartProps } from '$lib/utils/chartHelpers'
 
-  let innerWidth = 0
+  let innerWidth = $state(0)
 
-  export let dataCategory: KOTDataCategory
-  export let displayType: DisplayType
+  type Props = {
+    dataCategory: KOTDataCategory
+    displayType: DisplayType
+  }
 
-  $: ({ data, originalData, x, y, color, tooltip, suggestedMaxY, tickValues } = getChartProps(
-    dataCategory,
-    displayType
-  ))
+  let { dataCategory, displayType }: Props = $props()
+
+  let { data, originalData, x, y, color, tooltip, suggestedMaxY, tickValues } = $derived(
+    getChartProps(dataCategory, displayType)
+  )
 </script>
 
 <svelte:window bind:innerWidth />
 
-<VisXYContainer class="min-h-80" height={320} yDomain={[0, suggestedMaxY]}>
+<VisXYContainer key={dataCategory} class="min-h-80" height={320} yDomain={[0, suggestedMaxY]}>
   <VisTooltip />
   <VisAxis type="y" domainLine={false} tickLine={false} />
   <VisAxis type="x" gridLine={false} tickLine={false} tickValues={tickValues(innerWidth ?? 0)} />

@@ -1,49 +1,52 @@
 <script lang="ts">
-  import type { KOTSubcategory } from 'reader'
-  import { t } from '$lib/i18n'
+  import type { KOTSubcategory } from '@optaldk/reader'
+  import { t } from '$lib/i18n/index.svelte'
   import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
   import Source from '$lib/components/Source.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
 
-  export let group:
-    | 'genderAccepted'
-    | 'genderApplied'
-    | 'ageAccepted'
-    | 'ageApplied'
-    | 'edAccepted'
-    | 'edApplied'
-    | null
+  type Props = {
+    group:
+      | 'genderAccepted'
+      | 'genderApplied'
+      | 'ageAccepted'
+      | 'ageApplied'
+      | 'edAccepted'
+      | 'edApplied'
+      | null
+    labels: KOTSubcategory[]
+    collapsedLabels: KOTSubcategory[] | null
+  }
 
-  export let labels: KOTSubcategory[]
-  export let collapsedLabels: KOTSubcategory[] | null
+  let { group, labels, collapsedLabels }: Props = $props()
 
-  let isLabelsExpanded = false
+  let isLabelsExpanded = $state(false)
 </script>
 
 <div class="flex flex-col sm:flex-row-reverse justify-between mt-4 sm:gap-8 sm:items-center">
   <Source class="self-end sm:self-start" />
   <div>
     {#if group}
-      <p class="text-muted-foreground text-sm">({$t(group)})</p>
+      <p class="text-muted-foreground text-sm">({t(group)})</p>
     {/if}
     <div class="flex flex-wrap gap-x-5 gap-y-2 mt-2">
       {#each !isLabelsExpanded && collapsedLabels ? collapsedLabels : labels as label (label)}
         <span class="flex items-center gap-2 text-sm text-muted-foreground">
           <div
-            class="w-3 h-3 rounded flex-shrink-0"
+            class="w-3 h-3 rounded shrink-0"
             style={`background-color: ${getColorFromSubcategory(label)}`}
-          />
-          {$t(label)}
+          ></div>
+          {t(label)}
         </span>
       {/each}
       {#if collapsedLabels}
         <Button
           variant="link"
           class="text-muted-foreground text-sm p-0 my-0 h-fit"
-          on:click={() => (isLabelsExpanded = !isLabelsExpanded)}
+          onclick={() => (isLabelsExpanded = !isLabelsExpanded)}
           >{isLabelsExpanded
-            ? $t('showFewer')
-            : $t('showXMore', {
+            ? t('showFewer')
+            : t('showXMore', {
                 number: labels.length - collapsedLabels.length
               })}
         </Button>

@@ -1,11 +1,21 @@
 <script lang="ts">
   import clsx from 'clsx'
 
-  export let element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  export let variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = element
-  export let responsive: boolean = false
-  let customClass = ''
-  export { customClass as class }
+  type Props = {
+    element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+    variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+    responsive?: boolean
+    class?: string
+    children?: import('svelte').Snippet
+  }
+
+  let {
+    element,
+    variant = element,
+    responsive = false,
+    class: customClass = '',
+    children
+  }: Props = $props()
 
   const classNames = {
     h1: `scroll-m-20 font-bold tracking-tight lg:text-5xl ${responsive ? 'sm:text-4xl text-3xl' : 'text-4xl'}`,
@@ -18,5 +28,5 @@
 </script>
 
 <svelte:element this={element} class={clsx(classNames[variant], customClass)}
-  ><slot />
+  >{@render children?.()}
 </svelte:element>

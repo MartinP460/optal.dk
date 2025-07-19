@@ -4,13 +4,19 @@
 -->
 <script lang="ts">
   import { VisDonut, VisSingleContainer, VisTooltip } from '@unovis/svelte'
-  import type { KOTDataCategory } from 'reader'
+  import type { KOTDataCategory } from '@optaldk/reader'
   import { getSingleChartProps } from '$lib/utils/chartHelpers'
 
-  export let dataCategory: KOTDataCategory
-  export let period: number[]
+  type Props = {
+    dataCategory: KOTDataCategory
+    period: number[]
+  }
 
-  $: ({ data, centralLabel, value, color, triggers } = getSingleChartProps(dataCategory, period[1]))
+  let { dataCategory, period }: Props = $props()
+
+  let { data, centralLabel, value, color, triggers } = $derived(
+    getSingleChartProps(dataCategory, period[1])
+  )
 </script>
 
 <VisSingleContainer class="min-h-80" {data}>

@@ -14,7 +14,7 @@ describe('readCoreKOTData', () => {
     expect(ku).toBeDefined()
     expect(ku?.latestName).toBeDefined()
     expect(ku?.id).toBeDefined()
-    expect(ku?.institutionNames).toBeDefined
+    expect(ku?.institutionNames).toBeDefined()
     expect(ku?.institutionNames.includes('Københavns Universitet')).toBeTruthy()
     expect(ku?.period).toStrictEqual([2011, 2024])
 
@@ -43,7 +43,7 @@ describe('readCoreKOTData', () => {
 
     expect(cs?.latestName).toBeDefined()
     expect(cs?.id).toBeDefined()
-    expect(cs?.courseNames).toBeDefined
+    expect(cs?.courseNames).toBeDefined()
     expect(cs?.courseNames.includes('Datalogi')).toBeTruthy()
     expect(cs?.period).toStrictEqual([2011, 2024])
 
