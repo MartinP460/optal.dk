@@ -28,7 +28,7 @@ get along, so we shut typescript up by casting `value` to `never`.
 	{#snippet children({ thumbs })}
 		<span
 			data-orientation={orientation}
-			class="bg-secondary relative grow overflow-hidden rounded-full data-[orientation='horizontal']:h-2 data-[orientation='vertical']:h-full data-[orientation='horizontal']:w-full data-[orientation='vertical']:w-2"
+			class="relative grow overflow-hidden rounded-full data-[orientation='horizontal']:h-2 data-[orientation='vertical']:h-full data-[orientation='horizontal']:w-full data-[orientation='vertical']:w-2 {restProps.type === 'multiple' ? 'bg-secondary' : 'bg-primary'}"
 		>
 			<SliderPrimitive.Range
 				class="bg-primary absolute data-[orientation='horizontal']:h-full data-[orientation='vertical']:w-full"
