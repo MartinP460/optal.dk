@@ -33,7 +33,7 @@
     "paneforge": "^1.0.0",
     "postcss": "^8.4.27",
     "slugify": "^1.6.6",
-    "svelte": "^5.0.0",
+    "svelte": "^5.34.6",
     "svelte-check": "^4.3.0",
     "svelte-sitemap": "^2.7.1",
     "sveltekit-search-params": "^3.0.0",
