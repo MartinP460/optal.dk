@@ -8,6 +8,7 @@
     "coverage": "vitest run --coverage",
     "format": "prettier --ignore-path ../../.prettierignore --write . && eslint . --fix",
     "gen": "tsx ./src/generate.ts",
+    "analyze:new-courses": "tsx ./src/analyzeNewCourses.ts",
     "lint": "prettier --ignore-path ../../.prettierignore --check . && eslint .",
     "test:watch": "vitest",
     "test": "vitest run"
