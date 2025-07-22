@@ -15,13 +15,16 @@ export const load = async () => {
       return
     }
 
-    const preferredLanguage = window.navigator.language
+    const preferredLanguages = window.navigator.languages
 
-    if (preferredLanguage.includes('en')) {
-      locale.value = 'en'
-      localStorage.setItem(LOCAL_STORAGE_LANGUAGE, 'en')
-    } else {
+    const prefersDanish = preferredLanguages.includes('da')
+    const prefersEnglish = preferredLanguages.includes('en') || preferredLanguages.includes('en-US')
+
+    if (prefersDanish && !prefersEnglish) {
       locale.value = 'da'
+      localStorage.setItem(LOCAL_STORAGE_LANGUAGE, 'da')
+    } else if (prefersEnglish) {
+      locale.value = 'en'
     }
   }
 }
