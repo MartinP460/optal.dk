@@ -473,7 +473,7 @@ export const translations = {
     faqAnswer4: 'Det er virkelig værdsat! Tryk på knappen "Feedback" i toppen eller bunden af siden og skriv dit forslag ind. Alle forslag er velkomne og læses.',
     faqAnswer5: 'Hvert år i juli udgiver uddannelses- og forskningsministeriet data relateret til søgning og optagelse på danske videregående uddannelser. Dette omfatter antallet af optagne og ansøgere, kønsfordelingen, og fordelingen af optagne og ansøgere baseret på alder og adgangsgivende uddannelse (baggrund). Begrebet "optagelsestal" refererer til alle disse typer tal.',
     faqQuestion1: 'Hvorfor er min uddannelse ikke angivet på optal.dk?',
-    faqQuestion2: 'Hvad er forskellen på kurser, uddannelser og institutioner?',
+    faqQuestion2: 'Hvad er forskellen på kurser, retninger og institutioner?',
     faqQuestion3: 'Hvor kommer dataen fra?',
     faqQuestion4: 'Jeg har et forslag til forbedring - hvor fortæller jeg det?',
     faqQuestion5: 'Hvad er optagelsestal?',
