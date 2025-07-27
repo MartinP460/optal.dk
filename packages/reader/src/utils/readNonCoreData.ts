@@ -70,9 +70,17 @@ async function getAcceptedOrAppliedData(
   let newInstitutions = institutions
 
   const data = await Promise.all(
-    AVAILABLE_YEARS.map((year) => {
+    AVAILABLE_YEARS.map(async (year) => {
       const filePath = path.resolve(`data/${category}/${type}/${year}.csv`)
-      return readCSV(filePath)
+
+      let result: string[][] = []
+
+      try {
+        result = await readCSV(filePath)
+        return result
+      } catch {
+        return result
+      }
     })
   )
 
