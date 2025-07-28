@@ -1,4 +1,4 @@
-import _, { omit } from 'lodash'
+import _ from 'lodash'
 import { Donut } from '@unovis/ts'
 import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from '@optaldk/reader'
 import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
@@ -218,7 +218,7 @@ function getSingleValue() {
 function getSingleTriggers(dataCategory: KOTDataCategory, year: number) {
   const dataset = dataCategory.datasets.find((dataset) => dataset.year === year)
 
-  const total = Object.values(omit(dataset, 'year')).reduce(
+  const total = Object.values(_.omit(dataset, 'year')).reduce(
     (sum: number, val) => sum + Number(val),
     0
   )
