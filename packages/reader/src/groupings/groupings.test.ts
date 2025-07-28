@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest'
 import { getGroupings } from './groupings'
-import { GroupingName } from '../constants'
+import { GroupingName, LATEST_YEAR } from '../constants'
 import { getInstitutions } from '../institutions'
 
 it('returns the sum of dataset properties for a year', async () => {
@@ -12,7 +12,7 @@ it('returns the sum of dataset properties for a year', async () => {
   expect(datalogi?.id).toBe('computerScience')
   expect(datalogi?.slug).toBe('computer-science')
   expect(datalogi?.name).toBe('computerScience')
-  expect(datalogi?.period).toStrictEqual([2011, 2024])
+  expect(datalogi?.period).toStrictEqual([2011, LATEST_YEAR])
   expect(datalogi?.parentGroupings).toStrictEqual(['naturalScience', 'it'])
 
   const accepted = datalogi?.dataCategories.accepted

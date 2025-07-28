@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { readCoreData } from './core'
 import { KOTInstitution } from '../../types'
 import { removeDuplicates } from '../../utils/removeDuplicates'
+import { LATEST_YEAR } from '../../constants'
 
 describe('readCoreKOTData', () => {
   it('returns all the institutions required properties', async () => {
@@ -16,7 +17,7 @@ describe('readCoreKOTData', () => {
     expect(ku?.id).toBeDefined()
     expect(ku?.institutionNames).toBeDefined()
     expect(ku?.institutionNames.includes('Københavns Universitet')).toBeTruthy()
-    expect(ku?.period).toStrictEqual([2011, 2024])
+    expect(ku?.period).toStrictEqual([2011, LATEST_YEAR])
 
     expect(ku?.dataCategories.accepted).toBeDefined()
     expect(ku?.dataCategories.applied).toBeDefined()
@@ -45,7 +46,7 @@ describe('readCoreKOTData', () => {
     expect(cs?.id).toBeDefined()
     expect(cs?.courseNames).toBeDefined()
     expect(cs?.courseNames.includes('Datalogi')).toBeTruthy()
-    expect(cs?.period).toStrictEqual([2011, 2024])
+    expect(cs?.period).toStrictEqual([2011, LATEST_YEAR])
 
     expect(cs?.dataCategories.accepted).toBeDefined()
     expect(cs?.dataCategories.applied).toBeDefined()
