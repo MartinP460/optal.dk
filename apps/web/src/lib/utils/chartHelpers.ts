@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import _, { omit } from 'lodash'
 import { Donut } from '@unovis/ts'
 import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from '@optaldk/reader'
 import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
@@ -34,7 +34,7 @@ export function getSingleChartProps(dataCategory: KOTDataCategory, year: number)
 
   return {
     data,
-    triggers: getSingleTriggers(),
+    triggers: getSingleTriggers(dataCategory, year),
     centralLabel: getCentralLabel(data, year),
     value: getSingleValue(),
     color: getSingleColorFunction()
@@ -215,10 +215,21 @@ function getSingleValue() {
   return (d: SingleDatapoint) => d.value
 }
 
-function getSingleTriggers() {
+function getSingleTriggers(dataCategory: KOTDataCategory, year: number) {
+  const dataset = dataCategory.datasets.find((dataset) => dataset.year === year)
+
+  const total = Object.values(omit(dataset, 'year')).reduce(
+    (sum: number, val) => sum + Number(val),
+    0
+  )
+
+  const shouldShowProportion = ['education', 'age'].includes(dataCategory.name)
+
   return {
     [Donut.selectors.segment]: ({ data }: { data: SingleDatapoint }) => {
       const color = getColorFromSubcategory(data.subCategory)
+
+      const proportion = '(' + Math.round((data.value / total) * 100) + '%)'
 
       return `
       <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-xs">
@@ -228,8 +239,16 @@ function getSingleTriggers() {
             <span class="w-2 h-2 inline-block ml-1 mr-2 rounded-[2px]" style="background-color: ${color}"></span>
           </span>
           <span class="font-bold text-foreground">
-            ${data.value}
+            <span>${data.value}</span>
+            ${
+              shouldShowProportion
+                ? `<span class="text-muted-foreground text-xs ml-1">
+              ${proportion}
+            </span>`
+                : ''
+            }
             <span class="font-normal text-xs text-muted-foreground">
+              ${dataCategory.unit ? t(dataCategory.unit) : ''}
             </span>
           </span>
         </div>
