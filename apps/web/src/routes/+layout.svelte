@@ -13,6 +13,7 @@
   import Sidebar from '$lib/components/Sidebar.svelte'
   import LanguageSelect from '$lib/components/LanguageSelect.svelte'
   import DarkModeMenu from '$lib/components/DarkModeMenu.svelte'
+  import Credits from '$lib/components/Credits.svelte'
   import { cn } from '$lib/utils'
 
   let { children } = $props()
@@ -77,7 +78,7 @@
       </div>
     </header>
     {@render children()}
-    <footer class="w-full flex justify-center mt-auto">
+    <footer class="w-full flex flex-col items-center mt-auto">
       <nav class="flex flex-col my-12 items-center">
         <ul class="flex gap-x-4 flex-wrap justify-center gap-y-2 w-72 sm:w-fit">
           <li>
@@ -119,6 +120,9 @@
           </li>
         </ul>
       </nav>
+      <div class="lg:absolute lg:right-16 lg:mt-14 mb-12">
+        <Credits />
+      </div>
     </footer>
   </Sheet.Root>
 </div>
