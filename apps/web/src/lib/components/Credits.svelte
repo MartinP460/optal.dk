@@ -1,5 +1,5 @@
 <script>
-  import { t, locale } from '$lib/i18n/index.svelte'
+  import { locale, t } from '$lib/i18n/index.svelte'
 </script>
 
 <div class="flex flex-col lg:flex-row text-body items-center group">
