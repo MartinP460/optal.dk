@@ -30,6 +30,7 @@ export const cities = [
   'horsens',
   'ikast',
   'jelling',
+  'risskov',
   'kalundborg',
   'kgs. lyngby',
   'københavn k',
