@@ -137,7 +137,7 @@
                 {/key}
               </div>
               {#if isSelectedSubCategoryGroup(group.subCategories)}
-                <div class="ml-3 max-h-96 sm:max-h-fit overflow-y-scroll" transition:slide>
+                <div class="ml-3 max-h-96 sm:max-h-fit overflow-y-auto" transition:slide>
                   {#each isSubCategoriesExpanded || !group.collapsedSubCategories ? group.subCategories : group.collapsedSubCategories as subCategory (subCategory)}
                     <div class="flex items-center space-x-2">
                       {#key selectedDataCategory}
