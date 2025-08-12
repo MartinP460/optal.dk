@@ -1,6 +1,11 @@
 import _ from 'lodash'
 import { Donut } from '@unovis/ts'
-import type { KOTDataCategory, KOTSubcategory, KOTSubcategoryAge } from '@optaldk/reader'
+import {
+  KOTCategory,
+  type KOTDataCategory,
+  type KOTSubcategory,
+  type KOTSubcategoryAge
+} from '@optaldk/reader'
 import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
 import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
 import { locale, t } from '$lib/i18n/index.svelte'
@@ -141,13 +146,15 @@ function getTickValueFunction(datasets: Datapoints) {
 }
 
 function getTooltip(dataCategory: KOTDataCategory) {
-  const isGender = dataCategory.name === 'gender'
-
   return (d: Datapoint) => {
+    const dataset = dataCategory.datasets.find((dataset) => dataset.year === d.year)
+
+    const showProportion =
+      dataCategory.name === KOTCategory.Gender && Object.keys(dataset ?? {}).length > 2
+
     let total = 0
 
-    if (isGender) {
-      const dataset = dataCategory.datasets.find((dataset) => dataset.year === d.year)
+    if (showProportion) {
       total =
         // @ts-expect-error It does exist on one of the objects (the one we selected).
         (dataset?.genderAcceptedMen ?? dataset?.genderAppliedMen) +
@@ -179,6 +186,9 @@ function getTooltip(dataCategory: KOTDataCategory) {
               // @ts-expect-error Same as above.
               const color = getColorFromSubcategory(category)
 
+              const proportion = (labelNumber / total) * 100
+              const proportionLabel = `(${proportion < 1 ? '<1' : Math.round(proportion)}%)`
+
               return `
               <div class="flex flex-col w-full">
                   <span class="text-[0.70rem] uppercase text-muted-foreground flex items-center">
@@ -187,8 +197,8 @@ function getTooltip(dataCategory: KOTDataCategory) {
                   </span>
                   <span class="font-bold text-foreground">
                     <span>${label}</span>
-                    <span class="text-muted-foreground text-xs ${isGender ? 'ml-1' : ''}">
-                      ${isGender ? '(' + Math.round((labelNumber / total) * 100) + '%)' : ''}
+                    <span class="text-muted-foreground text-xs ${showProportion ? 'ml-1' : ''}">
+                      ${showProportion ? proportionLabel : ''}
                     </span>
                     <span class="font-normal text-xs text-muted-foreground">
                       ${dataCategory.unit ? t(dataCategory.unit) : ''}
@@ -223,13 +233,14 @@ function getSingleTriggers(dataCategory: KOTDataCategory, year: number) {
     0
   )
 
-  const shouldShowProportion = ['education', 'age'].includes(dataCategory.name)
+  const showProportion = [KOTCategory.Education, KOTCategory.Age].includes(dataCategory.name)
 
   return {
     [Donut.selectors.segment]: ({ data }: { data: SingleDatapoint }) => {
       const color = getColorFromSubcategory(data.subCategory)
 
-      const proportion = '(' + Math.round((data.value / total) * 100) + '%)'
+      const proportion = (data.value / total) * 100
+      const proportionLabel = `(${proportion < 1 ? '<1' : Math.round(proportion)}%)`
 
       return `
       <div class="flex flex-col gap-1 bg-background rounded-lg border p-2 shadow-xs">
@@ -241,9 +252,9 @@ function getSingleTriggers(dataCategory: KOTDataCategory, year: number) {
           <span class="font-bold text-foreground">
             <span>${data.value}</span>
             ${
-              shouldShowProportion
+              showProportion
                 ? `<span class="text-muted-foreground text-xs ml-1">
-              ${proportion}
+              ${proportionLabel}
             </span>`
                 : ''
             }
