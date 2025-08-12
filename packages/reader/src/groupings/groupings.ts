@@ -10,7 +10,7 @@ import {
 } from '../types'
 
 // It doesn't make any sense to sum quotient so we exclude it.
-export const DATACATEGORIES_TO_EXCLUDE = ['quotient']
+const DATACATEGORIES_TO_EXCLUDE = ['quotient']
 
 export function getGroupings(institutions: KOTInstitution[]) {
   const courseMap = new Map<KOTId, KOTCourse>()
@@ -43,40 +43,44 @@ function getNewGrouping(
     return course
   })
 
-  // We select the longest running course as the baseline period but this could cause bugs.
-  const longestRunningCourse = courses.sort((a, b) =>
-    (a.dataCategories.accepted?.datasets ?? []).length <
-    (b.dataCategories.accepted?.datasets ?? []).length
-      ? 1
-      : -1
-  )[0]
+  const years = _.sortBy(
+    _.uniq(
+      courses.flatMap(
+        (course) => course.dataCategories.accepted?.datasets.map((dataset) => dataset.year) ?? 0
+      )
+    )
+  )
 
   const dataCategories = _.mapValues(
-    _.omit(longestRunningCourse?.dataCategories, DATACATEGORIES_TO_EXCLUDE),
-    (dataCategory) => ({
-      ...dataCategory,
-      datasets: dataCategory?.datasets.map((dataset) =>
-        _.mapValues(dataset, (value, key) => {
-          if (key === 'year') return value
+    _.omit(courses[0]?.dataCategories, DATACATEGORIES_TO_EXCLUDE),
+    (dataCategory) => {
+      if (!dataCategory) return undefined
 
-          return _.sum(
-            courses.map((course) => {
-              const foundDataset = course.dataCategories[dataCategory.name]?.datasets.find(
-                (dataCategory) => dataCategory.year === dataset.year
-              )
+      return {
+        ...dataCategory,
+        datasets: years.map((year) => {
+          const baseDataset = dataCategory.datasets[0] || {} // Use an empty object if no datasets exist
+          return _.mapValues(baseDataset, (_1, key) => {
+            if (key === 'year') return year
 
-              if (!foundDataset) return 0
+            return _.sum(
+              courses.map((course) => {
+                const foundDataset = course.dataCategories[dataCategory.name]?.datasets.find(
+                  (ds) => ds.year === year
+                )
 
-              // @ts-expect-error bruh
-              return foundDataset[key as KOTSubcategory]
-            })
-          )
+                if (!foundDataset) return 0
+
+                // @ts-expect-error bruh
+                return foundDataset[key as KOTSubcategory]
+              })
+            )
+          })
         })
-      )
-    })
+      }
+    }
   ) as KOTDataCategories
 
-  const years = courses.flatMap((course) => course.period)
   const period = [Math.min(...years), Math.max(...years)]
 
   return {
