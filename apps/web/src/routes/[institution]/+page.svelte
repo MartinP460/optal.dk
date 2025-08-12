@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { LATEST_YEAR } from '@optaldk/reader'
   import Breadcrumb from '$lib/components/Breadcrumb.svelte'
   import Visualization from '$lib/components/Visualization.svelte'
   import { t } from '$lib/i18n/index.svelte'
@@ -24,17 +23,12 @@
       institutionYears: getPeriodIntervalFromPeriod(institution.period)
     })
   )
-
-  const institutionIsInactive =
-    institution.dataCategories.accepted?.datasets.slice(-1)[0].year !== LATEST_YEAR
 </script>
 
 <svelte:head>
   <title>{title}</title>
   <meta name="description" content={description} />
-  {#if institutionIsInactive}
-    <meta name="robots" content="noindex" />
-  {/if}
+  <meta name="robots" content="noindex" />
 </svelte:head>
 
 <main class="mt-6 sm:mt-10">

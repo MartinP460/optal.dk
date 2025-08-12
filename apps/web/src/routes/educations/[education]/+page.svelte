@@ -22,6 +22,7 @@
 <svelte:head>
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="robots" content="noindex" />
 </svelte:head>
 
 <main class="mt-6 sm:mt-10">
