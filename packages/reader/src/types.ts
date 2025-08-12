@@ -44,9 +44,16 @@ export type KOTInstitution = {
   period: number[]
 }
 
-export type KOTCategory = 'accepted' | 'applied' | 'quotient' | 'gender' | 'age' | 'education'
+export enum KOTCategory {
+  Accepted = 'accepted',
+  Applied = 'applied',
+  Quotient = 'quotient',
+  Gender = 'gender',
+  Age = 'age',
+  Education = 'education'
+}
 
-export type KOTSubcategoryGeneric<T extends KOTCategory> = Omit<
+export type KOTSubcategoryGeneric<T extends keyof KOTDataCategories> = Omit<
   keyof NonNullable<KOTDataCategories[T]>['datasets'][number],
   'year'
 >

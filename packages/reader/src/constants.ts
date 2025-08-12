@@ -6,6 +6,15 @@ export const AVAILABLE_YEARS = [
 
 export const LATEST_YEAR = 2025
 
+export const KOT_CATEGORY_UNITS = {
+  accepted: 'persons',
+  applied: 'persons',
+  quotient: null,
+  gender: null,
+  age: null,
+  education: null
+}
+
 export enum ParentGroupingName {
   EconomicsAndBusiness = 'economicsAndBusiness',
   Healthcare = 'healthcare',

@@ -1,7 +1,7 @@
 import slugify from 'slugify'
 import path from 'path'
 import { readCSV } from '../../utils/readCSV'
-import { AVAILABLE_YEARS } from '../../constants'
+import { AVAILABLE_YEARS, KOT_CATEGORY_UNITS } from '../../constants'
 import { KOTCategory, KOTDataCategories, KOTInstitutionPartial, KOTSubcategory } from '../../types'
 import { convertToNumber } from '../../utils/convertToNumber'
 import { cities } from '../../utils/cities'
@@ -148,9 +148,9 @@ function upsertCourse(
 
   const additionalData = parseCourseName(courseId, courseName)
   const newDataCategories = addDataCategories(row, course?.dataCategories ?? {}, year, [
-    'accepted',
-    'applied',
-    'quotient'
+    KOTCategory.Accepted,
+    KOTCategory.Applied,
+    KOTCategory.Quotient
   ])
   const period = createPeriod(newDataCategories)
 
@@ -187,8 +187,8 @@ function upsertInstitutionData(
   const filteredInstitutions = institutions.filter((inst) => inst.id !== institution.id)
 
   const newDataCategories = addDataCategories(row, institution.dataCategories, year, [
-    'accepted',
-    'applied'
+    KOTCategory.Accepted,
+    KOTCategory.Applied
   ])
   const period = createPeriod(newDataCategories)
 
@@ -197,21 +197,12 @@ function upsertInstitutionData(
     {
       ...institution,
       dataCategories: addDataCategories(row, institution.dataCategories, year, [
-        'accepted',
-        'applied'
+        KOTCategory.Accepted,
+        KOTCategory.Applied
       ]),
       period
     }
   ]
-}
-
-const CATEGORY_UNITS = {
-  accepted: 'persons',
-  applied: 'persons',
-  quotient: null,
-  gender: null,
-  age: null,
-  education: null
 }
 
 function addDataCategories(
@@ -225,7 +216,7 @@ function addDataCategories(
       category,
       {
         name: category,
-        unit: CATEGORY_UNITS[category],
+        unit: KOT_CATEGORY_UNITS[category],
         datasets: [
           ...(dataCategories[category]?.datasets ?? []),
           {
@@ -245,17 +236,17 @@ function getDatapointsFromCategory(
   [key in KOTSubcategory]?: number | string
 } {
   switch (category) {
-    case 'accepted':
+    case KOTCategory.Accepted:
       return {
         acceptedAdmitted: convertToNumber(row[CSVDataIndexes.AdmittedDirect]),
         acceptedStandby: convertToNumber(row[CSVDataIndexes.AdmittedStandby])
       }
-    case 'applied':
+    case KOTCategory.Applied:
       return {
         appliedTotal: convertToNumber(row[CSVDataIndexes.AppliedTotal]),
         appliedFirstpriority: convertToNumber(row[CSVDataIndexes.AppliedFirstPriority])
       }
-    case 'quotient':
+    case KOTCategory.Quotient:
       return {
         quotientPrimary: row[CSVDataIndexes.QuotientPrimary],
         quotientStandby: row[CSVDataIndexes.QuotientStandby]
