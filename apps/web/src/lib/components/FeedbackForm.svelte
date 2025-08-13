@@ -1,7 +1,7 @@
 <script lang="ts">
   import clsx from 'clsx'
-  import type { PopoverTriggerProps } from 'bits-ui'
   import type { DrawerTriggerProps } from 'vaul-svelte'
+  import type { PopoverTriggerProps } from 'bits-ui'
   import { Check, Loader2 } from '@lucide/svelte'
   import * as Popover from '$lib/components/ui/popover'
   import * as Drawer from '$lib/components/ui/drawer'
