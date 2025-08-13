@@ -12,7 +12,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@lucide/svelte": "^0.525.0",
+    "@lucide/svelte": "^0.482.0",
     "@optaldk/eslint-config-custom": "*",
     "@optaldk/reader": "*",
     "@sveltejs/adapter-static": "^3.0.8",
@@ -25,7 +25,7 @@
     "@unovis/svelte": "^1.5.2",
     "@unovis/ts": "^1.5.2",
     "autoprefixer": "^10.4.21",
-    "bits-ui": "^2.8.11",
+    "bits-ui": "^1.8.0",
     "clsx": "^2.1.1",
     "fuse.js": "^7.1.0",
     "lodash": "^4.17.21",
