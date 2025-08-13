@@ -1,5 +1,7 @@
 <script lang="ts">
   import clsx from 'clsx'
+  import type { PopoverTriggerProps } from 'bits-ui'
+  import type { DrawerTriggerProps } from 'vaul-svelte'
   import { Check, Loader2 } from '@lucide/svelte'
   import * as Popover from '$lib/components/ui/popover'
   import * as Drawer from '$lib/components/ui/drawer'
@@ -8,8 +10,6 @@
   import { t } from '$lib/i18n/index.svelte'
   import { sendFeedback } from '$lib/utils/sendFeedback'
   import { cn } from '$lib/utils'
-  import type { PopoverTriggerProps } from 'bits-ui'
-  import type { DrawerTriggerProps } from 'vaul-svelte'
 
   type Props = {
     triggerProps?: PopoverTriggerProps | DrawerTriggerProps
