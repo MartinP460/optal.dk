@@ -7,6 +7,7 @@ export async function readCSV(filePath: string): Promise<string[][]> {
 
   return new Promise((resolve) => {
     Papa.parse(csvData, {
+      delimiter: ';',
       complete: (results) => {
         resolve(results.data as string[][])
       }
