@@ -1,6 +1,5 @@
 <script lang="ts">
   import { IconAdjustments } from '@tabler/icons-svelte'
-  import type { KOTDataCategories, KOTDataCategory } from '@optaldk/reader'
   import * as Popover from '$lib/components/ui/popover'
   import * as Drawer from '$lib/components/ui/drawer'
   import Button, { buttonVariants } from '$lib/components/ui/button/button.svelte'
@@ -8,16 +7,11 @@
   import VisualizationCategorySelectInput from '$lib/components/VisualizationCategorySelectInput.svelte'
   import DotSeperator from '$lib/components/DotSeperator.svelte'
   import { getColorFromCategory } from '$lib/utils/getColorFromDataset'
+  import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
 
-  type Props = {
-    dataCategories: KOTDataCategories
-    selectedDataCategory: KOTDataCategory
-    onCategorySelect: (value: KOTDataCategory) => void
-  }
+  const { category } = $derived(getVisualizationState())
 
-  let { dataCategories, selectedDataCategory, onCategorySelect }: Props = $props()
-
-  let color = $derived(getColorFromCategory(selectedDataCategory.name))
+  let color = $derived(getColorFromCategory(category.label))
 </script>
 
 <Popover.Root>
@@ -28,7 +22,7 @@
         <div class="text-left flex-1">
           <p class="text-xs text-muted-foreground">{t('categories')}</p>
           <span class="inline-flex gap-2 items-center">
-            <p>{t(selectedDataCategory.name)}</p>
+            <p>{t(category.label)}</p>
             <DotSeperator style={`background-color: ${color}`} />
           </span>
         </div>
@@ -36,7 +30,7 @@
     {/snippet}
   </Popover.Trigger>
   <Popover.Content align="start" class="flex flex-col w-fit py-2 min-w-44">
-    <VisualizationCategorySelectInput {dataCategories} {selectedDataCategory} {onCategorySelect} />
+    <VisualizationCategorySelectInput />
   </Popover.Content>
 </Popover.Root>
 
@@ -48,7 +42,7 @@
         <div class="text-left">
           <p class="text-xs text-muted-foreground">{t('categories')}</p>
           <span class="inline-flex gap-2">
-            <p>{t(selectedDataCategory.name)}</p>
+            <p>{t(category.label)}</p>
             <DotSeperator style={`background-color: ${color}`} />
           </span>
         </div>
@@ -61,11 +55,7 @@
       <Drawer.Description>{t('categoriesSelect')}</Drawer.Description>
     </Drawer.Header>
     <div class="px-6 py-2">
-      <VisualizationCategorySelectInput
-        {dataCategories}
-        {selectedDataCategory}
-        {onCategorySelect}
-      />
+      <VisualizationCategorySelectInput />
     </div>
     <Drawer.Footer>
       <Drawer.Close class={buttonVariants({ variant: 'default' })}>{t('seeChanges')}</Drawer.Close>

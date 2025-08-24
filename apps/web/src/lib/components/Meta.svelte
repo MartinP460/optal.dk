@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { KOTCourse } from '@optaldk/reader'
+  import type { NewKOTCourse } from '@optaldk/reader'
   import { Badge } from '$lib/components/ui/badge'
   import { t } from '$lib/i18n/index.svelte'
-  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
+  import { getStringFromPeriod } from '$lib/utils/getStringFromPeriod'
 
   type Props = {
-    course: KOTCourse
+    course: NewKOTCourse
   }
 
   let { course }: Props = $props()
@@ -13,7 +13,7 @@
 
 <div class="flex items-center gap-2 mt-4 flex-wrap">
   {#if course.location}
-    <Badge class="text-xs">{getPeriodIntervalFromPeriod(course.period)}</Badge>
+    <Badge class="text-xs">{getStringFromPeriod(course.period)}</Badge>
   {/if}
   {#if course.location}
     <Badge class="text-xs">{course.location}</Badge>

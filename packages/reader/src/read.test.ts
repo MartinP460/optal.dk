@@ -1,9 +1,11 @@
+import _ from 'lodash'
 import { describe, expect, it } from 'vitest'
 import { LATEST_YEAR, readData } from './read'
-import { KOTDataPointKeys } from './newTypes'
+import { NewKOTDataPointKeys } from './newTypes'
+import { AVAILABLE_YEARS, GroupingName } from './constants'
 
 describe('readData', async () => {
-  const { institutions, courses, institutionCourses, data } = await readData()
+  const { institutions, courses, institutionCourses, data, groupings } = await readData()
 
   describe('institutions', () => {
     it("generates institutions with unique KOT ID's", () => {
@@ -71,17 +73,58 @@ describe('readData', async () => {
 
   describe('data', () => {
     it("generates data with unique KOT ID's", () => {
-      const uniqueIds = new Set(data.map((ent) => ent.KOTId))
+      const uniqueIds = new Set(data.map((ent) => ent.foreignKeyId))
       expect(data.length).toBe(uniqueIds.size)
     })
 
     it('generates data with all KOT datapoint keys', () => {
       const KOTCourseId = '10220'
-      const courseData = data.find((ent) => ent.KOTId === KOTCourseId)
+      const course = courses.find((crs) => crs.KOTId === KOTCourseId)
+      const courseData = data.find((ent) => ent.foreignKeyId === course?.id)
 
       expect(
         Object.values(courseData?.data.find((datapoints) => datapoints.year === 2020) ?? {})
-      ).toHaveLength(Object.values(KOTDataPointKeys).length + 1)
+      ).toHaveLength(Object.values(NewKOTDataPointKeys).length + 1)
+    })
+
+    it('generates data in chronological order', () => {
+      const KOTCourseId = '41010'
+      const course = courses.find((crs) => crs.KOTId === KOTCourseId)
+      const courseYears = data
+        .find((ent) => ent.foreignKeyId === course?.id)
+        ?.data.map((entry) => entry.year)
+
+      expect(courseYears).toStrictEqual(AVAILABLE_YEARS)
+    })
+  })
+
+  describe('groupings', () => {
+    it('generates groupings with all KOT datapoint keys', () => {
+      const groupingName = GroupingName.Anthropology
+      const grouping = groupings.find((grp) => grp.name === groupingName)!
+      const groupingData = data.find((ent) => ent.foreignKeyId === grouping.id)
+
+      expect(
+        Object.values(groupingData?.data.find((datapoints) => datapoints.year === 2020) ?? {})
+      ).toHaveLength(Object.values(NewKOTDataPointKeys).length + 1)
+    })
+
+    it('generates groupings with correctly summarized data', () => {
+      const groupingName = GroupingName.Anthropology
+      const courseIds = groupings.find((grouping) => grouping.name === groupingName)!.courseIds
+      const courseData = courses
+        .filter((crs) => courseIds.includes(crs.KOTId))
+        .map((crs) => data.find((ent) => ent.foreignKeyId === crs.id)!.data[0])
+
+      const year = courseData[0].year
+      const sum = _.sum(courseData.map((datapoint) => datapoint.acceptedAdmitted))
+
+      const grouping = groupings.find((grp) => grp.name === groupingName)!
+      const groupingData = data
+        .find((ent) => ent.foreignKeyId === grouping.id)
+        ?.data.find((datapoint) => datapoint.year === year)
+
+      expect(sum).toBe(groupingData?.acceptedAdmitted)
     })
   })
 })

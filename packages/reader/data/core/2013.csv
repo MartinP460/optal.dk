@@ -1,968 +1,968 @@
-;10000;Københavns Universitet;;;;;;;;
-10440;10000;Antropologi        ;105;11;788;291;10,9;10,6;;
-10335;10000;Asienstudier (indologi)       ;8;0;28;9;alle optaget, ledige pladser;;;
-10337;10000;Asienstudier (indonesisk/sydøstasienstudier)       ;3;0;18;4;alle optaget, ledige pladser;;;
-10340;10000;Asienstudier (japanstudier)       ;25;5;167;76;8,9;7,8;;
-10342;10000;Asienstudier (kinastudier)       ;47;5;203;71;7,2;6,7;;
-10346;10000;Asienstudier (koreastudier)       ;15;3;98;34;7;6,4;;
-10384;10000;Asienstudier (thai/sydøstasienstudier)       ;15;0;40;13;5,2;alle optaget;;
-10386;10000;Asienstudier (tibetologi)       ;6;0;36;5;alle optaget, ledige pladser;;;
-10304;10000;Audiologopædi        ;40;5;209;107;9,1;8,6;;
-10205;10000;Biokemi        ;125;13;465;111;7,1;5,4;;
-10250;10000;Biologi        ;235;22;624;263;6,2;alle optaget;;
-10234;10000;Biologi - Bioteknologi      ;75;0;286;71;6,8;alle optaget;;
-10306;10000;Dansk        ;230;25;605;209;7,1;alle optaget;;
-10220;10000;Datalogi        ;162;16;467;198;6,6;5,4;;
-10308;10000;Engelsk        ;190;20;711;229;7,2;6,2;;
-10310;10000;Eskimologi        ;13;0;44;12;alle optaget, ledige pladser;;;
-10312;10000;Europæisk etnologi       ;70;8;218;58;8,3;7,1;;
-10117;10000;Farmaci        ;240;25;655;249;7,3;6,7;;
-10314;10000;Film- og medievidenskab      ;99;10;786;349;10,7;10,4;;
-10316;10000;Filosofi        ;80;10;416;127;9,2;8,7;;
-10318;10000;Finsk        ;4;0;21;3;alle optaget, ledige pladser;;;
-10115;10000;Folkesundhedsvidenskab        ;70;15;274;100;9,5;8,2;;
-10322;10000;Forhistorisk arkæologi       ;33;4;165;41;7,1;6,6;;
-10221;10000;Forsikringsmatematik        ;50;5;242;114;10,4;9,5;;
-10324;10000;Fransk sprog, litteratur og kultur    ;46;0;134;37;alle optaget, ledige pladser;;;
-10230;10000;Fysiske fag (astronomi, biofysik, fysik, geofysik, meteorologi)  ;164;0;306;155;alle optaget, ledige pladser;;;
-10242;10000;Fødevarer og ernæring      ;118;0;251;104;alle optaget, ledige pladser;;;
-10270;10000;Geografi og geoinformatik      ;111;0;224;106;alle optaget, ledige pladser;;;
-10275;10000;Geologi-geoscience        ;65;2;138;68;4,6;alle optaget;;
-10326;10000;Græsk, klassisk       ;15;0;35;11;6;alle optaget;;
-10332;10000;Historie        ;197;20;756;275;7,7;6,4;;
-10237;10000;Husdyrvidenskab        ;70;10;219;73;8,4;7;;
-10285;10000;Idræt        ;125;13;596;289;9,1;8,5;;
-10334;10000;Indianske sprog og kulturer     ;20;0;68;17;3,6;alle optaget;;
-10336;10000;Indoeuropæisk        ;16;0;46;13;alle optaget, ledige pladser;;;
-31010;10000;Informationsvidenskab og kulturformidling (København)      ;211;31;505;195;5,2;3,9;;
-31060;10000;Informationsvidenskab og kulturformidling (Aalborg)      ;59;0;120;49;alle optaget;;;
-10150;10000;It og sundhed      ;39;0;115;27;alle optaget, ledige pladser;;;
-10338;10000;Italiensk        ;36;0;89;34;2,6;alle optaget;;
-10238;10000;Jordbrugsøkonomi        ;42;0;91;33;alle optaget, ledige pladser;;;
-10410;10000;Jura        ;810;81;2510;1397;9,1;8,7;;
-10286;10000;Kemi        ;77;0;193;73;alle optaget, ledige pladser;;;
-10344;10000;Klassisk arkæologi       ;17;3;124;26;8,2;6,3;;
-10345;10000;Kommunikation og it      ;77;9;410;99;7,7;7,2;;
-10348;10000;Kunsthistorie        ;66;7;362;123;8,8;8,6;;
-10240;10000;Landskabsarkitektur        ;71;0;169;64;alle optaget, ledige pladser;;;
-10350;10000;Latin        ;16;0;41;14;alle optaget, ledige pladser;;;
-10380;10000;Lingvistik        ;30;4;166;32;7,6;3,3;;
-10352;10000;Litteraturvidenskab        ;73;8;293;125;10;9,2;;
-10287;10000;Matematik        ;175;9;445;163;5,2;alle optaget;;
-10288;10000;Matematik-økonomi        ;60;6;317;85;9,1;8,2;;
-10110;10000;Medicin   ;559;65;2533;1606;11,1;10,8;;
-10302;10000;Mellemøstens sprog og samfund (arabisk)    ;47;6;240;95;8,1;7,1;;
-10360;10000;Mellemøstens sprog og samfund (assyriologi, nærorientalsk arkæologi, ægyptologi) ;40;5;145;34;5,1;4,3;;
-10330;10000;Mellemøstens sprog og samfund (hebraisk)    ;10;0;35;5;alle optaget, ledige pladser;;;
-10362;10000;Mellemøstens sprog og samfund (persisk)    ;18;3;43;21;6,2;alle optaget;;
-10389;10000;Mellemøstens sprog og samfund (tyrkisk)    ;13;0;45;13;alle optaget, ledige pladser;;;
-10341;10000;Moderne Indien og Sydasienstudier     ;23;3;79;26;6,6;5,7;;
-10289;10000;Molekylær biomedicin       ;55;6;353;125;11,8;11,4;;
-10354;10000;Musikvidenskab        ;99;0;210;128;alle optaget;;;
-10290;10000;Nanoscience        ;57;0;180;42;alle optaget, ledige pladser;;;
-10244;10000;Naturressourcer (planter, miljø, naturforvaltning, miljøøkonomi)    ;74;0;182;63;alle optaget, ledige pladser;;;
-10294;10000;Naturvidenskab og it      ;19;0;67;16;alle optaget, ledige pladser;;;
-10358;10000;Nederlandsk        ;0;0;8;1;ikke oprettet;;;
-10120;10000;Odontologi   ;100;16;751;323;10;9,7;;
-10366;10000;Portugisiske og brasilianske studier     ;36;5;128;45;5,3;3,3;;
-10160;10000;Professionsbachelor i tandpleje      ;72;10;463;169;7,9;7,6;;
-10246;10000;Professionsbachelor, skov- og landskabsingeniør     ;60;10;167;115;8,6;7,4;;
-10368;10000;Psykologi        ;231;23;1838;1039;11,2;11;;
-10370;10000;Pædagogik        ;77;9;346;82;7,6;6,2;;
-10372;10000;Religionsvidenskab        ;75;9;424;120;8;7,4;;
-10374;10000;Retorik;39;5;253;84;10,8;10,6;;
-10435;10000;Sociologi        ;132;13;674;206;10,4;10,1;;
-10378;10000;Spansk sprog og kultur     ;66;8;247;80;6,9;5,6;;
-10420;10000;Statskundskab/Samfundsfag        ;264;27;984;473;10,9;10,7;;
-10382;10000;Teatervidenskab        ;40;5;177;62;8,6;7,1;;
-10500;10000;Teologi        ;124;0;258;110;alle optaget, ledige pladser;;;
-10390;10000;Tysk        ;66;1;149;58;3,8;alle optaget;;
-10140;10000;Veterinærmedicin ;185;15;763;573;10,7;10,3;;
-10430;10000;Økonomi        ;330;14;756;325;6,5;alle optaget;;
-10392;10000;Øst- og sydøsteuropastudier (balkanstudier)     ;15;2;50;12;4,4;alle optaget;;
-10328;10000;Øst- og sydøsteuropastudier (grækenlandsstudier)     ;6;0;27;5;alle optaget, ledige pladser;;;
-10364;10000;Øst- og sydøsteuropastudier (polsk)     ;9;0;23;6;alle optaget, ledige pladser;;;
-10376;10000;Øst- og sydøsteuropastudier (russisk)     ;30;4;108;41;6;5,3;;
-;10000;Københavns Universitet i alt;7717;669;28995;12534;;;;
+;10000;Københavns Universitet;;;;;;
+10440;10000;Antropologi        ;105;11;788;291;10,9;10,6
+10335;10000;Asienstudier (indologi)       ;8;0;28;9;alle optaget, ledige pladser;
+10337;10000;Asienstudier (indonesisk/sydøstasienstudier)       ;3;0;18;4;alle optaget, ledige pladser;
+10340;10000;Asienstudier (japanstudier)       ;25;5;167;76;8,9;7,8
+10342;10000;Asienstudier (kinastudier)       ;47;5;203;71;7,2;6,7
+10346;10000;Asienstudier (koreastudier)       ;15;3;98;34;7;6,4
+10384;10000;Asienstudier (thai/sydøstasienstudier)       ;15;0;40;13;5,2;alle optaget
+10386;10000;Asienstudier (tibetologi)       ;6;0;36;5;alle optaget, ledige pladser;
+10304;10000;Audiologopædi        ;40;5;209;107;9,1;8,6
+10205;10000;Biokemi        ;125;13;465;111;7,1;5,4
+10250;10000;Biologi        ;235;22;624;263;6,2;alle optaget
+10234;10000;Biologi - Bioteknologi      ;75;0;286;71;6,8;alle optaget
+10306;10000;Dansk        ;230;25;605;209;7,1;alle optaget
+10220;10000;Datalogi        ;162;16;467;198;6,6;5,4
+10308;10000;Engelsk        ;190;20;711;229;7,2;6,2
+10310;10000;Eskimologi        ;13;0;44;12;alle optaget, ledige pladser;
+10312;10000;Europæisk etnologi       ;70;8;218;58;8,3;7,1
+10117;10000;Farmaci        ;240;25;655;249;7,3;6,7
+10314;10000;Film- og medievidenskab      ;99;10;786;349;10,7;10,4
+10316;10000;Filosofi        ;80;10;416;127;9,2;8,7
+10318;10000;Finsk        ;4;0;21;3;alle optaget, ledige pladser;
+10115;10000;Folkesundhedsvidenskab        ;70;15;274;100;9,5;8,2
+10322;10000;Forhistorisk arkæologi       ;33;4;165;41;7,1;6,6
+10221;10000;Forsikringsmatematik        ;50;5;242;114;10,4;9,5
+10324;10000;Fransk sprog, litteratur og kultur    ;46;0;134;37;alle optaget, ledige pladser;
+10230;10000;Fysiske fag (astronomi, biofysik, fysik, geofysik, meteorologi)  ;164;0;306;155;alle optaget, ledige pladser;
+10242;10000;Fødevarer og ernæring      ;118;0;251;104;alle optaget, ledige pladser;
+10270;10000;Geografi og geoinformatik      ;111;0;224;106;alle optaget, ledige pladser;
+10275;10000;Geologi-geoscience        ;65;2;138;68;4,6;alle optaget
+10326;10000;Græsk, klassisk       ;15;0;35;11;6;alle optaget
+10332;10000;Historie        ;197;20;756;275;7,7;6,4
+10237;10000;Husdyrvidenskab        ;70;10;219;73;8,4;7
+10285;10000;Idræt        ;125;13;596;289;9,1;8,5
+10334;10000;Indianske sprog og kulturer     ;20;0;68;17;3,6;alle optaget
+10336;10000;Indoeuropæisk        ;16;0;46;13;alle optaget, ledige pladser;
+31010;10000;Informationsvidenskab og kulturformidling (København)      ;211;31;505;195;5,2;3,9
+31060;10000;Informationsvidenskab og kulturformidling (Aalborg)      ;59;0;120;49;alle optaget;
+10150;10000;It og sundhed      ;39;0;115;27;alle optaget, ledige pladser;
+10338;10000;Italiensk        ;36;0;89;34;2,6;alle optaget
+10238;10000;Jordbrugsøkonomi        ;42;0;91;33;alle optaget, ledige pladser;
+10410;10000;Jura        ;810;81;2510;1397;9,1;8,7
+10286;10000;Kemi        ;77;0;193;73;alle optaget, ledige pladser;
+10344;10000;Klassisk arkæologi       ;17;3;124;26;8,2;6,3
+10345;10000;Kommunikation og it      ;77;9;410;99;7,7;7,2
+10348;10000;Kunsthistorie        ;66;7;362;123;8,8;8,6
+10240;10000;Landskabsarkitektur        ;71;0;169;64;alle optaget, ledige pladser;
+10350;10000;Latin        ;16;0;41;14;alle optaget, ledige pladser;
+10380;10000;Lingvistik        ;30;4;166;32;7,6;3,3
+10352;10000;Litteraturvidenskab        ;73;8;293;125;10;9,2
+10287;10000;Matematik        ;175;9;445;163;5,2;alle optaget
+10288;10000;Matematik-økonomi        ;60;6;317;85;9,1;8,2
+10110;10000;Medicin   ;559;65;2533;1606;11,1;10,8
+10302;10000;Mellemøstens sprog og samfund (arabisk)    ;47;6;240;95;8,1;7,1
+10360;10000;Mellemøstens sprog og samfund (assyriologi, nærorientalsk arkæologi, ægyptologi) ;40;5;145;34;5,1;4,3
+10330;10000;Mellemøstens sprog og samfund (hebraisk)    ;10;0;35;5;alle optaget, ledige pladser;
+10362;10000;Mellemøstens sprog og samfund (persisk)    ;18;3;43;21;6,2;alle optaget
+10389;10000;Mellemøstens sprog og samfund (tyrkisk)    ;13;0;45;13;alle optaget, ledige pladser;
+10341;10000;Moderne Indien og Sydasienstudier     ;23;3;79;26;6,6;5,7
+10289;10000;Molekylær biomedicin       ;55;6;353;125;11,8;11,4
+10354;10000;Musikvidenskab        ;99;0;210;128;alle optaget;
+10290;10000;Nanoscience        ;57;0;180;42;alle optaget, ledige pladser;
+10244;10000;Naturressourcer (planter, miljø, naturforvaltning, miljøøkonomi)    ;74;0;182;63;alle optaget, ledige pladser;
+10294;10000;Naturvidenskab og it      ;19;0;67;16;alle optaget, ledige pladser;
+10358;10000;Nederlandsk        ;0;0;8;1;ikke oprettet;
+10120;10000;Odontologi   ;100;16;751;323;10;9,7
+10366;10000;Portugisiske og brasilianske studier     ;36;5;128;45;5,3;3,3
+10160;10000;Professionsbachelor i tandpleje      ;72;10;463;169;7,9;7,6
+10246;10000;Professionsbachelor, skov- og landskabsingeniør     ;60;10;167;115;8,6;7,4
+10368;10000;Psykologi        ;231;23;1838;1039;11,2;11
+10370;10000;Pædagogik        ;77;9;346;82;7,6;6,2
+10372;10000;Religionsvidenskab        ;75;9;424;120;8;7,4
+10374;10000;Retorik;39;5;253;84;10,8;10,6
+10435;10000;Sociologi        ;132;13;674;206;10,4;10,1
+10378;10000;Spansk sprog og kultur     ;66;8;247;80;6,9;5,6
+10420;10000;Statskundskab/Samfundsfag        ;264;27;984;473;10,9;10,7
+10382;10000;Teatervidenskab        ;40;5;177;62;8,6;7,1
+10500;10000;Teologi        ;124;0;258;110;alle optaget, ledige pladser;
+10390;10000;Tysk        ;66;1;149;58;3,8;alle optaget
+10140;10000;Veterinærmedicin ;185;15;763;573;10,7;10,3
+10430;10000;Økonomi        ;330;14;756;325;6,5;alle optaget
+10392;10000;Øst- og sydøsteuropastudier (balkanstudier)     ;15;2;50;12;4,4;alle optaget
+10328;10000;Øst- og sydøsteuropastudier (grækenlandsstudier)     ;6;0;27;5;alle optaget, ledige pladser;
+10364;10000;Øst- og sydøsteuropastudier (polsk)     ;9;0;23;6;alle optaget, ledige pladser;
+10376;10000;Øst- og sydøsteuropastudier (russisk)     ;30;4;108;41;6;5,3
+;10000;Københavns Universitet i alt;7717;669;28995;12534;;
 ;;;;;;;;;;
 ;13000;Copenhagen Business School – Handelshøjskolen    ;;;;;;;;
-13240;13000;Engelsk og organisationskommunikation      ;100;20;773;156;8;7,5;;
-13010;13000;Erhvervsøkonomi, HA       ;650;50;2202;900;8,1;7,9;;
-13045;13000;Erhvervsøkonomi, HA (projektledelse)      ;80;10;1777;683;10,3;9,8;;
-13020;13000;Erhvervsøkonomi-erhvervsret, HA (jur.)      ;200;0;1055;236;8;-;;
-13030;13000;Erhvervsøkonomi-filosofi, HA (fil.)      ;60;20;349;52;8;7,3;;
-13015;13000;Erhvervsøkonomi-informationsteknologi, HA (it.)      ;90;20;446;104;7,3;6,9;;
-13025;13000;Erhvervsøkonomi-matematik, HA (mat.)      ;80;17;349;84;7,2;alle optaget;;
-13040;13000;Erhvervsøkonomi-psykologi, HA (psyk.)      ;140;20;825;222;9,1;8,7;;
-13035;13000;Erhvervsøkonomi-virksomhedskommunikation, HA (kom.)      ;140;20;843;199;9;7,8;;
-13050;13000;Europæisk business       ;180;20;1089;370;8;7,4;;
-13265;13000;Interkulturel markedskommunikation       ;240;20;1050;409;8,6;8,5;;
-13090;13000;Asian Studies Programme, Chinese/English     ;65;0;197;94;8,7;-;;
-13085;13000;Asian Studies Programme, Japanese/English     ;35;0;154;70;7,6;-;;
-13080;13000;Business Administration and Service Management    ;179;20;809;256;8,5;7,2;;
-13075;13000;Business Administration and Sociology     ;59;10;616;119;10,1;9,7;;
-13055;13000;Business, Language and Culture (SPRØK)    ;140;8;569;179;8;alle optaget;;
-13270;13000;Information Management       ;40;20;385;58;7,6;6,9;;
-13060;13000;International Business       ;179;0;1080;547;11,9;-;;
-13070;13000;International Business and Politics     ;126;10;934;299;11,3;11,2;;
-;13000;Copenhagen Buiness School - Handelshøjskolen i alt;2783;285;15502;5037;;;;
+13240;13000;Engelsk og organisationskommunikation      ;100;20;773;156;8;7,5
+13010;13000;Erhvervsøkonomi, HA       ;650;50;2202;900;8,1;7,9
+13045;13000;Erhvervsøkonomi, HA (projektledelse)      ;80;10;1777;683;10,3;9,8
+13020;13000;Erhvervsøkonomi-erhvervsret, HA (jur.)      ;200;0;1055;236;8;-
+13030;13000;Erhvervsøkonomi-filosofi, HA (fil.)      ;60;20;349;52;8;7,3
+13015;13000;Erhvervsøkonomi-informationsteknologi, HA (it.)      ;90;20;446;104;7,3;6,9
+13025;13000;Erhvervsøkonomi-matematik, HA (mat.)      ;80;17;349;84;7,2;alle optaget
+13040;13000;Erhvervsøkonomi-psykologi, HA (psyk.)      ;140;20;825;222;9,1;8,7
+13035;13000;Erhvervsøkonomi-virksomhedskommunikation, HA (kom.)      ;140;20;843;199;9;7,8
+13050;13000;Europæisk business       ;180;20;1089;370;8;7,4
+13265;13000;Interkulturel markedskommunikation       ;240;20;1050;409;8,6;8,5
+13090;13000;Asian Studies Programme, Chinese/English     ;65;0;197;94;8,7;-
+13085;13000;Asian Studies Programme, Japanese/English     ;35;0;154;70;7,6;-
+13080;13000;Business Administration and Service Management    ;179;20;809;256;8,5;7,2
+13075;13000;Business Administration and Sociology     ;59;10;616;119;10,1;9,7
+13055;13000;Business, Language and Culture (SPRØK)    ;140;8;569;179;8;alle optaget
+13270;13000;Information Management       ;40;20;385;58;7,6;6,9
+13060;13000;International Business       ;179;0;1080;547;11,9;-
+13070;13000;International Business and Politics     ;126;10;934;299;11,3;11,2
+;13000;Copenhagen Buiness School - Handelshøjskolen i alt;2783;285;15502;5037;;
 ;;;;;;;;;;
-;14500;IT-Universitetet i København;;;;;;;;
-14505;14500;Digitale medier og design     ;77;3;433;158;8,6;8,3;;
-14510;14500;Softwareudvikling        ;75;3;304;158;8,7;7,7;;
-14515;14500;Global Business Informatics      ;74;3;405;143;7,3;6,7;;
-;14500;IT-Universitetet i København i alt;226;9;1142;459;;;;
+;14500;IT-Universitetet i København;;;;;;
+14505;14500;Digitale medier og design     ;77;3;433;158;8,6;8,3
+14510;14500;Softwareudvikling        ;75;3;304;158;8,7;7,7
+14515;14500;Global Business Informatics      ;74;3;405;143;7,3;6,7
+;14500;IT-Universitetet i København i alt;226;9;1142;459;;
 ;;;;;;;;;;
-;15000;Danmarks Tekniske Universitet;;;;;;;;
-15110;15000;Diplomingeniør, arktisk teknologi      ;25;0;63;30;5,9;alle optaget;;
-15120;15000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik)    ;82;5;273;84;5,5;alle optaget;;
-15115;15000;Diplomingeniør, bygningsdesign       ;45;4;176;64;8,1;6;;
-15125;15000;Diplomingeniør, elektro       ;59;0;159;53;alle optaget, ledige pladser;;;
-15127;15000;Diplomingeniør, fødevareanalyse       ;25;0;74;22;alle optaget, ledige pladser;;;
-15130;15000;Diplomingeniør, it       ;82;5;206;96;5,5;4,7;;
-15135;15000;Diplomingeniør, kemi- og bioteknologi     ;75;0;146;55;alle optaget, ledige pladser;;;
-15140;15000;Diplomingeniør, maskin       ;82;5;230;112;6,4;4,4;;
-15160;15000;Diplomingeniør, teknologi og økonomi (internetteknologi og økonomi)  ;26;1;66;24;4,7;alle optaget;;
-15150;15000;Diplomingeniør, teknologi og økonomi (kemi og økonomi)  ;16;0;54;12;alle optaget, ledige pladser;;;
-15165;15000;Diplomingeniør, trafik og transport     ;23;0;56;20;alle optaget, ledige pladser;;;
-15010;15000;Teknisk videnskab (civilingeniør) Bioteknologi     ;66;5;275;91;7,8;6,2;;
-15015;15000;Teknisk videnskab (civilingeniør) Byggeteknologi     ;66;5;241;90;7,8;7,2;;
-15017;15000;Teknisk videnskab (civilingeniør) Bygningsdesign     ;63;5;190;56;6,9;alle optaget;;
-15020;15000;Teknisk videnskab (civilingeniør) Design og innovation   ;66;5;233;107;9,3;8,6;;
-15025;15000;Teknisk videnskab (civilingeniør) Elektroteknologi     ;66;5;212;91;7,7;6,9;;
-15030;15000;Teknisk videnskab (civilingeniør) Fysik og nanoteknologi   ;72;5;223;97;8,2;5,7;;
-15033;15000;Teknisk videnskab (civilingeniør) Geofysik og Rumteknologi   ;56;0;135;53;alle optaget, ledige pladser;;;
-15040;15000;Teknisk videnskab (civilingeniør) IT og kommunikationsteknologi   ;54;0;187;36;alle optaget, ledige pladser;;;
-15035;15000;Teknisk videnskab (civilingeniør) Kemi og teknologi   ;72;5;237;104;9;8,2;;
-15045;15000;Teknisk videnskab (civilingeniør) Matematik og teknologi   ;63;4;189;62;6,8;alle optaget;;
-15050;15000;Teknisk videnskab (civilingeniør) Medicin og teknologi   ;63;5;299;82;9,1;9;;
-15055;15000;Teknisk videnskab (civilingeniør) Miljøteknologi     ;55;0;122;47;alle optaget, ledige pladser;;;
-15060;15000;Teknisk videnskab (civilingeniør) Produktion og konstruktion   ;72;5;241;107;9,6;8,3;;
-15065;15000;Teknisk videnskab (civilingeniør) Softwareteknologi     ;72;5;278;110;8,3;7,9;;
-15075;15000;Teknisk videnskab (civilingeniør) Teknisk biomedicin    ;63;5;268;74;7,7;6,4;;
-15220;15000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik)    ;54;0;178;50;alle optaget, ledige pladser;;;
-15117;15000;Diplomingeniør, bæredygtig energiteknik      ;24;0;85;27;alle optaget, ledige pladser;;;
-15122;15000;Diplomingeniør, eksport       ;68;0;132;62;alle optaget, ledige pladser;;;
-15225;15000;Diplomingeniør, elektro       ;17;0;66;21;alle optaget, ledige pladser;;;
-15230;15000;Diplomingeniør, informations- og kommunikationsteknologi     ;29;0;91;25;alle optaget, ledige pladser;;;
-15240;15000;Diplomingeniør, maskin       ;44;0;132;36;alle optaget;;;
-15145;15000;Diplomingeniør, proces og innovation     ;24;0;74;23;alle optaget, ledige pladser;;;
-15147;15000;Diplomingeniør, produktion (produktionsteknik)      ;31;0;79;30;alle optaget, ledige pladser;;;
-15170;15000;Diplomingeniør, stærkstrøm       ;18;0;37;20;alle optaget, ledige pladser;;;
-15180;15000;Diplomingeniør, sundhedsteknologi       ;39;0;97;29;alle optaget, ledige pladser;;;
-15310;15000;Bachelor of Engineering in Electronics and Computer Engineering ;14;0;120;36;alle optaget, ledige pladser;;;
-15315;15000;Bachelor of Engineering in Information and Communication Technology ;11;0;105;36;alle optaget, ledige pladser;;;
-15320;15000;Bachelor of Engineering in Mechanical Engineering   ;27;0;136;62;alle optaget, ledige pladser;;;
-15322;15000;Bachelor of Engineering in Production Engineering   ;9;0;79;23;alle optaget, ledige pladser;;;
-15325;15000;Bachelor of Engineering in Sustainable Energy Engineering  ;0;0;31;2;ikke oprettet;;;
-;15000;Danmarks Tekniske Universitet i alt;1918;79;6275;2261;;;;
+;15000;Danmarks Tekniske Universitet;;;;;;
+15110;15000;Diplomingeniør, arktisk teknologi      ;25;0;63;30;5,9;alle optaget
+15120;15000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik)    ;82;5;273;84;5,5;alle optaget
+15115;15000;Diplomingeniør, bygningsdesign       ;45;4;176;64;8,1;6
+15125;15000;Diplomingeniør, elektro       ;59;0;159;53;alle optaget, ledige pladser;
+15127;15000;Diplomingeniør, fødevareanalyse       ;25;0;74;22;alle optaget, ledige pladser;
+15130;15000;Diplomingeniør, it       ;82;5;206;96;5,5;4,7
+15135;15000;Diplomingeniør, kemi- og bioteknologi     ;75;0;146;55;alle optaget, ledige pladser;
+15140;15000;Diplomingeniør, maskin       ;82;5;230;112;6,4;4,4
+15160;15000;Diplomingeniør, teknologi og økonomi (internetteknologi og økonomi)  ;26;1;66;24;4,7;alle optaget
+15150;15000;Diplomingeniør, teknologi og økonomi (kemi og økonomi)  ;16;0;54;12;alle optaget, ledige pladser;
+15165;15000;Diplomingeniør, trafik og transport     ;23;0;56;20;alle optaget, ledige pladser;
+15010;15000;Teknisk videnskab (civilingeniør) Bioteknologi     ;66;5;275;91;7,8;6,2
+15015;15000;Teknisk videnskab (civilingeniør) Byggeteknologi     ;66;5;241;90;7,8;7,2
+15017;15000;Teknisk videnskab (civilingeniør) Bygningsdesign     ;63;5;190;56;6,9;alle optaget
+15020;15000;Teknisk videnskab (civilingeniør) Design og innovation   ;66;5;233;107;9,3;8,6
+15025;15000;Teknisk videnskab (civilingeniør) Elektroteknologi     ;66;5;212;91;7,7;6,9
+15030;15000;Teknisk videnskab (civilingeniør) Fysik og nanoteknologi   ;72;5;223;97;8,2;5,7
+15033;15000;Teknisk videnskab (civilingeniør) Geofysik og Rumteknologi   ;56;0;135;53;alle optaget, ledige pladser;
+15040;15000;Teknisk videnskab (civilingeniør) IT og kommunikationsteknologi   ;54;0;187;36;alle optaget, ledige pladser;
+15035;15000;Teknisk videnskab (civilingeniør) Kemi og teknologi   ;72;5;237;104;9;8,2
+15045;15000;Teknisk videnskab (civilingeniør) Matematik og teknologi   ;63;4;189;62;6,8;alle optaget
+15050;15000;Teknisk videnskab (civilingeniør) Medicin og teknologi   ;63;5;299;82;9,1;9
+15055;15000;Teknisk videnskab (civilingeniør) Miljøteknologi     ;55;0;122;47;alle optaget, ledige pladser;
+15060;15000;Teknisk videnskab (civilingeniør) Produktion og konstruktion   ;72;5;241;107;9,6;8,3
+15065;15000;Teknisk videnskab (civilingeniør) Softwareteknologi     ;72;5;278;110;8,3;7,9
+15075;15000;Teknisk videnskab (civilingeniør) Teknisk biomedicin    ;63;5;268;74;7,7;6,4
+15220;15000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik)    ;54;0;178;50;alle optaget, ledige pladser;
+15117;15000;Diplomingeniør, bæredygtig energiteknik      ;24;0;85;27;alle optaget, ledige pladser;
+15122;15000;Diplomingeniør, eksport       ;68;0;132;62;alle optaget, ledige pladser;
+15225;15000;Diplomingeniør, elektro       ;17;0;66;21;alle optaget, ledige pladser;
+15230;15000;Diplomingeniør, informations- og kommunikationsteknologi     ;29;0;91;25;alle optaget, ledige pladser;
+15240;15000;Diplomingeniør, maskin       ;44;0;132;36;alle optaget;
+15145;15000;Diplomingeniør, proces og innovation     ;24;0;74;23;alle optaget, ledige pladser;
+15147;15000;Diplomingeniør, produktion (produktionsteknik)      ;31;0;79;30;alle optaget, ledige pladser;
+15170;15000;Diplomingeniør, stærkstrøm       ;18;0;37;20;alle optaget, ledige pladser;
+15180;15000;Diplomingeniør, sundhedsteknologi       ;39;0;97;29;alle optaget, ledige pladser;
+15310;15000;Bachelor of Engineering in Electronics and Computer Engineering ;14;0;120;36;alle optaget, ledige pladser;
+15315;15000;Bachelor of Engineering in Information and Communication Technology ;11;0;105;36;alle optaget, ledige pladser;
+15320;15000;Bachelor of Engineering in Mechanical Engineering   ;27;0;136;62;alle optaget, ledige pladser;
+15322;15000;Bachelor of Engineering in Production Engineering   ;9;0;79;23;alle optaget, ledige pladser;
+15325;15000;Bachelor of Engineering in Sustainable Energy Engineering  ;0;0;31;2;ikke oprettet;
+;15000;Danmarks Tekniske Universitet i alt;1918;79;6275;2261;;
 ;;;;;;;;;;
-;16000;Roskilde Universitet       ;;;;;;;;
-16020;16000;Humanistisk bacheloruddannelse       ;565;30;1639;591;7,1;6,8;;
-16022;16000;Humanistisk bacheloruddannelse + journalistik + andet fag  ;65;4;437;154;10,2;9,6;;
-16040;16000;Humanistisk-teknologisk bacheloruddannelse       ;182;0;391;126;alle optaget;;;
-16042;16000;Humanistisk-teknologisk bacheloruddannelse + journalistik + andet fag  ;20;4;111;24;7,7;7,2;;
-16010;16000;Naturvidenskabelig bacheloruddannelse       ;69;0;185;67;alle optaget;;;
-16012;16000;Naturvidenskabelig bacheloruddannelse + journalistik + andet fag  ;8;0;21;7;alle optaget;;;
-16030;16000;Samfundsvidenskabelig bacheloruddannelse       ;480;1;1068;324;3,2;;;
-16032;16000;Samfundsvidenskabelig bacheloruddannelse + journalistik + andet fag  ;55;4;257;80;9,2;8,4;;
-16025;16000;Humanistisk international bacheloruddannelse      ;124;10;554;160;6,6;5,7;;
-16015;16000;Naturvidenskabelig international bacheloruddannelse      ;23;0;133;63;alle optaget;;;
-16035;16000;Samfundsvidenskabelig international bacheloruddannelse      ;133;12;509;146;5,7;2,8;;
-;16000;Roskilde Universitet i alt;1724;65;5305;1742;;;;
+;16000;Roskilde Universitet       ;;;;;;
+16020;16000;Humanistisk bacheloruddannelse       ;565;30;1639;591;7,1;6,8
+16022;16000;Humanistisk bacheloruddannelse + journalistik + andet fag  ;65;4;437;154;10,2;9,6
+16040;16000;Humanistisk-teknologisk bacheloruddannelse       ;182;0;391;126;alle optaget;
+16042;16000;Humanistisk-teknologisk bacheloruddannelse + journalistik + andet fag  ;20;4;111;24;7,7;7,2
+16010;16000;Naturvidenskabelig bacheloruddannelse       ;69;0;185;67;alle optaget;
+16012;16000;Naturvidenskabelig bacheloruddannelse + journalistik + andet fag  ;8;0;21;7;alle optaget;
+16030;16000;Samfundsvidenskabelig bacheloruddannelse       ;480;1;1068;324;3,2;
+16032;16000;Samfundsvidenskabelig bacheloruddannelse + journalistik + andet fag  ;55;4;257;80;9,2;8,4
+16025;16000;Humanistisk international bacheloruddannelse      ;124;10;554;160;6,6;5,7
+16015;16000;Naturvidenskabelig international bacheloruddannelse      ;23;0;133;63;alle optaget;
+16035;16000;Samfundsvidenskabelig international bacheloruddannelse      ;133;12;509;146;5,7;2,8
+;16000;Roskilde Universitet i alt;1724;65;5305;1742;;
 ;;;;;;;;;;
-;17000;Syddansk Universitet       ;;;;;;;;
-17217;17000;Amerikanske studier       ;77;5;267;84;5,3;4,1;;
-17245;17000;Audiologi        ;20;3;87;34;5,4;alle optaget;;
-17010;17000;Biologi        ;56;0;146;48;alle optaget;;;
-17210;17000;Dansk        ;79;0;249;62;alle optaget;;;
-17020;17000;Datalogi        ;55;0;116;48;alle optaget;;;
-17815;17000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik)    ;62;0;115;63;alle optaget;;;
-17820;17000;Diplomingeniør, elektro       ;34;0;70;34;alle optaget;;;
-17830;17000;Diplomingeniør, informations- og kommunikationsteknologi     ;21;0;47;24;alle optaget;;;
-17835;17000;Diplomingeniør, integreret design      ;73;0;107;69;alle optaget;;;
-17825;17000;Diplomingeniør, kemi (kemiteknik)      ;13;0;49;14;alle optaget;;;
-17840;17000;Diplomingeniør, maskin       ;54;0;96;52;alle optaget;;;
-17845;17000;Diplomingeniør, produktion (produktionsteknik)      ;35;0;58;34;alle optaget;;;
-17850;17000;Diplomingeniør, stærkstrøm       ;22;0;37;23;alle optaget;;;
-17215;17000;Engelsk        ;105;5;292;92;4,7;alle optaget;;
-17510;17000;Erhvervsøkonomi, HA (Generel erhvervsøkonomi, International business, Strategisk kommunikation) ;200;10;587;239;5,8;4,9;;
-17530;17000;Erhvervsøkonomi-erhvervssprog (negot) (SDU - Odense)    ;170;0;299;146;alle optaget;;;
-17520;17000;Erhvervsøkonomi-jura, HA (jur.)      ;55;10;353;44;7,1;6,4;;
-17025;17000;Farmaci        ;90;10;336;86;6,4;alle optaget;;
-17220;17000;Filosofi        ;77;8;243;70;5,3;alle optaget;;
-17120;17000;Folkesundhedsvidenskab        ;41;0;149;27;alle optaget;;;
-17235;17000;Historie        ;140;13;409;133;4,8;alle optaget;;
-17040;17000;Idræt og sundhed      ;141;10;441;146;9,2;7,8;;
-17237;17000;Interkulturel pædagogik og arabisk     ;24;3;104;38;5,4;4,5;;
-17238;17000;Interkulturel pædagogik og dansk som andetsprog   ;28;0;83;23;alle optaget;;;
-17350;17000;International virksomhedskommunikation i 1 fremmedsprog og kommunikation (SDU);45;0;128;34;alle optaget;;;
-17340;17000;International virksomhedskommunikation i 1 fremmedsprog og medier;50;5;279;88;7,4;7;;
-17310;17000;International virksomhedskommunikation i 2 fremmedsprog (SDU);50;0;125;39;alle optaget;;;
-17360;17000;International virksomhedskommunikation, arabisk og kommunikation    ;24;3;111;44;5,9;5,5;;
-17610;17000;Journalistik        ;92;0;521;191;ej kvotesyst., alle opt.;;;
-17410;17000;Jura        ;125;25;991;254;8,6;8,2;;
-17110;17000;Klinisk biomekanik       ;68;10;247;97;9,6;9;;
-17240;17000;Litteraturvidenskab        ;77;4;226;61;5,2;alle optaget;;
-17247;17000;Logopædi        ;40;5;165;63;7,4;6,6;;
-17050;17000;Matematik-økonomi        ;31;0;108;25;alle optaget;;;
-17115;17000;Medicin        ;330;10;2309;667;10,6;10,5;;
-17250;17000;Medievidenskab        ;105;10;406;108;7,9;7;;
-17060;17000;Naturvidenskab (anvendt matematik, biokemi og molekylærbiologi, biomedicin, fysik, kemi, matematik, nanobioscience);252;0;537;207;alle optaget;;;
-17230;17000;Oldtidskundskab        ;29;0;75;25;alle optaget;;;
-17200;17000;Psykologi        ;100;15;1145;324;10,3;10,1;;
-17246;17000;Pædagogisk audiologi       ;20;3;135;34;6;4,9;;
-17260;17000;Religionsstudier        ;54;0;190;36;alle optaget;;;
-17412;17000;Samfundsfag        ;20;3;188;32;8,1;7,1;;
-17265;17000;Spanske og spanskamerikanske studier     ;29;0;81;23;alle optaget;;;
-17415;17000;Statskundskab        ;84;20;291;61;8,5;alle optaget;;
-17895;17000;Teknisk videnskab (civilingeniør) Energiteknologi     ;36;0;76;39;alle optaget;;;
-17875;17000;Teknisk videnskab (civilingeniør) Fysik og teknologi   ;19;0;41;20;alle optaget;;;
-17880;17000;Teknisk videnskab (civilingeniør) Kemi og bioteknologi   ;25;0;52;23;alle optaget;;;
-17865;17000;Teknisk videnskab (civilingeniør) Lærings- og oplevelsesteknologi   ;24;0;42;23;alle optaget;;;
-17870;17000;Teknisk videnskab (civilingeniør) Robotteknologi     ;57;0;117;54;alle optaget;;;
-17892;17000;Teknisk Videnskab (civilingeniør) Software Engineering    ;63;0;125;56;alle optaget;;;
-17860;17000;Teknisk videnskab (civilingeniør) Velfærdsteknologi     ;19;0;54;19;alle optaget;;;
-17270;17000;Tysk        ;13;0;45;17;alle optaget;;;
-17420;17000;Økonomi        ;53;0;169;38;alle optaget;;;
-17822;17000;Diplomingeniør, Global Management and Manufacturing    ;52;0;126;65;alle optaget;;;
-17517;17000;Economics and Business Administration     ;24;0;164;28;alle optaget;;;
-17430;17000;Market and Management Anthropology     ;84;0;204;70;alle optaget;;;
-17890;17000;Teknisk videnskab (civilingeniør) Product Development and Innovation  ;44;0;115;44;alle optaget;;;
-18005;17000;Bibliotekskundskab og videnskommunikation      ;19;0;45;22;alle optaget;;;
-18035;17000;Designkultur        ;50;2;169;47;5,1;alle optaget;;
-18030;17000;Designkultur og økonomi      ;90;3;194;73;3,9;alle optaget;;
-18210;17000;Erhvervsøkonomi, HA (Generel erhvervsøkonomi, Entreprenørskab og innovation, International Business);139;0;300;136;alle optaget;;;
-18215;17000;Erhvervsøkonomi-erhvervssprog (negot) (SDU - Kolding)    ;3;0;16;2;alle optaget;;;
-18020;17000;Informations- og kommunikationsvidenskab      ;19;0;70;15;alle optaget;;;
-18140;17000;International virksomhedskommunikation i 1 fremmedsprog, IT og webkommunikation;28;0;80;34;alle optaget;;;
-18110;17000;International virksomhedskommunikation, 2 fremmedsprog (SDU - Kolding);5;0;22;5;alle optaget;;;
-19125;17000;Diplomingeniør, mekatronik       ;13;0;24;14;alle optaget;;;
-19220;17000;Erhvervsøkonomi-erhvervssprog (SPRØK) (SDU - Sønderborg)    ;19;0;43;20;alle optaget;;;
-19250;17000;International virksomhedskommunikation, sproglig og kulturel formidling   ;25;0;58;38;alle optaget;;;
-19015;17000;Teknisk videnskab (civilingeniør) Mekatronik     ;7;0;21;8;alle optaget;;;
-19115;17000;Bachelor of Engineering in Interaction Design   ;10;0;38;14;alle optaget;;;
-19120;17000;Bachelor of Engineering in Mechatronics    ;25;0;72;38;alle optaget;;;
-19230;17000;Business, Language and Culture (Chinese)    ;35;0;104;48;alle optaget;;;
-19215;17000;Economics and Business Administration     ;35;0;151;48;alle optaget;;;
-19225;17000;European Studies       ;50;0;162;71;4,8;-;;
-19010;17000;Teknisk videnskab (civilingeniør) Innovation and Business   ;14;0;61;21;alle optaget;;;
-19020;17000;Teknisk videnskab (civilingeniør) Mechatronics     ;7;0;37;10;alle optaget;;;
-20210;17000;Erhvervsøkonomi, HA (Generel erhvervsøkonomi, Sports- og eventmanagement, Virksomhedsudvikling i praksis);67;0;136;64;alle optaget;;;
-20015;17000;Miljø- og ressourcemanagement      ;19;0;44;19;alle optaget;;;
-20220;17000;Sociologi og kulturanalyse      ;79;0;202;65;alle optaget;;;
-20530;17000;Erhvervsøkonomi, HA       ;268;0;576;159;alle optaget;;;
-20520;17000;International virksomhedskommunikation, 1 fremmedsprog og international marketing;75;5;273;77;5,4;4,3;;
-20515;17000;International virksomhedskommunikation, 1 fremmedsprog og kommunikation;75;5;236;53;4,6;4,3;;
-20525;17000;Professionsbachelor i erhvervssprog og it-baseret markedskommunikation   ;41;0;94;27;alle optaget;;;
-20540;17000;Bachelor of Economics and Information Technology   ;10;0;80;16;alle optaget;;;
-;17000;Syddansk Universitet i alt;5037;205;17636;5686;;;;
+;17000;Syddansk Universitet       ;;;;;;
+17217;17000;Amerikanske studier       ;77;5;267;84;5,3;4,1
+17245;17000;Audiologi        ;20;3;87;34;5,4;alle optaget
+17010;17000;Biologi        ;56;0;146;48;alle optaget;
+17210;17000;Dansk        ;79;0;249;62;alle optaget;
+17020;17000;Datalogi        ;55;0;116;48;alle optaget;
+17815;17000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik)    ;62;0;115;63;alle optaget;
+17820;17000;Diplomingeniør, elektro       ;34;0;70;34;alle optaget;
+17830;17000;Diplomingeniør, informations- og kommunikationsteknologi     ;21;0;47;24;alle optaget;
+17835;17000;Diplomingeniør, integreret design      ;73;0;107;69;alle optaget;
+17825;17000;Diplomingeniør, kemi (kemiteknik)      ;13;0;49;14;alle optaget;
+17840;17000;Diplomingeniør, maskin       ;54;0;96;52;alle optaget;
+17845;17000;Diplomingeniør, produktion (produktionsteknik)      ;35;0;58;34;alle optaget;
+17850;17000;Diplomingeniør, stærkstrøm       ;22;0;37;23;alle optaget;
+17215;17000;Engelsk        ;105;5;292;92;4,7;alle optaget
+17510;17000;Erhvervsøkonomi, HA (Generel erhvervsøkonomi, International business, Strategisk kommunikation) ;200;10;587;239;5,8;4,9
+17530;17000;Erhvervsøkonomi-erhvervssprog (negot) (SDU - Odense)    ;170;0;299;146;alle optaget;
+17520;17000;Erhvervsøkonomi-jura, HA (jur.)      ;55;10;353;44;7,1;6,4
+17025;17000;Farmaci        ;90;10;336;86;6,4;alle optaget
+17220;17000;Filosofi        ;77;8;243;70;5,3;alle optaget
+17120;17000;Folkesundhedsvidenskab        ;41;0;149;27;alle optaget;
+17235;17000;Historie        ;140;13;409;133;4,8;alle optaget
+17040;17000;Idræt og sundhed      ;141;10;441;146;9,2;7,8
+17237;17000;Interkulturel pædagogik og arabisk     ;24;3;104;38;5,4;4,5
+17238;17000;Interkulturel pædagogik og dansk som andetsprog   ;28;0;83;23;alle optaget;
+17350;17000;International virksomhedskommunikation i 1 fremmedsprog og kommunikation (SDU);45;0;128;34;alle optaget;
+17340;17000;International virksomhedskommunikation i 1 fremmedsprog og medier;50;5;279;88;7,4;7
+17310;17000;International virksomhedskommunikation i 2 fremmedsprog (SDU);50;0;125;39;alle optaget;
+17360;17000;International virksomhedskommunikation, arabisk og kommunikation    ;24;3;111;44;5,9;5,5
+17610;17000;Journalistik        ;92;0;521;191;ej kvotesyst., alle opt.;
+17410;17000;Jura        ;125;25;991;254;8,6;8,2
+17110;17000;Klinisk biomekanik       ;68;10;247;97;9,6;9
+17240;17000;Litteraturvidenskab        ;77;4;226;61;5,2;alle optaget
+17247;17000;Logopædi        ;40;5;165;63;7,4;6,6
+17050;17000;Matematik-økonomi        ;31;0;108;25;alle optaget;
+17115;17000;Medicin        ;330;10;2309;667;10,6;10,5
+17250;17000;Medievidenskab        ;105;10;406;108;7,9;7
+17060;17000;Naturvidenskab (anvendt matematik, biokemi og molekylærbiologi, biomedicin, fysik, kemi, matematik, nanobioscience);252;0;537;207;alle optaget;
+17230;17000;Oldtidskundskab        ;29;0;75;25;alle optaget;
+17200;17000;Psykologi        ;100;15;1145;324;10,3;10,1
+17246;17000;Pædagogisk audiologi       ;20;3;135;34;6;4,9
+17260;17000;Religionsstudier        ;54;0;190;36;alle optaget;
+17412;17000;Samfundsfag        ;20;3;188;32;8,1;7,1
+17265;17000;Spanske og spanskamerikanske studier     ;29;0;81;23;alle optaget;
+17415;17000;Statskundskab        ;84;20;291;61;8,5;alle optaget
+17895;17000;Teknisk videnskab (civilingeniør) Energiteknologi     ;36;0;76;39;alle optaget;
+17875;17000;Teknisk videnskab (civilingeniør) Fysik og teknologi   ;19;0;41;20;alle optaget;
+17880;17000;Teknisk videnskab (civilingeniør) Kemi og bioteknologi   ;25;0;52;23;alle optaget;
+17865;17000;Teknisk videnskab (civilingeniør) Lærings- og oplevelsesteknologi   ;24;0;42;23;alle optaget;
+17870;17000;Teknisk videnskab (civilingeniør) Robotteknologi     ;57;0;117;54;alle optaget;
+17892;17000;Teknisk Videnskab (civilingeniør) Software Engineering    ;63;0;125;56;alle optaget;
+17860;17000;Teknisk videnskab (civilingeniør) Velfærdsteknologi     ;19;0;54;19;alle optaget;
+17270;17000;Tysk        ;13;0;45;17;alle optaget;
+17420;17000;Økonomi        ;53;0;169;38;alle optaget;
+17822;17000;Diplomingeniør, Global Management and Manufacturing    ;52;0;126;65;alle optaget;
+17517;17000;Economics and Business Administration     ;24;0;164;28;alle optaget;
+17430;17000;Market and Management Anthropology     ;84;0;204;70;alle optaget;
+17890;17000;Teknisk videnskab (civilingeniør) Product Development and Innovation  ;44;0;115;44;alle optaget;
+18005;17000;Bibliotekskundskab og videnskommunikation      ;19;0;45;22;alle optaget;
+18035;17000;Designkultur        ;50;2;169;47;5,1;alle optaget
+18030;17000;Designkultur og økonomi      ;90;3;194;73;3,9;alle optaget
+18210;17000;Erhvervsøkonomi, HA (Generel erhvervsøkonomi, Entreprenørskab og innovation, International Business);139;0;300;136;alle optaget;
+18215;17000;Erhvervsøkonomi-erhvervssprog (negot) (SDU - Kolding)    ;3;0;16;2;alle optaget;
+18020;17000;Informations- og kommunikationsvidenskab      ;19;0;70;15;alle optaget;
+18140;17000;International virksomhedskommunikation i 1 fremmedsprog, IT og webkommunikation;28;0;80;34;alle optaget;
+18110;17000;International virksomhedskommunikation, 2 fremmedsprog (SDU - Kolding);5;0;22;5;alle optaget;
+19125;17000;Diplomingeniør, mekatronik       ;13;0;24;14;alle optaget;
+19220;17000;Erhvervsøkonomi-erhvervssprog (SPRØK) (SDU - Sønderborg)    ;19;0;43;20;alle optaget;
+19250;17000;International virksomhedskommunikation, sproglig og kulturel formidling   ;25;0;58;38;alle optaget;
+19015;17000;Teknisk videnskab (civilingeniør) Mekatronik     ;7;0;21;8;alle optaget;
+19115;17000;Bachelor of Engineering in Interaction Design   ;10;0;38;14;alle optaget;
+19120;17000;Bachelor of Engineering in Mechatronics    ;25;0;72;38;alle optaget;
+19230;17000;Business, Language and Culture (Chinese)    ;35;0;104;48;alle optaget;
+19215;17000;Economics and Business Administration     ;35;0;151;48;alle optaget;
+19225;17000;European Studies       ;50;0;162;71;4,8;-
+19010;17000;Teknisk videnskab (civilingeniør) Innovation and Business   ;14;0;61;21;alle optaget;
+19020;17000;Teknisk videnskab (civilingeniør) Mechatronics     ;7;0;37;10;alle optaget;
+20210;17000;Erhvervsøkonomi, HA (Generel erhvervsøkonomi, Sports- og eventmanagement, Virksomhedsudvikling i praksis);67;0;136;64;alle optaget;
+20015;17000;Miljø- og ressourcemanagement      ;19;0;44;19;alle optaget;
+20220;17000;Sociologi og kulturanalyse      ;79;0;202;65;alle optaget;
+20530;17000;Erhvervsøkonomi, HA       ;268;0;576;159;alle optaget;
+20520;17000;International virksomhedskommunikation, 1 fremmedsprog og international marketing;75;5;273;77;5,4;4,3
+20515;17000;International virksomhedskommunikation, 1 fremmedsprog og kommunikation;75;5;236;53;4,6;4,3
+20525;17000;Professionsbachelor i erhvervssprog og it-baseret markedskommunikation   ;41;0;94;27;alle optaget;
+20540;17000;Bachelor of Economics and Information Technology   ;10;0;80;16;alle optaget;
+;17000;Syddansk Universitet i alt;5037;205;17636;5686;;
 ;;        ;;;;;;;;
-;22000;Aarhus Universitet       ;;;;;;;;
-22175;22000;Agrobiologi        ;31;0;70;28;alle optaget, ledige pladser;;;
-22225;22000;Antropologi        ;98;7;666;225;10,4;10,1;;
-22205;22000;Arabisk- og islamstudier      ;46;5;168;65;5,5;4,5;;
-22110;22000;Biologi        ;143;0;334;137;alle optaget, ledige pladser;;;
-22210;22000;Brasilianske studier       ;20;2;82;28;6;alle optaget;;
-22115;22000;Datalogi        ;155;0;311;152;alle optaget, ledige pladser;;;
-22380;22000;Digital design - it, æstetik og interaktion  ;44;4;236;75;8,1;7,6;;
-22810;22000;Diplomingeniør, bioteknologi       ;49;0;136;47;alle optaget, ledige pladser;;;
-22820;22000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik) (sommer)   ;95;10;263;117;6,1;alle optaget;;
-22825;22000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik) (vinter) ;15;0;99;37;alle optaget, ledige pladser;;;
-22830;22000;Diplomingeniør, bygningsdesign (sommer);65;10;214;83;8,3;5,6;;
-22835;22000;Diplomingeniør, bygningsdesign (vinter)   ;17;0;94;28;alle optaget, ledige pladser;;;
-22840;22000;Diplomingeniør, elektro (sommer);65;3;162;85;8,1;alle optaget;;
-22845;22000;Diplomingeniør, elektro (vinter);7;0;51;20;alle optaget, ledige pladser;;;
-22850;22000;Diplomingeniør, informations- og kommunikationsteknologi (sommer)     ;60;0;159;60;alle optaget, ledige pladser;;;
-22855;22000;Diplomingeniør, informations- og kommunikationsteknologi (vinter);4;0;43;17;alle optaget, ledige pladser;;;
-22890;22000;Diplomingeniør, kemi (kemiteknik)      ;36;0;86;35;alle optaget, ledige pladser;;;
-22860;22000;Diplomingeniør, maskin (sommer);85;7;193;107;7,1;alle optaget;;
-22865;22000;Diplomingeniør, maskin (vinter);18;0;88;42;alle optaget, ledige pladser;;;
-22870;22000;Diplomingeniør, stærkstrøm (sommer);19;0;105;14;alle optaget, ledige pladser;;;
-22875;22000;Diplomingeniør, stærkstrøm (vinter);2;0;27;7;alle optaget, ledige pladser;;;
-22880;22000;Diplomingeniør, sundhedsteknologi       ;45;9;130;52;7,8;alle optaget;;
-22215;22000;Dramaturgi        ;55;6;238;103;7,9;7,3;;
-22220;22000;Engelsk        ;105;5;420;114;6,9;6;;
-22410;22000;Erhvervsøkonomi        ;85;0;461;87;6,2;-;;
-22620;22000;Erhvervsøkonomi med tysk, HA med tysk   ;18;0;70;17;alle optaget;;;
-22610;22000;Erhvervsøkonomi, HA       ;599;29;1398;640;6,6;5,5;;
-22650;22000;Erhvervsøkonomi-erhvervsret, HA (jur.)      ;156;8;566;129;6,5;5,4;;
-22230;22000;Filosofi        ;80;3;325;79;7;6,9;;
-22025;22000;Folkesundhedsvidenskab        ;55;10;196;57;7,7;4,3;;
-22240;22000;Forhistorisk arkæologi       ;27;2;135;30;6;4,5;;
-22245;22000;Fransk sprog, litteratur og kultur    ;16;0;55;17;alle optaget, ledige pladser;;;
-22120;22000;Fysik        ;116;0;205;126;alle optaget, ledige pladser;;;
-22125;22000;Geoscience        ;53;0;103;53;alle optaget, ledige pladser;;;
-22255;22000;Historie        ;125;5;538;148;6,7;6,1;;
-22260;22000;Idéhistorie        ;58;3;290;64;7,5;6,4;;
-22130;22000;Idræt        ;80;10;440;157;8,3;6,9;;
-22270;22000;Informationsvidenskab        ;75;3;295;97;7,3;7,1;;
-22760;22000;International virksomhedskommunikation i engelsk og europæiske studier  ;72;4;349;78;7;6,6;;
-22715;22000;International virksomhedskommunikation i engelsk og fransk   ;24;0;61;18;alle optaget;;;
-22740;22000;International virksomhedskommunikation i engelsk og kommunikation   ;90;5;520;145;8,5;8,2;;
-22720;22000;International virksomhedskommunikation i engelsk og spansk   ;65;0;153;38;alle optaget;;;
-22710;22000;International virksomhedskommunikation i engelsk og tysk   ;38;0;97;23;alle optaget;;;
-22770;22000;International virksomhedskommunikation i fransk og europæiske studier  ;3;0;31;1;alle optaget;;;
-22750;22000;International virksomhedskommunikation i fransk og kommunikation   ;12;0;30;9;alle optaget;;;
-22775;22000;International virksomhedskommunikation i spansk og europæiske studier  ;14;0;54;13;alle optaget;;;
-22755;22000;International virksomhedskommunikation i spansk og kommunikation   ;52;0;113;40;alle optaget;;;
-22765;22000;International virksomhedskommunikation i tysk og europæiske studier  ;21;0;65;20;alle optaget;;;
-22745;22000;International virksomhedskommunikation i tysk og kommunikation   ;52;0;101;46;alle optaget;;;
-22170;22000;It        ;70;4;168;87;5,5;alle optaget;;
-22275;22000;Italiensk sprog, litteratur og kultur    ;19;0;40;16;alle optaget, ledige pladser;;;
-22280;22000;Japanstudier        ;32;2;151;62;7,2;6,8;;
-22415;22000;Jura        ;420;40;1598;641;8,6;8,3;;
-22135;22000;Kemi        ;68;0;139;69;alle optaget, ledige pladser;;;
-22285;22000;Kinastudier        ;32;2;143;49;6,9;6,2;;
-22290;22000;Klassisk arkæologi       ;21;2;103;37;5,5;5,1;;
-22295;22000;Klassiske sprog       ;16;0;45;11;alle optaget, ledige pladser;;;
-22300;22000;Kunsthistorie        ;67;6;269;86;7,2;6,6;;
-22310;22000;Lingvistik        ;38;3;158;51;7,6;7;;
-22315;22000;Litteraturhistorie        ;53;5;220;54;8;7,5;;
-22140;22000;Matematik        ;113;0;249;105;alle optaget, ledige pladser;;;
-22145;22000;Matematik-økonomi        ;74;0;218;65;alle optaget, ledige pladser;;;
-22010;22000;Medicin        ;481;65;2155;763;10,5;10,3;;
-22150;22000;Medicinalkemi        ;50;1;195;51;6,8;-;;
-22320;22000;Medievidenskab        ;110;5;629;213;9,8;9,6;;
-22325;22000;Middelalder- og renæssancearkæologi      ;27;2;121;33;5,4;4,8;;
-22105;22000;Molekylærmedicin        ;60;9;362;100;10,3;9,5;;
-22155;22000;Molekylærbiologi        ;100;10;308;85;7,5;5,5;;
-22330;22000;Musikvidenskab        ;50;0;137;84;alle optaget, ledige pladser;;;
-22160;22000;Nanoscience        ;74;0;151;68;alle optaget, ledige pladser;;;
-22335;22000;Nordisk sprog og litteratur (dansk)    ;115;5;331;113;6,6;6,3;;
-22015;22000;Odontologi (tandlæge)       ;72;4;574;187;10;9,8;;
-22020;22000;Professionsbachelor i tandpleje      ;77;20;343;155;7,8;7,1;;
-22420;22000;Psykologi        ;200;20;1344;471;10,6;10,4;;
-22340;22000;Religionsvidenskab        ;66;5;285;81;7,8;7,2;;
-22422;22000;Samfundsfag        ;30;10;289;56;9,6;8,5;;
-22355;22000;Spansk og spanskamerikansk sprog, litteratur og kultur  ;33;2;121;42;7,3;7;;
-22425;22000;Statskundskab        ;265;40;812;331;9,7;8,3;;
-22265;22000;Sydasienstudier        ;15;0;51;8;alle optaget, ledige pladser;;;
-22390;22000;Teologi        ;59;0;129;53;alle optaget, ledige pladser;;;
-22365;22000;Tysk sprog, litteratur og kultur    ;32;0;83;27;alle optaget, ledige pladser;;;
-22510;22000;Uddannelsesvidenskab, Aarhus       ;110;15;419;152;7,6;6,8;;
-22520;22000;Uddannelsesvidenskab, København       ;110;15;343;123;6,4;5,9;;
-22375;22000;Æstetik og kultur      ;40;3;255;60;8,7;8,5;;
-22430;22000;Økonomi        ;200;0;443;214;6,4;-;;
-22350;22000;Østeuropastudier        ;30;2;61;27;5;alle optaget;;
-22615;22000;Economics and Business Administration     ;178;9;638;224;5,8;4,2;;
-22780;22000;Marketing and Management Communication     ;105;10;560;197;8,8;7,5;;
-22950;22000;Diplomingeniør, Business Development Engineer     ;49;0;76;50;alle optaget, ledige pladser;;;
-22955;22000;Diplomingeniør, elektro       ;17;0;38;24;alle optaget, ledige pladser;;;
-22930;22000;Erhvervsøkonomi, HA       ;74;0;184;69;alle optaget, ledige pladser;;;
-22965;22000;Bachelor of Engineering in Global Management and Manufacturing ;20;0;81;31;alle optaget, ledige pladser;;;
-22935;22000;HA International Management;56;0;252;76;alle optaget, ledige pladser;;;
-22925;22000;International Communication and Multimedia     ;79;0;287;105;alle optaget, ledige pladser;;;
-;22000;Aarhus Universitet i alt;7272;466;26584;9416;;;;
+;22000;Aarhus Universitet       ;;;;;;
+22175;22000;Agrobiologi        ;31;0;70;28;alle optaget, ledige pladser;
+22225;22000;Antropologi        ;98;7;666;225;10,4;10,1
+22205;22000;Arabisk- og islamstudier      ;46;5;168;65;5,5;4,5
+22110;22000;Biologi        ;143;0;334;137;alle optaget, ledige pladser;
+22210;22000;Brasilianske studier       ;20;2;82;28;6;alle optaget
+22115;22000;Datalogi        ;155;0;311;152;alle optaget, ledige pladser;
+22380;22000;Digital design - it, æstetik og interaktion  ;44;4;236;75;8,1;7,6
+22810;22000;Diplomingeniør, bioteknologi       ;49;0;136;47;alle optaget, ledige pladser;
+22820;22000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik) (sommer)   ;95;10;263;117;6,1;alle optaget
+22825;22000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik) (vinter) ;15;0;99;37;alle optaget, ledige pladser;
+22830;22000;Diplomingeniør, bygningsdesign (sommer);65;10;214;83;8,3;5,6
+22835;22000;Diplomingeniør, bygningsdesign (vinter)   ;17;0;94;28;alle optaget, ledige pladser;
+22840;22000;Diplomingeniør, elektro (sommer);65;3;162;85;8,1;alle optaget
+22845;22000;Diplomingeniør, elektro (vinter);7;0;51;20;alle optaget, ledige pladser;
+22850;22000;Diplomingeniør, informations- og kommunikationsteknologi (sommer)     ;60;0;159;60;alle optaget, ledige pladser;
+22855;22000;Diplomingeniør, informations- og kommunikationsteknologi (vinter);4;0;43;17;alle optaget, ledige pladser;
+22890;22000;Diplomingeniør, kemi (kemiteknik)      ;36;0;86;35;alle optaget, ledige pladser;
+22860;22000;Diplomingeniør, maskin (sommer);85;7;193;107;7,1;alle optaget
+22865;22000;Diplomingeniør, maskin (vinter);18;0;88;42;alle optaget, ledige pladser;
+22870;22000;Diplomingeniør, stærkstrøm (sommer);19;0;105;14;alle optaget, ledige pladser;
+22875;22000;Diplomingeniør, stærkstrøm (vinter);2;0;27;7;alle optaget, ledige pladser;
+22880;22000;Diplomingeniør, sundhedsteknologi       ;45;9;130;52;7,8;alle optaget
+22215;22000;Dramaturgi        ;55;6;238;103;7,9;7,3
+22220;22000;Engelsk        ;105;5;420;114;6,9;6
+22410;22000;Erhvervsøkonomi        ;85;0;461;87;6,2;-
+22620;22000;Erhvervsøkonomi med tysk, HA med tysk   ;18;0;70;17;alle optaget;
+22610;22000;Erhvervsøkonomi, HA       ;599;29;1398;640;6,6;5,5
+22650;22000;Erhvervsøkonomi-erhvervsret, HA (jur.)      ;156;8;566;129;6,5;5,4
+22230;22000;Filosofi        ;80;3;325;79;7;6,9
+22025;22000;Folkesundhedsvidenskab        ;55;10;196;57;7,7;4,3
+22240;22000;Forhistorisk arkæologi       ;27;2;135;30;6;4,5
+22245;22000;Fransk sprog, litteratur og kultur    ;16;0;55;17;alle optaget, ledige pladser;
+22120;22000;Fysik        ;116;0;205;126;alle optaget, ledige pladser;
+22125;22000;Geoscience        ;53;0;103;53;alle optaget, ledige pladser;
+22255;22000;Historie        ;125;5;538;148;6,7;6,1
+22260;22000;Idéhistorie        ;58;3;290;64;7,5;6,4
+22130;22000;Idræt        ;80;10;440;157;8,3;6,9
+22270;22000;Informationsvidenskab        ;75;3;295;97;7,3;7,1
+22760;22000;International virksomhedskommunikation i engelsk og europæiske studier  ;72;4;349;78;7;6,6
+22715;22000;International virksomhedskommunikation i engelsk og fransk   ;24;0;61;18;alle optaget;
+22740;22000;International virksomhedskommunikation i engelsk og kommunikation   ;90;5;520;145;8,5;8,2
+22720;22000;International virksomhedskommunikation i engelsk og spansk   ;65;0;153;38;alle optaget;
+22710;22000;International virksomhedskommunikation i engelsk og tysk   ;38;0;97;23;alle optaget;
+22770;22000;International virksomhedskommunikation i fransk og europæiske studier  ;3;0;31;1;alle optaget;
+22750;22000;International virksomhedskommunikation i fransk og kommunikation   ;12;0;30;9;alle optaget;
+22775;22000;International virksomhedskommunikation i spansk og europæiske studier  ;14;0;54;13;alle optaget;
+22755;22000;International virksomhedskommunikation i spansk og kommunikation   ;52;0;113;40;alle optaget;
+22765;22000;International virksomhedskommunikation i tysk og europæiske studier  ;21;0;65;20;alle optaget;
+22745;22000;International virksomhedskommunikation i tysk og kommunikation   ;52;0;101;46;alle optaget;
+22170;22000;It        ;70;4;168;87;5,5;alle optaget
+22275;22000;Italiensk sprog, litteratur og kultur    ;19;0;40;16;alle optaget, ledige pladser;
+22280;22000;Japanstudier        ;32;2;151;62;7,2;6,8
+22415;22000;Jura        ;420;40;1598;641;8,6;8,3
+22135;22000;Kemi        ;68;0;139;69;alle optaget, ledige pladser;
+22285;22000;Kinastudier        ;32;2;143;49;6,9;6,2
+22290;22000;Klassisk arkæologi       ;21;2;103;37;5,5;5,1
+22295;22000;Klassiske sprog       ;16;0;45;11;alle optaget, ledige pladser;
+22300;22000;Kunsthistorie        ;67;6;269;86;7,2;6,6
+22310;22000;Lingvistik        ;38;3;158;51;7,6;7
+22315;22000;Litteraturhistorie        ;53;5;220;54;8;7,5
+22140;22000;Matematik        ;113;0;249;105;alle optaget, ledige pladser;
+22145;22000;Matematik-økonomi        ;74;0;218;65;alle optaget, ledige pladser;
+22010;22000;Medicin        ;481;65;2155;763;10,5;10,3
+22150;22000;Medicinalkemi        ;50;1;195;51;6,8;-
+22320;22000;Medievidenskab        ;110;5;629;213;9,8;9,6
+22325;22000;Middelalder- og renæssancearkæologi      ;27;2;121;33;5,4;4,8
+22105;22000;Molekylærmedicin        ;60;9;362;100;10,3;9,5
+22155;22000;Molekylærbiologi        ;100;10;308;85;7,5;5,5
+22330;22000;Musikvidenskab        ;50;0;137;84;alle optaget, ledige pladser;
+22160;22000;Nanoscience        ;74;0;151;68;alle optaget, ledige pladser;
+22335;22000;Nordisk sprog og litteratur (dansk)    ;115;5;331;113;6,6;6,3
+22015;22000;Odontologi (tandlæge)       ;72;4;574;187;10;9,8
+22020;22000;Professionsbachelor i tandpleje      ;77;20;343;155;7,8;7,1
+22420;22000;Psykologi        ;200;20;1344;471;10,6;10,4
+22340;22000;Religionsvidenskab        ;66;5;285;81;7,8;7,2
+22422;22000;Samfundsfag        ;30;10;289;56;9,6;8,5
+22355;22000;Spansk og spanskamerikansk sprog, litteratur og kultur  ;33;2;121;42;7,3;7
+22425;22000;Statskundskab        ;265;40;812;331;9,7;8,3
+22265;22000;Sydasienstudier        ;15;0;51;8;alle optaget, ledige pladser;
+22390;22000;Teologi        ;59;0;129;53;alle optaget, ledige pladser;
+22365;22000;Tysk sprog, litteratur og kultur    ;32;0;83;27;alle optaget, ledige pladser;
+22510;22000;Uddannelsesvidenskab, Aarhus       ;110;15;419;152;7,6;6,8
+22520;22000;Uddannelsesvidenskab, København       ;110;15;343;123;6,4;5,9
+22375;22000;Æstetik og kultur      ;40;3;255;60;8,7;8,5
+22430;22000;Økonomi        ;200;0;443;214;6,4;-
+22350;22000;Østeuropastudier        ;30;2;61;27;5;alle optaget
+22615;22000;Economics and Business Administration     ;178;9;638;224;5,8;4,2
+22780;22000;Marketing and Management Communication     ;105;10;560;197;8,8;7,5
+22950;22000;Diplomingeniør, Business Development Engineer     ;49;0;76;50;alle optaget, ledige pladser;
+22955;22000;Diplomingeniør, elektro       ;17;0;38;24;alle optaget, ledige pladser;
+22930;22000;Erhvervsøkonomi, HA       ;74;0;184;69;alle optaget, ledige pladser;
+22965;22000;Bachelor of Engineering in Global Management and Manufacturing ;20;0;81;31;alle optaget, ledige pladser;
+22935;22000;HA International Management;56;0;252;76;alle optaget, ledige pladser;
+22925;22000;International Communication and Multimedia     ;79;0;287;105;alle optaget, ledige pladser;
+;22000;Aarhus Universitet i alt;7272;466;26584;9416;;
 ;;;;;;;;;;
-;25000;Aalborg Universitet       ;;;;;;;;
-25405;25000;Anvendt filosofi       ;58;0;162;60;alle optaget, ledige pladser;;;
-25305;25000;Biologi        ;53;0;110;49;alle optaget, ledige pladser;;;
-25410;25000;Dansk        ;46;0;130;42;alle optaget, ledige pladser;;;
-25306;25000;Datalogi        ;52;0;135;52;alle optaget, ledige pladser;;;
-25210;25000;Diplomingeniør        ;51;0;112;54;alle optaget, ledige pladser;;;
-25220;25000;Diplomingeniør, eksportteknologi       ;18;0;51;19;alle optaget, ledige pladser;;;
-25230;25000;Diplomingeniør, kemi- og bioteknologi     ;13;0;39;12;alle optaget, ledige pladser;;;
-25450;25000;Engelsk        ;85;0;228;73;alle optaget;;;
-25455;25000;Engelsk sprog og internationale studier    ;105;0;281;94;alle optaget;;;
-25710;25000;Erhvervsøkonomi, HA       ;254;0;531;256;alle optaget, ledige pladser;;;
-25715;25000;Erhvervsøkonomi-jura, HA (jur.)      ;119;0;358;73;alle optaget, ledige pladser;;;
-25307;25000;Fysik        ;19;0;38;18;alle optaget, ledige pladser;;;
-25311;25000;Geografi        ;19;0;52;20;alle optaget, ledige pladser;;;
-25615;25000;Historie        ;84;0;247;74;alle optaget, ledige pladser;;;
-25420;25000;Humanistisk informatik       ;276;0;528;228;alle optaget;;;
-25325;25000;Idræt        ;204;0;462;206;alle optaget;;;
-25312;25000;Informatik        ;32;0;71;29;alle optaget, ledige pladser;;;
-25340;25000;Informationsteknologi        ;26;0;68;27;alle optaget, ledige pladser;;;
-25515;25000;International virksomhedskommunikation       ;205;0;382;193;alle optaget, ledige pladser;;;
-25630;25000;Jura        ;120;7;862;230;8,5;8,3;;
-25313;25000;Kemi        ;11;0;30;10;alle optaget, ledige pladser;;;
-25090;25000;Landinspektørvidenskab        ;27;0;45;26;alle optaget, ledige pladser;;;
-25314;25000;Matematik        ;32;0;92;30;alle optaget, ledige pladser;;;
-25319;25000;Matematik-økonomi        ;17;0;63;16;alle optaget, ledige pladser;;;
-25320;25000;Medicin        ;56;9;1381;181;11;10,8;;
-25330;25000;Medicin med industriel specialisering     ;142;0;263;84;alle optaget, ledige pladser;;;
-25425;25000;Musik        ;32;0;56;34;alle optaget, ledige pladser;;;
-25430;25000;Musikterapi        ;21;0;48;23;alle optaget;;;
-25610;25000;Politik og Administration      ;83;0;233;79;alle optaget, ledige pladser;;;
-25810;25000;Professionsbachelor, socialrådgiver       ;416;0;738;350;alle optaget;;;
-25435;25000;Psykologi        ;155;9;1002;295;9,7;9,6;;
-25612;25000;Samfundsfag        ;42;0;188;24;alle optaget, ledige pladser;;;
-25620;25000;Sociologi        ;236;0;557;149;alle optaget;;;
-25460;25000;Spansk sprog og internationale studier    ;29;0;75;27;alle optaget, ledige pladser;;;
-25015;25000;Teknisk videnskab (civilingeniør) Arkitektur og design   ;156;0;279;146;alle optaget;;;
-25017;25000;Teknisk videnskab (civilingeniør) Bioteknologi     ;20;0;54;19;alle optaget, ledige pladser;;;
-25055;25000;Teknisk videnskab (civilingeniør) By-, energi- og miljøplanlægning  ;20;0;47;19;alle optaget, ledige pladser;;;
-25020;25000;Teknisk videnskab (civilingeniør) Byggeri og anlæg   ;58;0;109;51;alle optaget, ledige pladser;;;
-25030;25000;Teknisk videnskab (civilingeniør) Elektronik og it   ;50;0;90;55;alle optaget, ledige pladser;;;
-25075;25000;Teknisk videnskab (civilingeniør) Energi     ;54;0;105;54;alle optaget, ledige pladser;;;
-25035;25000;Teknisk videnskab (civilingeniør) Globale forretningssystemer    ;49;0;81;51;alle optaget, ledige pladser;;;
-25025;25000;Teknisk videnskab (civilingeniør) Internetteknologier og computersystemer   ;8;0;44;11;alle optaget, ledige pladser;;;
-25047;25000;Teknisk videnskab (civilingeniør) Kemiteknologi     ;14;0;31;14;alle optaget, ledige pladser;;;
-25040;25000;Teknisk videnskab (civilingeniør) Maskin og produktion   ;66;0;102;63;alle optaget, ledige pladser;;;
-25318;25000;Teknisk videnskab (civilingeniør) Matematik-teknologi     ;16;0;43;17;alle optaget, ledige pladser;;;
-25042;25000;Teknisk videnskab (civilingeniør) Miljøteknologi     ;12;0;34;13;alle optaget, ledige pladser;;;
-25050;25000;Teknisk videnskab (civilingeniør) Nanoteknologi     ;15;0;43;14;alle optaget, ledige pladser;;;
-25335;25000;Teknisk videnskab (civilingeniør) Produkt- og designpsykologi   ;18;0;45;21;alle optaget, ledige pladser;;;
-25060;25000;Teknisk videnskab (civilingeniør) Software     ;111;0;169;109;alle optaget, ledige pladser;;;
-25065;25000;Teknisk videnskab (civilingeniør) Sundhedsteknologi     ;34;0;97;32;alle optaget, ledige pladser;;;
-25100;25000;Teknoantropologi        ;33;0;77;34;alle optaget, ledige pladser;;;
-25465;25000;Tysk        ;9;0;36;10;alle optaget, ledige pladser;;;
-25625;25000;Økonomi        ;33;0;98;33;alle optaget, ledige pladser;;;
-25345;25000;Art and Technology      ;48;0;166;65;alle optaget, ledige pladser;;;
-25712;25000;Economics and Business Administration     ;37;0;258;59;alle optaget, ledige pladser;;;
-25317;25000;Medialogy        ;125;0;243;129;alle optaget;;;
-25440;25000;Humanistisk informatik       ;125;7;673;244;8,4;8,1;;
-25085;25000;Landinspektørvidenskab        ;20;0;41;18;alle optaget, ledige pladser;;;
-25070;25000;Teknisk videnskab (civilingeniør) By-, energi- og miljøplanlægning  ;34;0;93;35;alle optaget, ledige pladser;;;
-25078;25000;Teknisk videnskab (civilingeniør) Bæredygtigt design    ;43;0;112;34;alle optaget;;;
-25071;25000;Teknoantropologi        ;99;0;200;74;alle optaget;;;
-25315;25000;Medialogy        ;248;0;499;232;alle optaget;;;
-25095;25000;Teknisk videnskab (civilingeniør) IT, Communication and New Media ;42;0;188;58;alle optaget, ledige pladser;;;
-25072;25000;Teknisk videnskab (civilingeniør) Sustainable Biotechnology    ;16;0;97;32;alle optaget, ledige pladser;;;
-26610;25000;Diplomingeniør        ;23;0;39;26;alle optaget, ledige pladser;;;
-26620;25000;Diplomingeniør, kemi- og bioteknologi     ;13;0;24;15;alle optaget, ledige pladser;;;
-26710;25000;Fiskeriteknolog        ;7;0;9;8;ej kvotesyst., alle opt., led. pl.;;;
-26511;25000;Teknisk videnskab (civilingeniør) Bygge- og anlægskonstruktion   ;12;0;25;13;alle optaget, ledige pladser;;;
-26513;25000;Teknisk videnskab (civilingeniør) Energi     ;27;0;57;32;alle optaget, ledige pladser;;;
-26515;25000;Teknisk videnskab (civilingeniør) Kemi og bioteknologi   ;12;0;21;13;alle optaget, ledige pladser;;;
-26514;25000;Teknisk videnskab (civilingeniør) Maskinkonstruktion     ;13;0;26;13;alle optaget, ledige pladser;;;
-26520;25000;Medialogy        ;36;0;91;41;alle optaget, ledige pladser;;;
-26512;25000;Teknisk videnskab (civilingeniør) Electronic and Computer Engineering  ;18;0;73;27;alle optaget, ledige pladser;;;
-;25000;Aalborg Universitet i alt;4912;32;14137;5071;;;;
+;25000;Aalborg Universitet       ;;;;;;
+25405;25000;Anvendt filosofi       ;58;0;162;60;alle optaget, ledige pladser;
+25305;25000;Biologi        ;53;0;110;49;alle optaget, ledige pladser;
+25410;25000;Dansk        ;46;0;130;42;alle optaget, ledige pladser;
+25306;25000;Datalogi        ;52;0;135;52;alle optaget, ledige pladser;
+25210;25000;Diplomingeniør        ;51;0;112;54;alle optaget, ledige pladser;
+25220;25000;Diplomingeniør, eksportteknologi       ;18;0;51;19;alle optaget, ledige pladser;
+25230;25000;Diplomingeniør, kemi- og bioteknologi     ;13;0;39;12;alle optaget, ledige pladser;
+25450;25000;Engelsk        ;85;0;228;73;alle optaget;
+25455;25000;Engelsk sprog og internationale studier    ;105;0;281;94;alle optaget;
+25710;25000;Erhvervsøkonomi, HA       ;254;0;531;256;alle optaget, ledige pladser;
+25715;25000;Erhvervsøkonomi-jura, HA (jur.)      ;119;0;358;73;alle optaget, ledige pladser;
+25307;25000;Fysik        ;19;0;38;18;alle optaget, ledige pladser;
+25311;25000;Geografi        ;19;0;52;20;alle optaget, ledige pladser;
+25615;25000;Historie        ;84;0;247;74;alle optaget, ledige pladser;
+25420;25000;Humanistisk informatik       ;276;0;528;228;alle optaget;
+25325;25000;Idræt        ;204;0;462;206;alle optaget;
+25312;25000;Informatik        ;32;0;71;29;alle optaget, ledige pladser;
+25340;25000;Informationsteknologi        ;26;0;68;27;alle optaget, ledige pladser;
+25515;25000;International virksomhedskommunikation       ;205;0;382;193;alle optaget, ledige pladser;
+25630;25000;Jura        ;120;7;862;230;8,5;8,3
+25313;25000;Kemi        ;11;0;30;10;alle optaget, ledige pladser;
+25090;25000;Landinspektørvidenskab        ;27;0;45;26;alle optaget, ledige pladser;
+25314;25000;Matematik        ;32;0;92;30;alle optaget, ledige pladser;
+25319;25000;Matematik-økonomi        ;17;0;63;16;alle optaget, ledige pladser;
+25320;25000;Medicin        ;56;9;1381;181;11;10,8
+25330;25000;Medicin med industriel specialisering     ;142;0;263;84;alle optaget, ledige pladser;
+25425;25000;Musik        ;32;0;56;34;alle optaget, ledige pladser;
+25430;25000;Musikterapi        ;21;0;48;23;alle optaget;
+25610;25000;Politik og Administration      ;83;0;233;79;alle optaget, ledige pladser;
+25810;25000;Professionsbachelor, socialrådgiver       ;416;0;738;350;alle optaget;
+25435;25000;Psykologi        ;155;9;1002;295;9,7;9,6
+25612;25000;Samfundsfag        ;42;0;188;24;alle optaget, ledige pladser;
+25620;25000;Sociologi        ;236;0;557;149;alle optaget;
+25460;25000;Spansk sprog og internationale studier    ;29;0;75;27;alle optaget, ledige pladser;
+25015;25000;Teknisk videnskab (civilingeniør) Arkitektur og design   ;156;0;279;146;alle optaget;
+25017;25000;Teknisk videnskab (civilingeniør) Bioteknologi     ;20;0;54;19;alle optaget, ledige pladser;
+25055;25000;Teknisk videnskab (civilingeniør) By-, energi- og miljøplanlægning  ;20;0;47;19;alle optaget, ledige pladser;
+25020;25000;Teknisk videnskab (civilingeniør) Byggeri og anlæg   ;58;0;109;51;alle optaget, ledige pladser;
+25030;25000;Teknisk videnskab (civilingeniør) Elektronik og it   ;50;0;90;55;alle optaget, ledige pladser;
+25075;25000;Teknisk videnskab (civilingeniør) Energi     ;54;0;105;54;alle optaget, ledige pladser;
+25035;25000;Teknisk videnskab (civilingeniør) Globale forretningssystemer    ;49;0;81;51;alle optaget, ledige pladser;
+25025;25000;Teknisk videnskab (civilingeniør) Internetteknologier og computersystemer   ;8;0;44;11;alle optaget, ledige pladser;
+25047;25000;Teknisk videnskab (civilingeniør) Kemiteknologi     ;14;0;31;14;alle optaget, ledige pladser;
+25040;25000;Teknisk videnskab (civilingeniør) Maskin og produktion   ;66;0;102;63;alle optaget, ledige pladser;
+25318;25000;Teknisk videnskab (civilingeniør) Matematik-teknologi     ;16;0;43;17;alle optaget, ledige pladser;
+25042;25000;Teknisk videnskab (civilingeniør) Miljøteknologi     ;12;0;34;13;alle optaget, ledige pladser;
+25050;25000;Teknisk videnskab (civilingeniør) Nanoteknologi     ;15;0;43;14;alle optaget, ledige pladser;
+25335;25000;Teknisk videnskab (civilingeniør) Produkt- og designpsykologi   ;18;0;45;21;alle optaget, ledige pladser;
+25060;25000;Teknisk videnskab (civilingeniør) Software     ;111;0;169;109;alle optaget, ledige pladser;
+25065;25000;Teknisk videnskab (civilingeniør) Sundhedsteknologi     ;34;0;97;32;alle optaget, ledige pladser;
+25100;25000;Teknoantropologi        ;33;0;77;34;alle optaget, ledige pladser;
+25465;25000;Tysk        ;9;0;36;10;alle optaget, ledige pladser;
+25625;25000;Økonomi        ;33;0;98;33;alle optaget, ledige pladser;
+25345;25000;Art and Technology      ;48;0;166;65;alle optaget, ledige pladser;
+25712;25000;Economics and Business Administration     ;37;0;258;59;alle optaget, ledige pladser;
+25317;25000;Medialogy        ;125;0;243;129;alle optaget;
+25440;25000;Humanistisk informatik       ;125;7;673;244;8,4;8,1
+25085;25000;Landinspektørvidenskab        ;20;0;41;18;alle optaget, ledige pladser;
+25070;25000;Teknisk videnskab (civilingeniør) By-, energi- og miljøplanlægning  ;34;0;93;35;alle optaget, ledige pladser;
+25078;25000;Teknisk videnskab (civilingeniør) Bæredygtigt design    ;43;0;112;34;alle optaget;
+25071;25000;Teknoantropologi        ;99;0;200;74;alle optaget;
+25315;25000;Medialogy        ;248;0;499;232;alle optaget;
+25095;25000;Teknisk videnskab (civilingeniør) IT, Communication and New Media ;42;0;188;58;alle optaget, ledige pladser;
+25072;25000;Teknisk videnskab (civilingeniør) Sustainable Biotechnology    ;16;0;97;32;alle optaget, ledige pladser;
+26610;25000;Diplomingeniør        ;23;0;39;26;alle optaget, ledige pladser;
+26620;25000;Diplomingeniør, kemi- og bioteknologi     ;13;0;24;15;alle optaget, ledige pladser;
+26710;25000;Fiskeriteknolog        ;7;0;9;8;ej kvotesyst., alle opt., led. pl.;
+26511;25000;Teknisk videnskab (civilingeniør) Bygge- og anlægskonstruktion   ;12;0;25;13;alle optaget, ledige pladser;
+26513;25000;Teknisk videnskab (civilingeniør) Energi     ;27;0;57;32;alle optaget, ledige pladser;
+26515;25000;Teknisk videnskab (civilingeniør) Kemi og bioteknologi   ;12;0;21;13;alle optaget, ledige pladser;
+26514;25000;Teknisk videnskab (civilingeniør) Maskinkonstruktion     ;13;0;26;13;alle optaget, ledige pladser;
+26520;25000;Medialogy        ;36;0;91;41;alle optaget, ledige pladser;
+26512;25000;Teknisk videnskab (civilingeniør) Electronic and Computer Engineering  ;18;0;73;27;alle optaget, ledige pladser;
+;25000;Aalborg Universitet i alt;4912;32;14137;5071;;
 ;;;;;;;;;;
-;30000;Det Kongelige Danske Kunstakademis Skoler for Arkitektur, Design og Konservering;;;;;;;;
-30010;30000;Arkitekt        ;199;10;1138;672;10,5;10,4;;
-32010;30000;Designer        ;110;6;1657;990;ej kvotesyst.;;;
-33010;30000;Konservator        ;50;10;187;149;ej kvotesyst.;;;
-32610;30000;Kunsthåndværker        ;28;2;72;50;ej kvotesyst.;;;
-;30000;Det Kongelige Danske Kunstakademis Skoler for Arkitektur, Design og Konservering i alt;387;28;3054;1861;;;;
+;30000;Det Kongelige Danske Kunstakademis Skoler for Arkitektur, Design og Konservering;;;;;;
+30010;30000;Arkitekt        ;199;10;1138;672;10,5;10,4
+32010;30000;Designer        ;110;6;1657;990;ej kvotesyst.;
+33010;30000;Konservator        ;50;10;187;149;ej kvotesyst.;
+32610;30000;Kunsthåndværker        ;28;2;72;50;ej kvotesyst.;
+;30000;Det Kongelige Danske Kunstakademis Skoler for Arkitektur, Design og Konservering i alt;387;28;3054;1861;;
 ;;        ;;;;;;;;
-;32100;Designskolen Kolding       ;;;;;;;;
-32110;32100;Designer        ;62;3;606;246;ej kvotesyst.;;;
-;32100;Designskolen Kolding i alt  ;62;3;606;246;;;;
-;35000;Arkitektskolen Aarhus       ;;;;;;;;
-30060;35000;Arkitekt        ;156;13;925;324;10;9,8;;
-;35000;Arkitektskolen Aarhus i alt     ;156;13;925;324;;;;
-;40000;Professionshøjskolen Metropol, University College     ;;;;;;;;
-70010;40000;Administrationsøkonom, København N      ;105;7;407;85;3,2;alle optaget;;
-78010;40000;Laborant, København N      ;153;0;370;128;alle optaget, ledige pladser;;;
-83010;40000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), København N ;31;0;85;36;alle optaget, ledige pladser;;;
-40510;40000;Professionsbachelor i beredskab, katastrofe- og risikomanagement, København N ;70;5;366;189;8,9;8,6;;
-45010;40000;Professionsbachelor i ernæring og sundhed, København K  ;202;60;944;472;8,2;7,4;;
-50810;40000;Professionsbachelor i kristendom, kultur og kommunikation, Frederiksberg  ;30;3;91;31;5,8;alle optaget;;
-52610;40000;Professionsbachelor i offentlig administration, København N   ;140;18;445;127;4,6;alle optaget;;
-40610;40000;Professionsbachelor, bioanalytiker, København N     ;147;31;563;234;7,1;5,5;;
-42020;40000;Professionsbachelor, ergoterapeut, København N     ;144;42;558;177;6,6;5,7;;
-46020;40000;Professionsbachelor, folkeskolelærer, Frederiksberg      ;356;11;1102;372;alle med mindst 7,0 optaget *;;;
-47020;40000;Professionsbachelor, fysioterapeut, København N     ;219;60;1627;760;8,6;8,1;;
-50010;40000;Professionsbachelor, jordemoder, København N     ;67;10;620;307;11,1;10,9;;
-54020;40000;Professionsbachelor, radiograf, København N     ;90;20;508;192;6,5;5,9;;
-55010;40000;Professionsbachelor, socialrådgiver, Frederiksberg      ;350;84;1456;674;7,2;5,6;;
-55017;40000;Professionsbachelor, socialrådgiver, Hillerød      ;80;27;733;167;6,3;5,4;;
-56020;40000;Professionsbachelor, sygeplejerske, Frederiksberg      ;86;16;1010;268;9,2;7,5;;
-56040;40000;Professionsbachelor, sygeplejerske, København N     ;882;120;2215;1012;6,6;5,6;;
-45012;40000;Bachelor of Global Nutrition and Health, København K ;50;26;370;126;8,9;8,1;;
-;40000;Professionshøjskolen Metropol, University College  i alt;3202;540;13470;5357;;;;
+;32100;Designskolen Kolding       ;;;;;;
+32110;32100;Designer        ;62;3;606;246;ej kvotesyst.;
+;32100;Designskolen Kolding i alt  ;62;3;606;246;;
+;35000;Arkitektskolen Aarhus       ;;;;;;
+30060;35000;Arkitekt        ;156;13;925;324;10;9,8
+;35000;Arkitektskolen Aarhus i alt     ;156;13;925;324;;
+;40000;Professionshøjskolen Metropol, University College     ;;;;;;
+70010;40000;Administrationsøkonom, København N      ;105;7;407;85;3,2;alle optaget
+78010;40000;Laborant, København N      ;153;0;370;128;alle optaget, ledige pladser;
+83010;40000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), København N ;31;0;85;36;alle optaget, ledige pladser;
+40510;40000;Professionsbachelor i beredskab, katastrofe- og risikomanagement, København N ;70;5;366;189;8,9;8,6
+45010;40000;Professionsbachelor i ernæring og sundhed, København K  ;202;60;944;472;8,2;7,4
+50810;40000;Professionsbachelor i kristendom, kultur og kommunikation, Frederiksberg  ;30;3;91;31;5,8;alle optaget
+52610;40000;Professionsbachelor i offentlig administration, København N   ;140;18;445;127;4,6;alle optaget
+40610;40000;Professionsbachelor, bioanalytiker, København N     ;147;31;563;234;7,1;5,5
+42020;40000;Professionsbachelor, ergoterapeut, København N     ;144;42;558;177;6,6;5,7
+46020;40000;Professionsbachelor, folkeskolelærer, Frederiksberg      ;356;11;1102;372;alle med mindst 7,0 optaget *;
+47020;40000;Professionsbachelor, fysioterapeut, København N     ;219;60;1627;760;8,6;8,1
+50010;40000;Professionsbachelor, jordemoder, København N     ;67;10;620;307;11,1;10,9
+54020;40000;Professionsbachelor, radiograf, København N     ;90;20;508;192;6,5;5,9
+55010;40000;Professionsbachelor, socialrådgiver, Frederiksberg      ;350;84;1456;674;7,2;5,6
+55017;40000;Professionsbachelor, socialrådgiver, Hillerød      ;80;27;733;167;6,3;5,4
+56020;40000;Professionsbachelor, sygeplejerske, Frederiksberg      ;86;16;1010;268;9,2;7,5
+56040;40000;Professionsbachelor, sygeplejerske, København N     ;882;120;2215;1012;6,6;5,6
+45012;40000;Bachelor of Global Nutrition and Health, København K ;50;26;370;126;8,9;8,1
+;40000;Professionshøjskolen Metropol, University College  i alt;3202;540;13470;5357;;
 ;;        ;;;;;;;;
-;45000;Professionshøjskolen UCC (University College)     ;;;;;;;;
-40010;45000;Professionsbachelor i afspændingspædagogik og psykomotorik, Hillerød   ;80;25;235;153;ej kvotesyst.;;;
-57010;45000;Professionsbachelor i dansk tegnsprog og tolkning   ;69;17;173;99;7,4;5,8;;
-57310;45000;Professionsbachelor i tekstildesign, håndværk og formidling, København K ;53;5;109;56;ej kvotesyst.;;;
-46010;45000;Professionsbachelor, folkeskolelærer, København K     ;403;0;1225;410;ledige pladser *;;;
-46036;45000;Professionsbachelor, folkeskolelærer, Rønne      ;9;0;18;10;ledige pladser *;;;
-46040;45000;Professionsbachelor, folkeskolelærer, Søborg (dag)     ;119;0;604;158;ledige pladser *;;;
-46042;45000;Professionsbachelor, folkeskolelærer, Søborg (aften)     ;33;0;108;40;ledige pladser *;;;
-47040;45000;Professionsbachelor, fysioterapeut, Hillerød      ;80;20;818;129;7,7;6,9;;
-53102;45000;Professionsbachelor, pædagog - netbaseret, Hillerød    ;37;0;97;45;alle optaget, ledige pladser;;;
-53010;45000;Professionsbachelor, pædagog, Frederiksberg C     ;378;40;1478;563;5,9;4,7;;
-53100;45000;Professionsbachelor, pædagog, Hillerød      ;232;0;538;230;alle optaget, ledige pladser;;;
-53030;45000;Professionsbachelor, pædagog, København SV     ;336;40;1642;459;4,4;3,3;;
-53020;45000;Professionsbachelor, pædagog, København Ø     ;378;40;1684;390;4,8;3,5;;
-53120;45000;Professionsbachelor, pædagog, Rønne      ;28;0;43;34;alle optaget, ledige pladser;;;
-53040;45000;Professionsbachelor, pædagog, Skovlunde      ;328;0;854;270;alle optaget, ledige pladser;;;
-56082;45000;Professionsbachelor, sygeplejerske - netbaseret, Hillerød    ;36;5;211;80;7,1;5,7;;
-56080;45000;Professionsbachelor, sygeplejerske, Hillerød      ;142;37;729;160;5,5;4,4;;
-;45000;Professionshøjskolen UCC (University College) i alt;2741;229;10566;3286;;;;
+;45000;Professionshøjskolen UCC (University College)     ;;;;;;
+40010;45000;Professionsbachelor i afspændingspædagogik og psykomotorik, Hillerød   ;80;25;235;153;ej kvotesyst.;
+57010;45000;Professionsbachelor i dansk tegnsprog og tolkning   ;69;17;173;99;7,4;5,8
+57310;45000;Professionsbachelor i tekstildesign, håndværk og formidling, København K ;53;5;109;56;ej kvotesyst.;
+46010;45000;Professionsbachelor, folkeskolelærer, København K     ;403;0;1225;410;ledige pladser *;
+46036;45000;Professionsbachelor, folkeskolelærer, Rønne      ;9;0;18;10;ledige pladser *;
+46040;45000;Professionsbachelor, folkeskolelærer, Søborg (dag)     ;119;0;604;158;ledige pladser *;
+46042;45000;Professionsbachelor, folkeskolelærer, Søborg (aften)     ;33;0;108;40;ledige pladser *;
+47040;45000;Professionsbachelor, fysioterapeut, Hillerød      ;80;20;818;129;7,7;6,9
+53102;45000;Professionsbachelor, pædagog - netbaseret, Hillerød    ;37;0;97;45;alle optaget, ledige pladser;
+53010;45000;Professionsbachelor, pædagog, Frederiksberg C     ;378;40;1478;563;5,9;4,7
+53100;45000;Professionsbachelor, pædagog, Hillerød      ;232;0;538;230;alle optaget, ledige pladser;
+53030;45000;Professionsbachelor, pædagog, København SV     ;336;40;1642;459;4,4;3,3
+53020;45000;Professionsbachelor, pædagog, København Ø     ;378;40;1684;390;4,8;3,5
+53120;45000;Professionsbachelor, pædagog, Rønne      ;28;0;43;34;alle optaget, ledige pladser;
+53040;45000;Professionsbachelor, pædagog, Skovlunde      ;328;0;854;270;alle optaget, ledige pladser;
+56082;45000;Professionsbachelor, sygeplejerske - netbaseret, Hillerød    ;36;5;211;80;7,1;5,7
+56080;45000;Professionsbachelor, sygeplejerske, Hillerød      ;142;37;729;160;5,5;4,4
+;45000;Professionshøjskolen UCC (University College) i alt;2741;229;10566;3286;;
 ;;        ;;;;;;;;
-;50000;Professionshøjskolen Sjælland University College     ;;;;;;;;
-45110;50000;Professionsbachelor i ernæring og sundhed, Sorø (sommer);130;29;407;105;6,1;alle optaget;;
-45115;50000;Professionsbachelor i ernæring og sundhed, Sorø (vinter)    ;28;9;184;33;6,9;5,9;;
-45117;50000;Professionsbachelor i ernæring og sundhed, e-læring, Sorø  (sommer);70;13;223;81;5,5;alle optaget;;
-45119;50000;Professionsbachelor i ernæring og sundhed, e-læring, Sorø (vinter)   ;25;0;93;24;alle optaget, ledige pladser;;;
-44250;50000;Professionsbachelor i Leisure Management, Roskilde  (sommer);110;0;210;94;alle optaget, ledige pladser;;;
-44256;50000;Professionsbachelor i Leisure Management, e-læring, Roskilde   ;5;0;18;4;alle optaget, ledige pladser;;;
-40640;50000;Professionsbachelor, bioanalytiker, Næstved  (sommer);43;11;197;71;5,8;alle optaget;;
-40645;50000;Professionsbachelor, bioanalytiker, e-læring, Næstved  (sommer);10;3;86;25;6,4;5,3;;
-42040;50000;Professionsbachelor, ergoterapeut, Næstved (vinter)       ;40;10;167;40;5,3;4,3;;
-42045;50000;Professionsbachelor, ergoterapeut, e-læring, Næstved     ;30;7;87;33;5,2;3,7;;
-46050;50000;Professionsbachelor, folkeskolelærer, Holbæk      ;27;0;100;35;alle med mindst 7,0 optaget *;;;
-46045;50000;Professionsbachelor, folkeskolelærer, Roskilde  (sommer);92;0;388;105;alle med mindst 7,0 optaget *;;;
-46046;50000;Professionsbachelor, folkeskolelærer, Roskilde (vinter)       ;12;0;104;15;alle med mindst 7,0 optaget *;;;
-46047;50000;Professionsbachelor, folkeskolelærer, e-læring, Roskilde  (sommer);47;0;128;63;alle med mindst 7,0 optaget *;;;
-46070;50000;Professionsbachelor, folkeskolelærer, Vordingborg  (sommer);71;0;170;98;alle med mindst 7,0 optaget *;;;
-46072;50000;Professionsbachelor, folkeskolelærer, Vordingborg (vinter)      ;8;0;27;13;alle med mindst 7,0 optaget *;;;
-47060;50000;Professionsbachelor, fysioterapeut, Næstved  (sommer);25;6;452;58;7,6;6,6;;
-47062;50000;Professionsbachelor, fysioterapeut, Næstved (vinter)      ;45;10;284;23;6,4;5,9;;
-47065;50000;Professionsbachelor, fysioterapeut, e-læring, Næstved  (sommer);25;6;252;63;6,9;6,1;;
-47050;50000;Professionsbachelor, fysioterapeut, Roskilde (vinter)      ;67;16;851;142;8;7,6;;
-53160;50000;Professionsbachelor, pædagog, Nykøbing F (sommer);95;3;196;114;3,3;;;
-53162;50000;Professionsbachelor, pædagog, Nykøbing F (vinter)     ;18;0;57;17;alle optaget, ledige pladser;;;
-53130;50000;Professionsbachelor, pædagog, Roskilde  (sommer);230;27;721;292;4,3;alle optaget;;
-53132;50000;Professionsbachelor, pædagog, Roskilde (vinter)       ;30;4;223;46;3,7;alle optaget;;
-53135;50000;Professionsbachelor, pædagog, e-læring, Roskilde  (sommer);55;7;162;74;4,4;alle optaget;;
-53137;50000;Professionsbachelor, pædagog, e-læring, Roskilde (vinter)      ;7;0;40;5;alle optaget, ledige pladser;;;
-53140;50000;Professionsbachelor, pædagog, Slagelse  (sommer);147;0;364;170;alle optaget, ledige pladser;;;
-53142;50000;Professionsbachelor, pædagog, Slagelse (vinter)     ;30;0;99;22;alle optaget;;;
-53165;50000;Professionsbachelor, pædagog, Vordingborg  (sommer);105;4;226;121;3,2;alle optaget;;
-53167;50000;Professionsbachelor, pædagog, Vordingborg (vinter)       ;12;0;59;14;alle optaget, ledige pladser;;;
-55050;50000;Professionsbachelor, socialrådgiver, Nykøbing F  (sommer);40;12;160;76;5,2;4,1;;
-55052;50000;Professionsbachelor, socialrådgiver, Nykøbing F (vinter)      ;23;0;73;11;alle optaget, ledige pladser;;;
-55057;50000;Professionsbachelor, socialrådgiver, e-læring, Nykøbing F    ;25;7;101;44;5;3,2;;
-55030;50000;Professionsbachelor, socialrådgiver, Roskilde  (sommer);90;23;811;245;6,7;5,4;;
-55032;50000;Professionsbachelor, socialrådgiver, Roskilde (vinter)       ;90;25;442;72;5;4;;
-56180;50000;Professionsbachelor, sygeplejerske, Nykøbing F  (sommer);35;6;110;45;4,5;alle optaget;;
-56182;50000;Professionsbachelor, sygeplejerske, Nykøbing F (vinter)      ;6;0;33;6;alle optaget, ledige pladser;;;
-56160;50000;Professionsbachelor, sygeplejerske, Næstved  (sommer);43;13;317;78;6;4,6;;
-56162;50000;Professionsbachelor, sygeplejerske, Næstved (vinter)      ;32;6;119;16;3,3;alle optaget;;
-56120;50000;Professionsbachelor, sygeplejerske, Roskilde  (sommer);90;23;765;165;6,6;4,8;;
-56122;50000;Professionsbachelor, sygeplejerske, Roskilde (vinter)       ;60;18;405;60;5,8;4,2;;
-56140;50000;Professionsbachelor, sygeplejerske, Slagelse  (sommer)     ;30;9;338;83;6,9;5,3;;
-56142;50000;Professionsbachelor, sygeplejerske, Slagelse (vinter)       ;25;8;155;23;4,9;3,1;;
-56145;50000;Professionsbachelor, sygeplejerske, e-læring, Slagelse  (sommer);65;4;181;80;4,4;alle optaget;;
-56147;50000;Professionsbachelor, sygeplejerske, e-læring, Slagelse (vinter)     ;26;0;84;20;alle optaget;;;
-52660;50000;Professionsbachelor i offentlig administration, Næstved  (sommer);30;0;69;26;alle optaget, ledige pladser;;;
-52665;50000;Professionsbachelor i offentlig administration, Næstved (vinter) ;4;0;10;4;alle optaget, ledige pladser;;;
-44115;50000;Professionsbachelor i Leisure Management, Nykøbing F   ;35;0;104;44;alle optaget, ledige pladser;;;
-44121;50000;Professionsbachelor i Leisure Management, Nykøbing F e-læring  ;1;0;16;2;alle optaget, ledige pladser;;;
-;50000;Professionshøjskolen Sjælland University College i alt;2389;319;10868;3100;;;;
+;50000;Professionshøjskolen Sjælland University College     ;;;;;;
+45110;50000;Professionsbachelor i ernæring og sundhed, Sorø (sommer);130;29;407;105;6,1;alle optaget
+45115;50000;Professionsbachelor i ernæring og sundhed, Sorø (vinter)    ;28;9;184;33;6,9;5,9
+45117;50000;Professionsbachelor i ernæring og sundhed, e-læring, Sorø  (sommer);70;13;223;81;5,5;alle optaget
+45119;50000;Professionsbachelor i ernæring og sundhed, e-læring, Sorø (vinter)   ;25;0;93;24;alle optaget, ledige pladser;
+44250;50000;Professionsbachelor i Leisure Management, Roskilde  (sommer);110;0;210;94;alle optaget, ledige pladser;
+44256;50000;Professionsbachelor i Leisure Management, e-læring, Roskilde   ;5;0;18;4;alle optaget, ledige pladser;
+40640;50000;Professionsbachelor, bioanalytiker, Næstved  (sommer);43;11;197;71;5,8;alle optaget
+40645;50000;Professionsbachelor, bioanalytiker, e-læring, Næstved  (sommer);10;3;86;25;6,4;5,3
+42040;50000;Professionsbachelor, ergoterapeut, Næstved (vinter)       ;40;10;167;40;5,3;4,3
+42045;50000;Professionsbachelor, ergoterapeut, e-læring, Næstved     ;30;7;87;33;5,2;3,7
+46050;50000;Professionsbachelor, folkeskolelærer, Holbæk      ;27;0;100;35;alle med mindst 7,0 optaget *;
+46045;50000;Professionsbachelor, folkeskolelærer, Roskilde  (sommer);92;0;388;105;alle med mindst 7,0 optaget *;
+46046;50000;Professionsbachelor, folkeskolelærer, Roskilde (vinter)       ;12;0;104;15;alle med mindst 7,0 optaget *;
+46047;50000;Professionsbachelor, folkeskolelærer, e-læring, Roskilde  (sommer);47;0;128;63;alle med mindst 7,0 optaget *;
+46070;50000;Professionsbachelor, folkeskolelærer, Vordingborg  (sommer);71;0;170;98;alle med mindst 7,0 optaget *;
+46072;50000;Professionsbachelor, folkeskolelærer, Vordingborg (vinter)      ;8;0;27;13;alle med mindst 7,0 optaget *;
+47060;50000;Professionsbachelor, fysioterapeut, Næstved  (sommer);25;6;452;58;7,6;6,6
+47062;50000;Professionsbachelor, fysioterapeut, Næstved (vinter)      ;45;10;284;23;6,4;5,9
+47065;50000;Professionsbachelor, fysioterapeut, e-læring, Næstved  (sommer);25;6;252;63;6,9;6,1
+47050;50000;Professionsbachelor, fysioterapeut, Roskilde (vinter)      ;67;16;851;142;8;7,6
+53160;50000;Professionsbachelor, pædagog, Nykøbing F (sommer);95;3;196;114;3,3;
+53162;50000;Professionsbachelor, pædagog, Nykøbing F (vinter)     ;18;0;57;17;alle optaget, ledige pladser;
+53130;50000;Professionsbachelor, pædagog, Roskilde  (sommer);230;27;721;292;4,3;alle optaget
+53132;50000;Professionsbachelor, pædagog, Roskilde (vinter)       ;30;4;223;46;3,7;alle optaget
+53135;50000;Professionsbachelor, pædagog, e-læring, Roskilde  (sommer);55;7;162;74;4,4;alle optaget
+53137;50000;Professionsbachelor, pædagog, e-læring, Roskilde (vinter)      ;7;0;40;5;alle optaget, ledige pladser;
+53140;50000;Professionsbachelor, pædagog, Slagelse  (sommer);147;0;364;170;alle optaget, ledige pladser;
+53142;50000;Professionsbachelor, pædagog, Slagelse (vinter)     ;30;0;99;22;alle optaget;
+53165;50000;Professionsbachelor, pædagog, Vordingborg  (sommer);105;4;226;121;3,2;alle optaget
+53167;50000;Professionsbachelor, pædagog, Vordingborg (vinter)       ;12;0;59;14;alle optaget, ledige pladser;
+55050;50000;Professionsbachelor, socialrådgiver, Nykøbing F  (sommer);40;12;160;76;5,2;4,1
+55052;50000;Professionsbachelor, socialrådgiver, Nykøbing F (vinter)      ;23;0;73;11;alle optaget, ledige pladser;
+55057;50000;Professionsbachelor, socialrådgiver, e-læring, Nykøbing F    ;25;7;101;44;5;3,2
+55030;50000;Professionsbachelor, socialrådgiver, Roskilde  (sommer);90;23;811;245;6,7;5,4
+55032;50000;Professionsbachelor, socialrådgiver, Roskilde (vinter)       ;90;25;442;72;5;4
+56180;50000;Professionsbachelor, sygeplejerske, Nykøbing F  (sommer);35;6;110;45;4,5;alle optaget
+56182;50000;Professionsbachelor, sygeplejerske, Nykøbing F (vinter)      ;6;0;33;6;alle optaget, ledige pladser;
+56160;50000;Professionsbachelor, sygeplejerske, Næstved  (sommer);43;13;317;78;6;4,6
+56162;50000;Professionsbachelor, sygeplejerske, Næstved (vinter)      ;32;6;119;16;3,3;alle optaget
+56120;50000;Professionsbachelor, sygeplejerske, Roskilde  (sommer);90;23;765;165;6,6;4,8
+56122;50000;Professionsbachelor, sygeplejerske, Roskilde (vinter)       ;60;18;405;60;5,8;4,2
+56140;50000;Professionsbachelor, sygeplejerske, Slagelse  (sommer)     ;30;9;338;83;6,9;5,3
+56142;50000;Professionsbachelor, sygeplejerske, Slagelse (vinter)       ;25;8;155;23;4,9;3,1
+56145;50000;Professionsbachelor, sygeplejerske, e-læring, Slagelse  (sommer);65;4;181;80;4,4;alle optaget
+56147;50000;Professionsbachelor, sygeplejerske, e-læring, Slagelse (vinter)     ;26;0;84;20;alle optaget;
+52660;50000;Professionsbachelor i offentlig administration, Næstved  (sommer);30;0;69;26;alle optaget, ledige pladser;
+52665;50000;Professionsbachelor i offentlig administration, Næstved (vinter) ;4;0;10;4;alle optaget, ledige pladser;
+44115;50000;Professionsbachelor i Leisure Management, Nykøbing F   ;35;0;104;44;alle optaget, ledige pladser;
+44121;50000;Professionsbachelor i Leisure Management, Nykøbing F e-læring  ;1;0;16;2;alle optaget, ledige pladser;
+;50000;Professionshøjskolen Sjælland University College i alt;2389;319;10868;3100;;
 ;;;;;;;;;;
-;65000;Professionshøjskolen Lillebælt University College     ;;;;;;;;
-52620;65000;Professionsbachelor i offentlig administration, Odense C   ;68;0;121;57;alle optaget;;;
-52625;65000;Professionsbachelor i offentlig administration, it-baseret, Odense C (sommer);22;0;61;25;alle optaget;;;
-40650;65000;Professionsbachelor, bioanalytiker, Odense SØ     ;37;6;235;95;8;7,1;;
-42060;65000;Professionsbachelor, ergoterapeut, Odense SØ     ;82;15;356;111;6,3;5,5;;
-46120;65000;Professionsbachelor, folkeskolelærer, Jelling      ;58;0;174;68;alle med mindst 7,0 optaget *;;;
-46080;65000;Professionsbachelor, folkeskolelærer, Odense V     ;224;0;484;237;alle med mindst 7,0 optaget *;;;
-47080;65000;Professionsbachelor, fysioterapeut, Odense SØ     ;140;30;969;277;7,8;7,2;;
-53230;65000;Professionsbachelor, pædagog, Jelling      ;130;10;318;148;3,3;alle optaget;;
-53170;65000;Professionsbachelor, pædagog, Odense V     ;350;60;936;532;4,9;3,4;;
-53185;65000;Professionsbachelor, pædagog, Svendborg      ;60;10;231;81;4,1;alle optaget;;
-54040;65000;Professionsbachelor, radiograf, Odense SØ     ;72;10;348;144;6,8;6,7;;
-55110;65000;Professionsbachelor, socialrådgiver, Odense C     ;200;25;649;283;5,6;5,3;;
-55120;65000;Professionsbachelor, socialrådgiver, it-baseret, Odense C    ;87;6;266;120;5,6;4,6;;
-55140;65000;Professionsbachelor, socialrådgiver, Vejle      ;70;10;371;141;5,7;5,2;;
-56200;65000;Professionsbachelor, sygeplejerske, Odense SØ     ;214;26;836;354;7,3;6,6;;
-56220;65000;Professionsbachelor, sygeplejerske, Svendborg      ;72;15;325;89;6,4;5,6;;
-56280;65000;Professionsbachelor, sygeplejerske, Vejle      ;170;16;615;230;5,7;5,2;;
-;65000;Professionshøjskolen Lillebælt University College i alt;2056;239;7295;2992;;;;
+;65000;Professionshøjskolen Lillebælt University College     ;;;;;;
+52620;65000;Professionsbachelor i offentlig administration, Odense C   ;68;0;121;57;alle optaget;
+52625;65000;Professionsbachelor i offentlig administration, it-baseret, Odense C (sommer);22;0;61;25;alle optaget;
+40650;65000;Professionsbachelor, bioanalytiker, Odense SØ     ;37;6;235;95;8;7,1
+42060;65000;Professionsbachelor, ergoterapeut, Odense SØ     ;82;15;356;111;6,3;5,5
+46120;65000;Professionsbachelor, folkeskolelærer, Jelling      ;58;0;174;68;alle med mindst 7,0 optaget *;
+46080;65000;Professionsbachelor, folkeskolelærer, Odense V     ;224;0;484;237;alle med mindst 7,0 optaget *;
+47080;65000;Professionsbachelor, fysioterapeut, Odense SØ     ;140;30;969;277;7,8;7,2
+53230;65000;Professionsbachelor, pædagog, Jelling      ;130;10;318;148;3,3;alle optaget
+53170;65000;Professionsbachelor, pædagog, Odense V     ;350;60;936;532;4,9;3,4
+53185;65000;Professionsbachelor, pædagog, Svendborg      ;60;10;231;81;4,1;alle optaget
+54040;65000;Professionsbachelor, radiograf, Odense SØ     ;72;10;348;144;6,8;6,7
+55110;65000;Professionsbachelor, socialrådgiver, Odense C     ;200;25;649;283;5,6;5,3
+55120;65000;Professionsbachelor, socialrådgiver, it-baseret, Odense C    ;87;6;266;120;5,6;4,6
+55140;65000;Professionsbachelor, socialrådgiver, Vejle      ;70;10;371;141;5,7;5,2
+56200;65000;Professionsbachelor, sygeplejerske, Odense SØ     ;214;26;836;354;7,3;6,6
+56220;65000;Professionsbachelor, sygeplejerske, Svendborg      ;72;15;325;89;6,4;5,6
+56280;65000;Professionsbachelor, sygeplejerske, Vejle      ;170;16;615;230;5,7;5,2
+;65000;Professionshøjskolen Lillebælt University College i alt;2056;239;7295;2992;;
 ;;        ;;;;;;;;
-;55000;Professionshøjskolen UC Syddanmark      ;;;;;;;;
-43200;55000;Professionsbachelor i erhvervssprog og it-baseret markedskommunikation, Haderslev  ;48;0;73;44;alle optaget;;;
-45160;55000;Professionsbachelor i ernæring og sundhed, Haderslev   ;42;10;228;92;7,4;6,9;;
-47560;55000;Professionsbachelor i grafisk kommunikation, Haderslev    ;62;0;203;80;ej kvotesyst.;;;
-51510;55000;Professionsbachelor i medie- og sonokommunikation, Haderslev   ;40;2;123;97;ej kvotesyst.;;;
-52630;55000;Professionsbachelor i offentlig administration, Esbjerg Ø   ;42;0;75;43;alle optaget;;;
-40660;55000;Professionsbachelor, bioanalytiker, Esbjerg Ø     ;37;10;137;51;6,8;3,9;;
-42080;55000;Professionsbachelor, ergoterapeut, Esbjerg Ø     ;69;5;192;62;4,4;3,9;;
-46110;55000;Professionsbachelor, folkeskolelærer, Esbjerg Ø     ;85;0;213;108;alle med mindst 7,0 optaget *;;;
-46100;55000;Professionsbachelor, folkeskolelærer, Haderslev      ;120;0;274;178;alle med mindst 7,0 optaget *;;;
-47100;55000;Professionsbachelor, fysioterapeut, Esbjerg Ø     ;111;20;638;146;6,7;6,6;;
-47110;55000;Professionsbachelor, fysioterapeut, Haderslev      ;38;5;351;82;7,2;7,1;;
-50015;55000;Professionsbachelor, jordemoder, Esbjerg Ø     ;59;8;367;120;9,5;9,3;;
-53220;55000;Professionsbachelor, pædagog, Esbjerg Ø     ;225;2;437;258;3;alle optaget;;
-53190;55000;Professionsbachelor, pædagog, Kolding      ;145;20;517;252;5;4,5;;
-53200;55000;Professionsbachelor, pædagog, Netbaseret, Aabenraa     ;32;2;115;45;4,3;3,9;;
-53210;55000;Professionsbachelor, pædagog, Aabenraa      ;208;7;332;222;3;alle optaget;;
-55210;55000;Professionsbachelor, socialrådgiver, Esbjerg Ø     ;148;6;365;133;3,7;2,9;;
-55220;55000;Professionsbachelor, socialrådgiver, Aabenraa      ;64;8;217;111;5,9;4,8;;
-56260;55000;Professionsbachelor, sygeplejerske, Esbjerg Ø     ;124;20;322;139;5,6;4,2;;
-56240;55000;Professionsbachelor, sygeplejerske, Sønderborg      ;120;7;222;117;4,3;alle optaget;;
-;55000;Professionshøjskolen UC Syddanmark i alt;1819;132;5401;2380;;;;
+;55000;Professionshøjskolen UC Syddanmark      ;;;;;;
+43200;55000;Professionsbachelor i erhvervssprog og it-baseret markedskommunikation, Haderslev  ;48;0;73;44;alle optaget;
+45160;55000;Professionsbachelor i ernæring og sundhed, Haderslev   ;42;10;228;92;7,4;6,9
+47560;55000;Professionsbachelor i grafisk kommunikation, Haderslev    ;62;0;203;80;ej kvotesyst.;
+51510;55000;Professionsbachelor i medie- og sonokommunikation, Haderslev   ;40;2;123;97;ej kvotesyst.;
+52630;55000;Professionsbachelor i offentlig administration, Esbjerg Ø   ;42;0;75;43;alle optaget;
+40660;55000;Professionsbachelor, bioanalytiker, Esbjerg Ø     ;37;10;137;51;6,8;3,9
+42080;55000;Professionsbachelor, ergoterapeut, Esbjerg Ø     ;69;5;192;62;4,4;3,9
+46110;55000;Professionsbachelor, folkeskolelærer, Esbjerg Ø     ;85;0;213;108;alle med mindst 7,0 optaget *;
+46100;55000;Professionsbachelor, folkeskolelærer, Haderslev      ;120;0;274;178;alle med mindst 7,0 optaget *;
+47100;55000;Professionsbachelor, fysioterapeut, Esbjerg Ø     ;111;20;638;146;6,7;6,6
+47110;55000;Professionsbachelor, fysioterapeut, Haderslev      ;38;5;351;82;7,2;7,1
+50015;55000;Professionsbachelor, jordemoder, Esbjerg Ø     ;59;8;367;120;9,5;9,3
+53220;55000;Professionsbachelor, pædagog, Esbjerg Ø     ;225;2;437;258;3;alle optaget
+53190;55000;Professionsbachelor, pædagog, Kolding      ;145;20;517;252;5;4,5
+53200;55000;Professionsbachelor, pædagog, Netbaseret, Aabenraa     ;32;2;115;45;4,3;3,9
+53210;55000;Professionsbachelor, pædagog, Aabenraa      ;208;7;332;222;3;alle optaget
+55210;55000;Professionsbachelor, socialrådgiver, Esbjerg Ø     ;148;6;365;133;3,7;2,9
+55220;55000;Professionsbachelor, socialrådgiver, Aabenraa      ;64;8;217;111;5,9;4,8
+56260;55000;Professionsbachelor, sygeplejerske, Esbjerg Ø     ;124;20;322;139;5,6;4,2
+56240;55000;Professionsbachelor, sygeplejerske, Sønderborg      ;120;7;222;117;4,3;alle optaget
+;55000;Professionshøjskolen UC Syddanmark i alt;1819;132;5401;2380;;
 ;;;;;;;;;;
-;70000;Professionshøjskolen VIA University College     ;;;;;;;;
-40310;70000;Bandagist/ortopædiingeniør (vinter);10;0;17;11;6,3;;;
-41215;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Holstebro    ;21;0;54;41;alle optaget;;;
-41160;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Horsens    ;69;0;95;64;alle optaget;;;
-41170;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Aarhus N   ;137;0;251;157;alle optaget;;;
-73110;70000;Designteknolog, Herning       ;240;0;538;316;ej kvotesyst., alle opt.;;;
-49310;70000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik), Horsens   ;19;0;36;17;alle optaget;;;
-49325;70000;Diplomingeniør, maskin, Horsens      ;19;0;25;18;alle optaget;;;
-49200;70000;Diplomingeniør, materialeteknologi, Herning      ;0;0;9;6;ikke oprettet;;;
-79460;70000;Markedsføringsøkonom, Horsens       ;36;0;95;29;alle optaget;;;
-84360;70000;Produktionsteknolog, Horsens       ;19;0;29;16;alle optaget;;;
-40060;70000;Professionsbachelor i afspændingspædagogik og psykomotorik, Randers C  ;60;3;142;78;ej kvotesyst.;;;
-54550;70000;Professionsbachelor i diakoni og socialpædagogik, Højbjerg   ;74;8;209;104;6,4;5,3;;
-45210;70000;Professionsbachelor i ernæring og sundhed, Aarhus N  ;71;20;622;271;9,3;8,6;;
-50860;70000;Professionsbachelor i kristendom, kultur og kommunikation, Højbjerg  ;37;0;65;33;alle optaget;;;
-52640;70000;Professionsbachelor i offentlig administration, Risskov    ;72;0;156;64;alle optaget;;;
-52645;70000;Professionsbachelor i offentlig administration, Viborg    ;12;0;39;17;alle optaget;;;
-57360;70000;Professionsbachelor i tekstildesign, håndværk og formidling, Herning  ;25;0;63;29;ej kvotesyst., alle opt.;;;
-40670;70000;Professionsbachelor, bioanalytiker, Aarhus N     ;128;21;363;171;6,8;5,1;;
-42100;70000;Professionsbachelor, ergoterapeut, Holstebro      ;72;2;190;63;3,9;alle optaget;;
-42120;70000;Professionsbachelor, ergoterapeut, Aarhus N     ;120;25;394;126;6;5,2;;
-46130;70000;Professionsbachelor, folkeskolelærer, Lemvig      ;39;0;99;55;alle med mindst 7,0 optaget *;;;
-46160;70000;Professionsbachelor, folkeskolelærer, Silkeborg      ;127;0;451;122;alle med mindst 7,0 optaget *;;;
-46140;70000;Professionsbachelor, folkeskolelærer, Skive      ;41;0;140;52;alle med mindst 7,0 optaget *;;;
-46150;70000;Professionsbachelor, folkeskolelærer, Aarhus N     ;450;32;1055;528;alle med mindst 7,0 optaget *;;;
-47120;70000;Professionsbachelor, fysioterapeut, Holstebro      ;80;15;483;133;7,1;6,5;;
-47140;70000;Professionsbachelor, fysioterapeut, Aarhus N     ;146;24;1185;462;9,1;8,7;;
-53273;70000;Professionsbachelor, pædagog, Grenaa      ;30;6;142;71;5,8;4,4;;
-53250;70000;Professionsbachelor, pædagog, Holstebro      ;170;30;416;232;4,9;alle optaget;;
-53280;70000;Professionsbachelor, pædagog, Horsens      ;130;18;478;211;5,5;4,2;;
-53240;70000;Professionsbachelor, pædagog, Ikast      ;116;18;325;164;4,5;alle optaget;;
-53275;70000;Professionsbachelor, pædagog, Randers C     ;106;16;484;194;5,8;4,6;;
-53270;70000;Professionsbachelor, pædagog, Risskov      ;228;50;926;343;6,1;5,6;;
-53295;70000;Professionsbachelor, pædagog, Thisted      ;64;10;152;91;4,4;alle optaget;;
-53290;70000;Professionsbachelor, pædagog, Viborg      ;166;4;416;171;3,7;alle optaget;;
-53292;70000;Professionsbachelor, pædagog, netbaseret, Viborg     ;64;5;176;77;4,1;alle optaget;;
-53260;70000;Professionsbachelor, pædagog, Aarhus C     ;210;30;1430;592;7,9;6,9;;
-55320;70000;Professionsbachelor, socialrådgiver, Holstebro      ;64;16;234;127;6,5;5,3;;
-55310;70000;Professionsbachelor, socialrådgiver, Risskov      ;300;34;825;373;6;5,1;;
-55313;70000;Professionsbachelor, socialrådgiver, netbaseret, Risskov     ;42;0;122;30;alle optaget, ledige pladser;;;
-56300;70000;Professionsbachelor, sygeplejerske, Holstebro      ;88;23;282;144;6,9;4,8;;
-56370;70000;Professionsbachelor, sygeplejerske, Horsens      ;60;12;381;80;6,4;5,8;;
-56400;70000;Professionsbachelor, sygeplejerske, Randers C     ;91;20;472;113;6,7;5,6;;
-56360;70000;Professionsbachelor, sygeplejerske, Silkeborg      ;90;21;550;112;6,9;5,8;;
-56320;70000;Professionsbachelor, sygeplejerske, Thisted      ;23;5;83;36;6,1;alle optaget;;
-56380;70000;Professionsbachelor, sygeplejerske, Viborg      ;114;38;462;142;5,9;alle optaget;;
-56340;70000;Professionsbachelor, sygeplejerske, Aarhus N     ;272;40;1204;539;8,5;7,9;;
-56345;70000;Professionsbachelor, sygeplejerske, netbaseret, Aarhus N    ;30;5;198;47;6,5;5,4;;
-73115;70000;AP Graduate in Design, Technology and Business, Herning ;158;0;328;227;ej kvotesyst., alle opt.;;;
-79465;70000;AP Graduate in Marketing Management, Horsens   ;96;0;222;119;alle optaget;;;
-41165;70000;Bachelor of Architectural Technology and Construction Management, Horsens ;39;0;150;53;alle optaget;;;
-41175;70000;Bachelor of Architectural Technology and Construction Management, Aarhus N;43;0;194;57;alle optaget;;;
-49410;70000;Bachelor of Engineering in Civil Engineering, Horsens  ;35;0;105;60;alle optaget;;;
-49315;70000;Bachelor of Engineering in Global Business Engineering, Horsens ;40;0;89;37;alle optaget;;;
-49317;70000;Bachelor of Engineering in Global Business Engineering, Aarhus C;60;0;117;52;alle optaget;;;
-49320;70000;Bachelor of Engineering in Information and Communication Technology, Horsens;55;0;108;63;alle optaget;;;
-49425;70000;Bachelor of Engineering in Mechanical Engineering, Horsens  ;44;0;96;54;alle optaget;;;
-45215;70000;Bachelor of Global Nutrition and Health, Aarhus N ;36;20;208;79;9,7;7,6;;
-44310;70000;Bachelor of Value Chain Management, Horsens   ;25;0;66;28;alle optaget;;;
-44315;70000;Bachelor of Value Chain Management, Aarhus C  ;52;0;115;48;alle optaget;;;
-50610;70000;Bachelor of Animation, Viborg     ;50;4;279;232;ej kvotesyst.;;;
-47650;70000;Bachelor in Graphic Storytelling, Viborg    ;20;2;86;66;ej kvotesyst.;;;
-50630;70000;Bachelor in Multiplatform – Storytelling and Production, Aarhus ;30;2;177;106;ej kvotesyst.;;;
+;70000;Professionshøjskolen VIA University College     ;;;;;;
+40310;70000;Bandagist/ortopædiingeniør (vinter);10;0;17;11;6,3;
+41215;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Holstebro    ;21;0;54;41;alle optaget;
+41160;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Horsens    ;69;0;95;64;alle optaget;
+41170;70000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Aarhus N   ;137;0;251;157;alle optaget;
+73110;70000;Designteknolog, Herning       ;240;0;538;316;ej kvotesyst., alle opt.;
+49310;70000;Diplomingeniør, bygning (byggeri og anlæg/bygningsteknik), Horsens   ;19;0;36;17;alle optaget;
+49325;70000;Diplomingeniør, maskin, Horsens      ;19;0;25;18;alle optaget;
+49200;70000;Diplomingeniør, materialeteknologi, Herning      ;0;0;9;6;ikke oprettet;
+79460;70000;Markedsføringsøkonom, Horsens       ;36;0;95;29;alle optaget;
+84360;70000;Produktionsteknolog, Horsens       ;19;0;29;16;alle optaget;
+40060;70000;Professionsbachelor i afspændingspædagogik og psykomotorik, Randers C  ;60;3;142;78;ej kvotesyst.;
+54550;70000;Professionsbachelor i diakoni og socialpædagogik, Højbjerg   ;74;8;209;104;6,4;5,3
+45210;70000;Professionsbachelor i ernæring og sundhed, Aarhus N  ;71;20;622;271;9,3;8,6
+50860;70000;Professionsbachelor i kristendom, kultur og kommunikation, Højbjerg  ;37;0;65;33;alle optaget;
+52640;70000;Professionsbachelor i offentlig administration, Risskov    ;72;0;156;64;alle optaget;
+52645;70000;Professionsbachelor i offentlig administration, Viborg    ;12;0;39;17;alle optaget;
+57360;70000;Professionsbachelor i tekstildesign, håndværk og formidling, Herning  ;25;0;63;29;ej kvotesyst., alle opt.;
+40670;70000;Professionsbachelor, bioanalytiker, Aarhus N     ;128;21;363;171;6,8;5,1
+42100;70000;Professionsbachelor, ergoterapeut, Holstebro      ;72;2;190;63;3,9;alle optaget
+42120;70000;Professionsbachelor, ergoterapeut, Aarhus N     ;120;25;394;126;6;5,2
+46130;70000;Professionsbachelor, folkeskolelærer, Lemvig      ;39;0;99;55;alle med mindst 7,0 optaget *;
+46160;70000;Professionsbachelor, folkeskolelærer, Silkeborg      ;127;0;451;122;alle med mindst 7,0 optaget *;
+46140;70000;Professionsbachelor, folkeskolelærer, Skive      ;41;0;140;52;alle med mindst 7,0 optaget *;
+46150;70000;Professionsbachelor, folkeskolelærer, Aarhus N     ;450;32;1055;528;alle med mindst 7,0 optaget *;
+47120;70000;Professionsbachelor, fysioterapeut, Holstebro      ;80;15;483;133;7,1;6,5
+47140;70000;Professionsbachelor, fysioterapeut, Aarhus N     ;146;24;1185;462;9,1;8,7
+53273;70000;Professionsbachelor, pædagog, Grenaa      ;30;6;142;71;5,8;4,4
+53250;70000;Professionsbachelor, pædagog, Holstebro      ;170;30;416;232;4,9;alle optaget
+53280;70000;Professionsbachelor, pædagog, Horsens      ;130;18;478;211;5,5;4,2
+53240;70000;Professionsbachelor, pædagog, Ikast      ;116;18;325;164;4,5;alle optaget
+53275;70000;Professionsbachelor, pædagog, Randers C     ;106;16;484;194;5,8;4,6
+53270;70000;Professionsbachelor, pædagog, Risskov      ;228;50;926;343;6,1;5,6
+53295;70000;Professionsbachelor, pædagog, Thisted      ;64;10;152;91;4,4;alle optaget
+53290;70000;Professionsbachelor, pædagog, Viborg      ;166;4;416;171;3,7;alle optaget
+53292;70000;Professionsbachelor, pædagog, netbaseret, Viborg     ;64;5;176;77;4,1;alle optaget
+53260;70000;Professionsbachelor, pædagog, Aarhus C     ;210;30;1430;592;7,9;6,9
+55320;70000;Professionsbachelor, socialrådgiver, Holstebro      ;64;16;234;127;6,5;5,3
+55310;70000;Professionsbachelor, socialrådgiver, Risskov      ;300;34;825;373;6;5,1
+55313;70000;Professionsbachelor, socialrådgiver, netbaseret, Risskov     ;42;0;122;30;alle optaget, ledige pladser;
+56300;70000;Professionsbachelor, sygeplejerske, Holstebro      ;88;23;282;144;6,9;4,8
+56370;70000;Professionsbachelor, sygeplejerske, Horsens      ;60;12;381;80;6,4;5,8
+56400;70000;Professionsbachelor, sygeplejerske, Randers C     ;91;20;472;113;6,7;5,6
+56360;70000;Professionsbachelor, sygeplejerske, Silkeborg      ;90;21;550;112;6,9;5,8
+56320;70000;Professionsbachelor, sygeplejerske, Thisted      ;23;5;83;36;6,1;alle optaget
+56380;70000;Professionsbachelor, sygeplejerske, Viborg      ;114;38;462;142;5,9;alle optaget
+56340;70000;Professionsbachelor, sygeplejerske, Aarhus N     ;272;40;1204;539;8,5;7,9
+56345;70000;Professionsbachelor, sygeplejerske, netbaseret, Aarhus N    ;30;5;198;47;6,5;5,4
+73115;70000;AP Graduate in Design, Technology and Business, Herning ;158;0;328;227;ej kvotesyst., alle opt.;
+79465;70000;AP Graduate in Marketing Management, Horsens   ;96;0;222;119;alle optaget;
+41165;70000;Bachelor of Architectural Technology and Construction Management, Horsens ;39;0;150;53;alle optaget;
+41175;70000;Bachelor of Architectural Technology and Construction Management, Aarhus N;43;0;194;57;alle optaget;
+49410;70000;Bachelor of Engineering in Civil Engineering, Horsens  ;35;0;105;60;alle optaget;
+49315;70000;Bachelor of Engineering in Global Business Engineering, Horsens ;40;0;89;37;alle optaget;
+49317;70000;Bachelor of Engineering in Global Business Engineering, Aarhus C;60;0;117;52;alle optaget;
+49320;70000;Bachelor of Engineering in Information and Communication Technology, Horsens;55;0;108;63;alle optaget;
+49425;70000;Bachelor of Engineering in Mechanical Engineering, Horsens  ;44;0;96;54;alle optaget;
+45215;70000;Bachelor of Global Nutrition and Health, Aarhus N ;36;20;208;79;9,7;7,6
+44310;70000;Bachelor of Value Chain Management, Horsens   ;25;0;66;28;alle optaget;
+44315;70000;Bachelor of Value Chain Management, Aarhus C  ;52;0;115;48;alle optaget;
+50610;70000;Bachelor of Animation, Viborg     ;50;4;279;232;ej kvotesyst.;
+47650;70000;Bachelor in Graphic Storytelling, Viborg    ;20;2;86;66;ej kvotesyst.;
+50630;70000;Bachelor in Multiplatform – Storytelling and Production, Aarhus ;30;2;177;106;ej kvotesyst.;
 ;70000;Professionshøjskolen VIA University College i alt;5365;579;18903;8153;;;;
 ;;;;;;;;;;
-;75000;Professionshøjskolen University College Nordjylland     ;;;;;;;;
-70390;75000;Automationsteknolog, Aalborg SV      ;7;0;14;8;alle optaget, ledige pladser;;;
-41210;75000;Bygningskonstruktør, Aalborg       ;65;0;133;90;alle optaget, ledige pladser;;;
-71810;75000;Datamatiker, Aalborg SV      ;51;0;98;55;alle optaget, ledige pladser;;;
-73160;75000;Designteknolog, Aalborg SV      ;66;0;129;77;ej kvotesyst., alle opt.;;;
-73375;75000;Energiteknolog, Frederikshavn       ;0;0;5;3;ikke oprettet;;;
-73390;75000;Energiteknolog, Aalborg SV      ;12;0;31;15;alle optaget, ledige pladser;;;
-74460;75000;Financial Controller, Aalborg      ;19;0;49;19;alle optaget, ledige pladser;;;
-74165;75000;Finansøkonom, Thisted       ;24;0;34;24;alle optaget, ledige pladser;;;
-74160;75000;Finansøkonom, Aalborg       ;111;10;327;146;4,4;alle optaget;;
-75410;75000;Installatør, stærkstrøm, Aalborg SV  (vinter) ;1;0;4;4;ej kvotesyst., alle opt, ledige pl.;;;
-75415;75000;Installatør, VVS, Aalborg SV  (vinter) ;0;0;3;2;ej kvotesyst., alle opt, ledige pl.;;;
-76260;75000;It-teknolog, Aalborg SV      ;22;0;60;23;alle optaget, ledige pladser;;;
-78410;75000;Laborant, Aalborg SV      ;26;3;90;32;4,4;alle optaget;;
-79610;75000;Markedsføringsøkonom, Nørresundby       ;89;0;214;97;alle optaget, ledige pladser;;;
-79620;75000;Markedsføringsøkonom, Thisted       ;18;0;26;16;alle optaget, ledige pladser;;;
-81610;75000;Multimediedesigner, Aalborg SV      ;68;0;164;69;alle optaget, ledige pladser;;;
-84460;75000;Produktionsteknolog, Aalborg SV      ;23;0;45;28;alle optaget, ledige pladser;;;
-41590;75000;Professionsbachelor i eksport og teknologi, Nørresundby   ;2;0;21;9;alle optaget, ledige pladser;;;
-45880;75000;Professionsbachelor i finans, Aalborg     ;78;0;168;75;alle optaget, ledige pladser;;;
-52510;75000;Professionsbachelor i natur- og kulturformidling, Hjørring   ;24;0;38;21;alle optaget;;;
-52650;75000;Professionsbachelor i offentlig administration, Aalborg    ;37;0;86;41;alle optaget, ledige pladser;;;
-42140;75000;Professionsbachelor, ergoterapeut, Aalborg Øst     ;84;15;301;108;6,3;5,5;;
-46180;75000;Professionsbachelor, folkeskolelærer, Hjørring      ;58;0;162;71;ledige pladser *;;;
-46170;75000;Professionsbachelor, folkeskolelærer, Aalborg SØ     ;229;0;491;237;alle med mindst 7,0 optaget *;;;
-47160;75000;Professionsbachelor, fysioterapeut, Aalborg Øst     ;150;27;882;268;7,9;7,1;;
-50020;75000;Professionsbachelor, jordemoder, Aalborg Øst     ;62;10;440;200;10,6;10,1;;
-53330;75000;Professionsbachelor, pædagog, Hjørring      ;140;22;363;149;4,3;3,8;;
-53300;75000;Professionsbachelor, pædagog, Aalborg      ;310;55;974;589;5,7;4,9;;
-54060;75000;Professionsbachelor, radiograf, Aalborg Øst     ;54;10;257;113;7,1;6,3;;
-56440;75000;Professionsbachelor, sygeplejerske, Hjørring      ;126;13;318;106;4,9;alle optaget;;
-56420;75000;Professionsbachelor, sygeplejerske, Aalborg Øst     ;192;25;701;308;7,1;6,1;;
-86210;75000;Serviceøkonom, Nørresundby       ;158;0;230;171;alle optaget;;;
-70395;75000;AP Graduate in Automation Engineering, Aalborg SV  ;7;0;37;8;alle optaget, ledige pladser;;;
-71815;75000;AP Graduate in Computer Science, Aalborg SV  ;55;0;176;53;alle optaget, ledige pladser;;;
-73165;75000;AP Graduate in Design, Technology and Business, Aalborg SV;33;1;116;52;ej kvotesyst, alle optaget;;;
-73365;75000;AP Graduate in Energy Technology, Aalborg SV  ;32;0;66;29;alle optaget, ledige pladser;;;
-74162;75000;AP Graduate in Financial Management, Aalborg   ;37;0;150;51;alle optaget;;;
-79615;75000;AP Graduate in Marketing Management, Nørresundby   ;61;0;233;76;alle optaget, ledige pladser;;;
-81615;75000;AP Graduate in Multimedia Design and Communication, Aalborg SV;45;0;167;44;alle optaget, ledige pladser;;;
-86215;75000;AP Graduate in Service, Hospitality and Tourism Management, Nørresundby;96;0;386;225;alle optaget;;;
-76265;75000;AP Graduate IT Technology, Aalborg SV   ;18;0;71;19;alle optaget, ledige pladser;;;
-41212;75000;Bachelor of Architectural Technology and Construction Management, Aalborg ;38;0;155;51;alle optaget, ledige pladser;;;
-41595;75000;Bachelor of Export and Technology Management, Nørresundby  ;26;0;85;29;alle optaget, ledige pladser;;;
-52515;75000;Bachelor of Natural and Cultural Heritage Management, Hjørring ;38;0;76;37;alle optaget;;;
-;75000;Professionshøjskolen University College Nordjylland i alt;2792;191;8576;3848;;;;
+;75000;Professionshøjskolen University College Nordjylland     ;;;;;;
+70390;75000;Automationsteknolog, Aalborg SV      ;7;0;14;8;alle optaget, ledige pladser;
+41210;75000;Bygningskonstruktør, Aalborg       ;65;0;133;90;alle optaget, ledige pladser;
+71810;75000;Datamatiker, Aalborg SV      ;51;0;98;55;alle optaget, ledige pladser;
+73160;75000;Designteknolog, Aalborg SV      ;66;0;129;77;ej kvotesyst., alle opt.;
+73375;75000;Energiteknolog, Frederikshavn       ;0;0;5;3;ikke oprettet;
+73390;75000;Energiteknolog, Aalborg SV      ;12;0;31;15;alle optaget, ledige pladser;
+74460;75000;Financial Controller, Aalborg      ;19;0;49;19;alle optaget, ledige pladser;
+74165;75000;Finansøkonom, Thisted       ;24;0;34;24;alle optaget, ledige pladser;
+74160;75000;Finansøkonom, Aalborg       ;111;10;327;146;4,4;alle optaget
+75410;75000;Installatør, stærkstrøm, Aalborg SV  (vinter) ;1;0;4;4;ej kvotesyst., alle opt, ledige pl.;
+75415;75000;Installatør, VVS, Aalborg SV  (vinter) ;0;0;3;2;ej kvotesyst., alle opt, ledige pl.;
+76260;75000;It-teknolog, Aalborg SV      ;22;0;60;23;alle optaget, ledige pladser;
+78410;75000;Laborant, Aalborg SV      ;26;3;90;32;4,4;alle optaget
+79610;75000;Markedsføringsøkonom, Nørresundby       ;89;0;214;97;alle optaget, ledige pladser;
+79620;75000;Markedsføringsøkonom, Thisted       ;18;0;26;16;alle optaget, ledige pladser;
+81610;75000;Multimediedesigner, Aalborg SV      ;68;0;164;69;alle optaget, ledige pladser;
+84460;75000;Produktionsteknolog, Aalborg SV      ;23;0;45;28;alle optaget, ledige pladser;
+41590;75000;Professionsbachelor i eksport og teknologi, Nørresundby   ;2;0;21;9;alle optaget, ledige pladser;
+45880;75000;Professionsbachelor i finans, Aalborg     ;78;0;168;75;alle optaget, ledige pladser;
+52510;75000;Professionsbachelor i natur- og kulturformidling, Hjørring   ;24;0;38;21;alle optaget;
+52650;75000;Professionsbachelor i offentlig administration, Aalborg    ;37;0;86;41;alle optaget, ledige pladser;
+42140;75000;Professionsbachelor, ergoterapeut, Aalborg Øst     ;84;15;301;108;6,3;5,5
+46180;75000;Professionsbachelor, folkeskolelærer, Hjørring      ;58;0;162;71;ledige pladser *;
+46170;75000;Professionsbachelor, folkeskolelærer, Aalborg SØ     ;229;0;491;237;alle med mindst 7,0 optaget *;
+47160;75000;Professionsbachelor, fysioterapeut, Aalborg Øst     ;150;27;882;268;7,9;7,1
+50020;75000;Professionsbachelor, jordemoder, Aalborg Øst     ;62;10;440;200;10,6;10,1
+53330;75000;Professionsbachelor, pædagog, Hjørring      ;140;22;363;149;4,3;3,8
+53300;75000;Professionsbachelor, pædagog, Aalborg      ;310;55;974;589;5,7;4,9
+54060;75000;Professionsbachelor, radiograf, Aalborg Øst     ;54;10;257;113;7,1;6,3
+56440;75000;Professionsbachelor, sygeplejerske, Hjørring      ;126;13;318;106;4,9;alle optaget
+56420;75000;Professionsbachelor, sygeplejerske, Aalborg Øst     ;192;25;701;308;7,1;6,1
+86210;75000;Serviceøkonom, Nørresundby       ;158;0;230;171;alle optaget;
+70395;75000;AP Graduate in Automation Engineering, Aalborg SV  ;7;0;37;8;alle optaget, ledige pladser;
+71815;75000;AP Graduate in Computer Science, Aalborg SV  ;55;0;176;53;alle optaget, ledige pladser;
+73165;75000;AP Graduate in Design, Technology and Business, Aalborg SV;33;1;116;52;ej kvotesyst, alle optaget;
+73365;75000;AP Graduate in Energy Technology, Aalborg SV  ;32;0;66;29;alle optaget, ledige pladser;
+74162;75000;AP Graduate in Financial Management, Aalborg   ;37;0;150;51;alle optaget;
+79615;75000;AP Graduate in Marketing Management, Nørresundby   ;61;0;233;76;alle optaget, ledige pladser;
+81615;75000;AP Graduate in Multimedia Design and Communication, Aalborg SV;45;0;167;44;alle optaget, ledige pladser;
+86215;75000;AP Graduate in Service, Hospitality and Tourism Management, Nørresundby;96;0;386;225;alle optaget;
+76265;75000;AP Graduate IT Technology, Aalborg SV   ;18;0;71;19;alle optaget, ledige pladser;
+41212;75000;Bachelor of Architectural Technology and Construction Management, Aalborg ;38;0;155;51;alle optaget, ledige pladser;
+41595;75000;Bachelor of Export and Technology Management, Nørresundby  ;26;0;85;29;alle optaget, ledige pladser;
+52515;75000;Bachelor of Natural and Cultural Heritage Management, Hjørring ;38;0;76;37;alle optaget;
+;75000;Professionshøjskolen University College Nordjylland i alt;2792;191;8576;3848;;
 ;;;;;;;;;;
-;80000;Erhvervsakademiet Copenhagen Business Academy     ;;;;;;;;
-71110;80000;Datamatiker, Kongens Lyngby (sommer);69;0;176;61;alle optaget;;;
-71112;80000;Datamatiker, Kongens Lyngby (vinter)      ;7;0;33;5;alle optaget;;;
-74410;80000;Financial Controller, Kongens Lyngby     ;56;0;121;36;alle optaget;;;
-74020;80000;Finansøkonom, Kongens Lyngby      ;130;6;472;113;5,2;4,6;;
-74010;80000;Finansøkonom, København K (sommer);230;7;870;328;6;5,6;;
-74015;80000;Finansøkonom, København K (vinter)      ;30;2;195;26;5,5;4,6;;
-74605;80000;Handelsøkonom, København K      ;114;4;626;233;6,3;5,6;;
-78060;80000;Laborant, Hillerød (sommer);32;2;114;46;5,6;4,9;;
-78065;80000;Laborant, Hillerød (vinter)       ;5;0;36;6;alle optaget;;;
-87010;80000;Logistikøkonom, København K      ;73;0;220;65;alle optaget;;;
-79060;80000;Markedsføringsøkonom, Kongens Lyngby (sommer);90;5;455;89;5,2;4,2;;
-79062;80000;Markedsføringsøkonom, Kongens Lyngby (vinter)      ;12;0;65;6;alle optaget;;;
-79010;80000;Markedsføringsøkonom, København N (sommer);245;6;925;308;6;5,7;;
-79012;80000;Markedsføringsøkonom, København N (vinter)      ;40;0;137;21;alle optaget;;;
-81060;80000;Multimediedesigner, Kongens Lyngby      ;76;5;330;73;5,9;5;;
-45810;80000;Professionsbachelor i finans, København K    ;114;3;375;120;6,4;5,8;;
-86060;80000;Serviceøkonom, Kongens Lyngby      ;72;0;271;63;alle optaget;;;
-86010;80000;Serviceøkonom, Valby (sommer)       ;197;0;432;189;alle optaget;;;
-86012;80000;Serviceøkonom, Valby (vinter)       ;17;0;91;14;alle optaget;;;
-71115;80000;AP Graduate in Computer Science, Kongens Lyngby  ;39;0;171;48;alle optaget;;;
-79065;80000;AP Graduate in Marketing Management, Kongens Lyngby (summer)  ;70;4;340;98;7,1;5;;
-79067;80000;AP Graduate in Marketing Management, Kongens Lyngby;5;0;32;6;alle optaget;;;
-79015;80000;AP Graduate in Marketing Management, København N (summer)  ;68;3;460;112;4,9;3,2;;
-79017;80000;AP Graduate in Marketing Management, København N (winter)    ;13;0;97;15;alle optaget;;;
-81065;80000;AP Graduate in Multimedia Design and Communication, Kongens Lyngby;40;3;293;69;7,5;4,5;;
-86065;80000;AP Graduate in Service, Hospitality and Tourism Management, Kongens Lyngby;84;0;347;103;alle optaget;;;
-86015;80000;AP Graduate in Service, Hospitality and Tourism Management, Valby (summer);76;0;297;110;alle optaget;;;
-86017;80000;AP Graduate in Service, Hospitality and Tourism Management, Valby (winter)  ;11;0;70;15;alle optaget;;;
-;80000;Erhvervsakademiet Copenhagen Business Academy i alt;2015;50;8051;2378;;;;
+;80000;Erhvervsakademiet Copenhagen Business Academy     ;;;;;;
+71110;80000;Datamatiker, Kongens Lyngby (sommer);69;0;176;61;alle optaget;
+71112;80000;Datamatiker, Kongens Lyngby (vinter)      ;7;0;33;5;alle optaget;
+74410;80000;Financial Controller, Kongens Lyngby     ;56;0;121;36;alle optaget;
+74020;80000;Finansøkonom, Kongens Lyngby      ;130;6;472;113;5,2;4,6
+74010;80000;Finansøkonom, København K (sommer);230;7;870;328;6;5,6
+74015;80000;Finansøkonom, København K (vinter)      ;30;2;195;26;5,5;4,6
+74605;80000;Handelsøkonom, København K      ;114;4;626;233;6,3;5,6
+78060;80000;Laborant, Hillerød (sommer);32;2;114;46;5,6;4,9
+78065;80000;Laborant, Hillerød (vinter)       ;5;0;36;6;alle optaget;
+87010;80000;Logistikøkonom, København K      ;73;0;220;65;alle optaget;
+79060;80000;Markedsføringsøkonom, Kongens Lyngby (sommer);90;5;455;89;5,2;4,2
+79062;80000;Markedsføringsøkonom, Kongens Lyngby (vinter)      ;12;0;65;6;alle optaget;
+79010;80000;Markedsføringsøkonom, København N (sommer);245;6;925;308;6;5,7
+79012;80000;Markedsføringsøkonom, København N (vinter)      ;40;0;137;21;alle optaget;
+81060;80000;Multimediedesigner, Kongens Lyngby      ;76;5;330;73;5,9;5
+45810;80000;Professionsbachelor i finans, København K    ;114;3;375;120;6,4;5,8
+86060;80000;Serviceøkonom, Kongens Lyngby      ;72;0;271;63;alle optaget;
+86010;80000;Serviceøkonom, Valby (sommer)       ;197;0;432;189;alle optaget;
+86012;80000;Serviceøkonom, Valby (vinter)       ;17;0;91;14;alle optaget;
+71115;80000;AP Graduate in Computer Science, Kongens Lyngby  ;39;0;171;48;alle optaget;
+79065;80000;AP Graduate in Marketing Management, Kongens Lyngby (summer)  ;70;4;340;98;7,1;5
+79067;80000;AP Graduate in Marketing Management, Kongens Lyngby;5;0;32;6;alle optaget;
+79015;80000;AP Graduate in Marketing Management, København N (summer)  ;68;3;460;112;4,9;3,2
+79017;80000;AP Graduate in Marketing Management, København N (winter)    ;13;0;97;15;alle optaget;
+81065;80000;AP Graduate in Multimedia Design and Communication, Kongens Lyngby;40;3;293;69;7,5;4,5
+86065;80000;AP Graduate in Service, Hospitality and Tourism Management, Kongens Lyngby;84;0;347;103;alle optaget;
+86015;80000;AP Graduate in Service, Hospitality and Tourism Management, Valby (summer);76;0;297;110;alle optaget;
+86017;80000;AP Graduate in Service, Hospitality and Tourism Management, Valby (winter)  ;11;0;70;15;alle optaget;
+;80000;Erhvervsakademiet Copenhagen Business Academy i alt;2015;50;8051;2378;;
 ;;;;;;;;;;
-;81000;Københavns Erhvervsakademi (KEA)      ;;;;;;;;
-70310;81000;Automationsteknolog, København Ø      ;21;0;38;21;alle optaget;;;
-41010;81000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, København N   ;173;20;441;257;5,5;4,2;;
-71060;81000;Datamatiker, København NV      ;97;0;240;98;alle optaget;;;
-73010;81000;Designteknolog, København Ø      ;180;0;723;311;ej kvotesyst.;;;
-73610;81000;E-designer, København Ø      ;75;0;261;88;ej kvotesyst.;;;
-73310;81000;Energiteknolog, København Ø      ;32;0;56;39;alle optaget;;;
-75010;81000;Installatør, stærkstrøm, København Ø     ;48;0;56;49;ej kvotesyst., alle opt.;;;
-75015;81000;Installatør, VVS, København Ø     ;25;0;30;26;ej kvotesyst., alle opt.;;;
-76010;81000;It-teknolog, København NV      ;41;0;93;43;alle optaget;;;
-81010;81000;Multimediedesigner, København NV      ;195;21;707;235;7,1;5,2;;
-84010;81000;Produktionsteknolog, København N      ;84;0;144;64;alle optaget;;;
-52710;81000;Professionsbachelor i optometri, København N    ;61;0;113;56;alle optaget;;;
-59010;81000;Professionsbachelor i smykker, teknologi og business, København Ø ;40;0;193;101;ej kvotesyst.;;;
-58500;81000;Professionsbachelor i økonomi og it, København NV  ;40;4;137;34;5,1;3,8;;
-71065;81000;AP Graduate in Computer Science, København NV  ;45;0;203;56;5,1;-;;
-73015;81000;AP Graduate in Design, Technology and Business, København Ø;64;0;364;132;ej kvotesyst.;;;
-81015;81000;AP Graduate in Multimedia Design and Communication, København NV;115;0;490;148;7,9;;;
-76015;81000;AP Graduate IT Technology, København NV   ;24;0;103;31;alle optaget;;;
-41015;81000;Bachelor of Architectural Technology and Construction Management, København N;80;11;229;83;9,5;alle optaget;;
-58505;81000;Bachelor of Economics and Information Technology, København NV ;55;2;246;70;6,5;alle optaget;;
-59015;81000;Bachelor in Jewellery, Technology and Business, København Ø ;0;0;166;46;ikke oprettet;;;
-;81000;Københavns Erhvervsakademi (KEA) i alt;1495;58;5033;1988;;;;
+;81000;Københavns Erhvervsakademi (KEA)      ;;;;;;
+70310;81000;Automationsteknolog, København Ø      ;21;0;38;21;alle optaget;
+41010;81000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, København N   ;173;20;441;257;5,5;4,2
+71060;81000;Datamatiker, København NV      ;97;0;240;98;alle optaget;
+73010;81000;Designteknolog, København Ø      ;180;0;723;311;ej kvotesyst.;
+73610;81000;E-designer, København Ø      ;75;0;261;88;ej kvotesyst.;
+73310;81000;Energiteknolog, København Ø      ;32;0;56;39;alle optaget;
+75010;81000;Installatør, stærkstrøm, København Ø     ;48;0;56;49;ej kvotesyst., alle opt.;
+75015;81000;Installatør, VVS, København Ø     ;25;0;30;26;ej kvotesyst., alle opt.;
+76010;81000;It-teknolog, København NV      ;41;0;93;43;alle optaget;
+81010;81000;Multimediedesigner, København NV      ;195;21;707;235;7,1;5,2
+84010;81000;Produktionsteknolog, København N      ;84;0;144;64;alle optaget;
+52710;81000;Professionsbachelor i optometri, København N    ;61;0;113;56;alle optaget;
+59010;81000;Professionsbachelor i smykker, teknologi og business, København Ø ;40;0;193;101;ej kvotesyst.;
+58500;81000;Professionsbachelor i økonomi og it, København NV  ;40;4;137;34;5,1;3,8
+71065;81000;AP Graduate in Computer Science, København NV  ;45;0;203;56;5,1;-
+73015;81000;AP Graduate in Design, Technology and Business, København Ø;64;0;364;132;ej kvotesyst.;
+81015;81000;AP Graduate in Multimedia Design and Communication, København NV;115;0;490;148;7,9;
+76015;81000;AP Graduate IT Technology, København NV   ;24;0;103;31;alle optaget;
+41015;81000;Bachelor of Architectural Technology and Construction Management, København N;80;11;229;83;9,5;alle optaget
+58505;81000;Bachelor of Economics and Information Technology, København NV ;55;2;246;70;6,5;alle optaget
+59015;81000;Bachelor in Jewellery, Technology and Business, København Ø ;0;0;166;46;ikke oprettet;
+;81000;Københavns Erhvervsakademi (KEA) i alt;1495;58;5033;1988;;
 ;;        ;;;;;;;;
-;82000;Erhvervsakademi Sjælland       ;;;;;;;;
-70020;82000;Administrationsøkonom, Køge       ;35;0;94;31;alle optaget;;;
-70410;82000;Autoteknolog, Næstved       ;12;0;19;15;alle optaget;;;
-41060;82000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Næstved    ;96;0;125;87;alle optaget;;;
-71310;82000;Datamatiker, Næstved       ;18;0;44;23;alle optaget;;;
-71210;82000;Datamatiker, Roskilde       ;63;0;112;54;alle optaget;;;
-74030;82000;Finansøkonom, Næstved       ;101;1;250;97;3,1;alle optaget;;
-74610;82000;Handelsøkonom, Næstved       ;66;0;158;56;alle optaget;;;
-75160;82000;Installatør, stærkstrøm, Nykøbing F     ;13;0;15;14;ej kvotesyst., alle opt.;;;
-75115;82000;Installatør, VVS, Slagelse      ;10;0;12;10;ej kvotesyst., alle opt.;;;
-77010;82000;Jordbrugsteknolog, Slagelse       ;55;0;61;49;alle optaget;;;
-78110;82000;Laborant, Roskilde       ;48;1;132;43;2,4;alle optaget;;
-78160;82000;Laborant, Slagelse       ;27;0;68;22;alle optaget;;;
-87030;82000;Logistikøkonom, Køge       ;18;0;54;20;alle optaget;;;
-79160;82000;Markedsføringsøkonom, Roskilde       ;101;1;283;72;2,9;alle optaget;;
-81210;82000;Multimediedesigner, Køge       ;54;0;123;43;alle optaget;;;
-81160;82000;Multimediedesigner, Slagelse       ;47;0;93;36;alle optaget;;;
-83060;82000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Roskilde  ;38;0;72;43;alle optaget;;;
-84060;82000;Produktionsteknolog, Slagelse       ;27;0;36;28;alle optaget;;;
-47710;82000;Professionsbachelor som have- og parkingeniør, Roskilde   ;27;0;46;19;alle optaget;;;
-86090;82000;Serviceøkonom, Køge       ;13;0;56;13;alle optaget;;;
-86080;82000;Serviceøkonom, Slagelse       ;14;0;45;11;alle optaget;;;
-74615;82000;AP Graduate in Commerce Management, Næstved   ;8;0;129;34;alle optaget;;;
-71215;82000;AP Graduate in Computer Science, Roskilde   ;29;0;152;48;alle optaget;;;
-71265;82000;AP Graduate in Computer Science, Slagelse   ;10;0;52;10;alle optaget;;;
-87035;82000;AP Graduate in Logistic Management, Køge   ;13;0;124;39;alle optaget;;;
-79185;82000;AP Graduate in Marketing Management, Nykøbing F  ;8;0;59;9;alle optaget;;;
-79165;82000;AP Graduate in Marketing Management, Roskilde   ;44;0;347;120;alle optaget;;;
-81215;82000;AP Graduate in Multimedia Design and Communication, Køge ;27;0;181;44;alle optaget;;;
-81165;82000;AP Graduate in Multimedia Design and Communication, Slagelse ;12;0;80;11;alle optaget;;;
-81235;82000;AP Graduate in Multimedia Design and Communication, Nykøbing F;29;0;74;33;alle optaget;;;
-86085;82000;AP Graduate in Service, Hospitality and Tourism Management, Køge;51;0;259;78;alle optaget;;;
-86082;82000;AP Graduate in Service, Hospitality and Tourism Management, Slagelse;1;0;23;1;alle optaget;;;
-;82000;Erhvervsakademi Sjælland i alt;1115;3;3378;1213;;;;
+;82000;Erhvervsakademi Sjælland       ;;;;;;
+70020;82000;Administrationsøkonom, Køge       ;35;0;94;31;alle optaget;
+70410;82000;Autoteknolog, Næstved       ;12;0;19;15;alle optaget;
+41060;82000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Næstved    ;96;0;125;87;alle optaget;
+71310;82000;Datamatiker, Næstved       ;18;0;44;23;alle optaget;
+71210;82000;Datamatiker, Roskilde       ;63;0;112;54;alle optaget;
+74030;82000;Finansøkonom, Næstved       ;101;1;250;97;3,1;alle optaget
+74610;82000;Handelsøkonom, Næstved       ;66;0;158;56;alle optaget;
+75160;82000;Installatør, stærkstrøm, Nykøbing F     ;13;0;15;14;ej kvotesyst., alle opt.;
+75115;82000;Installatør, VVS, Slagelse      ;10;0;12;10;ej kvotesyst., alle opt.;
+77010;82000;Jordbrugsteknolog, Slagelse       ;55;0;61;49;alle optaget;
+78110;82000;Laborant, Roskilde       ;48;1;132;43;2,4;alle optaget
+78160;82000;Laborant, Slagelse       ;27;0;68;22;alle optaget;
+87030;82000;Logistikøkonom, Køge       ;18;0;54;20;alle optaget;
+79160;82000;Markedsføringsøkonom, Roskilde       ;101;1;283;72;2,9;alle optaget
+81210;82000;Multimediedesigner, Køge       ;54;0;123;43;alle optaget;
+81160;82000;Multimediedesigner, Slagelse       ;47;0;93;36;alle optaget;
+83060;82000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Roskilde  ;38;0;72;43;alle optaget;
+84060;82000;Produktionsteknolog, Slagelse       ;27;0;36;28;alle optaget;
+47710;82000;Professionsbachelor som have- og parkingeniør, Roskilde   ;27;0;46;19;alle optaget;
+86090;82000;Serviceøkonom, Køge       ;13;0;56;13;alle optaget;
+86080;82000;Serviceøkonom, Slagelse       ;14;0;45;11;alle optaget;
+74615;82000;AP Graduate in Commerce Management, Næstved   ;8;0;129;34;alle optaget;
+71215;82000;AP Graduate in Computer Science, Roskilde   ;29;0;152;48;alle optaget;
+71265;82000;AP Graduate in Computer Science, Slagelse   ;10;0;52;10;alle optaget;
+87035;82000;AP Graduate in Logistic Management, Køge   ;13;0;124;39;alle optaget;
+79185;82000;AP Graduate in Marketing Management, Nykøbing F  ;8;0;59;9;alle optaget;
+79165;82000;AP Graduate in Marketing Management, Roskilde   ;44;0;347;120;alle optaget;
+81215;82000;AP Graduate in Multimedia Design and Communication, Køge ;27;0;181;44;alle optaget;
+81165;82000;AP Graduate in Multimedia Design and Communication, Slagelse ;12;0;80;11;alle optaget;
+81235;82000;AP Graduate in Multimedia Design and Communication, Nykøbing F;29;0;74;33;alle optaget;
+86085;82000;AP Graduate in Service, Hospitality and Tourism Management, Køge;51;0;259;78;alle optaget;
+86082;82000;AP Graduate in Service, Hospitality and Tourism Management, Slagelse;1;0;23;1;alle optaget;
+;82000;Erhvervsakademi Sjælland i alt;1115;3;3378;1213;;
 ;;        ;;;;;;;;
-;83000;Erhvervsakademiet Lillebælt       ;;;;;;;;
-70430;83000;Autoteknolog, Odense C      ;12;0;26;16;alle optaget;;;
-41110;83000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Odense C   ;71;0;150;98;alle optaget;;;
-71410;83000;Datamatiker, Odense C      ;58;0;110;66;alle optaget;;;
-71560;83000;Datamatiker, Vejle       ;32;0;59;33;alle optaget;;;
-73330;83000;Energiteknolog, Odense C      ;12;0;31;21;alle optaget;;;
-73340;83000;Energiteknolog, Vejle       ;4;0;14;8;alle optaget;;;
-74430;83000;Financial Controller, Odense C     ;28;0;64;25;alle optaget;;;
-74060;83000;Finansøkonom, Odense C      ;68;2;279;95;4,7;4,3;;
-74625;83000;Handelsøkonom, Odense C      ;99;0;205;99;alle optaget;;;
-74630;83000;Handelsøkonom, Vejle       ;69;0;138;70;alle optaget;;;
-75210;83000;Installatør, stærkstrøm, Odense C     ;9;0;22;20;ej kvotesyst., alle opt.;;;
-75260;83000;Installatør, stærkstrøm, Vejle      ;7;0;16;13;ej kvotesyst., alle opt.;;;
-75215;83000;Installatør, VVS, Odense C     ;11;0;20;19;ej kvotesyst., alle opt.;;;
-76200;83000;It-teknolog, Odense C      ;27;0;47;29;alle optaget;;;
-77060;83000;Jordbrugsteknolog, Odense S      ;35;0;70;50;alle optaget;;;
-78210;83000;Laborant, Odense S      ;34;2;109;40;5,2;4,7;;
-87060;83000;Logistikøkonom, Vejle       ;41;0;73;46;alle optaget;;;
-79210;83000;Markedsføringsøkonom, Odense C      ;88;0;212;87;alle optaget;;;
-81310;83000;Multimediedesigner, Odense M      ;123;0;204;105;alle optaget;;;
-83110;83000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Odense S ;42;0;58;33;alle optaget;;;
-83160;83000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Vejle  ;27;0;67;48;alle optaget;;;
-84110;83000;Produktionsteknolog, Odense C      ;16;0;43;29;alle optaget;;;
-45830;83000;Professionsbachelor i finans, Odense C    ;73;2;191;72;4,3;4,1;;
-86110;83000;Serviceøkonom, Odense S      ;99;0;157;85;alle optaget;;;
-86130;83000;Serviceøkonom, Vejle       ;34;0;91;43;alle optaget;;;
-71415;83000;AP Graduate in Computer Science, Odense C  ;27;0;98;29;alle optaget;;;
-87065;83000;AP Graduate in Logistic Management, Vejle   ;18;0;83;38;alle optaget;;;
-79215;83000;AP Graduate in Marketing Management, Odense C  ;26;0;217;52;alle optaget;;;
-81315;83000;AP Graduate in Multimedia Design and Communication, Odense M;56;0;200;58;alle optaget;;;
-86115;83000;AP Graduate in Service, Hospitality and Tourism Management, Odense;38;0;223;78;alle optaget;;;
-86135;83000;AP Graduate in Service, Hospitality and Tourism Management, Vejle;0;0;57;6;ikke oprettet;;;
-76065;83000;AP Graduate IT Technology, Odense C   ;17;0;67;25;alle optaget;;;
-41120;83000;Bachelor of Architectural Technology and Construction Management, Odense C;40;0;128;44;alle optaget;;;
-;83000;Erhvervsakademiet Lillebælt i alt;1341;6;3529;1580;;;;
+;83000;Erhvervsakademiet Lillebælt       ;;;;;;
+70430;83000;Autoteknolog, Odense C      ;12;0;26;16;alle optaget;
+41110;83000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Odense C   ;71;0;150;98;alle optaget;
+71410;83000;Datamatiker, Odense C      ;58;0;110;66;alle optaget;
+71560;83000;Datamatiker, Vejle       ;32;0;59;33;alle optaget;
+73330;83000;Energiteknolog, Odense C      ;12;0;31;21;alle optaget;
+73340;83000;Energiteknolog, Vejle       ;4;0;14;8;alle optaget;
+74430;83000;Financial Controller, Odense C     ;28;0;64;25;alle optaget;
+74060;83000;Finansøkonom, Odense C      ;68;2;279;95;4,7;4,3
+74625;83000;Handelsøkonom, Odense C      ;99;0;205;99;alle optaget;
+74630;83000;Handelsøkonom, Vejle       ;69;0;138;70;alle optaget;
+75210;83000;Installatør, stærkstrøm, Odense C     ;9;0;22;20;ej kvotesyst., alle opt.;
+75260;83000;Installatør, stærkstrøm, Vejle      ;7;0;16;13;ej kvotesyst., alle opt.;
+75215;83000;Installatør, VVS, Odense C     ;11;0;20;19;ej kvotesyst., alle opt.;
+76200;83000;It-teknolog, Odense C      ;27;0;47;29;alle optaget;
+77060;83000;Jordbrugsteknolog, Odense S      ;35;0;70;50;alle optaget;
+78210;83000;Laborant, Odense S      ;34;2;109;40;5,2;4,7
+87060;83000;Logistikøkonom, Vejle       ;41;0;73;46;alle optaget;
+79210;83000;Markedsføringsøkonom, Odense C      ;88;0;212;87;alle optaget;
+81310;83000;Multimediedesigner, Odense M      ;123;0;204;105;alle optaget;
+83110;83000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Odense S ;42;0;58;33;alle optaget;
+83160;83000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Vejle  ;27;0;67;48;alle optaget;
+84110;83000;Produktionsteknolog, Odense C      ;16;0;43;29;alle optaget;
+45830;83000;Professionsbachelor i finans, Odense C    ;73;2;191;72;4,3;4,1
+86110;83000;Serviceøkonom, Odense S      ;99;0;157;85;alle optaget;
+86130;83000;Serviceøkonom, Vejle       ;34;0;91;43;alle optaget;
+71415;83000;AP Graduate in Computer Science, Odense C  ;27;0;98;29;alle optaget;
+87065;83000;AP Graduate in Logistic Management, Vejle   ;18;0;83;38;alle optaget;
+79215;83000;AP Graduate in Marketing Management, Odense C  ;26;0;217;52;alle optaget;
+81315;83000;AP Graduate in Multimedia Design and Communication, Odense M;56;0;200;58;alle optaget;
+86115;83000;AP Graduate in Service, Hospitality and Tourism Management, Odense;38;0;223;78;alle optaget;
+86135;83000;AP Graduate in Service, Hospitality and Tourism Management, Vejle;0;0;57;6;ikke oprettet;
+76065;83000;AP Graduate IT Technology, Odense C   ;17;0;67;25;alle optaget;
+41120;83000;Bachelor of Architectural Technology and Construction Management, Odense C;40;0;128;44;alle optaget;
+;83000;Erhvervsakademiet Lillebælt i alt;1341;6;3529;1580;;
 ;;        ;;;;;;;;
-;84000;Erhvervsakademi Kolding       ;;;;;;;;
-73650;84000;E-designer, Kolding       ;20;0;34;14;alle optaget;;;
-74070;84000;Finansøkonom, Kolding       ;117;0;224;110;alle optaget;;;
-79260;84000;Markedsføringsøkonom, Kolding       ;61;0;123;59;alle optaget;;;
-81360;84000;Multimediedesigner, Kolding       ;51;0;99;48;alle optaget;;;
-73655;84000;AP Graduate in E-design, Kolding    ;20;0;51;17;alle optaget;;;
-74075;84000;AP Graduate in Financial Management, Kolding   ;27;0;89;28;alle optaget;;;
-79265;84000;AP Graduate in Marketing Management, Kolding   ;116;0;227;115;alle optaget;;;
-81365;84000;AP Graduate in Multimedia Design and Communication, Kolding ;52;0;122;54;alle optaget;;;
-;84000;Erhvervsakademi Kolding i alt   ;464;0;969;445;;;;
+;84000;Erhvervsakademi Kolding       ;;;;;;
+73650;84000;E-designer, Kolding       ;20;0;34;14;alle optaget;
+74070;84000;Finansøkonom, Kolding       ;117;0;224;110;alle optaget;
+79260;84000;Markedsføringsøkonom, Kolding       ;61;0;123;59;alle optaget;
+81360;84000;Multimediedesigner, Kolding       ;51;0;99;48;alle optaget;
+73655;84000;AP Graduate in E-design, Kolding    ;20;0;51;17;alle optaget;
+74075;84000;AP Graduate in Financial Management, Kolding   ;27;0;89;28;alle optaget;
+79265;84000;AP Graduate in Marketing Management, Kolding   ;116;0;227;115;alle optaget;
+81365;84000;AP Graduate in Multimedia Design and Communication, Kolding ;52;0;122;54;alle optaget;
+;84000;Erhvervsakademi Kolding i alt   ;464;0;969;445;;
 ;;        ;;;;;;;;
-;85000;Erhvervsakademi SydVest       ;;;;;;;;
-41115;85000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Esbjerg    ;39;0;58;38;alle optaget;;;
-71510;85000;Datamatiker, Esbjerg       ;38;0;59;38;alle optaget;;;
-71460;85000;Datamatiker, Sønderborg       ;19;0;29;20;alle optaget;;;
-73060;85000;Designteknolog, Sønderborg       ;19;0;44;13;ej kvotesyst., alle opt.;;;
-73410;85000;Driftsteknolog - Offshore, Esbjerg     ;44;0;65;38;alle optaget;;;
-74080;85000;Finansøkonom, Esbjerg       ;62;0;123;69;alle optaget;;;
-75230;85000;Installatør, stærkstrøm, Esbjerg      ;15;0;18;15;ej kvotesyst., alle opt.;;;
-78260;85000;Laborant, Esbjerg       ;28;0;52;26;alle optaget;;;
-79310;85000;Markedsføringsøkonom, Esbjerg       ;38;0;61;37;alle optaget;;;
-79290;85000;Markedsføringsøkonom, Sønderborg       ;25;0;46;23;alle optaget;;;
-81410;85000;Multimediedesigner, Esbjerg       ;25;0;61;26;alle optaget;;;
-81420;85000;Multimediedesigner, Sønderborg;18;0;29;19;alle optaget;;;
-84210;85000;Produktionsteknolog, Esbjerg       ;32;0;43;32;alle optaget;;;
-84160;85000;Produktionsteknolog, Sønderborg       ;15;0;17;13;alle optaget;;;
-71515;85000;AP Graduate in Computer Science, Esbjerg   ;14;0;39;13;alle optaget;;;
-71465;85000;AP Graduate in Computer Science, Sønderborg   ;5;0;23;7;alle optaget;;;
-73065;85000;AP Graduate in Design, Technology and Business, Sønderborg ;23;0;64;20;ej kvotesyst., alle opt.;;;
-79315;85000;AP Graduate in Marketing Management, Esbjerg   ;23;0;74;34;alle optaget;;;
-79295;85000;AP Graduate in Marketing Management, Sønderborg   ;5;0;37;9;alle optaget;;;
-81412;85000;AP Graduate in Multimedia Design and Communication, Esbjerg ;24;0;59;27;alle optaget;;;
-81422;85000;AP Graduate in Multimedia Design and Communication, Sønderborg ;0;0;19;1;ikke oprettet;;;
-41117;85000;Bachelor of Architectural Technology and Construction Management, Esbjerg ;3;0;24;1;alle optaget;;;
-;85000;Erhvervsakademi SydVest i alt       ;514;0;1044;519;;;;
+;85000;Erhvervsakademi SydVest       ;;;;;;
+41115;85000;Bygningskonstruktør, professionsbachelor i bygningskonstruktion, Esbjerg    ;39;0;58;38;alle optaget;
+71510;85000;Datamatiker, Esbjerg       ;38;0;59;38;alle optaget;
+71460;85000;Datamatiker, Sønderborg       ;19;0;29;20;alle optaget;
+73060;85000;Designteknolog, Sønderborg       ;19;0;44;13;ej kvotesyst., alle opt.;
+73410;85000;Driftsteknolog - Offshore, Esbjerg     ;44;0;65;38;alle optaget;
+74080;85000;Finansøkonom, Esbjerg       ;62;0;123;69;alle optaget;
+75230;85000;Installatør, stærkstrøm, Esbjerg      ;15;0;18;15;ej kvotesyst., alle opt.;
+78260;85000;Laborant, Esbjerg       ;28;0;52;26;alle optaget;
+79310;85000;Markedsføringsøkonom, Esbjerg       ;38;0;61;37;alle optaget;
+79290;85000;Markedsføringsøkonom, Sønderborg       ;25;0;46;23;alle optaget;
+81410;85000;Multimediedesigner, Esbjerg       ;25;0;61;26;alle optaget;
+81420;85000;Multimediedesigner, Sønderborg;18;0;29;19;alle optaget;
+84210;85000;Produktionsteknolog, Esbjerg       ;32;0;43;32;alle optaget;
+84160;85000;Produktionsteknolog, Sønderborg       ;15;0;17;13;alle optaget;
+71515;85000;AP Graduate in Computer Science, Esbjerg   ;14;0;39;13;alle optaget;
+71465;85000;AP Graduate in Computer Science, Sønderborg   ;5;0;23;7;alle optaget;
+73065;85000;AP Graduate in Design, Technology and Business, Sønderborg ;23;0;64;20;ej kvotesyst., alle opt.;
+79315;85000;AP Graduate in Marketing Management, Esbjerg   ;23;0;74;34;alle optaget;
+79295;85000;AP Graduate in Marketing Management, Sønderborg   ;5;0;37;9;alle optaget;
+81412;85000;AP Graduate in Multimedia Design and Communication, Esbjerg ;24;0;59;27;alle optaget;
+81422;85000;AP Graduate in Multimedia Design and Communication, Sønderborg ;0;0;19;1;ikke oprettet;
+41117;85000;Bachelor of Architectural Technology and Construction Management, Esbjerg ;3;0;24;1;alle optaget;
+;85000;Erhvervsakademi SydVest i alt       ;514;0;1044;519;;
 ;;        ;;;;;;;;
-;86000;Erhvervsakademi MidtVest       ;;;;;;;;
-71610;86000;Datamatiker, Herning       ;27;0;52;29;alle optaget;;;
-74090;86000;Finansøkonom, Herning       ;61;0;134;63;alle optaget;;;
-74100;86000;Finansøkonom, Holstebro       ;33;0;82;48;alle optaget;;;
-75310;86000;Installatør, stærkstrøm, Herning      ;2;0;17;15;ej kvotesyst., alle opt.;;;
-75315;86000;Installatør, VVS, Herning      ;2;0;13;12;ej kvotesyst., alle opt.;;;
-78310;86000;Laborant, Holstebro       ;15;0;42;20;alle optaget;;;
-79360;86000;Markedsføringsøkonom, Herning       ;53;0;110;54;alle optaget;;;
-81460;86000;Multimediedesigner, Herning       ;49;0;94;38;alle optaget;;;
-83210;86000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Holstebro  ;3;0;41;26;alle optaget;;;
-84260;86000;Produktionsteknolog, Herning       ;15;0;34;26;alle optaget;;;
-86150;86000;Serviceøkonom, Holstebro       ;45;0;88;51;alle optaget;;;
-;86000;Erhvervsakademi MidtVest i alt;305;0;707;382;;;;
+;86000;Erhvervsakademi MidtVest       ;;;;;;
+71610;86000;Datamatiker, Herning       ;27;0;52;29;alle optaget;
+74090;86000;Finansøkonom, Herning       ;61;0;134;63;alle optaget;
+74100;86000;Finansøkonom, Holstebro       ;33;0;82;48;alle optaget;
+75310;86000;Installatør, stærkstrøm, Herning      ;2;0;17;15;ej kvotesyst., alle opt.;
+75315;86000;Installatør, VVS, Herning      ;2;0;13;12;ej kvotesyst., alle opt.;
+78310;86000;Laborant, Holstebro       ;15;0;42;20;alle optaget;
+79360;86000;Markedsføringsøkonom, Herning       ;53;0;110;54;alle optaget;
+81460;86000;Multimediedesigner, Herning       ;49;0;94;38;alle optaget;
+83210;86000;Procesteknolog (ernærings-, fødevare-, mejeri- og procesteknologi), Holstebro  ;3;0;41;26;alle optaget;
+84260;86000;Produktionsteknolog, Herning       ;15;0;34;26;alle optaget;
+86150;86000;Serviceøkonom, Holstebro       ;45;0;88;51;alle optaget;
+;86000;Erhvervsakademi MidtVest i alt;305;0;707;382;;
 ;;        ;;;;;;;;
-;87000;Erhvervsakademi Aarhus       ;;;;;;;;
-70460;87000;Autoteknolog, Viby J      ;22;0;36;23;alle optaget;;;
-71710;87000;Datamatiker, Viby J      ;73;3;132;78;3,4;alle optaget;;
-74450;87000;Financial Controller, Viby J     ;40;0;98;39;3,2;-;;
-74110;87000;Finansøkonom, Viby J      ;200;20;604;257;5,5;3,8;;
-76210;87000;It-teknolog, Viby J      ;26;0;59;30;alle optaget;;;
-77110;87000;Jordbrugsteknolog, Risskov       ;125;0;170;138;alle optaget;;;
-78360;87000;Laborant, Viby J      ;33;1;107;44;5,8;alle optaget;;
-79410;87000;Markedsføringsøkonom, Viby J      ;320;14;648;353;4,7;alle optaget;;
-77700;87000;Miljøteknolog, Viby J      ;20;0;36;20;alle optaget;;;
-81560;87000;Multimediedesigner, Viby J      ;163;12;344;170;5,1;alle optaget;;
-45860;87000;Professionsbachelor i finans, Viby J    ;111;4;255;120;5,3;4,3;;
-77115;87000;AP Graduate in Agro Business and Landscape Management, Risskov;18;0;62;22;alle optaget;;;
-70470;87000;AP Graduate in Automotive Technology, Viby J  ;28;0;63;31;alle optaget;;;
-78370;87000;AP Graduate in Chemical and Biotechnical Science, Viby J;30;0;103;59;alle optaget;;;
-71715;87000;AP Graduate in Computer Science, Viby J  ;34;3;160;62;6;alle optaget;;
-79415;87000;AP Graduate in Marketing Management, Viby J  ;73;0;354;116;alle optaget;;;
-81565;87000;AP Graduate in Multimedia Design and Communication, Viby J;68;0;267;90;alle optaget;;;
-76215;87000;AP Graduate IT Technology, Viby J   ;23;0;87;30;alle optaget;;;
-45865;87000;Bachelor of Financial Management and Services, Viby J ;39;0;199;61;7,4;-;;
-;87000;Erhvervsakademi Aarhus i alt;1446;57;3784;1743;;;;
+;87000;Erhvervsakademi Aarhus       ;;;;;;
+70460;87000;Autoteknolog, Viby J      ;22;0;36;23;alle optaget;
+71710;87000;Datamatiker, Viby J      ;73;3;132;78;3,4;alle optaget
+74450;87000;Financial Controller, Viby J     ;40;0;98;39;3,2;-
+74110;87000;Finansøkonom, Viby J      ;200;20;604;257;5,5;3,8
+76210;87000;It-teknolog, Viby J      ;26;0;59;30;alle optaget;
+77110;87000;Jordbrugsteknolog, Risskov       ;125;0;170;138;alle optaget;
+78360;87000;Laborant, Viby J      ;33;1;107;44;5,8;alle optaget
+79410;87000;Markedsføringsøkonom, Viby J      ;320;14;648;353;4,7;alle optaget
+77700;87000;Miljøteknolog, Viby J      ;20;0;36;20;alle optaget;
+81560;87000;Multimediedesigner, Viby J      ;163;12;344;170;5,1;alle optaget
+45860;87000;Professionsbachelor i finans, Viby J    ;111;4;255;120;5,3;4,3
+77115;87000;AP Graduate in Agro Business and Landscape Management, Risskov;18;0;62;22;alle optaget;
+70470;87000;AP Graduate in Automotive Technology, Viby J  ;28;0;63;31;alle optaget;
+78370;87000;AP Graduate in Chemical and Biotechnical Science, Viby J;30;0;103;59;alle optaget;
+71715;87000;AP Graduate in Computer Science, Viby J  ;34;3;160;62;6;alle optaget
+79415;87000;AP Graduate in Marketing Management, Viby J  ;73;0;354;116;alle optaget;
+81565;87000;AP Graduate in Multimedia Design and Communication, Viby J;68;0;267;90;alle optaget;
+76215;87000;AP Graduate IT Technology, Viby J   ;23;0;87;30;alle optaget;
+45865;87000;Bachelor of Financial Management and Services, Viby J ;39;0;199;61;7,4;-
+;87000;Erhvervsakademi Aarhus i alt;1446;57;3784;1743;;
 ;;        ;;;;;;;;
-;88000;Erhvervsakademi Dania       ;;;;;;;;
-70210;88000;Administrationsøkonom, Viborg       ;46;0;92;44;alle optaget, ledige pladser;;;
-70370;88000;Automationsteknolog, Hadsten       ;14;0;24;15;alle optaget, ledige pladser;;;
-70510;88000;Autoteknolog, Viborg       ;20;0;32;23;alle optaget, ledige pladser;;;
-71665;88000;Datamatiker, Grenaa       ;71;0;111;102;alle optaget;;;
-71660;88000;Datamatiker, Skive       ;16;0;25;17;alle optaget, ledige pladser;;;
-73370;88000;Energiteknolog, Hadsten       ;14;0;17;14;alle optaget, ledige pladser;;;
-74210;88000;Finansøkonom, Hobro       ;70;0;126;67;alle optaget, ledige pladser;;;
-74215;88000;Finansøkonom, Silkeborg       ;66;0;123;50;alle optaget, ledige pladser;;;
-74675;88000;Handelsøkonom, Hobro       ;25;0;72;33;alle optaget;;;
-74680;88000;Handelsøkonom, Horsens       ;50;0;91;43;alle optaget, ledige pladser;;;
-74660;88000;Handelsøkonom, Randers SØ      ;82;0;148;78;alle optaget, ledige pladser;;;
-74670;88000;Handelsøkonom, Silkeborg       ;55;0;102;48;alle optaget, ledige pladser;;;
-76270;88000;It-teknolog, Viborg       ;9;0;21;8;alle optaget, ledige pladser;;;
-75360;88000;Installatør, stærkstrøm, Hadsten      ;17;0;20;17;ej kvotesyst., alle opt, ledige pl.;;;
-75365;88000;Installatør, VVS, Hadsten      ;5;0;8;7;ej kvotesyst., alle opt, ledige pl.;;;
-79560;88000;Markedsføringsøkonom, Randers SØ      ;50;0;118;43;alle optaget, ledige pladser;;;
-79510;88000;Markedsføringsøkonom, Viborg       ;33;0;61;32;alle optaget, ledige pladser;;;
-81590;88000;Multimediedesigner, Skive       ;32;0;53;34;alle optaget, ledige pladser;;;
-84410;88000;Produktionsteknolog, Randers SØ      ;23;0;38;26;alle optaget, ledige pladser;;;
-84310;88000;Produktionsteknolog, Skive       ;27;0;30;26;alle optaget, ledige pladser;;;
-52750;88000;Professionsbachelor i optometri, Randers C    ;45;0;85;43;alle optaget, ledige pladser;;;
-86160;88000;Serviceøkonom, Randers SØ      ;100;0;185;102;alle optaget, ledige pladser;;;
-86170;88000;Serviceøkonom, Skive       ;12;0;27;12;alle optaget, ledige pladser;;;
-70515;88000;AP Graduate in Automotive Technology, Viborg   ;21;0;48;21;alle optaget, ledige pladser;;;
-79565;88000;AP Graduate in Marketing Management, Randers SØ  ;41;0;114;39;alle optaget, ledige pladser;;;
-79512;88000;AP Graduate in Marketing Management, Viborg   ;28;0;71;36;alle optaget, ledige pladser;;;
-86165;88000;AP Graduate in Service, Hospitality and Tourism Management, Randers SØ;61;0;159;58;alle optaget, ledige pladser;;;
-76255;88000;AP Graduate IT Technology, Viborg    ;19;0;55;17;alle optaget, ledige pladser;;;
-;88000;Erhvervsakademi Dania i alt;1052;0;2056;1055;;;;
+;88000;Erhvervsakademi Dania       ;;;;;;
+70210;88000;Administrationsøkonom, Viborg       ;46;0;92;44;alle optaget, ledige pladser;
+70370;88000;Automationsteknolog, Hadsten       ;14;0;24;15;alle optaget, ledige pladser;
+70510;88000;Autoteknolog, Viborg       ;20;0;32;23;alle optaget, ledige pladser;
+71665;88000;Datamatiker, Grenaa       ;71;0;111;102;alle optaget;
+71660;88000;Datamatiker, Skive       ;16;0;25;17;alle optaget, ledige pladser;
+73370;88000;Energiteknolog, Hadsten       ;14;0;17;14;alle optaget, ledige pladser;
+74210;88000;Finansøkonom, Hobro       ;70;0;126;67;alle optaget, ledige pladser;
+74215;88000;Finansøkonom, Silkeborg       ;66;0;123;50;alle optaget, ledige pladser;
+74675;88000;Handelsøkonom, Hobro       ;25;0;72;33;alle optaget;
+74680;88000;Handelsøkonom, Horsens       ;50;0;91;43;alle optaget, ledige pladser;
+74660;88000;Handelsøkonom, Randers SØ      ;82;0;148;78;alle optaget, ledige pladser;
+74670;88000;Handelsøkonom, Silkeborg       ;55;0;102;48;alle optaget, ledige pladser;
+76270;88000;It-teknolog, Viborg       ;9;0;21;8;alle optaget, ledige pladser;
+75360;88000;Installatør, stærkstrøm, Hadsten      ;17;0;20;17;ej kvotesyst., alle opt, ledige pl.;
+75365;88000;Installatør, VVS, Hadsten      ;5;0;8;7;ej kvotesyst., alle opt, ledige pl.;
+79560;88000;Markedsføringsøkonom, Randers SØ      ;50;0;118;43;alle optaget, ledige pladser;
+79510;88000;Markedsføringsøkonom, Viborg       ;33;0;61;32;alle optaget, ledige pladser;
+81590;88000;Multimediedesigner, Skive       ;32;0;53;34;alle optaget, ledige pladser;
+84410;88000;Produktionsteknolog, Randers SØ      ;23;0;38;26;alle optaget, ledige pladser;
+84310;88000;Produktionsteknolog, Skive       ;27;0;30;26;alle optaget, ledige pladser;
+52750;88000;Professionsbachelor i optometri, Randers C    ;45;0;85;43;alle optaget, ledige pladser;
+86160;88000;Serviceøkonom, Randers SØ      ;100;0;185;102;alle optaget, ledige pladser;
+86170;88000;Serviceøkonom, Skive       ;12;0;27;12;alle optaget, ledige pladser;
+70515;88000;AP Graduate in Automotive Technology, Viborg   ;21;0;48;21;alle optaget, ledige pladser;
+79565;88000;AP Graduate in Marketing Management, Randers SØ  ;41;0;114;39;alle optaget, ledige pladser;
+79512;88000;AP Graduate in Marketing Management, Viborg   ;28;0;71;36;alle optaget, ledige pladser;
+86165;88000;AP Graduate in Service, Hospitality and Tourism Management, Randers SØ;61;0;159;58;alle optaget, ledige pladser;
+76255;88000;AP Graduate IT Technology, Viborg    ;19;0;55;17;alle optaget, ledige pladser;
+;88000;Erhvervsakademi Dania i alt;1052;0;2056;1055;;
 ;;        ;;;;;;;;
-;78000;Bornholms Sundheds- og Sygeplejeskole     ;;;;;;;;
-56100;78000;Sygeplejerske, Rønne       ;24;0;36;23;alle optaget;;;
-;78000;Bornholms Sundheds- og Sygeplejeskole     ;24;0;36;23;;;;
-;78100;Danmarks Medie- og Journalisthøjskole     ;;;;;;;;
-50745;78100;Professionsbachelor i kommunikation, København NV (vinter);50;8;284;107;10;9,7;;
-52010;78100;Professionsbachelor i medieproduktion og ledelse, København NV  ;60;0;348;104;ej kvotesyst.;;;
-52030;78100;Professionsbachelor i tv- og medietilrettelæggelse, København NV  ;39;0;646;286;ej kvotesyst., alle opt.;;;
-47510;78100;Professionsbachelor i visuel kommunikation, København NV   ;85;0;1249;684;ej kvotesyst.;;;
-50315;78100;Professionsbachelor, fotojournalist, Aarhus N     ;16;2;260;141;ej kvotesyst.;;;
-50310;78100;Professionsbachelor, journalist, Aarhus N     ;252;27;1575;865;ej kvotesyst.;;;
-50750;78100;Professionsbachelor i kommunikation, Aarhus N    ;55;8;257;114;9,9;9,3;;
-;78100;Danmarks Medie- og Journalisthøjskole i alt;557;45;4619;2301;;;;
+;78000;Bornholms Sundheds- og Sygeplejeskole     ;;;;;;
+56100;78000;Sygeplejerske, Rønne       ;24;0;36;23;alle optaget;
+;78000;Bornholms Sundheds- og Sygeplejeskole     ;24;0;36;23;;
+;78100;Danmarks Medie- og Journalisthøjskole     ;;;;;;
+50745;78100;Professionsbachelor i kommunikation, København NV (vinter);50;8;284;107;10;9,7
+52010;78100;Professionsbachelor i medieproduktion og ledelse, København NV  ;60;0;348;104;ej kvotesyst.;
+52030;78100;Professionsbachelor i tv- og medietilrettelæggelse, København NV  ;39;0;646;286;ej kvotesyst., alle opt.;
+47510;78100;Professionsbachelor i visuel kommunikation, København NV   ;85;0;1249;684;ej kvotesyst.;
+50315;78100;Professionsbachelor, fotojournalist, Aarhus N     ;16;2;260;141;ej kvotesyst.;
+50310;78100;Professionsbachelor, journalist, Aarhus N     ;252;27;1575;865;ej kvotesyst.;
+50750;78100;Professionsbachelor i kommunikation, Aarhus N    ;55;8;257;114;9,9;9,3
+;78100;Danmarks Medie- og Journalisthøjskole i alt;557;45;4619;2301;;
 ;;        ;;;;;;;;
-;78300;Den Frie Lærerskole      ;;;;;;;;
-46510;78300;Lærer til de frie skoler, Vester Skerninge  ;71;0;135;96;ej kvotesyst., alle opt.;;;
-;78300;Den Frie Lærerskole i alt;71;0;135;96;;;;
-;79100;Pharmakon        ;;;;;;;;
-45610;79100;Farmakonom, Hillerød       ;216;0;389;297;alle optaget;;;
-;79100;Pharmakon i alt        ;216;0;389;297;;;;
-;78600;Maskinmesterskolen København       ;;;;;;;;
-51010;78600;Professionsbachelor, maskinmester, Kongens Lyngby (sommer);106;5;209;143;ej kvotesyst.;;;
-51015;78600;Professionsbachelor, maskinmester, Kongens Lyngby (vinter);16;0;34;15;ej kvotesyst., alle opt.;;;
-;78600;Maskinmesterskolen København i alt       ;122;5;243;158;;;;
+;78300;Den Frie Lærerskole      ;;;;;;
+46510;78300;Lærer til de frie skoler, Vester Skerninge  ;71;0;135;96;ej kvotesyst., alle opt.;
+;78300;Den Frie Lærerskole i alt;71;0;135;96;;
+;79100;Pharmakon        ;;;;;;
+45610;79100;Farmakonom, Hillerød       ;216;0;389;297;alle optaget;
+;79100;Pharmakon i alt        ;216;0;389;297;;
+;78600;Maskinmesterskolen København       ;;;;;;
+51010;78600;Professionsbachelor, maskinmester, Kongens Lyngby (sommer);106;5;209;143;ej kvotesyst.;
+51015;78600;Professionsbachelor, maskinmester, Kongens Lyngby (vinter);16;0;34;15;ej kvotesyst., alle opt.;
+;78600;Maskinmesterskolen København i alt       ;122;5;243;158;;
 ;;        ;;;;;;;;
-;78700;Svendborg International Maritime Academy, SIMAC    ;;;;;;;;
-51110;78700;Professionsbachelor, maskinmester, Svendborg (sommer);58;0;105;61;ej kvotesyst., alle opt.;;;
-51115;78700;Professionsbachelor, maskinmester, Svendborg (vinter);8;0;20;8;ej kvotesyst., alle opt.;;;
-79710;78700;Professionsbachelor, skibsofficer, Svendborg (sommer);27;0;33;28;ej kvotesyst., alle opt.;;;
-79715;78700;Professionsbachelor, skibsofficer, Svendborg (vinter)     ;1;0;3;1;ej kvotesyst., alle opt.;;;
-79810;78700;Professionsbachelor, skibsfører, Svendborg (sommer);25;3;41;32;ej kvotesyst.;;;
-79815;78700;Professionsbachelor, skibsfører, Svendborg (vinter)      ;2;0;6;2;ej kvotesyst., alle opt.;;;
-;78700;Svendborg International Maritime Academy, SIMAC i alt    ;121;3;208;132;;;;
+;78700;Svendborg International Maritime Academy, SIMAC    ;;;;;;
+51110;78700;Professionsbachelor, maskinmester, Svendborg (sommer);58;0;105;61;ej kvotesyst., alle opt.;
+51115;78700;Professionsbachelor, maskinmester, Svendborg (vinter);8;0;20;8;ej kvotesyst., alle opt.;
+79710;78700;Professionsbachelor, skibsofficer, Svendborg (sommer);27;0;33;28;ej kvotesyst., alle opt.;
+79715;78700;Professionsbachelor, skibsofficer, Svendborg (vinter)     ;1;0;3;1;ej kvotesyst., alle opt.;
+79810;78700;Professionsbachelor, skibsfører, Svendborg (sommer);25;3;41;32;ej kvotesyst.;
+79815;78700;Professionsbachelor, skibsfører, Svendborg (vinter)      ;2;0;6;2;ej kvotesyst., alle opt.;
+;78700;Svendborg International Maritime Academy, SIMAC i alt    ;121;3;208;132;;
 ;;        ;;;;;;;;
-;78800;Fredericia Maskinmesterskole       ;;;;;;;;
-51210;78800;Professionsbachelor, maskinmester, Fredericia      ;67;3;132;78;ej kvotesyst.;;;
-;78800;Fredericia Maskinmesterskole i alt;67;3;132;78;;;;
-;78900;Aarhus Maskinmesterskole       ;;;;;;;;
-51260;78900;Professionsbachelor, maskinmester, Aarhus C (sommer);146;9;250;180;ej kvotesyst.;;;
-51265;78900;Professionsbachelor, maskinmester, Aarhus C (vinter);91;0;115;89;ej kvotesyst., alle opt, ledige pl.;;;
-51267;78900;Professionsbachelor, maskinmester, e-læring, Aarhus C (vinter);30;0;44;36;ej kvotesyst., alle opt, ledige pl.;;;
-;78900;Aarhus Maskinmesterskole i alt       ;267;9;409;305;;;;
+;78800;Fredericia Maskinmesterskole       ;;;;;;
+51210;78800;Professionsbachelor, maskinmester, Fredericia      ;67;3;132;78;ej kvotesyst.;
+;78800;Fredericia Maskinmesterskole i alt;67;3;132;78;;
+;78900;Aarhus Maskinmesterskole       ;;;;;;
+51260;78900;Professionsbachelor, maskinmester, Aarhus C (sommer);146;9;250;180;ej kvotesyst.;
+51265;78900;Professionsbachelor, maskinmester, Aarhus C (vinter);91;0;115;89;ej kvotesyst., alle opt, ledige pl.;
+51267;78900;Professionsbachelor, maskinmester, e-læring, Aarhus C (vinter);30;0;44;36;ej kvotesyst., alle opt, ledige pl.;
+;78900;Aarhus Maskinmesterskole i alt       ;267;9;409;305;;
 ;;;;;;;;;;
-;79000;MARTEC        ;;;;;;;;
-51360;79000;Professionsbachelor, maskinmester, Frederikshavn      ;76;8;118;91;ej kvotesyst.;;;
-;79000;MARTEC i alt  ;76;8;118;91;;;;
+;79000;MARTEC        ;;;;;;
+51360;79000;Professionsbachelor, maskinmester, Frederikshavn      ;76;8;118;91;ej kvotesyst.;
+;79000;MARTEC i alt  ;76;8;118;91;;

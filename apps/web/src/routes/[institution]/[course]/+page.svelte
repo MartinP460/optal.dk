@@ -5,11 +5,12 @@
   import { t } from '$lib/i18n/index.svelte'
   import InformationAccordion from '$lib/components/InformationAccordion.svelte'
   import Title from '$lib/components/Title.svelte'
-  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
+  import { CategoryLabel } from '$lib/utils/categories'
+  import { getStringFromPeriod } from '$lib/utils/getStringFromPeriod'
 
-  let { data } = $props()
+  let props = $props()
 
-  const { course, institution } = data
+  const { course, institution, data, allInstitutions } = props.data
 
   const breadcrumbRoutes = [
     { text: institution.latestName, url: institution.slug },
@@ -19,16 +20,25 @@
     t('metaTitleCourse', {
       courseName: course.latestName,
       institutionName: institution.latestName,
-      courseYears: getPeriodIntervalFromPeriod(course.period)
+      courseYears: getStringFromPeriod(course.period)
     })
   )
   let description = $derived(
     t('metaDescriptionCourse', {
       courseName: course.latestName,
       institutionName: institution.latestName,
-      courseYears: getPeriodIntervalFromPeriod(course.period)
+      courseYears: getStringFromPeriod(course.period)
     })
   )
+
+  const categoriesToDisplay = [
+    CategoryLabel.Accepted,
+    CategoryLabel.Applied,
+    CategoryLabel.Quotient,
+    CategoryLabel.Gender,
+    CategoryLabel.Age,
+    CategoryLabel.Education
+  ]
 </script>
 
 <svelte:head>
@@ -48,12 +58,7 @@
   </h2>
   <Meta {course} />
 
-  <Visualization dataCategories={course.dataCategories} />
+  <Visualization {data} {categoriesToDisplay} />
 
-  <InformationAccordion
-    descriptionOpts={{
-      categoriesToDisplay: ['accepted', 'applied', 'quotient', 'gender', 'age', 'education'],
-      type: 'course'
-    }}
-  />
+  <InformationAccordion {categoriesToDisplay} type="course" courseHistory={allInstitutions} />
 </main>

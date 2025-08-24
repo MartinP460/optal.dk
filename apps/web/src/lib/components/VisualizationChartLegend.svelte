@@ -1,36 +1,23 @@
 <script lang="ts">
-  import type { KOTSubcategory } from '@optaldk/reader'
   import { t } from '$lib/i18n/index.svelte'
   import { getColorFromSubcategory } from '$lib/utils/getColorFromDataset'
-  import Source from '$lib/components/Source.svelte'
+  import VisualizationSource from '$lib/components/VisualizationSource.svelte'
   import Button from '$lib/components/ui/button/button.svelte'
+  import { getLegendLabels } from '$lib/utils/visualizationChart.svelte'
 
-  type Props = {
-    group:
-      | 'genderAccepted'
-      | 'genderApplied'
-      | 'ageAccepted'
-      | 'ageApplied'
-      | 'edAccepted'
-      | 'edApplied'
-      | null
-    labels: KOTSubcategory[]
-    collapsedLabels: KOTSubcategory[] | null
-  }
-
-  let { group, labels, collapsedLabels }: Props = $props()
+  const { topLabel, subcategories, collapsedSubcategories } = $derived(getLegendLabels())
 
   let isLabelsExpanded = $state(false)
 </script>
 
 <div class="flex flex-col sm:flex-row-reverse justify-between mt-4 sm:gap-8 sm:items-center">
-  <Source class="self-end sm:self-start" />
+  <VisualizationSource class="self-end sm:self-start" />
   <div>
-    {#if group}
-      <p class="text-muted-foreground text-sm">({t(group)})</p>
+    {#if topLabel}
+      <p class="text-muted-foreground text-sm">({t(topLabel)})</p>
     {/if}
     <div class="flex flex-wrap gap-x-5 gap-y-2 mt-2">
-      {#each !isLabelsExpanded && collapsedLabels ? collapsedLabels : labels as label (label)}
+      {#each !isLabelsExpanded && collapsedSubcategories ? collapsedSubcategories : subcategories as label (label)}
         <span class="flex items-center gap-2 text-sm text-muted-foreground">
           <div
             class="w-3 h-3 rounded shrink-0"
@@ -39,7 +26,7 @@
           {t(label)}
         </span>
       {/each}
-      {#if collapsedLabels}
+      {#if collapsedSubcategories}
         <Button
           variant="link"
           class="text-muted-foreground text-sm p-0 my-0 h-fit"
@@ -47,7 +34,7 @@
           >{isLabelsExpanded
             ? t('showFewer')
             : t('showXMore', {
-                number: labels.length - collapsedLabels.length
+                number: subcategories.length - collapsedSubcategories.length
               })}
         </Button>
       {/if}

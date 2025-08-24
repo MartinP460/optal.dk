@@ -13,34 +13,29 @@
     VisTooltip,
     VisXYContainer
   } from '@unovis/svelte'
-  import type { KOTDataCategory } from '@optaldk/reader'
-  import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
-  import { getChartProps } from '$lib/utils/chartHelpers'
+  import _ from 'lodash'
+  import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
+  import { getVisualizationChartXYProps } from '$lib/utils/visualizationChart.svelte'
+  import { DisplayType } from '$lib/utils/categories'
 
   let innerWidth = $state(0)
 
-  type Props = {
-    dataCategory: KOTDataCategory
-    displayType: DisplayType
-  }
-
-  let { dataCategory, displayType }: Props = $props()
-
-  let { data, originalData, x, y, color, tooltip, suggestedMaxY, tickValues } = $derived(
-    getChartProps(dataCategory, displayType)
+  const { category, displayType } = $derived(getVisualizationState())
+  const { data, originalData, x, y, maxY, tooltip, color, tickValues } = $derived(
+    getVisualizationChartXYProps()
   )
 </script>
 
 <svelte:window bind:innerWidth />
 
-<VisXYContainer key={dataCategory} class="min-h-80" height={320} yDomain={[0, suggestedMaxY]}>
+<VisXYContainer key={data} class="min-h-80" height={320} yDomain={[0, maxY]}>
   <VisTooltip />
   <VisAxis type="y" domainLine={false} tickLine={false} />
   <VisAxis type="x" gridLine={false} tickLine={false} tickValues={tickValues(innerWidth ?? 0)} />
-  {#if displayType === 'linechart'}
+  {#if displayType === DisplayType.LineChart}
     <VisLine {data} {x} {y} {color} />
     <VisScatter {data} {x} {y} {color} />
-  {:else if dataCategory.name === 'gender' || dataCategory.name === 'age' || dataCategory.name === 'education'}
+  {:else if category.isStackedBarChart}
     <VisStackedBar {data} {x} {y} {color} roundedCorners={4} barPadding={0.2} />
   {:else}
     <VisGroupedBar {data} {x} {y} {color} roundedCorners={4} dataStep={1} />

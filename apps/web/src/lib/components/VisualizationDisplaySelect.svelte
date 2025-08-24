@@ -1,8 +1,5 @@
 <script lang="ts">
   import { IconChartBar } from '@tabler/icons-svelte'
-  import type { KOTDataCategory } from '@optaldk/reader'
-  import type { DisplayType } from '$lib/utils/chartCategoryHelpers'
-  import { getDisplayTypesFromDataCategory } from '$lib/utils/chartCategoryHelpers'
   import { Label } from '$lib/components/ui/label'
   import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n/index.svelte'
@@ -10,27 +7,25 @@
   import * as Select from '$lib/components/ui/select'
   import * as Drawer from '$lib/components/ui/drawer'
   import * as RadioGroup from '$lib/components/ui/radio-group'
+  import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
+  import type { DisplayType } from '$lib/utils/categories'
 
-  type Props = {
-    selectedDataCategory: KOTDataCategory
-    selectedDisplayType: DisplayType
-    onDisplayTypeSelect: (value: DisplayType) => void
-  }
-
-  let { selectedDataCategory, selectedDisplayType, onDisplayTypeSelect }: Props = $props()
-
-  let displayTypes = $derived(getDisplayTypesFromDataCategory(selectedDataCategory.name))
-
-  const handleDisplayTypeSelect = (value: string) => {
-    onDisplayTypeSelect(value as DisplayType)
-  }
+  const {
+    category,
+    displayType: activeDisplayType,
+    onDisplayTypeChange
+  } = $derived(getVisualizationState())
 </script>
 
 <div class="gap-4 hidden md:flex md:ml-auto">
-  <Select.Root type="single" value={selectedDisplayType} onValueChange={handleDisplayTypeSelect}>
-    <Select.Trigger class="w-32 h-full">{t(selectedDisplayType)}</Select.Trigger>
+  <Select.Root
+    type="single"
+    value={activeDisplayType}
+    onValueChange={(displayType) => onDisplayTypeChange(displayType as DisplayType)}
+  >
+    <Select.Trigger class="w-32 h-full">{t(activeDisplayType)}</Select.Trigger>
     <Select.Content>
-      {#each displayTypes as displayType (displayType)}
+      {#each category.displayTypes as displayType (displayType)}
         <Select.Item value={displayType}>{t(displayType)}</Select.Item>
       {/each}
     </Select.Content>
@@ -45,7 +40,7 @@
         <div class="text-left">
           <p class="text-xs text-muted-foreground">{t('display')}</p>
           <p class="inline-flex gap-2 items-center">
-            {t(selectedDisplayType)}
+            {t(activeDisplayType)}
           </p>
         </div>
       </Button>
@@ -57,13 +52,13 @@
       <Drawer.Description>{t('displaySelect')}</Drawer.Description>
     </Drawer.Header>
     <div class="px-6 py-2">
-      <RadioGroup.Root value={selectedDisplayType} class="gap-0">
-        {#each displayTypes as displayType (displayType)}
+      <RadioGroup.Root value={activeDisplayType} class="gap-0">
+        {#each category.displayTypes as displayType (displayType)}
           <div class="flex items-center gap-x-3 py-3">
             <RadioGroup.Item
               id={t(displayType)}
               value={displayType}
-              onclick={() => onDisplayTypeSelect(displayType)}
+              onclick={() => onDisplayTypeChange(displayType)}
             />
             <Label for={t(displayType)} class="font-normal text-base w-full">{t(displayType)}</Label
             >

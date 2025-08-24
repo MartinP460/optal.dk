@@ -5,22 +5,25 @@ import path from 'path'
 import fs from 'fs'
 import { randomUUID } from 'crypto'
 import {
-  KOTDataPointKeys as K,
-  KOTCourse,
-  KOTData,
-  KOTDataType,
-  KOTDataTypes,
-  KOTInstitution,
-  KOTInstitutionCourses
+  NewKOTDataPointKeys as K,
+  NewKOTCourse,
+  NewKOTData,
+  NewKOTDataType,
+  NewKOTDataTypes,
+  NewKOTGrouping,
+  NewKOTInstitution,
+  NewKOTInstitutionCourses
 } from './newTypes'
+import { groupings as groupingInput } from './constants'
+
+let institutions: NewKOTInstitution[] = []
+let courses: NewKOTCourse[] = []
+let institutionCourses: NewKOTInstitutionCourses[] = []
+let data: NewKOTData[] = []
+let groupings: NewKOTGrouping[] = []
 
 /** Reads and returns KOT data across all available years. */
 export async function readData() {
-  let institutions: KOTInstitution[] = []
-  let courses: KOTCourse[] = []
-  let institutionCourses: KOTInstitutionCourses[] = []
-  let data: KOTData[] = []
-
   const dataSheets = await Promise.all(
     AVAILABLE_YEARS.map((year) => {
       const filePath = path.resolve(`${FILEPATH}/${year}.csv`)
@@ -33,16 +36,16 @@ export async function readData() {
     const cleanedDataSheet = trimData(dataSheet)
 
     cleanedDataSheet.forEach((row) => {
-      if (isRowInstitutionHeader(row)) {
-        institutions = upsertInstitution(institutions, row, year)
-      }
-      if (isRowCourse(row)) {
-        courses = upsertCourse(courses, row, year)
-        institutionCourses = upsertInstitutionCourses(institutionCourses, row, year)
-        data = upsertCourseData(data, row, year)
-      }
-      if (isRowInstitutionSummary(row)) {
-        data = upsertInstitutionData(data, institutionCourses, row, year)
+      const rowType = getRowType(row)
+
+      if (rowType === 'institutionHeader') {
+        institutions = upsertInstitution(row, year)
+      } else if (rowType === 'course') {
+        courses = upsertCourse(row, year)
+        institutionCourses = upsertInstitutionCourses(row, year)
+        data = upsertCourseData(row, year)
+      } else if (rowType === 'institutionSummary') {
+        data = upsertInstitutionData(row, year)
       }
     })
   })
@@ -50,173 +53,209 @@ export async function readData() {
   institutions = institutions.sort((a, b) => a.latestName.localeCompare(b.latestName, 'en'))
   courses = courses.sort((a, b) => a.latestName.localeCompare(b.latestName, 'en'))
 
+  createGroupings()
+
   return {
     institutions,
     courses,
     institutionCourses,
-    data
+    data,
+    groupings
   }
 }
 
-/** Upserts a `KOTInstitution` object in the array of `KOTInstitution`. */
-function upsertInstitution(
-  institutions: KOTInstitution[],
-  row: string[],
-  year: number
-): KOTInstitution[] {
+/** Generic upsert function. */
+function upsert<T extends { id: string }>(
+  collection: T[],
+  newItemData: Partial<T>,
+  identifier: (item: T) => boolean,
+  updateLogic: (existingItem: T, newItemData: Partial<T>) => T,
+  createLogic: (newItemData: Partial<T>) => T
+): T[] {
+  const existingItem = collection.find(identifier)
+
+  if (existingItem) {
+    const updatedItem = updateLogic(existingItem, newItemData)
+    return collection.map((item) => (identifier(item) ? updatedItem : item))
+  } else {
+    const createdItem = createLogic(newItemData)
+    return [...collection, createdItem]
+  }
+}
+
+/** Upserts a `NewKOTInstitution` object in the array of `NewKOTInstitution`. */
+function upsertInstitution(row: string[], year: number): NewKOTInstitution[] {
   const KOTId = row[CSV_INDICES.institutionId]
   const latestName = row[CSV_INDICES.name]
 
-  const institution = institutions.find((inst) => inst.KOTId === KOTId)
-
-  const id = randomUUID()
-  const institutionNames = institution?.institutionNames.includes(latestName)
-    ? institution.institutionNames
-    : [...(institution?.institutionNames ?? []), latestName]
-  const slug = createSlug(latestName)
-  const period: [number, number] = institution ? [institution.period[0], year] : [year, year]
-
-  const newInstitution = {
-    id,
-    KOTId,
-    institutionNames,
-    latestName,
-    slug,
-    period
-  }
-
-  return [
-    ...(institution ? institutions.filter((inst) => inst.KOTId !== KOTId) : institutions),
-    newInstitution
-  ]
+  return upsert(
+    institutions,
+    {
+      KOTId,
+      latestName,
+      slug: createSlug(latestName),
+      period: [year, year]
+    },
+    (inst) => inst.KOTId === KOTId,
+    (existingInstitution, newInstitutionData) => {
+      const institutionNames = existingInstitution.institutionNames.includes(
+        newInstitutionData.latestName!
+      )
+        ? existingInstitution.institutionNames
+        : [...existingInstitution.institutionNames, newInstitutionData.latestName!]
+      return {
+        ...existingInstitution,
+        ...newInstitutionData,
+        institutionNames,
+        period: [existingInstitution.period[0], year]
+      }
+    },
+    (newInstitutionData) => {
+      return {
+        id: randomUUID(),
+        KOTId: newInstitutionData.KOTId!,
+        institutionNames: [newInstitutionData.latestName!],
+        latestName: newInstitutionData.latestName!,
+        slug: newInstitutionData.slug!,
+        period: newInstitutionData.period! as [number, number]
+      }
+    }
+  )
 }
 
-/** Upserts a `KOTCourse` object in the array of `KOTCourse`. */
-function upsertCourse(courses: KOTCourse[], row: string[], year: number): KOTCourse[] {
+/** Upserts a `NewKOTCourse` object in the array of `NewKOTCourse`. */
+function upsertCourse(row: string[], year: number): NewKOTCourse[] {
   const KOTId = row[CSV_INDICES.courseId]
   const name = row[CSV_INDICES.name]
 
-  if (name === undefined) console.log(row)
-
-  const course = courses.find((crs) => crs.KOTId === KOTId)
-
-  const id = randomUUID()
   const { latestName, studyStart, eLearning, location, slug } = parseCourseName(KOTId, name)
-  const courseNames = course?.courseNames.includes(latestName)
-    ? course.courseNames
-    : [...(course?.courseNames ?? []), latestName]
-  const period: [number, number] = course ? [course.period[0], year] : [year, year]
 
-  const newCourse = {
-    id,
-    KOTId,
-    courseNames,
-    latestName,
-    studyStart,
-    eLearning,
-    location,
-    slug,
-    period
-  }
+  return upsert(
+    courses,
+    {
+      KOTId,
+      latestName,
+      studyStart,
+      eLearning,
+      location,
+      slug,
+      period: [year, year]
+    },
+    (crs) => crs.KOTId === KOTId,
+    (existingCourse, newCourseData) => {
+      const courseNames = existingCourse.courseNames.includes(newCourseData.latestName!)
+        ? existingCourse.courseNames
+        : [...existingCourse.courseNames, newCourseData.latestName!]
 
-  return [...(course ? courses.filter((inst) => inst.KOTId !== KOTId) : courses), newCourse]
+      return {
+        ...existingCourse,
+        ...newCourseData,
+        courseNames,
+        period: [existingCourse.period[0], year]
+      }
+    },
+    (newCourseData) => ({
+      id: randomUUID(),
+      KOTId: newCourseData.KOTId!,
+      courseNames: [newCourseData.latestName!],
+      latestName: newCourseData.latestName!,
+      studyStart: newCourseData.studyStart!,
+      eLearning: newCourseData.eLearning!,
+      location: newCourseData.location!,
+      slug: newCourseData.slug!,
+      period: newCourseData.period! as [number, number]
+    })
+  )
 }
 
-/** Upserts a `KOTInstitutionCourse` object showing to the ownership of courses per each institution in the array of `KOTInstitutionCourses`. */
-function upsertInstitutionCourses(
-  institutionCourses: KOTInstitutionCourses[],
-  row: string[],
-  year: number
-): KOTInstitutionCourses[] {
+/** Upserts a `KOTInstitutionCourse` object showing to the ownership of courses per each institution in the array of `NewKOTInstitutionCourses`. */
+function upsertInstitutionCourses(row: string[], year: number): NewKOTInstitutionCourses[] {
   const KOTCourseId = row[CSV_INDICES.courseId]
   const KOTInstitutionId = row[CSV_INDICES.institutionId]
 
-  const institutionCourse = institutionCourses.find(
+  return upsert(
+    institutionCourses,
+    {
+      KOTCourseId,
+      KOTInstitutionId,
+      period: [year, year]
+    },
     (instCrs) =>
-      instCrs.KOTCourseId === KOTCourseId && instCrs.KOTInstitutionId === KOTInstitutionId
+      instCrs.KOTCourseId === KOTCourseId && instCrs.KOTInstitutionId === KOTInstitutionId,
+    (existingInstitutionCourse, newInstitutionCourseData) => {
+      return {
+        ...existingInstitutionCourse,
+        ...newInstitutionCourseData,
+        period: [existingInstitutionCourse.period[0], year]
+      }
+    },
+    (newInstitutionCourseData) => {
+      return {
+        id: randomUUID(),
+        KOTCourseId: newInstitutionCourseData.KOTCourseId!,
+        KOTInstitutionId: newInstitutionCourseData.KOTInstitutionId!,
+        period: newInstitutionCourseData.period! as [number, number]
+      }
+    }
   )
-  const period: [number, number] = institutionCourse
-    ? [institutionCourse.period[0], year]
-    : [year, year]
-
-  const id = randomUUID()
-
-  const newInstitutionCourse = {
-    id,
-    KOTCourseId,
-    KOTInstitutionId,
-    period
-  }
-
-  return [
-    ...(institutionCourse
-      ? institutionCourses.filter((instCrs) => instCrs.id !== institutionCourse.id)
-      : institutionCourses),
-    newInstitutionCourse
-  ]
 }
 
-/** Upserts `KOTData` object for a single course in the array of `KOTData`. */
-function upsertCourseData(entries: KOTData[], row: string[], year: number): KOTData[] {
+/** Upserts `NewKOTData` object for a single course in the array of `NewKOTData`. */
+function upsertCourseData(row: string[], year: number): NewKOTData[] {
   const KOTId = row[CSV_INDICES.courseId]
 
-  const entry = entries.find((ent) => ent.KOTId === KOTId)
+  const course = courses.find((crs) => crs.KOTId === KOTId)
+  if (!course) throw new Error(`Course ${KOTId} not found while upserting data.`)
 
-  const id = randomUUID()
-
-  /* Since some columns were added in later years in the .csv files, we need to account
-     for the offset that this causes in the combined .csv file. This slightly hacky
-     solution does that by using differences indices. */
   const indices = getAdjustedDataPointKeys(year)
-  const data = [
-    ...(entry?.data ?? []),
-    {
-      year,
-      ...(_.fromPairs(
-        Object.values(K).map((key) => [
-          key,
-          convertToType(row[indices[key]] ?? '', KOTDataType[key])
-        ])
-      ) as KOTDataTypes)
-    }
-  ]
-
-  const newEntry = {
-    id,
-    KOTId,
-    data
+  const newDataPoint = {
+    year,
+    ...(_.fromPairs(
+      Object.values(K).map((key) => [
+        key,
+        convertToType(row[indices[key]] ?? '', NewKOTDataType[key])
+      ])
+    ) as NewKOTDataTypes)
   }
 
-  return [...(entry ? entries.filter((ent) => ent.id !== entry.id) : entries), newEntry]
+  return upsert(
+    data,
+    {
+      foreignKeyId: course.id
+    },
+    (ent) => ent.foreignKeyId === course.id,
+    (existingEntry) => ({
+      ...existingEntry,
+      data: [...existingEntry.data, newDataPoint]
+    }),
+    (newEntryData) => ({
+      id: randomUUID(),
+      foreignKeyId: newEntryData.foreignKeyId!,
+      data: [newDataPoint]
+    })
+  )
 }
 
-/** Upserts `KOTData` object containing data summarized across all courses for a single institution in the array of `KOTData`. */
-function upsertInstitutionData(
-  entries: KOTData[],
-  institutionCourses: KOTInstitutionCourses[],
-  row: string[],
-  year: number
-): KOTData[] {
+/** Upserts `NewKOTData` object containing data summarized across all courses for a single institution in the array of `NewKOTData`. */
+function upsertInstitutionData(row: string[], year: number): NewKOTData[] {
   const KOTId = row[CSV_INDICES.institutionId]
 
-  const entry = entries.find((ent) => ent.KOTId === KOTId)
-
-  const id = randomUUID()
+  const institution = institutions.find((inst) => inst.KOTId === KOTId)
+  if (!institution) throw new Error(`Institution ${KOTId} not found while upserting data.`)
 
   const courseIds = institutionCourses
     .filter((instCrs) => instCrs.KOTInstitutionId === KOTId)
-    .map((instCrs) => instCrs.KOTCourseId)
+    .map((instCrs) => courses.find((crs) => crs.KOTId === instCrs.KOTCourseId)?.id)
 
-  /* We are summing all numerical values here - since we're dealing with the number of people
-     here in all numerical categories, we can do this but this may change in future. */
-  const summedDataPoints = entries
+  const summedDataPoints = data
     .filter(
       (entry) =>
-        courseIds.includes(entry.KOTId) && entry.data.some((datapoint) => datapoint.year === year)
+        courseIds.includes(entry.foreignKeyId) &&
+        entry.data.some((datapoint) => datapoint.year === year)
     )
     .map((entry) => entry.data.find((datapoint) => datapoint.year === year))
     .reduce((acc, datapoint) => {
-      return _.mergeWith(acc, datapoint, (val1: string | number, val2: string | number) =>
+      return _.mergeWith({ ...acc }, datapoint, (val1: string | number, val2: string | number) =>
         typeof val1 === 'number' && typeof val2 === 'number' ? val1 + val2 : null
       )
     })
@@ -226,10 +265,9 @@ function upsertInstitutionData(
     ...(_.omitBy(
       summedDataPoints,
       (value, key) => (value !== 0 && !value) || key === 'year'
-    ) as KOTDataTypes)
+    ) as NewKOTDataTypes)
   }
 
-  // Verify that the given institution summary data equals the computed summary data.
   const availableCategories = [
     K.AcceptedAdmitted,
     K.AcceptedStandby,
@@ -246,15 +284,64 @@ function upsertInstitutionData(
     }
   })
 
-  const data = [...(entry?.data ?? []), omittedDataPoints]
+  return upsert(
+    data,
+    {
+      foreignKeyId: institution.id
+    },
+    (ent) => ent.foreignKeyId === institution.id,
+    (existingEntry) => ({
+      ...existingEntry,
+      data: [...existingEntry.data, omittedDataPoints]
+    }),
+    (newEntryData) => ({
+      id: randomUUID(),
+      foreignKeyId: newEntryData.foreignKeyId!,
+      data: [omittedDataPoints]
+    })
+  )
+}
 
-  const newEntry = {
-    id,
-    KOTId,
-    data
-  }
+/** Creates an array of `NewKOTGroupings`. */
+function createGroupings() {
+  groupingInput.forEach(({ name, courseIds, parentGroupings }) => {
+    const includedData = courses
+      .filter((crs) => courseIds.includes(crs.KOTId))
+      .flatMap((crs) => data.find((ent) => ent.foreignKeyId === crs.id)!.data)
 
-  return [...(entry ? entries.filter((ent) => ent.id !== entry.id) : entries), newEntry]
+    const years = _.sortBy(_.uniq(includedData.map((ent) => ent.year ?? 0)))
+
+    const summedData = years.map((year) =>
+      includedData
+        .filter((datapoint) => datapoint.year === year)
+        .reduce((acc, datapoint) => {
+          return {
+            ..._.mergeWith({ ...acc }, datapoint, (val1: string | number, val2: string | number) =>
+              typeof val1 === 'number' && typeof val2 === 'number' ? val1 + val2 : null
+            ),
+            year
+          }
+        })
+    )
+
+    const grouping = {
+      id: randomUUID(),
+      name: name,
+      slug: _.kebabCase(name),
+      courseIds,
+      parentGroupings,
+      period: [years[0], years[years.length - 1]] as [number, number]
+    }
+
+    const entry = {
+      id: randomUUID(),
+      foreignKeyId: grouping.id,
+      data: summedData
+    }
+
+    groupings = [...groupings, grouping]
+    data = [...data, entry]
+  })
 }
 
 /** Returns the correct index map for the data sheet depending on the year. */
@@ -264,45 +351,42 @@ function getAdjustedDataPointKeys(year: number) {
   return CSV_INDICES
 }
 
-/** Returns a boolean indicating whether the input row indicates an institution header. */
-function isRowInstitutionHeader(row: string[]) {
-  return (
+/** Returns the type of the row. */
+type RowType = 'institutionHeader' | 'course' | 'institutionSummary' | 'unknown'
+function getRowType(row: string[]): RowType {
+  // Check for institution header row
+  if (
     row[CSV_INDICES.courseId] === '' &&
     row[CSV_INDICES.institutionId] !== '' &&
     row[CSV_INDICES.acceptedAdmitted] === ''
-  )
-}
+  ) {
+    return 'institutionHeader'
+  }
 
-/** Returns a boolean indicating whether the input row indicates a course. */
-function isRowCourse(row: string[]) {
-  return (
+  // Check for course row
+  if (
     row[CSV_INDICES.courseId] !== '' &&
     (row[CSV_INDICES.acceptedAdmitted] !== '' || row[CSV_INDICES.appliedTotal] !== '')
-  )
-}
+  ) {
+    return 'course'
+  }
 
-/** Returns a boolean indicating whether the input row indicates an institution summary. */
-function isRowInstitutionSummary(row: string[]) {
-  return (
+  // Check for institution summary row
+  if (
     row.length > 1 &&
     row[CSV_INDICES.courseId] === '' &&
     row[CSV_INDICES.institutionId] !== '' &&
     row[CSV_INDICES.acceptedAdmitted] !== ''
-  )
+  ) {
+    return 'institutionSummary'
+  }
+
+  return 'unknown'
 }
 
 /** Trims data and replaces all - (dash signs) with 0's. */
 function trimData(data: string[][]) {
-  return data.map((row) =>
-    row.map((item) => {
-      const trimmedItem = item.trim()
-
-      if (trimmedItem === '-') {
-        return trimmedItem.replace('-', '0')
-      }
-      return trimmedItem
-    })
-  )
+  return data.map((row) => row.map((item) => (item.trim() === '-' ? '0' : item.trim())))
 }
 
 /** Creates a "slug" from the name of an institution or course. */

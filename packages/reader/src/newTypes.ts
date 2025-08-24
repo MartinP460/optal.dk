@@ -4,26 +4,26 @@ import { GroupingName, ParentGroupingName } from './constants'
 /** A random uuid. */
 export type ID = string
 /** The official KOT ID of a course. */
-export type KOTId = string
+export type NewKOTId = string
 
-export type KOTData = {
+export type NewKOTData = {
   /** A random uuid that uniquely identifies the entry. */
   id: string
   /** The ID of the course, institution or grouping that the data pertains to. */
-  KOTId: ID
+  foreignKeyId: ID
   /** An array of objects where each object represents one year of data. */
   data: Array<
     {
       year: number
-    } & KOTDataTypes
+    } & NewKOTDataTypes
   >
 }
 
-export type KOTInstitution = {
+export type NewKOTInstitution = {
   /** A random uuid that uniquely identifies the entry. */
   id: ID
   /** The offical KOT ID of the institution (note: they stopped using them in 2013). */
-  KOTId: KOTId
+  KOTId: NewKOTId
   /** All names that the institution has had since 2011. */
   institutionNames: string[]
   /** The most recent name of the institution. */
@@ -34,22 +34,22 @@ export type KOTInstitution = {
   period: [number, number]
 }
 
-export type KOTInstitutionCourses = {
+export type NewKOTInstitutionCourses = {
   /** A random uuid that uniquely identifies the entry. */
   id: ID
   /** The KOT ID of the institution. */
-  KOTInstitutionId: KOTId
+  KOTInstitutionId: NewKOTId
   /** The KOT ID of the course. */
-  KOTCourseId: KOTId
+  KOTCourseId: NewKOTId
   /** The first and last year that the course was offered by the institution. */
   period: [number, number]
 }
 
-export type KOTCourse = {
+export type NewKOTCourse = {
   /** A random uuid that uniquely identifies the entry. */
   id: ID
   /** The ID of the course. */
-  KOTId: KOTId
+  KOTId: NewKOTId
   /** All unique course names throughout the years. */
   courseNames: string[]
   /** The most recent name of the course. */
@@ -66,7 +66,7 @@ export type KOTCourse = {
   period: [number, number]
 }
 
-export type KOTGrouping = {
+export type NewKOTGrouping = {
   /** The ID of the grouping. */
   id: ID
   /** The name of the grouping (i.e. computer science or biology). */
@@ -74,24 +74,22 @@ export type KOTGrouping = {
   /** The slug associated with the grouping. */
   slug: string
   /** The ID of courses included in the grouping. */
-  courseIds: KOTId[]
-  /** The number of courses in the grouping. Equivalent to the length of courseIds. */
-  courseCount: number
+  courseIds: NewKOTId[]
   /** The earliest and latest of year of recorded data across courses in the grouping. */
   period: [number, number]
   /** The parent grouping that the grouping is a part of (e.g. IT for computer science). */
   parentGroupings: ParentGroupingName[]
 }
 
-export type KOTDataTypes = {
-  [K in KOTDataPointKeys]?: K extends
-    | KOTDataPointKeys.QuotientPrimary
-    | KOTDataPointKeys.QuotientStandby
+export type NewKOTDataTypes = {
+  [K in NewKOTDataPointKeys]?: K extends
+    | NewKOTDataPointKeys.QuotientPrimary
+    | NewKOTDataPointKeys.QuotientStandby
     ? string
     : number
 }
 
-export enum KOTDataPointKeys {
+export enum NewKOTDataPointKeys {
   AcceptedAdmitted = 'acceptedAdmitted',
   AcceptedStandby = 'acceptedStandby',
   AppliedTotal = 'appliedTotal',
@@ -156,16 +154,16 @@ export enum KOTDataPointKeys {
   EdAppliedGreenlandic = 'edAppliedGreenlandic'
 }
 
-export const KOTDataType: {
-  [K in KOTDataPointKeys]: K extends
-    | KOTDataPointKeys.QuotientPrimary
-    | KOTDataPointKeys.QuotientStandby
+export const NewKOTDataType: {
+  [K in NewKOTDataPointKeys]: K extends
+    | NewKOTDataPointKeys.QuotientPrimary
+    | NewKOTDataPointKeys.QuotientStandby
     ? 'string'
     : 'number'
 } = {
-  ...(_.fromPairs(Object.values(KOTDataPointKeys).map((key) => [key, 'number'])) as {
-    [K in KOTDataPointKeys]: 'number'
+  ...(_.fromPairs(Object.values(NewKOTDataPointKeys).map((key) => [key, 'number'])) as {
+    [K in NewKOTDataPointKeys]: 'number'
   }),
-  [KOTDataPointKeys.QuotientPrimary]: 'string',
-  [KOTDataPointKeys.QuotientStandby]: 'string'
+  [NewKOTDataPointKeys.QuotientPrimary]: 'string',
+  [NewKOTDataPointKeys.QuotientStandby]: 'string'
 }

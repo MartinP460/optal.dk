@@ -8,11 +8,11 @@
   import { Input } from '$lib/components/ui/input'
   import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n/index.svelte.js'
-  import { getPeriodIntervalFromPeriod } from '$lib/utils/chartCategoryHelpers'
   import { createLocalStorageState } from '$lib/utils/createLocalStorageState.svelte'
+  import { getStringFromPeriod } from '$lib/utils/getStringFromPeriod.js'
 
   let { data } = $props()
-  const { institutions, parentGroupings, searchIndexes } = data
+  const { institutions, courses, parentGroupings, searchIndexes } = data
 
   const COURSE_RESULTS_LIMIT = 25
   const INSTITUTION_RESULTS_LIMIT = 10
@@ -25,24 +25,15 @@
     isLoaded = true
   })
 
-  const coursesWithInstitutions = institutions.flatMap((institution) =>
-    institution.courses.map((course) => ({
-      ...course,
-      institution
-    }))
-  )
-
   const institutionIndex = Fuse.parseIndex<(typeof institutions)[0]>(searchIndexes.institutionIndex)
-  const courseIndex = Fuse.parseIndex<(typeof coursesWithInstitutions)[0]>(
-    searchIndexes.courseIndex
-  )
+  const courseIndex = Fuse.parseIndex<(typeof courses)[0]>(searchIndexes.courseIndex)
 
   const fuseOptions = {
     threshold: 0.4
   }
 
   const institutionFuse = new Fuse(institutions, fuseOptions, institutionIndex)
-  const courseFuse = new Fuse(coursesWithInstitutions, fuseOptions, courseIndex)
+  const courseFuse = new Fuse(courses, fuseOptions, courseIndex)
 
   let searchQuery = $state('')
   let coursePage = $state(COURSE_RESULTS_LIMIT)
@@ -128,7 +119,7 @@
                         <p class="text-sm font-semibold">{course.item.latestName}</p>
                         <p class="text-xs">
                           {[
-                            getPeriodIntervalFromPeriod(course.item.period),
+                            getStringFromPeriod(course.item.period),
                             course.item.location,
                             course.item.studyStart ? t(course.item.studyStart) : '',
                             course.item.eLearning ? 'e-learning' : null
@@ -199,7 +190,7 @@
                             <p class="text-sm font-semibold">{course.latestName}</p>
                             <p class="text-xs">
                               {[
-                                getPeriodIntervalFromPeriod(course.period),
+                                getStringFromPeriod(course.period),
                                 course.location,
                                 course.studyStart ? t(course.studyStart) : '',
                                 course.eLearning ? 'e-learning' : null
@@ -229,14 +220,14 @@
               </Accordion.Trigger>
               <Accordion.Content class="sm:mx-3">
                 <ul class="hover:text-muted-foreground transition-colors">
-                  {#each groupings as group (group.id)}
+                  {#each groupings as grp (grp.id)}
                     <li class="hover:text-primary">
-                      <a href={`/educations/${group.slug}`} class="flex flex-col gap-1 py-2">
-                        <p class="text-sm font-semibold">{t(group.name)}</p>
+                      <a href={`/educations/${grp.slug}`} class="flex flex-col gap-1 py-2">
+                        <p class="text-sm font-semibold">{t(grp.name)}</p>
                         <p class="text-xs">
                           {[
-                            t('nCourses', { n: group.courseCount }),
-                            getPeriodIntervalFromPeriod(group.period)
+                            t('nCourses', { n: grp.courseIds.length }),
+                            getStringFromPeriod(grp.period)
                           ]
                             .filter((item) => item)
                             .join(', ')}

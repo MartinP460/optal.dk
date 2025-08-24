@@ -5,16 +5,9 @@
   import * as Drawer from '$lib/components/ui/drawer'
   import Button, { buttonVariants } from '$lib/components/ui/button/button.svelte'
   import VisualizationPeriodSelectSlider from '$lib/components/VisualizationPeriodSelectSlider.svelte'
+  import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
 
-  type Props = {
-    min: number
-    max: number
-    period: number[]
-    mode: 'single' | 'multiple'
-    onPeriodChange: (value: number[]) => void
-  }
-
-  let { min, max, period, mode, onPeriodChange }: Props = $props()
+  let { period } = $derived(getVisualizationState())
 
   let label = $derived(
     period.length < 2 || period[0] === period[1] ? period[0] : `${period[0]} - ${period[1]}`
@@ -37,7 +30,7 @@
   </Popover.Trigger>
   <Popover.Content class="flex flex-col text-center w-80">
     <p class="text-sm tracking-tight text-muted-foreground">{t('selectTimePeriod')}</p>
-    <VisualizationPeriodSelectSlider {period} {min} {max} {mode} {onPeriodChange} />
+    <VisualizationPeriodSelectSlider />
   </Popover.Content>
 </Popover.Root>
 
@@ -61,7 +54,7 @@
       <Drawer.Description>{t('timePeriodSelect')}</Drawer.Description>
     </Drawer.Header>
     <div class="px-6 py-2">
-      <VisualizationPeriodSelectSlider {period} {min} {max} {mode} {onPeriodChange} />
+      <VisualizationPeriodSelectSlider />
     </div>
     <Drawer.Footer>
       <Drawer.Close class={buttonVariants({ variant: 'default' })}>
