@@ -1,12 +1,12 @@
 <script lang="ts">
+  import { slide } from 'svelte/transition'
   import type { SubCategory, SubCategoryLabel } from '$lib/utils/categories'
   import type { NewKOTDataPointKeys } from '@optaldk/reader'
+  import { Button } from './ui/button'
+  import VisualizationCategorySelectInputRec from './VisualizationCategorySelectInputRec.svelte'
   import { Checkbox } from '$lib/components/ui/checkbox'
   import { Label } from '$lib/components/ui/label'
   import { t } from '$lib/i18n/index.svelte'
-  import { Button } from './ui/button'
-  import VisualizationCategorySelectInputRec from './VisualizationCategorySelectInputRec.svelte'
-  import { slide } from 'svelte/transition'
 
   type Props = {
     activeSubcategories: (SubCategory | NewKOTDataPointKeys)[]

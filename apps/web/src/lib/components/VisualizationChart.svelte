@@ -1,10 +1,10 @@
 <script lang="ts">
+  import VisualizationChartLegend from './VisualizationChartLegend.svelte'
   import VisualizationChartSingle from '$lib/components/VisualizationChartSingle.svelte'
   import VisualizationTable from '$lib/components/VisualizationTable.svelte'
   import VisualizationChartXY from '$lib/components/VisualizationChartXY.svelte'
   import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
   import { DisplayType } from '$lib/utils/categories'
-  import VisualizationChartLegend from './VisualizationChartLegend.svelte'
 
   const { displayType } = $derived(getVisualizationState())
 </script>

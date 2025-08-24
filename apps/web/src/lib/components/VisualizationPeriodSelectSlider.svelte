@@ -1,5 +1,4 @@
 <script lang="ts">
-  import _ from 'lodash'
   import { Slider } from '$lib/components/ui/slider'
   import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
   import { DisplayType } from '$lib/utils/categories'

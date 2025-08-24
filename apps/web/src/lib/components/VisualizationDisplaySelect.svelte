@@ -1,5 +1,6 @@
 <script lang="ts">
   import { IconChartBar } from '@tabler/icons-svelte'
+  import type { DisplayType } from '$lib/utils/categories'
   import { Label } from '$lib/components/ui/label'
   import { Separator } from '$lib/components/ui/separator'
   import { t } from '$lib/i18n/index.svelte'
@@ -8,7 +9,6 @@
   import * as Drawer from '$lib/components/ui/drawer'
   import * as RadioGroup from '$lib/components/ui/radio-group'
   import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
-  import type { DisplayType } from '$lib/utils/categories'
 
   const {
     category,

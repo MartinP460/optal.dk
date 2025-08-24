@@ -1,12 +1,12 @@
 <script lang="ts">
   /* eslint-disable svelte/no-at-html-tags */
   import _ from 'lodash'
+  import type { NewKOTCourse, NewKOTInstitution } from '@optaldk/reader'
   import * as Accordion from '$lib/components/ui/accordion'
   import * as Card from '$lib/components/ui/card'
   import Title from '$lib/components/Title.svelte'
   import { t } from '$lib/i18n/index.svelte'
   import { CategoryLabel } from '$lib/utils/categories'
-  import type { NewKOTCourse, NewKOTInstitution } from '@optaldk/reader'
   import { getStringFromPeriod } from '$lib/utils/getStringFromPeriod'
 
   type Props = {

@@ -1,13 +1,12 @@
 <script lang="ts">
   import { slide } from 'svelte/transition'
-  import _ from 'lodash'
+  import VisualizationCategorySelectInputRec from './VisualizationCategorySelectInputRec.svelte'
   import { Checkbox } from '$lib/components/ui/checkbox'
   import { Separator } from '$lib/components/ui/separator'
-  import { categories, CategoryLabel } from '$lib/utils/categories'
+  import { CategoryLabel, categories } from '$lib/utils/categories'
   import { Label } from '$lib/components/ui/label'
   import { t } from '$lib/i18n/index.svelte'
   import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
-  import VisualizationCategorySelectInputRec from './VisualizationCategorySelectInputRec.svelte'
 
   const {
     category: activeCategory,

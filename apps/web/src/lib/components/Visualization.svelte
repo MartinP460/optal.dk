@@ -4,7 +4,7 @@
   import VisualizationPeriodSelect from '$lib/components/VisualizationPeriodSelect.svelte'
   import VisualizationCategorySelect from '$lib/components/VisualizationCategorySelect.svelte'
   import VisualizationDisplaySelect from '$lib/components/VisualizationDisplaySelect.svelte'
-  import { initVisualization, getVisualizationState } from '$lib/utils/visualizationState.svelte'
+  import { getVisualizationState, initVisualization } from '$lib/utils/visualizationState.svelte'
   import { CategoryLabel, DisplayType } from '$lib/utils/categories'
 
   type Props = {

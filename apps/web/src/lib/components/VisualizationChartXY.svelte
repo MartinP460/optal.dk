@@ -13,7 +13,6 @@
     VisTooltip,
     VisXYContainer
   } from '@unovis/svelte'
-  import _ from 'lodash'
   import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
   import { getVisualizationChartXYProps } from '$lib/utils/visualizationChart.svelte'
   import { DisplayType } from '$lib/utils/categories'
