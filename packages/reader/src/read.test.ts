@@ -1,8 +1,8 @@
 import _ from 'lodash'
 import { describe, expect, it } from 'vitest'
-import { LATEST_YEAR, readData } from './read'
-import { NewKOTDataPointKeys } from './newTypes'
-import { AVAILABLE_YEARS, GroupingName } from './constants'
+import { AVAILABLE_YEARS, LATEST_YEAR, readData } from './read'
+import { KOTDataPointKeys } from './types'
+import { GroupingName } from './groupings'
 
 describe('readData', async () => {
   const { institutions, courses, institutionCourses, data, groupings } = await readData()
@@ -84,7 +84,7 @@ describe('readData', async () => {
 
       expect(
         Object.values(courseData?.data.find((datapoints) => datapoints.year === 2020) ?? {})
-      ).toHaveLength(Object.values(NewKOTDataPointKeys).length + 1)
+      ).toHaveLength(Object.values(KOTDataPointKeys).length + 1)
     })
 
     it('generates data in chronological order', () => {
@@ -106,7 +106,7 @@ describe('readData', async () => {
 
       expect(
         Object.values(groupingData?.data.find((datapoints) => datapoints.year === 2020) ?? {})
-      ).toHaveLength(Object.values(NewKOTDataPointKeys).length + 1)
+      ).toHaveLength(Object.values(KOTDataPointKeys).length + 1)
     })
 
     it('generates groupings with correctly summarized data', () => {

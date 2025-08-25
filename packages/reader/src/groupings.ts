@@ -1,19 +1,4 @@
-import type { KOTGrouping } from './types'
-
-export const AVAILABLE_YEARS = [
-  2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
-] as const
-
-export const LATEST_YEAR = 2025
-
-export const KOT_CATEGORY_UNITS = {
-  accepted: 'persons',
-  applied: 'persons',
-  quotient: null,
-  gender: null,
-  age: null,
-  education: null
-}
+import { KOTGrouping } from './types'
 
 export enum ParentGroupingName {
   EconomicsAndBusiness = 'economicsAndBusiness',

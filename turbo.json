@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "globalEnv": ["NODE_ENV", "SUPABASE_URL", "SUPABASE_ANON_KEY", "OPTAL_WEB_DOMAIN"],
   "tasks": {
-    "analyze:new-courses": {},
+    "analyze": {},
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".svelte-kit/**", ".vercel/**"]

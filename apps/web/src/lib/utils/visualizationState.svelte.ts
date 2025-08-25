@@ -1,6 +1,6 @@
 import { queryParam, ssp } from 'sveltekit-search-params'
 import { get } from 'svelte/store'
-import type { NewKOTData } from '@optaldk/reader'
+import type { KOTData } from '@optaldk/reader'
 import {
   type Category,
   CategoryLabel,
@@ -10,7 +10,7 @@ import {
 } from './categories'
 
 type VisualizationState = {
-  data: NewKOTData['data']
+  data: KOTData['data']
   category: Category
   displayType: DisplayType
   period: [number, number]
@@ -32,7 +32,7 @@ const has5YearsOfData = $derived(state.data.length > 4)
 
 const categoryLabels = Object.keys(categories) as CategoryLabel[]
 
-export function initVisualization(data: NewKOTData['data'], categoriesToDisplay: CategoryLabel[]) {
+export function initVisualization(data: KOTData['data'], categoriesToDisplay: CategoryLabel[]) {
   const { initialCategoryLabel } = getCategoryParams()
 
   const initialCategory = categories[initialCategoryLabel]

@@ -1,7 +1,7 @@
 <script lang="ts">
   /* eslint-disable svelte/no-at-html-tags */
   import _ from 'lodash'
-  import type { NewKOTCourse, NewKOTInstitution } from '@optaldk/reader'
+  import type { KOTCourse, KOTInstitution } from '@optaldk/reader'
   import * as Accordion from '$lib/components/ui/accordion'
   import * as Card from '$lib/components/ui/card'
   import Title from '$lib/components/Title.svelte'
@@ -12,11 +12,11 @@
   type Props = {
     type: 'institution' | 'course' | 'grouping'
     categoriesToDisplay: Array<CategoryLabel>
-    coursesInInstitution?: (NewKOTCourse & { institution: Pick<NewKOTInstitution, 'slug'> })[]
-    coursesInGrouping?: (NewKOTCourse & {
-      institution: Pick<NewKOTInstitution, 'slug' | 'latestName'>
+    coursesInInstitution?: (KOTCourse & { institution: Pick<KOTInstitution, 'slug'> })[]
+    coursesInGrouping?: (KOTCourse & {
+      institution: Pick<KOTInstitution, 'slug' | 'latestName'>
     })[]
-    courseHistory?: Pick<NewKOTInstitution, 'id' | 'latestName' | 'period' | 'slug'>[]
+    courseHistory?: Pick<KOTInstitution, 'id' | 'latestName' | 'period' | 'slug'>[]
   }
 
   let { type, categoriesToDisplay, coursesInInstitution, coursesInGrouping, courseHistory }: Props =

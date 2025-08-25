@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { Donut } from '@unovis/ts'
-import type { NewKOTData, NewKOTDataPointKeys } from '@optaldk/reader'
+import type { KOTData, KOTDataPointKeys } from '@optaldk/reader'
 import { CategoryLabel, DisplayType, type SubCategory, SubCategoryLabel } from './categories'
 import { getVisualizationState } from './visualizationState.svelte'
 import { getColorFromSubcategory } from './getColorFromDataset'
@@ -9,7 +9,7 @@ import { locale, t } from '$lib/i18n/index.svelte'
 const { data: initialData, category, period, displayType } = $derived(getVisualizationState())
 
 const xyData = $derived.by(() => {
-  const getDatapointKeys = (subcategories: (NewKOTDataPointKeys | SubCategory)[]) => {
+  const getDatapointKeys = (subcategories: (KOTDataPointKeys | SubCategory)[]) => {
     if (typeof subcategories[0] === 'string') return subcategories
     return getDatapointKeys(subcategories[0].subcategories)
   }
@@ -18,7 +18,7 @@ const xyData = $derived.by(() => {
   const filteredData = initialData.map((datapoint) =>
     _.pick(datapoint, [
       'year',
-      ...(getDatapointKeys(category?.subcategories) as NewKOTDataPointKeys[])
+      ...(getDatapointKeys(category?.subcategories) as KOTDataPointKeys[])
     ])
   )
 
@@ -59,19 +59,19 @@ export function getVisualizationSingleChartProps() {
 
 export function getLegendLabels(): {
   topLabel: SubCategoryLabel | null
-  subcategories: NewKOTDataPointKeys[]
-  collapsedSubcategories?: NewKOTDataPointKeys[]
+  subcategories: KOTDataPointKeys[]
+  collapsedSubcategories?: KOTDataPointKeys[]
 } {
   // This is a bit of a mess.
-  const getSubcategoryLabels = (subcategories: (SubCategory | NewKOTDataPointKeys)[]) => {
+  const getSubcategoryLabels = (subcategories: (SubCategory | KOTDataPointKeys)[]) => {
     if (typeof subcategories[0] === 'string') {
       return {
-        subcategories: subcategories as unknown as NewKOTDataPointKeys[]
+        subcategories: subcategories as unknown as KOTDataPointKeys[]
       }
     }
     if (typeof subcategories[0].subcategories[0] === 'string') {
       return {
-        subcategories: subcategories[0].subcategories as unknown as NewKOTDataPointKeys[],
+        subcategories: subcategories[0].subcategories as unknown as KOTDataPointKeys[],
         collapsedSubcategories: subcategories[0].collapsedSubCategories
       }
     }
@@ -100,7 +100,7 @@ function getFormattedData() {
 }
 
 function getXFunction() {
-  return (d: NewKOTData['data'][number]) => d.year
+  return (d: KOTData['data'][number]) => d.year
 }
 
 function getYFunction() {
@@ -108,7 +108,7 @@ function getYFunction() {
 
   return Object.keys(xyData[0])
     .filter((key) => key !== 'year')
-    .map((key) => (d: NewKOTData['data'][number]) => d[key as 'year'])
+    .map((key) => (d: KOTData['data'][number]) => d[key as 'year'])
 }
 
 function getMaxY() {
@@ -133,7 +133,7 @@ function getMaxY() {
 }
 
 function getTooltip() {
-  return (d: NewKOTData['data'][number]) => {
+  return (d: KOTData['data'][number]) => {
     const datapoint = xyData.find((datapoint) => datapoint.year === d.year)
     if (!datapoint) return
 
@@ -148,7 +148,7 @@ function getTooltip() {
         ${d.year}
         </span>
         <div class="${Object.keys(d).length > 4 ? 'grid grid-cols-3 last:row-span-3' : ''}">
-          ${(Object.keys(xyData[0]) as ('year' | NewKOTDataPointKeys)[])
+          ${(Object.keys(xyData[0]) as ('year' | KOTDataPointKeys)[])
             .filter((key) => key !== 'year')
             .map((category) => {
               const label =
@@ -192,10 +192,10 @@ function getTooltip() {
 }
 
 function getColor() {
-  return (_: NewKOTData['data'][number], i: number) => {
+  return (_: KOTData['data'][number], i: number) => {
     const colors = Object.keys(xyData[0])
       .filter((subcategory) => subcategory !== 'year')
-      .map((subcategory) => getColorFromSubcategory(subcategory as NewKOTDataPointKeys))
+      .map((subcategory) => getColorFromSubcategory(subcategory as KOTDataPointKeys))
 
     return colors[i]
   }
@@ -228,7 +228,7 @@ function getSingleData() {
   const data = getFormattedData().find((datapoint) => datapoint.year === period[1])!
 
   return Object.entries(_.omit(data, 'year')).map(([key, val]) => ({
-    subcategory: key as NewKOTDataPointKeys,
+    subcategory: key as KOTDataPointKeys,
     value: val as number
   }))
 }

@@ -1,4 +1,4 @@
-import { NewKOTDataPointKeys as K, type KOTCategory, NewKOTDataPointKeys } from '@optaldk/reader'
+import { KOTDataPointKeys as K, type KOTCategory, KOTDataPointKeys } from '@optaldk/reader'
 
 export type Categories = {
   [key in KOTCategory]: Category
@@ -6,7 +6,7 @@ export type Categories = {
 
 export type Category = {
   label: CategoryLabel
-  subcategories: (NewKOTDataPointKeys | SubCategory)[]
+  subcategories: (KOTDataPointKeys | SubCategory)[]
   displayTypes: DisplayType[]
   defaultDisplayType: DisplayType
   isStackedBarChart?: boolean
@@ -14,8 +14,8 @@ export type Category = {
 
 export type SubCategory = {
   label: SubCategoryLabel
-  subcategories: (NewKOTDataPointKeys | SubCategory)[]
-  collapsedSubCategories?: NewKOTDataPointKeys[]
+  subcategories: (KOTDataPointKeys | SubCategory)[]
+  collapsedSubCategories?: KOTDataPointKeys[]
 }
 
 export enum DisplayType {
@@ -44,8 +44,8 @@ export enum SubCategoryLabel {
 }
 
 export function getDefaultSubcategories(
-  subcategories: (NewKOTDataPointKeys | SubCategory)[]
-): (NewKOTDataPointKeys | SubCategory)[] {
+  subcategories: (KOTDataPointKeys | SubCategory)[]
+): (KOTDataPointKeys | SubCategory)[] {
   // We use the first item in subcategories as the default.
   const DEFAULT_SUBCATEGORY_INDEX = 0
 

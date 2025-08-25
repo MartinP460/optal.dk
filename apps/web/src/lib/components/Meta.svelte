@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { NewKOTCourse } from '@optaldk/reader'
+  import type { KOTCourse } from '@optaldk/reader'
   import { Badge } from '$lib/components/ui/badge'
   import { t } from '$lib/i18n/index.svelte'
   import { getStringFromPeriod } from '$lib/utils/getStringFromPeriod'
 
   type Props = {
-    course: NewKOTCourse
+    course: KOTCourse
   }
 
   let { course }: Props = $props()

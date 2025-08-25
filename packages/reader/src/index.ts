@@ -1,3 +1,2 @@
 export * from './types'
-export * from './constants'
-export * from './newTypes'
+export * from './groupings'

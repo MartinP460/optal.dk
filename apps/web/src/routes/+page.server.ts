@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js'
-import { type NewKOTGrouping, ParentGroupingName } from '@optaldk/reader'
+import { type KOTGrouping, ParentGroupingName } from '@optaldk/reader'
 import { t } from '$lib/i18n/index.svelte'
 import { from } from '$lib/server/data'
 
@@ -40,7 +40,7 @@ export const load = () => {
   const institutionIndex = Fuse.createIndex(['latestName'], institutions).toJSON()
   const courseIndex = Fuse.createIndex(['latestName', 'location'], courses).toJSON()
 
-  const parentGroupings: [ParentGroupingName, NewKOTGrouping[]][] = Object.values(
+  const parentGroupings: [ParentGroupingName, KOTGrouping[]][] = Object.values(
     ParentGroupingName
   ).map((parentGroupingName) => [
     parentGroupingName,

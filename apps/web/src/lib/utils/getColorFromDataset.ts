@@ -1,4 +1,4 @@
-import { NewKOTDataPointKeys as K } from '@optaldk/reader'
+import { KOTDataPointKeys as K } from '@optaldk/reader'
 import { CategoryLabel } from './categories'
 
 export function getColorFromSubcategory(subcategory: K) {

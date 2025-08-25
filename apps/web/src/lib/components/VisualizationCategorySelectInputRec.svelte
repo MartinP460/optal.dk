@@ -1,7 +1,7 @@
 <script lang="ts">
   import { slide } from 'svelte/transition'
   import type { SubCategory, SubCategoryLabel } from '$lib/utils/categories'
-  import type { NewKOTDataPointKeys } from '@optaldk/reader'
+  import type { KOTDataPointKeys } from '@optaldk/reader'
   import { Button } from './ui/button'
   import VisualizationCategorySelectInputRec from './VisualizationCategorySelectInputRec.svelte'
   import { Checkbox } from '$lib/components/ui/checkbox'
@@ -9,10 +9,10 @@
   import { t } from '$lib/i18n/index.svelte'
 
   type Props = {
-    activeSubcategories: (SubCategory | NewKOTDataPointKeys)[]
-    subcategories: (SubCategory | NewKOTDataPointKeys)[]
-    collapsedSubcategories?: (SubCategory | NewKOTDataPointKeys)[]
-    onSubcategorySelect: (subcategory: (SubCategory | NewKOTDataPointKeys)[]) => void
+    activeSubcategories: (SubCategory | KOTDataPointKeys)[]
+    subcategories: (SubCategory | KOTDataPointKeys)[]
+    collapsedSubcategories?: (SubCategory | KOTDataPointKeys)[]
+    onSubcategorySelect: (subcategory: (SubCategory | KOTDataPointKeys)[]) => void
   }
 
   const { activeSubcategories, subcategories, collapsedSubcategories, onSubcategorySelect }: Props =
@@ -20,13 +20,13 @@
 
   let isSubcategoriesExpanded = $state(false)
 
-  const isActiveSubcategory = (subcategory: SubCategoryLabel | NewKOTDataPointKeys) => {
+  const isActiveSubcategory = (subcategory: SubCategoryLabel | KOTDataPointKeys) => {
     if (
       activeSubcategories.length > 0 &&
       typeof activeSubcategories[0] === 'string' &&
       typeof subcategory === 'string'
     ) {
-      return activeSubcategories.includes(subcategory as NewKOTDataPointKeys)
+      return activeSubcategories.includes(subcategory as KOTDataPointKeys)
     } else {
       return (activeSubcategories as SubCategory[]).some(
         (activeSubcategory) => activeSubcategory.label === subcategory
@@ -34,7 +34,7 @@
     }
   }
 
-  const handleSubcategorySelect = (subcategory: SubCategory | NewKOTDataPointKeys) => {
+  const handleSubcategorySelect = (subcategory: SubCategory | KOTDataPointKeys) => {
     const label = typeof subcategory === 'string' ? subcategory : subcategory.label
     const isActive = isActiveSubcategory(label)
 

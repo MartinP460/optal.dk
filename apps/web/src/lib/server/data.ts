@@ -1,10 +1,10 @@
 import _ from 'lodash'
 import type {
-  NewKOTCourse,
-  NewKOTData,
-  NewKOTGrouping,
-  NewKOTInstitution,
-  NewKOTInstitutionCourses
+  KOTCourse,
+  KOTData,
+  KOTGrouping,
+  KOTInstitution,
+  KOTInstitutionCourses
 } from '@optaldk/reader'
 import coursesJSON from '../../../static/data/courses.json'
 import institutionsJSON from '../../../static/data/institutions.json'
@@ -13,11 +13,11 @@ import dataJSON from '../../../static/data/data.json'
 import groupingsJSON from '../../../static/data/groupings.json'
 
 const TABLES = {
-  courses: coursesJSON as NewKOTCourse[],
-  institutions: institutionsJSON as NewKOTInstitution[],
-  institutionCourses: institutionCoursesJSON as NewKOTInstitutionCourses[],
-  data: dataJSON as NewKOTData[],
-  groupings: groupingsJSON as NewKOTGrouping[]
+  courses: coursesJSON as KOTCourse[],
+  institutions: institutionsJSON as KOTInstitution[],
+  institutionCourses: institutionCoursesJSON as KOTInstitutionCourses[],
+  data: dataJSON as KOTData[],
+  groupings: groupingsJSON as KOTGrouping[]
 }
 
 type Tables = typeof TABLES

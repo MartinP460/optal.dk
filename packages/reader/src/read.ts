@@ -5,22 +5,22 @@ import path from 'path'
 import fs from 'fs'
 import { randomUUID } from 'crypto'
 import {
-  NewKOTDataPointKeys as K,
-  NewKOTCourse,
-  NewKOTData,
-  NewKOTDataType,
-  NewKOTDataTypes,
-  NewKOTGrouping,
-  NewKOTInstitution,
-  NewKOTInstitutionCourses
-} from './newTypes'
-import { groupings as groupingInput } from './constants'
+  KOTDataPointKeys as K,
+  KOTCourse,
+  KOTData,
+  KOTDataType,
+  KOTDataTypes,
+  KOTGrouping,
+  KOTInstitution,
+  KOTInstitutionCourses
+} from './types'
+import { groupings as groupingInput } from './groupings'
 
-let institutions: NewKOTInstitution[] = []
-let courses: NewKOTCourse[] = []
-let institutionCourses: NewKOTInstitutionCourses[] = []
-let data: NewKOTData[] = []
-let groupings: NewKOTGrouping[] = []
+let institutions: KOTInstitution[] = []
+let courses: KOTCourse[] = []
+let institutionCourses: KOTInstitutionCourses[] = []
+let data: KOTData[] = []
+let groupings: KOTGrouping[] = []
 
 /** Reads and returns KOT data across all available years. */
 export async function readData() {
@@ -83,8 +83,8 @@ function upsert<T extends { id: string }>(
   }
 }
 
-/** Upserts a `NewKOTInstitution` object in the array of `NewKOTInstitution`. */
-function upsertInstitution(row: string[], year: number): NewKOTInstitution[] {
+/** Upserts a `KOTInstitution` object in the array of `KOTInstitution`. */
+function upsertInstitution(row: string[], year: number): KOTInstitution[] {
   const KOTId = row[CSV_INDICES.institutionId]
   const latestName = row[CSV_INDICES.name]
 
@@ -123,8 +123,8 @@ function upsertInstitution(row: string[], year: number): NewKOTInstitution[] {
   )
 }
 
-/** Upserts a `NewKOTCourse` object in the array of `NewKOTCourse`. */
-function upsertCourse(row: string[], year: number): NewKOTCourse[] {
+/** Upserts a `KOTCourse` object in the array of `KOTCourse`. */
+function upsertCourse(row: string[], year: number): KOTCourse[] {
   const KOTId = row[CSV_INDICES.courseId]
   const name = row[CSV_INDICES.name]
 
@@ -168,8 +168,8 @@ function upsertCourse(row: string[], year: number): NewKOTCourse[] {
   )
 }
 
-/** Upserts a `KOTInstitutionCourse` object showing to the ownership of courses per each institution in the array of `NewKOTInstitutionCourses`. */
-function upsertInstitutionCourses(row: string[], year: number): NewKOTInstitutionCourses[] {
+/** Upserts a `KOTInstitutionCourse` object showing to the ownership of courses per each institution in the array of `KOTInstitutionCourses`. */
+function upsertInstitutionCourses(row: string[], year: number): KOTInstitutionCourses[] {
   const KOTCourseId = row[CSV_INDICES.courseId]
   const KOTInstitutionId = row[CSV_INDICES.institutionId]
 
@@ -200,8 +200,8 @@ function upsertInstitutionCourses(row: string[], year: number): NewKOTInstitutio
   )
 }
 
-/** Upserts `NewKOTData` object for a single course in the array of `NewKOTData`. */
-function upsertCourseData(row: string[], year: number): NewKOTData[] {
+/** Upserts `KOTData` object for a single course in the array of `KOTData`. */
+function upsertCourseData(row: string[], year: number): KOTData[] {
   const KOTId = row[CSV_INDICES.courseId]
 
   const course = courses.find((crs) => crs.KOTId === KOTId)
@@ -211,11 +211,8 @@ function upsertCourseData(row: string[], year: number): NewKOTData[] {
   const newDataPoint = {
     year,
     ...(_.fromPairs(
-      Object.values(K).map((key) => [
-        key,
-        convertToType(row[indices[key]] ?? '', NewKOTDataType[key])
-      ])
-    ) as NewKOTDataTypes)
+      Object.values(K).map((key) => [key, convertToType(row[indices[key]] ?? '', KOTDataType[key])])
+    ) as KOTDataTypes)
   }
 
   return upsert(
@@ -236,8 +233,8 @@ function upsertCourseData(row: string[], year: number): NewKOTData[] {
   )
 }
 
-/** Upserts `NewKOTData` object containing data summarized across all courses for a single institution in the array of `NewKOTData`. */
-function upsertInstitutionData(row: string[], year: number): NewKOTData[] {
+/** Upserts `KOTData` object containing data summarized across all courses for a single institution in the array of `KOTData`. */
+function upsertInstitutionData(row: string[], year: number): KOTData[] {
   const KOTId = row[CSV_INDICES.institutionId]
 
   const institution = institutions.find((inst) => inst.KOTId === KOTId)
@@ -265,7 +262,7 @@ function upsertInstitutionData(row: string[], year: number): NewKOTData[] {
     ...(_.omitBy(
       summedDataPoints,
       (value, key) => (value !== 0 && !value) || key === 'year'
-    ) as NewKOTDataTypes)
+    ) as KOTDataTypes)
   }
 
   const availableCategories = [
@@ -302,7 +299,7 @@ function upsertInstitutionData(row: string[], year: number): NewKOTData[] {
   )
 }
 
-/** Creates an array of `NewKOTGroupings`. */
+/** Creates an array of `KOTGroupings`. */
 function createGroupings() {
   groupingInput.forEach(({ name, courseIds, parentGroupings }) => {
     const includedData = courses
@@ -507,7 +504,7 @@ export async function readCSV(filePath: string): Promise<string[][]> {
   })
 }
 
-const AVAILABLE_YEARS = [
+export const AVAILABLE_YEARS = [
   2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
 ] as const
 export const LATEST_YEAR = AVAILABLE_YEARS[AVAILABLE_YEARS.length - 1]

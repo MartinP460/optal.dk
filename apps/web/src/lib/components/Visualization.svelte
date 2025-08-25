@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { NewKOTData } from '@optaldk/reader'
+  import type { KOTData } from '@optaldk/reader'
   import VisualizationChart from '$lib/components/VisualizationChart.svelte'
   import VisualizationPeriodSelect from '$lib/components/VisualizationPeriodSelect.svelte'
   import VisualizationCategorySelect from '$lib/components/VisualizationCategorySelect.svelte'
@@ -8,7 +8,7 @@
   import { CategoryLabel, DisplayType } from '$lib/utils/categories'
 
   type Props = {
-    data: NewKOTData['data']
+    data: KOTData['data']
     categoriesToDisplay: CategoryLabel[]
   }
 
