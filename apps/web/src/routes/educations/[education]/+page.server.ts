@@ -18,6 +18,10 @@ export async function load({ params }) {
       .select('id', 'KOTId', 'slug', 'latestName', 'period')
       .whereEquals('KOTId', courseId)
       .first()
+
+    if (!course)
+      throw new Error(`No course with ID ${courseId} found for grouping ${grouping.name}`)
+
     const latestInstitutionId = from('institutionCourses')
       .select('*')
       .whereEquals('KOTCourseId', course.KOTId)
