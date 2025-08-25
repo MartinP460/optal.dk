@@ -19,6 +19,7 @@ export async function load({ params }) {
       .whereEquals('KOTId', courseId)
       .first()
 
+    // We are throwing an error here to catch potential problems in the CI.
     if (!course)
       throw new Error(`No course with ID ${courseId} found for grouping ${grouping.name}`)
 
@@ -33,8 +34,8 @@ export async function load({ params }) {
       .whereEquals('KOTId', latestInstitutionId)
       .first()
 
-    if (!course || !latestInstitutionId || !institution) {
-      error(500, 'Course or associated institution included in grouping not found.')
+    if (!latestInstitutionId || !institution) {
+      throw new Error(`Associated institution included in grouping ${grouping.name} not found.`)
     }
 
     const { id, slug, latestName, period } = course

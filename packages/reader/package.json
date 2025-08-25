@@ -5,11 +5,10 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "scripts": {
+    "analyze": "tsx ./src/analyze.ts",
     "coverage": "vitest run --coverage",
     "format": "prettier --ignore-path ../../.prettierignore --write . && eslint . --fix",
     "gen": "tsx ./src/generate.ts",
-    "gen:new": "tsx ./src/newGenerate.ts",
-    "analyze": "tsx ./src/analyze.ts",
     "lint": "prettier --ignore-path ../../.prettierignore --check . && eslint .",
     "test:watch": "vitest",
     "test": "vitest run"

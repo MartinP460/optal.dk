@@ -716,7 +716,7 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
   },
   {
     name: GroupingName.NutritionAndTechnology,
-    courseIds: ['83210', '83010', '83110', '83160', '83060', '83065', '83160t'],
+    courseIds: ['83210', '83010', '83110', '83160', '83060', '83065', '83160'],
     parentGroupings: [ParentGroupingName.Technical]
   },
   {
