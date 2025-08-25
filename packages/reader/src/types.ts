@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { GroupingName, ParentGroupingName } from './groupings'
 
 /** A random uuid. */
-export type ID = string
+export type ForeignKey = string
 /** The official KOT ID of a course. */
 export type KOTId = string
 
@@ -10,7 +10,7 @@ export type KOTData = {
   /** A random uuid that uniquely identifies the entry. */
   id: string
   /** The ID of the course, institution or grouping that the data pertains to. */
-  foreignKeyId: ID
+  foreignKeyId: ForeignKey
   /** An array of objects where each object represents one year of data. */
   data: Array<
     {
@@ -21,7 +21,7 @@ export type KOTData = {
 
 export type KOTInstitution = {
   /** A random uuid that uniquely identifies the entry. */
-  id: ID
+  id: ForeignKey
   /** The offical KOT ID of the institution (note: they stopped using them in 2013). */
   KOTId: KOTId
   /** All names that the institution has had since 2011. */
@@ -36,7 +36,7 @@ export type KOTInstitution = {
 
 export type KOTInstitutionCourses = {
   /** A random uuid that uniquely identifies the entry. */
-  id: ID
+  id: string
   /** The KOT ID of the institution. */
   KOTInstitutionId: KOTId
   /** The KOT ID of the course. */
@@ -47,7 +47,7 @@ export type KOTInstitutionCourses = {
 
 export type KOTCourse = {
   /** A random uuid that uniquely identifies the entry. */
-  id: ID
+  id: ForeignKey
   /** The ID of the course. */
   KOTId: KOTId
   /** All unique course names throughout the years. */
@@ -67,8 +67,8 @@ export type KOTCourse = {
 }
 
 export type KOTGrouping = {
-  /** The ID of the grouping. */
-  id: ID
+  /** A random uuid that uniquely identifies the grouping. */
+  id: ForeignKey
   /** The name of the grouping (i.e. computer science or biology). */
   name: GroupingName
   /** The slug associated with the grouping. */
