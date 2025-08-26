@@ -1,6 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 import { readData } from './read'
+import { writeToXLSX } from './convert'
 
 async function main() {
   const args = process.argv.slice(2)
@@ -14,13 +15,22 @@ async function main() {
     )
   }
 
-  const output = await readData()
+  const data = await readData()
 
   args.forEach((outputDir) => {
-    Object.entries(output).forEach(([key, value]) =>
-      writeToFile(key, 'json', JSON.stringify(value), rootPath + outputDir)
-    )
+    generateJSON(data, rootPath + outputDir)
+    generateXLSX(data, rootPath + outputDir)
   })
+}
+
+function generateJSON(data: Awaited<ReturnType<typeof readData>>, path: string) {
+  Object.entries(data).forEach(([filename, value]) =>
+    writeToFile(filename, 'json', JSON.stringify(value), path)
+  )
+}
+
+function generateXLSX(data: Awaited<ReturnType<typeof readData>>, path: string) {
+  writeToXLSX(data, path)
 }
 
 /**
