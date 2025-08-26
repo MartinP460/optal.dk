@@ -1,3 +1,4 @@
+import { Locale } from '@optaldk/i18n'
 import { describe, expect, it } from 'vitest'
 import { KOTDataPointKeys as K, KOTData, type KOTDataTypes, KOTGrouping } from './types'
 import {
@@ -49,16 +50,16 @@ describe('createCourseAOAs', () => {
       [years[2]]: { [K.AcceptedAdmitted]: 470, [K.AcceptedStandby]: 10 }
     })
 
-    const aoas = createCourseAOAs([course])
+    const aoas = createCourseAOAs([course], 'en' as Locale)
     const accepted = aoas.accepted
 
     const expected = [
-      ['Courses - accepted'],
+      ['Courses - Accepted'],
       [],
       [
-        'Institution id',
+        'Institution ID',
         'Institution name',
-        'Course id',
+        'Course ID',
         'Course name',
         '2011',
         '',
@@ -72,12 +73,12 @@ describe('createCourseAOAs', () => {
         '',
         '',
         '',
-        K.AcceptedAdmitted,
-        K.AcceptedStandby,
-        K.AcceptedAdmitted,
-        K.AcceptedStandby,
-        K.AcceptedAdmitted,
-        K.AcceptedStandby
+        'Directly admitted',
+        'Standby',
+        'Directly admitted',
+        'Standby',
+        'Directly admitted',
+        'Standby'
       ],
       ['10000', 'Inst', '10210', 'Medicin', '500', '18', '480', '12', '470', '10']
     ]
@@ -106,16 +107,16 @@ describe('createCourseAOAs', () => {
       }
     })
 
-    const aoas = createCourseAOAs([course])
+    const aoas = createCourseAOAs([course], 'en' as Locale)
 
     Object.values(DatasheetCategory).forEach((cat) => {
       expect(aoas[cat]).toBeDefined()
       expect(Array.isArray(aoas[cat])).toBe(true)
-      expect(aoas[cat].length).toBeGreaterThanOrEqual(2) // at least 2 header rows
+      expect(aoas[cat].length).toBeGreaterThanOrEqual(4) // title, spacer, 2 header rows
       expect(aoas[cat][2].slice(0, 4)).toEqual([
-        'Institution id',
+        'Institution ID',
         'Institution name',
-        'Course id',
+        'Course ID',
         'Course name'
       ])
     })
@@ -152,22 +153,22 @@ describe('createInstitutionAOAs', () => {
       [years[2]]: { [K.AcceptedAdmitted]: 470, [K.AcceptedStandby]: 10 }
     })
 
-    const aoas = createInstitutionAOAs([institution])
+    const aoas = createInstitutionAOAs([institution], 'en' as Locale)
     const accepted = aoas.accepted
 
     const expected = [
-      ['Institutions - accepted'],
+      ['Institutions - Accepted'],
       [],
-      ['Institution id', 'Institution name', '2011', '', '2012', '', '2013', ''],
+      ['Institution ID', 'Institution name', '2011', '', '2012', '', '2013', ''],
       [
         '',
         '',
-        K.AcceptedAdmitted,
-        K.AcceptedStandby,
-        K.AcceptedAdmitted,
-        K.AcceptedStandby,
-        K.AcceptedAdmitted,
-        K.AcceptedStandby
+        'Directly admitted',
+        'Standby',
+        'Directly admitted',
+        'Standby',
+        'Directly admitted',
+        'Standby'
       ],
       ['10000', 'Københavns Universitet', '500', '18', '480', '12', '470', '10']
     ]
@@ -206,22 +207,22 @@ describe('createGroupingAOAs', () => {
       [years[2]]: { [K.AcceptedAdmitted]: 470, [K.AcceptedStandby]: 10 }
     })
 
-    const aoas = createGroupingAOAs([grouping])
+    const aoas = createGroupingAOAs([grouping], 'en' as Locale)
     const accepted = aoas.accepted
 
     const expected = [
-      ['Educations - accepted'],
+      ['Educations - Accepted'],
       [],
-      ['Education id', 'Education name', '2011', '', '2012', '', '2013', ''],
+      ['Education ID', 'Education name', '2011', '', '2012', '', '2013', ''],
       [
         '',
         '',
-        K.AcceptedAdmitted,
-        K.AcceptedStandby,
-        K.AcceptedAdmitted,
-        K.AcceptedStandby,
-        K.AcceptedAdmitted,
-        K.AcceptedStandby
+        'Directly admitted',
+        'Standby',
+        'Directly admitted',
+        'Standby',
+        'Directly admitted',
+        'Standby'
       ],
       ['grp-1', 'Computer science', '500', '18', '480', '12', '470', '10']
     ]

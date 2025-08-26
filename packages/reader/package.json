@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@optaldk/eslint-config-custom": "*",
+    "@optaldk/i18n": "*",
     "@types/papaparse": "^5.3.16",
     "@vitest/coverage-v8": "^3.2.4",
     "lodash": "^4.17.21",

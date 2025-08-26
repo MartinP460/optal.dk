@@ -25,12 +25,12 @@ async function main() {
 
 function generateJSON(data: Awaited<ReturnType<typeof readData>>, path: string) {
   Object.entries(data).forEach(([filename, value]) =>
-    writeToFile(filename, 'json', JSON.stringify(value), path)
+    writeToFile(filename, 'json', JSON.stringify(value), path + '/json')
   )
 }
 
 function generateXLSX(data: Awaited<ReturnType<typeof readData>>, path: string) {
-  writeToXLSX(data, path)
+  writeToXLSX(data, path + '/xlsx')
 }
 
 /**

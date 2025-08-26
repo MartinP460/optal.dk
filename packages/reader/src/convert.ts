@@ -1,3 +1,5 @@
+import _ from 'lodash'
+import { LOCALES, Locale, t } from '@optaldk/i18n'
 import * as XLSX from 'xlsx'
 import fs from 'fs'
 import { readData } from './read'
@@ -7,12 +9,12 @@ export enum DatasheetCategory {
   Accepted = 'accepted',
   Applied = 'applied',
   Quotient = 'quotient',
-  GenderAccepted = 'genderAccepted',
-  GenderApplied = 'genderApplied',
-  AgeAccepted = 'ageAccepted',
-  AgeApplied = 'ageApplied',
-  EdAccepted = 'edAccepted',
-  EdApplied = 'edApplied'
+  GenderAccepted = 'genderAndAccepted',
+  GenderApplied = 'genderAndApplied',
+  AgeAccepted = 'ageAndAccepted',
+  AgeApplied = 'ageAndApplied',
+  EdAccepted = 'edAndAccepted',
+  EdApplied = 'edAndApplied'
 }
 
 const datasheetSubcategories = {
@@ -139,9 +141,26 @@ export function writeToXLSX(input: Awaited<ReturnType<typeof readData>>, path: s
     })
     .sort((a, b) => a.name.localeCompare(b.name))
 
-  writeAOAsToFile(createCourseAOAs(augmentedCourses), path, 'courses')
-  writeAOAsToFile(createInstitutionAOAs(augmentedInstitutions), path, 'institutions')
-  writeAOAsToFile(createGroupingAOAs(augmentedGroupings), path, 'educations')
+  LOCALES.forEach((locale) => {
+    writeAOAsToFile(
+      createCourseAOAs(augmentedCourses, locale),
+      path,
+      'courses' + _.upperCase(locale),
+      locale
+    )
+    writeAOAsToFile(
+      createInstitutionAOAs(augmentedInstitutions, locale),
+      path,
+      'institutions' + _.upperCase(locale),
+      locale
+    )
+    writeAOAsToFile(
+      createGroupingAOAs(augmentedGroupings, locale),
+      path,
+      'educations' + _.upperCase(locale),
+      locale
+    )
+  })
 }
 
 function buildDatasheetAOAs<TItem>(
@@ -149,7 +168,8 @@ function buildDatasheetAOAs<TItem>(
   getStaticHeaderCols: () => string[],
   getRowStaticCols: (item: TItem) => string[],
   getDataPoints: (item: TItem) => Array<{ year: number } & Record<string, string | number>>,
-  sheetTypeLabel: string
+  sheetTypeLabel: string,
+  locale: Locale
 ): Record<DatasheetCategory, string[][]> {
   const result: Record<DatasheetCategory, string[][]> = {} as Record<DatasheetCategory, string[][]>
 
@@ -173,10 +193,10 @@ function buildDatasheetAOAs<TItem>(
 
     const headerRow2: string[] = Array(headerStatic.length).fill('')
     years.forEach(() => {
-      keysForCategory.forEach((key) => headerRow2.push(String(key)))
+      keysForCategory.forEach((key) => headerRow2.push(t(locale, key)))
     })
 
-    const titleRow: string[] = [`${sheetTypeLabel} - ${category}`]
+    const titleRow: string[] = [`${sheetTypeLabel} - ${t(locale, category)}`]
     const rows: string[][] = [titleRow, [], headerRow1, headerRow2]
 
     items.forEach((item) => {
@@ -207,7 +227,8 @@ export function createCourseAOAs(
       institution: KOTInstitution
       data: KOTData
     }
-  >
+  >,
+  locale: Locale
 ): Record<DatasheetCategory, string[][]> {
   // Structure of output files for courses.
   /*
@@ -221,7 +242,12 @@ export function createCourseAOAs(
 
   return buildDatasheetAOAs(
     courses,
-    () => ['Institution id', 'Institution name', 'Course id', 'Course name'],
+    () => [
+      t(locale, 'institutionId'),
+      t(locale, 'institutionName'),
+      t(locale, 'courseId'),
+      t(locale, 'courseName')
+    ],
     (course) => [
       course.institution.KOTId,
       course.institution.latestName,
@@ -229,7 +255,8 @@ export function createCourseAOAs(
       course.latestName
     ],
     (course) => course.data.data as Array<{ year: number } & Record<string, string | number>>,
-    'Courses'
+    t(locale, 'courses'),
+    locale
   )
 }
 
@@ -239,7 +266,8 @@ export function createInstitutionAOAs(
     KOTInstitution & {
       data: KOTData
     }
-  >
+  >,
+  locale: Locale
 ): Record<DatasheetCategory, string[][]> {
   // Structure of output files for institutions.
   /*
@@ -253,10 +281,11 @@ export function createInstitutionAOAs(
 
   return buildDatasheetAOAs(
     institutions,
-    () => ['Institution id', 'Institution name'],
+    () => [t(locale, 'institutionId'), t(locale, 'institutionName')],
     (inst) => [inst.KOTId, inst.latestName],
     (inst) => inst.data.data as Array<{ year: number } & Record<string, string | number>>,
-    'Institutions'
+    t(locale, 'institutions'),
+    locale
   )
 }
 
@@ -266,7 +295,8 @@ export function createGroupingAOAs(
     KOTGrouping & {
       data: KOTData
     }
-  >
+  >,
+  locale: Locale
 ): Record<DatasheetCategory, string[][]> {
   // Structure of output files for groupings.
   /*
@@ -280,10 +310,11 @@ export function createGroupingAOAs(
 
   return buildDatasheetAOAs(
     groupings,
-    () => ['Education id', 'Education name'],
+    () => [t(locale, 'groupingId'), t(locale, 'groupingName')],
     (grp) => [grp.id, grp.name],
     (grp) => grp.data.data as Array<{ year: number } & Record<string, string | number>>,
-    'Educations'
+    t(locale, 'byEducation'),
+    locale
   )
 }
 
@@ -308,7 +339,8 @@ function fitToColumns(rows: string[][]) {
 function writeAOAsToFile(
   sheets: Record<DatasheetCategory, string[][]>,
   path: string,
-  filename: string
+  filename: string,
+  locale: Locale
 ) {
   const workbook = XLSX.utils.book_new()
 
@@ -317,7 +349,7 @@ function writeAOAsToFile(
 
     ws['!cols'] = fitToColumns(aoa)
 
-    XLSX.utils.book_append_sheet(workbook, ws, category)
+    XLSX.utils.book_append_sheet(workbook, ws, t(locale, category as DatasheetCategory))
   })
 
   XLSX.set_fs(fs)

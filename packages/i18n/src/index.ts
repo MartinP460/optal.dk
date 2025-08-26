@@ -3,9 +3,9 @@ import { translations } from './translations'
 export type Locale = 'en' | 'da'
 export type TranslationKeys = keyof typeof translations.en
 
-export const LOCALES = ['da', 'en']
+export const LOCALES = ['da', 'en'] as const
 
-export function t(locale: Locale, key: TranslationKeys, vars: { [key: string]: string }) {
+export function t(locale: Locale, key: TranslationKeys, vars: { [key: string]: string } = {}) {
   // Grab the translation from the translations object.
   let text = translations[locale][key]
 

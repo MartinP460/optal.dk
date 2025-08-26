@@ -6,11 +6,11 @@ import type {
   KOTInstitution,
   KOTInstitutionCourses
 } from '@optaldk/reader'
-import coursesJSON from '../../../static/data/courses.json'
-import institutionsJSON from '../../../static/data/institutions.json'
-import institutionCoursesJSON from '../../../static/data/institutionCourses.json'
-import dataJSON from '../../../static/data/data.json'
-import groupingsJSON from '../../../static/data/groupings.json'
+import coursesJSON from '../../../static/data/json/courses.json'
+import institutionsJSON from '../../../static/data/json/institutions.json'
+import institutionCoursesJSON from '../../../static/data/json/institutionCourses.json'
+import dataJSON from '../../../static/data/json/data.json'
+import groupingsJSON from '../../../static/data/json/groupings.json'
 
 const TABLES = {
   courses: coursesJSON as KOTCourse[],
