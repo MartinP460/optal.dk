@@ -15,7 +15,7 @@ export enum DatasheetCategory {
   EdApplied = 'edApplied'
 }
 
-const DatasheetSubcategories = {
+const datasheetSubcategories = {
   [DatasheetCategory.Accepted]: [K.AcceptedAdmitted, K.AcceptedStandby],
   [DatasheetCategory.Applied]: [K.AppliedTotal, K.AppliedFirstpriority],
   [DatasheetCategory.Quotient]: [K.QuotientPrimary, K.QuotientStandby],
@@ -157,12 +157,12 @@ function buildDatasheetAOAs<TItem>(
     new Set(items.flatMap((it) => getDataPoints(it).map((d) => d.year)))
   ).sort((a, b) => a - b)
 
-  const categories = Object.keys(DatasheetSubcategories) as Array<
-    keyof typeof DatasheetSubcategories
+  const categories = Object.keys(datasheetSubcategories) as Array<
+    keyof typeof datasheetSubcategories
   >
 
   categories.forEach((category) => {
-    const keysForCategory = DatasheetSubcategories[category]
+    const keysForCategory = datasheetSubcategories[category]
 
     const headerStatic = getStaticHeaderCols()
     const headerRow1: string[] = [...headerStatic]
