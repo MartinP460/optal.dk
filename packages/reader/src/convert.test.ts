@@ -53,6 +53,8 @@ describe('createCourseAOAs', () => {
     const accepted = aoas.accepted
 
     const expected = [
+      ['Courses - accepted'],
+      [],
       [
         'Institution id',
         'Institution name',
@@ -110,7 +112,7 @@ describe('createCourseAOAs', () => {
       expect(aoas[cat]).toBeDefined()
       expect(Array.isArray(aoas[cat])).toBe(true)
       expect(aoas[cat].length).toBeGreaterThanOrEqual(2) // at least 2 header rows
-      expect(aoas[cat][0].slice(0, 4)).toEqual([
+      expect(aoas[cat][2].slice(0, 4)).toEqual([
         'Institution id',
         'Institution name',
         'Course id',
@@ -154,6 +156,8 @@ describe('createInstitutionAOAs', () => {
     const accepted = aoas.accepted
 
     const expected = [
+      ['Institutions - accepted'],
+      [],
       ['Institution id', 'Institution name', '2011', '', '2012', '', '2013', ''],
       [
         '',
@@ -206,6 +210,8 @@ describe('createGroupingAOAs', () => {
     const accepted = aoas.accepted
 
     const expected = [
+      ['Educations - accepted'],
+      [],
       ['Education id', 'Education name', '2011', '', '2012', '', '2013', ''],
       [
         '',
