@@ -233,7 +233,7 @@ export function createCourseAOAs(
   )
 }
 
-/** Creates array of arrays representing the output. */
+/** Creates array of arrays representing the output for institutions. */
 export function createInstitutionAOAs(
   institutions: Array<
     KOTInstitution & {
@@ -260,7 +260,7 @@ export function createInstitutionAOAs(
   )
 }
 
-/** Creates array of arrays representing the output. */
+/** Creates array of arrays representing the output for groupings. */
 export function createGroupingAOAs(
   groupings: Array<
     KOTGrouping & {
