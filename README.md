@@ -1,32 +1,60 @@
-# Turborepo Svelte starter
+<div align="center">
+<h1>Optal.dk</h1>
+The official optal.dk repository.
+</div>
 
-This is an official starter Turborepo.
+### Apps and packages
 
-## Using this example
+- `web`: The frontend using SvelteKit.
+- `api`: A small backend using Node.js and Fastify.
+- `eslint-config-custom`: `eslint` configurations.
+- `i18n`: Translations for use across the repo.
+- `reader`: Utilities used for transforming raw data in .csv format into more readable formats.
 
-Run the following command:
+### Running locally
 
-```sh
-npx create-turbo@latest -e with-svelte
+#### Running the frontend
+
+Make sure you have [Node.js](https://nodejs.org/en) installed. Clone or fork the repo, cd into the directory, and run:
+
+```bash
+npm install
+
+npm run dev:web
 ```
 
-## What's inside?
+This opens the web server on port 5173. Running the frontend alone is sufficient for most development although using the feature for posting feedback specifically won't work.
 
-This Turborepo includes the following packages/apps:
+#### Running the frontend and backend
 
-### Apps and Packages
+To run the backend and frontend simultaneously (and thus enable the feedback feature), make sure you have [Docker Desktop](https://docs.docker.com/desktop/) and the [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started) installed in addition the above dependencies. We need these to run the Supabase instance locally. Then simply run:
 
-- `docs`: a [svelte-kit](https://kit.svelte.dev/) app
-- `web`: another [svelte-kit](https://kit.svelte.dev/) app
-- `ui`: a stub Svelte component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-plugin-svelte` and `eslint-config-prettier`)
+```bash
+npm run dev
+```
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+#### Transforming data through the `reader` package
 
-### Utilities
+To test the utilities for transforming the raw .csv files into other formats, run the test script:
 
-This Turborepo has some additional tools already setup for you:
+```bash
+npm run reader:test:watch
+```
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+To populate the frontend with the files generated from the reader package, run:
+
+```bash
+npm run reader:gen
+```
+
+### Contributing
+
+Contributions are greatly appreciated.
+
+For bug reports or feature requests, use the "Issues" tab. Describe the feature in detail if it's a feature request and describe the bug and the steps to reproduce if it's a bug report.
+
+For PR's, fork the repo and open a PR. In the PR, describe the implementation and the steps to test it.
+
+### More information
+
+A broad technical description of the project is available [here](https://www.mpol.dev/projects/optal).
