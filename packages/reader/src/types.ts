@@ -1,6 +1,14 @@
 import _ from 'lodash'
 import { GroupingName, ParentGroupingName } from './groupings'
 
+export type DB = {
+  courses: KOTCourse[]
+  institutions: KOTInstitution[]
+  groupings: KOTGrouping[]
+  institutionCourses: KOTInstitutionCourses[]
+  data: KOTData[]
+}
+
 /** A random uuid. */
 export type ForeignKey = string
 /** The official KOT ID of a course. */
@@ -22,7 +30,7 @@ export type KOTData = {
 export type KOTInstitution = {
   /** A random uuid that uniquely identifies the entry. */
   id: ForeignKey
-  /** The offical KOT ID of the institution (note: they stopped using them in 2013). */
+  /** The offical KOT ID of the institution (note: KOT officially stopped using them in 2013). */
   KOTId: KOTId
   /** All names that the institution has had since 2011. */
   institutionNames: string[]

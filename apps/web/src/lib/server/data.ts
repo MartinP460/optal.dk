@@ -1,27 +1,10 @@
 import _ from 'lodash'
-import type {
-  KOTCourse,
-  KOTData,
-  KOTGrouping,
-  KOTInstitution,
-  KOTInstitutionCourses
-} from '@optaldk/reader'
-import coursesJSON from '../../../static/data/json/courses.json'
-import institutionsJSON from '../../../static/data/json/institutions.json'
-import institutionCoursesJSON from '../../../static/data/json/institutionCourses.json'
-import dataJSON from '../../../static/data/json/data.json'
-import groupingsJSON from '../../../static/data/json/groupings.json'
+import type { DB } from '@optaldk/reader'
+import db from '../../../static/data/json/data.json'
 
-const TABLES = {
-  courses: coursesJSON as KOTCourse[],
-  institutions: institutionsJSON as KOTInstitution[],
-  institutionCourses: institutionCoursesJSON as KOTInstitutionCourses[],
-  data: dataJSON as KOTData[],
-  groupings: groupingsJSON as KOTGrouping[]
-}
+const tables = db as DB
 
-type Tables = typeof TABLES
-type Row<T extends keyof Tables> = Tables[T][number]
+type Row<T extends keyof DB> = DB[T][number]
 
 class QueryArray<T> extends Array<T> {
   static from<U>(items: Iterable<U> | ArrayLike<U>): QueryArray<U> {
@@ -43,8 +26,8 @@ class QueryArray<T> extends Array<T> {
   }
 }
 
-export function from<T extends keyof Tables>(table: T) {
-  const rows = TABLES[table] as Row<T>[]
+export function from<T extends keyof DB>(table: T) {
+  const rows = tables[table] as Row<T>[]
   return {
     select<K extends keyof Row<T>>(key: K | '*', ...keys: K[]) {
       const picked =

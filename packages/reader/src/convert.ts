@@ -163,23 +163,28 @@ export function writeToXLSX(input: Awaited<ReturnType<typeof readData>>, path: s
   })
 }
 
-function buildDatasheetAOAs<TItem>(
-  items: TItem[],
-  getStaticHeaderCols: () => string[],
-  getRowStaticCols: (item: TItem) => string[],
-  getDataPoints: (item: TItem) => Array<{ year: number } & Record<string, string | number>>,
-  sheetTypeLabel: string,
+function buildDatasheetAOAs<TItem>({
+  items,
+  getStaticHeaderCols,
+  getRowStaticCols,
+  getDataPoints,
+  sheetTypeLabel,
+  locale,
+  categories
+}: {
+  items: TItem[]
+  getStaticHeaderCols: () => string[]
+  getRowStaticCols: (item: TItem) => string[]
+  getDataPoints: (item: TItem) => Array<{ year: number } & Record<string, string | number>>
+  sheetTypeLabel: string
   locale: Locale
-): Record<DatasheetCategory, string[][]> {
+  categories: Array<keyof typeof datasheetSubcategories>
+}): Record<DatasheetCategory, string[][]> {
   const result: Record<DatasheetCategory, string[][]> = {} as Record<DatasheetCategory, string[][]>
 
   const years = Array.from(
     new Set(items.flatMap((it) => getDataPoints(it).map((d) => d.year)))
   ).sort((a, b) => a - b)
-
-  const categories = Object.keys(datasheetSubcategories) as Array<
-    keyof typeof datasheetSubcategories
-  >
 
   categories.forEach((category) => {
     const keysForCategory = datasheetSubcategories[category]
@@ -232,7 +237,7 @@ export function createCourseAOAs(
 ): Record<DatasheetCategory, string[][]> {
   // Structure of output files for courses.
   /*
-  Courses - ${DatasheetCategory.[Name]}
+  Courses - DatasheetCategory
 
   Institution id         | Institution name       | Course id | Course name | 2011              |         | 2012              |         | ...
                          |                        |           |             | Admitted directly | Standby | Admitted directly | Standby | ...
@@ -240,24 +245,26 @@ export function createCourseAOAs(
   ...
   */
 
-  return buildDatasheetAOAs(
-    courses,
-    () => [
+  return buildDatasheetAOAs({
+    items: courses,
+    getStaticHeaderCols: () => [
       t(locale, 'institutionId'),
       t(locale, 'institutionName'),
       t(locale, 'courseId'),
       t(locale, 'courseName')
     ],
-    (course) => [
+    getRowStaticCols: (course) => [
       course.institution.KOTId,
       course.institution.latestName,
       course.KOTId,
       course.latestName
     ],
-    (course) => course.data.data as Array<{ year: number } & Record<string, string | number>>,
-    t(locale, 'courses'),
-    locale
-  )
+    getDataPoints: (course) =>
+      course.data.data as Array<{ year: number } & Record<string, string | number>>,
+    sheetTypeLabel: t(locale, 'courses'),
+    locale,
+    categories: Object.keys(datasheetSubcategories) as Array<keyof typeof datasheetSubcategories>
+  })
 }
 
 /** Creates array of arrays representing the output for institutions. */
@@ -271,7 +278,7 @@ export function createInstitutionAOAs(
 ): Record<DatasheetCategory, string[][]> {
   // Structure of output files for institutions.
   /*
-  Institutions - ${DatasheetCategory.[Name]}
+  Institutions - DatasheetCategory
 
   Institution id | Institution name       | 2011              |         | 2012              |         | ...
                  |                        | Admitted directly | Standby | Admitted directly | Standby | ...
@@ -279,14 +286,18 @@ export function createInstitutionAOAs(
   ...
   */
 
-  return buildDatasheetAOAs(
-    institutions,
-    () => [t(locale, 'institutionId'), t(locale, 'institutionName')],
-    (inst) => [inst.KOTId, inst.latestName],
-    (inst) => inst.data.data as Array<{ year: number } & Record<string, string | number>>,
-    t(locale, 'institutions'),
-    locale
-  )
+  return buildDatasheetAOAs({
+    items: institutions,
+    getStaticHeaderCols: () => [t(locale, 'institutionId'), t(locale, 'institutionName')],
+    getRowStaticCols: (inst) => [inst.KOTId, inst.latestName],
+    getDataPoints: (inst) =>
+      inst.data.data as Array<{ year: number } & Record<string, string | number>>,
+    sheetTypeLabel: t(locale, 'institutions'),
+    locale,
+    categories: Object.keys(datasheetSubcategories).filter(
+      (subcategory) => subcategory !== DatasheetCategory.Quotient
+    ) as Array<keyof typeof datasheetSubcategories>
+  })
 }
 
 /** Creates array of arrays representing the output for groupings. */
@@ -300,7 +311,7 @@ export function createGroupingAOAs(
 ): Record<DatasheetCategory, string[][]> {
   // Structure of output files for groupings.
   /*
-  Educations - ${DatasheetCategory.[Name]}
+  Educations - DatasheetCategory
 
   Education id | Education name   | 2011              |         | 2012              |         | ...
                |                  | Admitted directly | Standby | Admitted directly | Standby | ...
@@ -308,14 +319,18 @@ export function createGroupingAOAs(
   ...
   */
 
-  return buildDatasheetAOAs(
-    groupings,
-    () => [t(locale, 'groupingId'), t(locale, 'groupingName')],
-    (grp) => [grp.id, grp.name],
-    (grp) => grp.data.data as Array<{ year: number } & Record<string, string | number>>,
-    t(locale, 'byEducation'),
-    locale
-  )
+  return buildDatasheetAOAs({
+    items: groupings,
+    getStaticHeaderCols: () => [t(locale, 'groupingId'), t(locale, 'groupingName')],
+    getRowStaticCols: (grp) => [grp.id, t(locale, grp.name)],
+    getDataPoints: (grp) =>
+      grp.data.data as Array<{ year: number } & Record<string, string | number>>,
+    sheetTypeLabel: t(locale, 'byEducation'),
+    locale,
+    categories: Object.keys(datasheetSubcategories).filter(
+      (subcategory) => subcategory !== DatasheetCategory.Quotient
+    ) as Array<keyof typeof datasheetSubcategories>
+  })
 }
 
 /** Calculates the optimal width of columns from an AOA's. */

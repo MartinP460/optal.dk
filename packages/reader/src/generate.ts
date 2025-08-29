@@ -24,9 +24,7 @@ async function main() {
 }
 
 function generateJSON(data: Awaited<ReturnType<typeof readData>>, path: string) {
-  Object.entries(data).forEach(([filename, value]) =>
-    writeToFile(filename, 'json', JSON.stringify(value), path + '/json')
-  )
+  writeToFile('data', 'json', JSON.stringify(data), path + '/json')
 }
 
 function generateXLSX(data: Awaited<ReturnType<typeof readData>>, path: string) {

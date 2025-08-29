@@ -5,6 +5,7 @@ import path from 'path'
 import fs from 'fs'
 import { randomUUID } from 'crypto'
 import {
+  DB,
   KOTDataPointKeys as K,
   KOTCourse,
   KOTData,
@@ -23,7 +24,7 @@ let data: KOTData[] = []
 let groupings: KOTGrouping[] = []
 
 /** Reads and returns KOT data across all available years. */
-export async function readData() {
+export async function readData(): Promise<DB> {
   const dataSheets = await Promise.all(
     AVAILABLE_YEARS.map((year) => {
       const filePath = path.resolve(`${FILEPATH}/${year}.csv`)
