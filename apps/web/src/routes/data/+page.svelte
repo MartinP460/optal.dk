@@ -1,4 +1,5 @@
 <script lang="ts">
+  /* eslint-disable svelte/no-at-html-tags */
   import _ from 'lodash'
   import { IconDownload, IconJson, IconTable } from '@tabler/icons-svelte'
   import { LOCALES } from '@optaldk/i18n'
