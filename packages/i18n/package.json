@@ -1,0 +1,7 @@
+{
+  "name": "@optaldk/i18n",
+  "type": "module",
+  "description": "Translations for the optal.dk repository.",
+  "main": "src/index.ts",
+  "types": "src/index.ts"
+}

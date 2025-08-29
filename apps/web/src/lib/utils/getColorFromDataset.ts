@@ -1,121 +1,122 @@
-import type { KOTCategory, KOTSubcategory } from '@optaldk/reader'
+import { KOTDataPointKeys as K } from '@optaldk/reader'
+import { CategoryLabel } from './categories'
 
-export function getColorFromSubcategory(subcategory: KOTSubcategory) {
+export function getColorFromSubcategory(subcategory: K) {
   switch (subcategory) {
-    case 'acceptedAdmitted':
+    case K.AcceptedAdmitted:
       return '#4d7c0f' // lime-700
-    case 'acceptedStandby':
+    case K.AcceptedStandby:
       return '#84cc16' // lime-500
-    case 'appliedTotal':
+    case K.AppliedTotal:
       return '#eab308' // yellow-500
-    case 'appliedFirstpriority':
+    case K.AppliedFirstpriority:
       return '#facc15' // yellow-400
-    case 'quotientPrimary':
+    case K.QuotientPrimary:
       return '#9f1239' // rose-800
-    case 'quotientStandby':
+    case K.QuotientStandby:
       return '#f43f5e' // rose-500
-    case 'genderAcceptedMen':
-    case 'genderAppliedMen':
+    case K.GenderAcceptedMen:
+    case K.GenderAppliedMen:
       return '#38bdf8' // sky-400
-    case 'genderAcceptedWomen':
-    case 'genderAppliedWomen':
+    case K.GenderAcceptedWomen:
+    case K.GenderAppliedWomen:
       return '#e879f9' // fuchsia-400
-    case 'ageAcceptedYounger':
-    case 'ageAppliedYounger':
+    case K.AgeAcceptedYounger:
+    case K.AgeAppliedYounger:
       return '#ef4444' // red-500
-    case 'ageAccepted19':
-    case 'ageApplied19':
+    case K.AgeAccepted19:
+    case K.AgeApplied19:
       return '#f97316' // orange-500
-    case 'ageAccepted20':
-    case 'ageApplied20':
+    case K.AgeAccepted20:
+    case K.AgeApplied20:
       return '#eab308' // yellow-500
-    case 'ageAccepted21':
-    case 'ageApplied21':
+    case K.AgeAccepted21:
+    case K.AgeApplied21:
       return '#84cc16' // lime-500
-    case 'ageAccepted22':
-    case 'ageApplied22':
+    case K.AgeAccepted22:
+    case K.AgeApplied22:
       return '#14b8a6' // teal-500
-    case 'ageAccepted23':
-    case 'ageApplied23':
+    case K.AgeAccepted23:
+    case K.AgeApplied23:
       return '#06b6d4' // cyan-500
-    case 'ageAccepted24':
-    case 'ageApplied24':
+    case K.AgeAccepted24:
+    case K.AgeApplied24:
       return '#3b82f6' // blue-500
-    case 'ageAccepted25':
-    case 'ageApplied25':
+    case K.AgeAccepted25:
+    case K.AgeApplied25:
       return '#8b5cf6' // violet-500
-    case 'ageAccepted26To30':
-    case 'ageApplied26To30':
+    case K.AgeAccepted26To30:
+    case K.AgeApplied26To30:
       return '#d946ef' // fuchsia-500
-    case 'ageAcceptedOlder':
-    case 'ageAppliedOlder':
+    case K.AgeAcceptedOlder:
+    case K.AgeAppliedOlder:
       return '#64748b' // slate-500
-    case 'edAcceptedSTX':
-    case 'edAppliedSTX':
+    case K.EdAcceptedSTX:
+    case K.EdAppliedSTX:
       return '#7f1d1d' // red-900
-    case 'edAcceptedHHX':
-    case 'edAppliedHHX':
+    case K.EdAcceptedHHX:
+    case K.EdAppliedHHX:
       return '#2563eb' // blue-600
-    case 'edAcceptedHTX':
-    case 'edAppliedHTX':
+    case K.EdAcceptedHTX:
+    case K.EdAppliedHTX:
       return '#1e3a8a' // blue-900
-    case 'edAcceptedHF':
-    case 'edAppliedHF':
+    case K.EdAcceptedHF:
+    case K.EdAppliedHF:
       return '#38bdf8' // sky-500
-    case 'edAcceptedEUX':
-    case 'edAppliedEUX':
+    case K.EdAcceptedEUX:
+    case K.EdAppliedEUX:
       return '#737373' // neutral-500
-    case 'edAcceptedEUXPartOne':
-    case 'edAppliedEUXPartOne':
+    case K.EdAcceptedEUXPartOne:
+    case K.EdAppliedEUXPartOne:
       return '#e5e5e5' // neutral-200
-    case 'edAcceptedEUD':
-    case 'edAppliedEUD':
+    case K.EdAcceptedEUD:
+    case K.EdAppliedEUD:
       return '#581c87' // purple-900
-    case 'edAcceptedGIF':
-    case 'edAppliedGIF':
+    case K.EdAcceptedGIF:
+    case K.EdAppliedGIF:
       return '#ea580c' // orange-600
-    case 'edAcceptedIB':
-    case 'edAppliedIB':
+    case K.EdAcceptedIB:
+    case K.EdAppliedIB:
       return '#4ade80' // green-400
-    case 'edAcceptedIBForeign':
-    case 'edAppliedIBForeign':
+    case K.EdAcceptedIBForeign:
+    case K.EdAppliedIBForeign:
       return '#14532d' // green-900
-    case 'edAcceptedEngineer':
-    case 'edAppliedEngineer':
+    case K.EdAcceptedEngineer:
+    case K.EdAppliedEngineer:
       return '#115e59' // teal-900
-    case 'edAcceptedForeign':
-    case 'edAppliedForeign':
+    case K.EdAcceptedForeign:
+    case K.EdAppliedForeign:
       return '#c026d3' // fuchsia-600
-    case 'edAcceptedFaroese':
-    case 'edAppliedFaroese':
+    case K.EdAcceptedFaroese:
+    case K.EdAppliedFaroese:
       return '#083344' // cyan-950
-    case 'edAcceptedGreenlandic':
-    case 'edAppliedGreenlandic':
+    case K.EdAcceptedGreenlandic:
+    case K.EdAppliedGreenlandic:
       return '#dc2626' // red-600
-    case 'edAcceptedUnknown':
-    case 'edAppliedUnknown':
+    case K.EdAcceptedUnknown:
+    case K.EdAppliedUnknown:
       return '#262626' // neutral-800
-    case 'edAcceptedOther':
-    case 'edAppliedOther':
+    case K.EdAcceptedOther:
+    case K.EdAppliedOther:
       return '#e879f9' // pink-900
     default:
       return '#ecfccb'
   }
 }
 
-export function getColorFromCategory(label: KOTCategory) {
+export function getColorFromCategory(label: CategoryLabel) {
   switch (label) {
-    case 'accepted':
+    case CategoryLabel.Accepted:
       return '#4d7c0f' // lime-700
-    case 'applied':
+    case CategoryLabel.Applied:
       return '#eab308' // yellow-500
-    case 'quotient':
+    case CategoryLabel.Quotient:
       return '#9f1239' // rose-800
-    case 'gender':
+    case CategoryLabel.Gender:
       return '#e879f9' // fuchsia-400
-    case 'age':
+    case CategoryLabel.Age:
       return '#a855f7' // purple-500
-    case 'education':
+    case CategoryLabel.Education:
       return '#92400e' // amber-800
   }
 }

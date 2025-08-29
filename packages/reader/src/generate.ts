@@ -1,43 +1,49 @@
 import path from 'path'
-import { getGroupings } from './groupings'
-import { getInstitutions } from './institutions'
-import { writeToFile } from './utils/writeToFile'
+import fs from 'fs'
+import { readData } from './read'
+import { writeToXLSX } from './convert'
 
-async function readAndGenerateKOTData() {
+async function main() {
   const args = process.argv.slice(2)
+  const rootPath = path.join(process.cwd(), '../..')
 
-  // output folder for all file types
-  const relativeOutputDir = args[0]
-  // output folder for generated JSON (to be used in the frontend)
-  const JSONOutputDir = args[1]
+  const outputDirs = args
 
-  if (!relativeOutputDir) {
+  if (outputDirs.length === 0) {
     throw new Error(
-      'No output directory argument supplied.\n\n Usage: -- <outputDir> <jsonOutputDir>.'
-    )
-  } else if (!JSONOutputDir) {
-    throw new Error(
-      'No JSON output directory argument supplied.\n\n Usage: -- <outputDir> <jsonOutputDir>.'
+      'No output directory arguments supplied.\n\n Usage: -- <outputDir1> <outputDir2> ...'
     )
   }
 
-  const institutions = await getInstitutions()
-  const groupings = getGroupings(institutions)
+  const data = await readData()
 
-  writeToJSON('institutions', institutions)
-  writeToJSON('groupings', groupings)
+  args.forEach((outputDir) => {
+    generateJSON(data, rootPath + outputDir)
+    generateXLSX(data, rootPath + outputDir)
+  })
 }
 
-function writeToJSON(name: string, data: unknown) {
-  const rootPath = path.join(process.cwd(), '../..')
-  const relativeOutputDir = process.argv.slice(2)[0]
-  const relativeJSONOutputDir = process.argv.slice(2)[1]
-
-  const outputDir = rootPath + relativeOutputDir
-  const JSONOutputDir = rootPath + relativeJSONOutputDir
-
-  writeToFile(name, 'json', JSON.stringify(data), outputDir)
-  writeToFile(name, 'json', JSON.stringify(data), JSONOutputDir)
+function generateJSON(data: Awaited<ReturnType<typeof readData>>, path: string) {
+  writeToFile('data', 'json', JSON.stringify(data), path + '/json')
 }
 
-readAndGenerateKOTData()
+function generateXLSX(data: Awaited<ReturnType<typeof readData>>, path: string) {
+  writeToXLSX(data, path + '/xlsx')
+}
+
+/**
+ * Writes a string to a file in the output directory.
+ * @param name The name of the file.
+ * @param prefix The filetype.
+ * @param data The data to be written to the file.
+ * @param outputDir The output directory relative to root.
+ */
+export function writeToFile(name: string, prefix: 'json', data: string, outputDir: string) {
+  fs.writeFile(`${outputDir}/${name}.${prefix}`, data, (err) => {
+    if (err) {
+      throw err
+    }
+  })
+}
+
+main()

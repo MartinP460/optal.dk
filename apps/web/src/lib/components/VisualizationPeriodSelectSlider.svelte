@@ -1,27 +1,21 @@
 <script lang="ts">
-  import _ from 'lodash'
   import { Slider } from '$lib/components/ui/slider'
+  import { getVisualizationState } from '$lib/utils/visualizationState.svelte'
+  import { DisplayType } from '$lib/utils/categories'
 
-  type Props = {
-    min: number
-    max: number
-    period: number[]
-    mode: 'single' | 'multiple'
-    onPeriodChange: (value: number[]) => void
-  }
+  let { data, category, period, onPeriodChange } = $derived(getVisualizationState())
 
-  let { min, max, period, mode, onPeriodChange }: Props = $props()
+  const courseYears = $derived(data.map((datapoint) => datapoint.year))
+  const min = $derived(Math.min(...courseYears))
+  const max = $derived(Math.max(...courseYears))
 
-  // Some of these bindings may be excessive, although this way we don't get errors in the browser console.
-  let periodState = $state(mode === 'single' ? period[0] : period)
+  const mode = $derived(
+    category.defaultDisplayType === DisplayType.Donutchart ? 'single' : 'multiple'
+  )
+  const periodState = $derived(mode === 'single' ? period[0] : period)
 
   const handlePeriodChange = (value: number[] | number) => {
-    const newValue = typeof value === 'number' ? [value, value] : value
-    if (mode === 'single') {
-      periodState = newValue[0]
-    } else {
-      periodState = newValue
-    }
+    const newValue = (typeof value === 'number' ? [value, value] : value) as [number, number]
     onPeriodChange(newValue)
   }
 </script>
@@ -33,7 +27,7 @@
       {min}
       {max}
       step={1}
-      bind:value={periodState as number}
+      value={periodState as number}
       onValueChange={handlePeriodChange}
     />
   {:else}
@@ -42,12 +36,12 @@
       {min}
       {max}
       step={1}
-      bind:value={periodState as number[]}
+      value={periodState as number[]}
       onValueChange={handlePeriodChange}
     />
   {/if}
   <div class="flex w-[108%] justify-between mt-2 text-xs">
-    {#each _.range(min, max + 1) as year (year)}
+    {#each courseYears as year (year)}
       <span class="text-muted-foreground hidden first:inline last:inline">{year}</span>
     {/each}
   </div>

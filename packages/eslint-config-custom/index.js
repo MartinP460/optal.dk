@@ -36,10 +36,10 @@ export const config = ts.config(
   /* Turbo config. */
   {
     plugins: {
-      turbo: turboPlugin,
+      turbo: turboPlugin
     },
     rules: {
-      'turbo/no-undeclared-env-vars': 'warn',
+      'turbo/no-undeclared-env-vars': 'warn'
     },
     ignores: [
       '**/*.DS_Store',
@@ -55,9 +55,7 @@ export const config = ts.config(
       '**/.vercel/',
       'pnpm-lock.yaml',
       'package-lock.json',
-      'yarn.lock',
-      '**/institutions.json',
-      '**/groupings.json',
+      'yarn.lock'
     ]
   },
 
@@ -88,7 +86,7 @@ export const config = ts.config(
   /* Only warn config. */
   {
     plugins: {
-      onlyWarn,
+      onlyWarn
     }
   },
 
@@ -96,10 +94,10 @@ export const config = ts.config(
   {
     files: ['**/*.test.ts'], // or any other pattern
     plugins: {
-      vitest,
+      vitest
     },
     rules: {
-      ...vitest.configs.recommended.rules, // you can also use vitest.configs.all.rules to enable all rules
-    },
-  },
+      ...vitest.configs.recommended.rules // you can also use vitest.configs.all.rules to enable all rules
+    }
+  }
 )

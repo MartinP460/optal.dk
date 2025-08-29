@@ -1,16 +1,65 @@
-import { GroupingName, ParentGroupingName } from './constants'
+import _ from 'lodash'
+import { GroupingName, ParentGroupingName } from './groupings'
 
-export type Unit = 'persons'
+export type DB = {
+  courses: KOTCourse[]
+  institutions: KOTInstitution[]
+  groupings: KOTGrouping[]
+  institutionCourses: KOTInstitutionCourses[]
+  data: KOTData[]
+}
 
+/** A random uuid. */
+export type ForeignKey = string
+/** The official KOT ID of a course. */
 export type KOTId = string
 
+export type KOTData = {
+  /** A random uuid that uniquely identifies the entry. */
+  id: string
+  /** The ID of the course, institution or grouping that the data pertains to. */
+  foreignKeyId: ForeignKey
+  /** An array of objects where each object represents one year of data. */
+  data: Array<
+    {
+      year: number
+    } & KOTDataTypes
+  >
+}
+
+export type KOTInstitution = {
+  /** A random uuid that uniquely identifies the entry. */
+  id: ForeignKey
+  /** The offical KOT ID of the institution (note: KOT officially stopped using them in 2013). */
+  KOTId: KOTId
+  /** All names that the institution has had since 2011. */
+  institutionNames: string[]
+  /** The most recent name of the institution. */
+  latestName: string
+  /** The slug used to identify the institution. */
+  slug: string
+  /** The first and last active years of the institution. */
+  period: [number, number]
+}
+
+export type KOTInstitutionCourses = {
+  /** A random uuid that uniquely identifies the entry. */
+  id: string
+  /** The KOT ID of the institution. */
+  KOTInstitutionId: KOTId
+  /** The KOT ID of the course. */
+  KOTCourseId: KOTId
+  /** The first and last year that the course was offered by the institution. */
+  period: [number, number]
+}
+
 export type KOTCourse = {
-  /** The id of the course. */
-  id: KOTId
+  /** A random uuid that uniquely identifies the entry. */
+  id: ForeignKey
+  /** The ID of the course. */
+  KOTId: KOTId
   /** All unique course names throughout the years. */
   courseNames: string[]
-  /** The different categories of data available for the course. */
-  dataCategories: KOTDataCategories
   /** The most recent name of the course. */
   latestName: string
   /** Whether the course starts in the winter or summer. */
@@ -22,224 +71,107 @@ export type KOTCourse = {
   /** The slug used to identify the course. */
   slug: string
   /** The time period in which the course has been active. */
-  period: number[]
-  /** The institutions where this exact course has also been offered. */
-  otherOfferedInstitutions: KOTId[]
+  period: [number, number]
 }
-
-export type KOTInstitution = {
-  /** The id of the institution (note: they stopped using them in 2013). */
-  id: KOTId
-  /** All names that the institution has had since 2011. */
-  institutionNames: string[]
-  /** The different categories of data available for the course. */
-  dataCategories: KOTDataCategories
-  /** The courses the insitution offered since 2011. */
-  courses: KOTCourse[]
-  /** The most recent name of the institution. */
-  latestName: string
-  /** The slug used to identify the institution. */
-  slug: string
-  /** The time period in which the institution has been active. */
-  period: number[]
-}
-
-export enum KOTCategory {
-  Accepted = 'accepted',
-  Applied = 'applied',
-  Quotient = 'quotient',
-  Gender = 'gender',
-  Age = 'age',
-  Education = 'education'
-}
-
-export type KOTSubcategoryGeneric<T extends keyof KOTDataCategories> = Omit<
-  keyof NonNullable<KOTDataCategories[T]>['datasets'][number],
-  'year'
->
-
-type KOTDatasetCategory = {
-  accepted: 'acceptedAdmitted' | 'acceptedStandby'
-  applied: 'appliedTotal' | 'appliedFirstpriority'
-  quotient: 'quotientPrimary' | 'quotientStandby'
-  gender: 'genderAcceptedMen' | 'genderAcceptedWomen' | 'genderAppliedMen' | 'genderAppliedWomen'
-  age:
-    | 'ageAcceptedYounger'
-    | 'ageAccepted19'
-    | 'ageAccepted20'
-    | 'ageAccepted21'
-    | 'ageAccepted22'
-    | 'ageAccepted23'
-    | 'ageAccepted24'
-    | 'ageAccepted25'
-    | 'ageAccepted26To30'
-    | 'ageAcceptedOlder'
-    | 'ageAppliedYounger'
-    | 'ageApplied19'
-    | 'ageApplied20'
-    | 'ageApplied21'
-    | 'ageApplied22'
-    | 'ageApplied23'
-    | 'ageApplied24'
-    | 'ageApplied25'
-    | 'ageApplied26To30'
-    | 'ageAppliedOlder'
-  education:
-    | 'edAcceptedUnknown'
-    | 'edAcceptedSTX'
-    | 'edAcceptedHF'
-    | 'edAcceptedHHX'
-    | 'edAcceptedHTX'
-    | 'edAcceptedIB'
-    | 'edAcceptedGIF'
-    | 'edAcceptedEngineer'
-    | 'edAcceptedEUD'
-    | 'edAcceptedIBForeign'
-    | 'edAcceptedForeign'
-    | 'edAcceptedEUX'
-    | 'edAcceptedEUXPartOne'
-    | 'edAcceptedFaroese'
-    | 'edAcceptedGreenlandic'
-    | 'edAcceptedOther'
-    | 'edAppliedUnknown'
-    | 'edAppliedSTX'
-    | 'edAppliedHF'
-    | 'edAppliedHHX'
-    | 'edAppliedHTX'
-    | 'edAppliedIB'
-    | 'edAppliedGIF'
-    | 'edAppliedEngineer'
-    | 'edAppliedEUD'
-    | 'edAppliedIBForeign'
-    | 'edAppliedForeign'
-    | 'edAppliedEUX'
-    | 'edAppliedEUXPartOne'
-    | 'edAppliedFaroese'
-    | 'edAppliedGreenlandic'
-    | 'edAppliedOther'
-}
-
-export type KOTSubcategory = KOTDatasetCategory[keyof KOTDatasetCategory]
-export type KOTSubcategoryAccepted = KOTDatasetCategory['accepted']
-export type KOTSubcategoryApplied = KOTDatasetCategory['applied']
-export type KOTSubcategoryQuotient = KOTDatasetCategory['quotient']
-export type KOTSubcategoryGender = KOTDatasetCategory['gender']
-export type KOTSubcategoryAge = KOTDatasetCategory['age']
-export type KOTSubcategoryEducation = KOTDatasetCategory['education']
-
-export type KOTData = string | number
-
-type KOTDataCategoryGeneric<T> = {
-  name: KOTCategory
-  unit: Unit | null
-  datasets: T[]
-}
-
-export type KOTDataCategories = {
-  accepted?: KOTDataCategoryGeneric<{
-    year: number
-    acceptedAdmitted: KOTData
-    acceptedStandby: KOTData
-  }>
-  applied?: KOTDataCategoryGeneric<{
-    year: number
-    appliedTotal: KOTData
-    appliedFirstpriority: KOTData
-  }>
-  quotient?: KOTDataCategoryGeneric<{
-    year: number
-    quotientPrimary: KOTData
-    quotientStandby: KOTData
-  }>
-  gender?: KOTDataCategoryGeneric<{
-    year: number
-    genderAcceptedMen: KOTData
-    genderAcceptedWomen: KOTData
-    genderAppliedMen: KOTData
-    genderAppliedWomen: KOTData
-  }>
-  age?: KOTDataCategoryGeneric<{
-    year: number
-    ageAcceptedYounger: KOTData
-    ageAccepted19: KOTData
-    ageAccepted20: KOTData
-    ageAccepted21: KOTData
-    ageAccepted22: KOTData
-    ageAccepted23: KOTData
-    ageAccepted24: KOTData
-    ageAccepted25: KOTData
-    ageAccepted26To30: KOTData
-    ageAcceptedOlder: KOTData
-    ageAppliedYounger: KOTData
-    ageApplied19: KOTData
-    ageApplied20: KOTData
-    ageApplied21: KOTData
-    ageApplied22: KOTData
-    ageApplied23: KOTData
-    ageApplied24: KOTData
-    ageApplied25: KOTData
-    ageApplied26To30: KOTData
-    ageAppliedOlder: KOTData
-  }>
-  education?: KOTDataCategoryGeneric<{
-    year: number
-    edAcceptedUnknown: KOTData
-    edAcceptedSTX: KOTData
-    edAcceptedHF: KOTData
-    edAcceptedHHX: KOTData
-    edAcceptedHTX: KOTData
-    edAcceptedIB: KOTData
-    edAcceptedGIF: KOTData
-    edAcceptedEngineer: KOTData
-    edAcceptedEUD: KOTData
-    edAcceptedIBForeign: KOTData
-    edAcceptedForeign: KOTData
-    edAcceptedEUX: KOTData
-    edAcceptedEUXPartOne: KOTData
-    edAcceptedFaroese: KOTData
-    edAcceptedGreenlandic: KOTData
-    edAcceptedOther: KOTData
-    edAppliedUnknown: KOTData
-    edAppliedSTX: KOTData
-    edAppliedHF: KOTData
-    edAppliedHHX: KOTData
-    edAppliedHTX: KOTData
-    edAppliedIB: KOTData
-    edAppliedGIF: KOTData
-    edAppliedEngineer: KOTData
-    edAppliedEUD: KOTData
-    edAppliedIBForeign: KOTData
-    edAppliedForeign: KOTData
-    edAppliedEUX: KOTData
-    edAppliedEUXPartOne: KOTData
-    edAppliedFaroese: KOTData
-    edAppliedGreenlandic: KOTData
-    edAppliedOther: KOTData
-  }>
-}
-
-export type KOTDataCategory = NonNullable<KOTDataCategories[keyof KOTDataCategories]>
 
 export type KOTGrouping = {
-  /** The ID of the grouping. */
-  id: string
-  /** The sum of properties in each dataset of each data category for the particular group of courses. */
-  dataCategories: KOTDataCategories
+  /** A random uuid that uniquely identifies the grouping. */
+  id: ForeignKey
   /** The name of the grouping (i.e. computer science or biology). */
   name: GroupingName
   /** The slug associated with the grouping. */
   slug: string
   /** The ID of courses included in the grouping. */
   courseIds: KOTId[]
-  /** The number of courses in the grouping. Equivalent to the length of courseIds. */
-  courseCount: number
   /** The earliest and latest of year of recorded data across courses in the grouping. */
-  period: number[]
+  period: [number, number]
   /** The parent grouping that the grouping is a part of (e.g. IT for computer science). */
   parentGroupings: ParentGroupingName[]
 }
 
-type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
-export type KOTInstitutionPartial = Omit<KOTInstitution, 'courses'> & {
-  courses: PartialBy<KOTCourse, 'otherOfferedInstitutions'>[]
+export type KOTDataTypes = {
+  [K in KOTDataPointKeys]?: K extends
+    | KOTDataPointKeys.QuotientPrimary
+    | KOTDataPointKeys.QuotientStandby
+    ? string
+    : number
+}
+
+export enum KOTDataPointKeys {
+  AcceptedAdmitted = 'acceptedAdmitted',
+  AcceptedStandby = 'acceptedStandby',
+  AppliedTotal = 'appliedTotal',
+  AppliedFirstpriority = 'appliedFirstpriority',
+  QuotientPrimary = 'quotientPrimary',
+  QuotientStandby = 'quotientStandby',
+  GenderAcceptedMen = 'genderAcceptedMen',
+  GenderAcceptedWomen = 'genderAcceptedWomen',
+  GenderAppliedMen = 'genderAppliedMen',
+  GenderAppliedWomen = 'genderAppliedWomen',
+  AgeAcceptedYounger = 'ageAcceptedYounger',
+  AgeAccepted19 = 'ageAccepted19',
+  AgeAccepted20 = 'ageAccepted20',
+  AgeAccepted21 = 'ageAccepted21',
+  AgeAccepted22 = 'ageAccepted22',
+  AgeAccepted23 = 'ageAccepted23',
+  AgeAccepted24 = 'ageAccepted24',
+  AgeAccepted25 = 'ageAccepted25',
+  AgeAccepted26To30 = 'ageAccepted26To30',
+  AgeAcceptedOlder = 'ageAcceptedOlder',
+  AgeAppliedYounger = 'ageAppliedYounger',
+  AgeApplied19 = 'ageApplied19',
+  AgeApplied20 = 'ageApplied20',
+  AgeApplied21 = 'ageApplied21',
+  AgeApplied22 = 'ageApplied22',
+  AgeApplied23 = 'ageApplied23',
+  AgeApplied24 = 'ageApplied24',
+  AgeApplied25 = 'ageApplied25',
+  AgeApplied26To30 = 'ageApplied26To30',
+  AgeAppliedOlder = 'ageAppliedOlder',
+  EdAcceptedUnknown = 'edAcceptedUnknown',
+  EdAcceptedSTX = 'edAcceptedSTX',
+  EdAcceptedHF = 'edAcceptedHF',
+  EdAcceptedHHX = 'edAcceptedHHX',
+  EdAcceptedHTX = 'edAcceptedHTX',
+  EdAcceptedIB = 'edAcceptedIB',
+  EdAcceptedGIF = 'edAcceptedGIF',
+  EdAcceptedEngineer = 'edAcceptedEngineer',
+  EdAcceptedEUD = 'edAcceptedEUD',
+  EdAcceptedOther = 'edAcceptedOther',
+  EdAcceptedIBForeign = 'edAcceptedIBForeign',
+  EdAcceptedForeign = 'edAcceptedForeign',
+  EdAcceptedEUX = 'edAcceptedEUX',
+  EdAcceptedEUXPartOne = 'edAcceptedEUXPartOne',
+  EdAcceptedFaroese = 'edAcceptedFaroese',
+  EdAcceptedGreenlandic = 'edAcceptedGreenlandic',
+  EdAppliedUnknown = 'edAppliedUnknown',
+  EdAppliedSTX = 'edAppliedSTX',
+  EdAppliedHF = 'edAppliedHF',
+  EdAppliedHHX = 'edAppliedHHX',
+  EdAppliedHTX = 'edAppliedHTX',
+  EdAppliedIB = 'edAppliedIB',
+  EdAppliedGIF = 'edAppliedGIF',
+  EdAppliedEngineer = 'edAppliedEngineer',
+  EdAppliedEUD = 'edAppliedEUD',
+  EdAppliedOther = 'edAppliedOther',
+  EdAppliedIBForeign = 'edAppliedIBForeign',
+  EdAppliedForeign = 'edAppliedForeign',
+  EdAppliedEUX = 'edAppliedEUX',
+  EdAppliedEUXPartOne = 'edAppliedEUXPartOne',
+  EdAppliedFaroese = 'edAppliedFaroese',
+  EdAppliedGreenlandic = 'edAppliedGreenlandic'
+}
+
+export const KOTDataType: {
+  [K in KOTDataPointKeys]: K extends
+    | KOTDataPointKeys.QuotientPrimary
+    | KOTDataPointKeys.QuotientStandby
+    ? 'string'
+    : 'number'
+} = {
+  ...(_.fromPairs(Object.values(KOTDataPointKeys).map((key) => [key, 'number'])) as {
+    [K in KOTDataPointKeys]: 'number'
+  }),
+  [KOTDataPointKeys.QuotientPrimary]: 'string',
+  [KOTDataPointKeys.QuotientStandby]: 'string'
 }

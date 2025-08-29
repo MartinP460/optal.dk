@@ -1,29 +1,40 @@
-import Fuse from 'fuse.js'
-import type { KOTGrouping, KOTInstitution } from '@optaldk/reader'
-import institutionsData from './institutions.json'
-import groupingsData from './groupings.json'
+import _ from 'lodash'
+import type { DB } from '@optaldk/reader'
+import db from '../../../static/data/json/data.json'
 
-export const institutions = institutionsData as KOTInstitution[]
-export const courses = institutions.flatMap((institution) => institution.courses)
-export const courseSearchIndexes = getSearchIndex()
+const tables = db as DB
 
-export const groupings = groupingsData as KOTGrouping[]
+type Row<T extends keyof DB> = DB[T][number]
 
-function getSearchIndex() {
-  const allInstitutions = institutions.map(({ id, latestName }) => ({
-    id,
-    latestName
-  }))
-  const allCourses = institutions.flatMap((institution) =>
-    institution.courses.map(({ id, latestName, location }) => ({
-      id,
-      latestName,
-      location
-    }))
-  )
+class QueryArray<T> extends Array<T> {
+  static from<U>(items: Iterable<U> | ArrayLike<U>): QueryArray<U> {
+    const res = new QueryArray<U>()
+    res.push(...Array.from(items))
+    return res
+  }
+  whereEquals<K extends keyof T>(key: K, value: T[K]): QueryArray<T> {
+    return QueryArray.from(this.filter((r) => r[key] === value))
+  }
+  whereNotEquals<K extends keyof T>(key: K, value: T[K]): QueryArray<T> {
+    return QueryArray.from(this.filter((r) => r[key] !== value))
+  }
+  first(): T {
+    return this[0]
+  }
+  orderBy<K extends keyof T>(key: K): QueryArray<T> {
+    return QueryArray.from(this.sort((a, b) => String(a[key]).localeCompare(String(b[key]), 'en')))
+  }
+}
 
-  const institutionIndex = Fuse.createIndex(['latestName'], allInstitutions).toJSON()
-  const courseIndex = Fuse.createIndex(['latestName', 'location'], allCourses).toJSON()
-
-  return { institutionIndex, courseIndex }
+export function from<T extends keyof DB>(table: T) {
+  const rows = tables[table] as Row<T>[]
+  return {
+    select<K extends keyof Row<T>>(key: K | '*', ...keys: K[]) {
+      const picked =
+        key !== '*'
+          ? (rows.map((row) => _.pick(row, [key, ...keys])) as Array<Pick<Row<T>, K>>)
+          : rows
+      return QueryArray.from(picked)
+    }
+  }
 }

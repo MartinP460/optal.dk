@@ -1,4 +1,4 @@
-import type { Locales } from '$lib/i18n/index.svelte'
+import type { Locale } from '@optaldk/i18n'
 import { browser } from '$app/environment'
 import { LOCAL_STORAGE_LANGUAGE, locale } from '$lib/i18n/index.svelte'
 
@@ -11,7 +11,7 @@ export const load = async () => {
     const localStorageLanguage = localStorage.getItem(LOCAL_STORAGE_LANGUAGE)
 
     if (localStorageLanguage) {
-      locale.value = localStorageLanguage as Locales
+      locale.value = localStorageLanguage as Locale
       return
     }
 
