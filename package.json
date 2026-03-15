@@ -13,7 +13,6 @@
     "api:sb:status": "turbo run sb:status --filter=api",
     "api:sb:stop": "turbo run sb:stop --filter=api",
     "build": "turbo run build",
-    "dev:web": "turbo run dev --filter=web",
     "dev": "turbo run dev",
     "format": "turbo run format",
     "lint": "turbo run lint",
@@ -27,7 +26,8 @@
     "test:watch": "turbo run test:watch --filter=@optaldk/reader",
     "test": "turbo run test --filter=@optaldk/reader",
     "web:check:watch": "turbo run check:watch --filter=web",
-    "web:check": "turbo run check --filter=web"
+    "web:check": "turbo run check --filter=web",
+    "web:dev": "turbo run dev --filter=web"
   },
   "devDependencies": {
     "husky": "^9.1.7",

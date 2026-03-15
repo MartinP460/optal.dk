@@ -11,7 +11,7 @@
 <div class="flex text-sm text-muted-foreground {customClass}">
   <p>{t('source')}:&nbsp;</p>
   <a
-    href="https://ufm.dk/uddannelse/statistik-og-analyser/sogning-og-optag-pa-videregaende-uddannelser/grundtal-om-sogning-og-optag/kot-hovedtal"
+    href="https://ufsn.dk/statistik/soegning-og-optag-paa-videregaaende-uddannelser/grundtal-om-soegning-og-optagelse"
     target="_blank"
     rel="noopener noreferrer"
     class="hover:underline transition">KOT</a

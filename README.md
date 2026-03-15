@@ -20,7 +20,7 @@ Make sure you have [Node.js](https://nodejs.org/en) installed. Clone or fork the
 ```bash
 npm install
 
-npm run dev:web
+npm run web:dev
 ```
 
 This opens the web server on port 5173. Running the frontend alone is sufficient for most development although using the feature for posting feedback specifically won't work.
