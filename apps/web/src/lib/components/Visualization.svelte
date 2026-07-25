@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { KOTData } from '@optaldk/reader'
+  import { queryParameters, ssp } from 'sveltekit-search-params'
   import VisualizationChart from '$lib/components/VisualizationChart.svelte'
   import VisualizationPeriodSelect from '$lib/components/VisualizationPeriodSelect.svelte'
   import VisualizationCategorySelect from '$lib/components/VisualizationCategorySelect.svelte'
@@ -14,10 +15,23 @@
 
   let { data: initialData, categoriesToDisplay }: Props = $props()
 
-  initVisualization(initialData, categoriesToDisplay)
+  const params = queryParameters(
+    {
+      category: ssp.string(CategoryLabel.Accepted)
+    },
+    {
+      pushHistory: false
+    }
+  )
+
+  $effect(() => initVisualization(initialData, categoriesToDisplay, params))
   const { category, displayType } = $derived(getVisualizationState())
 
-  const has5YearsOfData = initialData.length > 4
+  $effect(() => {
+    params.category = category.label
+  })
+
+  const has5YearsOfData = $derived(initialData.length > 4)
 </script>
 
 <div class="mt-8 sm:mt-8">

@@ -12,7 +12,7 @@
   import { getStringFromPeriod } from '$lib/utils/getStringFromPeriod.js'
 
   let { data } = $props()
-  const { institutions, courses, parentGroupings, searchIndexes } = data
+  const { institutions, courses, parentGroupings, searchIndexes } = $derived(data)
 
   const COURSE_RESULTS_LIMIT = 25
   const INSTITUTION_RESULTS_LIMIT = 10
@@ -25,15 +25,17 @@
     isLoaded = true
   })
 
-  const institutionIndex = Fuse.parseIndex<(typeof institutions)[0]>(searchIndexes.institutionIndex)
-  const courseIndex = Fuse.parseIndex<(typeof courses)[0]>(searchIndexes.courseIndex)
+  const institutionIndex = $derived(
+    Fuse.parseIndex<(typeof institutions)[0]>(searchIndexes.institutionIndex)
+  )
+  const courseIndex = $derived(Fuse.parseIndex<(typeof courses)[0]>(searchIndexes.courseIndex))
 
   const fuseOptions = {
     threshold: 0.4
   }
 
-  const institutionFuse = new Fuse(institutions, fuseOptions, institutionIndex)
-  const courseFuse = new Fuse(courses, fuseOptions, courseIndex)
+  const institutionFuse = $derived(new Fuse(institutions, fuseOptions, institutionIndex))
+  const courseFuse = $derived(new Fuse(courses, fuseOptions, courseIndex))
 
   let searchQuery = $state('')
   let coursePage = $state(COURSE_RESULTS_LIMIT)

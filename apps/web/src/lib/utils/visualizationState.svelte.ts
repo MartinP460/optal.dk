@@ -1,5 +1,3 @@
-import { queryParam, ssp } from 'sveltekit-search-params'
-import { get } from 'svelte/store'
 import type { KOTData } from '@optaldk/reader'
 import {
   type Category,
@@ -30,12 +28,12 @@ const minYear = $derived(Math.min(...courseYears))
 const maxYear = $derived(Math.max(...courseYears))
 const has5YearsOfData = $derived(state.data.length > 4)
 
-const categoryLabels = Object.keys(categories) as CategoryLabel[]
-
-export function initVisualization(data: KOTData['data'], categoriesToDisplay: CategoryLabel[]) {
-  const { initialCategoryLabel } = getCategoryParams()
-
-  const initialCategory = categories[initialCategoryLabel]
+export function initVisualization(
+  data: KOTData['data'],
+  categoriesToDisplay: CategoryLabel[],
+  initialParams: { category: string }
+) {
+  const initialCategory = categories[initialParams.category]
 
   state.data = data
   state.category = {
@@ -64,7 +62,6 @@ function onPeriodChange(period: [number, number]) {
 }
 
 function onCategoryChange(category: Category) {
-  const { setCategoryParam } = getCategoryParams()
   const hasChangedCategory = state.category.label !== category.label
 
   const hasChangedToMultipleCategory =
@@ -91,27 +88,9 @@ function onCategoryChange(category: Category) {
     }
   }
 
-  setCategoryParam(category.label)
-
   state.category = hasChangedCategory
     ? { ...category, subcategories: getDefaultSubcategories(category.subcategories) }
     : category
-}
-
-function getCategoryParams() {
-  const store = queryParam('category', ssp.string(CategoryLabel.Accepted), { pushHistory: false })
-
-  const param = get(store)
-
-  const isValidCategory = categoryLabels.includes(param as CategoryLabel)
-  if (!isValidCategory) {
-    store.set(CategoryLabel.Accepted)
-  }
-
-  return {
-    initialCategoryLabel: param as CategoryLabel,
-    setCategoryParam: (category: CategoryLabel) => store.set(category)
-  }
 }
 
 export function getVisualizationState() {

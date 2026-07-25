@@ -49,7 +49,7 @@
           <div class="flex justify-between">
             <div class="flex-1">
               <Title element="h4">{t('typeOfData')}</Title>
-              <RadioGroup.Root bind:value={typeOfData} class="mt-2 gap-3 mt-3">
+              <RadioGroup.Root bind:value={typeOfData} class="mt-2 gap-3">
                 {#each typesOfData as typeOfData (typeOfData)}
                   <div class="flex items-center space-x-2">
                     <RadioGroup.Item value={typeOfData} id={typeOfData} />
@@ -60,7 +60,7 @@
             </div>
             <div class="flex-1">
               <Title element="h4">{t('language')}</Title>
-              <RadioGroup.Root bind:value={language} class="mt-2 gap-3 mt-3">
+              <RadioGroup.Root bind:value={language} class="mt-2 gap-3">
                 {#each LOCALES as locale (locale)}
                   <div class="flex items-center space-x-2">
                     <RadioGroup.Item value={locale} id={locale} />

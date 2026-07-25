@@ -91,8 +91,7 @@ export type KOTGrouping = {
 
 export type KOTDataTypes = {
   [K in KOTDataPointKeys]?: K extends
-    | KOTDataPointKeys.QuotientPrimary
-    | KOTDataPointKeys.QuotientStandby
+    KOTDataPointKeys.QuotientPrimary | KOTDataPointKeys.QuotientStandby
     ? string
     : number
 }
@@ -164,8 +163,7 @@ export enum KOTDataPointKeys {
 
 export const KOTDataType: {
   [K in KOTDataPointKeys]: K extends
-    | KOTDataPointKeys.QuotientPrimary
-    | KOTDataPointKeys.QuotientStandby
+    KOTDataPointKeys.QuotientPrimary | KOTDataPointKeys.QuotientStandby
     ? 'string'
     : 'number'
 } = {

@@ -8,7 +8,7 @@
   import { getStringFromPeriod } from '$lib/utils/getStringFromPeriod'
 
   let props = $props()
-  const { grouping, data, includedCourses } = props.data
+  const { grouping, data, includedCourses } = $derived(props.data)
 
   let breadcrumbRoutes = $derived([{ text: t(grouping.name), url: grouping.slug }])
   let title = $derived(t('metaTitleEducation', { groupingName: t(grouping.name) }))

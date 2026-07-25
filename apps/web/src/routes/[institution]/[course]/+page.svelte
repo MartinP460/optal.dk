@@ -10,12 +10,12 @@
 
   let props = $props()
 
-  const { course, institution, data, allInstitutions } = props.data
+  const { course, institution, data, allInstitutions } = $derived(props.data)
 
-  const breadcrumbRoutes = [
+  const breadcrumbRoutes = $derived([
     { text: institution.latestName, url: institution.slug },
     { text: course.latestName, url: course.slug }
-  ]
+  ])
   let title = $derived(
     t('metaTitleCourse', {
       courseName: course.latestName,
