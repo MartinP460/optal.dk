@@ -87,7 +87,7 @@
           bind:value={text}
           id="content"
           placeholder={t('feedbackPlaceholder')}
-          class={clsx('min-h-[133px]', fieldErrors.includes('content') && 'border-red-500')}
+          class={clsx('min-h-33.25', fieldErrors.includes('content') && 'border-red-500')}
         />
       </div>
       <div class="flex flex-col">

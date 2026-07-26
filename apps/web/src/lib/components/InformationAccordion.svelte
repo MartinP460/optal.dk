@@ -24,10 +24,10 @@
 
   const shouldDisplay = (category: CategoryLabel) => categoriesToDisplay.includes(category)
 
-  const i18nType = _.capitalize(type) as 'Institution' | 'Course' | 'Grouping'
+  const i18nType = $derived(_.capitalize(type) as 'Institution' | 'Course' | 'Grouping')
 </script>
 
-<Card.Root class="w-full max-w-[800px] px-6 py-2 mt-12 mx-auto">
+<Card.Root class="w-full max-w-200 px-6 py-2 mt-12 mx-auto">
   <Accordion.Root type="multiple" aria-disabled>
     <Accordion.Item value="categories-description">
       <Accordion.Trigger>
@@ -185,10 +185,7 @@
                 <p class="text-sm font-semibold text-muted-foreground">
                   {getStringFromPeriod(institution.period)}
                 </p>
-                <a
-                  href={`/${institution.slug}`}
-                  class="col-span-5 hover:text-muted-foreground hover:text-primary"
-                >
+                <a href={`/${institution.slug}`} class="col-span-5 hover:text-muted-foreground">
                   <p class="text-sm font-semibold mt-1 sm:mt-0">{institution.latestName}</p>
                 </a>
               </li>
