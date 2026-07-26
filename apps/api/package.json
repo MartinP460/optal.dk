@@ -16,14 +16,14 @@
     "set-env": "OPTAL_WEB_DOMAIN=http://localhost:5173 NODE_ENV=development SUPABASE_URL=http://127.0.0.1:54321 SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0"
   },
   "dependencies": {
-    "@fastify/cors": "^11.0.1",
-    "@supabase/supabase-js": "^2.52.0",
-    "fastify": "^5.4.0",
+    "@fastify/cors": "^11.3.0",
+    "@supabase/supabase-js": "^2.110.8",
+    "fastify": "^5.10.0",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@optaldk/eslint-config-custom": "*",
-    "nodemon": "^3.1.10",
+    "nodemon": "^3.1.14",
     "typescript": "^5.3.3"
   }
 }
