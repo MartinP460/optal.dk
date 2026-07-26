@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { KOTData } from '@optaldk/reader'
   import { queryParameters, ssp } from 'sveltekit-search-params'
+  import type { KOTData } from '@optaldk/reader'
   import VisualizationChart from '$lib/components/VisualizationChart.svelte'
   import VisualizationPeriodSelect from '$lib/components/VisualizationPeriodSelect.svelte'
   import VisualizationCategorySelect from '$lib/components/VisualizationCategorySelect.svelte'

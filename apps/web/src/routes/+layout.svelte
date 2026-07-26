@@ -13,6 +13,7 @@
   import Credits from '$lib/components/Credits.svelte'
   import Sidebar from '$lib/components/Sidebar.svelte'
   import FeedbackForm from '$lib/components/FeedbackForm.svelte'
+  import { resolve } from '$app/paths'
 
   let { children } = $props()
 
@@ -25,7 +26,9 @@
 <div class="container mx-auto max-w-5xl px-4 flex flex-col min-h-screen">
   <header class={clsx('py-4 flex justify-between', isHomePath && 'flex-row-reverse')}>
     {#if !isHomePath}
-      <a href="/" class="flex justify-center" aria-label="Go to homepage"><Logo class="w-24" /></a>
+      <a href={resolve('/')} class="flex justify-center" aria-label="Go to homepage"
+        ><Logo class="w-24" /></a
+      >
     {/if}
     <div class="flex sm:gap-6">
       <Sidebar />

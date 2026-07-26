@@ -7,6 +7,7 @@
   import FeedbackForm from './FeedbackForm.svelte'
   import * as Sheet from '$lib/components/ui/sheet'
   import { t } from '$lib/i18n/index.svelte'
+  import { resolve } from '$app/paths'
 
   let open = $state(false)
   const onClose = () => (open = false)
@@ -22,7 +23,7 @@
   <Sheet.Content side="right">
     <Sheet.Header>
       <Sheet.Title class="text-left p-3">
-        <a onclick={onClose} href="/">
+        <a onclick={onClose} href={resolve('/')}>
           <Logo class="w-24" />
         </a>
       </Sheet.Title>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { IconChevronLeft, IconChevronRight } from '@tabler/icons-svelte'
   import { t } from '$lib/i18n/index.svelte'
+  import { resolve } from '$app/paths'
 
   type Props = {
     routes: { text: string; url: string }[]
@@ -13,7 +14,7 @@
 
 <nav>
   <a
-    href={`/${routesWithHome[routesWithHome.length - 2].url}`}
+    href={resolve(`/${routesWithHome[routesWithHome.length - 2].url}`)}
     class="text-muted-foreground md:text-sm hover:text-primary flex items-center md:hidden transition-colors"
     data-sveltekit-preload-data="tap"
     ><IconChevronLeft size={14} class="mr-1.5" />{routesWithHome[routesWithHome.length - 2].text}
@@ -23,7 +24,7 @@
       <li class="text-muted-foreground md:text-sm flex items-center">
         {#if index !== routesWithHome.length - 1}
           <a
-            href={`/${route.url}`}
+            href={resolve(`/${route.url}`)}
             class="hover:text-primary transition-colors"
             data-sveltekit-preload-data="tap"
             >{route.text}

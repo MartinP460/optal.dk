@@ -10,6 +10,7 @@
   import { t } from '$lib/i18n/index.svelte.js'
   import { createLocalStorageState } from '$lib/utils/createLocalStorageState.svelte'
   import { getStringFromPeriod } from '$lib/utils/getStringFromPeriod.js'
+  import { resolve } from '$app/paths'
 
   let { data } = $props()
   const { institutions, courses, parentGroupings, searchIndexes } = $derived(data)
@@ -62,7 +63,7 @@
    the value from local storage has been loaded. To test, select "Educations" and reload the page. Thanks Svelte 5. -->
   {#if isLoaded}
     <Tabs.Root bind:value={tabsState} class="flex flex-col justify-center items-center">
-      <Tabs.List class="w-full sm:w-[625px] h-12">
+      <Tabs.List class="w-full sm:w-156.25 h-12">
         <Tabs.Trigger
           value="institutions"
           class="w-full h-full"
@@ -78,7 +79,7 @@
           {t('byEducation')}
         </Tabs.Trigger>
       </Tabs.List>
-      <Tabs.Content value="institutions" class="w-full sm:w-[625px] px-2 sm:px-4 py-6">
+      <Tabs.Content value="institutions" class="w-full sm:w-156.25 px-2 sm:px-4 py-6">
         <form class="w-full flex items-center space-x-2 mb-4">
           <Input
             bind:value={searchQuery}
@@ -94,7 +95,10 @@
               <ul class="mt-2 hover:text-gray-500 transition-colors">
                 {#each instutionsResult.slice(0, INSTITUTION_RESULTS_LIMIT) as institution (institution.item.id)}
                   <li class="hover:text-primary">
-                    <a href={`/${institution.item.slug}`} class="flex flex-col gap-1 py-1.5">
+                    <a
+                      href={resolve(`/${institution.item.slug}`)}
+                      class="flex flex-col gap-1 py-1.5"
+                    >
                       <p class="scroll-m-20">
                         {institution.item.latestName}
                       </p>
@@ -114,7 +118,7 @@
                 {#each coursesResult.slice(0, coursePage) as course (course.item.id)}
                   <li class="group/item hover:text-primary">
                     <a
-                      href={`/${course.item.institution.slug}/${course.item.slug}`}
+                      href={resolve(`/${course.item.institution.slug}/${course.item.slug}`)}
                       class="flex justify-between items-center py-2"
                     >
                       <div class="flex flex-col gap-1 max-w-[70%]">
@@ -186,7 +190,7 @@
                       {#each institution.courses as course (course.id)}
                         <li class="hover:text-primary">
                           <a
-                            href={`/${institution.slug}/${course.slug}`}
+                            href={resolve(`/${institution.slug}/${course.slug}`)}
                             class="flex flex-col gap-1 py-2"
                           >
                             <p class="text-sm font-semibold">{course.latestName}</p>
@@ -211,7 +215,7 @@
           </Accordion.Root>
         {/if}
       </Tabs.Content>
-      <Tabs.Content value="groupings" class="w-full sm:w-[625px] px-2 sm:px-4">
+      <Tabs.Content value="groupings" class="w-full sm:w-156.25 px-2 sm:px-4">
         <Accordion.Root type="multiple" class="py-2">
           {#each parentGroupings as [name, groupings] (name)}
             <Accordion.Item value={name}>
@@ -224,7 +228,7 @@
                 <ul class="hover:text-muted-foreground transition-colors">
                   {#each groupings as grp (grp.id)}
                     <li class="hover:text-primary">
-                      <a href={`/educations/${grp.slug}`} class="flex flex-col gap-1 py-2">
+                      <a href={resolve(`/educations/${grp.slug}`)} class="flex flex-col gap-1 py-2">
                         <p class="text-sm font-semibold">{t(grp.name)}</p>
                         <p class="text-xs">
                           {[
