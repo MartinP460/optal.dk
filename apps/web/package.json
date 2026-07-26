@@ -22,6 +22,7 @@
     "@tabler/icons-svelte": "^3.45.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/lodash": "^4.17.24",
     "@unovis/svelte": "^1.6.7",
     "@unovis/ts": "^1.6.7",
