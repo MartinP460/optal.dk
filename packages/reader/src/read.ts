@@ -699,5 +699,6 @@ export const CITIES = [
   'vinter',
   'vordingborg',
   'valby',
+  'skjern',
   'winter'
 ]

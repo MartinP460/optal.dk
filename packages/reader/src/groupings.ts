@@ -125,7 +125,7 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
 
   {
     name: GroupingName.Medicin,
-    courseIds: ['25320', '22010', '10110', '10112', '17115', '17117'],
+    courseIds: ['25320', '22010', '10110', '10112', '17115', '17117', '20115', '22012'],
     parentGroupings: [ParentGroupingName.Healthcare]
   },
   {
@@ -331,7 +331,7 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
   },
   {
     name: GroupingName.ComputerScience,
-    courseIds: ['25306', '22115', '10220', '17020', '22112'],
+    courseIds: ['25306', '22115', '10220', '17020', '22112', '20620'],
     parentGroupings: [ParentGroupingName.NaturalScience, ParentGroupingName.IT]
   },
   {
@@ -488,7 +488,9 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '46088',
       '46120',
       '46122',
-      '46042'
+      '46042',
+      '46038',
+      '46086'
     ],
     parentGroupings: [ParentGroupingName.SocialScience]
   },
@@ -555,7 +557,9 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '55011',
       '55013',
       '55211',
-      '55212'
+      '55212',
+      '55016',
+      '55021'
     ],
     parentGroupings: [ParentGroupingName.SocialScience]
   },
@@ -574,7 +578,8 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '89086',
       '89060',
       '89062',
-      '89070'
+      '89070',
+      '89091'
     ],
     parentGroupings: [ParentGroupingName.SocialScience, ParentGroupingName.Healthcare]
   },
@@ -733,18 +738,30 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '70340',
       '70320',
       '70360',
-      '70395'
+      '70395',
+      '70391'
     ],
     parentGroupings: [ParentGroupingName.Technical]
   },
   {
     name: GroupingName.AutomotiveTechnology,
-    courseIds: ['70460', '70510', '70430', '70410', '70400', '70402', '70470', '70515'],
+    courseIds: [
+      '70460',
+      '70510',
+      '70430',
+      '70410',
+      '70400',
+      '70402',
+      '70470',
+      '70515',
+      '70420',
+      '70422'
+    ],
     parentGroupings: [ParentGroupingName.Technical]
   },
   {
     name: GroupingName.ConstructionBusinessConstructionCoordinator,
-    courseIds: ['72170', '72150', '72140', '72160', '72166', '72010', '72110'],
+    courseIds: ['72170', '72150', '72140', '72160', '72166', '72010', '72110', '72141'],
     parentGroupings: [ParentGroupingName.Technical]
   },
   {
@@ -810,7 +827,10 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '84110',
       '84060',
       '84115',
-      '84015'
+      '84015',
+      '84065',
+      '84240',
+      '84241'
     ],
     parentGroupings: [ParentGroupingName.Technical]
   },
@@ -840,7 +860,8 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '51030',
       '51115',
       '51110',
-      '51040'
+      '51040',
+      '51191'
     ],
     parentGroupings: [ParentGroupingName.Technical]
   },
@@ -1070,7 +1091,8 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '81315',
       '81367',
       '81165',
-      '81235'
+      '81235',
+      '81211'
     ],
     parentGroupings: [ParentGroupingName.IT]
   },
@@ -1151,7 +1173,8 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '74077',
       '74075',
       '74162',
-      '74218'
+      '74218',
+      '74101'
     ],
     parentGroupings: [ParentGroupingName.EconomicsAndBusiness]
   },
@@ -1277,13 +1300,14 @@ export const groupings: Pick<KOTGrouping, 'name' | 'courseIds' | 'parentGrouping
       '86135',
       '86082',
       '86085',
-      '86087'
+      '86087',
+      '86151'
     ],
     parentGroupings: [ParentGroupingName.EconomicsAndBusiness]
   },
   {
     name: GroupingName.AdministrativeManagement,
-    courseIds: ['70212', '70210', '70200', '70010', '70060', '70020'],
+    courseIds: ['70212', '70210', '70200', '70010', '70060', '70020', '70021'],
     parentGroupings: [ParentGroupingName.EconomicsAndBusiness]
   }
 ]
