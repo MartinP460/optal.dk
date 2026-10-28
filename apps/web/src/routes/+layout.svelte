@@ -10,7 +10,6 @@
   import Button from '$lib/components/ui/button/button.svelte'
   import LanguageSelect from '$lib/components/LanguageSelect.svelte'
   import DarkModeMenu from '$lib/components/DarkModeMenu.svelte'
-  import Credits from '$lib/components/Credits.svelte'
   import Sidebar from '$lib/components/Sidebar.svelte'
   import FeedbackForm from '$lib/components/FeedbackForm.svelte'
   import { resolve } from '$app/paths'
@@ -71,8 +70,5 @@
         </li>
       </ul>
     </nav>
-    <div class="lg:absolute lg:right-16 lg:mt-14 mb-12">
-      <Credits />
-    </div>
   </footer>
 </div>
